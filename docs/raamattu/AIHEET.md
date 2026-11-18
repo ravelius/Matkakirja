@@ -1,6 +1,6 @@
 # AIHEET (generoitu: node tools/kirjaa.mjs; älä muokkaa käsin)
 
-Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
+Aiheita 54 / 60. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 
 | Tunnus | Nimi | Vastuu | Koko | Tarkistettu |
 |---|---|---|---|---|
@@ -10,7 +10,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | kartan-merkit-ja-nimet | Kartan merkit ja nimet | KS | 3.0 kt | 18.11.2026 |
 | kaupungit | Kaupungit | KS | 3.0 kt | 15.11.2026 |
 | nahtavyydet | Nähtävyydet | KS | 2.6 kt | 12.11.2026 |
-| opas-ja-kuumailmapallo | Opas ja kuumailmapallo | KS | 3.0 kt | 18.11.2026 |
+| opas-ja-kuumailmapallo | Opas ja kuumailmapallo | KS | 2.9 kt | 18.11.2026 |
 | kamera | Kamera | PK | 3.0 kt | 18.11.2026 |
 | juoksupeli | Juoksupeli | PK | 3.0 kt | 12.11.2026 |
 | linnat-ja-dioraamat | Linnat ja dioraamat | LAV | 3.0 kt | 12.11.2026 |
@@ -19,8 +19,8 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | iss-ja-avaruus | ISS ja avaruus | VS | 2.6 kt | 12.11.2026 |
 | isoisa-ja-tarina | Isoisä ja tarina | SK | 3.0 kt | 17.11.2026 |
 | pulu-ja-kysymykset | Pulu ja kysymykset | SK | 3.0 kt | 17.11.2026 |
-| lehti-ja-nostot | Lehti ja nostot | NUI | 3.0 kt | 18.11.2026 |
-| saapuminen-ja-intro | Saapuminen ja intro | NUI | 3.0 kt | 18.11.2026 |
+| lehti-ja-nostot | Lehti ja nostot | NUI | 2.8 kt | 18.11.2026 |
+| saapuminen-ja-intro | Saapuminen ja intro | NUI | 2.9 kt | 18.11.2026 |
 | matkustus-ja-reitit | Matkustus ja reitit | PK | 3.0 kt | 12.11.2026 |
 | aarteet | Aarteet | PK | 3.0 kt | 17.11.2026 |
 | talous-ja-pisteet | Talous ja pisteet | PK | 2.5 kt | 12.11.2026 |
@@ -54,3 +54,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | nollaus-ja-luovutus | Nollaus ja luovutus | PT | 3.0 kt | 12.11.2026 |
 | tyolista-ja-karjet | Työlista ja kärjet | KK | 3.0 kt | 12.11.2026 |
 | agentit-ja-komennot | Agentit ja komennot | PT | 3.0 kt | 12.11.2026 |
+| latausruutu | Latausruutu | NUI | 1.2 kt | 18.11.2026 |
+| kaupungin-pohja | Kaupungin pohja | KS | 0.9 kt | 18.11.2026 |
+| pallo-google-versio | Pallon Google-versio | KS | 0.7 kt | 18.11.2026 |
+| noston-kuvat | Noston kuvat | NUI | 0.8 kt | 18.11.2026 |

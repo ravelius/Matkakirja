@@ -8,8 +8,7 @@ SÄÄNNÖT:
 3. Nosto aukeaa kuva edellä, LISÄÄ avaa tekstin. Auki oleva nosto ei sulkeudu vierittämällä eikä sisällön napautuksesta. [R-2.41] [R-2.146]
 4. Teksti 3–5 virkettä; laajassa ingressi ja noin 160–240 sanaa. [R-2.146] [R-2.11]
 5. Jokaisella nostolla on Pulun kysymykset; ilman niitä testi on punainen. Kolmasosassa maan nostoista on visa, jonka vastaus on noston tekstissä; vihreä Visa-nappi avaa sen (väliaikaisesti laatikon vasemmalla Lehden paikalla). [R-2.218] [P-261113-10] [P-261117-118]
-6. Nostolla oikeita kuvia, kerronnan aikana kaikissa [P-261117-119]; havainnekuva vain kadonneen pääkuvana, rappeutuneen parina tai selvänä lisänä. [R-2.146] [R-11.16]
-7. Eläinkohteen kuvassa eläin lähikuvassa, tarvittaessa muualta. [R-11.18]
+6. Noston kuvien säännöt (kuvat, eläinkuva, kuvat kartalla): → kortti noston-kuvat. [P-261117-119] [R-2.146] [R-11.16] [R-11.18] [P-261117-123] [P-261118-14] [P-261118-24]
 8. Historian hetki: katsoja paikalla, lähi- ja kaukokuva, teksti alkaa ihmisen kokemuksesta; keksitty minitarina merkitään. [R-2.13]
 9. Maassa 2–3 todellista skandaalia, ei verta eikä nykyihmisten yksityisasioita. [R-2.11] [R-2.12]
 10. Nostoja: EU-maa 40–50, pieni ≥15, muu Eurooppa 30; luontoa, historiaa, kulttuuria, ruokaa ja tekniikkaa. [R-11.15]
@@ -20,7 +19,6 @@ SÄÄNNÖT:
 15. Tuhoutuneen kaupungin nykykuvat ja syy neutraalisti, ei taistelukuvia. [R-11.24]
 16. Kertojan vuodet aivan oikeaan reunaan: näkyvissä ≤ 4 (iPhone vaaka 3), loput vierivät; piilossa kortti auki. [P-261117-70] [P-261118-14]
 17. Nostovalikko: laatikko levenee vaaleaksi luetteloksi, Lehti väistyy, tagit kerralla; valittu isona maan nimen perään suluissa. [P-261117-79] [P-261117-120]
-18. Noston kuvat kartalla kohteen yläpuolella ja takana (kohde alhaalla); palkissa ei pikkukuvaa, vaakassa keskellä. [P-261117-123] [P-261118-14]
 
 EI VIKA:
 - Saapuessa ei avaudu lehteä.

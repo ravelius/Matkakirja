@@ -1,11 +1,11 @@
 {
  "aiheet.json": {
-  "sha": "3ce0b4941173c4fa",
-  "aika": "2026-11-12T07:29:49.694Z"
+  "sha": "23be03aacb5f560d",
+  "aika": "2026-11-18T13:16:08.659Z"
  },
  "AIHEET.md": {
-  "sha": "c9336f0658a9a66a",
-  "aika": "2026-11-18T11:41:48.974Z"
+  "sha": "502c744b21e00910",
+  "aika": "2026-11-18T13:16:29.150Z"
  },
  "KIRJASTOT.md": {
   "sha": "58b497d7ae0f85d5",
@@ -24,8 +24,8 @@
   "aika": "2026-11-14T21:05:14.060Z"
  },
  "paatokset/2026-11.md": {
-  "sha": "39c83fe0f52b8b85",
-  "aika": "2026-11-18T13:08:20.930Z"
+  "sha": "f060b78e0d043e12",
+  "aika": "2026-11-18T13:14:09.374Z"
  },
  "aiheet/nahtavyydet.md": {
   "sha": "c2f3f3ba50b70862",
@@ -48,8 +48,8 @@
   "aika": "2026-11-18T06:35:36.576Z"
  },
  "aiheet/lehti-ja-nostot.md": {
-  "sha": "e377ed464dfd47f5",
-  "aika": "2026-11-18T07:26:28.333Z"
+  "sha": "67aa187a6e95956e",
+  "aika": "2026-11-18T13:16:17.886Z"
  },
  "aiheet/pulu-ja-kysymykset.md": {
   "sha": "2db3d9850e74b1cd",
@@ -84,8 +84,8 @@
   "aika": "2026-11-17T20:56:52.553Z"
  },
  "aiheet/saapuminen-ja-intro.md": {
-  "sha": "e08a6d1c480be4fe",
-  "aika": "2026-11-18T07:50:48.172Z"
+  "sha": "714b693895ffc4d9",
+  "aika": "2026-11-18T13:14:26.469Z"
  },
  "aiheet/ui-pohjat.md": {
   "sha": "18b6977fca0dc66c",
@@ -144,8 +144,8 @@
   "aika": "2026-11-18T04:47:01.279Z"
  },
  "aiheet/kaupungit.md": {
-  "sha": "60185262cc62334e",
-  "aika": "2026-11-17T20:54:22.630Z"
+  "sha": "62d907f42c58f000",
+  "aika": "2026-11-18T13:14:35.123Z"
  },
  "paatokset/2026-09.md": {
   "sha": "0a8d40bed8e23d51",
@@ -168,8 +168,8 @@
   "aika": "2026-11-18T05:14:25.018Z"
  },
  "aiheet/opas-ja-kuumailmapallo.md": {
-  "sha": "47defb874970b719",
-  "aika": "2026-11-18T07:07:38.706Z"
+  "sha": "dcb18377173f82e6",
+  "aika": "2026-11-18T13:14:30.754Z"
  },
  "aiheet/museot.md": {
   "sha": "3078aa365cc8b2ce",
@@ -242,5 +242,21 @@
  "aihepyynnot.md": {
   "sha": "2c581ffbece63667",
   "aika": "2026-11-18T13:09:11.022Z"
+ },
+ "aiheet/latausruutu.md": {
+  "sha": "b0e50996209175cf",
+  "aika": "2026-11-18T13:14:39.688Z"
+ },
+ "aiheet/pallo-google-versio.md": {
+  "sha": "0c0a0ee8323a288b",
+  "aika": "2026-11-18T13:14:43.602Z"
+ },
+ "aiheet/kaupungin-pohja.md": {
+  "sha": "cd827a7890e075fb",
+  "aika": "2026-11-18T13:14:47.366Z"
+ },
+ "aiheet/noston-kuvat.md": {
+  "sha": "73cbb67082c0c4eb",
+  "aika": "2026-11-18T13:16:29.150Z"
  }
 }
