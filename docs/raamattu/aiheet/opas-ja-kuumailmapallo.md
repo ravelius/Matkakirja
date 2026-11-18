@@ -17,7 +17,7 @@ SÄÄNNÖT:
 12. Kuvat tulevat vain ämpärin tarkistetusta kuvalistasta; ajonaikaista kuvahakua ei ole. [R-2.83]
 13. Google-version ja Cesiumin säännöt: → kortti pallo-google-versio. [R-2.87] [R-2.88] [R-2.89] [R-2.90] [R-2.86]
 14. Pallo leijuu kaupungin yllä lukitussa paikassa ja on poissa vain lennon ajan; kun kartan sisälle on zoomattu, se näkyy. [P-261117-27] [P-261118-23]
-15. Pariisissa pallon napautus kysyy version: Googlen laatat tai pelin oma kartta (reitti ja muu ennallaan). [P-261118-13]
+15. Pariisissa pallon napautus kysyy version: Googlen laatat tai pelin oma kartta (reitti ja muu ennallaan); kummallakin pallo ja kori näkyvät ilman kuvavirheitä. [P-261118-13] [P-261118-28]
 
 EI VIKA:
 - Googlen sumentama kohde ohitetaan korkeammalta.
