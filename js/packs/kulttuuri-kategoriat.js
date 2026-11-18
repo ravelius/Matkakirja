@@ -7190,13 +7190,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Pasteur 1862 — elämä ei synny itsestään',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-pasteur-pullot-1862-kauko-photo-v4.jpg',
-              lyhyt: 'Viikkoja jatkunut odotus vahvistaa Pasteurin kokeen: elämä '
-                + 'ei synny liemeen itsestään.',
-              selite: 'Nuori avustaja on kirjoittanut samoihin pulloihin '
-                + 'päivämääriä viikkojen ajan ja odottanut muutosta, jota ei '
-                + 'tule. Juuri odottaminen tekee kokeesta vakuuttavan: keitetty '
-                + 'liemi ei synnytä elämää itsestään, ellei ilman pöly pääse '
-                + 'siihen.',
+              lyhyt: 'Pasteurin laboratorio, havainnekuva.',
+              selite: 'Pasteurin laboratorio, havainnekuva.',
               lahde: 'Matkakirjan havainnekuva. Faktat: Institut Pasteur — The '
                 + 'middle years 1862–1877, tarkistettu 5.9.2026.',
             },

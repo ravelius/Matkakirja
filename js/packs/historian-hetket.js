@@ -2659,11 +2659,8 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-pasteur-pullot-1862-kauko-photo-v4.jpg',
-        lyhyt: 'Viikkoja jatkunut odotus vahvistaa Pasteurin kokeen: elämä ei synny liemeen itsestään.',
-        kuvateksti: 'Nuori avustaja on kirjoittanut samoihin pulloihin '
-          + 'päivämääriä viikkojen ajan ja odottanut muutosta, jota ei tule. '
-          + 'Juuri odottaminen tekee kokeesta vakuuttavan: keitetty liemi ei '
-          + 'synnytä elämää itsestään, ellei ilman pöly pääse siihen.',
+        lyhyt: 'Pasteurin laboratorio, havainnekuva.',
+        kuvateksti: 'Pasteurin laboratorio, havainnekuva.',
         lahde: 'Matkakirjan havainnekuva. Faktat: Institut Pasteur — The '
           + 'middle years 1862–1877, tarkistettu 5.9.2026.',
         url: 'https://www.pasteur.fr/en/about-us/middle-years-1862-1877',
