@@ -1248,17 +1248,19 @@ export const FOKUSKOHTEET_FRA = [
         osa: 'kaanne',
         teksti: 'Lavoisier oli kuulunut vanhan hallinnon veronkantajiin. '
           + 'Vallankumouksen tuomioistuin tuomitsi hänet kuolemaan, ja hänet mestattiin toukokuun 8. päivänä 1794.',
+        kuva: 'david',
         vuodet: [{ vuosi: '1794', selite: 'Lavoisier mestattiin', kohta: 'toukokuun 8. päivänä' }],
       },
       {
         osa: 'tanaan',
         teksti: 'Lavoisierin laboratorion välineitä on nykyään Arts et Métiers -museossa Pariisissa. '
           + 'Ne ovat siellä esillä.',
+        kuva: 'kaasumittarit',
       },
     ],
     /*
-     * jaksokuvat: kaikki jo olemassa olevia (ei uusia generoituja kuvia): Wellcomen kuva (Commons) ja
-     * hetken havainnekuva. Jaksolla 4 ja 5 ei kuvaa (puuttuvat KK:lle).
+     * jaksokuvat: kaikki jo olemassa olevia (ei uusia generoituja kuvia): Wellcomen kuva (Commons),
+     * hetken havainnekuva sekä jaksoille 4 ja 5 Commons-kuvat (SK 18.11.2026, KK 03.32).
      */
     jaksokuvat: {
       koe: {
@@ -1272,6 +1274,18 @@ export const FOKUSKOHTEET_FRA = [
         laji: 'havainnekuva',
         lyhyt: 'Lavoisierin laboratorio, havainnekuva',
         lahde: 'Tekoälyllä tuotettu havainnekuva. Faktat: Science History Institute; laboratorion sisustus on dramatisoitu.',
+      },
+      david: {
+        tiedosto: 'Antoine-Laurent Lavoisier (1743–1794) and His Wife (Marie-Anne-Pierrette Paulze, 1758–1836) MET DT1992.jpg',
+        laji: 'maalaus',
+        lyhyt: 'Jacques-Louis Davidin maalaus Lavoisierista ja Marie-Annesta 1788',
+        lahde: 'Jacques-Louis David 1788, Metropolitan Museum of Art, Wikimedia Commons (CC0)',
+      },
+      kaasumittarit: {
+        tiedosto: 'Laboratoire-de-Lavoisier.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Lavoisierin laboratorion kaasumittareita Arts et Métiers -museossa',
+        lahde: 'Edal Anton Lefterov, Wikimedia Commons (CC BY-SA 3.0)',
       },
     },
     /*
@@ -1349,6 +1363,7 @@ export const FOKUSKOHTEET_FRA = [
         teksti: 'Pasteurin vastustaja Félix Pouchet uskoi, että elämä voi syntyä itsestään mätänevästä aineesta. '
           + 'Tiedeakatemia oli luvannut palkinnon sille, joka ratkaisee kiistan kokeilla. '
           + 'Pasteur avasi pulloja jopa Alppien jäätiköllä. 1860-luvun alussa hän julkaisi tuloksensa.',
+        kuva: 'pouchet',
       },
       {
         osa: 'kaanne',
@@ -1362,11 +1377,12 @@ export const FOKUSKOHTEET_FRA = [
         osa: 'tanaan',
         teksti: 'École normale supérieure toimii yhä rue d\'Ulmilla Latinalaiskorttelissa. '
           + 'Pasteur oli koulun tieteellisten opintojen johtaja ja työskenteli siellä vuosikymmeniä.',
+        kuva: 'ens',
       },
     ],
     /*
      * jaksokuvat: kaikki jo olemassa olevia (ei uusia generoituja kuvia): hetken havainnekuva ja
-     * Edelfeltin maalaus (Commons, PD). Jaksoilla 3 ja 5 ei kuvaa (puuttuvat KK:lle).
+     * Edelfeltin maalaus (Commons, PD); jaksoille 3 ja 5 Commons-kuvat (SK 18.11.2026, KK 03.32).
      */
     jaksokuvat: {
       pullot: {
@@ -1380,6 +1396,18 @@ export const FOKUSKOHTEET_FRA = [
         laji: 'maalaus',
         lyhyt: 'Albert Edelfeltin maalaus Pasteurista 1885',
         lahde: 'Albert Edelfelt 1885, Wikimedia Commons (public domain)',
+      },
+      pouchet: {
+        tiedosto: 'Portrait of Felix-Archimede Pouchet. Wellcome M0006271.jpg',
+        laji: 'piirros',
+        lyhyt: 'Félix-Archimède Pouchet, muotokuva',
+        lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
+      },
+      ens: {
+        tiedosto: 'CF6477 Paris 5e rue Ulm ENS rwk.jpg',
+        laji: 'valokuva',
+        lyhyt: 'École normale supérieuren sisäänkäynti rue d\'Ulmilla',
+        lahde: 'Mbzt, Wikimedia Commons (CC BY 4.0)',
       },
     },
     /*
