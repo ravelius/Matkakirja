@@ -1426,6 +1426,112 @@ export const FOKUSKOHTEET_FRA = [
       fakta: 'Tiedeakatemia palkitsi Pasteurin kokeet. Viinin kuumennusta kutsutaan pastöroinniksi.',
     },
   },
+  {
+    /*
+     * PALAIS GARNIER (Pariisin nostot uudella tavalla, erä 12; PT 18.11.2026). 48,8719 N / 2,3317 E — sama
+     * piste kuin kartan Palais Garnier -nähtävyys. Yksi paikka = yksi nosto: entinen nähtävyysjuttu
+     * "Palais Garnier" (nahtavyysjutut.js) on tässä jaksoina. Piaf ja Django (`nosto-pariisi-soi`) on riippumaton
+     * tarina eikä kuulu tähän juoneen (suunnitelman 1.5 kohta 4): se pysyy omana tarinanaan saman pisteen alla.
+     * Lähdeaineisto: docs/raportit/palais-garnier-nosto-teksti-20261118.md (ei pelaajalle näkyvään tekstiin).
+     */
+    id: 'palais-garnier',
+    nimi: 'Palais Garnier',
+    tyyppi: 'historia',
+    symboli: 'historia',
+    // Pulun kysymykset kolme (vastauksia ei kirjoiteta).
+    kysymykset: [
+      'Miksi Napoleon III halusi uuden oopperan?',
+      'Miksi oopperan kellariin rakennettiin säiliö?',
+      'Mitä Palais Garnierissa esitetään nykyään?',
+    ],
+    korostukset: ['Charles Garnier', 'Marc Chagall'],
+    nappi: 'Ooppera, joka odotti palon jälkeen',
+    laudat: {
+      maailmankartta: { x: 5911.1, y: 1438.9 },
+      europe: { x: 256.0, y: 608.3 },
+    },
+    // teksti lasketaan jaksoista tiedoston lopussa.
+    lahde: 'Matkakirjan oma teksti · lähteinä napoleon.org, Pariisin oopperan sivut (operadeparis.fr), Bonjour Paris, '
+      + 'evous.fr, Visiting Paris by Yourself, Hérodote.net, Art Visit Guide ja Europe for Visitors '
+      + '(avatut sivut, tarkistettu 18.11.2026).',
+    otsikko: 'Palais Garnier — ooppera, joka odotti',
+    /*
+     * Äänitteitä ei ole vielä: `aanikansio` ja jaksojen `aanite` lisätään, kun Äänittäjä on
+     * äänittänyt (äänitysjonon rivit ovat data/aanitysjono.tsv:ssä).
+     */
+    jaksot: [
+      { osa: 'nimi', teksti: 'Palais Garnier.' },
+      { osa: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
+      {
+        osa: 'koukku',
+        aani: 'isoisa',
+        teksti: 'Pariisi, 1873. Kävelin tänään Place de l\'Opéralle. Suuren oopperatalon julkisivu seisoo jo '
+          + 'valmiina, mutta sisällä työ jatkuu vielä.',
+        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
+      },
+      {
+        osa: 'tapahtuma',
+        teksti: 'Keisari Napoleon III päätti rakennuttaa uuden oopperan, kun hän oli välttynyt murhayritykseltä '
+          + 'vanhan oopperan edessä. Arkkitehtikilpailuun tuli yli sata ehdotusta, ja voittajaksi valittiin '
+          + 'nuori, tuntematon arkkitehti Charles Garnier.',
+        kuva: 'julkisivu',
+      },
+      {
+        osa: 'tapahtuma',
+        teksti: 'Kun työmaalla kaivettiin perustuksia, maasta nousi pohjavettä. Garnier rakennutti kellariin '
+          + 'vesitiiviin betonisäiliön. Myöhemmin sota ja Pariisin kommuuni pysäyttivät rakentamisen.',
+        kuva: 'tyomaa',
+      },
+      {
+        osa: 'kaanne',
+        teksti: 'Samana syksynä vanha oopperatalo paloi. Palon jälkeen Garnierin työmaa sai jatkua, ja uusi talo '
+          + 'valmistui alle kahdessa vuodessa.',
+        kuva: 'palo',
+      },
+      {
+        osa: 'tanaan',
+        teksti: 'Talo avattiin tammikuussa 1875, ja Garnier joutui maksamaan paikkansa avajaisissa itse. '
+          + 'Nykyään talossa esitetään yhä balettia, ja katsomon katon on maalannut Marc Chagall vuonna 1964.',
+        kuva: 'katto',
+        vuodet: [
+          { vuosi: '1875', selite: 'talo avattiin', kohta: 'tammikuussa 1875' },
+          { vuosi: '1964', selite: 'kattomaalaus', kohta: 'vuonna 1964' },
+        ],
+      },
+    ],
+    jaksokuvat: {
+      julkisivu: {
+        tiedosto: 'Palais Garnier Paris June 2010 002.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Palais Garnierin julkisivu Place de l\'Opéralla',
+        lahde: 'King of Hearts, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      tyomaa: {
+        tiedosto: '186. (Chantier de construction de l\'Opéra Garnier. Ouvriers sur la charpente) - Delmaet & Durandelle - btv1b52527860w.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Työmiehiä Palais Garnierin rakennustyömaalla 1860-luvun lopulla',
+        lahde: 'Delmaet & Durandelle 1867–1868, Bibliothèque nationale de France, Wikimedia Commons (PD)',
+      },
+      palo: {
+        tiedosto: 'Paris Opera fire 29 10 1873.jpg',
+        laji: 'piirros',
+        lyhyt: 'Vanhan oopperatalon palo piirroksessa vuodelta 1873',
+        lahde: 'Illustrated London News 8.11.1873, Wikimedia Commons (PD)',
+      },
+      katto: {
+        tiedosto: 'Painted ceiling of Palais Garnier, Paris, France, created by Marc Chagall.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Palais Garnierin katsomon kattomaalaus',
+        lahde: '4009dayton, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+    },
+    visa: {
+      kysymys: 'Kuka taiteilija maalasi Palais Garnierin katsomon katon 1960-luvulla?',
+      vaihtoehdot: ['Marc Chagall', 'Claude Monet', 'Pablo Picasso'],
+      oikea: 0,
+      fakta: 'Marc Chagall maalasi Palais Garnierin katsomon katon vuonna 1964.',
+    },
+  },
 ];
 
 /*

@@ -5681,45 +5681,6 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia ja Ranskan kulttuuriministeriön muistomerkkirekisteri (POP)',
     },
-    'Palais Garnier': {
-      aika: '1862–1875',
-      teksti: 'Uuden oopperatalon suunnittelukilpailu julkistettiin '
-          + 'joulukuussa 1860, ja siihen osallistui 171 kilpailijaa. '
-          + 'Voittajaksi julistettiin toukokuussa 1861 yksimielisesti '
-          + 'nuori Charles Garnier, joka ei ollut vielä vakiinnuttanut '
-          + 'asemaansa — viimeinen sana valinnassa oli keisari '
-          + 'Napoleon III:lla.'
-        + '\n\n'
-        + 'Paikka oli hankala: paroni Haussmannin osoittama tontti oli '
-          + 'vinoneliön muotoinen, ja sen ympärille oli tulossa korkeita '
-          + 'taloja. Garnier ratkaisi asian tekemällä talosta '
-          + 'näyttämön myös ulkopuolelta — portaikko ja lämpiö ovat '
-          + 'yhtä koreat kuin katsomo. Peruskivi muurattiin vuonna 1862, '
-          + 'ja talo avattiin vuonna 1875.'
-        + '\n\n'
-        + 'Taloa sanottiin pitkään yksinkertaisesti Pariisin oopperaksi. '
-          + 'Nimi vaihtui arkkitehdin mukaan vasta 1989, kun Opéra '
-          + 'Bastille valmistui; nykyään Palais Garnier on Pariisin '
-          + 'oopperan baletin koti.',
-      vuodet: [
-        { kohta: 'joulukuussa 1860', vuosi: '1860', selite: 'suunnittelukilpailu' },
-        { kohta: 'toukokuussa 1861', vuosi: '1861', selite: 'Garnier voitti' },
-        { kohta: 'muurattiin vuonna 1862', vuosi: '1862', selite: 'peruskivi' },
-        { kohta: 'avattiin vuonna 1875', vuosi: '1875', selite: 'talo avattiin' },
-        { kohta: 'vasta 1989', vuosi: '1989', selite: 'nimi vaihtui' },
-      ],
-      kuvat: [
-        {
-          tiedosto: 'Palais Garnier Paris June 2010 002.jpg',
-          lyhyt: 'Charles Garnier voitti oopperatalon suunnittelukilpailun 1861 ja teki ahtaasta tontista hyveen.',
-          selite: 'Charles Garnier voitti talon suunnittelukilpailun 1861 ja teki '
-            + 'ahtaasta vinoneliötontista hyveen: portaikko ja lämpiö ovat yhtä '
-            + 'koreat kuin katsomo.',
-          lahde: 'King of Hearts, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
     // Tour Saint-Jacques, Saint-Eustache ja Pompidou-keskus: Pariisin karttakohteet ja vaikeamman Yhdistä-näyttämön laput (KK 14.17).
     // Tekstit sanatarkasti SK:n korjatuista korteista (KK 13.53 ja 22.03, PR 6712/6728/6729; Pompidou ilman kuvaa, KK 21.59): docs/raportit/kohdekortit-pariisi-vaikeampi-20261113.md (lähteet siellä).
     'Tour Saint-Jacques': {

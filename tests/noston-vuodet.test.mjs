@@ -35,8 +35,16 @@ test('noston vuodet: luettelo nostoista ilman kenttää vain pienenee', () => {
 });
 
 test('noston vuodet: tunnistin löytää suunnitelman koenoston vuodet (Palais Garnier) eikä vuosisatoja tai määriä', () => {
-  const g = nostot.find((x) => x.avain === 'nahtavyys:pariisi:Palais Garnier');
-  assert.ok(g, 'Palais Garnier puuttuu kerätyistä nostoista');
+  // Palais Garnier -nähtävyysjuttu poistui, kun paikasta tuli jaksonosto (SK 18.11.2026, fokuskohde palais-garnier);
+  // tunnistimen koeteksti on sama vanha teksti sellaisenaan.
+  const g = {
+    teksti: 'Uuden oopperatalon suunnittelukilpailu julkistettiin joulukuussa 1860, ja siihen osallistui 171 kilpailijaa. '
+      + 'Voittajaksi julistettiin toukokuussa 1861 yksimielisesti nuori Charles Garnier, joka ei ollut vielä vakiinnuttanut '
+      + 'asemaansa — viimeinen sana valinnassa oli keisari Napoleon III:lla.\n\nPaikka oli hankala: paroni Haussmannin '
+      + 'osoittama tontti oli vinoneliön muotoinen, ja sen ympärille oli tulossa korkeita taloja. Peruskivi muurattiin vuonna '
+      + '1862, ja talo avattiin vuonna 1875.\n\nTaloa sanottiin pitkään yksinkertaisesti Pariisin oopperaksi. Nimi vaihtui '
+      + 'arkkitehdin mukaan vasta 1989, kun Opéra Bastille valmistui.',
+  };
   assert.deepEqual(vuosiEhdokkaat(g.teksti).map((e) => e.vuosi), ['1860', '1861', '1862', '1875', '1989']);
   assert.deepEqual(vuosiEhdokkaat('1800-luvulla 1 200 kävijää ja 2 500 metriä; vuosina 1876–1878 ja 19 eaa. sekä 450 metriä')
     .map((e) => e.vuosi), ['1876–1878']);
