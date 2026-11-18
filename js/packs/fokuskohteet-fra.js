@@ -1185,6 +1185,111 @@ export const FOKUSKOHTEET_FRA = [
       fakta: 'Näytös pidettiin Grand Cafén kellarissa Pariisissa, ja lippu maksoi yhden frangin.',
     },
   },
+  {
+    /*
+     * LAVOISIERIN LABORATORIO, ARSENAALI (Pariisin nostot uudella tavalla, erä 8, SK 18.11.2026; KK lukee).
+     * Yksi merkki, yksi nosto: kartan "Lavoisierin laboratorio" (maakartat.js) avaa tämän. 48,8503 N / 2,3635 E
+     * (Arsenaali, sama piste kuin hetken). Historian hetki `lavoisier-laboratorio-1780` ja sen lehtisivu JÄÄVÄT
+     * (KK-sääntö, kuten Eiffel 1888): piilopiste "Lavoisier 1780" maakartat.js:ssä.
+     * Teksti ja lähdetaulukko: docs/raportit/lavoisier-nosto-teksti-20261118.md.
+     */
+    id: 'lavoisier-1780',
+    nimi: 'Lavoisierin laboratorio',
+    tyyppi: 'tekniikka',
+    symboli: 'tekniikka',
+    // Pulun kysymykset kolme: vanhan hetken toinen + kaksi uutta (vastauksia ei kirjoiteta).
+    kysymykset: [
+      'Miksi Lavoisier punnitsi kaiken ennen koetta ja sen jälkeen?',
+      'Miksi Marie-Anne piirsi laitteet mittakaavaan?',
+      'Miksi vallankumous mestasi miehen, joka oli uudistanut kemian?',
+    ],
+    nimio: 'Lavoisier',
+    korostukset: ['Antoine Lavoisier', 'Marie-Anne'],
+    nappi: 'Laboratorio, jossa kaikki punnittiin',
+    laudat: {
+      maailmankartta: { x: 5912.1, y: 1439.9 },
+      europe: { x: 256.6, y: 608.8 },
+    },
+    // teksti lasketaan jaksoista tiedoston lopussa.
+    lahde: 'Matkakirjan oma teksti · lähteinä Science History Institute, Encyclopedia.com, ACS, Britannica ja Google Arts & Culture '
+      + '(tarkistettu 18.11.2026).',
+    otsikko: 'Lavoisier 1780 — kaikki punnittiin',
+    /*
+     * Äänitteitä ei ole vielä: `aanikansio` ja jaksojen `aanite` lisätään, kun Äänittäjä on
+     * äänittänyt (äänitysjonon rivit ovat data/aanitysjono.tsv:ssä). Siihen asti jaksot
+     * kuuluvat suoratoistona.
+     */
+    jaksot: [
+      { osa: 'nimi', teksti: 'Lavoisierin laboratorio.' },
+      { osa: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
+      {
+        osa: 'koukku',
+        aani: 'isoisa',
+        teksti: 'Pariisi, 1873. Kävelin tänään Bastiljin lähellä kanavan vartta. '
+          + 'Rannassa oli niin paljon proomuja, että niiden välistä ei nähnyt vettä.',
+        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
+      },
+      {
+        osa: 'tapahtuma',
+        teksti: 'Antoine Lavoisier johti Arsenaalissa ruudin valmistusta. '
+          + 'Hänen laboratorionsa oli asunnon vieressä, ja siellä hän punnitsi kaiken ennen koetta ja sen jälkeen. '
+          + 'Tuloksista hän päätteli, että ainetta on kokeen jälkeen yhtä paljon kuin ennen sitä.',
+        kuva: 'koe',
+      },
+      {
+        osa: 'tapahtuma',
+        teksti: 'Kokeissaan hän huomasi, että palaessa aine yhtyy ilman osaan, jonka hän nimesi hapeksi. '
+          + 'Hänen vaimonsa Marie-Anne oli oppinut englantia ja käänsi ulkomaisia tutkimuksia ranskaksi. '
+          + 'Hän myös piirsi laitteet mittakaavaan, ja piirrokset ovat Lavoisierin oppikirjassa.',
+        kuva: 'laboratorio',
+        vuodet: [{ vuosi: '1789', selite: 'oppikirja', kohta: 'oppikirjassa' }],
+      },
+      {
+        osa: 'kaanne',
+        teksti: 'Lavoisier oli kuulunut vanhan hallinnon veronkantajiin. '
+          + 'Vallankumouksen tuomioistuin tuomitsi hänet kuolemaan, ja hänet mestattiin toukokuun 8. päivänä 1794.',
+        vuodet: [{ vuosi: '1794', selite: 'Lavoisier mestattiin', kohta: 'toukokuun 8. päivänä' }],
+      },
+      {
+        osa: 'tanaan',
+        teksti: 'Lavoisierin laboratorion välineitä on nykyään Arts et Métiers -museossa Pariisissa. '
+          + 'Siellä on myös huone, joka esittää hänen työtilaansa.',
+      },
+    ],
+    /*
+     * jaksokuvat: kaikki jo olemassa olevia (ei uusia generoituja kuvia): Wellcomen kuva (Commons) ja
+     * hetken havainnekuva. Jaksolla 4 ja 5 ei kuvaa (puuttuvat KK:lle).
+     */
+    jaksokuvat: {
+      koe: {
+        tiedosto: 'Lavoisier experimenting on respiration Wellcome L0000145.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Lavoisier mittaamassa hengitystä',
+        lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
+      },
+      laboratorio: {
+        osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lavoisier-laboratorio-1780-kauko-photo-v4.jpg',
+        laji: 'havainnekuva',
+        lyhyt: 'Lavoisierin laboratorio, havainnekuva',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Faktat: Science History Institute; laboratorion sisustus on dramatisoitu.',
+      },
+    },
+    /*
+     * KYSYMYS (yksi per paikka; KK 17.11.2026 "kysymystehtävät säilyvät"): vanhan hetken lehtitehtävä siirtyy;
+     * vastaus on kertomuksessa (jakso 3), ei vuosiriveissä eikä kuvateksteissä.
+     */
+    visa: {
+      kysymys: 'Mikä oli Marie-Anne Paulze Lavoisierin osuus kemian vallankumouksessa?',
+      vaihtoehdot: [
+        'Hän rahoitti laboratorion perintörahoillaan',
+        'Hän keksi happi-sanan',
+        'Hän käänsi englantilaiset tutkimukset ja piirsi laitteet',
+        'Hän johti ruutikomissiota',
+      ],
+      oikea: 2,
+      fakta: 'Traité élémentaire de chimie (1789) sisältää kolmetoista Marie-Annen piirrosta; Antoine mestattiin 8. toukokuuta 1794.',
+    },
+  },
 ];
 
 /*
