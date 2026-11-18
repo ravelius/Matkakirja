@@ -1,0 +1,93 @@
+{
+ "kaupunki": "rooma",
+ "origo": {
+  "lat": 41.89737,
+  "lon": 12.48703
+ },
+ "merkkeja": 53,
+ "malleja": 24,
+ "tavua": 1880,
+ "sha256": "3863b7c47ac4d9cf7279dc6f2913045e89289136da6e24a73e490dd34b47b32e",
+ "maa": "maasto.py z12 (pohjan matalin piste), MAA 0,25 m",
+ "maa_laskut": {
+  "pisteita": 53,
+  "lahin_tunnettu": 0
+ },
+ "lahde": "/Users/Shared/Claude/proto-3d/_tyo/valoseppa/tyyppitalot/koe-rw/rooma-kirkot2/merkit-rooma.json",
+ "lahde_sha256": "e67b6708b5981249a39ed489624f4ab905bf189353291ac57c5f8220228287ff",
+ "tyypit": {
+  "palatsi-keski": 21,
+  "kirkko-julkisivu": 32
+ },
+ "ei_sovi_alueella": 64,
+ "poisOsm": [
+  "relation/11153",
+  "relation/1283512",
+  "relation/1691910",
+  "relation/1707363",
+  "relation/1709796",
+  "relation/1709797",
+  "relation/1807295",
+  "relation/1940221",
+  "relation/2054912",
+  "relation/22289",
+  "relation/2705998",
+  "relation/2716050",
+  "relation/2737120",
+  "relation/2766758",
+  "relation/2766788",
+  "relation/2916876",
+  "relation/325549",
+  "relation/325553",
+  "relation/325578",
+  "relation/37216",
+  "relation/449593",
+  "relation/5289250",
+  "relation/537813",
+  "relation/76432",
+  "way/106365792",
+  "way/113845946",
+  "way/117744827",
+  "way/123530536",
+  "way/127942183",
+  "way/135189103",
+  "way/137178554",
+  "way/139900092",
+  "way/140186882",
+  "way/151845606",
+  "way/164050121",
+  "way/166174702",
+  "way/201285055",
+  "way/201882369",
+  "way/203996025",
+  "way/220465225",
+  "way/222155639",
+  "way/23442671",
+  "way/25610962",
+  "way/25625603",
+  "way/29181216",
+  "way/304443991",
+  "way/50884075",
+  "way/51368975",
+  "way/52335646",
+  "way/66832136",
+  "way/798082894",
+  "way/80220852",
+  "way/95925091"
+ ],
+ "asemat": [],
+ "asemien_kattovari": {
+  "srgb": "#AC6C50",
+  "lahde": "katot.py PERHEET['rooma'].katot suurin osuus 0.4"
+ },
+ "paletti": {
+  "katto": "#AC6C50",
+  "katto_lahde": "katot.py PERHEET['rooma'].katot suurin osuus 0.4",
+  "seina": "#E4C48A",
+  "seina_lahde": "katot.py PERHEET['rooma'].seinat suurin osuus 0.34",
+  "palatsin_seinat": {
+   "portland": "#DCD4C2",
+   "tiili": "#AC7862"
+  }
+ }
+}
