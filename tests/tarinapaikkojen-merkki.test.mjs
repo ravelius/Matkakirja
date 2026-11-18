@@ -10,8 +10,8 @@ import { KAUPUNKIKARTAT } from '../js/packs/maakartat.js';
 const LAJIT = new Set(['tiimalasi', 'lamppu', 'lyyra', 'skandaali']);
 // Yhdistämisen vaihe A (KK 17.11.2026): Eiffel-torni 1888, Piaf ja Django, Kaulanauha 1785 ja Lustig 1925 eivät ole enää omia
 // pisteitä; niiden nostot avautuvat Eiffel-tornin, Palais Garnierin ja Sainte-Chapellen merkistä.
-// Lumière 1895, Curie 1898 ja Pasteur 1862 (18.11.2026): tarinapaikat ovat nyt nähtävyyksiä Grand Café, Curien vaja ja Pasteurin laboratorio
-// (kohteet lumiere-1895, curie-1898, pasteur-1862);
+// Lumière 1895, Curie 1898, Lavoisier 1780 ja Pasteur 1862 (18.11.2026): tarinapaikat ovat nyt nähtävyyksiä Grand Café, Curien vaja, Lavoisierin laboratorio ja Pasteurin laboratorio
+// (kohteet lumiere-1895, curie-1898, lavoisier-1780, pasteur-1862);
 // hetkien piilopisteet eivät ole merkkejä.
 const ODOTETTU = {
   'Kirahvi 1827': 'tiimalasi', 'Piiritys 1870': 'tiimalasi', 'Bukinistit 1859': 'tiimalasi',
