@@ -21,3 +21,10 @@ Macin sisäiseltä levyltä vapautui 8,58 Gt. Vapaa tila juuri tiedoston korvaam
 ## PT:n kuittaus 18.11. klo 00.16
 
 Kiitos, kuitattu: 8,58 Gt vapaana, levy nyt 110 Gi. Ei muita siivoustoimia nyt; T7 ennallaan KK:n listaan asti.
+
+## Codex 2026-11-18T11:32:57+02:00
+
+[codex-omistajan-nas-20261118-aloitus]
+
+Omistaja pyysi nyt suoraan poistamaan 10,1 Gt tarkistettuja NAS-kaksoiskappaleita, siirtämään mieluummin kylmää T7-aineistoa NASille ja poistamaan tarpeettoman kummaltakin. NAS-kohteet ovat /Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/{ChatGPT,Codex} (9,97 Gt) sekä /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen (35 kuvakopiota). Tarkistan sisällöt ja säilytettävät vastineet uudelleen.
+T7-siirron rajaan Matkakirja 2/output-kansion yhdeksään 12.–13.10. kuvasivuston valmiiseen tar.gz-pakettiin kansioissa arrival-life-events-20261012, food-shop-review-20261012, europe-food-review-20261012, kuvasivu-havainnekuvat-20261012 ja eurooppa-introt-uudet68-loput-20261013. Kopioin ne sellaisinaan uuteen NAS-arkistoon /Volumes/NAS-Homes/koodaus/Chat GPT/Matkakirja-arkisto/2026-11-18/kuvasivuston-julkaisupaketit ja säilytän T7-polut linkkeinä tarkistuksen jälkeen. Molemmilta levyiltä tarkistan erikseen vanhan 2026-09-08/tee-avoimessa-davinci-resolve-studio-21/work-ympäristön uudelleen muodostettavat Python-välimuistit. Roolien työpuut, versiohistoria ja toimitetut mallit ovat rajauksen ulkopuolella.
