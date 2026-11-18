@@ -325,32 +325,90 @@ export const EUROOPAN_KADONNEET = {
       id: 'palais-industrie',
       nimi: 'Palais de l\'Industrie',
       nimio: 'Teollisuuspalatsi',
-      kysymykset: ['Mitä Palais de l\'Industrien paikalle rakennettiin?', 'Mikä taidenäyttely Palais de l\'Industriessa pidettiin?'],
-      korostukset: ['Salon|Salon', 'Grand Palais|Grand Palais\'n'],
+      kysymykset: [
+        'Miksi Palais de l\'Industrie purettiin?',
+        'Mikä rakennus nousi hallin paikalle?',
+        'Mitä Grand Palais\'ssa on pidetty?',
+      ],
+      korostukset: ['Barrault|Barrault', 'Grand Palais|Grand Palais'],
       nappi: 'Lasihalli, jonka tilalle tuli Grand Palais',
       laudat: { maailmankartta: { x: 5910.4, y: 1439.2 }, europe: { x: 255.6, y: 608.4 } },
-      teksti: 'Palais de l\'Industrie oli lasi- ja rautahalli Champs-Élysées\'n varrella, joka rakennettiin '
-        + 'vuoden 1855 Pariisin maailmannäyttelyä varten. Arkkitehti Jean-Marie-Victor Vielin ja insinööri '
-        + 'Alexis Barrault\'n suunnittelema halli avattiin toukokuussa 1855. Siellä pidettiin Pariisin virallinen taidenäyttely Salon, ja 1881 kansainvälinen '
-        + 'sähkönäyttely. Isoisän käydessä 1873 halli oli käytössä. Se purettiin 1890-luvun '
-        + 'lopulla Grand Palais\'n tieltä.',
-      vuodet: [
-        { kohta: 'toukokuussa 1855', vuosi: '1855', selite: 'halli avattiin' },
-        { kohta: 'ja 1881', vuosi: '1881', selite: 'sähkönäyttely' },
-        { kohta: 'käydessä 1873', vuosi: '1873', selite: 'isoisän käynti' },
+      // teksti lasketaan jaksoista (ks. ihmeKohde). Lähdeaineisto: docs/raportit/palais-industrie-grand-palais-nosto-teksti-20261118.md.
+      otsikko: 'Palais de l\'Industrie 1873 — halli, jonka paikalle tuli Grand Palais',
+      jaksot: [
+        { osa: 'nimi', teksti: 'Palais de l\'Industrie.' },
+        { osa: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
+        {
+          osa: 'koukku',
+          aani: 'isoisa',
+          teksti: 'Pariisi, 1873. Kävelin tänään Champs-Élysées\'n tuntumassa suuren näyttelyhallin ohi. '
+            + 'Se oli jäänyt paikalleen vuoden 1855 maailmannäyttelyn jälkeen.',
+          vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
+        },
+        {
+          osa: 'tapahtuma',
+          teksti: 'Hallin suunnittelussa olivat mukana insinööri Barrault ja arkkitehti Viel. '
+            + 'Se rakennettiin Pariisin vuoden 1855 maailmannäyttelyä varten, ja näyttely avattiin toukokuussa. '
+            + 'Näyttelyn jälkeenkin siellä pidettiin näyttelyitä ja tapahtumia.',
+          kuva: 'loisto',
+          vuodet: [{ vuosi: '1855', selite: 'maailmannäyttely', kohta: 'vuoden 1855' }],
+        },
+        {
+          osa: 'kaanne',
+          teksti: 'Halli ei saanut jäädä. Se purettiin 1890-luvulla, jotta paikalle voitiin rakentaa uusi '
+            + 'näyttelypalatsi vuoden 1900 maailmannäyttelyä varten.',
+          kuva: 'portti',
+          hologrammi: 'sammuu',
+          hologrammiKohta: 'Halli ei saanut jäädä',
+          vuodet: [{ vuosi: '1900', selite: 'maailmannäyttely', kohta: 'vuoden 1900' }],
+        },
+        {
+          osa: 'tanaan',
+          teksti: 'Paikalle rakennettiin Grand Palais. Kesällä 2024 sen lasikaton alla miekkailtiin Pariisin '
+            + 'olympialaisissa, ja kunnostuksen jälkeen koko rakennus avattiin yleisölle vuonna 2025.',
+          kuva: 'grandpalais',
+          vuodet: [
+            { vuosi: '2024', selite: 'olympialaiset', kohta: 'Kesällä 2024' },
+            { vuosi: '2025', selite: 'uudelleen avattu', kohta: 'vuonna 2025' },
+          ],
+        },
       ],
-      lahde: 'Canadian Centre for Architecture (Viel, Barrault); herodote.net; Larousse "salon"; Heap, Electrical '
-        + 'Appliances (1884); paris.fr "Les petits secrets du Grand Palais"; fr-Wikipedia "Palais de l\'Industrie" '
-        + '(tarkistettu 15.11.2026).',
+      jaksokuvat: {
+        loisto: {
+          osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-palais-industrie-loistoaika.jpg',
+          laji: 'havainnekuva',
+          lyhyt: 'Palais de l\'Industrie loistoaikanaan',
+          lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: napoleon.org, Arthur Chandlerin Paris 1855 -sivu.',
+        },
+        portti: {
+          tiedosto: 'Palais de l\'Industrie - Édouard Baldus.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Palais de l\'Industrien pääsisäänkäynnin kaariportti Édouard Baldusin valokuvassa',
+          lahde: 'Édouard Baldus, The Metropolitan Museum of Art, Wikimedia Commons (PD)',
+        },
+        grandpalais: {
+          tiedosto: 'Grand Palais @ Paris (34729073762).jpg',
+          laji: 'valokuva',
+          lyhyt: 'Grand Palais Champs-Élysées\'n tuntumassa',
+          lahde: 'Guilhem Vellut, Wikimedia Commons (CC BY 2.0)',
+        },
+      },
+      visa: {
+        kysymys: 'Missä lajissa kilpailtiin Grand Palais\'n lasikaton alla kesän 2024 olympialaisissa?',
+        vaihtoehdot: ['Miekkailussa', 'Uinnissa', 'Purjehduksessa'],
+        oikea: 0,
+        fakta: 'Grand Palais\'n lasikaton alla miekkailtiin kesän 2024 olympialaisissa.',
+      },
+      lahde: 'Matkakirjan oma teksti · lähteinä napoleon.org, Arthur Chandlerin Paris 1855 -sivu, Pariszigzag, '
+        + 'Batiweb, France.fr, The Art Newspaper, Time Out ja Bonjour Paris (avatut sivut, tarkistettu 18.11.2026).',
       kuva: 'ihme-palais-industrie-loistoaika.jpg',
-      lyhyt: 'Salonin vieraat kulkevat taulujen ohi lasikaton alla; noin neljännesvuosisata myöhemmin halli '
-        + 'puretaan.',
-      selite: 'Vuonna 1873 Salonin vieraat kulkevat rautaisen ja lasisen hallin sisällä taulujen ohi, ja '
-        + 'lasikaton alla kävijöiden askeleet kaikuvat. Halli puretaan 1890-luvun lopulla vuoden 1900 '
-        + 'maailmannäyttelyn tieltä, ja paikalle nousee Grand Palais.',
+      lyhyt: 'Kävijät kulkevat Champs-Élysées\'n tuntumassa suuren näyttelyhallin ohi; reilut kaksikymmentä '
+        + 'vuotta myöhemmin halli puretaan.',
+      selite: 'Vuonna 1873 Palais de l\'Industrie seisoo yhä Champs-Élysées\'n tuntumassa, ja siellä pidetään '
+        + 'näyttelyitä ja tapahtumia. Halli puretaan 1890-luvulla, ja paikalle rakennetaan Grand Palais '
+        + 'vuoden 1900 maailmannäyttelyä varten.',
       ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1873, isoisän matkavuosi). '
-        + 'Faktat: paris.fr, Larousse, Heap (1884) ja fr-Wikipedia "Palais de l\'Industrie", '
-        + 'tarkistettu 15.11.2026.',
+        + 'Faktat: napoleon.org ja Arthur Chandlerin Paris 1855 -sivu, tarkistettu 18.11.2026.',
       url: 'https://en.wikipedia.org/wiki/Palais_de_l%27Industrie',
     }),
     ihmeKohde({
