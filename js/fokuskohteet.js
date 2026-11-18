@@ -211,6 +211,7 @@ import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 import { KUVASARJA_PYYHKAISY_PX } from './kuvasarja.js';
 import { lisaaHavainnekuvaMerkki } from './havainnekuva.js';
 import { haamuSulku } from './avausanimaatio.js';
+import { asetaNostonAvaaja } from './nahtavyydet.js';
 
 /*
  * Maakohtaiset kohdelistat ISO-tunnuksella. Sama tunnus kuin
@@ -717,6 +718,24 @@ KOHDE_MAAT.BLR = [...(KOHDE_MAAT.BLR ?? []), ...HAHMOTELMA_BLR];
  * (asetaTehtavakuittaus), vain vastakkaiseen suuntaan.
  */
 asetaKohdehakemisto((iso) => KOHDE_MAAT[iso] ?? []);
+
+/*
+ * NÄHTÄVYYS AVAA NOSTON (natiivin sääntö, PT 18.11.2026 04.5x; js/nahtavyydet.js nahtavyydenNosto): kaupunkikartan
+ * pisteen nostolinkki, joka on maan kohde (kadonnut ihme `hahmotelma-…` tai fokuskohde kuten Louvre ja Tuileries),
+ * avaa kohteen kortin samalla pohjalla kuin pääkartan merkki. Haku kaikista maista kohteenIso-hakemistolla, koska
+ * kohdekartalle siirretyt kohteet eivät ole pääkartan riveillä (karsiKaupunkikartanNostot).
+ */
+function nostonKohdeTunnuksella(tunnus) {
+  const iso = kohteenIso({ id: tunnus });
+  return iso ? (KOHDE_MAAT[iso] ?? []).find((k) => k?.id === tunnus) ?? null : null;
+}
+asetaNostonAvaaja({
+  onKohde: (tunnus) => Boolean(nostonKohdeTunnuksella(tunnus)),
+  avaa: (ui, tunnus) => {
+    const kohde = nostonKohdeTunnuksella(tunnus);
+    return Boolean(kohde && avaaFokuskohde(ui, kohde));
+  },
+});
 
 /*
  * SÄHKETEHTÄVÄN SUORA LINKKI KOHTEESEEN (3.9.2026, Raamattu:

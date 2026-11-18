@@ -65,6 +65,55 @@ export async function fetchSummary(title, { fetchImpl = globalThis.fetch, langs 
   return vara;
 }
 
+/*
+ * LUE LISÄÄ VAIN SUOMEKSI (PT 18.11.2026 04.5x, natiivin WikiIkkuna f15b541f4; KK 18.11. 04.21 Tuileries'n palatsi,
+ * omistaja 16.11. 22.39): kohteiden wiki-otsikot ovat usein en-otsikoita ("Tuileries Palace"), joten fi-haku samalla
+ * otsikolla ei osu ja ikkuna putosi englanninkieliseen tekstiin. Teksti vain fi-Wikipediasta: suora otsikko (lyhyt tynkä
+ * kelpaa), sitten en-sivun suomenkielinen kielilinkki. Ilman fi-artikkelia null: kutsuja näyttää kuvan ja ilmoituksen.
+ */
+
+/** en-sivun kielilinkin osoite (langlinks, lllang=fi). */
+export function kielilinkkiUrl(title, lang = 'en') {
+  const params = new URLSearchParams({
+    action: 'query',
+    prop: 'langlinks',
+    lllang: 'fi',
+    redirects: '1',
+    format: 'json',
+    origin: '*',
+    titles: title,
+  });
+  return `https://${lang}.wikipedia.org/w/api.php?${params}`;
+}
+
+/** Suomenkielinen otsikko langlinks-vastauksesta; null, jos fi-sivua ei ole. */
+export function parseKielilinkkiFi(data) {
+  const pages = data?.query?.pages;
+  if (!pages || typeof pages !== 'object') return null;
+  for (const page of Object.values(pages)) {
+    const linkki = (page?.langlinks ?? []).find((l) => l?.lang === 'fi');
+    const otsikko = linkki?.['*'] ?? linkki?.title ?? null;
+    if (typeof otsikko === 'string' && otsikko.trim()) return otsikko.trim();
+  }
+  return null;
+}
+
+/** Tiivistelmä vain suomeksi: fi suoraan, sitten en → fi -kielilinkki. Ei koskaan heitä; null = ei fi-artikkelia. */
+export async function fetchSummarySuomeksi(title, { fetchImpl = globalThis.fetch } = {}) {
+  if (!title || typeof fetchImpl !== 'function') return null;
+  const suora = await fetchSummary(title, { fetchImpl, langs: ['fi'] });
+  if (suora) return suora;
+  let fiOtsikko = null;
+  try {
+    const res = await fetchImpl(kielilinkkiUrl(title));
+    if (res && res.ok) fiOtsikko = parseKielilinkkiFi(await res.json());
+  } catch {
+    /* ei yhteyttä — ei fi-artikkelia */
+  }
+  if (!fiOtsikko || fiOtsikko === title) return null;
+  return fetchSummary(fiOtsikko, { fetchImpl, langs: ['fi'] });
+}
+
 /**
  * Koko artikkelin osoite: MediaWiki extracts pelkkänä tekstinä. Pelkkä
  * teksti on tarkoituksella — HTML:ää ei upoteta peliin, ja kapea teksti ei

@@ -37,6 +37,50 @@ import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import { esilataaKuvat, html, lahdemerkinta, vuosiluku } from './ui-apurit.js';
 
 /*
+ * MERKKI AVAA NOSTON (natiivin sääntö: NUI 5cda787ef PaikkaSaanto.FokusValo + Kohdenostot.Kadonnut; PT 18.11.2026 04.5x,
+ * NUI:n selvitys): kadonnut ihme (karttanosto `hahmotelma-…`) avaa AINA noston kortin, myös jos sillä on oma juttu, ja
+ * juttuton kohde, jonka ensimmäinen nostolinkki on pääkartan kohde (Louvre, Tuileries'n palatsi, Curien vaja …), avaa
+ * noston kortin eikä Wikipediaa. Skandaali, hetki, täky ja syvennys kulkevat entisiä reittejään (Valletta: Suurmestarin
+ * palatsi → fi-wiki). Kohteen haku ja kortin avaus rekisteröidään js/fokuskohteet.js:stä (asetaNostonAvaaja), koska se on
+ * niputuksessa tämän tiedoston jälkeen (tools/build-standalone.mjs MODULES); ilman rekisteröintiä kaikki on ennallaan.
+ */
+let nostonAvaaja = { onKohde: () => false, avaa: () => false };
+
+/** js/fokuskohteet.js: { onKohde(tunnus) → boolean, avaa(ui, tunnus) → aukesiko }. */
+export function asetaNostonAvaaja(avaaja) {
+  if (avaaja && typeof avaaja.onKohde === 'function' && typeof avaaja.avaa === 'function') nostonAvaaja = avaaja;
+}
+
+/**
+ * Nostotunnus, jonka nähtävyyden napautus avaa, tai null (juttu tai wiki kuten ennen). Puhdas: `onKohde` kertoo, onko
+ * tunnus pääkartan kohde (tests/nahtavyys-nosto.test.mjs).
+ */
+export function nahtavyydenNosto(k, onKohde = nostonAvaaja.onKohde) {
+  const linkki = k?.karttaNosto ?? k?.nosto;
+  const tunnus = Array.isArray(linkki) ? linkki[0] : linkki;
+  if (typeof tunnus !== 'string' || !tunnus) return null;
+  if (tunnus.startsWith('hahmotelma-')) return onKohde(tunnus) ? tunnus : null;
+  if (k.teksti) return null;
+  return onKohde(tunnus) ? tunnus : null;
+}
+
+/**
+ * Nähtävyyden avaaja kaikille poluille (kaupunkiliuska, kohdekartta, nähtävyysvalikko): nosto → oma juttu → wiki;
+ * null = ei avattavaa. `ennen` ajetaan ennen noston korttia (valikko sulkee nähtävyysdialogin, joka on top layerissa).
+ */
+export function nahtavyydenAvaaja(ui, k, numero, { ennen = null } = {}) {
+  const vanha = k.teksti
+    ? () => avaaNahtavyys(ui, k, numero)
+    : (k.wiki ? () => ui.openWikiArticle(k.wiki, k.nimi) : null);
+  const tunnus = nahtavyydenNosto(k);
+  if (!tunnus) return vanha;
+  return () => {
+    ennen?.();
+    if (!nostonAvaaja.avaa(ui, tunnus)) vanha?.();
+  };
+}
+
+/*
  * NIMIKYLTTI PIIRROKSEN ALLE, EI SEN PÄÄLLE (omistajan tilaus
  * 23.8.2026 kuvakaappauksesta: kyltti "8 · Johanneksenkirkko" istui
  * suurennetun piirroksen päällä keskikorkeudella ja peitti kirkon).
@@ -298,10 +342,8 @@ function lisaaTarinakohteet(ui, cityId, kartta, ulos) {
   for (const raaka of kaupunginTarinakohteet(kartta)) {
     const juttu = NAHTAVYYSJUTUT[cityId]?.[raaka.nimi];
     const kuvahaku = raaka.wiki ?? raaka.nimi;
-    const k = juttu ? { ...raaka, wiki: undefined, ...juttu, kuvahaku } : { ...raaka, kuvahaku };
-    const avaa = k.teksti
-      ? () => avaaNahtavyys(ui, k, null)
-      : (k.wiki ? () => ui.openWikiArticle(k.wiki, k.nimi) : null);
+    const k = juttu ? { ...raaka, wiki: undefined, ...juttu, kuvahaku, karttaNosto: raaka.nosto } : { ...raaka, kuvahaku };
+    const avaa = nahtavyydenAvaaja(ui, k, null);
     if (!avaa) continue;
     const tunnus = Array.isArray(raaka.nosto) ? raaka.nosto[0] : raaka.nosto;
     ulos.push({ avain: `kartta:${cityId}:nosto:${tunnus}`, id: tunnus, nimi: raaka.nimi, avaa });
@@ -320,12 +362,10 @@ function laskeKaupunkikartanSiirretyt(ui, cityId, kartta) {
     const juttu = NAHTAVYYSJUTUT[cityId]?.[raaka.nimi];
     const kuvahaku = raaka.wiki ?? raaka.nimi;
     const k = juttu
-      ? { ...raaka, wiki: undefined, ...juttu, kuvahaku }
+      ? { ...raaka, wiki: undefined, ...juttu, kuvahaku, karttaNosto: raaka.nosto }
       : { ...raaka, kuvahaku };
     const numero = String(i + 1);
-    const avaa = k.teksti
-      ? () => avaaNahtavyys(ui, k, numero)
-      : (k.wiki ? () => ui.openWikiArticle(k.wiki, k.nimi) : null);
+    const avaa = nahtavyydenAvaaja(ui, k, numero);
     if (!avaa) return;
     /*
      * TUNNUS ON NOSTON OMA TUNNUS, kun kohde on karttanosto (kenttä
@@ -615,12 +655,12 @@ export function piirraKaupunkiKartta(ui, kohde, {
      */
     const kuvahaku = raaka.wiki ?? raaka.nimi;
     const k = juttu
-      ? { ...raaka, wiki: undefined, ...juttu, kuvahaku }
+      ? { ...raaka, wiki: undefined, ...juttu, kuvahaku, karttaNosto: raaka.nosto }
       : { ...raaka, kuvahaku };
     const numero = String(i + 1);
     const p = karttapiste(kartta, k.lat, k.lon);
     // Napautettava, jos kohteella on oma juttu TAI wiki-artikkeli.
-    const avattava = Boolean(k.teksti || k.wiki);
+    const avattava = Boolean(k.teksti || k.wiki || nahtavyydenNosto(k));
     /*
      * MINIATYYRIN OSOITE TULEE MEDIASTA (2.9.2026, assetit ämpäriin).
      * Taulussa voi lukea joko vanha repon polku tai pelkkä tunnus, joka
@@ -855,8 +895,7 @@ export function piirraKaupunkiKartta(ui, kohde, {
      * wikin kuten ennenkin, ja ilman kumpaakaan piste on pelkkä
      * merkki — vanhat kaupungit toimivat siis ennallaan.
      */
-    const avaaJuttu = k.teksti ? () => avaaNahtavyys(ui, k, numero)
-      : (k.wiki ? () => ui.openWikiArticle(k.wiki, k.nimi) : null);
+    const avaaJuttu = nahtavyydenAvaaja(ui, k, numero);
     const otsikko = k.teksti ? `${k.nimi} — lue lisää` : `${k.nimi} — avaa artikkelin`;
     /*
      * Piirros ja nimi kulkevat avaajan mukana, koska kokoruudulla
@@ -2678,7 +2717,7 @@ export function nahtavyysKohteet(ui) {
      */
     const kuvahaku = raaka.wiki ?? raaka.nimi;
     const k = juttu
-      ? { ...raaka, wiki: undefined, ...juttu, kuvahaku }
+      ? { ...raaka, wiki: undefined, ...juttu, kuvahaku, karttaNosto: raaka.nosto }
       : { ...raaka, kuvahaku };
     return { k, numero: String(i + 1) };
   });
@@ -2723,7 +2762,7 @@ export function taytaNahtavyysValikko(ui, nykyinen, salli = true) {
   }
   sulje();
   valikko.replaceChildren();
-  const kohteet = nahtavyysKohteet(ui).filter(({ k }) => k.teksti || k.wiki);
+  const kohteet = nahtavyysKohteet(ui).filter(({ k }) => k.teksti || k.wiki || nahtavyydenNosto(k));
   nappi.hidden = kohteet.length < 2;
   if (nappi.hidden) return;
   for (const { k, numero } of kohteet) {
@@ -2734,8 +2773,8 @@ export function taytaNahtavyysValikko(ui, nykyinen, salli = true) {
     if (k.nimi === nykyinen.nimi) rivi.classList.add('nykyinen');
     rivi.addEventListener('click', () => {
       sulje();
-      if (k.teksti) avaaNahtavyys(ui, k, numero);
-      else ui.openWikiArticle(k.wiki, k.nimi);
+      // Nosto avautuu kartan päälle: nähtävyysdialogi (top layer) suljetaan ensin.
+      nahtavyydenAvaaja(ui, k, numero, { ennen: () => document.getElementById('nahtavyys-dialog')?.close() })?.();
     });
     valikko.appendChild(rivi);
   }
