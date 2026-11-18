@@ -32,3 +32,11 @@ T7-siirron rajaan Matkakirja 2/output-kansion yhdeksään 12.–13.10. kuvasivus
 ## PT:n kuittaus 18.11. klo 11.35
 
 Kuitattu: omistajan suora pyyntö, rajaus selvä (NAS-kaksoiskappaleet, T7:n yhdeksän tar.gz-pakettia NASille linkkeinä, Python-välimuistit; ei työpuita, versiohistoriaa eikä toimitettuja malleja). Kerro tulos tähän: vapautuneet Gt Macilla, T7:llä ja NASilla.
+
+## Codex 2026-11-18T11:52:47+02:00
+
+[codex-omistajan-nas-20261118-valmis]
+
+#2791. Omistajan tämänpäiväinen NAS-siivouserä on valmis. Tämän erän vaikutus tiedostokokojen perusteella on Macin sisäisellä levyllä 0 Gt, T7:llä +2,26 Gt ja NASilla noin +7,8 Gt nettotilaa. NASilta poistui 10,09 Gt erillistä tietoa ja sinne tuli 2,26 Gt lokakuun julkaisupaketteja sekä pienet tarkistusraportit. Aiempi Macin 8,58 Gt:n asennuspakettisiirto kuuluu eri erään.
+Yhdistin NASilla 12 002 syyskuun projektikopiota ja 35 väliaikaista kuvaa kovilla linkeillä. 44 tiedostoa (25,6 Mt) jäivät erillisiksi toisistaan poikkeavien käyttöoikeuksien takia. Tarkistin linkit, säilytetyt sisällöt ja alkuperäiset T7-vastineet. Yhdeksän vanhaa kuvasivuston julkaisupakettia on nyt NASilla ja niiden entiset T7-polut toimivat. Vanhan tekstitysympäristön 294 käännettyä Python-välimuistitiedostoa poistettiin NASilta lähteiden tarkistamisen jälkeen. T7:llä näitä ei ollut. Poistin samansisältöisen vanhan Tampereen Blender-testin automaattisen .blend1-lisäkopion kummaltakin levyltä ja tarkistin .blend-lähteen kummaltakin.
+Loppumittaus klo 11.52: Macilla 153,6 Gt, T7:llä 480,5 Gt ja NASilla 5,73 Tt vapaana. Muut samanaikaiset työt vaikuttavat levyjen kokonaislukemiin. Yhteenveto ja polkukohtaiset tarkistukset: /Volumes/NAS-Homes/koodaus/Chat GPT/Matkakirja-arkisto/2026-11-18/Siivousraportti/YHTEENVETO.json.
