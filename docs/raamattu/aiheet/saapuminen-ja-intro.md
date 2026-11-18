@@ -8,7 +8,7 @@ SÄÄNNÖT:
 3. Valinnassa pallo ei pyöri; kaikki aloituskaupungit näkyvät. Pulun neljä sovittua repliikkiä eivät estä valintaa. [R-2.58] [R-2.160]
 4. Valinta katkaisee puheen: kone lentää kaarta valittuun kaupunkiin kameran seuratessa; koneen ääni ja lentoluenta alkavat. [R-2.154] [R-2.157]
 5. Jos aarre on avaamatta, nappulan alle tulee kysymys Haluatko etsiä aarretta? Saapuminen alkaa vasta oikein-merkistä; rasti jättää vapaalle kartalle. Ei aloituskaupungissa eikä reitin pysähdyksessä. [R-2.219] [R-2.6]
-6. Keskeneräistä karttaa ei näy: kamera pysyy ylhäällä eikä laskeudu, kaupunki valmistuu taustalla; nimi, iskulause ja palkki sumean kartan päällä; kuvat syttyvät ja sammuvat eri aikaan, kohdissa ja koossa; lento ylhäältä vasta kaiken valmistuttua, sumennus pois, nimen läpi kohti päänähtävyyttä. [P-261117-77] [P-261118-12] [P-261118-15]
+6. Latausruudun säännöt (järjestys, kuvat, nimi ja iskulause, kirjainten lento, nimen paikka): → kortti latausruutu. [P-261117-77] [P-261117-78] [P-261118-12] [P-261118-15] [P-261118-19] [P-261118-20]
 7. Aloituskaupungeissa ja Pariisissa intro joka saapumisella. Kuvat: nykyiset rakennukset lähes koko ruudun, keskellä nimi ja vuosi. Isoisän kuvia introssa ei ole. [R-2.153] [P-261111-9]
 8. Kuvia: aloituskaupungissa kuusi, muissa kolme, Pariisissa viisi, kukin noin 3 s. William lukee kaupungin nimen ja iskulauseen kuvien aikana. [R-2.161] [P-261111-10] [P-261111-8]
 9. Kun peli alkaa Pariisista, intro on aloituslento: kamera kiertää kaupunkia vinosti ja kuvat nousevat kartalta. Luennan jälkeen kamera jää kaupungin ylle. [R-2.210]
