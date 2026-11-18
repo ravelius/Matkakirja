@@ -1,6 +1,6 @@
 # AIHEET (generoitu: node tools/kirjaa.mjs; älä muokkaa käsin)
 
-Aiheita 51 / 60. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
+Aiheita 52 / 60. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 
 | Tunnus | Nimi | Vastuu | Koko | Tarkistettu |
 |---|---|---|---|---|
@@ -55,3 +55,4 @@ Aiheita 51 / 60. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | tyolista-ja-karjet | Työlista ja kärjet | KK | 3.0 kt | 12.11.2026 |
 | agentit-ja-komennot | Agentit ja komennot | PT | 3.0 kt | 12.11.2026 |
 | latausruutu | Latausruutu | NUI | – | – |
+| kaupungin-pohja | Kaupungin pohja | KS | – | – |
