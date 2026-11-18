@@ -19,6 +19,8 @@ function kohde(kaupunki, nimi) {
 test('kadonnut ihme avaa aina noston, myös jutun kanssa', () => {
   assert.equal(nahtavyydenNosto(kohde('pariisi', "Palais de l'Industrie")), 'hahmotelma-palais-industrie');
   assert.equal(nahtavyydenNosto(kohde('pariisi', "Palais d'Orsay")), 'hahmotelma-palais-orsay');
+  // SK PR 7134: Grand Palais on Palais de l'Industrien jakso (yksi nosto).
+  assert.equal(nahtavyydenNosto(kohde('pariisi', 'Grand Palais')), 'hahmotelma-palais-industrie');
 });
 
 test('juttuton kohde, jonka nosto on pääkartan kohde, avaa noston (ei Wikipediaa)', () => {
@@ -30,7 +32,7 @@ test('juttuton kohde, jonka nosto on pääkartan kohde, avaa noston (ei Wikipedi
 
 test('skandaali, juttu ja pelkkä wiki entisillä reiteillä', () => {
   assert.equal(nahtavyydenNosto(kohde('valletta', 'Suurmestarin palatsi')), null, 'skandaali → fi-wiki');
-  assert.equal(nahtavyydenNosto(kohde('pariisi', 'Grand Palais')), null, 'oma juttu');
+  assert.equal(nahtavyydenNosto(kohde('pariisi', 'Petit Palais')), null, 'oma juttu');
   const onKohde = () => true;
   assert.equal(nahtavyydenNosto({ teksti: 'juttu', nosto: 'louvre' }, onKohde), null, 'juttu voittaa kohteen');
   assert.equal(nahtavyydenNosto({ nosto: 'skandaali-x' }, () => false), null, 'ei kohde');
