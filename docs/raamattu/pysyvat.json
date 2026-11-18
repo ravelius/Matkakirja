@@ -479,6 +479,16 @@
      "toisto": false,
      "korvattu": null,
      "kirjattu": "2026-11-17T21:17:29.744Z"
+    },
+    {
+     "pvm": "18.11.2026",
+     "klo": "09.21",
+     "lahde": "P-261118-14",
+     "sanat": "IPhonen Vaakamuodossa ruudulla saisi näkyä max 3 vuosilukua kerralla ja muut olisivat skrollattavissa piilossa.",
+     "sha": "c5ae3e35455e7e1d",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-18T07:26:34.693Z"
     }
    ],
    "muutokset": []
