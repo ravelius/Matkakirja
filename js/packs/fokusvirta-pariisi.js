@@ -288,7 +288,7 @@ export const FOKUSVIRTA_PARIISI = {
       teksti: 'Kun isoisäsi käveli Pariisissa, ranskalaista taide-elämää '
         + 'hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi '
         + 'näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan '
-        + '1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta '
+        + '1867. Joulukuussa 1873 — kaksi kuukautta '
         + 'isoisäsi käynnin jälkeen — Monet, Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko muita perustivat '
         + 'oman yhdistyksen esittääkseen työnsä itse, ja jäseniltä odotettiin Salonista luopumista. Ensimmäinen '
         + 'näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin '
@@ -1061,7 +1061,7 @@ export const FOKUSVIRTA_PARIISI = {
           + 'hän syntyi Bellevillessä kadulla talon portaille, vaikka syntymätodistuksessa '
           + 'lukee sairaala. Teininä hän lauloi kolikoista Pariisin kaduilla ja pihoissa ystävänsä Simone Berteautin kanssa. Yökerhon omistaja Louis Leplée '
           + 'kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — '
-          + 'piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli alle 150 senttiä pitkä. Tunnetuin laulu La Vie en rose esitettiin ensi kerran 1946 ja ilmestyi levynä 1947, ja sen sanat hän kirjoitti itse.',
+          + 'piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli alle 150 senttiä pitkä. Piaf levytti tunnetuimman laulunsa La Vie en rosen 1946, ja sen sanat hän kirjoitti itse.',
         'Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin '
           + 'porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo '
           + 'lapsena. Marraskuun 2. päivän yönä 1928 vaunussa syttyi tulipalo: kynttilä kaatui '
