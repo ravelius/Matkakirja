@@ -1,4 +1,4 @@
-# kamera · vastuu PK · tarkistettu 13.11.2026
+# kamera · vastuu PK · tarkistettu 18.11.2026
 
 TAVOITE: Kamera liikkuu koko pelissä kuin hyvässä elokuvassa: se lähtee ja pysähtyy pehmeästi, liikkuu usealla akselilla yhtä aikaa eikä koskaan nykäise tai hyppää. Käsiala on sama kartalla, kaupungeissa, museoissa ja peleissä; vain tahti vaihtuu.
 
@@ -8,12 +8,12 @@ SÄÄNNÖT:
 3. Tavoitteen antaa yksi kolmesta ajurista: ohjaaja (käsikirjoitettu liike), seuraaja (liikkuva kohde) tai pelaajan ote. [R-4.24]
 4. Paikka, nopeus ja kiihtyvyys ovat jatkuvia aina, myös kun liike vaihtuu tai keskeytyy. Leikkaus on sallittu vain täyden peitteen alla tai seuraajan U-käännöksessä; paikan hyppyä ei peitetä leikkauksella. [R-4.24] [P-261112-2]
 5. Unityn kameraan kirjoittaa vain KameraKirjoittaja. [R-4.24]
-6. Tahti valitaan nimetystä tyylistä (peli vauhdikas, museo rauhallinen). Kohtauksella ei ole omia aikavakioita. [P-261111-1]
+6. Voimakkuus ja tahti tulevat datana olevasta käsialaprofiilista (museo sama hiljempaa). Kohtauksella ei ole omia lukuja. [P-261111-1] [P-261118-18]
 7. Kaikki käyrät ja jouset tulevat Liikepohjasta. Lineaarisia pätkiä ei ole. [R-2.68]
 8. Usea akseli liikkuu yhtä aikaa. Kamera ei pyöri paikallaan: se etenee sivuttain tai vinosti ja kääntyy menosuuntaan vain vähän, noin 15 astetta. [R-2.69]
-9. Kallistus syntyy kameran omasta sivukiihtyvyydestä ja on kevyt, pari astetta; peruskartalla sama kaikissa siirtymissä. Nyökkäystä ei jäljitellä, eikä tyyli ole kilpadronen. [P-261111-1] [P-261117-111]
+9. Kamera kallistuu kaarteissa selvästi profiilin katon rajoissa; peruskartalla sama kaikissa siirtymissä. [P-261118-18] [P-261117-111]
 10. Siirroissa ei ole mustia välähdyksiä eikä häivytyksiä. [R-2.202]
-11. Automaattisen ajon tempo vaihtelee: nopea lähestyminen, pehmeä jarrutus, hidas panorointi, kiihtyvä irtautuminen. [R-2.68]
+11. Kohteella kamera kaartaa, nousee ja muuttaa etäisyyttä yhtä aikaa; kaarre alkaa jarruttaessa ja jatkuu kiihdytykseen, siirtymässä se palaa alemmas. [P-261118-18]
 12. Seurattava kohde pysyy kuvassa koko ajan. [R-2.166]
 13. Kertoja, tehosteet ja kamera kulkevat samalla aikajanalla. Tauko pysäyttää kertojan ja tekstityksen heti. [R-4.23]
 14. Liikkeen lopussa tarvittava ladataan ennen liikkeen alkua. Yli 20 ms:n ruutu liikkeen aikana tai sekunnin sen jälkeen hylkää ajon. [R-4.24]
