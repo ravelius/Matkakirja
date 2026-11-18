@@ -48,16 +48,18 @@ Lähteet: **SHI** Science History Institute, "Revolutionary Instruments: Lavoisi
 
 **Avoimet lähdekohdat:** rivit 4, 10 (B/ACS vain hakutuloksina), 12 (GA avattu + hakutulokset). Muuten kaksi lähdettä per väite; B:n ja ACS:n sivun runkoa ei saatu auki (403 / ei sisältöä).
 
-## 3. Kuvat (kaikki jo olemassa, ei uusia generoituja)
+## 3. Kuvat (ei uusia generoituja; jaksot 4 ja 5 Commons-kuvat 18.11., KK 03.32)
 
 | Avain | Jakso | Kuva | Laji | Lähde ja lisenssi | Kuvateksti |
 |---|---|---|---|---|---|
 | koe | 2 | `Lavoisier experimenting on respiration Wellcome L0000145.jpg` (jo nähtävyysjutussa) | piirros/kaiverrus | Wellcome Collection, Wikimedia Commons, CC BY 4.0 | Lavoisier mittaamassa hengitystä |
 | laboratorio | 3 | `hetki-lavoisier-laboratorio-1780-kauko-photo-v4.jpg` (jo pelissä) | havainnekuva | Matkakirjan havainnekuva | Lavoisierin laboratorio, havainnekuva |
+| david | 4 | `Antoine-Laurent Lavoisier (1743–1794) and His Wife (Marie-Anne-Pierrette Paulze, 1758–1836) MET DT1992.jpg` | maalaus | Jacques-Louis David 1788, Metropolitan Museum of Art, Wikimedia Commons, CC0 | Jacques-Louis Davidin maalaus Lavoisierista ja Marie-Annesta 1788 |
+| kaasumittarit | 5 | `Laboratoire-de-Lavoisier.jpg` | valokuva | Edal Anton Lefterov, Wikimedia Commons, CC BY-SA 3.0 | Lavoisierin laboratorion kaasumittareita Arts et Métiers -museossa |
 
 Vanhan hetken `lahi`-kuva ("punnitsevat aineet ennen ja jälkeen", Marie-Anne merkitsee luvun) **jätetty pois**: vanha kuvateksti sisältää dramatisointia; jos halutaan, kuvateksti uusiksi.
 
-**Puuttuvat kuvat KK:lle:** jakso 1 (ei kuvaa), 4 (veronkantajat/Place de la Révolution: ei kuvaa), 5 (Musée des Arts et Métiers, Lavoisierin välineet tai huone: Commons-haku, ei generointia). Tekijätarkistus `node tools/tarkista-tekijat.mjs` ajamatta (verkko), aja ennen julkaisua.
+**Puuttuvat kuvat KK:lle:** vain jakso 1 (koukku, ei kuvaa). Jaksot 4 ja 5 saivat Commons-kuvat; tekijätarkistus `node tools/tarkista-tekijat.mjs` ajettu 18.11. (ei poikkeamia näissä).
 
 ## 4. Ääntämislista ja äänitystarve
 
@@ -75,6 +77,6 @@ Vanhan hetken `lahi`-kuva ("punnitsevat aineet ennen ja jälkeen", Marie-Anne me
 
 1. Hyväksytäänkö teksti? Erityisesti jakso 2 (laboratorio asunnon vieressä: EC + hakutulos) ja jakso 5 (museo).
 2. Isoisän koukku (kanava ja proomut) ok, vai jääkö koukku pois, kun laboratoriorakennuksen tilaa 1873 ei voi varmistaa?
-3. Jaksoille 4 ja 5 ei kuvaa: haetaanko Commonsista vai jäävätkö kuvattomiksi?
+3. Jaksot 4 ja 5: Commons-kuvat lisätty (ks. kohta 3).
 4. Vanhan lahi-kuvan käyttö uudella kuvatekstillä?
 5. Wikipedia-linkki `Bibliothèque de l'Arsenal` Tietokortti-striimiin: pisteen rakennus on nykyinen kirjasto, ei laboratorio; vaihdetaanko, jos halutaan toinen artikkeli?

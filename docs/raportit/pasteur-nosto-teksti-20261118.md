@@ -48,16 +48,18 @@ Lähteet: **IP** Institut Pasteur, "The middle years 1862–1877" (pasteur.fr/en
 
 **Avoimet lähdekohdat:** rivi 1 (laboratorion tarkka paikka; teksti sanoo vain "ENS:n laboratoriossa rue d'Ulmilla"). Rivit 6 ja 10 ratkaistu 18.11. (ks. taulukko). Muuten kaksi lähdettä per väite.
 
-## 3. Kuvat (kaikki jo olemassa, ei uusia generoituja)
+## 3. Kuvat (ei uusia generoituja; jaksot 3 ja 5 Commons-kuvat 18.11., KK 03.32)
 
 | Avain | Jakso | Kuva | Laji | Lähde ja lisenssi | Kuvateksti |
 |---|---|---|---|---|---|
 | pullot | 2 | `hetki-pasteur-pullot-1862-lahi-photo-v4.jpg` (jo pelissä) | havainnekuva | Matkakirjan havainnekuva | Pasteurin pullot, havainnekuva |
 | maalaus | 4 | `Albert Edelfelt - Louis Pasteur - 1885.jpg` (jo nähtävyysjutussa) | maalaus | Albert Edelfelt 1885, Wikimedia Commons, PD | Albert Edelfeltin maalaus Pasteurista 1885 |
+| pouchet | 3 | `Portrait of Felix-Archimede Pouchet. Wellcome M0006271.jpg` | piirros | Wellcome Collection, Wikimedia Commons, CC BY 4.0 | Félix-Archimède Pouchet, muotokuva |
+| ens | 5 | `CF6477 Paris 5e rue Ulm ENS rwk.jpg` | valokuva | Mbzt, Wikimedia Commons, CC BY 4.0 | École normale supérieuren sisäänkäynti rue d'Ulmilla |
 
 Vanhan hetken `kauko`-kuva (nuori avustaja kirjoittaa päivämääriä pulloihin) **jätetty pois**: dramatisointia, lähdetön.
 
-**Puuttuvat kuvat KK:lle:** jakso 1 (ei kuvaa), 3 (Pouchet / Mer de Glace: Commons-haku), 5 (ENS:n julkisivu rue d'Ulmilla: Commons-haku, ei generointia). Tekijätarkistus `node tools/tarkista-tekijat.mjs` ajamatta (verkko), aja ennen julkaisua.
+**Puuttuvat kuvat KK:lle:** vain jakso 1 (koukku, ei kuvaa). Jaksot 3 ja 5 saivat Commons-kuvat; tekijätarkistus `node tools/tarkista-tekijat.mjs` ajettu 18.11. (ei poikkeamia näissä).
 
 ## 4. Ääntämislista ja äänitystarve
 
@@ -75,5 +77,5 @@ Vanhan hetken `kauko`-kuva (nuori avustaja kirjoittaa päivämääriä pulloihin
 
 1. KK 03.18: teksti hyväksytty korjauksin a–d, tehty.
 2. Palkinnon vuosi jätetty pois, koska lähteet eroavat (1860 / 1862): ok?
-3. Kuvat jaksoille 1, 3 ja 5: haetaanko Commonsista vai jäävätkö kuvattomiksi?
+3. Jaksot 3 ja 5: Commons-kuvat lisätty (ks. kohta 3); jakso 1 kuvaton.
 4. Isoisän koukku (rue d'Ulmin nuoret miehet) ok?
