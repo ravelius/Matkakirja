@@ -5,7 +5,7 @@ TAVOITE: Pelin 3D-mallit näyttävät esikuviltaan ja kestävät katseen siltä 
 SÄÄNNÖT:
 1. Mallin esikuva on oikea kohde: muoto, osat ja mitat verrataan vapaisiin lähteisiin ennen työtä. Havainnekuvasta otetaan ulkoasu (materiaalit, värit, valo, kamera), ei paikkoja eikä mittoja. [R-7.20] [P-261020-1]
 2. Pelattava 3D-kohtaus tehdään tavoitekuvan näköiseksi. Tekijä sovittaa työn siihen omissa työkaluissaan pelin kameralla ja mittakaavahahmolla ja mittaa eron ennen tarkistusta. [R-7.20]
-3. Tripo-mallin hyväksyntä, hylkäys ja uusi otto päätetään KK:ssa ennen Tripolle kirjoittamista. [P-261105-3]
+3. Tripo-mallin hyväksyntä, hylkäys ja uusi otto päätetään KK:ssa ennen Tripolle kirjoittamista. [P-261105-3] Kun Tripo-malli ei istu kokonaisuuteen, koodilla samoista osista rakennettu malli korvaa sen ja Tripo-malli poistetaan paketista (esim. Tuileries'n palatsi Louvren osista). [P-261117-91] [P-261118-4]
 4. Hyväksytyt mallikuvat ja niiden tekotyökalu kopioidaan samassa vuorossa pysyvään talteen, ja polku kirjataan. [R-9.9]
 5. 3D-kohde on aito kappale: se näyttää ylhäältä katon ja kallistaessa sivun, seisoo maan pinnalla ilman leijuntaa ja kasvaa ja pienenee kartan mukana kuin oikea esine. [R-4.41]
 6. Lipputanko näkyy ruudun keskellä ylhäältä lähes näkymättömänä ja reunoja kohti yhä enemmän sivulta, aina radiaalisesti poispäin keskipisteestä, myös striimikartalla. [R-4.42] [R-2.216]

@@ -34,7 +34,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | aaniluvat-ja-aaniportti | Ääniluvat ja ääniportti | ÄÄ | 3.0 kt | 17.11.2026 |
 | musiikki-ja-tehosteet | Musiikki ja tehosteet | ÄÄ | 2.7 kt | 12.11.2026 |
 | grafiikan-tuotanto | Grafiikan tuotanto | PT | 3.0 kt | 12.11.2026 |
-| mallit-ja-3d | Mallit ja 3D | LAV | 2.5 kt | 12.11.2026 |
+| mallit-ja-3d | Mallit ja 3D | LAV | 2.7 kt | 12.11.2026 |
 | valo-ja-materiaalit | Valo ja materiaalit | VS | 3.0 kt | 17.11.2026 |
 | suorituskyky-ja-muisti | Suorituskyky ja muisti | NS | 2.9 kt | 12.11.2026 |
 | lataus-ja-kaynnistys | Lataus ja käynnistys | NS | 2.8 kt | 12.11.2026 |
@@ -44,10 +44,10 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | oikeudet-ja-ansainta | Oikeudet ja ansainta | KK | 2.9 kt | 12.11.2026 |
 | testit | Testit | NS | 3.0 kt | 12.11.2026 |
 | valmiin-maaritelma | Valmiin määritelmä | KK | 3.0 kt | 16.11.2026 |
-| juna-ja-julkaisu | Juna ja julkaisu | JU | 3.0 kt | 16.11.2026 |
+| juna-ja-julkaisu | Juna ja julkaisu | JU | 3.0 kt | 18.11.2026 |
 | laitteet-ja-simulaattorit | Laitteet ja simulaattorit | JU | 3.0 kt | 12.11.2026 |
-| kone-ja-levy | Kone ja levy | PT | 3.0 kt | 15.11.2026 |
-| tilit-ja-kiintio | Tilit ja kiintiö | PT | 2.6 kt | 12.11.2026 |
+| kone-ja-levy | Kone ja levy | PT | 3.0 kt | 18.11.2026 |
+| tilit-ja-kiintio | Tilit ja kiintiö | PT | 2.7 kt | 18.11.2026 |
 | avaimet-ja-luvat | Avaimet ja luvat | PT | 2.8 kt | 12.11.2026 |
 | roolit-ja-viestit | Roolit ja viestit | PT | 3.0 kt | 17.11.2026 |
 | omistajan-kanssa | Omistajan kanssa | KK | 3.0 kt | 13.11.2026 |
