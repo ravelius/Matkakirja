@@ -1296,8 +1296,9 @@ export const FOKUSKOHTEET_FRA = [
      * Yksi merkki, yksi nosto: kartan "Pasteurin laboratorio" (maakartat.js) avaa tämän. 48,8419 N / 2,3444 E
      * (rue d'Ulm, sama piste kuin hetken). Historian hetki `pasteur-pullot-1862` ja sen lehtisivu JÄÄVÄT
      * (KK-sääntö, kuten Eiffel 1888): piilopiste "Pasteur 1862" maakartat.js:ssä.
-     * Palkinnon vuosi: lähteet eroavat (Zimmer/NYT: pullot Akatemialle marraskuussa 1860; Victorian Web: Alhumbert 1862;
-     * Institut Pasteur: tutkimus 1862), siksi tekstissä vain tutkimuksen julkaisuvuosi 1862 eikä palkinnon vuotta.
+     * Palkinnon vuotta ei sanota (lähteet eroavat). Tutkimuksen julkaisuvuotta ei sanota tarkasti: tutkielma ilmestyi
+     * ensin 1861 (Annales des sciences naturelles) ja uudelleen 1862 (Annales de chimie et de physique), joten tekstissä
+     * "1860-luvun alussa" (KK 18.11.). Patentti 1865: Institut Pasteur (11.4.1865) ja Encyclopædia Universalis.
      * Teksti ja lähdetaulukko: docs/raportit/pasteur-nosto-teksti-20261118.md.
      */
     id: 'pasteur-1862',
@@ -1318,9 +1319,9 @@ export const FOKUSKOHTEET_FRA = [
       europe: { x: 256.2, y: 609.1 },
     },
     // teksti lasketaan jaksoista tiedoston lopussa.
-    lahde: 'Matkakirjan oma teksti · lähteinä Institut Pasteur, École normale supérieure, Carl Zimmer (NYT), Google Arts & Culture '
-      + 'ja Victorian Web (tarkistettu 18.11.2026).',
-    otsikko: 'Pasteur 1862 — pullot pysyivät kirkkaina',
+    lahde: 'Matkakirjan oma teksti · lähteinä Institut Pasteur, École normale supérieure, Carl Zimmer (NYT) '
+      + 'ja Encyclopædia Universalis (avatut sivut, tarkistettu 18.11.2026).',
+    otsikko: 'Pasteur — pullot pysyivät kirkkaina',
     /*
      * Äänitteitä ei ole vielä: `aanikansio` ja jaksojen `aanite` lisätään, kun Äänittäjä on
      * äänittänyt (äänitysjonon rivit ovat data/aanitysjono.tsv:ssä). Siihen asti jaksot
@@ -1347,8 +1348,7 @@ export const FOKUSKOHTEET_FRA = [
         osa: 'tapahtuma',
         teksti: 'Pasteurin vastustaja Félix Pouchet uskoi, että elämä voi syntyä itsestään mätänevästä aineesta. '
           + 'Tiedeakatemia oli luvannut palkinnon sille, joka ratkaisee kiistan kokeilla. '
-          + 'Pasteur avasi pulloja jopa Alppien jäätiköllä. Vuonna 1862 hän julkaisi tuloksensa.',
-        vuodet: [{ vuosi: '1862', selite: 'tulokset julkaistu', kohta: 'Vuonna 1862' }],
+          + 'Pasteur avasi pulloja jopa Alppien jäätiköllä. 1860-luvun alussa hän julkaisi tuloksensa.',
       },
       {
         osa: 'kaanne',
@@ -1395,7 +1395,7 @@ export const FOKUSKOHTEET_FRA = [
         'Ilma ei ollut vielä keksitty koeaineeksi',
       ],
       oikea: 0,
-      fakta: 'Tiedeakatemian 2 500 frangin palkinto myönnettiin Pasteurille (lähteet eroavat vuodesta); viinin kuumennuksen keksinnölle haettiin patentti 1865.',
+      fakta: 'Tiedeakatemia palkitsi Pasteurin kokeet. Viinin kuumennusta kutsutaan pastöroinniksi.',
     },
   },
 ];
