@@ -2135,27 +2135,81 @@ export const EUROOPAN_KADONNEET = {
     ihmeKohde({
       id: 'euston-arch',
       nimi: 'Euston Arch',
-      kysymykset: ['Mistä Euston Archin kivet löytyivät?', 'Paljonko portin purkaminen ja siirtäminen olisivat maksaneet?'],
-      korostukset: ['rautatieyhtiö|rautatieyhtiölle', 'Lea-joki|Lea-joen'],
+      kysymykset: [
+        'Miksi Euston Arch purettiin?',
+        'Mihin Euston Archin kivet joutuivat?',
+        'Kuka löysi kivet vuonna 1994?',
+      ],
+      korostukset: ['Philip Hardwick|Philip Hardwick', 'Dan Cruickshank|Dan Cruickshank'],
       nappi: 'Portti, joka löytyi joen pohjasta',
       laudat: { maailmankartta: { x: 5828.9, y: 1323.1 }, europe: { x: 208.6, y: 538.4 } },
-      teksti: 'Euston Arch oli Lontoon Euston-aseman 21 metriä korkea doorilainen portti, jonka Philip Hardwick '
-        + 'suunnitteli Lontoon ja Birminghamin rautatieyhtiölle 1837. Neljän pylvään halkaisija oli 2,6 '
-        + 'metriä, hiekkakivi tuotiin Yorkshirestä ja hinnaksi tuli 35 000 puntaa. Yhtiö lisäsi siihen 1870 '
-        + 'kultakirjaimin nimen Euston, joten isoisä näki sen 1873. Vuoden 1851 näyttelyopas piti porttia '
-        + 'jättimäisenä ja varsin älyttömänä. Vuonna 1961 liikenneministeri Ernest Marples arvioi '
-        + 'purkamisen maksavan 12 000 ja siirtämisen 190 000 puntaa, ja pääministeri Harold Macmillan '
-        + 'hylkäsi pelastajien esityksen. Purku alkoi käsin saman vuoden lopulla. Kivet päätyivät Lea-joen '
-        + 'pohjaan, ja Dan Cruickshank löysi vähintään 60 prosenttia niistä 1994.',
-      vuodet: [
-        { kohta: 'rautatieyhtiölle 1837', vuosi: '1837', selite: 'portti suunniteltiin' },
-        { kohta: 'siihen 1870', vuosi: '1870', selite: 'nimi lisättiin' },
-        { kohta: 'sen 1873', vuosi: '1873', selite: 'isoisä näki' },
-        { kohta: 'Vuonna 1961', vuosi: '1961', selite: 'purku alkoi' },
-        { kohta: 'niistä 1994', vuosi: '1994', selite: 'kiviä löytyi' },
+      // teksti lasketaan jaksoista (ks. ihmeKohde). Lähdeaineisto: docs/raportit/euston-arch-nosto-teksti-20261118.md.
+      otsikko: 'Euston Arch 1873 — portti, joka päätyi joen pohjaan',
+      jaksot: [
+        { osa: 'nimi', teksti: 'Euston Arch.' },
+        { osa: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
+        {
+          osa: 'koukku',
+          aani: 'isoisa',
+          teksti: 'Lontoo, 1873. Kävelin tänään Euston-asemalle. '
+            + 'Aseman edessä kohosi neljän valtavan pylvään portti, joka oli koko aseman sisäänkäynti.',
+          vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Lontoo, 1873' }],
+        },
+        {
+          osa: 'tapahtuma',
+          teksti: 'Portin suunnitteli arkkitehti Philip Hardwick Lontoon ja Birminghamin rautatielle 1830-luvun lopulla. '
+            + 'Pylväät olivat doorilaista tyyliä, ja portti oli yli kaksikymmentä metriä korkea.',
+          kuva: 'loisto',
+        },
+        {
+          osa: 'tapahtuma',
+          teksti: 'Aseman uudistuksen tieltä portti päätettiin purkaa 1960-luvun alussa. '
+            + 'John Betjeman ja moni muu vastusti päätöstä, mutta vetoomukset eivät auttaneet.',
+        },
+        {
+          osa: 'kaanne',
+          teksti: 'Portti purettiin, ja sen kivet heitettiin Lea-joen pohjaan täytteeksi. '
+            + 'Joen pohjassa ne makasivat monta vuosikymmentä.',
+          kuva: 'purku',
+          hologrammi: 'sammuu',
+          hologrammiKohta: 'Portti purettiin',
+        },
+        {
+          osa: 'tanaan',
+          teksti: 'Vuonna 1994 historioitsija Dan Cruickshank löysi suuren osan kivistä. '
+            + 'Portin viereiset vartiotalot seisovat yhä paikoillaan, ja portin rakentamisesta uudelleen on tehty suunnitelmia.',
+          kuva: 'vartiotalot',
+          vuodet: [{ vuosi: '1994', selite: 'kivet löytyivät', kohta: 'Vuonna 1994' }],
+        },
       ],
-      lahde: 'en-Wikipedia "Euston Arch", johdanto sekä osiot "Architecture and construction", "Removal" ja '
-        + '"Remains" (tarkistettu 31.10.2026).',
+      jaksokuvat: {
+        loisto: {
+          osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-euston-arch-loistoaika.jpg',
+          laji: 'havainnekuva',
+          lyhyt: 'Euston Arch loistoaikanaan',
+          lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: camdenguides.com, theunfinishedcity.co.uk ja architectsjournal.co.uk.',
+        },
+        purku: {
+          tiedosto: 'Euston Doric Arch demolition geograph-2991033-by-Ben-Brooksbank.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Euston Archin purku alkaa helmikuussa 1962',
+          lahde: 'Ben Brooksbank 1962, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        vartiotalot: {
+          tiedosto: 'Two Lodges in Euston Square Gardens.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Euston Archin viereiset vartiotalot Euston Squaren puistossa',
+          lahde: 'ell brown, Wikimedia Commons (CC BY 2.0)',
+        },
+      },
+      visa: {
+        kysymys: 'Minkä joen pohjaan Euston Archin kivet heitettiin?',
+        vaihtoehdot: ['Thames', 'Lea', 'Severn'],
+        oikea: 1,
+        fakta: 'Kivet heitettiin Lea-joen pohjaan täytteeksi, ja Dan Cruickshank löysi suuren osan niistä vuonna 1994.',
+      },
+      lahde: 'Matkakirjan oma teksti · lähteinä Lontoon Camden-oppaat (camdenguides.com), The Unfinished City, Architects\' Journal, '
+        + 'The Beauty of Transport, London Now ja Euston Arch Trust (avatut sivut, tarkistettu 18.11.2026).',
       kuva: 'ihme-euston-arch-loistoaika.jpg',
       lyhyt: 'Matkustaja pysähtyy neljän doorilaisen pylvään eteen ja lukee kultakirjaimin kirjoitetun nimen '
         + 'Euston; lähes yhdeksänkymmentä vuotta myöhemmin portti puretaan.',
