@@ -37,7 +37,7 @@ import {
   maahanMuoto, matkakirjanOtsikko, onVanhaKuva, paikassaMuoto, paikkaaMuoto, pehmeaPolku,
   piirraLeipateksti,
   pisteMonikulmiossa, polloNimilappu, polunPituus,
-  cachedImage, cachedSummary, fokusmoodiPaalla,
+  cachedImage, cachedSummary, cachedSummarySuomeksi, fokusmoodiPaalla,
   kehittajaMaailmaPaalla, kehittajaTilaPaalla, unohdaKehittajaKytkimet,
   lautaValinta, palloTurvatilassa, asetaPalloKevennys, palloKevennetty, etusivupalloPaalla,
   // Linssin yhteinen portti (body.aikajana-paalla): ks. linssikarttaEstaa.
@@ -16753,25 +16753,22 @@ export class UI {
     // Teksti ja kuvat molemmat paketista: verkkoa ei tarvita lainkaan.
     if (omat && this.wikiGalleria) return;
 
-    const summary = await cachedSummary(title);
+    /*
+     * VAIN SUOMEKSI (PT 18.11.2026 04.5x, natiivin WikiIkkuna f15b541f4): teksti fi-Wikipediasta suoraan tai en-sivun
+     * kielilinkin kautta (js/wiki.js fetchSummarySuomeksi), muuten pelin oma tiivistelmä tai artikkeli. Englannista
+     * otetaan vain kuva; ilman suomenkielistä tekstiä ikkunassa on kuva ja ilmoitus.
+     */
+    const summary = await cachedSummarySuomeksi(title);
     // Pelaaja on voinut ehtiä sulkea dialogin tai avata toisen paikan.
     if (!this.wikiDialog.open || this.wikiOpenFor !== title) return;
 
-    if (!summary) {
-      // Oma selitys on parempi kuin pahoittelu: se on jo ruudulla, ja
-      // lentokoneessa se on ainoa mitä kohteesta voidaan kertoa.
-      if (!alkuteksti && !omat) this.wikiExtract.textContent = 'Tietoja ei saatu haettua. Matka jatkuu.';
-      return;
-    }
-
-    if (!omat) this.wikiTitle.textContent = summary.title || label;
     // Kuratoitu karuselli on jo paikallaan; artikkelin kuvasto ei saa
-    // tulla sen päälle.
+    // tulla sen päälle. Kuva haetaan myös ilman fi-artikkelia.
     if (!this.wikiGalleria) {
       cachedImage(title).then((image) => {
         if (!this.wikiDialog.open || this.wikiOpenFor !== title || !image) return;
         this.naytaWikiKuva(image);
-        this.wikiImage.alt = summary.title || label;
+        this.wikiImage.alt = summary?.title || label;
         this.wikiImage.hidden = false;
         this.wikiKuvakotelo.hidden = false;
         // Galleria taustalla: laskuri ja nuolet, kun kuvia on useampi.
@@ -16788,32 +16785,35 @@ export class UI {
 
     // Maastoartikkelin teksti on jo ruudulla — vain kuva haettiin.
     if (omat) return;
+    if (summary) this.wikiTitle.textContent = summary.title || label;
 
     // Oma artikkeli (pilottikaupungit): Wikipedia-tekstin sijaan näytetään
     // pelin tyyliin kirjoitettu lyhyempi artikkeli — Wikipedian pohjalta,
-    // joten lähdemaininta säilyy. Kuva haetaan silti Wikipediasta.
-    /*
-     * Kaksi kenttänimeä samalle asialle. Vanhemmat artikkelit
-     * (Tanger, Tripoli, maat) käyttävät nimeä `artikkeli`, uudemmat
-     * `teksti`. Renderöinti luki vain ensimmäistä, ja 69 paikan
-     * kohdalla se sai undefinedin — "Lue lisää" kaatui kokonaan
-     * Venetsiassa, Roomassa, Ateenassa, Krakovassa ja Sarajevossa.
-     *
-     * Kenttiä ei yhtenäistetä tässä: se olisi 69 tiedostomuutosta
-     * yhden rivin ongelmaan.
-     */
+    // joten lähdemaininta säilyy. Kenttänimet `artikkeli` (vanhat) ja
+    // `teksti` (uudet) — molemmat luetaan (69 paikan "Lue lisää" kaatui ennen).
     const oma = ARTIKKELIT[title];
     const omaTeksti = oma?.artikkeli ?? oma?.teksti ?? null;
     if (omaTeksti) {
       renderArticle(this, this.wikiExtract, omaTeksti);
       this.wikiSource.textContent = 'Unohdetun aarteen oma artikkeli, kirjoitettu Wikipedian pohjalta (CC BY-SA)';
-      if (summary.url) {
+      if (summary?.url && !summary.oma) {
         this.wikiSource.appendChild(document.createTextNode(' — '));
         const alkup = html('a', '', 'lue alkuperäinen');
         alkup.href = summary.url;
         alkup.target = '_blank';
         alkup.rel = 'noopener noreferrer';
         this.wikiSource.appendChild(alkup);
+      }
+      return;
+    }
+
+    if (!summary) {
+      // Oma selitys on parempi kuin pahoittelu: se on jo ruudulla, ja
+      // lentokoneessa se on ainoa mitä kohteesta voidaan kertoa.
+      if (!alkuteksti) {
+        this.wikiExtract.textContent = globalThis.navigator?.onLine === false
+          ? 'Tietoja ei saatu haettua. Matka jatkuu.'
+          : 'Tästä kohteesta ei ole suomenkielistä artikkelia. Matka jatkuu.';
       }
       return;
     }

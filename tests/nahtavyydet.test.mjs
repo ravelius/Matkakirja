@@ -54,7 +54,8 @@ test('puuttuva piirros vie koko merkin: kartalla vain piirretyt', () => {
   // Miniatyyritön kohde ei piirry kartalle lainkaan.
   // (Poikkeus: kartta, jolla on `numeroympyrat: true`, ks. alla.)
   assert.match(LAHDE, /if \(!miniatyyri && !kartta\.numeroympyrat\) \{\s*avaajat\.push\(null\);\s*return;/);
-  assert.match(LAHDE, /const avattava = Boolean\(k\.teksti \|\| k\.wiki\);/);
+  // Nosto avattavana (PT 18.11.2026: kadonnut ihme ja juttuton kohde avaavat noston, tests/nahtavyys-nosto.test.mjs).
+  assert.match(LAHDE, /const avattava = Boolean\(k\.teksti \|\| k\.wiki \|\| nahtavyydenNosto\(k\)\);/);
   assert.match(LAHDE, /html\(avattava \? 'button' : 'span',/);
 });
 

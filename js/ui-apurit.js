@@ -12,7 +12,7 @@ import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { asetaKuva, assetOsoite, lataaKuvaSitkeasti } from './media.js';
 import { tokenIconSvg } from './mapart.js';
 import { AARRETYYPIT } from './tokens.js';
-import { fetchImage, fetchSummary } from './wiki.js';
+import { fetchImage, fetchSummary, fetchSummarySuomeksi } from './wiki.js';
 import { OMAT_TIIVISTELMAT } from './packs/omat-tiivistelmat.js';
 
 /*
@@ -2712,6 +2712,20 @@ export async function cachedSummary(title) {
     }));
   }
   return wikiSummaryCache.get(title);
+}
+
+/*
+ * LUE LISÄÄ VAIN SUOMEKSI (PT 18.11.2026 04.5x; js/wiki.js fetchSummarySuomeksi): fi-tiivistelmä suoraan tai en-sivun
+ * kielilinkin kautta; ilman sitä pelin oma tiivistelmä (OMAT_TIIVISTELMAT), muuten null. Englanninkielistä tekstiä ei
+ * palauteta koskaan. Kuva haetaan yhä cachedImage-polulla (englannista vain kuva).
+ */
+const wikiSuomeksiCache = new Map();
+export async function cachedSummarySuomeksi(title) {
+  if (!wikiSuomeksiCache.has(title)) {
+    const oma = () => (OMAT_TIIVISTELMAT[title] ? { title, extract: OMAT_TIIVISTELMAT[title], lang: 'fi', oma: true } : null);
+    wikiSuomeksiCache.set(title, fetchSummarySuomeksi(title).then((s) => s ?? oma()).catch(oma));
+  }
+  return wikiSuomeksiCache.get(title);
 }
 
 export async function cachedImage(title) {
