@@ -1,9 +1,9 @@
-# kartan-merkit-ja-nimet · vastuu NUI · tarkistettu 12.11.2026
+# kartan-merkit-ja-nimet · vastuu NUI · tarkistettu 18.11.2026
 
 TAVOITE: Kartta on kuin painettu isoisän ajan kartta: merkit ja nimet pysyvät paikallaan. Kohteen lajin tunnistaa yhdellä vilkaisulla, ja kartta pysyy rauhallisena.
 
 SÄÄNNÖT:
-1. Nimet, kyltit ja merkit ovat kiinni kartan pinnassa eivätkä väistele, hypi tai liu'u. Nimellä on yksi kiinteä paikka ja kylki. [R-2.216]
+1. Nimet, kyltit ja merkit ovat kiinni kartan pinnassa eivätkä väistele, hypi tai liu'u. Nimellä on yksi kiinteä paikka ja kylki. Merkit ja kuvat peittyvät pääkohteen taakse. [R-2.216] [P-261118-14]
 2. Päällekkäisistä nimistä vähemmän tärkeä jää pois, aina sama: pysäkit, kaupungit, nostotasot 1–3, pääkaupunkipisteet. Nimi ei jää merkin alle. [R-2.216] [R-2.144] [R-1.13]
 3. Nimet vain näkyvän kartan päällä. Pohjalla vain pysyvät nimet; vuoden 1873 poliittiset nimet ja rajat vain 1873-linssissä. [R-2.215] [R-2.143]
 4. Oletuksena kylien, nähtävyyksien ja jokien nimet; kadut, kaupunginosat ja pienet vedet Kartta-välilehdeltä. [P-261110-2] [R-2.73]
