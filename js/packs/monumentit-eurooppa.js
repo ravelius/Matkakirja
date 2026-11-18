@@ -2061,27 +2061,87 @@ export const EUROOPAN_KADONNEET = {
       id: 'greenwich-palatsi',
       nimi: 'Greenwichin palatsi',
       nimio: 'Placentia',
-      kysymykset: ['Ketkä kolme hallitsijaa syntyivät Greenwichin palatsissa?', 'Mikä palatsin aikainen rakennus on yhä pystyssä?'],
-      korostukset: ['Humphrey|Humphrey', 'Queen\'s House|Queen\'s House'],
+      kysymykset: [
+        'Ketkä kolme hallitsijaa syntyivät Greenwichin palatsissa?',
+        'Mikä rakennus nousi palatsin paikalle?',
+        'Mikä palatsin aikainen rakennus on yhä pystyssä?',
+      ],
+      korostukset: ['Henrik VIII|Henrik VIII', 'Queen\'s House|Queen\'s House'],
       nappi: 'Palatsi, jossa syntyivät Henrik VIII ja Elisabet I',
       laudat: { maailmankartta: { x: 5833.1, y: 1325.1 }, europe: { x: 211.1, y: 539.6 } },
-      teksti: 'Greenwichin palatsi, tunnetummin Placentia, oli Tudorien kuninkaallinen palatsi Thamesin '
-        + 'rannalla. Humphrey, Gloucesterin herttua, rakennutti sen 1430-luvulla nimellä '
-        + 'Bella Court, ja Margareta '
-        + 'Anjoulainen antoi sille nimen Placentia. Henrik VII rakennutti palatsin uudelleen 1498–1504. '
-        + 'Täällä syntyivät Henrik VIII (1491), Maria I (1516) ja Elisabet I (1533), ja Henrik VIII meni '
-        + 'täällä naimisiin Anna Clevesiläisen kanssa 1540. Sisällissodassa palatsi rapistui ja toimi '
-        + 'keksitehtaana ja sotavankileirinä. Kaarle II päätti 1660 rakentaa sen uudelleen, mutta vain '
-        + 'itäsiipi valmistui, eikä sitä koskaan asuttu; suurin osa palatsista purettiin. Palatsin alueelle '
-        + 'Inigo Jonesin suunnittelema Queen\'s House valmistui 1635, ja se on yhä pystyssä.',
-      vuodet: [
-        { kohta: '(1491', vuosi: '1491', selite: 'Henrik VIII syntyi' },
-        { kohta: '(1516', vuosi: '1516', selite: 'Maria I syntyi' },
-        { kohta: '(1533', vuosi: '1533', selite: 'Elisabet I syntyi' },
-        { kohta: 'kanssa 1540', vuosi: '1540', selite: 'Henrik VIII:n häät' },
+      // teksti lasketaan jaksoista (ks. ihmeKohde). Lähdeaineisto: docs/raportit/greenwichin-palatsi-nosto-teksti-20261118.md.
+      otsikko: 'Greenwichin palatsi 1873 — palatsi, jonka paikalle tuli merimiesten sairaala',
+      jaksot: [
+        { osa: 'nimi', teksti: 'Greenwichin palatsi.' },
+        { osa: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
+        {
+          osa: 'koukku',
+          aani: 'isoisa',
+          teksti: 'Lontoo, 1873. Kävelin tänään Greenwichiin, Thamesin rannalle. '
+            + 'Tällä paikalla oli ennen kuninkaiden palatsi.',
+          vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Lontoo, 1873' }],
+        },
+        {
+          osa: 'tapahtuma',
+          teksti: 'Greenwichin palatsi oli Tudorien kuninkaallinen asunto joen rannalla. '
+            + 'Siellä syntyivät Henrik VIII ja hänen tyttärensä Maria ja Elisabet.',
+          kuva: 'loisto',
+        },
+        {
+          osa: 'tapahtuma',
+          teksti: 'Englannin sisällissodassa palatsi rapistui. Kuningas Kaarle II halusi rakentaa uuden palatsin, '
+            + 'mutta siitä valmistui vain osa, eikä yksikään kuningas asunut siinä.',
+          kuva: 'palatsi',
+        },
+        {
+          osa: 'kaanne',
+          teksti: 'Vanha palatsi purettiin, ja keskeneräinen uudisrakennus liitettiin merimiesten sairaalaan. '
+            + 'Sairaala rakennettiin palatsin paikalle Thamesin rannalle.',
+          kuva: 'sairaala',
+          hologrammi: 'sammuu',
+          hologrammiKohta: 'Vanha palatsi purettiin',
+        },
+        {
+          osa: 'tanaan',
+          teksti: 'Sairaalasta tuli myöhemmin Old Royal Naval College. Palatsin kellareita on yhä sen rakennusten alla, '
+            + 'ja palatsin ajalta on säilynyt Queen\'s House.',
+          kuva: 'ornc',
+        },
       ],
-      lahde: 'en-Wikipedia "Palace of Placentia", johdanto ja osiot "History" ja "Archaeology"; "Queen\'s '
-        + 'House", osio "Early history" (tarkistettu 31.10.2026).',
+      jaksokuvat: {
+        loisto: {
+          osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-greenwich-palatsi-loistoaika.jpg',
+          laji: 'havainnekuva',
+          lyhyt: 'Greenwichin palatsi loistoaikanaan',
+          lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: rmg.co.uk, historic-uk.com ja royalgreenwich.gov.uk.',
+        },
+        palatsi: {
+          tiedosto: 'British (English) School - Greenwich from the Park Showing the Tudor Palace, c.1620 - BHC1820 - Royal Museums Greenwich.jpg',
+          laji: 'maalaus',
+          lyhyt: 'Greenwichin Tudor-palatsi 1600-luvun alun maalauksessa',
+          lahde: 'Tuntematon englantilainen taiteilija, Royal Museums Greenwich, Wikimedia Commons (Public domain)',
+        },
+        sairaala: {
+          tiedosto: 'Greenwich Hospital from the North Bank of the Thames.jpg',
+          laji: 'maalaus',
+          lyhyt: 'Greenwichin merimiessairaala Canaletton maalaamana',
+          lahde: 'Canaletto, Wikimedia Commons (Public domain)',
+        },
+        ornc: {
+          tiedosto: 'Royal Naval College Greenwich view from the Thames.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Old Royal Naval College Thamesilta katsottuna',
+          lahde: 'Dmitry Tonkonog, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      },
+      visa: {
+        kysymys: 'Mikä Greenwichin palatsin aikainen rakennus on yhä pystyssä?',
+        vaihtoehdot: ['Queen\'s House', 'Westminster Hall', 'Kensingtonin palatsi'],
+        oikea: 0,
+        fakta: 'Queen\'s House on säilynyt palatsin ajalta, ja Old Royal Naval Collegen alla on yhä palatsin kellareita.',
+      },
+      lahde: 'Matkakirjan oma teksti · lähteinä Royal Museums Greenwich (rmg.co.uk), Historic UK, Royal Borough of Greenwich '
+        + 'ja Tudor History (avatut sivut, tarkistettu 18.11.2026).',
       kuva: 'ihme-greenwich-palatsi-loistoaika.jpg',
       lyhyt: 'Hovin väki täyttää Thamesin rannan palatsin pihat Henrik VIII:n aikana; reilut sata vuotta '
         + 'myöhemmin Kaarle II päättää rakentaa palatsin uudelleen, ja suurin osa puretaan.',
