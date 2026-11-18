@@ -5412,6 +5412,8 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Invalidit', tagi: 'historia', lat: 48.855, lon: 2.3125, wiki: 'Hôtel des Invalides' },
       // Yksi nosto (Pariisin nostot uudella tavalla 18.11.2026): fokuskohde `lumiere-1895` (fokuskohteet-fra.js); entinen tarinapaikka "Lumière 1895" (hetki jää piilopisteenä alempana).
       { nimi: 'Grand Café', tagi: 'kulttuuri', lat: 48.8703, lon: 2.3294, wiki: 'Salon Indien du Grand Café', nosto: 'lumiere-1895' },
+      // Yksi nosto (Pariisin nostot uudella tavalla 18.11.2026): fokuskohde `pasteur-1862` (fokuskohteet-fra.js); entinen tarinapaikka "Pasteur 1862" (hetki jää piilopisteenä alempana).
+      { nimi: 'Pasteurin laboratorio', tagi: 'tiede', lat: 48.8419, lon: 2.3444, wiki: 'École normale supérieure (Paris)', nosto: 'pasteur-1862' },
       // Yksi nosto (Pariisin nostot uudella tavalla 18.11.2026): fokuskohde `curie-1898` (fokuskohteet-fra.js); entinen tarinapaikka "Curie 1898" (hetki jää piilopisteenä).
       { nimi: 'Curien vaja', tagi: 'tiede', lat: 48.842, lon: 2.3476, wiki: 'ESPCI Paris', nosto: 'curie-1898' },
       // Yksi nosto (Pariisin nostot uudella tavalla 17.11.2026): fokuskohde `sainte-chapelle` (Kaulanauha 1785 jaksoina).
@@ -5522,8 +5524,9 @@ export const KAUPUNKIKARTAT = {
         nosto: 'hetki-lavoisier-laboratorio-1780',
       },
       // École normale supérieure, rue d'Ulm.
+      // Hetki pasteur-pullot-1862 jää (KK-sääntö, kuten Eiffel-torni 1888): piilopiste, ei omaa kylttiä; näkyvä merkki on nähtävyys "Pasteurin laboratorio".
       {
-        nimi: 'Pasteur 1862', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.8419, lon: 2.3444,
+        nimi: 'Pasteur 1862', tarinapaikka: false, tyyppi: 'henkilo', lat: 48.8419, lon: 2.3444,
         nosto: 'hetki-pasteur-pullot-1862', nimiPuoli: 'vasen',
       },
       // sama piste kuin kohde Bastilji: nimiö oikealle.
