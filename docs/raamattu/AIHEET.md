@@ -54,6 +54,6 @@ Aiheita 53 / 60. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | nollaus-ja-luovutus | Nollaus ja luovutus | PT | 3.0 kt | 12.11.2026 |
 | tyolista-ja-karjet | Työlista ja kärjet | KK | 3.0 kt | 12.11.2026 |
 | agentit-ja-komennot | Agentit ja komennot | PT | 3.0 kt | 12.11.2026 |
-| latausruutu | Latausruutu | NUI | – | – |
+| latausruutu | Latausruutu | NUI | 1.2 kt | 18.11.2026 |
 | kaupungin-pohja | Kaupungin pohja | KS | – | – |
 | pallo-google-versio | Pallon Google-versio | KS | – | – |

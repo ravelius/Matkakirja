@@ -4,8 +4,8 @@
   "aika": "2026-11-18T13:14:01.106Z"
  },
  "AIHEET.md": {
-  "sha": "efbd8fb9f6c270a8",
-  "aika": "2026-11-18T13:14:35.123Z"
+  "sha": "5886652a6779f03b",
+  "aika": "2026-11-18T13:14:39.688Z"
  },
  "KIRJASTOT.md": {
   "sha": "58b497d7ae0f85d5",
@@ -242,5 +242,9 @@
  "aihepyynnot.md": {
   "sha": "2c581ffbece63667",
   "aika": "2026-11-18T13:09:11.022Z"
+ },
+ "aiheet/latausruutu.md": {
+  "sha": "b0e50996209175cf",
+  "aika": "2026-11-18T13:14:39.688Z"
  }
 }
