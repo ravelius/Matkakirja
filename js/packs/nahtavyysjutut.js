@@ -5871,50 +5871,6 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Grand Palais': {
-      aika: '1897–1900',
-      teksti: 'Grand Palais rakennettiin vuoden 1900 maailmannäyttelyyn, ja sen '
-          + 'tieltä purettiin vuoden 1855 näyttelyn Palais de l’Industrie. '
-          + 'Kivisten julkisivujen taakse kätkeytyi teräsrunkoinen halli, '
-          + 'jonka lasikatto oli aikanaan Euroopan suurin. Samaan näyttelyyn '
-          + 'valmistui Seinen yli Aleksanteri III:n silta, joka johtaa suoraan '
-          + 'palatsin eteen.'
-        + '\n\n'
-        + 'Hallissa pidettiin hevosnäyttelyitä, taidesalonkeja ja vuodesta '
-          + '1901 automessuja, ja vuonna 1909 siellä esiteltiin lentokoneita '
-          + 'ensimmäisessä kansainvälisessä ilmailunäyttelyssä. Ensimmäisen '
-          + 'maailmansodan aikana palatsi oli sotilassairaala.'
-        + '\n\n'
-        + 'Lasikatto ruostui ja vuoti vuosikymmeniä, ja kun katosta putosi '
-          + 'niitti vuonna 1993, halli suljettiin yleisöltä yli kymmeneksi '
-          + 'vuodeksi. Korjausten jälkeen se avattiin uudelleen, ja vuoden '
-          + '2024 olympialaisissa lasikaton alla miekkailtiin.',
-      vuodet: [
-        { kohta: 'vuoden 1900 maailmannäyttelyyn', vuosi: '1900', selite: 'maailmannäyttely' },
-        { kohta: 'vuoden 1855', vuosi: '1855', selite: 'vanha näyttely' },
-        { kohta: 'vuodesta 1901', vuosi: '1901', selite: 'automessut' },
-        { kohta: 'vuonna 1909', vuosi: '1909', selite: 'ilmailunäyttely' },
-        { kohta: 'vuonna 1993', vuosi: '1993', selite: 'niitti putosi' },
-        { kohta: 'vuoden 2024', vuosi: '2024', selite: 'olympialaiset' },
-      ],
-      kuvat: [
-        {
-          tiedosto: 'Grand Palais @ Paris (34729073762).jpg',
-          lyhyt: 'Grand Palais rakennettiin vuoden 1900 maailmannäyttelyyn.',
-          selite: 'Grand Palais on lasi- ja teräskattoinen näyttelypalatsi, '
-            + 'joka rakennettiin vuoden 1900 maailmannäyttelyyn.',
-          lahde: 'Guilhem Vellut, Wikimedia Commons (CC BY 2.0)',
-        },
-        {
-          tiedosto: 'Grand Palais - PA00088877 - Bonhams 2013 - Vue d\'ensemble - 007.jpg',
-          lyhyt: 'Lasikaton alla on esitelty autoja vuodesta 1901.',
-          selite: 'Lasikaton alla on esitelty autoja vuodesta 1901; kuvassa '
-            + 'vanhojen autojen huutokauppa vuonna 2013.',
-          lahde: 'Thesupermat, Wikimedia Commons (CC BY-SA 3.0)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
     'Petit Palais': {
       aika: '1897–1900',
       teksti: 'Petit Palais rakennettiin vuoden 1900 maailmannäyttelyyn '
@@ -6636,34 +6592,6 @@ export const NAHTAVYYSJUTUT = {
       // fr-WP. Pois: "1240", "1312"-vuosi, "kaksi vuotta", "pohjoiskulma", korkeus, vaatetori (ei v3:ssa).
       lahde: 'Matkakirjan oma teksti · lähteinä Pariisin kaupungin vallankumousreitti ja puistosivut, Cléryn '
         + 'päiväkirja Temple-tornista (1798), Larousse, Viollet-le-Ducin Dictionnaire raisonné ja Wikipedia',
-    },
-    'Palais de l\'Industrie': {
-      aika: '1855–1890-luvun loppu',
-      nosto: 'hahmotelma-palais-industrie',
-      teksti: 'Pariisin ensimmäistä maailmannäyttelyä varten vuonna 1855 rakennettiin Champs-Élysées\'n varrelle '
-        + 'lasi- ja rautahalli, jonka suunnittelivat arkkitehti Jean-Marie-Victor Viel ja insinööri Alexis '
-        + 'Barrault. Näyttely avattiin toukokuussa 1855. Toisin kuin Lontoon Kristallipalatsi, halli jäi '
-        + 'paikalleen, ja siellä pidettiin Pariisin virallinen taidenäyttely, Salon. Vuonna 1881 siellä oli '
-        + 'kansainvälinen sähkönäyttely.'
-        + '\n\n'
-        + 'Isoisäsi vuonna 1873 halli oli vielä käytössä. Se purettiin 1890-luvun lopulla Grand Palais\'n tieltä.',
-      kuvat: [
-        {
-          tiedosto: 'Palais de l\'Industrie - Édouard Baldus.jpg',
-          lyhyt: 'Palais de l\'Industrien pääsisäänkäynnin kaariportti Édouard Baldusin valokuvassa.',
-          selite: 'Palais de l\'Industrien pääsisäänkäynnin kaariportti Édouard Baldusin '
-            + 'valokuvassa 1850- tai 1860-luvulta.',
-          lahde: 'Édouard Baldus, The Metropolitan Museum of Art, Wikimedia Commons (PD)',
-        },
-      ],
-      // Lähdemuistiinpano (SK 15.11.2026): v3 kohta 4; viimeinen virke PR 6781:n tarkistuksen mukaan ("vuosisadan
-      // lopulla Grand Palais'n ja Petit Palais'n tieltä" → "1890-luvun lopulla Grand Palais'n tieltä": purkuvuosi ERO
-      // paris.fr 1897 / fr-WP 1896, Petit Palais vain fr-WP). Viel ja Barrault = CCA + fr-WP; toukokuu 1855 =
-      // herodote.net + fr-WP; Salon = Larousse + fr-WP; sähkönäyttely 1881 = Heap 1884 + fr-WP; Grand Palais'n tieltä =
-      // paris.fr + fr-WP. Pois: kivijulkisivu, mitat, Robertin ryhmä, Salonin vuodet, Notre-Dame-du-Travail.
-      lahde: 'Matkakirjan oma teksti · lähteinä Kanadan arkkitehtuurikeskuksen (CCA) kokoelmat, Hérodote.net, '
-        + 'Larousse, Heapin Electrical Appliances of the Present Day (1884), Pariisin kaupungin Grand Palais -sivu ja '
-        + 'Wikipedia',
     },
     'Trocadéron palatsi': {
       aika: '1878–1935',

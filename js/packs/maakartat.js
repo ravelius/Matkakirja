@@ -5401,7 +5401,8 @@ export const KAUPUNKIKARTAT = {
        * numeroympyröinä, kunnes miniatyyrit generoidaan. Sama
        * ratkaisu kuin paketissa K1.
        */
-      { nimi: 'Orsayn taidemuseo', tagi: 'kulttuuri', lat: 48.86, lon: 2.3266, wiki: 'Orsayn taidemuseo' },
+      // Liitetty nostoon (KK 18.11.2026): museon pisteen napautus avaa Palais d'Orsay -noston (hahmotelma-palais-orsay).
+      { nimi: 'Orsayn taidemuseo', tagi: 'kulttuuri', lat: 48.86, lon: 2.3266, wiki: 'Orsayn taidemuseo', nosto: 'hahmotelma-palais-orsay' },
       // Yksi nosto (Pariisin nostot uudella tavalla 18.11.2026): fokuskohde `palais-garnier` (fokuskohteet-fra.js); Piaf ja Django pysyy omana tarinanaan saman pisteen alla.
       { nimi: 'Palais Garnier', tagi: 'kulttuuri', lat: 48.8719, lon: 2.3317, wiki: 'Palais Garnier', nosto: ['palais-garnier', 'nosto-pariisi-soi'] },
       { nimi: 'Place des Vosges', tagi: 'historia', tyyppi: 'aukio', lat: 48.8556, lon: 2.3656, wiki: 'Place des Vosges' },
@@ -5421,7 +5422,8 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Curien vaja', tagi: 'tiede', lat: 48.842, lon: 2.3476, wiki: 'ESPCI Paris', nosto: 'curie-1898' },
       // Yksi nosto (Pariisin nostot uudella tavalla 17.11.2026): fokuskohde `sainte-chapelle` (Kaulanauha 1785 jaksoina).
       { nimi: 'Sainte-Chapelle', tagi: 'uskonnot', lat: 48.8554, lon: 2.345, wiki: 'Sainte-Chapelle', nosto: 'sainte-chapelle' },
-      { nimi: 'Grand Palais', tagi: 'kulttuuri', lat: 48.8661, lon: 2.3125, wiki: 'Grand Palais' },
+      // Liitetty nostoon (KK 18.11.2026): Grand Palais -pisteen napautus avaa saman noston kuin Palais de l'Industrie (kohde palais-industrie).
+      { nimi: 'Grand Palais', tagi: 'kulttuuri', lat: 48.8661, lon: 2.3125, wiki: 'Grand Palais', nosto: 'hahmotelma-palais-industrie' },
       // Petit Palais (KK 11.11.2026 klo 19.08: jokaisella koodimallilla nimikyltti ja esittely; natiivin koodimalli ilman Tripoa). Piste = Wikidata P625 (Q820892).
       { nimi: 'Petit Palais', tagi: 'kulttuuri', lat: 48.866, lon: 2.3146, wiki: 'Petit Palais' },
       // Natiivin koodimallit ilman Tripoa (KK 14.17, S3-faktat): nimi = natiivin Kohde.Nimi, piste = Wikidata P625 (Q1431547, Q1338207, Q178065).
