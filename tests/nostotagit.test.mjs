@@ -52,7 +52,8 @@ test('kohdekartat: kohteen ja linkin tagi, tarinapaikka merkin mukaan', () => {
     }
   }
   // 40 → 35: yhdistämisen vaihe A (KK 17.11.2026) poisti 13 tarinapaikkaa, joiden nostot siirtyivät kohteen merkille.
-  assert.ok(tarinapaikkoja >= 35, `tarinapaikkoja ${tarinapaikkoja}`);
+  // 35 → 34: Pasteur 1862 (SK 18.11.2026) on nyt nähtävyys (kohde pasteur-1862), ei enää tarinapaikka.
+  assert.ok(tarinapaikkoja >= 34, `tarinapaikkoja ${tarinapaikkoja}`);
   const pariisi = kohdekartat.find((k) => k.id === 'pariisi');
   const bastilji = pariisi.kohteet.find((k) => k.nimi === 'Bastilji');
   assert.equal(bastilji?.tagi, 'kadonneet', 'Bastilji on kadonnut');

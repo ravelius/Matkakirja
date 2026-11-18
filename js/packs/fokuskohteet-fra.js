@@ -1290,6 +1290,114 @@ export const FOKUSKOHTEET_FRA = [
       fakta: 'Traité élémentaire de chimie (1789) sisältää kolmetoista Marie-Annen piirrosta; Antoine mestattiin 8. toukokuuta 1794.',
     },
   },
+  {
+    /*
+     * PASTEURIN LABORATORIO, ÉCOLE NORMALE SUPÉRIEURE (Pariisin nostot uudella tavalla, erä 9, SK 18.11.2026; KK lukee).
+     * Yksi merkki, yksi nosto: kartan "Pasteurin laboratorio" (maakartat.js) avaa tämän. 48,8419 N / 2,3444 E
+     * (rue d'Ulm, sama piste kuin hetken). Historian hetki `pasteur-pullot-1862` ja sen lehtisivu JÄÄVÄT
+     * (KK-sääntö, kuten Eiffel 1888): piilopiste "Pasteur 1862" maakartat.js:ssä.
+     * Palkinnon vuotta ei sanota (lähteet eroavat). Tutkimuksen julkaisuvuotta ei sanota tarkasti: tutkielma ilmestyi
+     * ensin 1861 (Annales des sciences naturelles) ja uudelleen 1862 (Annales de chimie et de physique), joten tekstissä
+     * "1860-luvun alussa" (KK 18.11.). Patentti 1865: Institut Pasteur (11.4.1865) ja Encyclopædia Universalis.
+     * Teksti ja lähdetaulukko: docs/raportit/pasteur-nosto-teksti-20261118.md.
+     */
+    id: 'pasteur-1862',
+    nimi: 'Pasteurin laboratorio',
+    nimio: 'Pasteur',
+    tyyppi: 'tekniikka',
+    symboli: 'tekniikka',
+    // Pulun kysymykset kolme: vanhan hetken kaksi (toinen muokattu) + yksi uusi (vastauksia ei kirjoiteta).
+    kysymykset: [
+      'Mitä ihmiset uskoivat ennen Pasteuria siitä, mistä elämä syntyy?',
+      'Miksi Pasteur vei liemipullonsa Alppien jäätikölle asti?',
+      'Miksi viiniä kuumennetaan pastöroinnissa?',
+    ],
+    korostukset: ['Louis Pasteur', 'Félix Pouchet'],
+    nappi: 'Laboratorio, jossa pullot pysyivät kirkkaina',
+    laudat: {
+      maailmankartta: { x: 5911.5, y: 1440.2 },
+      europe: { x: 256.2, y: 609.1 },
+    },
+    // teksti lasketaan jaksoista tiedoston lopussa.
+    lahde: 'Matkakirjan oma teksti · lähteinä Institut Pasteur, École normale supérieure, Carl Zimmer (NYT) '
+      + 'ja Encyclopædia Universalis (avatut sivut, tarkistettu 18.11.2026).',
+    otsikko: 'Pasteur — pullot pysyivät kirkkaina',
+    /*
+     * Äänitteitä ei ole vielä: `aanikansio` ja jaksojen `aanite` lisätään, kun Äänittäjä on
+     * äänittänyt (äänitysjonon rivit ovat data/aanitysjono.tsv:ssä). Siihen asti jaksot
+     * kuuluvat suoratoistona.
+     */
+    jaksot: [
+      { osa: 'nimi', teksti: 'Pasteurin laboratorio.' },
+      { osa: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
+      {
+        osa: 'koukku',
+        aani: 'isoisa',
+        teksti: 'Pariisi, 1873. Kävelin tänään rue d\'Ulmia pitkin. '
+          + 'Kadulla käveli muutama nuori mies, ja jokaisella oli kirja kainalossa.',
+        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
+      },
+      {
+        osa: 'tapahtuma',
+        teksti: 'Louis Pasteur työskenteli École normale supérieuren laboratoriossa rue d\'Ulmilla. '
+          + 'Hän keitti lientä lasipulloissa, joiden kaula oli taivutettu joutsenen kaulan muotoon. '
+          + 'Ilma pääsi pulloon, mutta pöly jäi mutkaan.',
+        kuva: 'pullot',
+      },
+      {
+        osa: 'tapahtuma',
+        teksti: 'Pasteurin vastustaja Félix Pouchet uskoi, että elämä voi syntyä itsestään mätänevästä aineesta. '
+          + 'Tiedeakatemia oli luvannut palkinnon sille, joka ratkaisee kiistan kokeilla. '
+          + 'Pasteur avasi pulloja jopa Alppien jäätiköllä. 1860-luvun alussa hän julkaisi tuloksensa.',
+      },
+      {
+        osa: 'kaanne',
+        teksti: 'Pasteur voitti kiistan. Hän osoitti myös, että käyminen on elävien mikrobien työtä. '
+          + 'Viinin tauteja hän torjui kuumentamalla viiniä, ja keksinnölle haettiin patentti 1865. '
+          + 'Menetelmää kutsutaan pastöroinniksi.',
+        kuva: 'maalaus',
+        vuodet: [{ vuosi: '1865', selite: 'pastörointipatentti', kohta: 'patentti 1865' }],
+      },
+      {
+        osa: 'tanaan',
+        teksti: 'École normale supérieure toimii yhä rue d\'Ulmilla Latinalaiskorttelissa. '
+          + 'Pasteur oli koulun tieteellisten opintojen johtaja ja työskenteli siellä vuosikymmeniä.',
+      },
+    ],
+    /*
+     * jaksokuvat: kaikki jo olemassa olevia (ei uusia generoituja kuvia): hetken havainnekuva ja
+     * Edelfeltin maalaus (Commons, PD). Jaksoilla 3 ja 5 ei kuvaa (puuttuvat KK:lle).
+     */
+    jaksokuvat: {
+      pullot: {
+        osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-pasteur-pullot-1862-lahi-photo-v4.jpg',
+        laji: 'havainnekuva',
+        lyhyt: 'Pasteurin pullot, havainnekuva',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Faktat: Institut Pasteur; laboratorion sisustus on dramatisoitu.',
+      },
+      maalaus: {
+        tiedosto: 'Albert Edelfelt - Louis Pasteur - 1885.jpg',
+        laji: 'maalaus',
+        lyhyt: 'Albert Edelfeltin maalaus Pasteurista 1885',
+        lahde: 'Albert Edelfelt 1885, Wikimedia Commons (public domain)',
+      },
+    },
+    /*
+     * KYSYMYS (yksi per paikka; KK 17.11.2026 "kysymystehtävät säilyvät"): vanhan hetken lehtitehtävä siirtyy;
+     * vastaus on kertomuksessa (jakso 2), ei vuosiriveissä eikä kuvateksteissä.
+     */
+    visa: {
+      kysymys: 'Miksi joutsenkaulapullon liemi pysyi kirkkaana, vaikka ilma pääsi sisään?',
+      vaihtoehdot: [
+        'Lasin mutka pysäytti ilman mukana kulkevan pölyn ja mikrobit',
+        'Liemi oli suolattu',
+        'Pullo oli tiiviisti suljettu',
+        'Ilma ei ollut vielä keksitty koeaineeksi',
+      ],
+      oikea: 0,
+      fakta: 'Tiedeakatemia palkitsi Pasteurin kokeet. Viinin kuumennusta kutsutaan pastöroinniksi.',
+    },
+  },
 ];
 
 /*
