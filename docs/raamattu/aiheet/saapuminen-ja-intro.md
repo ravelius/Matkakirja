@@ -19,6 +19,7 @@ SÄÄNNÖT:
 14. Maassa näkyvät aluksi vain visalliset nostot; ensimmäinen oikea vastaus sytyttää aarteen pisteen ja tuo muut nostot. [R-2.161]
 15. Esittelyn lisäkuvat ovat pieniä oikeassa alakulmassa ja suurenevat vain napautuksesta. Muuten isoja kuvia ei avata itsestään; kuumailmapallo aukeaa ilman esittelyä. [R-4.25] [R-2.152]
 16. Otsikkoruudun reunaviiva on ohut ja kevyt eikä peitä kirjainta. [P-261117-106] [P-261117-107]
+17. Alkulento korkeammalle, kiertosuunta päättäväksi, tökkiminen pois iPhonella. [P-261116-34]
 
 EI VIKA:
 - Näköalakuvassa, kaupunginosassa ja kadussa ei ole vuotta.
