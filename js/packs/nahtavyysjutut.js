@@ -6680,37 +6680,6 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Matkakirjan oma teksti · lähteinä Pariisin kaupungin vallankumousreitti ja puistosivut, Cléryn '
         + 'päiväkirja Temple-tornista (1798), Larousse, Viollet-le-Ducin Dictionnaire raisonné ja Wikipedia',
     },
-    'Palais d\'Orsay': {
-      aika: '1810–1898',
-      nosto: 'hahmotelma-palais-orsay',
-      teksti: 'Napoleon käski rakentaa Seinen rannalle hallintopalatsin vuonna 1810, mutta se valmistui vasta '
-        + 'noin kolmenkymmenen vuoden päästä. Siellä toimivat valtioneuvosto ja tilintarkastustuomioistuin, '
-        + 'jonka portaikon seinille Théodore Chassériau maalasi freskot.'
-        + '\n\n'
-        + 'Kommunardit sytyttivät palatsin tuleen toukokuussa 1871. Émile Zola kuvasi tulipaloa romaanissa La '
-        + 'Débâcle: jättimäinen kivikuutio, jossa oli kaksi kerrosta pylväskäytäviä ja josta liekit syöksyivät. '
-        + 'Palaneet muurit seisoivat keskellä Pariisia lähes kolmekymmentä vuotta. Freskoista pelastettiin vain '
-        + 'irrotettuja palasia, jotka ovat nyt Louvressa.'
-        + '\n\n'
-        + 'Isoisäsi vuonna 1873 rauniot olivat jokirannalla. Valtio myi ne rautatieyhtiölle, ja vuodesta 1898 '
-        + 'paikalle rakennettiin asema vuoden 1900 maailmannäyttelyä varten. Siitä tuli taidemuseo vuonna 1986.',
-      kuvat: [
-        {
-          tiedosto: 'Les ruines de la Cour des Comptes, Palais d\'Orsay, quai Anatole-France (actuel Musée d\'Orsay) 7ème arrondissement. D.455.jpg',
-          lyhyt: 'Palais d\'Orsayn rauniot Auguste Constantinin piirroksessa 1892.',
-          selite: 'Palaneen Palais d\'Orsayn kattoton sisäpiha Auguste Constantinin piirroksessa vuodelta 1892, '
-            + 'kun rauniot olivat seisseet jo yli kaksikymmentä vuotta.',
-          lahde: 'Auguste Constantin 1892, Musée Carnavalet, Wikimedia Commons (CC0)',
-        },
-      ],
-      // Lähdemuistiinpano (SK 15.11.2026): v3 kohta 3 sanatarkasti. 1810 ja "noin kolmekymmentä vuotta" = conseil-etat.fr
-      // (1840) + fr-WP (1838); Chassériaun freskot = conseil-etat.fr + Joconde 000PE000431; palo 1871 = conseil-etat.fr +
-      // fr-WP; Zola = La Débâcle (fr.wikisource, ensikäden teksti) + fr-WP; asema 1898–1900 = POP PA00088689 + fr-WP;
-      // Leniaud (univ-droit.fr) tilintarkastustuomioistuimesta. Pois: 1838/1840, "60 m²", tarkat päivät.
-      lahde: 'Matkakirjan oma teksti · lähteinä Ranskan valtioneuvoston sivut, Ranskan kulttuuriministeriön '
-        + 'muistomerkki- ja taide-esinerekisterit, Leniaudin tutkimus tilintarkastustuomioistuimesta Palais '
-        + 'd\'Orsayssa, Zolan La Débâcle ja Wikipedia',
-    },
     'Palais de l\'Industrie': {
       aika: '1855–1890-luvun loppu',
       nosto: 'hahmotelma-palais-industrie',

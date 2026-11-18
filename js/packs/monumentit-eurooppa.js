@@ -229,27 +229,86 @@ export const EUROOPAN_KADONNEET = {
       id: 'palais-orsay',
       nimi: 'Palais d\'Orsay',
       nimio: 'Orsayn palatsi',
-      kysymykset: ['Kuka sytytti Palais d\'Orsayn tuleen vuonna 1871?', 'Mikä rakennus nousi palatsin raunioiden tilalle?'],
-      korostukset: ['kommunardi|kommunardit', 'fresko|freskoista'],
+      kysymykset: [
+        'Kuka sytytti Palais d\'Orsayn tuleen vuonna 1871?',
+        'Mikä rakennus nousi palatsin raunioiden tilalle?',
+        'Mitä Chassériaun freskoille tapahtui?',
+      ],
+      korostukset: ['Théodore Chassériau|Théodore Chassériau', 'Émile Zola|Émile Zola'],
       nappi: 'Palatsi, jonka raunioista tuli asema',
       laudat: { maailmankartta: { x: 5910.9, y: 1439.5 }, europe: { x: 255.9, y: 608.6 } },
-      teksti: 'Palais d\'Orsay oli Seinen rannalla Quai d\'Orsay\'lla seissyt hallintopalatsi, jonka Napoleon I '
-        + 'aloitti 1810 ja joka valmistui vasta noin kolmenkymmenen vuoden päästä. Arkkitehti Jacques-Charles Bonnard suunnitteli sen, '
-        + 'ja Jacques Lacornée jatkoi työtä. Valtioneuvosto muutti alakertaan 1840 ja '
-        + 'tilintarkastustuomioistuin Cour des comptes ensimmäiseen kerrokseen 1842, ja sen portaikkoon '
-        + 'Théodore Chassériau maalasi freskot. Palatsin sytyttivät tuleen kommunardit yönä 23.–24. '
-        + 'toukokuuta 1871. Rauniot jäivät keskelle Pariisia, ja isoisä näki ne 1873. Freskoista '
-        + 'pelastettiin vain irrotettuja palasia. Rauniot purettiin '
-        + 'vuodesta 1898, ja paikalle rakennettiin Gare d\'Orsay vuoden 1900 maailmannäyttelyä varten.',
-      vuodet: [
-        { kohta: 'aloitti 1810', vuosi: '1810', selite: 'palatsi aloitettiin' },
-        { kohta: 'toukokuuta 1871', vuosi: '1871', selite: 'palatsi paloi' },
-        { kohta: 'näki ne 1873', vuosi: '1873', selite: 'isoisä näki rauniot' },
-        { kohta: 'vuodesta 1898', vuosi: '1898', selite: 'purku alkoi' },
-        { kohta: 'vuoden 1900', vuosi: '1900', selite: 'maailmannäyttely' },
+      // teksti lasketaan jaksoista (ks. ihmeKohde). Lähdeaineisto: docs/raportit/palais-orsay-nosto-teksti-20261118.md.
+      otsikko: 'Palais d\'Orsay 1873 — palatsi, jonka raunioista tuli asema',
+      jaksot: [
+        { osa: 'nimi', teksti: 'Palais d\'Orsay.' },
+        { osa: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
+        {
+          osa: 'koukku',
+          aani: 'isoisa',
+          teksti: 'Pariisi, 1873. Kävelin tänään Seinen rantaa pitkin. '
+            + 'Rannalla seisoi keskellä kaupunkia palaneen palatsin rauniot.',
+          vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
+        },
+        {
+          osa: 'tapahtuma',
+          teksti: 'Napoleonin aikana Seinen rannalle alettiin rakentaa hallintopalatsia. '
+            + 'Se valmistui vasta noin kolmenkymmenen vuoden päästä. '
+            + 'Siellä toimivat valtioneuvosto ja tilintarkastustuomioistuin.',
+          kuva: 'loisto',
+        },
+        {
+          osa: 'tapahtuma',
+          teksti: 'Tilintarkastustuomioistuimen portaikon seinille Théodore Chassériau maalasi freskot. '
+            + 'Pariisin kommuunin aikana, toukokuussa 1871, palatsi paloi. '
+            + 'Émile Zola kuvasi tulipaloa romaanissaan La Débâcle.',
+          vuodet: [{ vuosi: '1871', selite: 'palatsi paloi', kohta: 'toukokuussa 1871' }],
+        },
+        {
+          osa: 'kaanne',
+          teksti: 'Tuli tuhosi freskoja. Palatsi ei enää palannut käyttöön, vaan rauniot jäivät keskelle Pariisia vuosikymmeniksi.',
+          kuva: 'rauniot',
+          hologrammi: 'sammuu',
+          hologrammiKohta: 'Tuli tuhosi',
+        },
+        {
+          osa: 'tanaan',
+          teksti: 'Raunioiden paikalle rakennettiin rautatieasema vuoden 1900 maailmannäyttelyä varten. '
+            + 'Asemasta tuli Orsayn taidemuseo vuonna 1986.',
+          kuva: 'museo',
+          vuodet: [
+            { vuosi: '1900', selite: 'maailmannäyttely', kohta: 'vuoden 1900' },
+            { vuosi: '1986', selite: 'museo avattiin', kohta: 'vuonna 1986' },
+          ],
+        },
       ],
-      lahde: 'conseil-etat.fr "Le palais d\'Orsay"; POP PA00088689 ja Joconde 000PE000431; univ-droit.fr '
-        + '(Leniaud); fr-Wikipedia "Palais d\'Orsay" (tarkistettu 15.11.2026).',
+      jaksokuvat: {
+        loisto: {
+          osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-palais-orsay-loistoaika.jpg',
+          laji: 'havainnekuva',
+          lyhyt: 'Palais d\'Orsay loistoaikanaan',
+          lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: conseil-etat.fr.',
+        },
+        rauniot: {
+          tiedosto: 'Les ruines de la Cour des Comptes, Palais d\'Orsay, quai Anatole-France (actuel Musée d\'Orsay) 7ème arrondissement. D.455.jpg',
+          laji: 'piirros',
+          lyhyt: 'Palais d\'Orsayn rauniot Auguste Constantinin piirroksessa 1892',
+          lahde: 'Auguste Constantin 1892, Musée Carnavalet, Wikimedia Commons (CC0)',
+        },
+        museo: {
+          tiedosto: 'Musee d\'Orsay and Pont Royal, North-West view 140402 1.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Orsayn taidemuseo Seinen rannalla',
+          lahde: 'DXR, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      },
+      visa: {
+        kysymys: 'Kuka kirjailija kuvasi Palais d\'Orsayn tulipaloa romaanissaan?',
+        vaihtoehdot: ['Victor Hugo', 'Émile Zola', 'Jules Verne'],
+        oikea: 1,
+        fakta: 'Zola kuvasi tulipaloa romaanissaan La Débâcle.',
+      },
+      lahde: 'Matkakirjan oma teksti · lähteinä Ranskan valtioneuvosto (conseil-etat.fr), napoleon.org, Pariszigzag, '
+        + 'Louvren kokoelmatietokanta, Encyclopædia Universalis ja Futura-sciences (avatut sivut, tarkistettu 18.11.2026).',
       kuva: 'ihme-palais-orsay-loistoaika.jpg',
       lyhyt: 'Tilintarkastajat nousevat Chassériaun maalaamaa portaikkoa Seinen rannan palatsissa; reilut '
         + 'kymmenen vuotta myöhemmin kommunardit sytyttävät palatsin tuleen.',
