@@ -328,9 +328,9 @@ export const EUROOPAN_KADONNEET = {
       kysymykset: [
         'Miksi Palais de l\'Industrie purettiin?',
         'Mikä rakennus nousi hallin paikalle?',
-        'Mitä Grand Palaisissa on pidetty?',
+        'Mitä Grand Palais\'ssa on pidetty?',
       ],
-      korostukset: ['Alexis Barrault|Alexis Barrault', 'Grand Palais|Grand Palais'],
+      korostukset: ['Barrault|Barrault', 'Grand Palais|Grand Palais'],
       nappi: 'Lasihalli, jonka tilalle tuli Grand Palais',
       laudat: { maailmankartta: { x: 5910.4, y: 1439.2 }, europe: { x: 255.6, y: 608.4 } },
       // teksti lasketaan jaksoista (ks. ihmeKohde). Lähdeaineisto: docs/raportit/palais-industrie-grand-palais-nosto-teksti-20261118.md.
@@ -347,7 +347,7 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'tapahtuma',
-          teksti: 'Hallin suunnittelussa olivat mukana insinööri Alexis Barrault ja arkkitehti Viel. '
+          teksti: 'Hallin suunnittelussa olivat mukana insinööri Barrault ja arkkitehti Viel. '
             + 'Se rakennettiin Pariisin vuoden 1855 maailmannäyttelyä varten, ja näyttely avattiin toukokuussa. '
             + 'Näyttelyn jälkeenkin siellä pidettiin näyttelyitä ja tapahtumia.',
           kuva: 'loisto',
@@ -389,15 +389,15 @@ export const EUROOPAN_KADONNEET = {
         grandpalais: {
           tiedosto: 'Grand Palais @ Paris (34729073762).jpg',
           laji: 'valokuva',
-          lyhyt: 'Grand Palais Champs-Élysées\'n varrella',
+          lyhyt: 'Grand Palais Champs-Élysées\'n tuntumassa',
           lahde: 'Guilhem Vellut, Wikimedia Commons (CC BY 2.0)',
         },
       },
       visa: {
-        kysymys: 'Mitä urheilulajia kilpailtiin Grand Palaisin lasikaton alla kesän 2024 olympialaisissa?',
-        vaihtoehdot: ['Miekkailua', 'Uintia', 'Purjehdusta'],
+        kysymys: 'Missä lajissa kilpailtiin Grand Palais\'n lasikaton alla kesän 2024 olympialaisissa?',
+        vaihtoehdot: ['Miekkailussa', 'Uinnissa', 'Purjehduksessa'],
         oikea: 0,
-        fakta: 'Grand Palaisin lasikaton alla miekkailtiin kesän 2024 olympialaisissa.',
+        fakta: 'Grand Palais\'n lasikaton alla miekkailtiin kesän 2024 olympialaisissa.',
       },
       lahde: 'Matkakirjan oma teksti · lähteinä napoleon.org, Arthur Chandlerin Paris 1855 -sivu, Pariszigzag, '
         + 'Batiweb, France.fr, The Art Newspaper, Time Out ja Bonjour Paris (avatut sivut, tarkistettu 18.11.2026).',

@@ -9,13 +9,13 @@ Tehtävä: suunnitelman P2 (kadonnut Palais de l'Industrie + nykyinen Grand Pala
 | nimi | | Palais de l'Industrie. | |
 | esittely | | Isoisäsi kulki tästä matkallaan. | |
 | 1 | koukku / isoisä | Pariisi, 1873. Kävelin tänään Champs-Élysées'n tuntumassa suuren näyttelyhallin ohi. Se oli jäänyt paikalleen vuoden 1855 maailmannäyttelyn jälkeen. | ei kuvaa |
-| 2 | tapahtuma | Hallin suunnittelussa olivat mukana insinööri Alexis Barrault ja arkkitehti Viel. Se rakennettiin Pariisin vuoden 1855 maailmannäyttelyä varten, ja näyttely avattiin toukokuussa. Näyttelyn jälkeenkin siellä pidettiin näyttelyitä ja tapahtumia. | loisto (havainnekuva) |
+| 2 | tapahtuma | Hallin suunnittelussa olivat mukana insinööri Barrault ja arkkitehti Viel. Se rakennettiin Pariisin vuoden 1855 maailmannäyttelyä varten, ja näyttely avattiin toukokuussa. Näyttelyn jälkeenkin siellä pidettiin näyttelyitä ja tapahtumia. | loisto (havainnekuva) |
 | 3 | käänne | Halli ei saanut jäädä. Se purettiin 1890-luvulla, jotta paikalle voitiin rakentaa uusi näyttelypalatsi vuoden 1900 maailmannäyttelyä varten. | portti (Baldus, valokuva); hologrammi sammuu kohdassa "Halli ei saanut jäädä" |
 | 4 | tänään | Paikalle rakennettiin Grand Palais. Kesällä 2024 sen lasikaton alla miekkailtiin Pariisin olympialaisissa, ja kunnostuksen jälkeen koko rakennus avattiin yleisölle vuonna 2025. | grandpalais (valokuva) |
 
 Vuosirivit: 1873 isoisän matka; 1855 maailmannäyttely; 1900 maailmannäyttely; 2024 olympialaiset; 2025 uudelleen avattu.
-Visa (vastaus jaksossa 4): Mitä urheilulajia kilpailtiin Grand Palaisin lasikaton alla kesän 2024 olympialaisissa? **Miekkailua** (oikea) · Uintia · Purjehdusta.
-Pulun kysymykset kolme (vastauksia ei kirjoiteta): Miksi Palais de l'Industrie purettiin? · Mikä rakennus nousi hallin paikalle? · Mitä Grand Palaisissa on pidetty?
+Visa (vastaus jaksossa 4): Missä lajissa kilpailtiin Grand Palais'n lasikaton alla kesän 2024 olympialaisissa? **Miekkailussa** (oikea) · Uinnissa · Purjehduksessa.
+Pulun kysymykset kolme (vastauksia ei kirjoiteta): Miksi Palais de l'Industrie purettiin? · Mikä rakennus nousi hallin paikalle? · Mitä Grand Palais'ssa on pidetty?
 
 ## 2. Lähdetaulukko (väite kerrallaan; kaikki avattu 18.11.2026)
 
@@ -25,7 +25,7 @@ NA = napoleon.org "1855. France's first international exhibition" · AC = Arthur
 |---|---|---|---|
 | 1 | Halli rakennettiin vuoden 1855 maailmannäyttelyä varten | NA, AC | |
 | 2 | Näyttely avattiin toukokuussa 1855 | NA (15.5.1855), AC (15.5.1855) | pelkkä kuukausi tekstissä |
-| 3 | Insinööri Alexis Barrault ja arkkitehti Viel mukana suunnittelussa | NA (Barraultin suunnitelma, Viel rakentajana), AC (Viel ja Barrault yhdessä) | **Etunimiä ei kirjoiteta** (AC: Jean-Marie, "Alexandre"; NA: "Alexis"), eikä Desjardinia (vain NA); "mukana" sovittaa lähteiden jaon |
+| 3 | Insinööri Barrault ja arkkitehti Viel mukana suunnittelussa | NA (Barraultin suunnitelma, Viel rakentajana), AC (Viel ja Barrault yhdessä) | **Etunimiä ei kirjoiteta** (AC: Jean-Marie, "Alexandre"; NA: "Alexis"), eikä Desjardinia (vain NA); "mukana" sovittaa lähteiden jaon |
 | 4 | Näyttelyn jälkeen hallissa pidettiin näyttelyitä ja tapahtumia | NA (myöhempiä näyttelyitä), AC ("many exhibits and social events") | tarkempi (Salon) pois, ks. alla |
 | 5 | Halli seisoi vielä 1873 | johdettu: valmis 1855 (kohta 1) ja purku 1890-luvulla (kohta 6) | fiktiivinen koukku |
 | 6 | Purettiin 1890-luvulla uuden näyttelypalatsin tieltä | AC (purettu 1897), PZ (Grand Palais aloitettiin 1897 ja sen oli määrä korvata Palais de l'Industrie), NA (korvattiin Grand ja Petit Palaisilla ennen vuoden 1900 näyttelyä) | **Vuosi pois**: purun alku 1896 (fr-WP, ei avattu muualta) vs. 1897 (AC) → "1890-luvulla" |
@@ -60,6 +60,12 @@ Poistuneen nähtävyysjutun toinen Grand Palais -kuva (Thesupermat, autohuutokau
 - `data/aanitysjono.tsv`: 5 riviä (FRA / hahmotelma / hahmotelma-palais-industrie, jaksot 1–5).
 - Testit: `npm test` 5940 ok (19 ohitettu).
 
-## 6. Avoin KK:lle
+## 6. KK:n päätös 04.28 (toteutettu, kärki katso PR 7134)
+
+(a) Etunimi pois: "insinööri Barrault ja arkkitehti Viel", korostus `Barrault`. (b) Taivutus heittomerkillä: "Grand Palais'n", "Grand Palais'ssa" (visan kysymys ja fakta, Pulun kysymys; äänitysjonon jakso 3 -rivi päivitetty; Äänittäjän ääntämislista ei ole tässä repossa: uudet muodot "Grand Palais'n" ja "Grand Palais'ssa" lisättävä sinne). (c) Visa: "Missä lajissa kilpailtiin Grand Palais'n lasikaton alla kesän 2024 olympialaisissa?" · Miekkailussa · Uinnissa · Purjehduksessa. (d) Kuvateksti "Grand Palais Champs-Élysées'n tuntumassa".
+
+**Kohta 6, pisteet:** Grand Palais -piste (`nosto: 'hahmotelma-palais-industrie'`) ja Orsayn taidemuseo -piste (`nosto: 'hahmotelma-palais-orsay'`) on liitetty nostoihin datassa. Todiste (vienti `kokoelmat/kohdekartat.json`): Grand Palais linkit = `hahmotelma-palais-industrie/fokuskohde`, Orsayn taidemuseo linkit = `hahmotelma-palais-orsay/fokuskohde`; vertailuksi Tuileries `tuileries/fokuskohde`. **Napautus:** web (`js/nahtavyydet.js`) ja natiivi avaavat pisteestä juttu → muuten wiki (`openWikiArticle`); `nosto`/`linkit` ei ohjaa napautusta. Grand Palais -pisteellä ei ole juttua, joten napautus avaa yhä wikiartikkelin (englanninkielinen kortti, sama vika kuin Tuileries'lla). Orsayn taidemuseolla on oma suomenkielinen nähtävyysjuttu, joten sen napautus avaa jutun. Korjaus (napautus avaa `linkit[0]`-noston, kun juttua ei ole) vaatii NUI:n/pelikoodarin natiivikoodin ja web-puolen `nahtavyydet.js`-muutoksen; en muuttanut sitä sokkona ilman ruudulta nähtävää tulosta.
+
+## 7. Avoin KK:lle
 
 Kartan Grand Palais -piste (`maakartat.js` rivi ~5423, kulttuuri, ilman nähtävyysjuttua nyt) jäi paikalleen, samoin kuin Orsayn museon merkki jäi (raportti 7133 kohta 5). Poistetaanko Grand Palais -piste (noin 35 m päässä Industrien pisteestä) vai liitetäänkö nostoon? Jätetty ennalleen, kunnes vastaus tulee.
