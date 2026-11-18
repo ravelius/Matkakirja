@@ -11,12 +11,12 @@ Tehtävä: KK 03.53 (seuraava Pariisin nosto suunnitelman järjestyksessä: P1 P
 | 1 | koukku / isoisä | Pariisi, 1873. Kävelin tänään Seinen rantaa pitkin. Rannalla seisoi keskellä kaupunkia palaneen palatsin rauniot. | ei kuvaa |
 | 2 | tapahtuma | Napoleonin aikana Seinen rannalle alettiin rakentaa hallintopalatsia. Se valmistui vasta noin kolmenkymmenen vuoden päästä. Siellä toimivat valtioneuvosto ja tilintarkastustuomioistuin. | loisto (havainnekuva) |
 | 3 | tapahtuma | Tilintarkastustuomioistuimen portaikon seinille Théodore Chassériau maalasi freskot. Pariisin kommuunin aikana, toukokuussa 1871, palatsi paloi. Émile Zola kuvasi tulipaloa romaanissaan La Débâcle. | ei kuvaa |
-| 4 | käänne | Tuli tuhosi freskoja. Palatsi ei enää palannut käyttöön, vaan rauniot jäivät keskelle Pariisia vuosikymmeniksi. | rauniot (Constantin 1892); hologrammi sammuu kohdassa "Tuli tuhosi" |
+| 4 | käänne | Tuli tuhosi freskoja. Rauniot jäivät keskelle Pariisia vuosikymmeniksi, ja ne seisoivat siinä vielä isoisäsi matkan aikaan. | rauniot (Constantin 1892); hologrammi sammuu kohdassa "Tuli tuhosi" |
 | 5 | tänään | Raunioiden paikalle rakennettiin rautatieasema vuoden 1900 maailmannäyttelyä varten. Asemasta tuli Orsayn taidemuseo vuonna 1986. | museo (valokuva) |
 
 Vuosirivit: 1873 isoisän matka; 1871 palatsi paloi; 1900 maailmannäyttely; 1986 museo avattiin.
 Visa (vastaus kertomuksessa, jakso 3): Kuka kirjailija kuvasi Palais d'Orsayn tulipaloa romaanissaan? Victor Hugo · **Émile Zola** (oikea) · Jules Verne.
-Pulun kysymykset kolme (vastauksia ei kirjoiteta): Kuka sytytti Palais d'Orsayn tuleen vuonna 1871? · Mikä rakennus nousi palatsin raunioiden tilalle? · Mitä Chassériaun freskoille tapahtui?
+Pulun kysymykset kolme (vastauksia ei kirjoiteta): Miksi Palais d'Orsay paloi vuonna 1871? · Mikä rakennus nousi palatsin raunioiden tilalle? · Mitä Chassériaun freskoille tapahtui?
 
 ## 2. Lähdetaulukko (kaksi avattua itsenäistä ei-Wikipedia-lähdettä; Wikipediaa ei käytetty)
 
@@ -55,8 +55,6 @@ Jaksoilla 1 ja 3 ei kuvaa (ei estä).
 - `data/aanitysjono.tsv`: 6 riviä (FRA / hahmotelma / hahmotelma-palais-orsay, jaksot 1–6).
 - Testit: `npm test` 5940 ok.
 
-## 5. Kysyttävää KK:lle
+## 5. KK:n päätös 04.06 (toteutettu)
 
-1. Teksti ja lähdetaulukko ok? Erityisesti: kommunardeja ei nimetä tekijöiksi (kahta avattua lähdettä ei löytynyt).
-2. **Museon merkki:** "Orsayn taidemuseo" on yhä oma nähtävyysmerkki 40 metrin päässä (nähtävyysjuttu, 2 äänitysriviä, miniatyyri). Suunnitelman P1 yhdistäisi ne yhdeksi merkiksi. Tässä PR:ssä museota EI poistettu, koska se vaatii päätöksen (poistetaanko museon juttu ja miniatyyri vai jääkö museo omaksi paikakseen, jonka palatsi vain mainitsee jaksossa 5). Kerro, kumpi.
-3. Jakso 4 "Palatsi ei enää palannut käyttöön" ok vai pelkkä "Rauniot jäivät keskelle Pariisia vuosikymmeniksi"?
+(a) jakso 4: "ei enää palannut käyttöön" pois; jakso lyhenisi alle testin 100 merkin rajan, joten perään "ja ne seisoivat siinä vielä isoisäsi matkan aikaan" (johdettu: palo 1871, rauniot vuosikymmeniä; KK vahvistaa). (b) otsikko: "…palatsi, jonka raunioiden paikalle tuli asema". (c) Pulun 1. kysymys: "Miksi Palais d'Orsay paloi vuonna 1871?". Äänitysjono päivitetty. Museon merkki jää omaksi kohteekseen ja liitetään `liittyy`-kentällä, kun NUI:n tuki on (ei tässä PR:ssä).

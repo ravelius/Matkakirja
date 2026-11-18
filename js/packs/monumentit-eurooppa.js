@@ -230,7 +230,7 @@ export const EUROOPAN_KADONNEET = {
       nimi: 'Palais d\'Orsay',
       nimio: 'Orsayn palatsi',
       kysymykset: [
-        'Kuka sytytti Palais d\'Orsayn tuleen vuonna 1871?',
+        'Miksi Palais d\'Orsay paloi vuonna 1871?',
         'Mikä rakennus nousi palatsin raunioiden tilalle?',
         'Mitä Chassériaun freskoille tapahtui?',
       ],
@@ -238,7 +238,7 @@ export const EUROOPAN_KADONNEET = {
       nappi: 'Palatsi, jonka raunioista tuli asema',
       laudat: { maailmankartta: { x: 5910.9, y: 1439.5 }, europe: { x: 255.9, y: 608.6 } },
       // teksti lasketaan jaksoista (ks. ihmeKohde). Lähdeaineisto: docs/raportit/palais-orsay-nosto-teksti-20261118.md.
-      otsikko: 'Palais d\'Orsay 1873 — palatsi, jonka raunioista tuli asema',
+      otsikko: 'Palais d\'Orsay 1873 — palatsi, jonka raunioiden paikalle tuli asema',
       jaksot: [
         { osa: 'nimi', teksti: 'Palais d\'Orsay.' },
         { osa: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
@@ -265,7 +265,7 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'kaanne',
-          teksti: 'Tuli tuhosi freskoja. Palatsi ei enää palannut käyttöön, vaan rauniot jäivät keskelle Pariisia vuosikymmeniksi.',
+          teksti: 'Tuli tuhosi freskoja. Rauniot jäivät keskelle Pariisia vuosikymmeniksi, ja ne seisoivat siinä vielä isoisäsi matkan aikaan.',
           kuva: 'rauniot',
           hologrammi: 'sammuu',
           hologrammiKohta: 'Tuli tuhosi',
