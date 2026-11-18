@@ -11,7 +11,7 @@ SÄÄNNÖT:
 6. Nostolla oikeita kuvia, kerronnan aikana kaikissa [P-261117-119]; havainnekuva vain kadonneen pääkuvana, rappeutuneen parina tai selvänä lisänä. [R-2.146] [R-11.16]
 7. Eläinkohteen kuvassa eläin lähikuvassa, tarvittaessa muualta. [R-11.18]
 8. Historian hetki: katsoja paikalla, lähi- ja kaukokuva, teksti alkaa ihmisen kokemuksesta; keksitty minitarina merkitään. [R-2.13]
-9. Maassa 2–3 todellista skandaalia, ei verta eikä nykyihmisten yksityisasioita; Lisälehdeksi. [R-2.11] [R-2.12]
+9. Maassa 2–3 todellista skandaalia, ei verta eikä nykyihmisten yksityisasioita. [R-2.11] [R-2.12]
 10. Nostoja: EU-maa 40–50, pieni ≥15, muu Eurooppa 30; luontoa, historiaa, kulttuuria, ruokaa ja tekniikkaa. [R-11.15]
 11. Maalehden nimiö on maan nimi ja lippu; 2–4 aihesivua, minitehtävät ja menovinkit maan sisällöstä; laajuus ennen tekemistä. [R-2.42] [R-2.43] [R-2.44]
 12. Kaupunkilehti: syventävä paikallislehti ilman nähtävyyksiä, turisti-infoa ja Tapaa-nappia; lopussa osioluettelo. [R-2.138] [R-2.41]
@@ -20,7 +20,7 @@ SÄÄNNÖT:
 15. Tuhoutuneen kaupungin nykykuvat ja syy neutraalisti, ei taistelukuvia. [R-11.24]
 16. Kertojan vuodet aivan oikeaan reunaan: näkyvissä ≤ 4 (iPhone vaaka 3), loput vierivät; piilossa kortti auki. [P-261117-70] [P-261118-14]
 17. Nostovalikko: laatikko levenee vaaleaksi luetteloksi, Lehti väistyy, tagit kerralla; valittu isona maan nimen perään suluissa. [P-261117-79] [P-261117-120]
-18. Noston kuvat kartalla kohteen yläpuolella ja takana (kohde alhaalla); palkissa ei pikkukuvaa, vaakassa keskellä. [P-261118-14]
+18. Noston kuvat kartalla kohteen yläpuolella ja takana (kohde alhaalla); palkissa ei pikkukuvaa, vaakassa keskellä. [P-261117-123] [P-261118-14]
 
 EI VIKA:
 - Saapuessa ei avaudu lehteä.
