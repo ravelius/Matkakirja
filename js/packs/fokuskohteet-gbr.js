@@ -348,7 +348,7 @@ export const FOKUSKOHTEET_GBR = [
       + 'tärkeimmistä ostoskaduista. Vuosina 1577–1579 nostosillan '
       + 'torni korvattiin Nonsuch Housella, kaksoistalolla, joka oli '
       + 'aikanaan Lontoon toinen klassisin julkisivu. Talot purettiin '
-      + '1758–1761 ja koko silta 1831.',
+      + 'vuodesta 1758 alkaen ja koko silta 1831.',
     lahde: 'en-Wikipedia "London Bridge", osio "Old London Bridge '
       + '(1209–1831)" ja tietolaatikko (tarkistettu 27.8.2026).',
     /*
