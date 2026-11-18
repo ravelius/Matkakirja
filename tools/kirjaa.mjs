@@ -52,7 +52,7 @@ const LUKULOKI = process.env.KIRJAA_LUKULOKI || '/Users/Shared/Claude/Matkakirja
 const MUISTI = process.env.KIRJAA_MUISTI ||
   '/Users/koodaus/.claude/projects/-Users-Shared-Claude-Matkakirja-fable/memory/MEMORY.md';
 const PERUSTA = { A: ['A-peli.md', 2048], B: ['B-linjaukset.md', 4096], C: ['C-talo.md', 4096], KIRJASTOT: ['KIRJASTOT.md', 8192] };
-const KORTTI_RAJA = 3072, AIHEITA_RAJA = 50, KOKO_RAJA = 150 * 1024, SAMA = 0.8, PAIVAA = 30;
+const KORTTI_RAJA = 3072, AIHEITA_RAJA = 60, KOKO_RAJA = 180 * 1024, SAMA = 0.8, PAIVAA = 30;
 const POHJA = ['TAVOITE:', 'SÄÄNNÖT:', 'EI VIKA:', 'TEKOTAPA:'];
 const TUNNUS = /\[(P-\d{6}-[a-zäö0-9]+|R-\d+\.\d+)\]/g;  // P-VVKKPP-<sana> = paikanpitäjä, kunnes kirjaa paatos antaa numeron
 
