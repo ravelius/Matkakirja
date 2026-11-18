@@ -5403,7 +5403,8 @@ export const KAUPUNKIKARTAT = {
        */
       // Liitetty nostoon (KK 18.11.2026): museon pisteen napautus avaa Palais d'Orsay -noston (hahmotelma-palais-orsay).
       { nimi: 'Orsayn taidemuseo', tagi: 'kulttuuri', lat: 48.86, lon: 2.3266, wiki: 'Orsayn taidemuseo', nosto: 'hahmotelma-palais-orsay' },
-      { nimi: 'Palais Garnier', tagi: 'kulttuuri', lat: 48.8719, lon: 2.3317, wiki: 'Palais Garnier', nosto: 'nosto-pariisi-soi' },
+      // Yksi nosto (Pariisin nostot uudella tavalla 18.11.2026): fokuskohde `palais-garnier` (fokuskohteet-fra.js); Piaf ja Django pysyy omana tarinanaan saman pisteen alla.
+      { nimi: 'Palais Garnier', tagi: 'kulttuuri', lat: 48.8719, lon: 2.3317, wiki: 'Palais Garnier', nosto: ['palais-garnier', 'nosto-pariisi-soi'] },
       { nimi: 'Place des Vosges', tagi: 'historia', tyyppi: 'aukio', lat: 48.8556, lon: 2.3656, wiki: 'Place des Vosges' },
       /*
        * PIIRROSKARTAN 3D-MALLIT VALMIIKSI NOSTOIKSI (omistaja 9.11.2026 klo 16.17: "Kaikki tällaiset paikat
