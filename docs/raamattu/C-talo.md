@@ -30,7 +30,7 @@ KONE JA TURVA
 19. Apulaiset ajetaan vain Opuksella tai Sonnetilla, ei koskaan Fablella. Kortti: agentit-ja-komennot.
 20. Komennot ajetaan tiedostosta absoluuttisin poluin: ei shell -c:tä, ei evalia, ei jäljitystilaa. Poistot ja prosessien lopetus vain omassa työtilassa ja omilla prosesseilla.
 21. Avaimia ei tulosteta, kirjoiteta eikä kysytä omistajalta. Lupa-asetuksia ja CLAUDE.md:tä muuttaa vain omistaja omalla viestillään. Kortti: avaimet-ja-luvat.
-22. Kun omistaja käyttää Macia, ei raskaita ajoja eikä ikkunoita hänen näytölleen. Käynnistyslevyllä pidetään vähintään 150 Gi vapaana. Kortti: kone-ja-levy.
+22. Kun omistaja käyttää Macia, ei raskaita ajoja eikä ikkunoita hänen näytölleen. Käynnistyslevyllä pidetään vähintään 110 Gi vapaana (P-261115-2; KK 19.11. 19.41). Kortti: kone-ja-levy.
 23. Tilien käyttö ja vaihto: kortti tilit-ja-kiintio. Laitteet ja simulaattorit: kortti laitteet-ja-simulaattorit.
 
 KK:N JUNASANA JA TARKISTUS
