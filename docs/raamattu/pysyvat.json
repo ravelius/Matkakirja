@@ -477,7 +477,7 @@
      "sanat": "Jos nostoihin tulee enemmän vuosilukuja niin ne voivat vierittyä ikkunassa niin että max 4 on aina kerralla näkyvissä",
      "sha": "c6c3e0e7abe5fda0",
      "toisto": false,
-     "korvattu": null,
+     "korvattu": "P-261119-5",
      "kirjattu": "2026-11-17T21:17:29.744Z"
     },
     {
@@ -487,11 +487,27 @@
      "sanat": "IPhonen Vaakamuodossa ruudulla saisi näkyä max 3 vuosilukua kerralla ja muut olisivat skrollattavissa piilossa.",
      "sha": "c5ae3e35455e7e1d",
      "toisto": false,
-     "korvattu": null,
+     "korvattu": "P-261119-5",
      "kirjattu": "2026-11-18T07:26:34.693Z"
+    },
+    {
+     "pvm": "19.11.2026",
+     "klo": "06.27",
+     "lahde": "P-261119-5",
+     "sanat": "Vihreä tehtävänappi saa olla vähemmän voimakas väri. Se voisi alkaa sykkiä viimeisen leipätekstin kappaleen kohdalla mutta sen et tarvitse laajentua.",
+     "sha": "786ade1d3488bf37",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-19T04:29:21.721Z"
     }
    ],
-   "muutokset": []
+   "muutokset": [
+    {
+     "aika": "2026-11-19T04:29:21.721Z",
+     "mita": "pysyva-korvaa",
+     "omistajan_sana": "P-261119-5"
+    }
+   ]
   }
  ]
 }
