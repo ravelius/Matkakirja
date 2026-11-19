@@ -16,6 +16,7 @@ SÄÄNNÖT:
 11. KK:n mallin ja tason valitsee omistaja; taso säilyy nollausten yli. Kokeena medium vuorokauden, sitten omistaja päättää. [P-261111-12] [P-261116-17]
 12. Lisäosat ovat apuna, Raamattu ja koodin tyyli voittavat. Unityn komentorivi vain Natiivisepän kautta; uusia lisäosia ja pilvisessioita vain omistajan päätöksellä. [R-7.13]
 13. Voimassa olevan tilauksen käyttö ei ole ostamista. Generointiluvat: omistajan-kanssa ja grafiikan-tuotanto. [R-12.24]
+14. Omistajan pyytämien korjausten julkaisuun asti krediittejä saa käyttää: 90 %:n raja ei pysäytä työtä, rooleja eikä vaihda tiliä; julkaisun jälkeen 90 % palaa voimaan. [P-261119-34]
 
 EI VIKA:
 - Täysi työtahti viikon lopulla, vaikka tilin kiintiö hupenee.
