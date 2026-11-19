@@ -17,7 +17,7 @@ SÄÄNNÖT:
 13. Etusivun johdatus 7–10 virkettä, sivun 1–2, kuvateksti 1; kannessa kolme laajaa kuvaa eri osista. [R-3.22] [R-11.20]
 14. Maalehden Matkailijalle: kevyt, nykyhetki, tuoreet kuvat, vaarat suoraan. [R-2.172] [R-11.21] [R-11.23]
 15. Tuhoutuneen kaupungin nykykuvat ja syy neutraalisti, ei taistelukuvia. [R-11.24]
-16. Kertojan vuodet aivan oikeaan reunaan: näkyvissä ≤ 4 (iPhone vaaka 3), loput vierivät; piilossa kortti auki. [P-261117-70] [P-261118-14]
+16. Kertojan vuodet aivan oikeaan reunaan: näkyvissä ≤ 4 (iPhone 2); napautus avaa kaikki ja laatikko laajenee alas, ei vieritystä; piilossa kortti auki. [P-261117-70] [P-261118-14] [P-261119-5]
 17. Nostovalikko: laatikko levenee vaaleaksi luetteloksi, Lehti väistyy, tagit kerralla; valittu isona maan nimen perään suluissa. [P-261117-79] [P-261117-120]
 18. Nostopalkki on keskitetty; iPhonella vihreä palkkionappi on palkin sisällä. [P-261118-40]
 
