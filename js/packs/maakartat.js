@@ -6109,7 +6109,8 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Albert Memorial', tagi: 'historia', lat: 51.502418, lon: -0.17769, wiki: 'Albert Memorial', kyltti3d: true },
       { nimi: 'Kensingtonin palatsi', tagi: 'historia', lat: 51.505158, lon: -0.188124, wiki: 'Kensingtonin palatsi', kyltti3d: true },
       { nimi: 'Royal Observatory', tagi: 'tiede', lat: 51.4787, lon: -0.0019, wiki: 'Greenwichin kuninkaallinen observatorio', kyltti3d: true },
-      { nimi: 'Old Royal Naval College', tagi: 'historia', lat: 51.483172, lon: -0.005494, wiki: 'Old Royal Naval College', kyltti3d: true },
+      // Liitetty nostoon (Orsayn malli, SK ehdotus 18.11.2026, KK vahvistaa): ORNC:n pisteen napautus avaa Greenwichin palatsi -noston (hahmotelma-greenwich-palatsi).
+      { nimi: 'Old Royal Naval College', tagi: 'historia', lat: 51.483172, lon: -0.005494, wiki: 'Old Royal Naval College', kyltti3d: true, nosto: 'hahmotelma-greenwich-palatsi' },
       { nimi: 'Queen\'s House', tagi: 'historia', lat: 51.481192, lon: -0.00375, wiki: 'Queen\'s House', kyltti3d: true },
       {
         nimi: 'Buckinghamin palatsi', tagi: 'historia',
