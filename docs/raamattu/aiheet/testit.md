@@ -22,5 +22,5 @@ EI VIKA:
 - Sisäisessä TestFlightissa kehittäjätila on oletuksena päällä.
 
 TEKOTAPA:
-- Ennen junaa: Matkakirja-proto/tyokalut/ tarkista.sh, ennen-junaa.sh, metal-tarkistus.sh. Tarkistusajo: tuotantoputken-tarkistukset.md.
+- Ennen junaa: Matkakirja-proto/tyokalut/tarkista.sh, ennen-junaa.sh, metal-tarkistus.sh. Tarkistusajo: tuotantoputken-tarkistukset.md.
 - Todistusajo: Matkakirja-proto/tyokalut/todistusajo/OHJE.md. Välähdykset: tools/valahdys-yavg.py.
