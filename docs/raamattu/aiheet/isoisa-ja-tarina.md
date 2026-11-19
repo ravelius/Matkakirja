@@ -10,14 +10,14 @@ SÄÄNNÖT:
 5. Kadonnut ihme näytetään havainnekuvana, jossa kadonnut suuruus on palautettu nykymaailmaan. [R-2.50]
 6. Pulun reaktio tehdään parina merkinnän kanssa: synkkään historiakonteksti ja pehmennys, kevyeen naljailu. Paikka koettiin eri tavoin. [R-2.35] [R-3.6]
 7. Piikki osuu isoisään ja hänen aikalaisherroihinsa, ei koskaan pelaajaan eikä paikallisiin. [R-3.3] [R-3.8]
-8. Tekstit ja kuvat painottavat mielellään sitä, mitä ei enää ole: rakennusta, valtiota, tapoja tai pukeutumista. Kadonneen rakennuksen kuvan napautus avaa kadonneen ihmeen kortin ja vie kartan sen kohdalle, kun pelaaja on samassa kaupungissa. [R-2.211] [P-261105-2]
+8. Tekstit ja kuvat painottavat sitä, mitä ei enää ole: rakennusta, valtiota, tapoja tai pukeutumista. Kadonneen rakennuksen kuvan napautus avaa kadonneen ihmeen kortin ja vie kartan sen kohdalle, kun pelaaja on samassa kaupungissa. [R-2.211] [P-261105-2]
 9. Isoisän tekstissä paikka on ajan nimellä (Christiania), otsikkokortissa kartan nimellä (Oslo). [R-2.143]
 10. Isoisän kuvat ja hänen salattu ulkonäkönsä: tyylikirja 2. [R-3.12] [P-261112-29]
 11. Grimshaw on mahtipontinen eikä koskaan vaarallinen. Näkymätön sateenvarjoseuraaja ei uhkaa, ei esiinny joka maassa eikä paljastu koskaan. [R-3.9]
 12. Aarrejahti alkaa isoisän unella ennen aloituslentoa: Mantan smaragdi, Montezuman turkoosinaamio, keisarin jadesinetti ja lopuksi Kolme veljestä. Aarnia ja luetteloa ei mainita. [R-2.159]
 13. Aarnin luettelossa on yksi unohdettu aarre per maanosa, yhden ihmisen kannettava ja yhä löytymätön. Luettelo paljastuu, kun Kolme veljestä -riipus löytyy. [R-3.10]
 14. Aarteesta vihjaa vain muutama sivuhuomio per manner, ei symboleja. [R-3.11]
-15. Isoisä on vain päiväkirjassa: ei repliikkejä kävelyyn eikä muualle; hän ei kirjoita, piirrä, vihjaa eikä palkitse pelaajan nykyhetkessä. [P-261116-31] [P-261119-31]
+15. Isoisä on vain päiväkirjassa: ei repliikkejä kävelyyn, esittelyihin eikä muualle; hän ei kirjoita, piirrä, vihjaa eikä palkitse nykyhetkessä. [P-261116-31] [P-261119-31] [P-261119-32]
 16. Isoisän linssi näyttää vain vuoden 1873 rajat ja nimet, Horation reitin, hänen kuvansa ja ajan äänet; aikajanaa siinä ei ole. [R-2.108]
 
 EI VIKA:
