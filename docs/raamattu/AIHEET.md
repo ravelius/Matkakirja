@@ -52,7 +52,7 @@ Aiheita 54 / 60. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | roolit-ja-viestit | Roolit ja viestit | PT | 3.0 kt | 17.11.2026 |
 | omistajan-kanssa | Omistajan kanssa | KK | 3.0 kt | 18.11.2026 |
 | nollaus-ja-luovutus | Nollaus ja luovutus | PT | 3.0 kt | 12.11.2026 |
-| tyolista-ja-karjet | Työlista ja kärjet | KK | 3.0 kt | 12.11.2026 |
+| tyolista-ja-karjet | Työlista ja kärjet | KK | 3.0 kt | 20.11.2026 |
 | agentit-ja-komennot | Agentit ja komennot | PT | 3.0 kt | 12.11.2026 |
 | latausruutu | Latausruutu | NUI | 1.2 kt | 18.11.2026 |
 | kaupungin-pohja | Kaupungin pohja | KS | 0.9 kt | 18.11.2026 |
