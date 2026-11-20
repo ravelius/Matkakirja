@@ -3,7 +3,7 @@
 TAVOITE: Maailma näyttää valokuvalta oikeasta paikasta elokuvan lämmöllä. Valo ja sää elävät itsestään, pelaajan säätämättä.
 
 SÄÄNNÖT:
-1. Valolla on näkyvä lähde: päivällä aurinko ja taivas, yöllä katu- ja ikkunavalot, linnassa liekit ja kuu, museossa katon kohdevalo. Noston säteet himmeinä, valo ja varjot täysinä. [R-2.180] [R-2.132] [P-261117-117]
+1. Valolla on näkyvä lähde: päivällä aurinko ja taivas, yöllä katu- ja ikkunavalot, linnassa liekit ja kuu, museossa katon kohdevalo. Säteet vain kadonneen aarteen ilmestyessä hologrammin jälkeen; korostusvalo ennallaan. [R-2.180] [R-2.132] [P-261117-117] [P-261120-9]
 2. Omien mallien pinnat ovat valokuvapohjaisia, eivät toistuvia; sävy ja kirkkaus oikean maailman, kontrasti ja terävyys ympäristön mukaan; normaali- ja karheuskartta. Pariisin kaikilla nähtävyyksillä kuten Riemukaarella: kiven saumat ja sävyvaihtelu, katoilla liuske ja sinkki, Eiffelillä rauta. [R-2.93] [R-2.181] [P-261118-32]
 3. Omien mallien valo, varjot ja AO leivotaan; malli tuodaan valaisemattomana. Museossa ei reaaliaikaisia varjoja, SSAO:ta eikä GI:tä; juoksupelissä elävä varjo vain pelaajan hahmolla. Kartalla nähtävyyksien varjot leivotaan; 2D-merkin varjo vain maata koskettavien osien alla. [R-2.93] [R-2.133] [R-2.177] [P-261111-2] [R-2.167]
 4. Heijastus kevyimmällä hyvännäköisellä tavalla; raskas vain uusimmille. [R-2.133]
@@ -22,4 +22,4 @@ EI VIKA:
 TEKOTAPA:
 - Valo- ja kuvapohja: docs/moduulit/yhteiset-pohjat.md. Ortokuvaportti, havainnemittari: mallit-ja-3d; pinnat: grafiikan-tuotanto; kevennys: suorituskyky-ja-muisti.
 - Sävy sovitetaan pelikuvasta, todetaan laitekuvasta.
-- Museon, linnan ja avaruuden valo: niiden kortit.
+- Museon, linnan, avaruuden valo: omat kortit.
