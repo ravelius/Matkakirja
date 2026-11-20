@@ -33,6 +33,15 @@ Haara `sk/l5-nostotekstit-era1` (sama kuin erä 1; draft-PR 7223 pysyy draftina,
 8. Rikkeet pienenivät: ks. luku 1 (36 → 14 rikkeellistä; isoisä 8 → 0).
 9. `asemataulu-tyolista-komento.test.mjs` "koukku: yli 3 h vanhat…" on tunnettu, ei minun (työlistakoukku).
 
+## 3b. KK:n päätös 20.11. klo 10.44 ja toteutus (jatkocommit)
+
+- **B:n päällekkäisyys: vaihtoehto (a) tehty.** Neljä nähtävyysjuttukopiota (`nahtavyysjutut.js` pariisi: Grand Châtelet, Temple-torni, Trocadéron palatsi, Galerie des Machines) poistettu; hahmotelma (`monumentit-eurooppa.js`) on ainoa koti. Kartan pisteet (`maakartat.js`) viittaavat jo hahmotelmaan `nosto:`-kentällä, kuten Orsay. Testi (`tests/noston-tekstisaannot.test.mjs`) varmistaa: kopiot poissa, jokainen piste viittaa hahmotelmaan.
+- **Vuosirivit lisätty** nähtävyysjutun `vuodet`-kenttään: Kirahvi 1827 saapui Pariisiin (30.6.) ja 1845; Bukinistit 1606, 1649, 1752, 2019; Patonki 1993, 2022; Piiritys 1871; Monet 1886. **Valmiina NUI:n K-2:lle (kenttä puuttuu jutuilta):** Vrain-Lucas 1861 myy Chaslesille · 1867 Chasles akatemialle · 1870 tuomio; Notre-Dame 2019 palo · 2023 uusi kukko · 2024 uudelleenavaus.
+- **Kuvajärjestys** (pääkuva kappaleelle 1, Kirahvin valokuva kappaleelle 3) tehdään K-4:ssä. D/E:n tarinarivit ennallaan; Piirityksen 2 riviä + 1871 hyväksytty.
+- **Tekstikorjaukset a–g tehty:** Grand Châtelet J1 ("kun kaupungin ympärille alettiin rakentaa muuria") ja J3 ("vartijat tuijottivat uutta vankia pitkään painaakseen hänen kasvonsa mieleen"); Trocadéron J3 ("1920-luvulla museo oli päässyt rappiolle"); Galerie J5 ("Sen paikka oli Champ-de-Marsin eteläpäässä École Militairen edessä, ja kentän toisessa päässä seisoo yhä Eiffel-torni"; sijainti tarkistettu liitteen A2 kohta 1a: paris.fr "au fond du Champ-de-Mars, devant l'École militaire" ja pariszigzag "à l'opposé de la tour Eiffel"); Kirahvi K1 ("Merimatkaa Espanjan ympäri Atlantin kautta pidettiin eläimelle liian vaarallisena", ks. alla); Vrain-Lucas K1 ("kirjoitettu ranskaksi, myös Kleopatran"), K2 ("maksoi vuosien mittaan kaikkiaan noin 140 000 frangia"), K4 ("Kirjeet, joista Chasles oli maksanut omaisuuden, olivat arvottomia"); Monet K1 (uusi ensimmäinen virke); Bukinistit K3 ("nykyinen tummanvihreä väri, sama kuin junanvaunuissa").
+- **Visakysymysten vastaukset mukautettu (M6):** Kirahvin vaihtoehto "Merimatkaa Espanjan ympäri pidettiin liian vaarallisena" (tekstissä sama syy); Vrain-Lucasin vaihtoehto "Ne oli kirjoitettu ranskaksi" (tekstissä "kirjoitettu ranskaksi"). Kysymykset ennallaan.
+- **Kirahvin Espanjan-ympäri-väite on yhä heikoin kohta:** lähteet (francetoday.com "around the Atlantic coast"; hiddenworld.io "Iberian niemimaan ympäri tai Rhône pitkin, molemmat considered too dangerous"; Gibraltar–Biskaya–Kanaali-reitti hakuotteessa) ovat kaksi suosittua sivustoa, mahdollisesti toisistaan riippuvaisia; akateemiset lähteet eivät perustele kävelyä. KK:n varavaihtoehto ("Marseillesta kirahvi päätettiin kävelyttää Pariisiin") jätettiin käyttämättä, koska visan vastaus vaatii syyn tekstiin; jos halutaan varma muotoilu: "Merimatkaa tai jokimatkaa pidettiin eläimelle liian vaarallisena" (kaksi lähdettä sanoo meri- ja jokireitin).
+
 ## 4. M1: jokaisesta nostosta ENNEN | NYT (KK:n vertailua varten)
 
 ### Grand Châtelet (`hahmotelma-grand-chatelet`)
@@ -41,16 +50,16 @@ Haara `sk/l5-nostotekstit-era1` (sama kuin erä 1; draft-PR 7223 pysyy draftina,
 |---|---|---|
 | Otsikko (kartan nimi) | Grand Châtelet | Grand Châtelet |
 | Tarinarivi (datan `otsikko`) | ei kenttää (nappi: "Linnake, jonka läpi kulki tie kaupunkiin") | **Linnake, josta tuli ruumishuone** (31 merkkiä) |
-| Jaksoja / merkkejä | ei jaksoja: yksi teksti 796 merkkiä (hahmotelman kortti); nähtävyysjuttu 719 merkkiä, 3 kappaletta | 5 / 965 |
+| Jaksoja / merkkejä | ei jaksoja: yksi teksti 796 merkkiä (hahmotelman kortti); nähtävyysjuttu 719 merkkiä, 3 kappaletta | 5 / 990 |
 | Vuosirivit | – (kenttä ei ollut käytössä kortilla) | 1190 kaupunki muurataan · 1645 Molière vangiksi · 1721 Cartouche vangiksi · 1792 verilöyly · 1802 purku alkaa · 1806 palmulähde tilataan |
 | Kuvat jaksoittain | ei jaksokuvia; ihmekortin kuva `ihme-grand-chatelet-loistoaika.jpg` | J1: loisto · J2: – · J3: – · J4: – · J5: – |
 | Pulun kysymykset | Mitä Grand Châtelet'n tuomioistuimelle tapahtui 1790? · Mitä Grand Châtelet'n paikalla on? | Mistä sana morgue sai alkunsa Grand Châtelet'ssa? · Millainen oli Grand Châtelet'n kuoppasolu la Fosse? · Mitä Grand Châtelet'n paikalla on? |
 
 **NYT (kertojan teksti):**
 
-1. [232] Grand Châtelet oli Pariisin vankila- ja oikeuslinnake Seinen oikealla rannalla. Ludvig VI rakennutti sen kiveksi 1100-luvulla, ja kun kaupunkia alettiin muurittaa vuonna 1190, siitä tuli prévôtin eli kuninkaan virkamiehen pääpaikka.
+1. [248] Grand Châtelet oli Pariisin vankila- ja oikeuslinnake Seinen oikealla rannalla. Ludvig VI rakennutti sen kiveksi 1100-luvulla, ja kun kaupungin ympärille alettiin rakentaa muuria vuonna 1190, siitä tuli prévôtin eli kuninkaan virkamiehen pääpaikka.
 2. [216] Vankeina olivat François Villon, Molière velkojen takia vuonna 1645 ja rosvopäällikkö Cartouche vuonna 1721. Linnakkeen kuoppasolu, la Fosse, kapeni alaspäin kuin kartio, eikä vanki voinut seistä eikä maata kunnolla.
-3. [232] Linnakkeessa oli myös ruumishuone, ranskaksi morgue. Sanan sanotaan syntyneen täällä: vartijat tuijottivat uuden vangin kasvot ulkoa tunnistaakseen hänet, jos hän pakenisi. Myöhemmin tänne tuotiin tunnistettavaksi löydetyt vainajat.
+3. [241] Linnakkeessa oli myös ruumishuone, ranskaksi morgue. Sanan sanotaan syntyneen täällä: vartijat tuijottivat uutta vankia pitkään painaakseen hänen kasvonsa mieleen, jos hän pakenisi. Myöhemmin tänne tuotiin tunnistettavaksi löydetyt vainajat.
 4. [129] Syyskuun alussa 1792 joukko tunkeutui linnakkeeseen ja surmasi vankeja, ja vankila hylättiin. Linnakkeen purku alkoi vuonna 1802.
 5. [156] Paikalle tehtiin uusi Place du Châtelet. Napoleon tilasi sinne vuonna 1806 palmusuihkulähteen voitonmuistomerkiksi. Fontaine du Palmier seisoo aukiolla yhä.
 
@@ -70,14 +79,14 @@ Haara `sk/l5-nostotekstit-era1` (sama kuin erä 1; draft-PR 7223 pysyy draftina,
 |---|---|---|
 | Otsikko (kartan nimi) | Temple-torni | Temple-torni |
 | Tarinarivi (datan `otsikko`) | ei kenttää (nappi: "Torni, jonka Napoleon käski purkaa") | **Torni, jonne kuningasperhe vangittiin** (37 merkkiä) |
-| Jaksoja / merkkejä | ei jaksoja: yksi teksti 588 merkkiä (hahmotelman kortti); nähtävyysjuttu 690 merkkiä, 3 kappaletta | 5 / 914 |
+| Jaksoja / merkkejä | ei jaksoja: yksi teksti 588 merkkiä (hahmotelman kortti); nähtävyysjuttu 690 merkkiä, 3 kappaletta | 5 / 917 |
 | Vuosirivit | – (kenttä ei ollut käytössä kortilla) | 1792 perhe Templeen · 1795 Ludvig XVII kuoli · 1798 Smithin pako · 1804 Pichegru kuoli · 1808 purkumääräys |
 | Kuvat jaksoittain | ei jaksokuvia; ihmekortin kuva `ihme-temple-torni-loistoaika-v2.jpg` | J1: loisto · J2: – · J3: – · J4: – · J5: – |
 | Pulun kysymykset | Miksi Napoleon määräsi Temple-tornin purettavaksi? · Mitä Temple-tornin paikalla on? | Miksi Napoleon määräsi Temple-tornin purettavaksi? · Mitä Temple-tornin paikalla on? · Miten Sidney Smith pakeni Templen vankilasta? |
 
 **NYT (kertojan teksti):**
 
-1. [229] Temple-torni kohosi temppeliritarien Pariisin päämajan linnoituksessa. Philippe Augusten ajoista kuninkaan aarre talletettiin ritarien linnoitukseen, ja sen muurien suojassa asui myöhemmin Pariisin veroista vapaita käsityöläisiä.
+1. [232] Temple-torni kohosi temppeliritarien Pariisin päämajan linnoituksessa. Philippe Augusten ajoista kuninkaan aarre talletettiin ritarien linnoitukseen, ja sen muurien suojaan hakeutui myöhemmin Pariisin veroista vapaita käsityöläisiä.
 2. [155] Elokuussa 1792 kuningasperhe vietiin Templeen vangiksi. Ludvig XVI vietiin sieltä giljotiinille, ja hänen poikansa Ludvig XVII kuoli Templessä vuonna 1795.
 3. [231] Vuonna 1798 brittiamiraali Sidney Smith pakeni Templen vankilasta väärennetyillä siirtomääräyksillä: häntä oltiin muka viemässä toiseen vankilaan. Huhtikuussa 1804 kenraali Pichegru löydettiin kuolleena Templen vankilan sellistään.
 4. [149] Napoleon määräsi tornin purettavaksi vuonna 1808, koska halusi lopettaa rojalistien pyhiinvaellukset paikalle, jossa kuningasperhe oli ollut vankina.
@@ -99,7 +108,7 @@ Haara `sk/l5-nostotekstit-era1` (sama kuin erä 1; draft-PR 7223 pysyy draftina,
 |---|---|---|
 | Otsikko (kartan nimi) | Trocadéron palatsi | Trocadéron palatsi |
 | Tarinarivi (datan `otsikko`) | ei kenttää (nappi: "Näyttelypalatsi, josta jäivät vain siivet") | **Palatsi, jonka urut selvisivät** (30 merkkiä) |
-| Jaksoja / merkkejä | ei jaksoja: yksi teksti 487 merkkiä (hahmotelman kortti); nähtävyysjuttu 821 merkkiä, 3 kappaletta | 5 / 750 |
+| Jaksoja / merkkejä | ei jaksoja: yksi teksti 487 merkkiä (hahmotelman kortti); nähtävyysjuttu 821 merkkiä, 3 kappaletta | 5 / 751 |
 | Vuosirivit | – (kenttä ei ollut käytössä kortilla) | 1878 maailmannäyttely · 1882 museo avataan · 1935 purku alkoi · 1937 uusi näyttely · 1948 ihmisoikeusjulistus · 1977 urut Lyoniin |
 | Kuvat jaksoittain | ei jaksokuvia; ihmekortin kuva `ihme-trocadero-loistoaika.jpg` | J1: loisto · J2: – · J3: – · J4: – · J5: – |
 | Pulun kysymykset | Mitä Trocadéron palatsista jäi pystyyn? · Miksi palatsi purettiin 1935? | Mitä Trocadéron palatsista jäi pystyyn? · Miksi palatsi purettiin 1935? · Minne Trocadéron urut päätyivät? |
@@ -108,7 +117,7 @@ Haara `sk/l5-nostotekstit-era1` (sama kuin erä 1; draft-PR 7223 pysyy draftina,
 
 1. [180] Trocadéron palatsi rakennettiin vuoden 1878 maailmannäyttelyä varten Seinen pohjoisrannalle. Siinä oli kaksi korkeaa tornia, kaksi suurta siipeä ja yli neljän tuhannen paikan sali.
 2. [121] Salin Cavaillé-Collin urut vihittiin elokuussa 1878, ja César Franck sävelsi niille kolmen kappaleen sarjan Trois Pièces.
-3. [153] Palatsiin kuului myös etnografinen museo, joka syntyi vuoden 1878 näyttelystä ja avattiin yleisölle vuonna 1882. Vielä 1920-luvulla se oli rappiotilassa.
+3. [154] Palatsiin kuului myös etnografinen museo, joka syntyi vuoden 1878 näyttelystä ja avattiin yleisölle vuonna 1882. 1920-luvulla museo oli päässyt rappiolle.
 4. [113] Vuonna 1935 alkoi palatsin purku vuoden 1937 näyttelyn tieltä, ja siivet jäivät uuden Chaillot'n palatsin osiksi.
 5. [183] Chaillot'n palatsissa YK:n yleiskokous hyväksyi vuonna 1948 ihmisoikeuksien yleismaailmallisen julistuksen. Trocadéron urut soivat nykyisin Lyonissa, jonne ne siirrettiin vuonna 1977.
 
@@ -128,7 +137,7 @@ Haara `sk/l5-nostotekstit-era1` (sama kuin erä 1; draft-PR 7223 pysyy draftina,
 |---|---|---|
 | Otsikko (kartan nimi) | Galerie des Machines | Galerie des Machines |
 | Tarinarivi (datan `otsikko`) | ei kenttää (nappi: "Halli, jossa ei ollut yhtään pilaria") | **Halli, jossa ei ollut yhtään pilaria** (36 merkkiä) |
-| Jaksoja / merkkejä | ei jaksoja: yksi teksti 563 merkkiä (hahmotelman kortti); nähtävyysjuttu 520 merkkiä, 3 kappaletta | 5 / 903 |
+| Jaksoja / merkkejä | ei jaksoja: yksi teksti 563 merkkiä (hahmotelman kortti); nähtävyysjuttu 520 merkkiä, 3 kappaletta | 5 / 925 |
 | Vuosirivit | – (kenttä ei ollut käytössä kortilla) | 1889 maailmannäyttely · 1900 maatalousnäyttely · 1901 sirkus saapuu · 1902 sirkus lähtee · 1909 purku |
 | Kuvat jaksoittain | ei jaksokuvia; ihmekortin kuva `ihme-galerie-des-machines-loistoaika.jpg` | J1: loisto · J2: – · J3: – · J4: – · J5: – |
 | Pulun kysymykset | Kuinka suuri maailmannäyttelyn konehalli oli? · Miksi halli purettiin? | Kuinka suuri maailmannäyttelyn konehalli oli? · Miksi halli purettiin? · Mikä sirkus esiintyi hallissa talvella 1901–1902? |
@@ -139,7 +148,7 @@ Haara `sk/l5-nostotekstit-era1` (sama kuin erä 1; draft-PR 7223 pysyy draftina,
 2. [124] Vieraita kuljettivat hallissa liikkuvat sillat. Esillä oli myös Edisonin fonografi, jolla kuultiin muun muassa Marseillaise.
 3. [230] Näyttelyn jälkeenkin halli jäi käyttöön: vuonna 1900 siellä pidettiin maatalouden ja elintarvikkeiden näyttely, ja marraskuussa 1901 alkoi Barnum & Bailey -sirkuksen esityssarja kolmessa areenassa. Sarja päättyi maaliskuussa 1902.
 4. [152] Vuonna 1909 halli purettiin, jotta näkymä Champ-de-Marsille aukeaisi. Yli neljäkymmentä metriä korkea halli oli seissyt paikallaan kaksikymmentä vuotta.
-5. [116] Hallia ei ole enää, mutta Eiffel-torni seisoo yhä Champ-de-Marsin toisessa päässä, missä konehalli aikoinaan kohosi.
+5. [138] Hallia ei ole enää. Sen paikka oli Champ-de-Marsin eteläpäässä École Militairen edessä, ja kentän toisessa päässä seisoo yhä Eiffel-torni.
 
 **ENNEN (hahmotelman kortti, `teksti`):**
 
@@ -179,14 +188,14 @@ Haara `sk/l5-nostotekstit-era1` (sama kuin erä 1; draft-PR 7223 pysyy draftina,
 |---|---|---|
 | Otsikko (kartan nimi) | Kirahvi 1827 | Kirahvi 1827 |
 | Tarinarivi (datan `otsikko`) | Kirahvi 1827 — kävelymatka Pariisiin | Kirahvi 1827 — kävelymatka Pariisiin (ennallaan, KK) |
-| Kappaleita (= jaksoja) / merkkejä | 2 / 832 | 3 / 854 |
-| Vuosirivit (nähtävyysjutun `vuodet`) | 1826 kirahvi Marseilleen · 1827 matka alkoi | 1826 kirahvi Marseilleen · 1827 matka alkoi |
+| Kappaleita (= jaksoja) / merkkejä | 2 / 832 | 3 / 880 |
+| Vuosirivit (nähtävyysjutun `vuodet`) | 1826 kirahvi Marseilleen · 1827 matka alkoi | 1826 kirahvi Marseilleen · 1827 matka alkoi · 1827 saapui Pariisiin · 1845 kirahvi kuoli |
 | Kuva | assets/kartat/nostot/nosto-kirahvin-kavelymatka-loistoaika.webp (yksi pääkuva, ennallaan) | ennallaan |
 | Pulun kysymykset | Miksi kirahvi käveli Marseillesta Pariisiin eikä matkustanut meritse? · Miten eläin selvisi 900 kilometrin kävelystä? · Mitä muuta Jardin des Plantes'n eläintarhassa oli 1800-luvulla? | Miksi kirahvi käveli Marseillesta Pariisiin eikä matkustanut meritse? · Miten eläin selvisi 900 kilometrin kävelystä? · Mitä muuta Jardin des Plantes'n eläintarhassa oli 1800-luvulla? |
 
 **NYT (noston teksti = nähtävyysjutun kopio):**
 
-1. [300] Egyptin varakuningas lähetti kirahvin lahjaksi Ranskan kuninkaalle Kaarle X:lle, ja eläin saapui laivalla Marseilleen lokakuussa 1826. Laivan kanteen oli sahattu reikä, josta kaula mahtui ulos. Merimatkaa Atlantin ympäri pidettiin liian vaarallisena, joten päätettiin, että kirahvi kävelee Pariisiin.
+1. [326] Egyptin varakuningas lähetti kirahvin lahjaksi Ranskan kuninkaalle Kaarle X:lle, ja eläin saapui laivalla Marseilleen lokakuussa 1826. Laivan kanteen oli sahattu reikä, josta kaula mahtui ulos. Merimatkaa Espanjan ympäri Atlantin kautta pidettiin eläimelle liian vaarallisena, joten päätettiin, että kirahvi kävelee Pariisiin.
 2. [250] Kirahvi talvehti Marseillessa, ja matkaan lähdettiin toukokuussa 1827. Eläimellä oli yllään vahattu sadetakki, johon oli kirjailtu vaakunat, ja luonnontieteilijä Étienne Geoffroy Saint-Hilaire käveli mukana. Lyonissa vastassa oli noin 30 000 ihmistä.
 3. [304] Matka kesti 41 päivää, ja kirahvi saapui Pariisin Jardin des Plantesiin 30. kesäkuuta 1827. Kuningas tapasi sen Saint-Cloudin linnassa 9. heinäkuuta, ja kesän aikana kirahvia kävi katsomassa noin 600 000 ihmistä. Kampauksiakin tehtiin kirahvin tapaan. Eläin kuoli Jardin des Plantes'ssa tammikuussa 1845.
 
@@ -201,8 +210,8 @@ Haara `sk/l5-nostotekstit-era1` (sama kuin erä 1; draft-PR 7223 pysyy draftina,
 |---|---|---|
 | Otsikko (kartan nimi) | Bukinistit 1859 | Bukinistit 1859 |
 | Tarinarivi (datan `otsikko`) | Bukinistit 1859 — oma paikka Seinen kaiteella | Bukinistit 1859 — oma paikka Seinen kaiteella (ennallaan, KK) |
-| Kappaleita (= jaksoja) / merkkejä | 1 / 465 | 4 / 876 |
-| Vuosirivit (nähtävyysjutun `vuodet`) | 1859 kiinteät paikat · 1891 laatikot kaiteeseen | 1859 erityismääräys · 1891 laatikot kaiteeseen |
+| Kappaleita (= jaksoja) / merkkejä | 1 / 465 | 4 / 901 |
+| Vuosirivit (nähtävyysjutun `vuodet`) | 1859 kiinteät paikat · 1891 laatikot kaiteeseen | 1606 Pont Neuf valmistui · 1649 kielto sillalla · 1752 sana sanakirjaan · 1859 erityismääräys · 1891 laatikot kaiteeseen · 2019 perinne luetteloon |
 | Kuva | Quai Saint-Michel, Paris 5 May 2016.jpg (yksi pääkuva, ennallaan) | ennallaan |
 | Pulun kysymykset | Mitä bukinistien laatikoista myydään? · Kuinka kauan bukinistit ovat olleet Seinen rannoilla? · Milloin laatikot saivat jäädä kaiteelle yöksi? | Mitä bukinistien laatikoista myydään? · Kuinka kauan bukinistit ovat olleet Seinen rannoilla? · Milloin laatikot saivat jäädä kaiteelle yöksi? |
 
@@ -210,7 +219,7 @@ Haara `sk/l5-nostotekstit-era1` (sama kuin erä 1; draft-PR 7223 pysyy draftina,
 
 1. [276] Seinen rantamuurin kirjakauppiaita kutsutaan bukinisteiksi, ja nimi kertoo, mitä laatikoissa on: ranskan arkikielen sana bouquin tarkoittaa kirjaa. Kulkukauppiaat myivät kirjoja Pariisin kaduilla jo 1500-luvulta, ja Pont Neufin valmistuttua vuonna 1606 he asettuivat sillalle.
 2. [182] Vuonna 1649 annettiin määräys, joka kielsi kirjojen myynnin sillalla, ja ennen vallankumousta myyjiä oli jo noin 300. Sana bouquiniste kirjattiin ensi kertaa vuoden 1752 sanakirjaan.
-3. [254] Heitä koskeva erityismääräys annettiin 10. lokakuuta 1859: myyjät saivat jäädä rannoille, mutta laatikot piti silti kantaa pois joka ilta. Laatikot sai jättää kaiteeseen vasta vuonna 1891, ja vuoden 1900 tienoilla niille tuli nykyinen vaunun vihreä väri.
+3. [279] Heitä koskeva erityismääräys annettiin 10. lokakuuta 1859: myyjät saivat jäädä rannoille, mutta laatikot piti silti kantaa pois joka ilta. Laatikot sai jättää kaiteeseen vasta vuonna 1891, ja vuoden 1900 tienoilla niille tuli nykyinen tummanvihreä väri, sama kuin junanvaunuissa.
 4. [164] Nyt yli 200 bukinistia myy vanhoja kirjoja kolmen kilometrin matkalla, ja vuonna 2019 heidän perinteensä lisättiin Ranskan aineettoman kulttuuriperinnön luetteloon.
 
 **ENNEN:**
@@ -224,7 +233,7 @@ Haara `sk/l5-nostotekstit-era1` (sama kuin erä 1; draft-PR 7223 pysyy draftina,
 | Otsikko (kartan nimi) | Patonki 1994 | Patonki 1994 |
 | Tarinarivi (datan `otsikko`) | Patonki 1994 — kilpailu parhaasta leivästä | Patonki 1994 — kilpailu parhaasta leivästä (ennallaan, KK) |
 | Kappaleita (= jaksoja) / merkkejä | 1 / 573 | 3 / 736 |
-| Vuosirivit (nähtävyysjutun `vuodet`) | 1994 kilpailun alku | 1994 kilpailun alku |
+| Vuosirivit (nähtävyysjutun `vuodet`) | 1994 kilpailun alku | 1993 asetus · 1994 kilpailun alku · 2022 UNESCO-luettelo |
 | Kuva | 84 Boulevard de Port-Royal Bakery.jpg (yksi pääkuva, ennallaan) | ennallaan |
 | Pulun kysymykset | Miksi leipien tekijöitä ei kerrota raadille? · Mitä patongissa saa lain mukaan olla? · Mikä velvollisuus voittajalle tulee? | Miksi leipien tekijöitä ei kerrota raadille? · Mitä patongissa saa asetuksen mukaan olla? · Mikä velvollisuus voittajalle tulee? |
 
@@ -244,17 +253,17 @@ Haara `sk/l5-nostotekstit-era1` (sama kuin erä 1; draft-PR 7223 pysyy draftina,
 |---|---|---|
 | Otsikko (kartan nimi) | Vrain-Lucas | Vrain-Lucas |
 | Tarinarivi (datan `otsikko`) | Vrain-Lucas 1861–1870 — 27 000 väärennettyä kirjettä | Vrain-Lucas 1861–1870 — 27 000 väärennettyä kirjettä (ennallaan, KK) |
-| Kappaleita (= jaksoja) / merkkejä | 4 / 1394 | 4 / 989 |
+| Kappaleita (= jaksoja) / merkkejä | 4 / 1394 | 4 / 1000 |
 | Vuosirivit (nähtävyysjutun `vuodet`) | – | – |
 | Kuva | Pascal à Galileo.jpg (yksi pääkuva, ennallaan) | ennallaan |
 | Pulun kysymykset | Miten Vrain-Lucas sai väärennetyt kirjeensä näyttämään vanhoilta? · Miten väärentäjä yritti paikata virheitään, kun tiedeakatemia huomasi ne? | Miten Vrain-Lucas sai väärennetyt kirjeensä näyttämään vanhoilta? · Miten väärentäjä yritti paikata virheitään, kun tiedeakatemia huomasi ne? |
 
 **NYT (noston oma teksti; kartan kortti alla):**
 
-1. [336] Denis Vrain-Lucas oli lakikirjurina työskennellyt ranskalainen, joka väärensi Pariisissa noin 27 000 kirjettä, muun muassa Kleopatran kirjeen Caesarille. Kaikki kirjeet oli kirjoitettu 1800-luvun ranskaksi, vaikka niiden piti olla paljon vanhempia. Hän alkoi väärentää 1850-luvulla, hankki aikakauden paperia ja valmisti musteensa itse.
-2. [246] Vuonna 1861 hän myi kuuluisalle matemaatikolle ja keräilijälle Michel Chaslesille Boylen, Newtonin ja Pascalin kirjeitä. Yhdessä niistä Pascal ilmoitti keksineensä painovoiman lait ennen Newtonia, ja Chasles maksoi kirjeistä noin 140 000 frangia.
+1. [342] Denis Vrain-Lucas oli lakikirjurina työskennellyt ranskalainen, joka väärensi Pariisissa noin 27 000 kirjettä, muun muassa Kleopatran kirjeen Caesarille. Kaikki kirjeet oli kirjoitettu ranskaksi, myös Kleopatran, vaikka niiden piti olla paljon vanhempia. Hän alkoi väärentää 1850-luvulla, hankki aikakauden paperia ja valmisti musteensa itse.
+2. [262] Vuonna 1861 hän myi kuuluisalle matemaatikolle ja keräilijälle Michel Chaslesille Boylen, Newtonin ja Pascalin kirjeitä. Yhdessä niistä Pascal ilmoitti keksineensä painovoiman lait ennen Newtonia, ja Chasles maksoi vuosien mittaan kaikkiaan noin 140 000 frangia.
 3. [233] Heinäkuussa 1867 Chasles vei Pascal-kirjeet tiedeakatemialle, mutta käsiala ei vastannut Pascalin varmoja kirjeitä. Kun akatemia huomautti anakronismeista eli ajan virheistä, Vrain-Lucas väärensi lisää kirjeitä selittämään edelliset.
-4. [174] Vrain-Lucas pidätettiin, ja helmikuussa 1870 tuomioistuin antoi hänelle kaksi vuotta vankeutta. Chasles oli maksanut kirjeistä suuren summan, mutta kirjeet olivat arvottomia.
+4. [163] Vrain-Lucas pidätettiin, ja helmikuussa 1870 tuomioistuin antoi hänelle kaksi vuotta vankeutta. Kirjeet, joista Chasles oli maksanut omaisuuden, olivat arvottomia.
 
 **NYT (kartan kortti = nähtävyysjutun kopio):** [344] Vrain-Lucasin väärentämässä kirjeessä Kleopatra kirjoitti Julius Caesarille ranskaksi, vesileimatulle paperille — ja kuuluisa matemaatikko osti kirjeen ilomielin, ja perään kymmeniätuhansia muita. Kansallisylpeys teki ostajasta sokean: olihan kirjeissä todiste, että painovoima keksittiin Ranskassa. Tiedeakatemia ei ollut aivan yhtä ilahtunut.
 
@@ -273,14 +282,14 @@ Haara `sk/l5-nostotekstit-era1` (sama kuin erä 1; draft-PR 7223 pysyy draftina,
 |---|---|---|
 | Otsikko (kartan nimi) | Monet 1874 | Monet 1874 |
 | Tarinarivi (datan `otsikko`) | Monet 1874 — impressionistien ensimmäinen näyttely | Monet 1874 — impressionistien ensimmäinen näyttely (ennallaan, KK) |
-| Kappaleita (= jaksoja) / merkkejä | 1 / 714 | 4 / 828 |
-| Vuosirivit (nähtävyysjutun `vuodet`) | 1867 näyttelyanomus · 1873 yhdistys perustettu · 1874 ensimmäinen näyttely | 1867 näyttelyvetoomus · 1873 yhdistys perustettu · 1874 ensimmäinen näyttely |
+| Kappaleita (= jaksoja) / merkkejä | 1 / 714 | 4 / 814 |
+| Vuosirivit (nähtävyysjutun `vuodet`) | 1867 näyttelyanomus · 1873 yhdistys perustettu · 1874 ensimmäinen näyttely | 1867 näyttelyvetoomus · 1873 yhdistys perustettu · 1874 ensimmäinen näyttely · 1886 viimeinen näyttely |
 | Kuva | Monet - Impression, Sunrise.jpg (yksi pääkuva, ennallaan) | ennallaan |
 | Pulun kysymykset | Miksi Salonista hylätty maalari jäi isoisän aikaan näkymättömäksi? · Miten pilkkanimestä tuli kokonaisen taidesuunnan nimi? | Miksi Salonista hylätty maalari jäi näkymättömäksi? · Miten pilkkanimestä tuli kokonaisen taidesuunnan nimi? |
 
 **NYT (noston teksti = nähtävyysjutun kopio):**
 
-1. [261] Monet ja muut nuoret maalarit olivat Pariisissa taiteilijoita, joita Salon ei huolinut: kaupungin taide-elämää hallitsi Salon, ja sen valitsematta jättämä maalari jäi näkymättömäksi. Vuonna 1867 Frédéric Bazille laati vetoomuksen hylättyjen uudesta näyttelystä.
+1. [247] Claude Monet ja hänen ystävänsä olivat nuoria maalareita, joiden töitä Pariisin virallinen vuosinäyttely Salon ei huolinut, ja ilman Salonia maalari jäi näkymättömäksi. Vuonna 1867 Frédéric Bazille laati vetoomuksen hylättyjen uudesta näyttelystä.
 2. [238] Joulukuussa 1873 Monet, Renoir, Pissarro, Sisley, Degas ja muut perustivat oman yhdistyksen esittääkseen työnsä itse. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa.
 3. [212] Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa ”Impressionistien näyttely”. Pilkkanimi jäi ryhmän nimeksi. Heidän viimeinen yhteinen näyttelynsä pidettiin vuonna 1886.
 4. [117] Maalaus esittää auringonnousua Le Havren satamassa, ja se kuuluu nykyään Pariisin Musée Marmottan Monet’n kokoelmiin.
@@ -296,7 +305,7 @@ Haara `sk/l5-nostotekstit-era1` (sama kuin erä 1; draft-PR 7223 pysyy draftina,
 | Otsikko (kartan nimi) | Piiritys 1870 | Piiritys 1870 |
 | Tarinarivi (datan `otsikko`) | Piiritys 1870 — viestit kulkevat kyyhkyillä | Piiritys 1870 — viestit kulkevat kyyhkyillä (ennallaan, KK) |
 | Kappaleita (= jaksoja) / merkkejä | 1 / 922 | 4 / 821 |
-| Vuosirivit (nähtävyysjutun `vuodet`) | 1870 Pariisi suljettiin · 1859 mikrofilmipatentti | 1859 mikrokuvapatentti · 1870 Pariisi suljettiin |
+| Vuosirivit (nähtävyysjutun `vuodet`) | 1870 Pariisi suljettiin · 1859 mikrofilmipatentti | 1859 mikrokuvapatentti · 1870 Pariisi suljettiin · 1871 piiritys päättyi |
 | Kuva | Pellicule du Journal Pigeons Voyageurs, Souvenir du Siège de Paris, 1870-1871. PH20110 (15 of 20).jpg (yksi pääkuva, ennallaan) | ennallaan |
 | Pulun kysymykset | Miksi kirjekyyhky oli piiritetyn Pariisin ainoa toimiva viestitie kaupunkiin? · Miten kyyhkyn tuomat pikkuruiset filmiviestit saatiin luettua? | Miksi kirjekyyhky oli piiritetyn Pariisin ainoa toimiva viestitie kaupunkiin? · Miten kyyhkyn tuomat pikkuruiset filmiviestit saatiin luettua? |
 
@@ -353,7 +362,6 @@ Haara `sk/l5-nostotekstit-era1` (sama kuin erä 1; draft-PR 7223 pysyy draftina,
 
 1. [532] Édith Piaf syntyi Pariisissa joulukuussa 1915. Tarinan mukaan hän syntyi Bellevillessä kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pariisin kaduilla ja pihoissa ystävänsä Simone Berteautin kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli alle 150 senttiä pitkä. Piaf levytti tunnetuimman laulunsa La Vie en rosen 1946, ja sen sanat hän kirjoitti itse.
 2. [497] Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Marraskuun 2. päivän yönä 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukkien päälle. Vasemman käden nimetön ja pikkurilli jäivät liikkumattomiksi, ja lääkärit sanoivat, ettei hän soita enää. Veli osti hänelle kitaran, ja Django opetteli soittamaan soolot kahdella sormella. Vuonna 1934 hän perusti Pariisissa yhtyeen Quintette du Hot Club de France.
-
 
 ## 5. M3: lähteet ja riippumaton tarkistus
 

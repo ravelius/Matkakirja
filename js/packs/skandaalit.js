@@ -2194,19 +2194,19 @@ export const SKANDAALIT = {
         + 'Tiedeakatemia ei ollut aivan yhtä ilahtunut.',
       teksti: 'Denis Vrain-Lucas oli lakikirjurina työskennellyt ranskalainen, joka väärensi Pariisissa '
         + 'noin 27 000 kirjettä, muun muassa Kleopatran kirjeen Caesarille. Kaikki kirjeet oli '
-        + 'kirjoitettu 1800-luvun ranskaksi, vaikka niiden piti olla paljon vanhempia. Hän alkoi '
+        + 'kirjoitettu ranskaksi, myös Kleopatran, vaikka niiden piti olla paljon vanhempia. Hän alkoi '
         + 'väärentää 1850-luvulla, hankki aikakauden paperia ja valmisti musteensa itse.'
         + '\n\n'
         + 'Vuonna 1861 hän myi kuuluisalle matemaatikolle ja keräilijälle Michel Chaslesille Boylen, '
         + 'Newtonin ja Pascalin kirjeitä. Yhdessä niistä Pascal ilmoitti keksineensä painovoiman lait '
-        + 'ennen Newtonia, ja Chasles maksoi kirjeistä yhteensä noin 140 000 frangia.'
+        + 'ennen Newtonia, ja Chasles maksoi vuosien mittaan kaikkiaan noin 140 000 frangia.'
         + '\n\n'
         + 'Heinäkuussa 1867 Chasles vei Pascal-kirjeet tiedeakatemialle, mutta käsiala ei vastannut '
         + 'Pascalin varmoja kirjeitä. Kun akatemia huomautti anakronismeista eli ajan virheistä, '
         + 'Vrain-Lucas väärensi lisää kirjeitä selittämään edelliset.'
         + '\n\n'
         + 'Vrain-Lucas pidätettiin, ja helmikuussa 1870 tuomioistuin antoi hänelle kaksi vuotta '
-        + 'vankeutta. Chasles oli maksanut kirjeistä suuren summan, mutta kirjeet olivat arvottomia.',
+        + 'vankeutta. Kirjeet, joista Chasles oli maksanut omaisuuden, olivat arvottomia.',
       lahde: 'en-Wikipedia "Denis Vrain-Lucas". Tarkistettu 2.9.2026.',
       kuva: {
         tiedosto: 'Pascal à Galileo.jpg',
@@ -2221,7 +2221,7 @@ export const SKANDAALIT = {
         vaihtoehdot: [
           'Muste oli kemiallisesti uutta',
           'Kirjeet oli sinetöity väärin',
-          'Ne oli kirjoitettu 1800-luvun ranskaksi',
+          'Ne oli kirjoitettu ranskaksi',
         ],
         oikea: 2,
       },

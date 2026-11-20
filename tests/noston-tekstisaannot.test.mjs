@@ -151,11 +151,22 @@ test('erä 2 (9 tarinapaikkaa): kappalemuoto, 3–4 kappaletta, 700–1 000 merk
   assert.ok(!/isoisä/i.test(JSON.stringify(ERA_2_D.map((id) => nj[id.slice(2)]))), 'isoisä jäi tarinapaikan nähtävyysjuttuun');
   // M6: visan vastaus kuuluu yhä tekstiin.
   const teksti = (x) => x.teksti ?? x.lunastus.join('\n\n');
-  const vastaus = { kyyhkyposti: 'mikrofilm', impressionistit: 'otsikoi', 'kirahvin-kavelymatka': 'Atlantin ympäri pidettiin liian vaarallisena',
+  const vastaus = { kyyhkyposti: 'mikrofilm', impressionistit: 'otsikoi', 'kirahvin-kavelymatka': 'liian vaarallisena',
     'pariisin-bukinistit': 'kantaa pois joka ilta', 'carmenin-ensi-ilta': 'Wienissä', 'notre-damen-kukko': 'raunioista lommoilla',
-    'pariisin-patonki': 'presidentinpalatsille', 'vrain-lucas-kirjevaarennokset': '1800-luvun ranskaksi' };
+    'pariisin-patonki': 'presidentinpalatsille', 'vrain-lucas-kirjevaarennokset': 'kirjoitettu ranskaksi' };
   for (const x of kentat) {
     if (!vastaus[x.id]) continue;
     assert.ok(teksti(x).toLowerCase().includes(vastaus[x.id].toLowerCase()), `${x.id}: visan vastaus ei ole tekstissä`);
+  }
+});
+
+test('erä 2 B (KK 20.11.2026 klo 10.44): neljällä kadonneella yksi koti: hahmotelma; nähtävyysjuttukopiot poistettu, kartan piste viittaa hahmotelmaan', async () => {
+  const { NAHTAVYYSJUTUT } = await import('../js/packs/nahtavyysjutut.js');
+  const nimet = ['Grand Châtelet', 'Temple-torni', 'Trocadéron palatsi', 'Galerie des Machines'];
+  for (const n of nimet) assert.equal(NAHTAVYYSJUTUT.pariisi[n], undefined, `${n}: nähtävyysjuttukopio pitää olla poissa`);
+  const lahde = fs.readFileSync(new URL('../js/packs/maakartat.js', import.meta.url), 'utf8');
+  for (const [nimi, id] of [['Grand Châtelet', 'hahmotelma-grand-chatelet'], ['Temple-torni', 'hahmotelma-temple-torni'],
+    ['Trocadéron palatsi', 'hahmotelma-trocadero'], ['Galerie des Machines', 'hahmotelma-galerie-des-machines']]) {
+    assert.ok(lahde.includes(`nimi: '${nimi}'`) && lahde.includes(`nosto: '${id}'`), `${nimi}: kartan pisteen pitää viitata hahmotelmaan ${id}`);
   }
 });
