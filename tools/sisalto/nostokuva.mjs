@@ -19,8 +19,11 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import sharp from 'sharp';
 import { soikioPikseli } from './soikio.mjs';
+
+// sharp ladataan vasta rajaa()-kutsussa: tarkistus (nostokuvien-tarkistus.mjs) tuo vain vakiot, ja CI:n testit ajetaan
+// ilman npm installia.
+const lataaSharp = () => import('sharp').then((m) => m.default);
 
 export const LEVEYS = 1200;
 export const KORKEUS = 800;
@@ -62,6 +65,7 @@ export function soikioAlfaan(rgba, leveys, korkeus) {
 export async function rajaa(lahdeKuva, { ulos, nimi, keskiX = 0.5, keskiY = 0.5, lahde = null } = {}) {
   if (!ulos) throw new Error('--ulos puuttuu');
   nimi ??= path.basename(lahdeKuva).replace(/\.[^.]+$/, '');
+  const sharp = await lataaSharp();
   await fs.mkdir(ulos, { recursive: true });
   const pohja = sharp(lahdeKuva).rotate();   // EXIF-asento ensin
   const { data: tavut, info } = await pohja.toBuffer({ resolveWithObject: true });

@@ -8,9 +8,12 @@ import assert from 'node:assert/strict';
 import { mkdtemp, readFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
-import sharp from 'sharp';
 import { rajaa, rajausLaatikko, lahdeRajattu, LEVEYS, KORKEUS } from '../tools/sisalto/nostokuva.mjs';
 import { SOIKIO_N, SOIKIO_H, soikioAlfa } from '../tools/sisalto/soikio.mjs';
+
+// CI ajaa testit ilman npm installia: kuvatestit ohitetaan, jos sharp puuttuu (sama kuin bmng-laatat.test.mjs).
+const sharp = await import('sharp').then((m) => m.default).catch(() => null);
+const ilmanSharpia = { skip: sharp ? false : 'sharp puuttuu' };
 
 const kansio = await mkdtemp(path.join(tmpdir(), 'nostokuva-'));
 test.after(() => rm(kansio, { recursive: true, force: true }));
@@ -49,7 +52,7 @@ test('lähderivi: "rajattu" kerran', () => {
 });
 
 for (const [nimi, w, h, kx, ky] of [['vaaka', 3000, 1600, 0.6, 0.5], ['pysty', 1600, 2600, 0.5, 0.35]]) {
-  test(`${nimi}kuva ${w} × ${h}: 1200 × 800, suurennos 2048 px, mitat ja esikatselun alfa`, async () => {
+  test(`${nimi}kuva ${w} × ${h}: 1200 × 800, suurennos 2048 px, mitat ja esikatselun alfa`, ilmanSharpia, async () => {
     const lahde = await testikuva(`${nimi}.png`, w, h, kx, ky);
     const t = await rajaa(lahde, { ulos: kansio, nimi, keskiX: kx, keskiY: ky, lahde: 'Tekijä, Wikimedia Commons (CC BY-SA 4.0)' });
     assert.equal(t.ok, true, t.viesti);
@@ -79,7 +82,7 @@ for (const [nimi, w, h, kx, ky] of [['vaaka', 3000, 1600, 0.6, 0.5], ['pysty', 1
   });
 }
 
-test('liian pieni lähde (rajaus alle 1200 px): ei suurenneta, vain esikatselu, ok = false', async () => {
+test('liian pieni lähde (rajaus alle 1200 px): ei suurenneta, vain esikatselu, ok = false', ilmanSharpia, async () => {
   const lahde = await testikuva('pieni.png', 853, 1280, 0.5, 0.4);
   const t = await rajaa(lahde, { ulos: kansio, nimi: 'pieni', keskiY: 0.4 });
   assert.equal(t.ok, false);
