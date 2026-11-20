@@ -5,7 +5,7 @@ ja kaaren aukko vesirajassa vain 20,4 m (lähde 28 m, −41 %; 4 m:n korkeudella
 
 Pyyntö:
 1. Uusi mallikuva (HERO, 2–3 Commons-viitekuvaa) SIVULTA kanavan suunnasta: koko silta ramppeineen päästä päähän, yksi korkea kivikaari, kaksi kauppakujaa ja keskikaari katettuine kauppoineen.
-   - Tavoitemitat: pituus 48 m ramppeineen, leveys 22,9 m, kaaren jänne 28 m, kaaren korkeus noin 7,5 m (leveys ja kaaren korkeus voivat tarkentua TARKASTAJALTA, KK välittää).
+   - Tavoitemitat (VAHVISTETTU, KK 23.3x / TARKASTAJA, structurae.net + it.wikipedia): pituus 48 m ramppeineen, kannen leveys 22,90 m, jänne 28–28,8 m, kaaren huippu vedestä 7,32 m (nousu 6,4 m). Keskiportiikin huipun korkeus mallin omista suhteista.
    Nykyinen kuva vertailuksi: hyvaksytyt-mallit/rialto-bridge/tripo-preview.jpg (kaari liian matala, rampit lyhyet).
 2. Kuva ensin KK:lle kuvasanaa varten (SHA256 + 1000 px kuva). Ei Tripo-ottoa ennen KK:n sanaa.
 3. Tripo kuten aiemmin (H3.1 HD, Ultra Mesh, 8K, Remove Lighting, PBR, 2M), yksi otto hyväksytystä SHA:sta. Lupa P-261117-2, EI OSTOJA (saldo ei riitä → ilmoita).
