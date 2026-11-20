@@ -1326,7 +1326,7 @@ export const FOKUSKOHTEET_FRA = [
           + 'jopa Alppien jäätikölle, jossa ilmassa oli vain vähän pölyä.',
         kuva: 'pullot',
         vuodet: [
-          { vuosi: '1860', selite: 'pullot jäätiköllä', kohta: 'vuonna 1860' },
+          { vuosi: '1860', selite: 'pullot jäätiköllä', kohta: 'Vuonna 1860' },
         ],
       },
       {
