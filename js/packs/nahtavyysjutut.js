@@ -5047,7 +5047,7 @@ export const NAHTAVYYSJUTUT = {
       teksti:
         'Karlskirche syntyi lupauksesta. Vuonna 1713, vuosi Wienin viimeisen suuren ruttoepidemian jälkeen, keisari Kaarle VI lupasi rakennuttaa kirkon nimikkopyhälleen Kaarle Borromeukselle, jota pidettiin ruttopotilaiden parantajana. Arkkitehtikilpailun voitti Johann Bernhard Fischer von Erlach, ja rakennustyö alkoi vuonna 1716. Fischerin kuoltua 1723 hänen poikansa Joseph Emanuel Fischer von Erlach saattoi kirkon valmiiksi vuonna 1737.'
         + '\n\n'
-        + 'Julkisivun keskellä on kreikkalaista temppeliä muistuttava pylväskatos. Sen kahta vapaata pylvästä, joiden reliefit kertovat Kaarle Borromeuksen elämästä, ovat innoittaneet Rooman Trajanuksen pylväs. Kupolin yläpuolella kohoaa korkea tambuuri, jota nuorempi Fischer lyhensi ja muutti osin. Kupolin freskon maalasivat Johann Michael Rottmayr ja Gaetano Fanti.'
+        + 'Julkisivun keskellä on kreikkalaista temppeliä muistuttava pylväskatos. Sen kahta vapaata pylvästä, joiden reliefit kertovat Kaarle Borromeuksen elämästä, ovat innoittaneet Rooman Trajanuksen pylväs. Kupoli kohoaa korkean tambuurin varassa, jota nuorempi Fischer lyhensi ja muutti osin. Kupolin freskon maalasivat Johann Michael Rottmayr ja Gaetano Fanti.'
         + '\n\n'
         + 'Kirkon vieressä oli hautausmaa, jonne säveltäjä Antonio Vivaldi haudattiin 28. heinäkuuta 1741. Hänen hautansa on kadonnut, mutta kirkossa pidetään yhä Vivaldi-konsertteja.',
       vuodet: [
@@ -7038,7 +7038,7 @@ export const NAHTAVYYSJUTUT = {
       teksti:
         'Arc de Triomphe du Carrousel rakennettiin vuosina 1806–1808 Napoleonin voittojen kunniaksi Tuileries\'n palatsin portiksi. Charles Percier ja Pierre Fontaine suunnittelivat sen Rooman Konstantinuksen riemukaaren mallin mukaan. Kaari on noin 19 metriä korkea ja 23 metriä leveä, ja sen kahdeksan marmoripylvästä on otettu talteen tuhoutuneesta Meudonin linnasta.'
         + '\n\n'
-        + 'Jokaisen pylvään päällä seisoo Napoleonin armeijan sotilas univormussa, ja vaaleanpunaisen marmorin reliefit kertovat esimerkiksi Austerlitzin taistelusta ja Ulmin antautumisesta. Kaaren huipulla oli alun perin Venetsian San Marcon kirkon neljä pronssihevosta, jotka Napoleon oli ryöstänyt Venetsiasta vuonna 1798. Vuonna 1815 ne palautettiin Venetsiaan, ja niiden tilalle tuli vuonna 1828 François Joseph Bosion veistämä vaunukunta, jossa Rauha ajaa voitonvaunuissa.'
+        + 'Jokaisen pylvään päällä seisoo Napoleonin armeijan sotilas univormussa, ja vaaleanpunaisen marmorin reliefit kertovat esimerkiksi Austerlitzin taistelusta ja Ulmin antautumisesta. Kaaren huipulla oli alun perin Venetsian San Marcon kirkon neljä pronssihevosta, jotka Napoleon oli ryöstänyt Venetsiasta vuonna 1797. Vuonna 1815 ne palautettiin Venetsiaan, ja niiden tilalle tuli vuonna 1828 François Joseph Bosion veistämä vaunukunta, jossa Rauha ajaa voitonvaunuissa.'
         + '\n\n'
         + 'Tuileries\'n palatsi paloi Pariisin kommuunin aikana vuonna 1871, ja sen jälkeen kaaren läpi avautuu esteetön näkymä länteen, Concorden aukion obeliskille ja Riemukaarelle. Kaari on Pariisin historiallisen akselin itäpää, ja Lontoon Marble Arch otti siitä mallia.',
       vuodet: [
@@ -8511,7 +8511,7 @@ export const NAHTAVYYSJUTUT = {
     'Westerkerk': {
       aika: '1620–1631',
       teksti:
-        'Westerkerk rakennettiin vuosina 1620–1631 renessanssityyliin Hendrick de Keyserin suunnitelmien mukaan. De Keyser kuoli 1621, ja kirkon viimeisteli hänen poikansa Pieter de Keyser. Kirkko vihittiin käyttöön 8. kesäkuuta 1631. Se oli yksi ensimmäisistä alun perin protestanteille rakennetuista kirkoista ja on yhä Alankomaiden suurin protestanttinen kirkko.'
+        'Westerkerk rakennettiin vuosina 1620–1631 renessanssityyliin Hendrick de Keyserin suunnitelmien mukaan. De Keyser kuoli 1621, ja kirkon viimeisteli hänen poikansa Pieter de Keyser. Kirkko vihittiin käyttöön 8. kesäkuuta 1631. Se oli yksi ensimmäisistä alun perin protestanteille rakennetuista kirkoista ja on yhä Alankomaiden suurin protestanteille rakennettu kirkko.'
         + '\n\n'
         + 'Kirkon torni, Westertoren, on noin 87 metriä korkea ja Amsterdamin korkein kirkontorni. Tornin yläosa on vuodelta 1637, ja sen huipulla on keisarinkruunu, joka esittää Maksimilian I:n Itävallan keisarinkruunua. Kellopelin suurimmat 14 kelloa valoi François Hemony vuonna 1658.'
         + '\n\n'
@@ -11912,7 +11912,7 @@ export const NAHTAVYYSJUTUT = {
     'Suurmestarin palatsi': {
       aika: '1570-luvulta',
       teksti:
-        'Suurmestarin palatsi on Vallettan suurin palatsi. Se rakennettiin 1500–1700-luvuilla johanniittaritarikunnan suurmestarin asunnoksi; ritarikunta hallitsi Maltaa vuosina 1530–1798. Paikalla oli ritari Eustachio del Monten vuonna 1569 rakennettu talo ja Italian ritarikieliryhmän majatalo. Suurmestari Pierre de Monte asui talossa vuodesta 1571, ja vuonna 1574 sitä alettiin laajentaa palatsiksi Girolamo Cassarin manieristisen suunnitelman mukaan.'
+        'Suurmestarin palatsi on Vallettan suurin palatsi. Se rakennettiin 1500–1700-luvuilla johanniittaritarikunnan suurmestarin asunnoksi; ritarikunta hallitsi Maltaa vuosina 1530–1798. Paikalla oli ritari Eustachio del Monten vuonna 1569 rakennettu talo ja ritarikunnan italialaisten majatalo (Auberge d'Italie). Suurmestari Pierre de Monte asui talossa vuodesta 1571, ja vuonna 1574 sitä alettiin laajentaa palatsiksi Girolamo Cassarin manieristisen suunnitelman mukaan.'
         + '\n\n'
         + 'Myöhemmät suurmestarit koristelivat palatsia barokkimaiseksi. Nicolau Nasoni maalasi käytävien kattoihin freskot vuonna 1724, ja suurmestari Manuel Pinto da Fonseca muutti rakennuksen nykyiseen muotoonsa 1740-luvulla: hän koristeli julkisivun, avasi toisen pääoven ja rakennutti kellotornin sisäpihalle.'
         + '\n\n'
@@ -42911,7 +42911,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Areena rakennettiin vaiheittain: puinen areena syntyi vuonna 1733, ja kivirakennus alkoi vuonna 1754. Työt seisoivat vuosina 1766–1784 ja pysähtyivät uudelleen vuonna 1799, kun rahat loppuivat ja kolmannes oli vielä tekemättä. Arkkitehti Juan Talavera de la Vega sai tehtäväkseen viimeistellä rakennuksen vuonna 1876. Areena on kolmikymmenkulmio, ja sen katsomossa on noin 11 500 paikkaa.'
         + '\n\n'
-        + 'Pääsisäänkäynti on Prinssin portti, ja ruhtinaan aitio on sinivalkoisen laattakupolin alla. Tärkeimmät taistelut käydään huhtikuun Feria de Abril -juhlilla ja syyskuun San Miguel -juhlilla. Areenan sisällä on härkätaistelumuseo ja toreadorien kappeli.',
+        + 'Pääsisäänkäynti on Prinssin portti, ja Prinssin aitio on sinivalkoisen laattakupolin alla. Tärkeimmät taistelut käydään huhtikuun Feria de Abril -juhlilla ja syyskuun San Miguel -juhlilla. Areenan sisällä on härkätaistelumuseo ja härkätaistelijoiden kappeli.',
       vuodet: [
         { kohta: 'vuonna 1670', vuosi: '1670', selite: 'ritarikunta perustettiin' },
         { kohta: 'vuonna 1733', vuosi: '1733', selite: 'puinen areena' },
@@ -42919,17 +42919,17 @@ export const NAHTAVYYSJUTUT = {
         { kohta: 'vuonna 1876', vuosi: '1876', selite: 'viimeistelytyö' },
       ],
       kuvat: [],
-      lahde: 'Wikipedia (es: Plaza de toros de Sevilla ja Real Maestranza de Caballería de Sevilla)',
+      lahde: 'Wikipedia (es: Plaza de toros de la Maestranza ja Real Maestranza de Caballería de Sevilla; en: Plaza de Toros de la Real Maestranza de Caballería de Sevilla, 1881)',
     },
     // Tripo-mallien kohteet (KK 20.11.2026 20.48, P-261120-18).
     'Torre del Oro': {
       aika: '1220–1221',
       teksti:
-        'Torre del Oro, Kultatorni, on kaksitoistakulmainen vartiotorni Guadalquivir-joen rannalla. Almohad-kalifikunnan Sevillan käskynhaltija Abù l-Ulà rakennutti sen vuosina 1220–1221 valvomaan jokiliikennettä. Torni oli toinen ankkuripiste ketjulle, jolla joki voitiin sulkea. Kastilialaisen laivaston johtaja Ramón de Bonifaz mursi ketjun Sevillan valtauksessa vuonna 1248.'
+        'Torre del Oro, Kultatorni, on kaksitoistakulmainen vartiotorni Guadalquivir-joen rannalla. Almohad-kalifikunnan Sevillan käskynhaltija Abu l-Ula rakennutti sen vuosina 1220–1221 valvomaan jokiliikennettä. Torni oli toinen ankkuripiste ketjulle, jolla joki voitiin sulkea. Kastilialaisen laivaston johtaja Ramón de Bonifaz mursi ketjun Sevillan valtauksessa vuonna 1248.'
         + '\n\n'
         + 'Nimen kerrotaan tulleen kullanhohteesta, jonka torni loi jokeen: rakennusaineena oli laastin, kalkin ja puristetun heinän seos. Keskiajalla torni toimi vankilana. Toisen kerroksen lisäsi 1300-luvulla Pedro I, ja ylimmän, pyöreän kerroksen rakensi sotilasinsinööri Sebastian Van der Borcht vuonna 1760.'
         + '\n\n'
-        + 'Lissabonin maanjäristys vuonna 1755 vaurioitti tornia. Markiisi esitti sen purkamista, jotta kulku Triananonsillalle suoristuisi, mutta sevillalaiset vastustivat ja kuningas puuttui asiaan. Nykyään tornissa on merimuseo, jossa on vanhoja navigointivälineitä ja karttoja.',
+        + 'Lissabonin maanjäristys vuonna 1755 vaurioitti tornia. Monte Realin markiisi esitti sen purkamista, jotta kulku Trianan sillalle suoristuisi, mutta sevillalaiset vastustivat ja kuningas puuttui asiaan. Nykyään tornissa on merimuseo, jossa on vanhoja navigointivälineitä ja karttoja.',
       vuodet: [
         { kohta: 'vuosina 1220–1221', vuosi: '1220–1221', selite: 'rakennettiin' },
         { kohta: 'vuonna 1248', vuosi: '1248', selite: 'ketju murtui' },
