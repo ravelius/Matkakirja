@@ -11907,6 +11907,25 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+  
+    // Tripo-mallien kohteet (KK 20.11.2026 20.48, P-261120-18).
+    'Suurmestarin palatsi': {
+      aika: '1570-luvulta',
+      teksti:
+        'Suurmestarin palatsi on Vallettan suurin palatsi. Se rakennettiin 1500–1700-luvuilla johanniittaritarikunnan suurmestarin asunnoksi; ritarikunta hallitsi Maltaa vuosina 1530–1798. Paikalla oli ritari Eustachio del Monten vuonna 1569 rakennettu talo ja ritarikunnan italialaisten majatalo (Auberge d’Italie). Suurmestari Pierre de Monte asui talossa vuodesta 1571, ja vuonna 1574 sitä alettiin laajentaa palatsiksi Girolamo Cassarin manieristisen suunnitelman mukaan.'
+        + '\n\n'
+        + 'Myöhemmät suurmestarit koristelivat palatsia barokkimaiseksi. Nicolau Nasoni maalasi käytävien kattoihin freskot vuonna 1724, ja suurmestari Manuel Pinto da Fonseca muutti rakennuksen nykyiseen muotoonsa 1740-luvulla: hän koristeli julkisivun, avasi toisen pääoven ja rakennutti kellotornin sisäpihalle.'
+        + '\n\n'
+        + 'Kun Napoleonin Ranska karkotti ritarit vuonna 1798, palatsista tuli kansallispalatsi, ja britit käyttivät sitä kuvernöörin palatsina vuodesta 1800. Vuosina 1921–2015 siinä kokoontui Maltan parlamentti. Nykyään siellä on presidentin kanslia, ja juhlahuoneet sekä asehuone ovat museona.',
+      vuodet: [
+        { kohta: 'vuonna 1569', vuosi: '1569', selite: 'del Monten talo' },
+        { kohta: 'vuonna 1574', vuosi: '1574', selite: 'laajennus alkoi' },
+        { kohta: 'vuonna 1724', vuosi: '1724', selite: 'Nasonin freskot' },
+        { kohta: 'vuonna 1798', vuosi: '1798', selite: 'ritarit karkotettiin' },
+      ],
+      kuvat: [],
+      lahde: 'Wikipedia (en: Grandmaster\'s Palace, Valletta)',
+    },
   },
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
   varsova: {
@@ -24413,6 +24432,11 @@ export const NAHTAVYYSJUTUT = {
           + 'korjattiin 1600-luvun alussa, vain Changdeokgung ja sen '
           + 'naapuri kunnostettiin. Niin sivupalatsista tuli '
           + 'käytännössä Joseonin pääpalatsi kolmeksi vuosisadaksi.'
+        + '\n\n'
+          + 'Palatsin pääportti Donhwamun valmistui jo vuonna 1412, ja se on '
+          + 'Joseon-ajan palatsien vanhin säilynyt portti. Imjin-sodassa '
+          + 'vuonna 1592 tuhoutunut portti rakennettiin uudelleen vuonna 1607 '
+          + 'tai 1608.'
         + '\n\n'
           + 'Valtaistuinsali Injeongjeon oli paikka, jossa uusi kuningas '
           + 'kruunattiin ja jossa vieraat lähettiläät otettiin vastaan. '
@@ -42877,6 +42901,43 @@ export const NAHTAVYYSJUTUT = {
         },
       ],
       lahde: 'Wikipedia',
+    },
+  
+    // Tripo-mallien kohteet (KK 20.11.2026 20.48, P-261120-18).
+    'Maestranzan areena': {
+      aika: '1700- ja 1800-luvut',
+      teksti:
+        'Maestranzan areena on Sevillan Arenalin kaupunginosassa, ja sen omistaa aatelinen Real Maestranza de Caballería -ritarikunta. Ritarikunnan perusti vuonna 1670 32 aatelismiestä, ja kuningas Filip V antoi sille vuonna 1730 luvan järjestää härkätaisteluja keväisin ja syksyisin. Se johti pysyvän areenan rakentamiseen.'
+        + '\n\n'
+        + 'Areena rakennettiin vaiheittain: puinen areena syntyi vuonna 1733, ja kivirakennus alkoi vuonna 1754. Työt seisoivat vuosina 1766–1784 ja pysähtyivät uudelleen vuonna 1799, kun rahat loppuivat ja kolmannes oli vielä tekemättä. Arkkitehti Juan Talavera de la Vega sai tehtäväkseen viimeistellä rakennuksen vuonna 1876. Areena on kolmikymmenkulmio, ja sen katsomossa on noin 11 500 paikkaa.'
+        + '\n\n'
+        + 'Pääsisäänkäynti on Prinssin portti, ja Prinssin aitio on sinivalkoisen laattakupolin alla. Tärkeimmät taistelut käydään huhtikuun Feria de Abril -juhlilla ja syyskuun San Miguel -juhlilla. Areenan sisällä on härkätaistelumuseo ja härkätaistelijoiden kappeli.',
+      vuodet: [
+        { kohta: 'vuonna 1670', vuosi: '1670', selite: 'ritarikunta perustettiin' },
+        { kohta: 'vuonna 1733', vuosi: '1733', selite: 'puinen areena' },
+        { kohta: 'vuonna 1754', vuosi: '1754', selite: 'kivirakennus alkoi' },
+        { kohta: 'vuonna 1876', vuosi: '1876', selite: 'viimeistelytyö' },
+      ],
+      kuvat: [],
+      lahde: 'Wikipedia (es: Plaza de toros de la Maestranza ja Real Maestranza de Caballería de Sevilla; en: Plaza de Toros de la Real Maestranza de Caballería de Sevilla, 1881)',
+    },
+    // Tripo-mallien kohteet (KK 20.11.2026 20.48, P-261120-18).
+    'Torre del Oro': {
+      aika: '1220–1221',
+      teksti:
+        'Torre del Oro, Kultatorni, on kaksitoistakulmainen vartiotorni Guadalquivir-joen rannalla. Almohad-kalifikunnan Sevillan käskynhaltija Abu l-Ula rakennutti sen vuosina 1220–1221 valvomaan jokiliikennettä. Torni oli toinen ankkuripiste ketjulle, jolla joki voitiin sulkea. Kastilialaisen laivaston johtaja Ramón de Bonifaz mursi ketjun Sevillan valtauksessa vuonna 1248.'
+        + '\n\n'
+        + 'Nimen kerrotaan tulleen kullanhohteesta, jonka torni loi jokeen: rakennusaineena oli laastin, kalkin ja puristetun heinän seos. Keskiajalla torni toimi vankilana. Toisen kerroksen lisäsi 1300-luvulla Pedro I, ja ylimmän, pyöreän kerroksen rakensi sotilasinsinööri Sebastian Van der Borcht vuonna 1760.'
+        + '\n\n'
+        + 'Lissabonin maanjäristys vuonna 1755 vaurioitti tornia. Monte Realin markiisi esitti sen purkamista, jotta kulku Trianan sillalle suoristuisi, mutta sevillalaiset vastustivat ja kuningas puuttui asiaan. Nykyään tornissa on merimuseo, jossa on vanhoja navigointivälineitä ja karttoja.',
+      vuodet: [
+        { kohta: 'vuosina 1220–1221', vuosi: '1220–1221', selite: 'rakennettiin' },
+        { kohta: 'vuonna 1248', vuosi: '1248', selite: 'ketju murtui' },
+        { kohta: 'vuonna 1755', vuosi: '1755', selite: 'maanjäristys' },
+        { kohta: 'vuonna 1760', vuosi: '1760', selite: 'ylin kerros' },
+      ],
+      kuvat: [],
+      lahde: 'Wikipedia (en: Torre del Oro)',
     },
   },
   /*

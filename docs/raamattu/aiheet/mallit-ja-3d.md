@@ -14,6 +14,7 @@ SÄÄNNÖT:
 9. Tarkin tarkkuustaso näytetään vain lähellä; kauempana malli on kevyempi. [R-2.196]
 10. Toistuvat osat (puut, rekvisiitta) viedään yhtenä meshinä tyyppiä kohden jaetulla materiaalilla, ja vienti tarkistetaan automaattisesti. Muistiongelma mitataan laitteella ennen korjausta. [R-6.16]
 11. Kuumailmapallokartan oma rakennus verrataan ennen luovutusta oikeaan maailmaan (kirkkaus, sävy, ulokkeet ortokuvaa vasten). Tavoite on oikea maailma, ei Googlen sävy. [R-2.94]
+12. Nykyinen Tripo-rakennus on kartalla aina, kun Wikipedia-kieliä on ≥ 25 tai se on kaupunkinsa tunnetuin ja kieliä ≥ 17; muut avattaessa. Kaikkien nykyisten pysyvyys ratkaistaan pilotin koontikuvasta. [P-261120-22]
 
 EI VIKA:
 - Pallokartalla ei ole 3D-nostoja eikä erikoismalleja; kartan merkit ovat 2D.
