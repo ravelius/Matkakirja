@@ -26,7 +26,9 @@
  *   nähtävyysjuttu   Matkakirjan ihme nimellä (js/fokuskohteet.js matkakirjanIhme, kuten js/nahtavyydet.js) ja kuvat
  * Kohde: täkynoston `kohde` (kohteen kortin kuvat) ja kohdekartan kohteet, joiden nosto on tämä tunnus
  * (kohdekartat.kohteet[].kuvat); nähtävyysjutulla myös sen nosto-linkin nostojen omat kuvat.
- * Juttu: nähtävyysjutut, joiden nosto on tämä tunnus, ja linkittävien kohdekartan kohteiden jutut (kaupunki + nimi).
+ * Juttu: nähtävyysjutut, joiden nosto on tämä tunnus, ja linkittävien kohdekartan kohteiden jutut (kaupunki + nimi). Jälkimmäiset
+ * (toinen tarina samasta paikasta) vain, kun nostolla on muista lähteistä alle KUVIA.min kuvaa (tasalaatutarkistuksen vähimmäismäärä;
+ * KK:N PÄÄTÖS 20.11.2026 klo 15.18).
  * Pois: kartan merkit, kuvakkeet, miniatyyrit (kohdekartan piirrosmerkit), pikkukuvat, äänet ja linkit.
  */
 import { kohteenKuvalista, kohteenNykykuva, matkakirjanIhme } from '../../js/fokuskohteet.js';
@@ -35,6 +37,7 @@ import { NOSTO_MAAT } from '../../js/fokusnosto.js';
 import { MAASTOKOHTEET_ATA } from '../../js/packs/maastokohteet-ata.js';
 import { MAASTOKOHTEET_ARK } from '../../js/packs/maastokohteet-ark.js';
 import { KOHDE_MAAT } from '../../js/fokuskohteet.js';
+import { KUVIA } from '../sisalto/nostokuva.mjs';
 
 export const MISTA = ['nosto', 'kohde', 'juttu'];
 
@@ -203,12 +206,27 @@ export function nostokuvaRakentaja({ R, hae, haeKohde, kokoelmat }) {
       ...(karttaKohteet.get(tunnus) ?? []).flatMap(({ kohde: k }) => (k.kuvat ?? []).map((r) => ratkaistuna(r, 'kohde'))),
     ];
   }
-  /** Nähtävyysjutut: nosto-linkki tunnukseen ja linkittävien kohdekartan kohteiden jutut. */
+  /** Nähtävyysjutut, reitti (a): jutut, joiden nosto-kenttä on tämä tunnus. */
   function juttu(tunnus) {
-    const lista = [...(juttuLinkit.get(tunnus) ?? []),
-      ...(karttaKohteet.get(tunnus) ?? []).map(({ kaupunki, kohde: k }) => jutut.get(`${kaupunki}:${k.nimi}`)).filter(Boolean)];
+    return [...new Set(juttuLinkit.get(tunnus) ?? [])].flatMap((a) => juttuKuvat(a, 'juttu'));
+  }
+  /**
+   * Reitti (b): linkittävien kohdekartan kohteiden samannimiset jutut (kaupunki + nimi). TOINEN TARINA (KK:N PÄÄTÖS 20.11.2026 klo 15.18,
+   * aiempi: KK 15.08, P-261120-5, P-261120-10, P-261117-119; kortti noston-kuvat 7 ja 9): sen kuvat vain nostolle, jolla on alle
+   * KUVIA.min omaa kuvaa lähteistä nosto, kohde ja reitti (a). Muuten Notre-Damen palotarina sai saman paikan yleisen jutun kuvat;
+   * vajaa nosto (muut kaupungit, joiden vuoro ei ole vielä) pitää ne kuten ennen.
+   */
+  function juttuKohteesta(tunnus) {
+    const omatJutut = new Set(juttuLinkit.get(tunnus) ?? []);
+    const lista = (karttaKohteet.get(tunnus) ?? []).map(({ kaupunki, kohde: k }) => jutut.get(`${kaupunki}:${k.nimi}`))
+      .filter((a) => a && !omatJutut.has(a));
     return [...new Set(lista)].flatMap((a) => juttuKuvat(a, 'juttu'));
   }
+  /** Nosto → kohde → juttu (a); reitti (b) vain, kun edellisistä tuli alle KUVIA.min kuvaa. */
+  const koottu = (tunnus, ...listat) => {
+    const omin = valmis(...listat);
+    return omin.length >= KUVIA.min ? omin : valmis(...listat, juttuKohteesta(tunnus));
+  };
 
   const valmis = (...listat) => {
     const nahty = new Set();
@@ -231,12 +249,12 @@ export function nostokuvaRakentaja({ R, hae, haeKohde, kokoelmat }) {
     /** Kartta- tai kortinoston kuvat tunnuksella. */
     tunnukselle(tunnus, kaupunki = null) {
       const avain = `${tunnus}|${kaupunki ?? ''}`;
-      if (!muisti.has(avain)) muisti.set(avain, valmis(omat(tunnus, kaupunki), kohde(tunnus), juttu(tunnus)));
+      if (!muisti.has(avain)) muisti.set(avain, koottu(tunnus, omat(tunnus, kaupunki), kohde(tunnus), juttu(tunnus)));
       return muisti.get(avain);
     },
     /** Sisäkkäinen kohde tai nosto, jota ei ehkä ole hakemistossa (fokusvirran kohteet ja takynostot): oma olio. */
     oliolle(olio, tunnus, kuvat) {
-      return valmis(kuvat(olio), kohde(tunnus), juttu(tunnus));
+      return koottu(tunnus, kuvat(olio), kohde(tunnus), juttu(tunnus));
     },
     kohteenKuvat, takyKuvat,
     /** Nähtävyysjutun kuvat: oma ihme ja kuvat, sitten kohdekartan sama kohde ja jutun nosto-linkkien nostot. */
