@@ -2,11 +2,13 @@
 
 Haara `sk/k4-era1-kuvat` (pohjana sk/l5-nostotekstit-era1 + origin/main K-3), draft-PR, EI mainiin ennen KK:n sanaa. Kuvia ei ole ladattu ämpäriin: vientikuvat ovat kansiossa `/Users/Shared/Claude/luovutukset/sk-k4-era1/_ampari/` (osoitteet `https://media.matkakirja.app/kuvat/<nimi>.jpg`, hahmotelmien ihmekuva `…/kohtaamiset/ihmeet/<nimi>-3x2.jpg`), ja ne pitää viedä ämpäriin ennen kuin PR yhdistetään (JU/PT).
 
+**Korjauskierros KK:n päätöksellä 20.11. 11.42** (aito kuva ensin; pääaihe häivyttämättömällä keskialueella 75 % × 75 %; esirajaus sharpilla sallittu, tulos ≥ 1200 × 800, lähderiviin "rajattu"): Eiffel J1–2 Neurdein 1888 aitona (Codex-tilaus pois), Garnier J3 Hauger-kaiverrus esirajattuna (Codex-tilaus pois) ja J1 piirtosali esirajattu oman ovaalinsa sisään, Lavoisier J1:n havainnekuva pois (piirros kattaa J1–2), Curie J1:n korvaava kuva tilauslistalle, Pasteur J2–3 ja Eiffel J3 mitattu (ks. luku 4). Luvut alla ovat korjauksen jälkeen.
+
 ## 1. M2: rikkeet ennen | nyt (13 noston osalta)
 
 - **Ennen** (origin/main, lähtöluettelo): 13 nostoa rikkoo; liikaa 5, tekijä 13, lisenssi 13, mitat 13, havainnekuvan lähderivi 6.
-- **Nyt:** 3 nostoa rikkoo, kaikki `vajaa` ja kaikki odottavat Codex-kuvaa: **eiffel-torni** (2 kuvaa, 2 tilattu), **sainte-chapelle** (1 kuva, 3 tilattu), **curie-1898** (2 kuvaa, 2 tilattu). Louvre ja Garnier ovat 3 kuvaa + 1 tilattu: 3 kuvaa riittää, joten ne eivät rikko.
-- Lähtöluettelo päivitetty (`docs/raportit/pariisin-nostokuvat-rikkeet-lahto-20261120.json`): 46 → 36 rikkovaa nostoa. Huom. B:n (4 kadonnutta) `vajaa` kasvoi, koska KK:n päätöksellä 10.44 niiden nähtävyysjuttukopiot poistuivat (kuvat tulevat K-4:n myöhemmässä erässä); `tools/sisalto/nostokuvien-tarkistus.mjs` lukee B:n nyt hahmotelmasta (`B_HAHMOTELMA`): PK:n tiedoston muutos, ilmoitettu KK:lle.
+- **Nyt:** 2 nostoa rikkoo, kumpikin `vajaa` ja odottaa Codex-kuvia: **sainte-chapelle** (1 kuva, 3 tilattu) ja **curie-1898** (2 kuvaa, 3 tilattu). Eiffel on nyt 3 kuvaa + 1 tilattu (Lustig), joten se ei enää riko. Louvre on 3 kuvaa + 1 tilattu: 3 kuvaa riittää, joten ne eivät rikko.
+- Lähtöluettelo päivitetty (`docs/raportit/pariisin-nostokuvat-rikkeet-lahto-20261120.json`): 46 → 35 rikkovaa nostoa. Huom. B:n (4 kadonnutta) `vajaa` kasvoi, koska KK:n päätöksellä 10.44 niiden nähtävyysjuttukopiot poistuivat (kuvat tulevat K-4:n myöhemmässä erässä); `tools/sisalto/nostokuvien-tarkistus.mjs` lukee B:n nyt hahmotelmasta (`B_HAHMOTELMA`): PK:n tiedoston muutos, ilmoitettu KK:lle.
 - Testit: tasalaatu, noston-jaksot, noston-kuvat, noston-tekstisaannot, kuvatekijat, lisenssit vihreät. Tuileries'n kaksi testiä päivitetty uusiin kuviin (4 kuvaa).
 
 ## 2. Kuvien tila nostoittain
@@ -16,32 +18,32 @@ Haara `sk/k4-era1-kuvat` (pohjana sk/l5-nostotekstit-era1 + origin/main K-3), dr
 | tuileries | 3 | 1 | 0 | 4 |
 | louvre | 2 | 1 | 1 | 3 |
 | bastilji | 3 | 1 | 0 | 4 |
-| eiffel-torni | 0 | 2 | 2 | 2 |
+| eiffel-torni | 0 | 3 | 1 | 3 |
 | sainte-chapelle | 1 | 0 | 3 | 1 |
-| curie-1898 | 1 | 1 | 2 | 2 |
+| curie-1898 | 1 | 1 | 3 | 2 |
 | lumiere-1895 | 0 | 4 | 0 | 4 |
-| lavoisier-1780 | 1 | 3 | 0 | 4 |
+| lavoisier-1780 | 0 | 3 | 0 | 3 |
 | pasteur-1862 | 0 | 4 | 0 | 4 |
-| palais-garnier | 0 | 3 | 1 | 3 |
+| palais-garnier | 0 | 4 | 0 | 4 |
 | palais-orsay | 1 | 3 | 0 | 4 |
 | palais-industrie | 3 | 1 | 0 | 4 |
 | les-halles | 3 | 1 | 0 | 4 |
-| **yhteensä** | 18 | 25 | 9 | 43 |
+| **yhteensä** | 17 | 27 | 8 | 44 |
 
 ## 3. M-rivit
 
 - **M1 silmin:** luku 5 (jakso | kertoja sanoo | kuva | laji | lähde, tekijä, lisenssi, linkki | tila, nostoittain) ja 13 kontaktiarkkia `docs/raportit/k4-era1-kontaktiarkit/<nosto>.jpg` (soikea reuna beigellä pohjalla, 1000 px leveä; tilattu kuva = tyhjä laatta).
 - **M2:** luku 1.
 - **M3:** jokaisen haetun kuvan lisenssi ja tekijä luettu Commonsin rajapinnasta `tools/hae-commons.mjs`-työkalulla (pyynnöt peräkkäin, ei virheitä), kuva katsottu silmin, rajattujen lähderivi päättyy "rajattu"; linkit luvussa 5.
-- **M4:** Codexin tilauslista omana tiedostonaan: `docs/raportit/pariisi-nostojen-kuvat-era1-codex-tilauslista-20261120.md` (9 kuvaa, pohja täytettynä; KOKO-rivi lisätty). Tilauksia ei ole lähetetty (K-5).
+- **M4:** Codexin tilauslista omana tiedostonaan: `docs/raportit/pariisi-nostojen-kuvat-era1-codex-tilauslista-20261120.md` (8 kuvaa, pohja täytettynä; KOKO-rivi lisätty; Curien korvaava vajakuva lisätty, Eiffel J1–2 ja Garnier J3 poistettu). Tilauksia ei ole lähetetty (K-5).
 - **M5:** viimeinen kuva on valokuva niissä nostoissa, joissa kuvia on; havainnekuvan lähderivi alkaa "Tekoälyllä tuotettu havainnekuva" ja laji-kenttä on jokaisella kuvalla (tasalaatutesti). Eiffel, Sainte-Chapelle ja Curie odottavat tilausta, ja niiden viimeinen kuva on valokuva jo nyt (Eiffel: Tour Montparnassen näköalapaikka; Sainte-Chapelle: yläkappelin ikkunat; Curie: muistolaatta).
 
 ## 4. Avoimet kohdat KK:lle (ei tekstimuutoksia omin päin)
 
-1. **Ämpäri:** 43 uutta 1200 × 800 -kuvaa pitää viedä ämpäriin (`_ampari/`, myös 2048 px:n versiot suurennoksiin) ennen kuin PR yhdistetään. Hahmotelmien (Orsay, Industrie, Les Halles) ihmekuva korvattiin 3:2-rajauksella (`kohtaamiset/ihmeet/…-3x2.jpg`), jotta noston kuvalista on 4 eikä 5; Tuileries'n ja Bastiljin `ihme.osoite` ja jakson 1 kuva ovat samat: `kohtaamiset/ihmeet/ihme-<id>-loistoaika-v2-3x2.jpg`. Kartan ihmekortin kuva muuttuu siis 3:2-versioksi.
-2. **Tilatut jaksot jäivät ilman kuvaa**, kunnes Codex-kuvat tulevat (Eiffel J1–2 ja J4, Sainte-Chapelle J1–4 paitsi J5, Curie J2–4, Louvre J2–3, Garnier J3). Vanhat hylätyt kuvat eivät ole nostossa (kasvot lähikuvana, kehys, liian pieni); ne eivät poistu palvelimelta.
-3. **Visat:** yksikään kuvateksti ei paljasta vastausta; Lavoisierin J1 Codex-kuva (nainen piirtää laitepiirustusta) vihjaa Marie-Annen osuuteen (visan vastaus) ja Tuileries'n purkukuvassa seisovat muurit ovat visan vastaus "Kivimuurit"; päätettävä, riittääkö.
-4. **Heikot kohdat:** Les Hallesin purkukuva (1971; lisenssi CC BY-SA 4.0 rajapinnasta, vuosi todennettavissa vain luokista) · Les Hallesin loistokuvan torimummon kasvot puolilähikuvana (tekoälykuvan kasvosääntö, rajalla; pidetty) · Lumièren J1 bulevardikuvan tekijä ja vuosi eivät ole Commonsissa · Garnierin piirtosalivedoksen oma ovaali erottuu hieman oikeassa reunassa · Lavoisier J4: seinässä haalea museokirjoitus · Eiffel J3 on vuodelta 1889 vaikka jakso sanoo "kaksikymmentä vuotta kului", huippu yläreunan häivytyksessä · Industrien portti on julkisivun lähikuva · Orsayn Liébert-kuvan päädyt häipyvät.
+1. **Ämpäri:** 44 uutta 1200 × 800 -kuvaa pitää viedä ämpäriin (`_ampari/`, myös 2048 px:n versiot suurennoksiin) ennen kuin PR yhdistetään. Hahmotelmien (Orsay, Industrie, Les Halles) ihmekuva korvattiin 3:2-rajauksella (`kohtaamiset/ihmeet/…-3x2.jpg`), jotta noston kuvalista on 4 eikä 5; Tuileries'n ja Bastiljin `ihme.osoite` ja jakson 1 kuva ovat samat: `kohtaamiset/ihmeet/ihme-<id>-loistoaika-v2-3x2.jpg`. Kartan ihmekortin kuva muuttuu siis 3:2-versioksi.
+2. **Tilatut jaksot jäivät ilman kuvaa**, kunnes Codex-kuvat tulevat (Eiffel J4, Sainte-Chapelle J1–4 paitsi J5, Curie J1 (nykyinen havainnekuva pidetään kunnes korvaava tulee), J2–4, Louvre J2–3). Vanhat hylätyt kuvat eivät ole nostossa (kasvot lähikuvana, kehys, liian pieni); ne eivät poistu palvelimelta.
+3. **Visat:** yksikään kuvateksti ei paljasta vastausta. Lavoisierin J1 Codex-kuva poistettu (KK 11.42); Tuileries'n purkukuva hyväksytty (kertoja sanoo saman jaksossa 3). Visasääntö (KK 11.42): kuva saa näyttää sen, minkä kertoja samassa jaksossa sanoo; ei ennen sitä, eikä kuvatekstissä koskaan.
+4. **Heikot kohdat (korjauskierroksen jälkeen):** Les Hallesin purkukuva (1971; lisenssi CC BY-SA 4.0 rajapinnasta) · Les Hallesin torimummon kasvot puolilähikuvana · Lumièren J1 bulevardikuvan tekijä ja vuosi eivät ole Commonsissa · Lavoisier J4: seinässä haalea museokirjoitus · Industrien portti on julkisivun lähikuva · Orsayn Liébert-kuvan päädyt häipyvät (KK hyväksyi nämä 11.42). **Uudet mitat:** Eiffel J1–2 Neurdein: torni 9–80 % kuvan korkeudesta, huipun ylin kohta n. 3 prosenttiyksikköä häivytyksen puolella (lähteessä ei ole lisää ilmaa; muuten jalat ja sivut häivyttämättömällä alueella). Eiffel J3: lähteessä ei ilmaa lisää yläpuolella, jää ennalleen (torni 5–70 %). **Pasteur J2–3 pullokuva:** 3:2-rajaus täyttää lähteen koko leveyden (3840 px), joten --keski oikealle ei auta; mitat 1200 × 800 -kuvassa: pallo x 63–87 %, y 54–97 % (jalusta soikean häivytyksen puolella). Muuttamatta jätetty; ainoa keino olisi taustan laajennus (ei pelkkää rajausta) tai toinen kuva: KK päättää.
 5. **Jaksot ilman omaa kuvaa:** Lumièren J4–5 (jono, laatta), Pasteurin Pouchet ja jäätikkö (varakuva Bissonin Chamonix 1860, PD, ladattu), Garnierin murhayritys 1858, Berlioz'n juhla (Industrie J3), Philippe Augusten 1183 ja Forum des Halles (Les Halles J1, J5).
 6. **Työkalut:** `tools/hae-commons.mjs lataa` kirjoittaa oletuksena repon sisään ja lyhentää nimet 60 merkkiin; `node_modules` puuttuu checkoutista (sharp ajettiin Matkakirja-fablen asennuksesta).
 
@@ -153,19 +155,19 @@ Haara `sk/k4-era1-kuvat` (pohjana sk/l5-nostotekstit-era1 + origin/main K-3), dr
 
 | Jakso | Kertoja sanoo | Kuva | Laji | Lähde, tekijä, lisenssi, linkki | Tila |
 |---|---|---|---|---|---|
-| 1-2 | Eiffel-torni rakennettiin seisomaan vain kaksikymmentä vuotta, ja kerran huijari myi sen romuksi. Ennen tornia paikalla oli Champ de Mars, sotilaiden harjoituskenttä. / Vuonna 1887 kentälle alettiin koota rautatornia maailmannäyttelyä varten. Työmiehet niittasivat tuhansia osia yhteen yhä korkeammalla. Moni pariisilainen vastusti tornia, mutta vuonna 1889 se oli valmis. | rakenteilla: Torni nousee Champ de Marsin kentälle 1888 (ei kuvaa) | havainnekuva | Matkakirjan oma (tilaus, ks. TILAUKSET.md 1) | tilattu |
+| 1-2 | Eiffel-torni rakennettiin seisomaan vain kaksikymmentä vuotta, ja kerran huijari myi sen romuksi. Ennen tornia paikalla oli Champ de Mars, sotilaiden harjoituskenttä. / Vuonna 1887 kentälle alettiin koota rautatornia maailmannäyttelyä varten. Työmiehet niittasivat tuhansia osia yhteen yhä korkeammalla. Moni pariisilainen vastusti tornia, mutta vuonna 1889 se oli valmis. | rakenteilla: Eiffel-torni rakenteilla 1888 (eiffel-torni-rakenteilla.jpg) | valokuva | Neurdein, 1888, Wikimedia Commons (public domain), rajattu; https://commons.wikimedia.org/wiki/File:Paris,_Tour_Eiffel_by_Neurdein,_1888.jpg | haettu |
 | 3 | Kaksikymmentä vuotta kului, mutta kukaan ei purkanut tornia. Sen huipulla oli radioantenni, ja armeijalle siitä oli niin paljon hyötyä, että torni sai jäädä. | nayttely1889: Eiffel-torni ja Champ de Mars näyttelyssä 1889 (eiffel-torni-nayttely1889.jpg) | valokuva | Tuntematon valokuvaaja, Wikimedia Commons (Public domain), rajattu; https://commons.wikimedia.org/wiki/File:Eiffel_Tower_and_Champ_de_Mars_seen_from_Trocad%C3%A9ro_Palace,_Paris_Exposition,_1889.jpg | haettu |
 | 4 | Vuonna 1925 huijari Victor Lustig luki lehdestä, että tornin kunnossapito on kallista. Väärennetyin virkapaperein hän esiintyi ministeriön apulaisjohtajana ja myi muka tornin romukauppiaalle. Kauppias häpesi eikä ilmoittanut poliisille, joten Lustig palasi ja yritti uudestaan. | lustig: Huijari ja romukauppiaat hotellin salongissa (ei kuvaa) | havainnekuva | Matkakirjan oma (tilaus, ks. TILAUKSET.md 2) | tilattu |
 | 5 | Torni seisoo yhä. Vanha harjoituskenttä on nykyään puisto sen jalalla, ja ensimmäisen kerroksen alle on kirjoitettu kullatuin kirjaimin 72 ranskalaisen tiedemiehen ja insinöörin nimeä. | nykyinen: Eiffel-torni ja Champ de Mars ylhäältä katsottuna (eiffel-torni-nykyinen.jpg) | valokuva | Carlos Delgado, Wikimedia Commons (CC BY-SA 3.0), rajattu; https://commons.wikimedia.org/wiki/File:Tour_Eiffel,_%C3%89cole_militaire,_Champ-de-Mars,_Palais_de_Chaillot,_La_D%C3%A9fense_-_01.jpg | haettu |
 
-Yhteensä: 2 haettu, 2 tilattu, 0 pidetään.
+Yhteensä: 3 haettu, 1 tilattu, 0 pidetään (KK 20.11. 11.42: jakson 1–2 tilaus poistui, aito Neurdein 1888).
 
 #### Perustelut
 
 - 5 jaksoa, 4 kuvaa: yksi kuva (jakso 1-2) kattaa avauksen (Champ de Mars) ja rakentamisen.
 - Jakso 5: valokuva Tour Montparnassen näköalapaikalta; torni kokonaan, ja sen jalalla näkyy Champ de Marsin puisto, jonka jakso mainitsee. Tämä oli ainoa löytämäni vapaa vaakakuva, jossa torni on kokonaan ja korkeus on 60 % kuvasta. Mitta: torni 9-69 % kuvan korkeudesta, keskellä vaakasuunnassa; sijainti on noin 11 prosenttiyksikköä tavoitetta ylempänä, koska lähdekuva on jo 3:2 eikä ylhäältä voi rajata lisää ilmaa. Antennin kärki on yläreunan häivytyksessä.
 - Jakso 3: ei vapaata vaakakuvaa 1900-luvun alusta, jossa torni on kokonaan (LoC:n photochromit ovat pystykuvia tai tornin huippu leikkautuu). Valittu 1889 Trocadéron näkymä (sepia): torni kokonaan, Champ de Mars ja näyttelyalue taustalla. Mitta: torni 5-70 % kuvan korkeudesta, huippu osin yläreunan häivytyksessä.
-- Jakso 1-2 ja 4: tilaus. Keskeneräisestä tornista ei ole vapaata vaakakuvaa, jossa torni mahtuu 60 %:iin (Neurdein 1888: torni 73 %; Decauville-kuva: torni oikealla 36-92 %; Durandelle ja Féau pystykuvia). Lustigin huijauksesta ei ole valokuvaa.
+- Jakso 1-2 (KK 20.11. 11.42): Neurdein 1888 aitona (lähde 1600 x 1282, rajaus 1600 x 1067 ylärivistä; torni 9–80 % kuvan korkeudesta, jalat ja sivut häivyttämättömällä alueella, huipun ylin kohta 9 %:ssa eli n. 3 prosenttiyksikköä häivytyksen puolella; lähteessä ei ole lisää ilmaa yläpuolella). Jakso 4: tilaus (Lustig, ei valokuvaa).
 
 #### Hylätty
 
@@ -181,7 +183,7 @@ Yhteensä: 2 haettu, 2 tilattu, 0 pidetään.
 
 1. VISA: 'Miksi huijarin uhri ei ilmoittanut huijauksesta poliisille?' vastaus 'Hän häpesi'. Kuvatekstit eivät mainitse häpeää; Lustig-tilauksessa kielto "kauppiaiden häpeä".
 2. Jakso 3: kuvan vuosi 1889, jakso puhuu 20 vuoden jälkeisestä ajasta ja antennista (kuvateksti "näyttelyssä 1889" kertoo kuvan, ei väitä muuta). Vaihtoehto: tilata Codex-kuva tornista noin 1914 antenneineen.
-3. Kaksi kuvaa tilattu (1-2, 4); nämä vaativat Codex-ajon ennen vientiä. Jakson 4 tilauksesta puuttuu hotellisalongin viitekuva (Hôtel de Crillon; ei varmistettu).
+3. Yksi kuva tilattu (jakso 4, Lustig); vaatii Codex-ajon ennen vientiä. Jakson 4 tilauksesta puuttuu hotellisalongin viitekuva (Hôtel de Crillon; ei varmistettu).
 4. Sivutuote: jakson 5 kuvassa Palais de Chaillotin siivet ovat taustalla pieninä; ei pääaihe.
 5. Tornin mitat 60 %:iin eivät täyty kummassakaan haetussa kuvassa täsmälleen (kts. yllä); tarkempi mittaus vaatisi uuden kuvan.
 
@@ -232,7 +234,7 @@ Yhteensä: 1 pidetään, 0 haettu, 3 tilattu.
 | 4 | Työ vei yli kolme vuotta, ja vuonna 1902 heillä oli kymmenesosagramma puhdasta radiumkloridia. Iltaisin radium hohti pimeässä, ja Curiet ihailivat sitä. Marie sai fysiikan Nobelin vuonna 1903 Pierren ja Henri Becquerelin kanssa ja kemian Nobelin vuonna 1911 yksin. | hohto: Radium hohtaa pimeässä vajan hämärässä 1902 (ei kuvaa) | havainnekuva | Matkakirjan oma (TILAUKSET.md 2) | tilattu |
 | 5 | Koulun seinässä on laatta, joka kertoo löydöstä. Marien myöhempi laboratorio on lähellä Curie-museona. | laatta: Laatta kertoo radiumin löydöstä koulun seinässä (curie-1898-laatta.jpg) | valokuva | Monceau from San Antonio, Wikimedia Commons (CC BY 2.0), rajattu; https://commons.wikimedia.org/wiki/File:Plaque_-_Location_de_d%C3%A9couvert_du_radium_-_rue_Pierre_Brossolette,_Paris_5.jpg | haettu |
 
-Yhteensä: 1 pidetään, 1 haettu, 2 tilattu.
+Yhteensä: 1 pidetään, 1 haettu, 3 tilattu (KK 20.11. 11.42: jakson 1 havainnekuva pidetään toistaiseksi, korvaava kuva tilataan).
 
 #### Perustelut
 
@@ -251,7 +253,7 @@ Yhteensä: 1 pidetään, 1 haettu, 2 tilattu.
 #### Avoimet kysymykset KK:lle
 
 1. VISA: 'Minkä alkuaineen Curiet nimesivät Marien kotimaan mukaan?' vastaus Polonium. Kuvatekstit eivät mainitse poloniumia; tilauksen 1 kielto "alkuaineiden nimet" lisätty. Jakso 1 kuvateksti ja jakso 5 mainitsevat radiumin (vastauksen vaihtoehto), mutta eivät ole vastaus.
-2. Kaksi kuvaa tilattu (2-3, 4); viitekuvat vajasta ja hohdosta eivät ole varmistettuja.
+2. Kolme kuvaa tilattu (1 korvaava vaja, 2-3, 4); viitekuvat vajasta ja hohdosta eivät ole varmistettuja. KK 11.42: jakson 1 havainnekuvassa naisen kasvot ovat keskikuvana; kuva pidetään, kunnes korvaava (henkilöt selin tai kaukana) tulee; tilauspohja TILAUKSET.md 3.
 3. Jakso 5: laattakuvassa on tekstiä, ja nykykuvaksi se on heikko; vaihtoehto olisi tilata/kuvata ESPCI:n julkisivu.
 4. Jakson 5 teksti mainitsee Curie-museon; sen vapaata julkisivukuvaa ei löytynyt.
 
@@ -301,17 +303,16 @@ Yhteensä: 0 pidetään, 4 haettu, 0 tilattu.
 
 | Jakso | Kertoja sanoo | Kuva | Laji | Lähde, tekijä, lisenssi, linkki | Tila |
 |---|---|---|---|---|---|
-| 1 | Lavoisierin laboratorio oli Arsenaalin asunnon yhteydessä Pariisissa. Antoine Lavoisier johti Arsenaalissa ruudin valmistusta ja punnitsi laboratoriossaan kaiken ennen koetta ja sen jälkeen. Tuloksista hän päätteli, että ainetta on kokeen jälkeen yhtä paljon kuin ennen sitä. | laboratorio: Lavoisier ja laboratorion välineet, havainnekuva (lavoisier-1780-laboratorio.jpg) | havainnekuva | Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Faktat: Science History Institute; laboratorion sisustus on dramatisoitu, rajattu; https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lavoisier-laboratorio-1780-kauko-photo-v4.jpg | pidetään |
-| 2 | Vuonna 1771 Lavoisier meni naimisiin Marie-Annen kanssa. Marie-Anne oppi englantia ja käänsi ulkomaisia tutkimuksia ranskaksi. Lavoisier huomasi kokeissaan, että palaessa aine yhtyy ilman osaan, jonka hän nimesi hapeksi. | koe: Lavoisierin koe laboratoriossa, 1700-luvun piirros (lavoisier-1780-koe.jpg) | piirros | Wellcome Collection, Wikimedia Commons (CC BY 4.0), rajattu; https://commons.wikimedia.org/wiki/File:%27Lavoisier_experimenting_in_his_laboratory_Wellcome_M0004489.jpg | haettu |
+| 1-2 | Lavoisierin laboratorio oli Arsenaalin asunnon yhteydessä Pariisissa. Antoine Lavoisier johti Arsenaalissa ruudin valmistusta ja punnitsi laboratoriossaan kaiken ennen koetta ja sen jälkeen. Tuloksista hän päätteli, että ainetta on kokeen jälkeen yhtä paljon kuin ennen sitä. / Vuonna 1771 Lavoisier meni naimisiin Marie-Annen kanssa. Marie-Anne oppi englantia ja käänsi ulkomaisia tutkimuksia ranskaksi. Lavoisier huomasi kokeissaan, että palaessa aine yhtyy ilman osaan, jonka hän nimesi hapeksi. | koe: Lavoisierin koe laboratoriossa, 1700-luvun piirros (lavoisier-1780-koe.jpg) | piirros | Wellcome Collection, Wikimedia Commons (CC BY 4.0), rajattu; https://commons.wikimedia.org/wiki/File:%27Lavoisier_experimenting_in_his_laboratory_Wellcome_M0004489.jpg | haettu |
 | 3 | Vuonna 1788 Jacques-Louis David maalasi Lavoisierista ja Marie-Annesta muotokuvan. Marie-Annen työ näkyi myös oppikirjassa: vuonna 1789 ilmestyneeseen Lavoisierin oppikirjaan hän piirsi laitteiden kuvat. | david: Davidin maalaus Lavoisierista ja Marie-Annesta 1788 (lavoisier-1780-david.jpg) | maalaus | Jacques-Louis David 1788, Wikimedia Commons (Public domain), rajattu; https://commons.wikimedia.org/wiki/File:David_-_Portrait_of_Monsieur_Lavoisier_and_His_Wife.jpg | haettu |
 | 4 | Lavoisier oli kuulunut vanhan hallinnon veronkantajiin. Vallankumouksen tuomioistuin tuomitsi hänet kuolemaan, ja hänet mestattiin toukokuun 8. päivänä 1794. Lavoisierin laboratorion välineitä on nykyään Arts et Métiers -museossa Pariisissa. | valineet: Lavoisierin laboratorion välineitä Arts et Métiersissä (lavoisier-1780-valineet.jpg) | valokuva | Rama, Wikimedia Commons (CC BY-SA 2.0 fr), rajattu; https://commons.wikimedia.org/wiki/File:Labo-Lavoisier-IMG_0501.jpg | haettu |
 
-Yhteensä: 1 pidetään, 3 haettu, 0 tilattu.
+Yhteensä: 0 pidetään, 3 haettu, 0 tilattu (KK 20.11. 11.42: J1-havainnekuva poistettu, piirros kattaa jaksot 1–2).
 
 #### Perustelut
 
-- 4 jaksoa, 4 kuvaa, yksi per jakso. Järjestys: havainnekuva, 1700-luvun piirros, maalaus, nykyvalokuva.
-- Jakso 1: nykyinen Codex-kuva pidetään (suunnitelma: ei pakollisia vaihtoja). Aidoista laboratoriokuvista (Wellcome M0004488 rakeinen ja kehyksellinen, diorama M0005412 tumma pienoismalli) kumpikaan ei näytä punnitusta yhtä hyvin.
+- 4 jaksoa, 3 kuvaa (jakso 1–2 yhteinen piirros). Järjestys: 1700-luvun piirros, maalaus, nykyvalokuva.
+- Jakso 1: nykyinen havainnekuva (laboratorio) POIS KK:n päätöksellä 11.42: tunnettujen henkilöiden kasvot puolilähikuvana ja nainen piirtämässä vihjaisivat visan vastauksen ennen jaksoa 3. Jakson 1–2 kuvaksi tulee J2:n aikalaispiirros.
 - Jakso 2: Wellcomen lavattu piirros laboratoriokokeesta (4150 x 2553), reunaviiva häipyy soikeaan reunaan.
 - Jakso 3: Davidin kaksoismuotokuva isosta PD-versiosta (4390 x 5852); rajaus päät ja ylävartalot, keski 0,5 / 0,33.
 - Jakso 4: Raman valokuva kaasumittareista CNAM:ssa (3072 x 2048, täsmälleen 3:2). Viimeinen kuva on aito nykyvalokuva.
@@ -326,7 +327,7 @@ Yhteensä: 1 pidetään, 3 haettu, 0 tilattu.
 
 #### Avoimet kysymykset KK:lle
 
-1. VISA: 'Mikä oli Marie-Anne Paulze Lavoisierin osuus kemian vallankumouksessa?' vastaus: hän käänsi englantilaiset tutkimukset ja piirsi laitteet. Kuvatekstit eivät mainitse käännöstä eikä piirtämistä, eikä Commonsin kuvauksia ole kopioitu. Riski: jakson 1 Codex-kuvassa nainen piirtää laitteiden piirustusta; kuva vihjaa vastaukseen. Jos halutaan, kuva vaihdetaan tai tilataan uusi ilman naisen piirtämistä.
+1. VISA: ratkaistu KK 11.42: J1:n havainnekuva poistettu. Kuvatekstit eivät mainitse käännöstä eikä piirtämistä. Visasääntö tarkentui: kuva saa näyttää sen, minkä kertoja samassa jaksossa sanoo, ei ennen sitä.
 2. Jakso 4: kuvassa on haalea seinäkirjoitus 'Laboratoire de Lavoisier' osin peittyneenä (yläoikealla). Muuten valokuva on paras löytynyt; vaihtoehtona nykyinen kuva, jossa teksti näkyy kokonaan.
 3. Jakso 3: maalaus esittää parin 1788, mutta kuvassa ei ole mestausta (jaksossa 4 mainitaan 1794); jakso 3 (muotokuva 1788) täsmää.
 4. Jakso 2: jaksossa kerrotaan hapen nimeämisestä ja Marie-Annen kääntämisestä; kuva näyttää koelaitteita ja kirjoittavan naisen mutta ei hapen löytöä.
@@ -367,24 +368,26 @@ Yhteensä: 0 pidetään, 4 haettu, 0 tilattu.
 3. Jakso 4 -kuva on 1885 (jakso kertoo 1860-luvusta ja 1865).
 4. Jakson 5 teksti mainitsee Institut Pasteurin; kuva näyttää vain ENS:n.
 
+5. (KK 20.11. 11.42, SK:n mittaus) Jakso 2-3: pullokuvan lähde (3840 x 2760) on jo kauttaaltaan käytössä: 3:2-rajaus täyttää koko leveyden, joten --keski oikealle ei muuta vaakasuuntaa. Mitta 1200 x 800 -kuvassa: pallo x 63–87 %, y 54–97 %; pallon oikea laita ja jalusta jäävät soikean häivytyksen puolelle (jalusta y 97 %). Ratkaisu vaatisi taustan laajennuksen (pääasia jäisi muokkaukseksi, ei rajaukseksi) tai toisen kuvan; jätetty ennalleen KK:n päätettäväksi.
+
 ### palais-garnier: kuvatyö (K-4 erä 1)
 
 #### Kuvat
 
 | Jakso | Kertoja sanoo | Kuva | Laji | Lähde, tekijä, lisenssi, linkki | Tila |
 |---|---|---|---|---|---|
-| 1 | Palais Garnier on Pariisin oopperatalo, jonka rakentamisen sai alkuun murhayritys. Vuonna 1858 keisari Napoleon III välttyi murhayritykseltä vanhan oopperan edessä. Sen jälkeen hän päätti rakennuttaa uuden. Kilpailuun tuli yli sata ehdotusta, ja voittajaksi valittiin nuori, tuntematon arkkitehti Charles Garnier. | piirtosali: Arkkitehdit Garnierin piirtosalissa (palais-garnier-piirtosali.jpg) | valokuva | Louis-Émile Durandelle, Metropolitan Museum of Art, Wikimedia Commons (CC0), rajattu; https://commons.wikimedia.org/wiki/File:-Charles_Garnier_in_the_Drafting_Room_While_Designing_the_New_Paris_Opera-_MET_DP116738.jpg | haettu |
+| 1 | Palais Garnier on Pariisin oopperatalo, jonka rakentamisen sai alkuun murhayritys. Vuonna 1858 keisari Napoleon III välttyi murhayritykseltä vanhan oopperan edessä. Sen jälkeen hän päätti rakennuttaa uuden. Kilpailuun tuli yli sata ehdotusta, ja voittajaksi valittiin nuori, tuntematon arkkitehti Charles Garnier. | piirtosali: Arkkitehdit Garnierin piirtosalissa (palais-garnier-piirtosali.jpg) | valokuva | Louis-Émile Durandelle, Metropolitan Museum of Art, Wikimedia Commons (CC0), esirajattu ja rajattu; https://commons.wikimedia.org/wiki/File:-Charles_Garnier_in_the_Drafting_Room_While_Designing_the_New_Paris_Opera-_MET_DP116738.jpg | haettu |
 | 2 | Kun työmaalla kaivettiin perustuksia, maasta nousi pohjavettä. Garnier rakennutti kellariin vesitiiviin betonisäiliön. Vuonna 1870 alkanut sota ja Pariisin kommuuni pysäyttivät rakentamisen. | tyomaa: Palais Garnierin työmaa 1866 (palais-garnier-tyomaa.jpg) | valokuva | Delmaet & Durandelle 1866, Wikimedia Commons (CC0), rajattu; https://commons.wikimedia.org/wiki/File:Chantier_de_l%27_OPERA_-1866.jpg | haettu |
-| 3 | Syksyllä 1873 vanha oopperatalo paloi. Palon jälkeen Garnierin työmaa sai jatkua, ja uusi talo valmistui alle kahdessa vuodessa. | palo: Vanhan oopperatalon palo 1873 (ei kuvaa) | havainnekuva | Tekoälyllä tuotettu havainnekuva; tilattu (ks. TILAUKSET.md) | tilattu |
+| 3 | Syksyllä 1873 vanha oopperatalo paloi. Palon jälkeen Garnierin työmaa sai jatkua, ja uusi talo valmistui alle kahdessa vuodessa. | palo: Vanhan oopperatalon palo rue Le Peletierillä (palais-garnier-palo.jpg) | piirros | Arthur Hauger (Le Monde illustré, 1873), Paris Musées / Musée Carnavalet, Wikimedia Commons (CC0), esirajattu ja rajattu; https://commons.wikimedia.org/wiki/File:Incendie_du_th%C3%A9%C3%A2tre_de_l%27Op%C3%A9ra,_vue_prise_rue_Le_Peletier._Paris_Mus%C3%A9es_20230613105245.jpg | haettu |
 | 4 | Talo avattiin tammikuussa 1875, ja Garnier joutui maksamaan paikkansa avajaisissa itse. Nykyään talossa esitetään yhä balettia, ja katsomon katon on maalannut Marc Chagall vuonna 1964. | portaikko: Palais Garnierin pääportaikko (palais-garnier-portaikko.jpg) | valokuva | Pierre André Leclercq, Wikimedia Commons (CC BY-SA 4.0), rajattu; https://commons.wikimedia.org/wiki/File:Paris_l%27Op%C3%A9ra_Garnier_Le_grand_escalier.jpg | haettu |
 
-Yhteensä: 0 pidetään, 3 haettu, 1 tilattu.
+Yhteensä: 0 pidetään, 4 haettu, 0 tilattu (KK 20.11. 11.42: palo aitona Hauger-kaiverruksena, piirtosali esirajattu oman ovaalinsa sisään).
 
 #### Perustelut
 
-- 4 jaksoa, 4 kuvaa, yksi per jakso. Järjestys: 1860-luvun piirtosalikuva, 1866 työmaa, palo (tilattu), nykyvalokuva.
-- Jakso 1: MET:n Durandelle-valokuva Garnierin piirtosalista (CC0). Jakso 2: Delmaet & Durandellen työmaakuva 1866 (CC0, 3456 x 1944, rajaus oikeasta reunasta). Jakso 4: portaikko, ei Chagall-kattoa.
-- Jakso 3: palosta ei löytynyt puhdasta riittävän suurta aitoa kuvaa, joten Codex-tilaus (TILAUKSET.md). Commonsin Carnavalet- ja Paris Musées -kokoelmien CC0-kuvat tutkittiin: Hauger-kaiverrus (6777 x 4691) on paperireunainen ja kuvateksti näkyy soikeassa esikatselussa; Méaulle-kaiverrus on kollaasi; PH28183 on 1895 (rue Richer, décors-palo); Leymonnerye-piirros on pystykuva pahvilla.
+- 4 jaksoa, 4 kuvaa, yksi per jakso. Järjestys: 1860-luvun piirtosalikuva, 1866 työmaa, palon kaiverrus, nykyvalokuva.
+- Jakso 1: MET:n Durandelle-valokuva Garnierin piirtosalista (CC0), esirajattu oman ovaalinsa sisään (2650 x 1766 pikseliä 595,547; ei paperia, ei ovaalin reunaa; KK 11.42), sitten 3:2. Jakso 2: Delmaet & Durandellen työmaakuva 1866 (CC0, 3456 x 1944, rajaus oikeasta reunasta). Jakso 4: portaikko, ei Chagall-kattoa.
+- Jakso 3 (KK 20.11. 11.42): Hauger-kaiverrus (ladattu 3840 x 2658) esirajattu sharpilla kuva-alan sisään (3240 x 2035 pikseliä 300,165: ei paperireunaa, ei kuvatekstiä, ei signeerausta), sitten 3:2 → 1200 x 800. Näyttää yöllä palavan vanhan talon, palomiehet ja katsojat; uutta Opéraa ei näy. Laji piirros (kaiverrus). Codex-tilaus poistui.
 - Chagallin kattoa ei ole kuvissa pääaiheena eikä lainkaan.
 
 #### Hylätty
@@ -400,9 +403,9 @@ Yhteensä: 0 pidetään, 3 haettu, 1 tilattu.
 
 1. VISA: 'Kuka taiteilija maalasi Palais Garnierin katsomon katon 1960-luvulla?' (Marc Chagall). Kuvatekstit ja kuvat eivät mainitse Chagallia eikä kattoa.
 2. Jakso 1 kertoo murhayrityksestä 1858 ja arkkitehtikilpailusta; kuva näyttää Garnierin piirtosalin (kilpailun jälkeinen aika). Murhayrityksestä ei ole vapaata riittävän isoa kuvaa.
-3. Piirtosalikuvan oma ovaali jää osin näkyviin oikeassa reunassa (sääntö 10); jos se ei kelpaa, vaihtoehto on Codex-kuva tai nykykuva julkisivusta.
+3. (Ratkaistu KK 11.42) Piirtosalikuvan oma ovaali on esirajattu pois.
 4. Jakso 2 kertoo perustuksista ja pohjavedestä; kuva näyttää työmaan 1866 (perustusten jälkeen).
-5. Palo-kuva tilattu (jakso 3): yksi tilaus, pohja TILAUKSET.md.
+5. (Ratkaistu KK 11.42) Palo-kuva on nyt aito Hauger-kaiverrus; Codex-tilausta ei enää ole.
 
 ### palais-orsay: kuvatyö (K-4 erä 1)
 

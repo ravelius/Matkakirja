@@ -1,41 +1,12 @@
 # K-4 erä 1: Codexin tilauslista (K-5:lle; SK 20.11.2026)
 
-Tilattavia kuvia 9 (Eiffel 2, Sainte-Chapelle 3, Curie 2, Louvre 1, Garnier 1). Tilauksia ei ole lähetetty. Jokaisessa: KOKO = 3:2 vaaka, pääaihe keskimmäisen 60 % × 60 %:n sisällä, reunoilla vain taustaa, nurkissa ei mitään. Viitekuvat varmistettava Commonsista ennen tilausta.
+Tilattavia kuvia 8 (Eiffel 1, Sainte-Chapelle 3, Curie 3, Louvre 1; Garnierin palo ja Eiffelin jakso 1–2 poistuivat KK:n päätöksellä 20.11. 11.42: aito kuva ensin). Tilauksia ei ole lähetetty. Jokaisessa: KOKO = 3:2 vaaka, pääaihe keskimmäisen 60 % × 60 %:n sisällä, reunoilla vain taustaa, nurkissa ei mitään. Viitekuvat varmistettava Commonsista ennen tilausta.
 
 ## eiffel-torni
 
-### Eiffel-torni: tilattavat kuvat
+### Eiffel-torni: tilattavat kuvat (1; jakson 1–2 tilaus poistui, koska aito Neurdein 1888 -kuva kelpaa, KK 20.11. 11.42)
 
-## 1. Rakenteilla, jakso 1-2/5 (yksi kuva kahdelle peräkkäiselle jaksolle)
-
-TARINA JA JAKSO: eiffel-torni, jakso 1-2/5
-
-KERTOJA SANOO (sanatarkasti): "Eiffel-torni rakennettiin seisomaan vain kaksikymmentä vuotta, ja kerran huijari myi sen romuksi. Ennen tornia paikalla oli Champ de Mars, sotilaiden harjoituskenttä." / "Vuonna 1887 kentälle alettiin koota rautatornia maailmannäyttelyä varten. Työmiehet niittasivat tuhansia osia yhteen yhä korkeammalla. Moni pariisilainen vastusti tornia, mutta vuonna 1889 se oli valmis."
-
-KUVAN TEHTÄVÄ (yksi lause): Näyttää avaran Champ de Marsin kentän, jolle puoliksi valmis rautatorni nousee, ja kentällä muutaman työmiehen kaukaa.
-
-HETKI: Champ de Mars, Pariisi, kevät 1888 (torni toisen kerroksen tasolla), päivänvalo (lähde: Neurdein 1888, Decauville-valokuva huhtikuu 1888, Tilly/Fichot 8.4.1888 -piirros; sama rakennusvaihe kuin referensseissä).
-
-NÄKYMÄ: Katsotaan kentän poikki kaukaa Seinen suunnasta, torni kuvan keskellä. Etualalla tyhjää hiekkaista kenttää, radan pätkä ja pari hevosvaunua pienenä; taustalla puita ja Trocadéron palatsin torni sumuisena. Tornin rautarakenne puoliksi valmiina: jalat yhdistetty ensimmäisen kerroksen tasanteella, nostureita ja ahtaita puutelineitä, kahden pilarin haarat jatkuvat ylöspäin vielä erillään. Työmiehet ovat pieniä hahmoja tornin jalalla ja nosturin vieressä.
-
-PAKKO OLLA OIKEIN: (1) torni on kesken: ei toista kerrosta valmiina eikä huippua; (2) ympärillä avoin kenttä, ei näyttelyn paviljonkeja, ei väkijoukkoa; (3) rautarakenne ristikkoa ja niittejä, ei maalattua; (4) kaukaa otettu, valkoinen/kellertävä 1880-luvun valokuvan sävy mutta värillinen valokuvamainen havainnekuva.
-
-EI SAA NÄKYÄ: tunnetun henkilön (Eiffel) kasvot, kasvot lähikuvana, teksti ja kyltit, mainokset, nykyajan esineitä, 1889 valmis torni.
-
-VIITEKUVAT:
-- File:Paris, Tour Eiffel by Neurdein, 1888.jpg: Neurdein, Public domain (tornin rakennusvaihe ja rakenne)
-- File:Decauville V skip waggons in front of the Eiffel tower during its construction, April 1888.jpg: tuntematon kuvaaja, Public domain (avoin kenttä, jalat)
-- File:Exposition universelle de 1889 Vue à vol d'oiseau de l'état actuel des travaux, Paris Musées 20230616171945.jpg: Fichot/Tilly 1888, CC0 (kentän ympäristö)
-
-PARI: ei paria (viimeinen kuva on nykyvalokuva Champ de Marsilta)
-
-KOKO: 3:2 vaaka, koko torni (jalat mukaan) keskimmäisen 60 % × 60 %:n sisällä: tornin korkeus enintään 55 % kuvan korkeudesta, ilmaa tornin yllä vähintään 25 %, vaakasuunnassa tornin leveys enintään 45 %; reunoilla vain kenttää, puita ja taivasta, nurkissa ei mitään · otot enintään 2
-
-TOIMITUS: tarina-eiffel-torni-1-rakenteilla.jpg
-
----
-
-## 2. Lustigin huijaus, jakso 4/5
+## 1. Lustigin huijaus, jakso 4/5
 
 TARINA JA JAKSO: eiffel-torni, jakso 4/5
 
@@ -122,7 +93,7 @@ TOIMITUS: tarina-sainte-chapelle-4-parlamentti.jpg
 
 ## curie-1898
 
-### Curien vaja: tilattavat kuvat (2)
+### Curien vaja: tilattavat kuvat (3)
 
 ## 1. Radiumtyö, jakso 2-3/5 (yksi kuva kahdelle peräkkäiselle jaksolle)
 
@@ -158,6 +129,24 @@ PARI: ei paria
 KOKO: 3:2 vaaka, pääaihe (pöytä ja kaksi hahmoa) keskimmäisen 60 % × 60 %:n sisällä, reunoilla vain pimeää vajaa, nurkissa ei mitään · otot enintään 2
 TOIMITUS: tarina-curie-1898-4-hohto.jpg
 
+---
+
+## 3. Vaja, jakso 1/5 (korvaa nykyisen havainnekuvan, jossa naisen kasvot ovat keskikuvana; KK 20.11. 11.42)
+
+TARINA JA JAKSO: curie-1898, jakso 1/5
+KERTOJA SANOO (sanatarkasti): "Curien vaja oli Pariisin fysiikan ja kemian koulun pihalla seissyt vaja, jossa Marie ja Pierre Curie eristivät radiumin. Se oli ennen ollut ruumiinavaussali."
+KUVAN TEHTÄVÄ (yksi lause): Näyttää vajan sellaisena kuin se oli: koulun pihalla seisova karu vaja, jonka sisällä on vanhoja pöytiä ja laitteita, ja jossa henkilöt näkyvät vain selin tai kaukana.
+HETKI: ESPCI:n pihavaja, rue Vauquelin, Pariisi, noin 1898, päivänvalo, harmaa sää (lähde: AIP; Paris.fr; sama vaja kuin nykyisessä Matkakirjan vajakuvassa).
+NÄKYMÄ: Katsotaan vajan ovelta tai pihalta vinosti sisään pitkältä matkalta. Etualalla märkä pihan kivetys, keskellä puuovi ja vajan seinä, sisällä pitkä työpöytä, jolla lasiastioita ja vanha leikkauspöytä (viittaus entiseen ruumiinavaussaliin vain pöydän muodolla, ei ruumiita); taustalla yksi hahmo selin tai siluettina, ei toista henkilöä lähellä.
+PAKKO OLLA OIKEIN: (1) vaja on huonokuntoinen puu-lasirakennelma koulun pihalla, ei moderni laboratorio; (2) päivänvalo lasikaton läpi, ei sähkövaloa; (3) enintään yksi hahmo, selin tai kaukana, kasvot eivät erotu; (4) 1890-luvun vaatetus.
+EI SAA NÄKYÄ: tunnetun henkilön (Marie tai Pierre Curie) kasvot, ruumiita tai verta, teksti ja kyltit, hohtavaa ainetta, nykyajan esineitä.
+VIITEKUVAT: nykyinen Matkakirjan vajakuva (/Users/Shared/Claude/luovutukset/sk-k4-era1/curie-1898/curie-1898-vaja.jpg: sisustus ja valo; hahmot ja kasvot eivät mallina); File:Maria Skłodowska-Curie i Pierre Curie w laboratorium (1900).jpg: tuntematon, public domain (työvaatteet ja laitteet); vajan ulkokuva: haettava Commonsista ennen tilausta (ei varmistettu)
+PARI: ei paria
+KOKO: 3:2 vaaka, pääaihe (vaja ja pöytä) keskimmäisen 60 % × 60 %:n sisällä, reunoilla vain vajan seinää ja pihaa, nurkissa ei mitään · otot enintään 2
+TOIMITUS: tarina-curie-1898-1-vaja.jpg
+
+---
+
 ## louvre
 
 ### Louvre: tilattavat kuvat
@@ -186,23 +175,3 @@ PARI: nykyvalokuva ei ole parina; "ei paria"
 KOKO: 3:2 vaaka, pääaihe (kantaja ja tyhjä seinä) keskimmäisen 60 % × 60 %:n sisällä, reunoilla vain sali ja kehykset, nurkissa ei mitään · otot enintään 2
 
 TOIMITUS: tarina-louvre-2-varkaus.jpg
-
-## palais-garnier
-
-### TILAUS: Palais Garnier, palo (1)
-
-TARINA JA JAKSO: palais-garnier, jakso 3/4
-KERTOJA SANOO (sanatarkasti): "Syksyllä 1873 vanha oopperatalo paloi. Palon jälkeen Garnierin työmaa sai jatkua, ja uusi talo valmistui alle kahdessa vuodessa."
-KUVAN TEHTÄVÄ (yksi lause): Näyttää vanhan oopperatalon palamassa yöllä rue Le Peletierillä, palomiehet ja pariisilaiset kadulla katsomassa.
-HETKI: Vanha Opéra (Salle Le Peletier), rue Le Peletier, Pariisi, 29. lokakuuta 1873, yö (lähde: Wikipedia ja Paris Musées; kaiverrus Le Monde illustré 1873).
-NÄKYMÄ: Katsotaan kadulta (rue Le Peletier) vinosti kohti oopperatalon kaksikerroksista julkisivua ja palavaa kattoa; etualalla kivetty katu, palopumppu ja letkuja, hevosvaunu, joukko mustiin pukeutuneita hahmoja selin tai kaukana, kaasukatulamppu; taustalla savua ja liekkejä talon yllä ja naapurirakennukset.
-PAKKO OLLA OIKEIN: (1) 1870-luvun rakennus: matala klassinen julkisivu, ei Garnierin kullattua kupolia; (2) 1800-luvun palokalusto: käsipumppu ja hevoset, ei nykyisiä paloautoja; (3) yö, liekit valaisevat savua; (4) ihmiset 1870-luvun vaatteissa (silinterit, pitkät takit).
-EI SAA NÄKYÄ: tunnetun henkilön kasvot lähikuvana, teksti, kyltit, nykyajan esineitä (autot, sähkövalot), uutta Opéraa (Palais Garnier), veri, kuolleet.
-VIITEKUVAT:
-- File:Incendie du théâtre de l'Opéra, vue prise rue Le Peletier. Paris Musées 20230613105245.jpg: Arthur Hauger (kaiverrus, Le Monde illustré), CC0 (Paris Musées; kuvakulma ja tunnelma)
-- File:Paris Opera fire 29 10 1873.jpg: Illustrated London News 8.11.1873, public domain (liekit ja pelastajat)
-- File:Paris Opera fire façade 29 10 1873.jpg: tuntematon litografia 1873, public domain (julkisivu palossa)
-PARI: ei paria
-KOKO: 3:2 vaaka, pääaihe (palava talo ja katu) keskimmäisen 60 % × 60 %:n sisällä, reunoilla vain naapurirakennuksia ja yötaivasta, nurkissa ei mitään · otot enintään 2
-TOIMITUS: tarina-palais-garnier-3-palo.jpg
-

@@ -648,11 +648,13 @@ export const FOKUSKOHTEET_FRA = [
     jaksot: [
       {
         osa: 'tapahtuma',
+        kuva: 'rakenteilla',
         teksti: 'Eiffel-torni rakennettiin seisomaan vain kaksikymmentä vuotta, ja kerran huijari myi sen '
           + 'romuksi. Ennen tornia paikalla oli Champ de Mars, sotilaiden harjoituskenttä.',
       },
       {
         osa: 'tapahtuma',
+        kuva: 'rakenteilla',
         teksti: 'Vuonna 1887 kentälle alettiin koota rautatornia maailmannäyttelyä varten. Työmiehet niittasivat '
           + 'tuhansia osia yhteen yhä korkeammalla. Moni pariisilainen vastusti tornia, mutta vuonna 1889 se '
           + 'oli valmis.',
@@ -685,6 +687,16 @@ export const FOKUSKOHTEET_FRA = [
       },
     ],
     jaksokuvat: {
+      rakenteilla: {
+        osoite: 'https://media.matkakirja.app/kuvat/eiffel-torni-rakenteilla.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Eiffel-torni rakenteilla 1888',
+        lahde: 'Neurdein, 1888, Wikimedia Commons (public domain), rajattu',
+        tekija: 'Neurdein',
+        lisenssi: 'Public domain',
+        leveys: 1200,
+        korkeus: 800,
+      },
       nayttely1889: {
         osoite: 'https://media.matkakirja.app/kuvat/eiffel-torni-nayttely1889.jpg',
         laji: 'valokuva',
@@ -1116,7 +1128,7 @@ export const FOKUSKOHTEET_FRA = [
     jaksot: [
       {
         osa: 'tapahtuma',
-        kuva: 'laboratorio',
+        kuva: 'koe',
         teksti: 'Lavoisierin laboratorio oli Arsenaalin asunnon yhteydessä Pariisissa. Antoine Lavoisier johti '
           + 'Arsenaalissa ruudin valmistusta ja punnitsi laboratoriossaan kaiken ennen koetta ja sen jälkeen. '
           + 'Tuloksista hän päätteli, että ainetta on kokeen jälkeen yhtä paljon kuin ennen sitä.',
@@ -1158,16 +1170,6 @@ export const FOKUSKOHTEET_FRA = [
      * hetken havainnekuva sekä jaksoille 4 ja 5 Commons-kuvat (SK 18.11.2026, KK 03.32).
      */
     jaksokuvat: {
-      laboratorio: {
-        osoite: 'https://media.matkakirja.app/kuvat/lavoisier-1780-laboratorio.jpg',
-        laji: 'havainnekuva',
-        lyhyt: 'Lavoisier ja laboratorion välineet, havainnekuva',
-        lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Faktat: Science History Institute; laboratorion sisustus on dramatisoitu, rajattu',
-        tekija: 'Matkakirja (tekoälyllä tuotettu havainnekuva)',
-        lisenssi: 'Matkakirjan oma',
-        leveys: 1200,
-        korkeus: 800,
-      },
       koe: {
         osoite: 'https://media.matkakirja.app/kuvat/lavoisier-1780-koe.jpg',
         laji: 'piirros',
@@ -1417,6 +1419,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'kaanne',
+        kuva: 'palo',
         teksti: 'Syksyllä 1873 vanha oopperatalo paloi. Palon jälkeen Garnierin työmaa sai jatkua, ja uusi talo '
           + 'valmistui alle kahdessa vuodessa.',
         vuodet: [
@@ -1439,7 +1442,7 @@ export const FOKUSKOHTEET_FRA = [
         osoite: 'https://media.matkakirja.app/kuvat/palais-garnier-piirtosali.jpg',
         laji: 'valokuva',
         lyhyt: 'Arkkitehdit Garnierin piirtosalissa',
-        lahde: 'Louis-Émile Durandelle, Metropolitan Museum of Art, Wikimedia Commons (CC0), rajattu',
+        lahde: 'Louis-Émile Durandelle, Metropolitan Museum of Art, Wikimedia Commons (CC0), esirajattu ja rajattu',
         tekija: 'Louis-Émile Durandelle',
         lisenssi: 'CC0',
         leveys: 1200,
@@ -1451,6 +1454,16 @@ export const FOKUSKOHTEET_FRA = [
         lyhyt: 'Palais Garnierin työmaa 1866',
         lahde: 'Delmaet & Durandelle 1866, Wikimedia Commons (CC0), rajattu',
         tekija: 'Delmaet & Durandelle',
+        lisenssi: 'CC0',
+        leveys: 1200,
+        korkeus: 800,
+      },
+      palo: {
+        osoite: 'https://media.matkakirja.app/kuvat/palais-garnier-palo.jpg',
+        laji: 'piirros',
+        lyhyt: 'Vanhan oopperatalon palo rue Le Peletierillä',
+        lahde: 'Arthur Hauger (Le Monde illustré, 1873), Paris Musées / Musée Carnavalet, Wikimedia Commons (CC0), esirajattu ja rajattu',
+        tekija: 'Arthur Hauger',
         lisenssi: 'CC0',
         leveys: 1200,
         korkeus: 800,
