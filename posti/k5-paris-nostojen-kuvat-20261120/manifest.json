@@ -1,0 +1,207 @@
+{
+  "project": "Matkakirja · K-5 Pariisin nostot · erä 1",
+  "sourceCommit": "551749a3d960be223daec6303bd7c7c076bfb9c1",
+  "sourceBlobs": [
+    "22316465ff3aa666901c10042e04a10c637c040f",
+    "bc3d5fc4678c533cd75a9192463f2e1a9ce21387"
+  ],
+  "preparedAt": "2026-11-20T10:10:21.833794+00:00",
+  "images": [
+    {
+      "taskNumber": 2792,
+      "title": "Eiffel-torni · Lustigin huijaus",
+      "file": "tarina-eiffel-torni-4-lustig.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "375a114920f477d5116a0947122a9ebfa6a09eea959c548bcafb3ac93771c819",
+      "selectedAttempt": 2,
+      "callCount": 2,
+      "qa": "pass-for-KK-review-with-note",
+      "subjectBoundsPercent": [
+        41,
+        35,
+        76,
+        78
+      ],
+      "deliveryCrop": null,
+      "reviewNote": "Eiffel-tornin huippu, tasot, kaari ja jalat erottuvat. Jalkojen aivan alin osa sulautuu kaukaiseen kattolinjaan. Salongin asettelu on rekonstruktio.",
+      "geometryAndClothesChecked": true,
+      "noRecognizableCloseFaceOrAnswerText": true
+    },
+    {
+      "taskNumber": 2793,
+      "title": "Sainte-Chapelle · palatsin piha",
+      "file": "tarina-sainte-chapelle-1-piha.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "61bff8e917b94e7dabaf30b6c2640b03ed9f13d0b4cdb38b0c756b419f009e10",
+      "selectedAttempt": 2,
+      "callCount": 2,
+      "qa": "pass-for-KK-review",
+      "subjectBoundsPercent": [
+        32,
+        24,
+        65,
+        79
+      ],
+      "deliveryCrop": null,
+      "reviewNote": null,
+      "geometryAndClothesChecked": true,
+      "noRecognizableCloseFaceOrAnswerText": true
+    },
+    {
+      "taskNumber": 2794,
+      "title": "Sainte-Chapelle · kaulanauhan yötapaaminen",
+      "file": "tarina-sainte-chapelle-2-kaulanauha.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "6458963e8b0bbc41dd6dd40a1300f9adda616632836f82e36c7cc396adf00010",
+      "selectedAttempt": 1,
+      "callCount": 1,
+      "qa": "pass-for-KK-review",
+      "subjectBoundsPercent": [
+        48,
+        51,
+        57,
+        61
+      ],
+      "deliveryCrop": null,
+      "reviewNote": null,
+      "geometryAndClothesChecked": true,
+      "noRecognizableCloseFaceOrAnswerText": true
+    },
+    {
+      "taskNumber": 2795,
+      "title": "Sainte-Chapelle · parlamentin oikeudenkäynti",
+      "file": "tarina-sainte-chapelle-4-parlamentti.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "b3907bbae5f9f3b8a3255eb0d0bd5374576d782e84e18debc1b1ed1053f998f2",
+      "selectedAttempt": 2,
+      "callCount": 2,
+      "qa": "pass-for-KK-review-with-note",
+      "subjectBoundsPercent": [
+        20,
+        28,
+        80,
+        76
+      ],
+      "deliveryCrop": null,
+      "reviewNote": "Tornin näkyminen juuri tästä salin ikkunasta on tilauskuvan sommitteluratkaisu. Tarkkaa näkölinjaa vuodelta 1786 ei varmistettu.",
+      "geometryAndClothesChecked": true,
+      "noRecognizableCloseFaceOrAnswerText": true
+    },
+    {
+      "taskNumber": 2796,
+      "title": "Curien vaja · radiumtyö",
+      "file": "tarina-curie-1898-2-radiumtyo.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "442615bec7ced813b676bc3394b2c7b030498f553b54a243fc31d300687a6811",
+      "selectedAttempt": 1,
+      "callCount": 1,
+      "qa": "pass-for-KK-review",
+      "subjectBoundsPercent": [
+        38,
+        34,
+        69,
+        71
+      ],
+      "deliveryCrop": null,
+      "reviewNote": null,
+      "geometryAndClothesChecked": true,
+      "noRecognizableCloseFaceOrAnswerText": true
+    },
+    {
+      "taskNumber": 2797,
+      "title": "Curien vaja · hohto",
+      "file": "tarina-curie-1898-4-hohto.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "dde23e28f862513875c6b01b247fb15c3d7b8b43a241fac3bd9cf77a9177f2e0",
+      "selectedAttempt": 1,
+      "callCount": 1,
+      "qa": "pass-for-KK-review-with-note",
+      "subjectBoundsPercent": [
+        39,
+        35,
+        64,
+        68
+      ],
+      "deliveryCrop": null,
+      "reviewNote": "Hämärä on tarkoituksellinen. Curien muistelmat tukevat himmeää hohdetta, mutta sinivihreä sävy on kuvituksen tulkinta.",
+      "geometryAndClothesChecked": true,
+      "noRecognizableCloseFaceOrAnswerText": true
+    },
+    {
+      "taskNumber": 2798,
+      "title": "Curien vaja · koulun piha",
+      "file": "tarina-curie-1898-1-vaja.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "612b92ad8c914061cb4d6146753ebfb5883446d2eb043756be31948f3ecaf2f1",
+      "selectedAttempt": 1,
+      "callCount": 1,
+      "qa": "pass-for-KK-review-with-note",
+      "subjectBoundsPercent": [
+        20,
+        23,
+        79,
+        76
+      ],
+      "deliveryCrop": null,
+      "reviewNote": "Vajan julkisivu on rekonstruktio. Commonsista varmistui aito työtilaa kuvaava arkistoviite, mutta vastaavaa vapaata ulkokuvaa ei löytynyt.",
+      "geometryAndClothesChecked": true,
+      "noRecognizableCloseFaceOrAnswerText": true
+    },
+    {
+      "taskNumber": 2799,
+      "title": "Louvre · varkaus",
+      "file": "tarina-louvre-2-varkaus.jpg",
+      "size": [
+        1041,
+        694
+      ],
+      "sha256": "78b0cc58d0d11d8429d4df873b4f4770dddef8bb023a26f746179ec6554c1de6",
+      "selectedAttempt": 2,
+      "callCount": 2,
+      "qa": "pass-for-KK-review",
+      "subjectBoundsPercent": [
+        29,
+        29,
+        77,
+        80
+      ],
+      "deliveryCrop": [
+        274,
+        330,
+        1315,
+        1024
+      ],
+      "reviewNote": null,
+      "geometryAndClothesChecked": true,
+      "noRecognizableCloseFaceOrAnswerText": true
+    }
+  ],
+  "contactSheet": "kontaktiarkki.jpg",
+  "credits": "LAHTEET.md",
+  "checksums": "SHA256SUMS",
+  "approval": "waiting for KK",
+  "bucketUploaded": false,
+  "gameIntegrated": false,
+  "published": false
+}
