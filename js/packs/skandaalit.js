@@ -2188,33 +2188,25 @@ export const SKANDAALIT = {
       vuosi: '1861–1870',
       paikka: 'Institut de France (tiedeakatemia), Pariisi',
       lat: 48.8573, lon: 2.3372,
-      kortti: 'Kleopatra kirjoitti Julius Caesarille ranskaksi, vesileimatulle '
+      kortti: 'Vrain-Lucasin väärentämässä kirjeessä Kleopatra kirjoitti Julius Caesarille ranskaksi, vesileimatulle '
         + 'paperille — ja kuuluisa matemaatikko osti kirjeen ilomielin, ja perään kymmeniätuhansia muita. Kansallisylpeys teki ostajasta sokean: olihan '
         + 'kirjeissä todiste, että painovoima keksittiin Ranskassa. '
         + 'Tiedeakatemia ei ollut aivan yhtä ilahtunut.',
-      teksti: 'Denis Vrain-Lucas oli lakikirjuriksi kouluttautunut ranskalainen, '
-        + 'joka alkoi 1854 väärentää historiallisia asiakirjoja. Hän hankki '
-        + 'aikakauden mukaista paperia, valmisti musteensa itse ja keräsi '
-        + 'yksityiskohdat keisarillisesta kirjastosta.\n\n'
-        + 'Vuonna 1861 hän myi matemaatikko ja keräilijä Michel Chaslesille Robert '
-        + 'Boylen, Isaac Newtonin ja Blaise Pascalin kirjeitä. Yhdessä niistä '
-        + 'Pascal ilmoitti keksineensä painovoiman lait ennen Newtonia. '
-        + 'Ranskalaisen ensisijaisuus oli kaupan paras myyntipuhe, ja Chasles '
-        + 'halusi lisää.\n\n'
-        + 'Kuudentoista vuoden aikana Vrain-Lucas väärensi noin 27 000 kirjettä ja '
-        + 'asiakirjaa: Maria Magdaleenaa, Kleopatraa, Juudasta, Pontius Pilatusta, '
-        + 'Jeanne d\'Arcia, Ciceroa ja Dantea myöten — kaikki 1800-luvun ranskaksi '
-        + 'ja vesileimatulle paperille. Chasles maksoi niistä 140 000–150 000 '
-        + 'frangia.\n\n'
-        + 'Vuonna 1867 Chasles vei Pascal-kirjeet tiedeakatemialle todisteeksi. '
-        + 'Käsiala ei vastannut Pascalin varmoja kirjeitä. Kun akatemia huomautti '
-        + 'anakronismeista, Vrain-Lucas väärensi lisää kirjeitä selittämään '
-        + 'edelliset. Väittely jatkui 1868 asti, ja seuraavana vuonna hänet '
-        + 'pidätettiin. Helmikuussa 1870 Pariisin tuomioistuin antoi kaksi vuotta '
-        + 'vankeutta ja 500 frangin sakon. Chasles ei saanut rahojaan takaisin. '
-        + 'Jutulla on jälkinäytös: vuonna 2004 eräs tiedelehti julkaisi äskettäin '
-        + 'löytyneen kirjeen, jonka Vrain-Lucas oli muka kirjoittanut vankilasta '
-        + 'Chaslesille 1871 — sekin oli sepite.',
+      teksti: 'Denis Vrain-Lucas oli lakikirjurina työskennellyt ranskalainen, joka väärensi Pariisissa '
+        + 'noin 27 000 kirjettä, muun muassa Kleopatran kirjeen Caesarille. Kaikki kirjeet oli '
+        + 'kirjoitettu ranskaksi, myös Kleopatran, vaikka niiden piti olla paljon vanhempia. Hän alkoi '
+        + 'väärentää 1850-luvulla, hankki aikakauden paperia ja valmisti musteensa itse.'
+        + '\n\n'
+        + 'Vuonna 1861 hän myi kuuluisalle matemaatikolle ja keräilijälle Michel Chaslesille Boylen, '
+        + 'Newtonin ja Pascalin kirjeitä. Yhdessä niistä Pascal ilmoitti keksineensä painovoiman lait '
+        + 'ennen Newtonia, ja Chasles maksoi vuosien mittaan kaikkiaan noin 140 000 frangia.'
+        + '\n\n'
+        + 'Heinäkuussa 1867 Chasles vei Pascal-kirjeet tiedeakatemialle, mutta käsiala ei vastannut '
+        + 'Pascalin varmoja kirjeitä. Kun akatemia huomautti anakronismeista eli ajan virheistä, '
+        + 'Vrain-Lucas väärensi lisää kirjeitä selittämään edelliset.'
+        + '\n\n'
+        + 'Vrain-Lucas pidätettiin, ja helmikuussa 1870 tuomioistuin antoi hänelle kaksi vuotta '
+        + 'vankeutta. Kirjeet, joista Chasles oli maksanut omaisuuden, olivat arvottomia.',
       lahde: 'en-Wikipedia "Denis Vrain-Lucas". Tarkistettu 2.9.2026.',
       kuva: {
         tiedosto: 'Pascal à Galileo.jpg',
@@ -2229,7 +2221,7 @@ export const SKANDAALIT = {
         vaihtoehdot: [
           'Muste oli kemiallisesti uutta',
           'Kirjeet oli sinetöity väärin',
-          'Ne oli kirjoitettu 1800-luvun ranskaksi',
+          'Ne oli kirjoitettu ranskaksi',
         ],
         oikea: 2,
       },

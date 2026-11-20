@@ -13,6 +13,8 @@ const { tiedostot } = await kokoaVienti();
 const lue = (polku) => JSON.parse(tiedostot.get(polku));
 const kokoelma = (nimi) => lue(`kokoelmat/${nimi}.json`).alkiot;
 const KENTAT = ['osoite', 'lyhyt', 'laji', 'lahde', 'lisenssi', 'mista'];
+// Vienti (tools/vienti/nostokuvat.mjs, NOSTOKUVA_LISAKENTAT) voi tuoda vanhojen kenttien perään valinnaiset lisäkentät tässä järjestyksessä.
+const LISAKENTAT = ['tekija', 'leveys', 'korkeus'];
 const LAJIT = new Set(['valokuva', 'havainnekuva', 'kartta', 'piirros', 'maalaus']);
 
 /** Kaikki nostot: { missa, alkio } (päätason kokoelmat ja fokusvirtojen sisäkkäiset listat). */
@@ -47,7 +49,10 @@ test('kuvan muoto: osoite, lyhyt, laji, lahde, lisenssi, mista', () => {
   for (const { missa, alkio } of NOSTOT) {
     alkio.nostokuvat.forEach((k, i) => {
       const kohta = `${missa}[${i}]`;
-      if (JSON.stringify(Object.keys(k)) !== JSON.stringify(KENTAT)) virheet.push(`${kohta}: kentät ${Object.keys(k)}`);
+      const avaimet = Object.keys(k);
+      const lisat = avaimet.slice(KENTAT.length);
+      const lisatKunnossa = lisat.every((a) => LISAKENTAT.includes(a)) && JSON.stringify(lisat) === JSON.stringify(LISAKENTAT.filter((a) => lisat.includes(a)));
+      if (JSON.stringify(avaimet.slice(0, KENTAT.length)) !== JSON.stringify(KENTAT) || !lisatKunnossa) virheet.push(`${kohta}: kentät ${avaimet}`);
       if (typeof k.osoite !== 'string' || !/^https:\/\/\S+$/.test(k.osoite)) virheet.push(`${kohta}: osoite ${k.osoite}`);
       for (const kentta of ['lyhyt', 'lahde', 'lisenssi']) {
         if (k[kentta] !== null && (typeof k[kentta] !== 'string' || !k[kentta])) virheet.push(`${kohta}: ${kentta} ${k[kentta]}`);
@@ -81,7 +86,9 @@ test('Tuileries: jaksokuvat ensin jaksojen järjestyksessä (karttavalo ja kohte
   assert.deepEqual(alku.map((k) => k.lyhyt), avaimet.map((a) => raaka.jaksokuvat[a].lyhyt));
   assert.deepEqual(alku.map((k) => k.laji), avaimet.map((a) => raaka.jaksokuvat[a].laji));
   assert.ok(alku.every((k) => k.mista === 'nosto'));
-  assert.equal(alku[0].osoite.split('?')[0].split('/').pop(), 'nosto-tuileriat-loistoaika.webp');
+  // Erä 1 (20.11.2026): isoisän koukku poistui, joten ensimmäinen jakso (palatsin loistoaika) tuo ihmekuvan ensin; rauniokuva siirtyi kolmanteen jaksoon.
+  assert.equal(alku[0].osoite.split('?')[0].split('/').pop(), 'ihme-tuileries-loistoaika-v2.jpg');
+  assert.equal(alku[2].osoite.split('?')[0].split('/').pop(), 'nosto-tuileriat-loistoaika.webp');
   assert.equal(alku[1].osoite, 'https://media.matkakirja.app/kuvat/tuileries-palo-1871.jpg');
   // Havainnekuvan lähderivin "… CC0" koskee referenssejä, ei kuvaa; Commons-kuvan (CC BY-SA 3.0) lisenssi luetaan.
   assert.equal(alku[1].lisenssi, null);

@@ -102,7 +102,7 @@ export const FOKUSKOHTEET_FRA = [
     ],
     // Näkyvät muodot jaksojen tekstistä (Tuileries-koe 17.11.2026).
     korostukset: ['Katariina de Medici', 'Pariisin kommuuni'],
-    nappi: 'Palatsi, jonka isoisä näki raunioina',
+    nappi: 'Palatsi, joka myytiin kivinä',
     laudat: {
       maailmankartta: { x: 5911.1, y: 1439.4 },
       europe: { x: 256.0, y: 608.5 },
@@ -116,7 +116,8 @@ export const FOKUSKOHTEET_FRA = [
      * JAKSOT (TUILERIES-KOE; omistaja 17.11.2026 klo 10.58 ja 10.51, KK 11.11
      * ja 11.16; suunnitelma scratchpad/keskustelukanava/suunnitelmat/
      * 20261117-nostot-tarinoiksi.md luku 8, sitova). Nosto kuunneltavana,
-     * kuvitettuna tarinana: isoisän lause ja neljä kertojan jaksoa (8.1),
+     * kuvitettuna tarinana: kertojan jaksot (8.1; ERÄ 1, 20.11.2026, P-261120-3: ei nimi-, esittely- eikä isoisäjaksoa,
+     * leipäteksti alkaa paikan nimellä ja etenee vuosi vuodelta, raportti docs/raportit/pariisi-nostot-era1-teksti-20261120.md),
      * seitsemän kuvaa (8.2), tahdistus jaksoista ja tekstikohdista (8.3).
      * jaksot[].teksti on ainoa luettava teksti; kuva, toinen kuva
      * (`lisakuva` tekstikohdassa), vuosirivit, hologrammi ja karttapiste
@@ -133,80 +134,59 @@ export const FOKUSKOHTEET_FRA = [
      * jaksot. Syvennystarina `tuileriat` (fokusvirta-pariisi.js) ja sen
      * kopio (nahtavyysjutut.js) poistettu: pisteellä on yksi nosto.
      */
-    // Tarinan otsikko (SK:n raportti, KK 11.24): kertoja lukee sen ensimmäisen kertojan jakson alussa; lehti käyttää sitä.
-    otsikko: 'Tuileries 1871 — palatsi, joka myytiin kivinä',
+    // Tarinarivi (enintään 40 merkkiä, ei vuotta; KK 20.11.2026, P-261120-3): näkyy otsikon alla, kertoja ei lue sitä.
+    otsikko: 'Palatsi, joka myytiin kivinä',
     /*
-     * Äänitteet (Äänittäjä 17.11.2026, KK:n äänityssana 11.29; avain PK
-     * 17.11. 11.4x, KK 11.32 "vienti kun avain sovittu"): ämpäri
-     * äänikansion polku <aanikansio>/<aanite>.mp3 ja .sanat.json (sanakohtaiset ajat).
-     * Versiokansio on muuttumaton: uusi otto → v2 ja uusi aanikansio tähän.
-     * Kertojan ensimmäinen äänite sisältää otsikon.
+     * Äänikansiota (`aanikansio: 'tuileries-koe/v1'`) ei enää ole (P-261120-3 M5): vanhat otot kuuluvat vanhaan
+     * tekstiin (jaksojen järjestys muuttui), joten ne eivät saa soida uuden tekstin päällä. Nosto luetaan lennossa
+     * kuten muut, kunnes Äänittäjä saa luvan äänittää uuden tekstin (uusi kansio, v2).
      */
-    aanikansio: 'tuileries-koe/v1',
     jaksot: [
-      /*
-       * NOSTON ALKU (omistaja 17.11.2026 klo 19.23, kohta F, PYSYVÄ; KK 19.26; PT F4):
-       * nosto alkaa KERTOJAN äänellä paikan nimellä, ja isoisän lausetta edeltää kertojan
-       * esittely. Soitto datan järjestyksessä: nimi → esittely → isoisän koukku → jaksot.
-       * Esittely ei toista päivämäärää eikä paljasta rauniota (isoisän oma lause kertoo
-       * sen); isoisän käynti lokakuussa 1873 on pelin tarinaa, ei historiaväite.
-       * Osat `nimi` ja `esittely` ovat lyhyitä ilman kuvaa; kuva tulee vasta koukulla.
-       */
-      { osa: 'nimi', aanite: 'nimi', teksti: 'Tuileries\'n palatsi.' },
-      { osa: 'esittely', aanite: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
-      {
-        osa: 'koukku',
-        aanite: 'isoisa',
-        aani: 'isoisa',
-        teksti: 'Pariisi, 1873. Kävelin tänään poltetun palatsin ohi. Katto on '
-          + 'poissa, ja ikkuna-aukoista näkyy pelkkää taivasta.',
-        kuva: 'raunio1873',
-        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
-      },
       {
         osa: 'tapahtuma',
-        aanite: 'kertoja-1-otsikko-jakso2',
-        teksti: 'Kaksi vuotta aiemmin, toukokuussa 1871, Pariisin kommuuni oli '
-          + 'kukistumassa. Sen kannattajat sytyttivät Tuileries\'n palatsin. '
-          + 'Tuli paloi yli kaksi vuorokautta ja poltti talon sisältä tyhjäksi.',
-        kuva: 'palo',
-        vuodet: [{ vuosi: '1871', selite: 'palatsi sytytetään', kohta: 'toukokuussa 1871' }],
-      },
-      {
-        osa: 'tapahtuma',
-        aanite: 'kertoja-2-jakso3',
-        teksti: 'Palatsi oli seissyt Louvren vieressä yli kolmesataa vuotta. '
-          + 'Kuningatar Katariina de Medici aloitti sen, ja siitä tuli Ranskan '
-          + 'hallitsijoiden koti Pariisissa. Palon jälkeen kivimuurit jäivät '
-          + 'pystyyn, vaikka katto ja sisustus olivat poissa. Poltettu '
-          + 'kaupungintalo rakennettiin uudelleen, Tuileries\'ta ei.',
+        teksti: 'Tuileries\'n palatsi oli Ranskan hallitsijoiden koti Pariisissa, ennen kuin se poltettiin ja '
+          + 'myytiin kivinä. Kuningatar Katariina de Medici aloitti sen rakentamisen Louvren viereen vuonna '
+          + '1564, ja palatsi seisoi yli kolmesataa vuotta.',
         kuva: 'loisto',
+        vuodet: [
+          { vuosi: '1564', selite: 'rakentaminen alkaa', kohta: 'vuonna 1564' },
+        ],
+      },
+      {
+        osa: 'tapahtuma',
+        teksti: 'Toukokuussa 1871 Pariisin kommuuni oli kukistumassa. Sen kannattajat sytyttivät Tuileries\'n '
+          + 'palatsin. Tuli paloi yli kaksi vuorokautta ja poltti talon sisältä tyhjäksi.',
+        kuva: 'palo',
+        vuodet: [
+          { vuosi: '1871', selite: 'palatsi sytytetään', kohta: 'Toukokuussa 1871' },
+        ],
+      },
+      {
+        osa: 'tapahtuma',
+        teksti: 'Palon jälkeen kivimuurit jäivät pystyyn, vaikka katto ja sisustus olivat poissa. Poltettu '
+          + 'kaupungintalo rakennettiin uudelleen, Tuileries\'ta ei. Rauniot seisoivat katottomina yli '
+          + 'kymmenen vuotta.',
+        kuva: 'raunio1873',
         lisakuva: { kuva: 'rauniot1871', kohta: 'Palon jälkeen' },
-        vuodet: [{ vuosi: '1564', selite: 'rakentaminen alkaa' }],
       },
       {
         osa: 'kaanne',
-        aanite: 'kertoja-3-jakso4',
-        teksti: 'Tuileries seisoi katottomana yli kymmenen vuotta. Sitten kolmas '
-          + 'tasavalta päätti purkaa sen. Purkuyrittäjä myi kiviä ja marmoria, '
-          + 'ja suuresta erästä rakennettiin linna Korsikalle.',
+        teksti: 'Vuonna 1882 kolmas tasavalta päätti purkaa raunion, ja purku valmistui 1883. Purkuyrittäjä myi '
+          + 'kiviä ja marmoria, ja suuresta erästä rakennettiin linna Korsikalle.',
         kuva: 'purku',
         lisakuva: { kuva: 'punta', kohta: 'rakennettiin linna Korsikalle' },
         hologrammi: 'sammuu',
         hologrammiKohta: 'päätti purkaa',
         vuodet: [
-          { vuosi: '1882', selite: 'purkupäätös', kohta: 'päätti purkaa' },
-          { vuosi: '1883', selite: 'purku valmis', kohta: 'päätti purkaa' },
+          { vuosi: '1882', selite: 'purkupäätös', kohta: 'Vuonna 1882' },
+          { vuosi: '1883', selite: 'purku valmis', kohta: 'valmistui 1883' },
         ],
       },
       {
         osa: 'tanaan',
-        aanite: 'kertoja-4-jakso5',
-        teksti: 'Palatsin paikalla on nyt avointa tilaa Louvren ja puutarhan '
-          + 'välissä. Yksi sen paloista seisoo yhä Pariisissa: keskipaviljongin '
-          + 'päätykolmio on puistossa nimeltä Square Georges Cain.',
+        teksti: 'Palatsin paikalla on nyt avointa tilaa Louvren ja puutarhan välissä. Yksi sen paloista seisoo '
+          + 'yhä Pariisissa: keskipaviljongin päätykolmio on puistossa nimeltä Square Georges Cain.',
         kuva: 'paatykolmio',
-        // Piste fr-Wikipedia "Square Georges-Cain" (48°51′29″N 2°21′46″E).
         kartta: { nimi: 'Square Georges Cain', lat: 48.8581, lon: 2.3628 },
       },
     ],
@@ -219,8 +199,8 @@ export const FOKUSKOHTEET_FRA = [
       raunio1873: {
         osoite: 'assets/kartat/nostot/nosto-tuileriat-loistoaika.webp',
         laji: 'havainnekuva',
-        lyhyt: 'Poltetun palatsin rauniot vuonna 1873',
-        lahde: 'Matkakirjan havainnekuva: rauniot isoisän matkavuonna',
+        lyhyt: 'Poltetun palatsin rauniot',
+        lahde: 'Matkakirjan havainnekuva: rauniot palon jälkeen',
       },
       palo: {
         // Tilaus 8.4 A valmis; KK hyväksyi 17.11.2026 klo 14.42 (P-261117-61). Ämpäri kuvat/ (vienti
@@ -359,60 +339,58 @@ export const FOKUSKOHTEET_FRA = [
     // teksti lasketaan jaksoista tiedoston lopussa.
     lahde: 'Matkakirjan oma teksti · lähteinä Musée du Louvre, Sortiraparis, Europeana, CrimeReads ja '
       + 'Spokesman-Review / Washington Post (tarkistettu 17.11.2026).',
-    otsikko: 'Mona Lisa 1911 — taulu, joka katosi',
+    otsikko: 'Päivä, jona Mona Lisa katosi',
     /*
      * Äänitteitä ei ole vielä: `aanikansio` ja jaksojen `aanite` lisätään, kun Äänittäjä on
      * äänittänyt (äänitysjonon rivit ovat data/aanitysjono.tsv:ssä). Siihen asti jaksot
      * kuuluvat suoratoistona.
      */
     jaksot: [
-      // Noston alku (omistaja 17.11.2026 klo 19.23 F, PYSYVÄ): kertojan nimi, esittely, sitten isoisä.
-      { osa: 'nimi', teksti: 'Louvre.' },
-      { osa: 'esittely', teksti: 'Isoisäsi kulki tästä ohi matkallaan.' },
       {
-        osa: 'koukku',
-        aani: 'isoisa',
-        teksti: 'Pariisi, 1873. Kävelin tänään pitkin Louvren julkisivua ja yritin '
-          + 'laskea ikkunat. Menetin laskun kolmesti.',
+        osa: 'tapahtuma',
+        teksti: 'Louvre oli ennen kuninkaiden palatsi, ja museoksi se avattiin vuonna 1793. Yli sata vuotta '
+          + 'myöhemmin sen seinältä varastettiin Mona Lisa.',
         kuva: 'julkisivu',
-        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
+        vuodet: [
+          { vuosi: '1793', selite: 'Louvre museoksi', kohta: 'vuonna 1793' },
+        ],
       },
       {
         osa: 'tapahtuma',
-        teksti: 'Lähes neljäkymmentä vuotta myöhemmin, maanantaina elokuussa, Louvre '
-          + 'oli suljettu. Valkoiseen työtakkiin pukeutunut mies nosti Mona Lisan '
-          + 'seinältä ja jätti kehyksen portaikkoon. Lukitun oven avasi hänelle '
-          + 'putkimies, ja taulu lähti ulos.',
+        teksti: 'Maanantaina elokuussa 1911 Louvre oli suljettu. Valkoiseen työtakkiin pukeutunut mies nosti Mona '
+          + 'Lisan seinältä, ja lukitun oven avasi hänelle putkimies.',
         kuva: 'varkaus',
         lisakuva: { kuva: 'monalisa', kohta: 'Mona Lisan' },
-        vuodet: [{ vuosi: '1911', selite: 'taulu varastetaan', kohta: 'elokuussa' }],
+        vuodet: [
+          { vuosi: '1911', selite: 'taulu varastetaan', kohta: 'elokuussa 1911' },
+        ],
       },
       {
         osa: 'tapahtuma',
-        teksti: 'Kukaan ei huomannut mitään ennen seuraavaa päivää. Silloin maalari '
-          + 'tuli kopioimaan taulua ja löysi tyhjän seinän. Poliisi pidätti runoilija '
-          + 'Guillaume Apollinairen, ja Pablo Picasso joutui epäillyksi. Ihmiset '
-          + 'jonottivat katsomaan tyhjää seinää.',
+        teksti: 'Kukaan ei huomannut mitään ennen seuraavaa päivää. Silloin maalari tuli kopioimaan taulua ja '
+          + 'löysi tyhjän seinän. Poliisi pidätti runoilija Guillaume Apollinairen, ja Pablo Picasso joutui '
+          + 'epäillyksi.',
         kuva: 'tyhja-seina',
       },
       {
         osa: 'kaanne',
-        teksti: 'Varas oli Louvressa työskennellyt lasittaja Vincenzo Peruggia. '
-          + 'Poliisi oli kuulustellut häntä ja uskonut hänen selityksensä. Taulu '
-          + 'odotti laatikossa yli kaksi vuotta. Sitten hän tarjosi sitä '
-          + 'firenzeläiselle taidekauppiaalle, joka hälytti poliisin. Peruggia '
-          + 'väitti vieneensä sen takaisin Italiaan, vaikka Leonardo oli itse '
-          + 'tuonut taulun Ranskaan.',
+        teksti: 'Varas oli Louvressa työskennellyt lasittaja Vincenzo Peruggia, jonka poliisi oli jo '
+          + 'kuulustellut. Taulu odotti laatikossa yli kaksi vuotta, kunnes hän tarjosi sitä vuonna 1913 '
+          + 'firenzeläiselle taidekauppiaalle, joka hälytti poliisin. Peruggia väitti vieneensä taulun '
+          + 'takaisin Italiaan.',
         kuva: 'peruggia',
-        vuodet: [{ vuosi: '1913', selite: 'varas jää kiinni', kohta: 'Sitten hän tarjosi' }],
+        vuodet: [
+          { vuosi: '1913', selite: 'varas jää kiinni', kohta: 'vuonna 1913' },
+        ],
       },
       {
         osa: 'tanaan',
-        teksti: 'Mona Lisa palasi Louvreen, ja varkaus teki siitä entistä '
-          + 'kuuluisamman. Nykyään se on Louvren ensimmäisessä kerroksessa. Sen '
-          + 'edessä on jono, ja taulua vartioidaan tarkasti.',
+        teksti: 'Mona Lisa palasi Louvreen vuonna 1914, ja varkaus teki siitä entistä kuuluisamman. Nykyään se on '
+          + 'Louvren ensimmäisessä kerroksessa. Sen edessä on jono, ja taulua vartioidaan tarkasti.',
         kuva: 'jono',
-        vuodet: [{ vuosi: '1914', selite: 'taulu palaa Louvreen', kohta: 'palasi Louvreen' }],
+        vuodet: [
+          { vuosi: '1914', selite: 'taulu palaa Louvreen', kohta: 'vuonna 1914' },
+        ],
       },
     ],
     /*
@@ -529,45 +507,36 @@ export const FOKUSKOHTEET_FRA = [
      * faktat kahdesta itsenäisestä lähteestä, raportti docs/raportit/bastilji-nosto-teksti-20261117.md.
      * Historian hetki `ranskan-vallankumous-bastilji-1789` (lehden sivu ja sen kartapiste) jää ennalleen.
      */
-    otsikko: 'Bastilji 1789 — linna, joka jaettiin kivinä',
+    otsikko: 'Linna, joka jaettiin kivinä',
     aanikansio: 'bastilji/v1',
     jaksot: [
-      { osa: 'nimi', aanite: 'nimi', teksti: 'Bastilji.' },
-      { osa: 'esittely', aanite: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
-      {
-        osa: 'koukku',
-        aanite: 'isoisa',
-        aani: 'isoisa',
-        teksti: 'Pariisi, 1873. Kartassani lukee Bastilji, ja astuin aukiolle mitta kädessä. '
-          + 'Linnaa ei ole. Keskellä seisoo vain korkea pylväs, jonka päällä on patsas.',
-        kuva: 'pylvas1860',
-        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
-      },
       {
         osa: 'tapahtuma',
         aanite: 'kertoja-1-otsikko-jakso2',
-        teksti: 'Bastilji rakennettiin 1300-luvun lopulla vartioimaan Pariisin itäistä porttia, '
-          + 'ja siinä oli kahdeksan tornia. Myöhemmin siitä tuli valtionvankila. Kuningas saattoi '
-          + 'lähettää sinne ihmisen kirjeellä, ilman oikeudenkäyntiä, ja linnasta tuli mielivallan symboli.',
+        teksti: 'Bastilji rakennettiin 1300-luvun lopulla vartioimaan Pariisin itäistä porttia, ja siinä oli '
+          + 'kahdeksan tornia. Myöhemmin siitä tuli valtionvankila. Kuningas saattoi lähettää sinne ihmisen '
+          + 'kirjeellä, ilman oikeudenkäyntiä, ja linnasta tuli mielivallan symboli.',
         kuva: 'loisto',
         lisakuva: { kuva: 'silvestre', kohta: 'kahdeksan tornia' },
       },
       {
         osa: 'tapahtuma',
         aanite: 'kertoja-2-jakso3',
-        teksti: 'Heinäkuun 14. päivänä 1789 pariisilaisilla oli Invalidien sotilaskodista otettuja '
-          + 'aseita mutta ei ruutia, ja ruutia uskottiin olevan Bastiljissa. Vankeja oli vain seitsemän. '
-          + 'Silti väkijoukko valtasi linnan, ja kuvernööri surmattiin.',
+        teksti: 'Heinäkuun 14. päivänä 1789 pariisilaisilla oli Invalidien sotilaskodista otettuja aseita mutta '
+          + 'ei ruutia, ja ruutia uskottiin olevan Bastiljissa. Vankeja oli vain seitsemän. Silti väkijoukko '
+          + 'valtasi linnan, ja kuvernööri surmattiin.',
         kuva: 'valtaus',
         lisakuva: { kuva: 'portti', kohta: 'Silti väkijoukko valtasi linnan' },
-        vuodet: [{ vuosi: '1789', selite: 'valtaus', kohta: 'päivänä 1789' }],
+        vuodet: [
+          { vuosi: '1789', selite: 'valtaus', kohta: 'päivänä 1789' },
+        ],
       },
       {
         osa: 'kaanne',
         aanite: 'kertoja-3-jakso4',
-        teksti: 'Purku alkoi jo samana iltana. Työmaata johti Palloy, jonka työpajassa kivistä '
-          + 'veistettiin pienoismalleja ja muistoesineitä. Osa kivistä päätyi Pariisin siltoihin, ja '
-          + 'muutamassa vuodessa linnasta ei jäänyt pystyyn mitään.',
+        teksti: 'Purku alkoi jo samana iltana. Työmaata johti Palloy, jonka työpajassa kivistä veistettiin '
+          + 'pienoismalleja ja muistoesineitä. Osa kivistä päätyi Pariisin siltoihin, ja muutamassa vuodessa '
+          + 'linnasta ei jäänyt pystyyn mitään.',
         kuva: 'purku',
         hologrammi: 'sammuu',
         hologrammiKohta: 'Purku alkoi',
@@ -575,16 +544,14 @@ export const FOKUSKOHTEET_FRA = [
       {
         osa: 'tanaan',
         aanite: 'kertoja-4-jakso5',
-        teksti: 'Linnan paikalla on nyt aukio. Aukion pylväs muistuttaa vuoden 1830 vallankumouksesta, '
-          + 'ei 1789:stä. Tornin pohjakiviä on koottu Henri-Galli-puistoon, ja metroaseman laiturilla '
-          + 'näkyy pala vallihaudan muuria.',
+        teksti: 'Linnan paikalla on nyt aukio. Aukion pylväs muistuttaa vuoden 1830 vallankumouksesta, ei '
+          + '1789:stä. Tornin pohjakiviä on koottu Henri-Galli-puistoon, ja metroaseman laiturilla näkyy pala '
+          + 'vallihaudan muuria.',
         kuva: 'metro',
+        lisakuva: { kuva: 'pylvas1860', kohta: 'Aukion pylväs' },
         vuodet: [
           { vuosi: '1830', selite: 'vallankumous', kohta: '1830' },
-          { vuosi: '1840', selite: 'pylväs valmistuu', kohta: 'pylväs' },
-          { vuosi: '1899', selite: 'tornin pohja löytyy', kohta: 'pohjakiviä' },
         ],
-        // Square Henri-Galli 48,8513 N / 2,3618 E (fr-Wikipedia ja OpenStreetMap).
         kartta: { nimi: 'Square Henri-Galli', lat: 48.8513, lon: 2.3618 },
       },
     ],
@@ -699,7 +666,7 @@ export const FOKUSKOHTEET_FRA = [
       'Miksi tornia ei purettu, vaikka sen luvattiin seisovan vain kaksikymmentä vuotta?',
       'Oliko Eiffel-tornin purkamisesta oikeasti puhetta?',
     ],
-    korostukset: ['Victor Lustig', 'Champ de Mars|Champ de Marsin'],
+    korostukset: ['Victor Lustig', 'Champ de Mars|Champ de Mars'],
     nappi: 'Torni, jonka piti seistä vain kaksikymmentä vuotta',
     laudat: {
       maailmankartta: { x: 5909.8, y: 1439.5 },
@@ -709,52 +676,46 @@ export const FOKUSKOHTEET_FRA = [
     lahde: 'Matkakirjan oma teksti · lähteinä Mental Floss, Ripley\'s, Today I Found Out ja The Hustle (Lustig), Snippets of Paris, '
       + 'Science News Explores, Architizer ja Mental Floss (torni) sekä introducingparis.com ja en-Wikipedia "Champ de Mars" '
       + '(tarkistettu 17.11.2026).',
-    otsikko: 'Eiffel-torni 1925 — myyty romuksi',
+    otsikko: 'Torni, joka myytiin romuksi',
     jaksot: [
-      // Noston alku: kertojan nimi ja esittely ennen isoisän lausetta (omistaja 19.23 F; sama kuin Tuileries).
-      { osa: 'nimi', teksti: 'Eiffel-torni.' },
-      { osa: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
       {
-        osa: 'koukku',
-        aani: 'isoisa',
-        teksti: 'Pariisi, 1873. Mittasin tänään Champ de Marsin askelin. Se on sotilaiden harjoituskenttä, '
-          + 'tasainen kuin pöytä.',
-        // Koukulla ei ole kuvaa (KK 17.11.2026 21.57): kenttää ennen tornia ei löytynyt; ei paikkamerkkiä pelaajalle.
-        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
+        osa: 'tapahtuma',
+        teksti: 'Eiffel-torni rakennettiin seisomaan vain kaksikymmentä vuotta, ja kerran huijari myi sen '
+          + 'romuksi. Ennen tornia paikalla oli Champ de Mars, sotilaiden harjoituskenttä.',
+        kuva: 'rakenteilla',
       },
       {
         osa: 'tapahtuma',
-        teksti: 'Neljätoista vuotta myöhemmin kentälle alettiin rakentaa rautatornia. Se koottiin tuhansista osista, '
-          + 'jotka työmiehet niittasivat yhteen yhä korkeammalla. Moni pariisilainen vihasi tornia, '
-          + 'ja sen piti seistä vain kaksikymmentä vuotta.',
-        kuva: 'rakenteilla',
-        lisakuva: { kuva: 'niittaus', kohta: 'työmiehet niittasivat yhteen' },
+        teksti: 'Vuonna 1887 kentälle alettiin koota rautatornia maailmannäyttelyä varten. Työmiehet niittasivat '
+          + 'tuhansia osia yhteen yhä korkeammalla. Moni pariisilainen vastusti tornia, mutta vuonna 1889 se '
+          + 'oli valmis.',
+        kuva: 'niittaus',
         vuodet: [
-          { vuosi: '1887', selite: 'taiteilijavetoomus', kohta: 'vihasi tornia' },
-          { vuosi: '1889', selite: 'torni valmis' },
+          { vuosi: '1887', selite: 'rakentaminen alkaa', kohta: 'Vuonna 1887' },
+          { vuosi: '1889', selite: 'torni valmis', kohta: 'vuonna 1889' },
         ],
       },
       {
         osa: 'tapahtuma',
-        teksti: 'Kaksikymmentä vuotta kului, mutta kukaan ei purkanut tornia. Sen huipulla oli radioantenni, '
-          + 'ja armeijalle siitä oli niin paljon hyötyä, että torni sai jäädä.',
+        teksti: 'Kaksikymmentä vuotta kului, mutta kukaan ei purkanut tornia. Sen huipulla oli radioantenni, ja '
+          + 'armeijalle siitä oli niin paljon hyötyä, että torni sai jäädä.',
         kuva: 'photochrom1900',
-        vuodet: [{ vuosi: '1909', selite: 'tornin purkuaika' }],
       },
       {
         osa: 'kaanne',
         teksti: 'Vuonna 1925 huijari Victor Lustig luki lehdestä, että tornin kunnossapito on kallista. '
           + 'Väärennetyin virkapaperein hän esiintyi ministeriön apulaisjohtajana ja myi muka tornin '
-          + 'romukauppiaalle, joka maksoi hänelle myös lahjuksen. Kauppias häpesi eikä ilmoittanut '
-          + 'poliisille, joten Lustig palasi ja yritti uudestaan.',
+          + 'romukauppiaalle. Kauppias häpesi eikä ilmoittanut poliisille, joten Lustig palasi ja yritti '
+          + 'uudestaan.',
         kuva: 'lustig',
-        vuodet: [{ vuosi: '1925', selite: 'Lustigin huijaus', kohta: 'Vuonna 1925' }],
+        vuodet: [
+          { vuosi: '1925', selite: 'Lustigin huijaus', kohta: 'Vuonna 1925' },
+        ],
       },
       {
         osa: 'tanaan',
-        teksti: 'Torni seisoo yhä, ja se maalataan uudelleen noin seitsemän vuoden välein. '
-          + 'Kenttä, jonka isoisäsi mittasi, on nykyään puisto tornin jalalla. Tornin ensimmäisen kerroksen '
-          + 'alle on kirjoitettu 72 ranskalaisen tiedemiehen ja insinöörin nimeä kullatuin kirjaimin.',
+        teksti: 'Torni seisoo yhä. Vanha harjoituskenttä on nykyään puisto sen jalalla, ja ensimmäisen kerroksen '
+          + 'alle on kirjoitettu kullatuin kirjaimin 72 ranskalaisen tiedemiehen ja insinöörin nimeä.',
         kuva: 'nykyinen',
       },
     ],
@@ -829,36 +790,36 @@ export const FOKUSKOHTEET_FRA = [
     // teksti lasketaan jaksoista tiedoston lopussa.
     lahde: 'Matkakirjan oma teksti · lähteinä Château de Versailles, Hérodote, History Is Now, HistorySkills ja '
       + 'Sortiraparis (tarkistettu 17.11.2026).',
-    otsikko: 'Kaulanauha 1785 — huijaus kuningattaren nimissä',
+    otsikko: 'Kappeli ja kuningattaren kaulanauha',
     /*
      * Äänitteitä ei ole vielä: `aanikansio` ja jaksojen `aanite` lisätään, kun Äänittäjä on
      * äänittänyt (äänitysjonon rivit ovat data/aanitysjono.tsv:ssä). Siihen asti jaksot
      * kuuluvat suoratoistona.
      */
     jaksot: [
-      { osa: 'nimi', teksti: 'Sainte-Chapelle.' },
-      { osa: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
       {
-        osa: 'koukku',
-        aani: 'isoisa',
-        teksti: 'Pariisi, 1873. Löysin Sainte-Chapellen oikeuspalatsin pihalta. '
-          + 'Ikkunat ovat niin täynnä pieniä kuvia, että luovutin niiden laskemisen.',
+        osa: 'tapahtuma',
+        teksti: 'Sainte-Chapelle on kappeli Cité-saaren palatsin pihalla. Kuningas Ludvig IX rakennutti sen '
+          + 'säilyttämään Kristuksen orjantappurakruunua, ja se vihittiin vuonna 1248. Samassa palatsissa '
+          + 'ratkaistiin kuningattaren kaulanauhajuttu.',
         kuva: 'piha',
-        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
+        vuodet: [
+          { vuosi: '1248', selite: 'kappeli vihitään', kohta: 'vuonna 1248' },
+        ],
       },
       {
         osa: 'tapahtuma',
-        teksti: 'Kuninkaan jalokivikauppiaat tekivät timanttikaulanauhan, jossa oli lähes 650 kiveä. '
-          + 'Hinta oli 1,6 miljoonaa livreä, ja Marie Antoinette kieltäytyi ostamasta sitä. '
-          + 'Huijari Jeanne de La Motte sai kardinaali de Rohanin uskomaan, että kuningatar halusi nauhan salaa.',
+        teksti: '1770-luvulla jalokivikauppiaat tekivät timanttikaulanauhan. Marie Antoinette kieltäytyi '
+          + 'ostamasta sitä, mutta huijari Jeanne de La Motte sai kardinaali de Rohanin uskomaan, että '
+          + 'kuningatar halusi nauhan salaa.',
         kuva: 'nauha',
-        lisakuva: { kuva: 'juoni', kohta: 'Huijari Jeanne de La Motte' },
+        lisakuva: { kuva: 'juoni', kohta: 'huijari Jeanne de La Motte' },
       },
       {
         osa: 'tapahtuma',
         teksti: 'Elokuussa 1784 kardinaali tapasi Versailles\'n puistossa naisen, jonka hän luuli kuningattareksi. '
-          + 'Alkuvuodesta 1785 hän sai nauhan kauppiailta ja luovutti sen Jeannelle. Kun kauppiaat '
-          + 'pyysivät maksua, kuningatar vaati selvitystä, ja kardinaali pidätettiin.',
+          + 'Alkuvuodesta 1785 hän sai nauhan kauppiailta ja luovutti sen Jeannelle. Kun kauppiaat pyysivät '
+          + 'maksua, kuningatar vaati selvitystä, ja kardinaali pidätettiin.',
         kuva: 'rohan',
         vuodet: [
           { vuosi: '1784', selite: 'yöllinen tapaaminen', kohta: 'Elokuussa 1784' },
@@ -867,17 +828,17 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'kaanne',
-        teksti: 'Oikeudenkäynti pidettiin Pariisin parlamentissa, joka istui Cité-saaren palatsissa. '
-          + 'Toukokuussa 1786 kardinaali vapautettiin. Jeanne leimattiin varkaaksi ja vietiin vankilaan. '
-          + 'Timantit oli jo myyty, moni niistä Lontoossa, ja kuningattaren maine kärsi pahasti.',
+        teksti: 'Oikeudenkäynti pidettiin Pariisin parlamentissa. Toukokuussa 1786 kardinaali vapautettiin, ja '
+          + 'Jeanne leimattiin varkaaksi ja vietiin vankilaan. Kuningattaren maine kärsi.',
         kuva: 'viuhka',
-        vuodet: [{ vuosi: '1786', selite: 'Rohan vapautetaan', kohta: 'Toukokuussa 1786' }],
+        vuodet: [
+          { vuosi: '1786', selite: 'Rohan vapautetaan', kohta: 'Toukokuussa 1786' },
+        ],
       },
       {
         osa: 'tanaan',
-        teksti: 'Sainte-Chapelle on yhä saman palatsin pihalla. Kuningas Ludvig IX rakennutti sen 1240-luvulla '
-          + 'säilyttämään Kristuksen orjantappurakruunua. Ikkunoissa on yli tuhat kohtausta, ja kappeliin '
-          + 'mennään turvatarkastuksen kautta.',
+        teksti: 'Sainte-Chapelle on yhä saman palatsin pihalla. Sen ikkunoissa on yli tuhat kohtausta, ja '
+          + 'kappeliin mennään turvatarkastuksen kautta.',
         kuva: 'ikkunat',
       },
     ],
@@ -967,54 +928,50 @@ export const FOKUSKOHTEET_FRA = [
     // teksti lasketaan jaksoista tiedoston lopussa.
     lahde: 'Matkakirjan oma teksti · lähteinä AIP, History.com, Science Museum Group, Paris.fr ja Institut Curie '
       + '(tarkistettu 18.11.2026).',
-    otsikko: 'Curie 1898 — hohtava alkuaine',
+    otsikko: 'Vaja, jossa radium hohti',
     /*
      * Äänitteitä ei ole vielä: `aanikansio` ja jaksojen `aanite` lisätään, kun Äänittäjä on
      * äänittänyt (äänitysjonon rivit ovat data/aanitysjono.tsv:ssä). Siihen asti jaksot
      * kuuluvat suoratoistona.
      */
     jaksot: [
-      { osa: 'nimi', teksti: 'Curien vaja.' },
-      { osa: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
-      {
-        osa: 'koukku',
-        aani: 'isoisa',
-        teksti: 'Pariisi, 1873. Eksyin tänään Latinalaiskortteliin. '
-          + 'Kaduilla käveli opiskelijoita, ja jokaisella oli kirjoja kainalossa.',
-        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
-      },
       {
         osa: 'tapahtuma',
-        teksti: 'Marie ja Pierre Curie tutkivat uraanimalmin sisältämää säteilyä. '
-          + 'Heinäkuussa 1898 he ilmoittivat löytäneensä uuden alkuaineen. '
-          + 'He nimesivät sen Marien kotimaan Puolan mukaan poloniumiksi. '
-          + 'Joulukuussa he ilmoittivat toisen, radiumin.',
-        kuva: 'marie',
-        vuodet: [{ vuosi: '1898', selite: 'löytö ilmoitettu', kohta: 'Heinäkuussa 1898' }],
-      },
-      {
-        osa: 'tapahtuma',
-        teksti: 'Pelkkä ilmoitus ei riittänyt, vaan alkuaine piti saada puhtaana erilleen malmista. '
-          + 'Työ tehtiin koulun pihan toisella puolella olevassa vajassa, joka oli ennen ollut ruumiinavaussali. '
-          + 'Vaja oli huonosti tuuletettu eikä pitänyt sadetta, ja malmia kului tonneittain.',
+        teksti: 'Curien vaja oli Pariisin fysiikan ja kemian koulun pihalla seissyt vaja, jossa Marie ja Pierre '
+          + 'Curie eristivät radiumin. Se oli ennen ollut ruumiinavaussali.',
         kuva: 'vaja',
       },
       {
+        osa: 'tapahtuma',
+        teksti: 'Marie ja Pierre Curie tutkivat uraanimalmin sisältämää säteilyä. Heinäkuussa 1898 he ilmoittivat '
+          + 'löytäneensä uuden alkuaineen. He nimesivät sen Marien kotimaan Puolan mukaan poloniumiksi. '
+          + 'Joulukuussa he ilmoittivat toisen, radiumin.',
+        kuva: 'marie',
+        vuodet: [
+          { vuosi: '1898', selite: 'löytö ilmoitettu', kohta: 'Heinäkuussa 1898' },
+        ],
+      },
+      {
+        osa: 'tapahtuma',
+        teksti: 'Pelkkä ilmoitus ei riittänyt, vaan alkuaine piti saada puhtaana erilleen malmista. Vaja oli '
+          + 'huonosti tuuletettu eikä pitänyt sadetta, ja malmia kului tonneittain.',
+      },
+      {
         osa: 'kaanne',
-        teksti: 'Työ vei yli kolme vuotta, ja lopulta heillä oli kymmenesosagramma puhdasta radiumkloridia. '
-          + 'Iltaisin radium hohti pimeässä, ja Curiet ihailivat sitä. '
-          + 'Marie sai fysiikan Nobelin Pierren ja Henri Becquerelin kanssa ja myöhemmin kemian Nobelin yksin.',
+        teksti: 'Työ vei yli kolme vuotta, ja vuonna 1902 heillä oli kymmenesosagramma puhdasta radiumkloridia. '
+          + 'Iltaisin radium hohti pimeässä, ja Curiet ihailivat sitä. Marie sai fysiikan Nobelin vuonna 1903 '
+          + 'Pierren ja Henri Becquerelin kanssa ja kemian Nobelin vuonna 1911 yksin.',
         kuva: 'laboratorio',
         vuodet: [
-          { vuosi: '1902', selite: 'radiumkloridi', kohta: 'kymmenesosagramma' },
-          { vuosi: '1903', selite: 'fysiikan Nobel', kohta: 'fysiikan Nobelin' },
-          { vuosi: '1911', selite: 'kemian Nobel', kohta: 'kemian Nobelin' },
+          { vuosi: '1902', selite: 'radiumkloridi', kohta: 'vuonna 1902' },
+          { vuosi: '1903', selite: 'fysiikan Nobel', kohta: 'vuonna 1903' },
+          { vuosi: '1911', selite: 'kemian Nobel', kohta: 'vuonna 1911' },
         ],
       },
       {
         osa: 'tanaan',
-        teksti: 'Koulun seinässä on laatta, joka kertoo löydöstä. '
-          + 'Marien myöhempi laboratorio on lähellä Curie-museona.',
+        teksti: 'Koulun seinässä on laatta, joka kertoo löydöstä. Marien myöhempi laboratorio on lähellä '
+          + 'Curie-museona.',
         kuva: 'laatta',
       },
     ],
@@ -1094,48 +1051,52 @@ export const FOKUSKOHTEET_FRA = [
     // teksti lasketaan jaksoista tiedoston lopussa.
     lahde: 'Matkakirjan oma teksti · lähteinä Hérodote, Paris ZigZag, Guinness World Records, '
       + 'Science and Media Museum, Google Arts & Culture ja Un jour de plus à Paris (tarkistettu 18.11.2026).',
-    otsikko: 'Lumière 1895 — kuvat alkavat liikkua',
+    otsikko: 'Ilta, jona kuvat alkoivat liikkua',
     /*
      * Äänitteitä ei ole vielä: `aanikansio` ja jaksojen `aanite` lisätään, kun Äänittäjä on
      * äänittänyt (äänitysjonon rivit ovat data/aanitysjono.tsv:ssä). Siihen asti jaksot
      * kuuluvat suoratoistona.
      */
     jaksot: [
-      { osa: 'nimi', teksti: 'Grand Café.' },
-      { osa: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
-      {
-        osa: 'koukku',
-        aani: 'isoisa',
-        teksti: 'Pariisi, 1873. Kävelin tänään Capucines-bulevardia pitkin. '
-          + 'Ihmisiä oli niin paljon, että jouduin astumaan kadulle.',
-        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
-      },
       {
         osa: 'tapahtuma',
-        teksti: 'Lumièren veljekset patentoivat keksintönsä helmikuussa 1895. '
-          + 'Laite oli kamera ja projektori yhdessä, ja sillä kuvattu filmi oli noin minuutin pituinen.',
+        teksti: 'Grand Café oli kahvila Capucines-bulevardilla Pariisissa, ja sen kellarissa maksava yleisö '
+          + 'katsoi Lumièren veljesten elokuvaa.',
         kuva: 'veljekset',
-        vuodet: [{ vuosi: '1895', selite: 'patentti', kohta: 'helmikuussa 1895' }],
       },
       {
         osa: 'tapahtuma',
-        teksti: 'Saman vuoden joulukuun 28. päivänä Grand Cafén kellarisalissa Capucines-bulevardilla '
-          + 'pidettiin maksullinen näytös. Lippu maksoi frangin, ja illalla katsojia oli vain kolmisenkymmentä. '
-          + 'Valkokankaalla Lumièren tehtaan portti Lyonissa aukesi, ja työläiset kävelivät ulos.',
+        teksti: 'Lumièren veljekset patentoivat keksintönsä helmikuussa 1895. Laite oli kamera ja projektori '
+          + 'yhdessä, ja sillä kuvattu filmi oli noin minuutin pituinen.',
         kuva: 'juliste',
-        vuodet: [{ vuosi: '1895', selite: 'Grand Cafén näytös', kohta: 'joulukuun 28. päivänä' }],
+        vuodet: [
+          { vuosi: '1895', selite: 'patentti', kohta: 'helmikuussa 1895' },
+        ],
+      },
+      {
+        osa: 'tapahtuma',
+        teksti: 'Joulukuun 28. päivänä 1895 Grand Cafén kellarisalissa pidettiin maksullinen näytös. Lippu maksoi '
+          + 'frangin, ja illalla katsojia oli vain kolmisenkymmentä. Valkokankaalla Lumièren tehtaan portti '
+          + 'Lyonissa aukesi, ja työläiset kävelivät ulos.',
+        vuodet: [
+          { vuosi: '1895', selite: 'Grand Cafén näytös', kohta: 'päivänä 1895' },
+        ],
       },
       {
         osa: 'kaanne',
-        teksti: 'Kutsuvieraiden joukossa oli taikuri Georges Méliès. Hän halusi ostaa laitteen, '
-          + 'mutta Lumièret eivät myyneet sitä. Puhe levisi, ja kadulle syntyi jono. '
-          + 'Méliès alkoi tehdä omia elokuviaan.',
+        teksti: 'Kutsuvieraiden joukossa oli taikuri Georges Méliès. Hän halusi ostaa laitteen, mutta Lumièret '
+          + 'eivät myyneet sitä. Puhe levisi, ja kadulle syntyi jono. Méliès alkoi tehdä omia elokuviaan: '
+          + 'ensimmäisen hän teki vuonna 1896 ja Matkan kuuhun vuonna 1902.',
         kuva: 'melies',
+        vuodet: [
+          { vuosi: '1896', selite: 'Mélièsin elokuva', kohta: 'vuonna 1896' },
+          { vuosi: '1902', selite: 'Matka kuuhun', kohta: 'vuonna 1902' },
+        ],
       },
       {
         osa: 'tanaan',
-        teksti: 'Grand Cafén paikalla on nykyään Hôtel Scribe. '
-          + 'Sen ravintoloiden sisäänkäynnillä on laatta, joka kertoo näytöksestä.',
+        teksti: 'Grand Cafén paikalla on nykyään Hôtel Scribe. Sen ravintoloiden sisäänkäynnillä on laatta, joka '
+          + 'kertoo näytöksestä.',
         kuva: 'laatta',
       },
     ],
@@ -1213,49 +1174,50 @@ export const FOKUSKOHTEET_FRA = [
     // teksti lasketaan jaksoista tiedoston lopussa.
     lahde: 'Matkakirjan oma teksti · lähteinä Science History Institute, Encyclopedia.com, ACS, Britannica ja Google Arts & Culture '
       + '(tarkistettu 18.11.2026).',
-    otsikko: 'Lavoisier 1780 — kaikki punnittiin',
+    otsikko: 'Mies, joka punnitsi kaiken',
     /*
      * Äänitteitä ei ole vielä: `aanikansio` ja jaksojen `aanite` lisätään, kun Äänittäjä on
      * äänittänyt (äänitysjonon rivit ovat data/aanitysjono.tsv:ssä). Siihen asti jaksot
      * kuuluvat suoratoistona.
      */
     jaksot: [
-      { osa: 'nimi', teksti: 'Lavoisierin laboratorio.' },
-      { osa: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
-      {
-        osa: 'koukku',
-        aani: 'isoisa',
-        teksti: 'Pariisi, 1873. Kävelin tänään Bastiljin lähellä kanavan vartta. '
-          + 'Rannassa oli niin paljon proomuja, että niiden välistä ei nähnyt vettä.',
-        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
-      },
       {
         osa: 'tapahtuma',
-        teksti: 'Antoine Lavoisier johti Arsenaalissa ruudin valmistusta. '
-          + 'Hänen laboratorionsa oli asunnon vieressä, ja siellä hän punnitsi kaiken ennen koetta ja sen jälkeen. '
+        teksti: 'Lavoisierin laboratorio oli Arsenaalin asunnon yhteydessä Pariisissa. Antoine Lavoisier johti '
+          + 'Arsenaalissa ruudin valmistusta ja punnitsi laboratoriossaan kaiken ennen koetta ja sen jälkeen. '
           + 'Tuloksista hän päätteli, että ainetta on kokeen jälkeen yhtä paljon kuin ennen sitä.',
         kuva: 'koe',
       },
       {
         osa: 'tapahtuma',
-        teksti: 'Kokeissaan hän huomasi, että palaessa aine yhtyy ilman osaan, jonka hän nimesi hapeksi. '
-          + 'Hänen vaimonsa Marie-Anne oli oppinut englantia ja käänsi ulkomaisia tutkimuksia ranskaksi. '
-          + 'Hän myös piirsi laitteet mittakaavaan, ja piirrokset ovat Lavoisierin oppikirjassa.',
+        teksti: 'Vuonna 1771 Lavoisier meni naimisiin Marie-Annen kanssa. Marie-Anne oppi englantia ja käänsi '
+          + 'ulkomaisia tutkimuksia ranskaksi. Lavoisier huomasi kokeissaan, että palaessa aine yhtyy ilman '
+          + 'osaan, jonka hän nimesi hapeksi.',
         kuva: 'laboratorio',
-        vuodet: [{ vuosi: '1789', selite: 'oppikirja', kohta: 'oppikirjassa' }],
+        vuodet: [
+          { vuosi: '1771', selite: 'naimisiin', kohta: 'Vuonna 1771' },
+        ],
       },
       {
-        osa: 'kaanne',
-        teksti: 'Lavoisier oli kuulunut vanhan hallinnon veronkantajiin. '
-          + 'Vallankumouksen tuomioistuin tuomitsi hänet kuolemaan, ja hänet mestattiin toukokuun 8. päivänä 1794.',
+        osa: 'tapahtuma',
+        teksti: 'Vuonna 1788 Jacques-Louis David maalasi Lavoisierista ja Marie-Annesta muotokuvan. Marie-Annen '
+          + 'työ näkyi myös oppikirjassa: vuonna 1789 ilmestyneeseen Lavoisierin oppikirjaan hän piirsi '
+          + 'laitteiden kuvat.',
         kuva: 'david',
-        vuodet: [{ vuosi: '1794', selite: 'Lavoisier mestattiin', kohta: 'toukokuun 8. päivänä' }],
+        vuodet: [
+          { vuosi: '1788', selite: 'Davidin muotokuva', kohta: 'Vuonna 1788' },
+          { vuosi: '1789', selite: 'oppikirja', kohta: 'vuonna 1789' },
+        ],
       },
       {
         osa: 'tanaan',
-        teksti: 'Lavoisierin laboratorion välineitä on nykyään Arts et Métiers -museossa Pariisissa. '
-          + 'Ne ovat siellä esillä.',
+        teksti: 'Lavoisier oli kuulunut vanhan hallinnon veronkantajiin. Vallankumouksen tuomioistuin tuomitsi '
+          + 'hänet kuolemaan, ja hänet mestattiin toukokuun 8. päivänä 1794. Lavoisierin laboratorion '
+          + 'välineitä on nykyään Arts et Métiers -museossa Pariisissa.',
         kuva: 'kaasumittarit',
+        vuodet: [
+          { vuosi: '1794', selite: 'Lavoisier mestattiin', kohta: 'päivänä 1794' },
+        ],
       },
     ],
     /*
@@ -1335,49 +1297,55 @@ export const FOKUSKOHTEET_FRA = [
     // teksti lasketaan jaksoista tiedoston lopussa.
     lahde: 'Matkakirjan oma teksti · lähteinä Institut Pasteur, École normale supérieure, Carl Zimmer (NYT) '
       + 'ja Encyclopædia Universalis (avatut sivut, tarkistettu 18.11.2026).',
-    otsikko: 'Pasteur — pullot pysyivät kirkkaina',
+    otsikko: 'Pullot, jotka pysyivät kirkkaina',
     /*
      * Äänitteitä ei ole vielä: `aanikansio` ja jaksojen `aanite` lisätään, kun Äänittäjä on
      * äänittänyt (äänitysjonon rivit ovat data/aanitysjono.tsv:ssä). Siihen asti jaksot
      * kuuluvat suoratoistona.
      */
     jaksot: [
-      { osa: 'nimi', teksti: 'Pasteurin laboratorio.' },
-      { osa: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
-      {
-        osa: 'koukku',
-        aani: 'isoisa',
-        teksti: 'Pariisi, 1873. Kävelin tänään rue d\'Ulmia pitkin. '
-          + 'Kadulla käveli muutama nuori mies, ja jokaisella oli kirja kainalossa.',
-        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
-      },
       {
         osa: 'tapahtuma',
-        teksti: 'Louis Pasteur työskenteli École normale supérieuren laboratoriossa rue d\'Ulmilla. '
-          + 'Hän keitti lientä lasipulloissa, joiden kaula oli taivutettu joutsenen kaulan muotoon. '
-          + 'Ilma pääsi pulloon, mutta pöly jäi mutkaan.',
-        kuva: 'pullot',
+        teksti: 'Pasteurin laboratorio oli École normale supérieuren tiloissa rue d\'Ulmilla Pariisissa. Louis '
+          + 'Pasteur tuli kouluun vuonna 1857 tieteellisten opintojen johtajaksi.',
+        kuva: 'maalaus',
+        vuodet: [
+          { vuosi: '1857', selite: 'tulee kouluun', kohta: 'vuonna 1857' },
+        ],
       },
       {
         osa: 'tapahtuma',
         teksti: 'Pasteurin vastustaja Félix Pouchet uskoi, että elämä voi syntyä itsestään mätänevästä aineesta. '
-          + 'Tiedeakatemia oli luvannut palkinnon sille, joka ratkaisee kiistan kokeilla. '
-          + 'Pasteur avasi pulloja jopa Alppien jäätiköllä. 1860-luvun alussa hän julkaisi tuloksensa.',
+          + 'Tiedeakatemia oli luvannut palkinnon sille, joka ratkaisee kiistan kokeilla.',
         kuva: 'pouchet',
       },
       {
+        osa: 'tapahtuma',
+        teksti: 'Pasteur keitti lientä lasipulloissa, joiden kaula oli taivutettu joutsenen kaulan muotoon. Ilma '
+          + 'pääsi pulloon, mutta pöly jäi mutkaan, ja liemi pysyi kirkkaana. Vuonna 1860 hän vei liemipulloja '
+          + 'jopa Alppien jäätikölle, jossa ilmassa oli vain vähän pölyä.',
+        kuva: 'pullot',
+        vuodet: [
+          { vuosi: '1860', selite: 'pullot jäätiköllä', kohta: 'Vuonna 1860' },
+        ],
+      },
+      {
         osa: 'kaanne',
-        teksti: 'Pasteur voitti kiistan. Hän osoitti myös, että käyminen on elävien mikrobien työtä. '
-          + 'Viinin tauteja hän torjui kuumentamalla viiniä, ja keksinnölle haettiin patentti 1865. '
-          + 'Menetelmää kutsutaan pastöroinniksi.',
-        kuva: 'maalaus',
-        vuodet: [{ vuosi: '1865', selite: 'pastörointipatentti', kohta: 'patentti 1865' }],
+        teksti: 'Pasteur voitti kiistan ja julkaisi tuloksensa 1860-luvun alussa. Hän osoitti myös, että käyminen '
+          + 'on elävien mikrobien työtä. Viinin tauteja hän torjui kuumentamalla viiniä, ja keksinnölle '
+          + 'haettiin patentti vuonna 1865. Menetelmää kutsutaan pastöroinniksi.',
+        vuodet: [
+          { vuosi: '1865', selite: 'pastörointipatentti', kohta: 'vuonna 1865' },
+        ],
       },
       {
         osa: 'tanaan',
-        teksti: 'École normale supérieure toimii yhä rue d\'Ulmilla Latinalaiskorttelissa. '
-          + 'Pasteur oli koulun tieteellisten opintojen johtaja ja työskenteli siellä vuosikymmeniä.',
+        teksti: 'Vuonna 1888 avattiin Institut Pasteur, joka kantaa hänen nimeään. École normale supérieure '
+          + 'toimii yhä rue d\'Ulmilla Latinalaiskorttelissa.',
         kuva: 'ens',
+        vuodet: [
+          { vuosi: '1888', selite: 'Institut Pasteur', kohta: 'Vuonna 1888' },
+        ],
       },
     ],
     /*
@@ -1454,45 +1422,46 @@ export const FOKUSKOHTEET_FRA = [
     lahde: 'Matkakirjan oma teksti · lähteinä napoleon.org, Pariisin oopperan sivut (operadeparis.fr), Bonjour Paris, '
       + 'evous.fr, Visiting Paris by Yourself, Hérodote.net, Art Visit Guide ja Europe for Visitors '
       + '(avatut sivut, tarkistettu 18.11.2026).',
-    otsikko: 'Palais Garnier — ooppera, joka odotti',
+    otsikko: 'Ooppera, joka odotti',
     /*
      * Äänitteitä ei ole vielä: `aanikansio` ja jaksojen `aanite` lisätään, kun Äänittäjä on
      * äänittänyt (äänitysjonon rivit ovat data/aanitysjono.tsv:ssä).
      */
     jaksot: [
-      { osa: 'nimi', teksti: 'Palais Garnier.' },
-      { osa: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
-      {
-        osa: 'koukku',
-        aani: 'isoisa',
-        teksti: 'Pariisi, 1873. Kävelin tänään Place de l\'Opéralle. Suuren oopperatalon julkisivu seisoo jo '
-          + 'valmiina, mutta sisällä työ jatkuu vielä.',
-        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
-      },
       {
         osa: 'tapahtuma',
-        teksti: 'Keisari Napoleon III päätti rakennuttaa uuden oopperan, kun hän oli välttynyt murhayritykseltä '
-          + 'vanhan oopperan edessä. Arkkitehtikilpailuun tuli yli sata ehdotusta, ja voittajaksi valittiin '
-          + 'nuori, tuntematon arkkitehti Charles Garnier.',
+        teksti: 'Palais Garnier on Pariisin oopperatalo, jonka rakentamisen sai alkuun murhayritys. Vuonna 1858 '
+          + 'keisari Napoleon III välttyi murhayritykseltä vanhan oopperan edessä. Sen jälkeen hän päätti '
+          + 'rakennuttaa uuden. Kilpailuun tuli yli sata ehdotusta, ja voittajaksi valittiin nuori, '
+          + 'tuntematon arkkitehti Charles Garnier.',
         kuva: 'julkisivu',
+        vuodet: [
+          { vuosi: '1858', selite: 'murhayritys', kohta: 'Vuonna 1858' },
+        ],
       },
       {
         osa: 'tapahtuma',
         teksti: 'Kun työmaalla kaivettiin perustuksia, maasta nousi pohjavettä. Garnier rakennutti kellariin '
-          + 'vesitiiviin betonisäiliön. Myöhemmin sota ja Pariisin kommuuni pysäyttivät rakentamisen.',
+          + 'vesitiiviin betonisäiliön. Vuonna 1870 alkanut sota ja Pariisin kommuuni pysäyttivät '
+          + 'rakentamisen.',
         kuva: 'tyomaa',
+        vuodet: [
+          { vuosi: '1870', selite: 'sota alkaa', kohta: 'Vuonna 1870' },
+        ],
       },
       {
         osa: 'kaanne',
         teksti: 'Syksyllä 1873 vanha oopperatalo paloi. Palon jälkeen Garnierin työmaa sai jatkua, ja uusi talo '
           + 'valmistui alle kahdessa vuodessa.',
         kuva: 'palo',
-        vuodet: [{ vuosi: '1873', selite: 'vanha ooppera paloi', kohta: 'Syksyllä 1873' }],
+        vuodet: [
+          { vuosi: '1873', selite: 'vanha ooppera paloi', kohta: 'Syksyllä 1873' },
+        ],
       },
       {
         osa: 'tanaan',
-        teksti: 'Talo avattiin tammikuussa 1875, ja Garnier joutui maksamaan paikkansa avajaisissa itse. '
-          + 'Nykyään talossa esitetään yhä balettia, ja katsomon katon on maalannut Marc Chagall vuonna 1964.',
+        teksti: 'Talo avattiin tammikuussa 1875, ja Garnier joutui maksamaan paikkansa avajaisissa itse. Nykyään '
+          + 'talossa esitetään yhä balettia, ja katsomon katon on maalannut Marc Chagall vuonna 1964.',
         kuva: 'portaikko',
         vuodet: [
           { vuosi: '1875', selite: 'talo avattiin', kohta: 'tammikuussa 1875' },
@@ -1536,8 +1505,8 @@ export const FOKUSKOHTEET_FRA = [
 ];
 
 /*
- * TUILERIES-KOE: kohteen `teksti` = jaksot kappaleina ilman nimiosaa (esittely ensin, isoisän lause
- * sen jälkeen, antaa "Kaksi vuotta aiemmin" -alulle ajan). Yksi lähde: vanha esitys, lehti
+ * TUILERIES-KOE: kohteen `teksti` = jaksot kappaleina ilman nimiosaa (vuodesta 20.11.2026 jaksoissa ei ole
+ * nimi-, esittely- eikä isoisäjaksoa). Yksi lähde: vanha esitys, lehti
  * (js/lehtinostot.js) ja Pulun konteksti lukevat saman tekstin kuin
  * jaksoesitys.
  */
