@@ -1,0 +1,77 @@
+{
+  "checkedAt": "2026-11-20T14:09:01.312701+00:00",
+  "images": [
+    {
+      "taskNumber": 2804,
+      "title": "Portugalilainen synagoga",
+      "file": "amsterdam-portugalilainen-synagoga.png",
+      "size": [
+        512,
+        512
+      ],
+      "rgba": true,
+      "sha256": "09e86968295f864627d19d58b2264366f655408c3ffc7f7faa9d5e6990465446",
+      "selectedAttempt": 2,
+      "callCount": 2,
+      "qa": "pass-for-KK-review",
+      "visualQA": "Suuri punatiilinen sali erottuu isometrisenä. Pääjulkisivussa kolme korkeaa ruudutettua kaari-ikkunaa sekä matala keskitetty kivinen porttikehys. Vaalea listaräystäs ja kaide, tumma katto ja pehmeä varjo. Julkisivussa ei tekstiä.",
+      "reviewNote": "Ensimmäinen otto hylättiin julkisivun viiden korkean kaari-ikkunan vuoksi. Toisessa otossa pääjulkisivun ikkunaryhmä on yksinkertaistettu tilauksen kolmeen korkeaan kaari-ikkunaan.",
+      "guard256": {
+        "fill": 0.341278076171875,
+        "edge": 0
+      },
+      "contentBounds": [
+        65,
+        105,
+        447,
+        407
+      ],
+      "contentBoundsPercent": [
+        12.7,
+        20.51,
+        87.3,
+        79.49
+      ]
+    },
+    {
+      "taskNumber": 2805,
+      "title": "Montelbaanstoren",
+      "file": "amsterdam-montelbaanstoren.png",
+      "size": [
+        512,
+        512
+      ],
+      "rgba": true,
+      "sha256": "23dc9d8b7c88a95d6e4db1768de79ec6ae801ea10c601a7bc9c9bfac38879e05",
+      "selectedAttempt": 1,
+      "callCount": 1,
+      "qa": "pass-for-KK-review",
+      "visualQA": "Paksu pyöreä tiilinen vartiotorni, sen yllä kulmikas kellotaso ja vaalea kahdeksankulmainen lyhty parvekkeineen. Kaksi tummaa kellotaulua samassa kerroksessa. Tauluissa viisarit ja viivamerkit, ei luettavia numeroita. Kapea huippu, viiri ja jalusta näkyvät kokonaan.",
+      "reviewNote": "Kellotaulujen numerointi on pelkistetty viivoiksi tilauksen mukaisesti.",
+      "guard256": {
+        "fill": 0.0871734619140625,
+        "edge": 0
+      },
+      "contentBounds": [
+        195,
+        65,
+        316,
+        447
+      ],
+      "contentBoundsPercent": [
+        38.09,
+        12.7,
+        61.72,
+        87.3
+      ]
+    }
+  ],
+  "alphaThresholdAt256": 200,
+  "guardLimits": {
+    "fillLessThan": 0.6,
+    "edgeAtMost": 0.35
+  },
+  "contentInside75Percent": true,
+  "kkApproval": "awaiting",
+  "background": "Native alpha, scaled and centered in 512 px transparent canvas"
+}
