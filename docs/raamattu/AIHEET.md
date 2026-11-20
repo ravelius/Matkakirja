@@ -57,4 +57,4 @@ Aiheita 54 / 60. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | latausruutu | Latausruutu | NUI | 1.2 kt | 18.11.2026 |
 | kaupungin-pohja | Kaupungin pohja | KS | 0.9 kt | 18.11.2026 |
 | pallo-google-versio | Pallon Google-versio | KS | 0.7 kt | 18.11.2026 |
-| noston-kuvat | Noston kuvat | NUI | 1.3 kt | 20.11.2026 |
+| noston-kuvat | Noston kuvat | NUI | 1.5 kt | 20.11.2026 |

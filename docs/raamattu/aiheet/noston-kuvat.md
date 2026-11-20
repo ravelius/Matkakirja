@@ -10,6 +10,7 @@ SÄÄNNÖT:
 5. Kuva mitoitetaan kohteen mukaan: se mahtuu kohteen yläpuolelle, ei peitä kohdetta eikä jää muiden rakennusten taakse. [P-261118-25]
 6. Kuvan ja palkin väliin jää pieni rako (noin 5 % ruudun korkeudesta): kuva ylhäällä, mutta ei kiinni palkissa. [P-261118-26]
 7. Nostolla 3–4 kuvaa (aitoja tai Codexin havainnekuvia) kuvaamassa tekstiä; reunat häivytetty läpinäkyviksi kevyesti soikeaan muotoon; kuvat vaihtuvat ristihäivytyksellä. Ensin Pariisi; muut kaupungit omistajan hyväksynnän jälkeen. [P-261120-5]
+8. Havainnekuvan aikana nostopalkissa syttyy pienieleinen havainnekuvan symboli (pelaaja oppii sen toistosta). [P-261120-8]
 
 EI VIKA:
 - Ei vielä merkittyjä.
