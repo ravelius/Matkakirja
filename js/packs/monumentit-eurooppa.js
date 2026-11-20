@@ -165,16 +165,17 @@ export const EUROOPAN_KADONNEET = {
       jaksot: [
         {
           osa: 'tapahtuma',
+          kuva: 'linnake',
           teksti: 'Grand Châtelet oli Pariisin vankila- ja oikeuslinnake Seinen oikealla rannalla. Ludvig VI '
             + 'rakennutti sen kiveksi 1100-luvulla, ja kun kaupungin ympärille alettiin rakentaa muuria vuonna 1190, siitä '
             + 'tuli prévôtin eli kuninkaan virkamiehen pääpaikka.',
-          kuva: 'loisto',
           vuodet: [
             { vuosi: '1190', selite: 'kaupunki muurataan', kohta: 'vuonna 1190' },
           ],
         },
         {
           osa: 'tapahtuma',
+          kuva: 'vankila',
           teksti: 'Vankeina olivat François Villon, Molière velkojen takia vuonna 1645 ja rosvopäällikkö '
             + 'Cartouche vuonna 1721. Linnakkeen kuoppasolu, la Fosse, kapeni alaspäin kuin kartio, eikä '
             + 'vanki voinut seistä eikä maata kunnolla.',
@@ -185,12 +186,14 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'tapahtuma',
+          kuva: 'vankila',
           teksti: 'Linnakkeessa oli myös ruumishuone, ranskaksi morgue. Sanan sanotaan syntyneen täällä: '
             + 'vartijat tuijottivat uutta vankia pitkään painaakseen hänen kasvonsa mieleen, jos hän pakenisi. '
             + 'Myöhemmin tänne tuotiin tunnistettavaksi löydetyt vainajat.',
         },
         {
           osa: 'kaanne',
+          kuva: 'purku',
           teksti: 'Syyskuun alussa 1792 joukko tunkeutui linnakkeeseen ja surmasi vankeja, ja vankila '
             + 'hylättiin. Linnakkeen purku alkoi vuonna 1802.',
           hologrammi: 'sammuu',
@@ -202,6 +205,7 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'tanaan',
+          kuva: 'nykyinen',
           teksti: 'Paikalle tehtiin uusi Place du Châtelet. Napoleon tilasi sinne vuonna 1806 '
             + 'palmusuihkulähteen voitonmuistomerkiksi. Fontaine du Palmier seisoo aukiolla yhä.',
           vuodet: [
@@ -210,11 +214,45 @@ export const EUROOPAN_KADONNEET = {
         },
       ],
       jaksokuvat: {
-        loisto: {
-          osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-grand-chatelet-loistoaika.jpg',
-          laji: 'havainnekuva',
-          lyhyt: 'Grand Châtelet loistoaikanaan',
-          lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: paris.fr, Criminocorpus ja Pariszigzag.',
+        linnake: {
+          osoite: 'https://media.matkakirja.app/kuvat/grand-chatelet-linnake.jpg',
+          laji: 'piirros',
+          lyhyt: 'Grand Châtelet 1800-luvun litografiassa',
+          lahde: 'Edouard Auguste Nousveaux (Le Vieux Paris, litografia), Musée Carnavalet / Paris Musées, Wikimedia Commons (CC0), rajattu',
+          tekija: 'Edouard Auguste Nousveaux (Pernotin piirroksen mukaan)',
+          lisenssi: 'CC0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        vankila: {
+          osoite: 'https://media.matkakirja.app/kuvat/grand-chatelet-vankila.jpg',
+          laji: 'piirros',
+          lyhyt: 'Grand Châtelet ja sen portti arkielämän keskellä',
+          lahde: 'Auguste-Sébastien Bénard, Le Grand Châtelet du XVIIIe siècle (akvarelli), Musée Carnavalet / Paris Musées, Wikimedia Commons (CC0), esirajattu ja rajattu',
+          tekija: 'Auguste-Sébastien Bénard',
+          lisenssi: 'CC0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        purku: {
+          osoite: 'https://media.matkakirja.app/kuvat/grand-chatelet-purku.jpg',
+          laji: 'piirros',
+          lyhyt: 'Linnakkeen purku 1802 jälkikäteisessä kuvassa',
+          lahde: 'Theodor Josef Hubert Hoffbauer, Démolition du Châtelet, an 10 (1802), Wikimedia Commons (public domain), esirajattu ja rajattu',
+          tekija: 'Theodor Josef Hubert Hoffbauer',
+          lisenssi: 'Public domain',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        nykyinen: {
+          osoite: 'https://media.matkakirja.app/kuvat/grand-chatelet-nykyinen.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Pylväs ja kaksi teatteria Pariisin keskustassa yöllä',
+          lahde: 'Dimitri Destugues, Wikimedia Commons (CC BY-SA 3.0), rajattu',
+          tekija: 'Dimitri Destugues',
+          lisenssi: 'CC BY-SA 3.0',
+          leveys: 1200,
+          korkeus: 800,
         },
       },
       lahde: 'Matkakirjan oma teksti · lähteinä Pariisin kaupungin sivut (paris.fr), Parcours Révolution, '
@@ -246,13 +284,14 @@ export const EUROOPAN_KADONNEET = {
       jaksot: [
         {
           osa: 'tapahtuma',
+          kuva: 'linnoitus',
           teksti: 'Temple-torni kohosi temppeliritarien Pariisin päämajan linnoituksessa. Philippe Augusten '
             + 'ajoista kuninkaan aarre talletettiin ritarien linnoitukseen, ja sen muurien suojaan hakeutui '
             + 'myöhemmin Pariisin veroista vapaita käsityöläisiä.',
-          kuva: 'loisto',
         },
         {
           osa: 'tapahtuma',
+          kuva: 'vangiksi',
           teksti: 'Elokuussa 1792 kuningasperhe vietiin Templeen vangiksi. Ludvig XVI vietiin sieltä '
             + 'giljotiinille, ja hänen poikansa Ludvig XVII kuoli Templessä vuonna 1795.',
           vuodet: [
@@ -282,16 +321,41 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'tanaan',
+          kuva: 'nykyinen',
           teksti: 'Tornista ei ole jäänyt mitään. Sen paikan vieressä on nykyisin Square du Temple -puisto, ja '
             + 'Rue Eugène-Spullerilla seisoo kaupunginosan kaupungintalo.',
         },
       ],
       jaksokuvat: {
-        loisto: {
-          osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-temple-torni-loistoaika-v2.jpg',
-          laji: 'havainnekuva',
-          lyhyt: 'Temple-torni loistoaikanaan',
-          lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: Histoires de Paris, Parcours Révolution ja templiers.org.',
+        linnoitus: {
+          osoite: 'https://media.matkakirja.app/kuvat/temple-torni-linnoitus.jpg',
+          laji: 'piirros',
+          lyhyt: 'Temple-torni ja sen linnoitus 1800-luvun piirroksessa',
+          lahde: 'François Alexandre Pernot, Le Temple (lyijykynäpiirros, Le vieux Paris), Musée Carnavalet / Paris Musées, Wikimedia Commons (CC0), esirajattu ja rajattu',
+          tekija: 'François Alexandre Pernot',
+          lisenssi: 'CC0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        vangiksi: {
+          osoite: 'https://media.matkakirja.app/kuvat/temple-torni-vangiksi.jpg',
+          laji: 'piirros',
+          lyhyt: 'Kuningasperheen saatto Templeen 13.8.1792',
+          lahde: 'Swebach-Desfontaines / Berthault, Translation de Louis XVI et de sa famille au Temple, 13 août 1792 (kaiverrus), Musée Carnavalet / Paris Musées, Wikimedia Commons (CC0), esirajattu ja rajattu',
+          tekija: 'Jacques François Joseph Swebach-Desfontaines (piirros), Pierre-Gabriel Berthault (kaiverrus)',
+          lisenssi: 'CC0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        nykyinen: {
+          osoite: 'https://media.matkakirja.app/kuvat/temple-torni-nykyinen.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Lampi ja vesiputous kaupunkipuistossa Pariisissa',
+          lahde: 'Guilhem Vellut, Wikimedia Commons (CC BY 2.0), rajattu',
+          tekija: 'Guilhem Vellut',
+          lisenssi: 'CC BY 2.0',
+          leveys: 1200,
+          korkeus: 800,
         },
       },
       lahde: 'Matkakirjan oma teksti · lähteinä Histoires de Paris, Paris Centre -kaupunginosan sivut, '
@@ -567,20 +631,22 @@ export const EUROOPAN_KADONNEET = {
       jaksot: [
         {
           osa: 'tapahtuma',
+          kuva: 'kaiverrus1878',
           teksti: 'Trocadéron palatsi rakennettiin vuoden 1878 maailmannäyttelyä varten Seinen pohjoisrannalle. '
             + 'Siinä oli kaksi korkeaa tornia, kaksi suurta siipeä ja yli neljän tuhannen paikan sali.',
-          kuva: 'loisto',
           vuodet: [
             { vuosi: '1878', selite: 'maailmannäyttely', kohta: 'vuoden 1878' },
           ],
         },
         {
           osa: 'tapahtuma',
+          kuva: 'sali',
           teksti: 'Salin Cavaillé-Collin urut vihittiin elokuussa 1878, ja César Franck sävelsi niille kolmen '
             + 'kappaleen sarjan Trois Pièces.',
         },
         {
           osa: 'tapahtuma',
+          kuva: 'sali',
           teksti: 'Palatsiin kuului myös etnografinen museo, joka syntyi vuoden 1878 näyttelystä ja avattiin '
             + 'yleisölle vuonna 1882. 1920-luvulla museo oli päässyt rappiolle.',
           vuodet: [
@@ -589,6 +655,7 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'kaanne',
+          kuva: 'purku',
           teksti: 'Vuonna 1935 alkoi palatsin purku vuoden 1937 näyttelyn tieltä, ja siivet jäivät uuden '
             + 'Chaillot\'n palatsin osiksi.',
           hologrammi: 'sammuu',
@@ -600,6 +667,7 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'tanaan',
+          kuva: 'nykyinen',
           teksti: 'Chaillot\'n palatsissa YK:n yleiskokous hyväksyi vuonna 1948 ihmisoikeuksien '
             + 'yleismaailmallisen julistuksen. Trocadéron urut soivat nykyisin Lyonissa, jonne ne '
             + 'siirrettiin vuonna 1977.',
@@ -610,11 +678,45 @@ export const EUROOPAN_KADONNEET = {
         },
       ],
       jaksokuvat: {
-        loisto: {
-          osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-trocadero-loistoaika.jpg',
-          laji: 'havainnekuva',
-          lyhyt: 'Trocadéron palatsi loistoaikanaan',
-          lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: Auditorium de Lyon ja Pariisin kaupunki.',
+        kaiverrus1878: {
+          osoite: 'https://media.matkakirja.app/kuvat/trocadero-kaiverrus1878.jpg',
+          laji: 'piirros',
+          lyhyt: 'Trocadéron palatsi tornineen, kaiverros 1878',
+          lahde: 'Trichon, 1878, Wikimedia Commons (Public domain), rajattu',
+          tekija: 'Trichon',
+          lisenssi: 'Public domain',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        sali: {
+          osoite: 'https://media.matkakirja.app/kuvat/trocadero-sali.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Trocadéron suuri sali ja urut',
+          lahde: 'Tuntematon valokuvaaja (Roger-Viollet), Wikimedia Commons (Public domain), rajattu',
+          tekija: 'Tuntematon valokuvaaja (Roger-Viollet)',
+          lisenssi: 'Public domain',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        purku: {
+          osoite: 'https://media.matkakirja.app/kuvat/trocadero-purku.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Yötyötä Trocadéron purkutyömaalla, helmikuu 1936',
+          lahde: 'Agence Meurisse, helmikuu 1936, Wikimedia Commons / Gallica (Public domain), esirajattu ja rajattu',
+          tekija: 'Agence de presse Meurisse',
+          lisenssi: 'Public domain',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        nykyinen: {
+          osoite: 'https://media.matkakirja.app/kuvat/trocadero-nykyinen.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Trocadéron urut nykyään Lyonin Auditoriumissa',
+          lahde: 'Erclairbair, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+          tekija: 'Erclairbair',
+          lisenssi: 'CC BY-SA 4.0',
+          leveys: 1200,
+          korkeus: 800,
         },
       },
       lahde: 'Matkakirjan oma teksti · lähteinä POP PA00086706, L\'art et l\'industrie de tous les peuples à '
@@ -652,22 +754,24 @@ export const EUROOPAN_KADONNEET = {
       jaksot: [
         {
           osa: 'tapahtuma',
+          kuva: 'loisto',
           teksti: 'Galerie des Machines oli vuoden 1889 Pariisin maailmannäyttelyn konehalli Champ-de-Marsilla, '
             + 'kentän toisessa päässä kuin Eiffel-torni. Se oli noin 420 metriä pitkä ja 115 metriä leveä, '
             + 'eikä sen sisällä ollut yhtään pilaria, sillä teräskaaret nojasivat toisiinsa kolmesta '
             + 'nivelestä.',
-          kuva: 'loisto',
           vuodet: [
             { vuosi: '1889', selite: 'maailmannäyttely', kohta: 'vuoden 1889' },
           ],
         },
         {
           osa: 'tapahtuma',
+          kuva: 'loisto',
           teksti: 'Vieraita kuljettivat hallissa liikkuvat sillat. Esillä oli myös Edisonin fonografi, jolla '
             + 'kuultiin muun muassa Marseillaise.',
         },
         {
           osa: 'tapahtuma',
+          kuva: 'hevosnayttely',
           teksti: 'Näyttelyn jälkeenkin halli jäi käyttöön: vuonna 1900 siellä pidettiin maatalouden ja '
             + 'elintarvikkeiden näyttely, ja marraskuussa 1901 alkoi Barnum & Bailey -sirkuksen esityssarja '
             + 'kolmessa areenassa. Sarja päättyi maaliskuussa 1902.',
@@ -679,6 +783,7 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'kaanne',
+          kuva: 'halli1900',
           teksti: 'Vuonna 1909 halli purettiin, jotta näkymä Champ-de-Marsille aukeaisi. Yli neljäkymmentä '
             + 'metriä korkea halli oli seissyt paikallaan kaksikymmentä vuotta.',
           hologrammi: 'sammuu',
@@ -689,21 +794,56 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'tanaan',
+          kuva: 'nykyinen',
           teksti: 'Hallia ei ole enää. Sen paikka oli Champ-de-Marsin eteläpäässä École Militairen edessä, ja kentän toisessa päässä seisoo yhä Eiffel-torni.',
         },
       ],
       jaksokuvat: {
         loisto: {
-          osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-galerie-des-machines-loistoaika.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-galerie-des-machines-loistoaika-3x2.jpg',
           laji: 'havainnekuva',
           lyhyt: 'Galerie des Machines loistoaikanaan',
-          lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: paris.fr, BnF ja Structurae.',
+          lahde: 'Matkakirjan havainnekuva (tekoälyllä tuotettu), rajattu',
+          tekija: 'Matkakirja (tekoälyllä tuotettu havainnekuva)',
+          lisenssi: 'Matkakirjan oma',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        hevosnayttely: {
+          osoite: 'https://media.matkakirja.app/kuvat/galerie-des-machines-hevosnayttely.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Hevosnäyttely Galerie des Machinesissa, 1908',
+          lahde: 'Agence Rol, 1908, Wikimedia Commons / Gallica (Public domain), esirajattu ja rajattu',
+          tekija: 'Agence Rol',
+          lisenssi: 'Public domain',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        halli1900: {
+          osoite: 'https://media.matkakirja.app/kuvat/galerie-des-machines-halli1900.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Konehallin pääty ja valaisintorni ennen purkua',
+          lahde: 'Agence Rol, Wikimedia Commons / Gallica (Public domain), esirajattu ja rajattu',
+          tekija: 'Agence Rol',
+          lisenssi: 'Public domain',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        nykyinen: {
+          osoite: 'https://media.matkakirja.app/kuvat/galerie-des-machines-nykyinen.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Champ-de-Mars ja Eiffel-torni École Militairelta nähtynä',
+          lahde: 'cherisam, Wikimedia Commons (CC BY-SA 3.0), esirajattu ja rajattu',
+          tekija: 'cherisam',
+          lisenssi: 'CC BY-SA 3.0',
+          leveys: 1200,
+          korkeus: 800,
         },
       },
       lahde: 'Matkakirjan oma teksti · lähteinä Parville, L\'Exposition universelle (1890), Pariisin '
         + 'kaupungin Ces lieux disparus -sarja, Structurae, Pariszigzag, Gilwro, BnF (CNAC), AHICF, '
         + 'Cambridge University Press ja Phonographia (avatut sivut, tarkistettu 20.11.2026).',
-      kuva: 'ihme-galerie-des-machines-loistoaika.jpg',
+      kuva: 'ihme-galerie-des-machines-loistoaika-3x2.jpg',
       lyhyt: 'Näyttelyvieras seisoo liikkuvalla sillalla koneiden yläpuolella ja katsoo, kuinka kaari '
         + 'nousee yli hallin; parikymmentä vuotta myöhemmin halli puretaan.',
       selite: 'Vuonna 1889 näyttelyvieras seisoo liikkuvalla sillalla koneiden yläpuolella ja katsoo, kuinka '

@@ -244,11 +244,50 @@ export const FOKUSVIRTA_PARIISI = {
        * mikrofilmi piiritysajalta. Restrictions tyhjä.
        */
       kuva: {
-        tiedosto: 'Pellicule du Journal Pigeons Voyageurs, Souvenir du Siège de Paris, 1870-1871. PH20110 (15 of 20).jpg',
-        selite: 'René Dagronin mikrofilmi piiritetystä Pariisista. '
-          + 'Filmin koko on noin viisi senttiä kolme senttiä.',
-        // Tekijän nimi Commonsin omassa muodossa (ks. yllä).
-        lahde: 'Dagron, Prudent René-Patrice, Wikimedia Commons (CC0)',
+        osoite: 'https://media.matkakirja.app/kuvat/piiritys-1870-kyyhkyset.jpg',
+        laji: 'maalaus',
+        lyhyt: 'Kyyhkynen lentoon Pariisin kattojen yllä, 1870-71',
+        selite: 'Kyyhkynen lentoon Pariisin kattojen yllä, 1870-71',
+        lahde: 'Jacques Guiaud ja Jules Didier (maalaus; vedoksen kuvaaja tuntematon), Paris Musées / Musée Carnavalet, Wikimedia Commons (CC0), esirajattu ja rajattu',
+        tekija: 'Jacques Guiaud ja Jules Didier (maalaus), valokuvavedos tuntematon',
+        lisenssi: 'CC0',
+        leveys: 1200,
+        korkeus: 800,
+      },
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/piiritys-1870-ilmapallo.jpg',
+          laji: 'maalaus',
+          lyhyt: 'Ilmapallot valmiina lähtöön Montmartrella, 1870',
+          selite: 'Ilmapallot valmiina lähtöön Montmartrella, 1870',
+          lahde: 'Jacques Guiaud ja Jules Didier (maalaus), Paris Musées / Musée Carnavalet, Wikimedia Commons (CC0), rajattu',
+          tekija: 'Jacques Guiaud ja Jules Didier',
+          lisenssi: 'CC0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/piiritys-1870-viestilevy.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Dagronin valokuvaama viestilevy piirityksen ajalta',
+          selite: 'Dagronin valokuvaama viestilevy piirityksen ajalta',
+          lahde: 'René Dagron, Paris Musées / Musée Carnavalet, Wikimedia Commons (CC0), rajattu',
+          tekija: 'René Dagron',
+          lisenssi: 'CC0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+      ],
+      valokuva: {
+        osoite: 'https://media.matkakirja.app/kuvat/piiritys-1870-hotel-de-ville.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Pariisin Hôtel de Ville Seinen yli nykyään',
+        selite: 'Pariisin Hôtel de Ville Seinen yli nykyään',
+        lahde: 'Marcin Białek, Wikimedia Commons (CC BY-SA 3.0), rajattu',
+        tekija: 'Marcin Białek',
+        lisenssi: 'CC BY-SA 3.0',
+        leveys: 1200,
+        korkeus: 800,
       },
       visa: {
         kysymys: 'Miten kokonaisten sanomalehtien verran viestejä '
@@ -303,12 +342,50 @@ export const FOKUSVIRTA_PARIISI = {
        * isoisän matkaa ja asetettiin näytteille vasta sen jälkeen.
        */
       kuva: {
-        tiedosto: 'Monet - Impression, Sunrise.jpg',
-        lyhyt: 'Claude Monet\'n Impression, soleil levant vuodelta 1872 antoi pilkkanimen koko ryhmälle.',
-        selite: 'Claude Monet’n Impression, soleil levant vuodelta '
-          + '1872. Kriitikko teki sen nimestä pilkkanimen koko '
-          + 'ryhmälle.',
-        lahde: 'Claude Monet 1872, Wikimedia Commons (public domain)',
+        osoite: 'https://media.matkakirja.app/kuvat/monet-1874-bazille.jpg',
+        laji: 'maalaus',
+        lyhyt: 'Bazillen ateljee Pariisissa, maalaus vuodelta 1870',
+        selite: 'Bazillen ateljee Pariisissa, maalaus vuodelta 1870',
+        lahde: 'Frédéric Bazille (Musée d’Orsay), Wikimedia Commons (Public domain), rajattu',
+        tekija: 'Frédéric Bazille',
+        lisenssi: 'Public domain',
+        leveys: 1200,
+        korkeus: 800,
+      },
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/monet-1874-nadar.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Nadarin ateljeen julkisivu noin vuonna 1860',
+          selite: 'Nadarin ateljeen julkisivu noin vuonna 1860',
+          lahde: 'Nadar, Wikimedia Commons (Public domain), esirajattu ja rajattu',
+          tekija: 'Nadar (Gaspard-Félix Tournachon)',
+          lisenssi: 'Public domain',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/monet-1874-impression.jpg',
+          laji: 'maalaus',
+          lyhyt: 'Claude Monet’n Impression, soleil levant, 1872',
+          selite: 'Claude Monet’n Impression, soleil levant, 1872',
+          lahde: 'Claude Monet, Wikimedia Commons (Public domain), rajattu',
+          tekija: 'Claude Monet',
+          lisenssi: 'Public domain',
+          leveys: 1200,
+          korkeus: 800,
+        },
+      ],
+      valokuva: {
+        osoite: 'https://media.matkakirja.app/kuvat/monet-1874-marmottan.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Musée Marmottan Monet Pariisissa nykyään',
+        selite: 'Musée Marmottan Monet Pariisissa nykyään',
+        lahde: 'Ardfern, Wikimedia Commons (CC BY-SA 3.0), rajattu',
+        tekija: 'Ardfern',
+        lisenssi: 'CC BY-SA 3.0',
+        leveys: 1200,
+        korkeus: 800,
       },
       visa: {
         kysymys: 'Mistä impressionistit saivat nimensä?',
@@ -520,11 +597,39 @@ export const FOKUSVIRTA_PARIISI = {
        * tien vierellä. Lähderivi sanoo sen itse.
        */
       kuva: {
-        osoite: 'assets/kartat/nostot/nosto-kirahvin-kavelymatka-loistoaika.webp',
-        lyhyt: 'Kirahvi kävelee maantietä takki päällä, saattajat rinnalla ja kyläläiset katsomassa.',
-        selite: 'Kirahvi kävelemässä maantietä takki päällä, saattajat '
-          + 'rinnalla ja kyläläiset tien vierellä katsomassa.',
-        lahde: 'Matkakirjan havainnekuva: hetki kirahvin kävelymatkalta',
+        osoite: 'https://media.matkakirja.app/kuvat/kirahvi-1827-marseille.jpg',
+        laji: 'maalaus',
+        lyhyt: 'Marseillen satama noin vuonna 1825',
+        selite: 'Marseillen satama noin vuonna 1825',
+        lahde: 'Ambroise Louis Garneray (Commons-tekijäkenttä: McLeod), n. 1825, Wikimedia Commons (Public domain), rajattu',
+        tekija: 'Ambroise Louis Garneray (kuvauksen mukaan; tiedoston tekijäkenttä McLeod)',
+        lisenssi: 'Public domain',
+        leveys: 1200,
+        korkeus: 800,
+      },
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/kirahvi-1827-viuhka.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Kirahvia esittävä viuhka vuodelta 1827',
+          selite: 'Kirahvia esittävä viuhka vuodelta 1827',
+          lahde: 'Tuntematon tekijä, 1827 (Musée Carnavalet / Paris Musées), Wikimedia Commons (CC0), rajattu',
+          tekija: 'Tuntematon tekijä (Musée Carnavalet)',
+          lisenssi: 'CC0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+      ],
+      valokuva: {
+        osoite: 'https://media.matkakirja.app/kuvat/kirahvi-1827-nykyinen.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Jardin des Plantesin eläintarha nykyään',
+        selite: 'Jardin des Plantesin eläintarha nykyään',
+        lahde: 'Guilhem Vellut, Wikimedia Commons (CC BY 2.0), rajattu',
+        tekija: 'Guilhem Vellut',
+        lisenssi: 'CC BY 2.0',
+        leveys: 1200,
+        korkeus: 800,
       },
       /*
        * KAKKOSKUVA tekstin alle on entinen ainoa kuva. Tiedosto, selite
@@ -532,12 +637,6 @@ export const FOKUSVIRTA_PARIISI = {
        *
        * Commons 25.8.2026: 4793×6392, public domain, Restrictions tyhjä.
        */
-      valokuva: {
-        tiedosto: 'Nicolas Hüet, the Younger - Study of the Giraffe Given to Charles X by the Viceroy of Egypt - Google Art Project.jpg',
-        selite: 'Sama kirahvi Nicolas Hüet nuoremman tutkielmassa vuodelta '
-          + '1827.',
-        lahde: 'Nicolas Hüet nuorempi 1827, Wikimedia Commons (public domain)',
-      },
       kysymykset: [
         'Miksi kirahvi käveli Marseillesta Pariisiin eikä matkustanut meritse?',
         'Miten eläin selvisi 900 kilometrin kävelystä?',
@@ -604,11 +703,50 @@ export const FOKUSVIRTA_PARIISI = {
         + 'kahden kirjahyllyn välissä" (tämä tiedosto) ja 1859/1891-fakta '
         + '(en-Wikipedia "Bouquinistes", tarkistettu 12.11.2026).',
       kuva: {
-        tiedosto: 'Quai Saint-Michel, Paris 5 May 2016.jpg',
-        lyhyt: 'Bukinistit ovat myyneet kirjoja Seinen rantamuurin vihreistä laatikoista 1500-luvulta asti.',
-        selite: 'Bukinistit ovat myyneet kirjoja Seinen rantamuurin '
-          + 'vihreistä laatikoista 1500-luvulta asti.',
-        lahde: 'Guilhem Vellut, Wikimedia Commons (CC BY 2.0)',
+        osoite: 'https://media.matkakirja.app/kuvat/bukinistit-1859-pontneuf1665.jpg',
+        laji: 'maalaus',
+        lyhyt: 'Pont Neuf Pariisissa 1600-luvun maalauksessa',
+        selite: 'Pont Neuf Pariisissa 1600-luvun maalauksessa',
+        lahde: 'Hendrick Mommers, n. 1665 (Musée Carnavalet / Paris Musées), Wikimedia Commons (CC0), rajattu',
+        tekija: 'Hendrick Mommers',
+        lisenssi: 'CC0',
+        leveys: 1200,
+        korkeus: 800,
+      },
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/bukinistit-1859-pontneuf1700.jpg',
+          laji: 'maalaus',
+          lyhyt: 'Pont Neuf 1700-luvun maalauksessa',
+          selite: 'Pont Neuf 1700-luvun maalauksessa',
+          lahde: 'Nicolas-Jean-Baptiste Raguenet, 1700-luku (Musée Carnavalet), Wikimedia Commons (Public domain), rajattu',
+          tekija: 'Nicolas-Jean-Baptiste Raguenet',
+          lisenssi: 'Public domain',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/bukinistit-1859-atget1898.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Bukinisteja Quai Voltairella 1898',
+          selite: 'Bukinisteja Quai Voltairella 1898',
+          lahde: 'Eugène Atget, 1898 (Musée Carnavalet / Paris Musées), Wikimedia Commons (CC0), rajattu',
+          tekija: 'Eugène Atget',
+          lisenssi: 'CC0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+      ],
+      valokuva: {
+        osoite: 'https://media.matkakirja.app/kuvat/bukinistit-1859-nykyinen.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Bukinistien laatikot Seinen rantamuurilla nykyään',
+        selite: 'Bukinistien laatikot Seinen rantamuurilla nykyään',
+        lahde: 'Chabe01, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+        tekija: 'Chabe01',
+        lisenssi: 'CC BY-SA 4.0',
+        leveys: 1200,
+        korkeus: 800,
       },
       kysymykset: [
         'Mitä bukinistien laatikoista myydään?',
@@ -715,12 +853,39 @@ export const FOKUSVIRTA_PARIISI = {
        * paketista sanasta sanaan.
        */
       kuva: {
-        tiedosto: "Prudent-Louis Leray - Poster for the première of Georges Bizet's Carmen.jpg",
-        lyhyt: 'Lerayn litografia on Carmenin ensi-illan juliste 1875, epäonnistuneeksi luullusta esityksestä.',
-        selite: 'Prudent-Louis Lerayn litografia on Carmenin ensi-illan '
-          + 'juliste vuodelta 1875 — samasta esityksestä, jonka '
-          + 'säveltäjä uskoi epäonnistuneen.',
-        lahde: 'Prudent-Louis Leray 1875, Wikimedia Commons (public domain)',
+        osoite: 'https://media.matkakirja.app/kuvat/bizet-1875-teatteri1840.jpg',
+        laji: 'piirros',
+        lyhyt: 'Opéra-Comiquen toinen Salle Favart, rakennettu 1840',
+        selite: 'Opéra-Comiquen toinen Salle Favart, rakennettu 1840',
+        lahde: 'Théodore Charpentier (litografia, kuvana Gourret 1983 -kirjassa), Wikimedia Commons (Public domain), esirajattu ja rajattu',
+        tekija: 'Théodore Charpentier',
+        lisenssi: 'Public domain',
+        leveys: 1200,
+        korkeus: 800,
+      },
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/bizet-1875-galli-marie.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Célestine Galli-Marié Carmenin roolipuvussa',
+          selite: 'Célestine Galli-Marié Carmenin roolipuvussa',
+          lahde: 'Atelier Nadar (n. 1875), Wikimedia Commons (Public domain), esirajattu ja rajattu',
+          tekija: 'Atelier Nadar',
+          lisenssi: 'Public domain',
+          leveys: 1200,
+          korkeus: 800,
+        },
+      ],
+      valokuva: {
+        osoite: 'https://media.matkakirja.app/kuvat/bizet-1875-nykyinen.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Opéra-Comiquen nykyinen Salle Favart Place Boïeldieulla',
+        selite: 'Opéra-Comiquen nykyinen Salle Favart Place Boïeldieulla',
+        lahde: 'Chabe01, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+        tekija: 'Chabe01',
+        lisenssi: 'CC BY-SA 4.0',
+        leveys: 1200,
+        korkeus: 800,
       },
       /*
        * CARMENIN LINKKI TAKAISIN (Fablen päätös 14.9.2026). Erän 5 jako
@@ -917,12 +1082,50 @@ export const FOKUSVIRTA_PARIISI = {
         + 'Teksti siirretty sanatarkasti karttauudistuksen erässä 5, '
         + '13.9.2026.',
       kuva: {
-        tiedosto: 'Coq de Notre-Dame de Paris 2020.jpg',
-        lyhyt: 'Notre-Damen kukko putosi tornin huipulta 2019 palossa ja löytyi lommoilla.',
-        selite: 'Notre-Damen tornin huipulla seisonut kukko putosi '
-          + 'vuoden 2019 palossa ja löytyi seuraavana päivänä raunioista '
-          + 'lommoilla.',
-        lahde: 'Siren-Com, Wikimedia Commons (CC BY-SA 4.0)',
+        osoite: 'https://media.matkakirja.app/kuvat/notre-dame-2019-palo.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Notre-Dame palaa 15. huhtikuuta 2019',
+        selite: 'Notre-Dame palaa 15. huhtikuuta 2019',
+        lahde: 'Emilio Luque, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+        tekija: 'Emilio Luque',
+        lisenssi: 'CC BY-SA 4.0',
+        leveys: 1200,
+        korkeus: 800,
+      },
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/notre-dame-2019-kukko.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Tornin kukko ennen paloa, elokuu 2018',
+          selite: 'Tornin kukko ennen paloa, elokuu 2018',
+          lahde: 'Panageotean Graphics, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+          tekija: 'Panageotean Graphics',
+          lisenssi: 'CC BY-SA 4.0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/notre-dame-2019-uusi.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Notre-Damen kuoriosa uudelleenavauksen jälkeen 2024',
+          selite: 'Notre-Damen kuoriosa uudelleenavauksen jälkeen 2024',
+          lahde: 'Ibex73, Wikimedia Commons (CC BY 4.0), rajattu',
+          tekija: 'Ibex73',
+          lisenssi: 'CC BY 4.0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+      ],
+      valokuva: {
+        osoite: 'https://media.matkakirja.app/kuvat/notre-dame-2019-nyt.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Notre-Damen länsijulkisivu maaliskuussa 2025',
+        selite: 'Notre-Damen länsijulkisivu maaliskuussa 2025',
+        lahde: 'Chabe01, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+        tekija: 'Chabe01',
+        lisenssi: 'CC BY-SA 4.0',
+        leveys: 1200,
+        korkeus: 800,
       },
       kysymykset: [
         'Mitä tornin huipun kukon sisään oli suljettu?',
@@ -998,12 +1201,39 @@ export const FOKUSVIRTA_PARIISI = {
         + 'valitaan sokkona" (js/packs/kulttuuri-kategoriat.js). Teksti '
         + 'siirretty sanatarkasti karttauudistuksen erässä 5, 13.9.2026.',
       kuva: {
-        tiedosto: '84 Boulevard de Port-Royal Bakery.jpg',
-        lyhyt: 'Pariisi on järjestänyt vuodesta 1994 kilpailun parhaasta patongista presidentin leipojaksi.',
-        selite: 'Pariisi on järjestänyt vuodesta 1994 kilpailun parhaasta '
-          + 'perinteisestä patongista, ja voittaja toimittaa '
-          + 'presidentinpalatsin leivät seuraavan vuoden ajan.',
-        lahde: 'Lionel Allorge, Wikimedia Commons (CC BY-SA 3.0)',
+        osoite: 'https://media.matkakirja.app/kuvat/patonki-1994-taikina.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Leipuri lisää vettä jauhoihin taikinakoneessa',
+        selite: 'Leipuri lisää vettä jauhoihin taikinakoneessa',
+        lahde: 'Pancrat, Wikimedia Commons (CC BY-SA 3.0), rajattu',
+        tekija: 'Pancrat',
+        lisenssi: 'CC BY-SA 3.0',
+        leveys: 1200,
+        korkeus: 800,
+      },
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/patonki-1994-kilpailu.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Raadin jäsen arvioi patonkeja Pariisin kilpailussa 2004',
+          selite: 'Raadin jäsen arvioi patonkeja Pariisin kilpailussa 2004',
+          lahde: 'David Brabyn, 2004, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+          tekija: 'David Brabyn',
+          lisenssi: 'CC BY-SA 4.0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+      ],
+      valokuva: {
+        osoite: 'https://media.matkakirja.app/kuvat/patonki-1994-nykyinen.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Suihkulähde ja palatsin puutarhajulkisivu Pariisissa',
+        selite: 'Suihkulähde ja palatsin puutarhajulkisivu Pariisissa',
+        lahde: 'Leurent.t, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+        tekija: 'Leurent.t',
+        lisenssi: 'CC BY-SA 4.0',
+        leveys: 1200,
+        korkeus: 800,
       },
       kysymykset: [
         'Miksi leipien tekijöitä ei kerrota raadille?',
@@ -1058,12 +1288,50 @@ export const FOKUSVIRTA_PARIISI = {
         + '(js/packs/kulttuuri-kategoriat.js). Tekstit siirretty sanatarkasti '
         + 'karttauudistuksen erässä 5, 13.9.2026.',
       kuva: {
-        tiedosto: 'Édith Piaf 914-6440.jpg',
-        lyhyt: 'Édith Piaf esiintyi Rotterdamissa 1962, alle vuosi ennen kuolemaansa; lempinimi tarkoittaa varpusta.',
-        selite: 'Édith Piaf esiintyi Rotterdamissa 13. joulukuuta 1962, alle '
-          + 'vuosi ennen kuolemaansa; hänen lempinimensä la Môme Piaf '
-          + 'tarkoittaa pariisilaisessa puhekielessä varpusta.',
-        lahde: 'Eric Koch / Anefo, Wikimedia Commons (CC0)',
+        osoite: 'https://media.matkakirja.app/kuvat/piaf-django-belleville1910.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Rue de Belleville helmikuussa 1910',
+        selite: 'Rue de Belleville helmikuussa 1910',
+        lahde: 'Eugène Gossin, 1910, Paris Musées / Musée Carnavalet, Wikimedia Commons (CC0), esirajattu ja rajattu',
+        tekija: 'Eugène Gossin (Musée Carnavalet / Paris Musées)',
+        lisenssi: 'CC0',
+        leveys: 1200,
+        korkeus: 800,
+      },
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/piaf-django-vaunut1913.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Asuntovaunut Porte de Choisyn luona, 1913',
+          selite: 'Asuntovaunut Porte de Choisyn luona, 1913',
+          lahde: 'Eugène Atget, 1913, Paris Musées / Musée Carnavalet, Wikimedia Commons (CC0), esirajattu ja rajattu',
+          tekija: 'Eugène Atget (Musée Carnavalet / Paris Musées)',
+          lisenssi: 'CC0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/piaf-django-piaf1962.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Édith Piaf laulamassa Rotterdamissa 1962',
+          selite: 'Édith Piaf laulamassa Rotterdamissa 1962',
+          lahde: 'Eric Koch / Anefo, Nationaal Archief, Wikimedia Commons (CC0), rajattu',
+          tekija: 'Eric Koch / Anefo (Nationaal Archief)',
+          lisenssi: 'CC0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+      ],
+      valokuva: {
+        osoite: 'https://media.matkakirja.app/kuvat/piaf-django-belleville-nyt.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Rue de Belleville 72 nykyään, Piafin muistolaatta',
+        selite: 'Rue de Belleville 72 nykyään, Piafin muistolaatta',
+        lahde: 'Polymagou, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+        tekija: 'Polymagou',
+        lisenssi: 'CC BY-SA 4.0',
+        leveys: 1200,
+        korkeus: 800,
       },
       /*
        * KAKSI APPLE MUSIC -LINKKIÄ, YKSI NOSTO (Fablen päätös 14.9.2026).
