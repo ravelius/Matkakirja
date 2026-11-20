@@ -90,7 +90,7 @@ const GUIMARD_VISA = {
   oikea: 1,
   fakta: 'Kilpailun 21 ehdotuksesta yksikään ei kelvannut. Guimard '
     + 'piirsi vakio-osia, jotka sopivat yhteen kuin rakennussarja: '
-    + 'sisäänkäyntejä tehtiin 167, ja jäljellä on 88.',
+    + 'sisäänkäyntejä tehtiin yli 140, ja jäljellä on noin 90.',
 };
 
 export const FOKUSVIRTA_PARIISI = {
@@ -1002,8 +1002,8 @@ export const FOKUSVIRTA_PARIISI = {
       symboli: 'tekniikka',
       lunastus: [
         'Pariisin metron kuuluisat sisäänkäynnit teki arkkitehti, joka ei ollut edes osallistunut niiden suunnittelukilpailuun. Metro avattiin maailmannäyttelyn aikaan 19. heinäkuuta 1900, ja ensimmäinen linja yhdisti Porte de Vincennes’in ja Porte Maillot’n. Sisäänkäynneistä oli järjestetty arkkitehtikilpailu, mutta yksikään 21 ehdotuksesta ei kelvannut, ja työ annettiin Hector Guimardille.',
-        'Guimard piirsi valurautaisia vakio-osia, jotka sopivat yhteen kuin rakennussarja: samoista paloista sai kasattua sopivan sisäänkäynnin mihin tahansa kadunkulmaan. Hänen tyylinsä oli jugendia, ja sisäänkäyntejä tehtiin 167.',
-        'Sitten tyyli meni pois muodista ja puolet purettiin. Jäljellä on 88, ja valtaosa niistä suojeltiin vuonna 1978.',
+        'Guimard piirsi valurautaisia vakio-osia, jotka sopivat yhteen kuin rakennussarja: samoista paloista sai kasattua sopivan sisäänkäynnin mihin tahansa kadunkulmaan. Hänen tyylinsä oli jugendia, ja sisäänkäyntejä tehtiin yli 140.',
+        'Sitten tyyli meni pois muodista ja puolet purettiin. Jäljellä on noin 90, ja valtaosa niistä suojeltiin vuonna 1978.',
       ],
       lahde: 'Pariisin kaupunkilehden sivu "Pariisi", nosto "Metron '
         + 'sisäänkäynti koottiin palasista" (js/packs/kulttuuri-kategoriat.js). '
@@ -1011,7 +1011,7 @@ export const FOKUSVIRTA_PARIISI = {
         + '13.9.2026.',
       kuva: {
         tiedosto: '01 Guimard\'s Métropolitain.jpg',
-        selite: 'Guimardin metrosisäänkäyntejä tehtiin 167, ja jäljellä on 88.',
+        selite: 'Guimardin metrosisäänkäyntejä tehtiin yli 140, ja jäljellä on noin 90.',
         lahde: 'Terrazzo (Flickr), Wikimedia Commons (CC BY 2.0)',
       },
       kysymykset: [
@@ -1025,14 +1025,14 @@ export const FOKUSVIRTA_PARIISI = {
        * JULISTE-tehtävä (GUIMARD_VISA) kysyy ensimmäistä ja sen fakta paljastaa toisen.
        */
       visa: {
-        kysymys: 'Hector Guimardin metrosisäänkäyntejä tehtiin 167, mutta puolet niistä purettiin. Miksi?',
+        kysymys: 'Hector Guimardin metrosisäänkäyntejä tehtiin yli 140, mutta puolet niistä purettiin. Miksi?',
         vaihtoehdot: [
           'Valurauta ruostui käyttökelvottomaksi',
           'Ne vaurioituivat sodissa',
           'Tyyli meni pois muodista',
         ],
         oikea: 2,
-        fakta: 'Jäljellä on 88, ja valtaosa niistä suojeltiin vuonna 1978.',
+        fakta: 'Jäljellä on noin 90, ja valtaosa niistä suojeltiin vuonna 1978.',
       },
       paikka: {
         nimi: 'Metro 1900',

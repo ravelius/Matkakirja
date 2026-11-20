@@ -5371,7 +5371,7 @@ export const NAHTAVYYSJUTUT = {
   pariisi: {
     Riemukaari: {
       aika: '1806–1836',
-      teksti: 'Pariisin Riemukaari on lähes 50 metriä korkea voitonmerkki, jonka keisari Napoleon ei koskaan nähnyt valmiina. Hän käski rakentaa sen vuonna 1806 juhlistamaan Austerlitzin taistelun voittoa, mutta kaari saatiin valmiiksi vasta vuonna 1836. Sen pintoihin on kaiverrettu 158 taistelun ja 660 sotapäällikön nimet.'
+      teksti: 'Pariisin Riemukaari on lähes 50 metriä korkea voitonmerkki, jonka keisari Napoleon ei koskaan nähnyt valmiina. Hän käski rakentaa sen vuonna 1806 juhlistamaan Austerlitzin taistelun voittoa, mutta kaari saatiin valmiiksi vasta vuonna 1836. Sen pintoihin on kaiverrettu kymmenien taistelujen ja satojen sotapäälliköiden nimet.'
         + '\n\n'
         + 'Vuonna 1919 lentäjä Charles Godefroy lensi kaksitasokoneellaan kaaren läpi. Temppu oli uskomaton, sillä aukko on vain reilut 14 metriä leveä. Reilua vuotta myöhemmin kaaren alle haudattiin nimetön ranskalaissotilas muistoksi sodassa kaatuneista: hänet tuotiin sinne 11. marraskuuta 1920 ja haudattiin 28. tammikuuta 1921.'
         + '\n\n'
@@ -5386,9 +5386,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Arc de Triomphe, Paris 21 October 2010.jpg',
-          lyhyt: 'Napoleonin 1806 määräämä Riemukaari valmistui vasta 1836, kaiverrettuna 158 taistelun nimet.',
+          lyhyt: 'Napoleonin 1806 määräämä Riemukaari valmistui vasta 1836, kaiverrettuna kymmenien taistelujen nimet.',
           selite: 'Napoleonin vuonna 1806 määräämä kaari valmistui vasta 1836, ja '
-            + 'sen pintoihin on kaiverrettu 158 taistelun ja 660 sotapäällikön '
+            + 'sen pintoihin on kaiverrettu kymmenien taistelujen ja satojen sotapäälliköiden '
             + 'nimet.',
           lahde: 'Jiuguang Wang, Wikimedia Commons (CC BY-SA 2.0)',
         },
@@ -5401,10 +5401,10 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Vallankumouksen aikana aukiolle pystytettiin giljotiini. Vuonna 1793 siellä mestattiin kuningas Ludvig XVI, ja samana vuonna myös kuningatar Marie Antoinette. Kaikkiaan aukiolla teloitettiin yli tuhat ihmistä.'
         + '\n\n'
-        + 'Marraskuussa 1830 Egyptin hallitsija lahjoitti Ranskalle 3 300 vuotta vanhan Luxorin obeliskin. Kivijättiläinen tuotiin laivalla Niililtä asti ja pystytettiin aukiolle vuonna 1836 valtavan väkijoukon seuratessa. Nykyään 23-metrisen obeliskin ympärillä poreilevat suihkulähteet, ja aukiota reunustavat kahdeksan naispatsasta, jotka kuvaavat Ranskan suurkaupunkeja.',
+        + 'Vuonna 1830 Egyptin hallitsija lahjoitti Ranskalle 3 300 vuotta vanhan Luxorin obeliskin. Kivijättiläinen tuotiin laivalla Niililtä asti ja pystytettiin aukiolle vuonna 1836 valtavan väkijoukon seuratessa. Nykyään 23-metrisen obeliskin ympärillä poreilevat suihkulähteet, ja aukiota reunustavat naispatsaat, jotka kuvaavat Ranskan suurkaupunkeja.',
       vuodet: [
         { kohta: 'Vuonna 1793', vuosi: '1793', selite: 'kuninkaan mestaus' },
-        { kohta: 'Marraskuussa 1830', vuosi: '1830', selite: 'obeliski lahjaksi' },
+        { kohta: 'Vuonna 1830', vuosi: '1830', selite: 'obeliski lahjaksi' },
         { kohta: 'vuonna 1836', vuosi: '1836', selite: 'obeliski pystyyn' },
       ],
       kuvat: [
@@ -5424,13 +5424,13 @@ export const NAHTAVYYSJUTUT = {
       aika: '1612',
       teksti: 'Luxembourgin puiston loi Pariisiin kuningatar, joka kaipasi omaa palatsia. Kun kuningas Henrik IV murhattiin vuonna 1610, hänen leskensä Maria de’ Medici jäi hallitsemaan Ranskaa poikansa puolesta. Hän osti vuonna 1612 Luxembourgin kartanon ja rakennutti sen viereen palatsin, jonka esikuvana oli hänen kotikaupunkinsa Firenzen Palazzo Pitti.'
         + '\n\n'
-        + 'Puistoon istutettiin jalavia, ja firenzeläinen suihkulähdemestari Tommaso Francini muotoili maiseman sellaiseksi, jollaisen kuningatar oli lapsena tuntenut. Alun kahdeksasta hehtaarista puisto laajeni nykyiseen 23 hehtaariin, ja Napoleon III:n katutyöt veivät 1860-luvulla osan siitä.'
+        + 'Puistoon istutettiin jalavia, ja muotoilussa oli mukana firenzeläinen suihkulähdemestari Tommaso Francini. Puisto on kasvanut ja kutistunut vallanpitäjien mukana: Napoleon III:n katutyöt veivät 1860-luvulla osan siitä.'
         + '\n\n'
-        + 'Vuodesta 1933 puistossa on toiminut nukketeatteri, ja kahdeksankulmaisella altaalla lapset uittavat purjeveneitä. Patsaita on toista sataa, muiden muassa kaksikymmentä kuningatarta ja merkkinaista. Palatsissa kokoontuu nykyään senaatti.',
+        + 'Nykyinen nukketeatteri on toiminut puistossa vuodesta 1933, ja kahdeksankulmaisella altaalla lapset uittavat purjeveneitä. Patsaita on toista sataa, muiden muassa kaksikymmentä kuningatarta ja merkkinaista. Palatsissa kokoontuu nykyään senaatti.',
       vuodet: [
         { kohta: 'vuonna 1610', vuosi: '1610', selite: 'Henrik IV murhattiin' },
         { kohta: 'vuonna 1612', vuosi: '1612', selite: 'kartano ostettiin' },
-        { kohta: 'Vuodesta 1933', vuosi: '1933', selite: 'nukketeatteri alkoi' },
+        { kohta: 'vuodesta 1933', vuosi: '1933', selite: 'nukketeatteri alkoi' },
       ],
       kuvat: [
         {
@@ -5453,13 +5453,13 @@ export const NAHTAVYYSJUTUT = {
     },
     'Sacré-Cœur': {
       aika: '1875–1914',
-      teksti: 'Sacré-Cœur eli Pyhän sydämen basilika kohoaa Montmartren kukkulan huipulla, ja se rakennettiin hävityn sodan jälkeen. Ranska hävisi sodan Preussille vuonna 1870, ja Paul Abadie valittiin kirkon suunnittelijaksi lähes 80 ehdotuksen joukosta. Rakennustyöt alkoivat vuonna 1875, ja kirkko valmistui pääosin vuonna 1914 ja vihittiin käyttöön 1919.'
+      teksti: 'Sacré-Cœur eli Pyhän sydämen basilika kohoaa Montmartren kukkulan huipulla, ja se rakennettiin hävityn sodan jälkeen. Ranska hävisi sodan Preussille vuosina 1870–1871, ja Paul Abadie valittiin kirkon suunnittelijaksi lähes 80 ehdotuksen joukosta. Rakennustyöt alkoivat vuonna 1875, ja kirkko valmistui pääosin vuonna 1914 ja vihittiin käyttöön 1919.'
         + '\n\n'
         + 'Ulkoseinät on tehty erikoisesta kalkkikivestä, joka valkenee sateella ja pysyy siksi valkoisena. Kirkko hohtaa yhä, vaikka se on jo yli sata vuotta vanha. Sisällä kattoa koristaa yksi maailman suurimmista mosaiikeista, jonka ala on noin 470 neliömetriä.'
         + '\n\n'
         + 'Tornissa riippuu ”Savoyarde”, Ranskan suurin kello, joka painaa lähes 19 tonnia. Kirkon huipulta avautuu näkymä koko Pariisiin.',
       vuodet: [
-        { kohta: 'vuonna 1870', vuosi: '1870', selite: 'sodan häviö' },
+        { kohta: 'vuosina 1870–1871', vuosi: '1870–1871', selite: 'sodan häviö' },
         { kohta: 'vuonna 1875', vuosi: '1875', selite: 'työ alkoi' },
         { kohta: 'vuonna 1914', vuosi: '1914', selite: 'valmistui' },
         { kohta: 'käyttöön 1919', vuosi: '1919', selite: 'vihittiin' },
@@ -5478,14 +5478,15 @@ export const NAHTAVYYSJUTUT = {
     },
     Panthéon: {
       aika: '1758–1790',
-      teksti: 'Panthéon on Pariisin kirkko, josta tuli suurmiesten hautapaikka. Kuningas Ludvig XV sairastui vakavasti sotaretkellä ja lupasi, että jos hän toipuu, Pariisin suojeluspyhimys Geneviève saa uuden kirkon. Kuningas toipui, ja Soufflot’n suunnitteleman kirkon rakennustyöt alkoivat 1750-luvun lopulla.'
+      teksti: 'Panthéon on Pariisin kirkko, josta tuli suurmiesten hautapaikka. Kuningas Ludvig XV sairastui vakavasti sotaretkellä ja lupasi, että jos hän toipuu, Pariisin suojeluspyhimys Geneviève saa uuden kirkon. Kuningas toipui, ja Soufflot’n suunnitteleman kirkon rakennustyöt alkoivat 1750-luvulla.'
         + '\n\n'
-        + 'Työ kesti yli kolmekymmentä vuotta: Soufflot kuoli, ja hänen oppilaansa Jean-Baptiste Rondelet sai kirkon valmiiksi vasta 1790. Vuonna 1791 kansalliskokous määräsi kirkon suurmiesten hautapaikaksi. Ensimmäisenä kryptaan kannettiin kreivi Mirabeau, mutta hänet kannettiin ulos kolmisen vuotta myöhemmin, kun hänen salaiset yhteytensä hoviin paljastuivat.'
+        + 'Työ kesti yli kolmekymmentä vuotta: Soufflot kuoli, ja hänen oppilaansa Jean-Baptiste Rondelet sai kirkon valmiiksi vasta 1790. Vuonna 1791 kansalliskokous määräsi kirkon suurmiesten hautapaikaksi. Ensimmäisenä kryptaan kannettiin kreivi Mirabeau, mutta vuonna 1794 hänet kannettiin ulos, kun hänen salaiset yhteytensä hoviin paljastuivat.'
         + '\n\n'
-        + 'Vuonna 1851 fyysikko Léon Foucault ripusti kupolista 67 metriä pitkän heilurin ja näytti, että maa kääntyy sen alla. Heiluri purettiin saman vuoden joulukuussa, mutta kopio heiluu holvin alla yhä. Kryptassa lepäävät muiden muassa Voltaire ja Victor Hugo, ja Marie Curie siirrettiin sinne 1995 ensimmäisenä naisena omien ansioidensa perusteella.',
+        + 'Vuonna 1851 fyysikko Léon Foucault ripusti kupolista 67 metriä pitkän heilurin ja näytti, että maa kääntyy sen alla. Heiluri poistettiin saman vuoden joulukuussa, mutta kopio heiluu holvin alla yhä. Kryptassa lepäävät muiden muassa Voltaire ja Victor Hugo, ja Marie Curie siirrettiin sinne 1995 ensimmäisenä naisena omien ansioidensa perusteella.',
       vuodet: [
         { kohta: 'vasta 1790', vuosi: '1790', selite: 'valmistui' },
         { kohta: 'Vuonna 1791', vuosi: '1791', selite: 'suurmiesten hauta' },
+        { kohta: 'vuonna 1794', vuosi: '1794', selite: 'Mirabeau ulos' },
         { kohta: 'Vuonna 1851', vuosi: '1851', selite: 'Foucaultin heiluri' },
         { kohta: 'sinne 1995', vuosi: '1995', selite: 'Curie siirrettiin' },
       ],
@@ -5517,11 +5518,11 @@ export const NAHTAVYYSJUTUT = {
     },
     'Notre-Dame': {
       aika: '1163–1345',
-      teksti: 'Notre-Damen katedraalin rakentaminen kesti uskomattomat yli sata vuotta: työ alkoi vuonna 1163, ja pääosa valmistui 1200-luvulla. Kirkko oli aikansa insinööritaidon huippu, sillä sen kivikattoa kannattelevat ulkopuoliset tukikaaret, niin sanotut lentävät tukipilarit.'
+      teksti: 'Notre-Damen katedraalin rakentaminen alkoi vuonna 1163, ja sen valmistuminen kesti uskomattomat yli sata vuotta. Kirkko oli aikansa insinööritaidon huippu, sillä sen kivikattoa kannattelevat ulkopuoliset tukikaaret, niin sanotut lentävät tukipilarit.'
         + '\n\n'
-        + 'Katedraalissa on tapahtunut historian suuria hetkiä: vuonna 1804 Napoleon kruunasi itsensä keisariksi kirkon alttarilla, ja vuonna 1944 kenraali de Gaulle kiitti Jumalaa Pariisin vapautumisesta samassa kirkossa.'
+        + 'Katedraalissa on tapahtunut historian suuria hetkiä: vuonna 1804 Napoleon kruunasi itsensä keisariksi kirkon alttarilla, ja vuonna 1944 kenraali de Gaulle osallistui samassa kirkossa Pariisin vapautumisen kiitosjumalanpalvelukseen.'
         + '\n\n'
-        + 'Huhtikuussa 2019 katedraalin vintillä syttyi tulipalo, joka tuhosi vanhan puukaton ja tornihuipun. Palomiehet onnistuivat kuitenkin pelastamaan tornit, julkisivun ja lasimaalaukset. Katedraali korjattiin alle kuudessa vuodessa, ja se avattiin yleisölle uudelleen joulukuussa 2024.',
+        + 'Huhtikuussa 2019 katedraalin vintillä syttyi tulipalo, joka tuhosi vanhan puukaton ja tornihuipun. Palomiehet onnistuivat kuitenkin pelastamaan tornit ja julkisivun, ja ruusuikkunatkin säilyivät. Katedraali avattiin yleisölle uudelleen joulukuussa 2024, alle kuusi vuotta palon jälkeen.',
       vuodet: [
         { kohta: 'vuonna 1163', vuosi: '1163', selite: 'rakennus alkoi' },
         { kohta: 'vuonna 1804', vuosi: '1804', selite: 'Napoleonin kruunaus' },
@@ -5627,13 +5628,12 @@ export const NAHTAVYYSJUTUT = {
     },
     'Saint-Eustache': {
       aika: '1532–1637',
-      teksti: 'Saint-Eustache on Pariisin kirkko, jonka rakenne on goottilaista mutta koristeet renessanssia. Paikalla oli ennen vaatimaton kappeli vuodelta 1213. Uutta kirkkoa alettiin rakentaa vuonna 1532, ja se vihittiin vuonna 1637, yli sata vuotta myöhemmin.'
+      teksti: 'Saint-Eustache on Pariisin kirkko, jonka rakenne on goottilaista mutta koristeet renessanssia. Paikalla oli 1200-luvun alussa rakennettu vaatimaton kappeli. Uutta kirkkoa alettiin rakentaa vuonna 1532, ja se vihittiin vuonna 1637, yli sata vuotta myöhemmin.'
         + '\n\n'
         + 'Kirkossa on kastettu Richelieu ja Molière, ja nuori Ludvig XIV kävi siellä ensimmäisellä ehtoollisellaan 1649. Länsijulkisivua alettiin rakentaa uudelleen vuonna 1754, mutta uusi julkisivu jäi kesken. 1790-luvun vallankumouksessa kirkko suljettiin ja siitä tehtiin Maanviljelyksen temppeli.'
         + '\n\n'
         + 'Arkkitehti Victor Baltard johti kirkon korjausta 1800-luvun puolivälissä. Kirkko seisoo Les Hallesin, Pariisin entisen ruokatorin, vieressä: tori siirrettiin Rungisiin vuonna 1969.',
       vuodet: [
-        { kohta: 'vuodelta 1213', vuosi: '1213', selite: 'kappeli' },
         { kohta: 'vuonna 1532', vuosi: '1532', selite: 'rakennus alkoi' },
         { kohta: 'vuonna 1637', vuosi: '1637', selite: 'vihittiin' },
         { kohta: 'ehtoollisellaan 1649', vuosi: '1649', selite: 'Ludvigin ehtoollinen' },
@@ -5669,15 +5669,14 @@ export const NAHTAVYYSJUTUT = {
     },
     'Place des Vosges': {
       aika: '1612',
-      teksti: 'Place des Vosges on Pariisin vanhin aukio, jonka tilaaja ei elänyt nähdäkseen sitä valmiina. Kuningas Henrik IV määräsi sen rakennettavaksi hovin juhlien ja kävelyn paikaksi, mutta hänet murhattiin vuonna 1610. Aukio vihittiin vuonna 1612 Ludvig XIII:n ja Anna Itävaltalaisen kihlajaisten yhteydessä, eikä kuningas itse koskaan asettunut sinne asumaan.'
+      teksti: 'Place des Vosges on Pariisin vanhin suunniteltu aukio, jonka tilaaja ei elänyt nähdäkseen sitä valmiina. Kuningas Henrik IV määräsi sen rakennettavaksi hovin juhlien ja kävelyn paikaksi, mutta hänet murhattiin vuonna 1610. Aukio vihittiin vuonna 1612 Ludvig XIII:n ja Anna Itävaltalaisen kihlajaisten yhteydessä.'
         + '\n\n'
-        + 'Aukiota ympäröi 36 samanmallista taloa, yhdeksän joka sivulla, ja kaikilla on samanlainen punatiilinen julkisivu ja aumakatto. Korkeampina erottuvat kuninkaan ja kuningattaren paviljongit etelä- ja pohjoislaidalla. 1600-luvulla aukiolla järjestettiin turnajaisia.'
+        + 'Aukiota ympäröi 36 samanmallista taloa, yhdeksän joka sivulla, ja kaikilla on samanlainen punatiilinen julkisivu ja jyrkkä katto. Korkeampina erottuvat kuninkaan ja kuningattaren paviljongit etelä- ja pohjoislaidalla. 1600-luvulla aukiolla järjestettiin turnajaisia.'
         + '\n\n'
-        + 'Nimi oli aluksi Place Royale, ja vuonna 1800 se vaihdettiin Vosgesin departementin mukaan. Vuodesta 1832 aukion laidalla asui kuusitoista vuotta kirjailija Victor Hugo.',
+        + 'Aukio sai nykyisen nimensä Vosgesin departementin mukaan 1800-luvun alussa, ja sitä oli ennen kutsuttu nimellä Place Royale. Vuodesta 1832 aukion laidalla asui kuusitoista vuotta kirjailija Victor Hugo.',
       vuodet: [
         { kohta: 'vuonna 1610', vuosi: '1610', selite: 'Henrik IV murhattiin' },
         { kohta: 'vuonna 1612', vuosi: '1612', selite: 'vihkiäiset' },
-        { kohta: 'vuonna 1800', vuosi: '1800', selite: 'nimi vaihtui' },
         { kohta: 'Vuodesta 1832', vuosi: '1832', selite: 'Victor Hugo muutti' },
       ],
       kuvat: [
@@ -5698,11 +5697,11 @@ export const NAHTAVYYSJUTUT = {
      */
     Invalidit: {
       aika: '1671–1706',
-      teksti: 'Invalidit eli Les Invalides rakennettiin kodiksi sotilaille, jotka Ludvig XIV:n sodat olivat jättäneet haavoittuneina ja vanhentuneina kerjäämään Pariisin kaduille. Vuonna 1670 kuningas määräsi kodin rakennettavaksi, ja Libéral Bruantin suunnittelemaan taloon muuttivat ensimmäiset asukkaat jo 1674. Talo oli kuin pieni kaupunki: parhaimmillaan siellä asui noin 4 000 entistä sotilasta, jotka tekivät verstaissa kenkiä, sukkia ja kuvakudoksia.'
+      teksti: 'Invalidit eli Les Invalides rakennettiin kodiksi sotilaille, jotka sodat olivat jättäneet haavoittuneina ja vanhentuneina kerjäämään Pariisin kaduille. Vuonna 1670 kuningas määräsi kodin rakennettavaksi, ja Libéral Bruantin suunnittelemaan taloon muuttivat ensimmäiset asukkaat jo 1674. Talo oli kuin pieni kaupunki: parhaimmillaan siellä asui useita tuhansia entisiä sotilaita, ja verstaissa tehtiin kenkiä, sukkia ja kuvakudoksia.'
         + '\n\n'
         + 'Heinäkuun 14. päivän aamuna 1789 kansanjoukko tunkeutui Invalideihin ja vei asevarastosta noin 30 000 kivääriä. Ruutia ei juuri löytynyt, ja sitä lähdettiin hakemaan Bastiljista.'
         + '\n\n'
-        + 'Vuonna 1840 Napoleonin jäännökset tuotiin Saint Helenan saarelta, ja Hardouin-Mansartin kullatun kupolin alle kaivettiin avoin krypta. Sarkofagi veistettiin punaisesta kvartsiitista, joka louhittiin Äänisjärven rannalta Karjalasta, ja keisari siirrettiin siihen 1861. Veteraanien kodista on jäljellä enää pieni hoitolaitos, ja käytävillä kulkevat nyt armeijamuseon kävijät.',
+        + 'Vuonna 1840 Napoleonin jäännökset tuotiin Saint Helenan saarelta, ja Hardouin-Mansartin kullatun kupolin alle rakennettiin avoin krypta. Sarkofagi veistettiin punaisesta kvartsiitista, joka louhittiin Äänisjärven rannalta Karjalasta, ja keisari siirrettiin siihen 1861. Veteraanien kodista on jäljellä enää pieni hoitolaitos, ja käytävillä kulkevat nyt armeijamuseon kävijät.',
       vuodet: [
         { kohta: 'Vuonna 1670', vuosi: '1670', selite: 'kuningas määräsi' },
         { kohta: 'jo 1674', vuosi: '1674', selite: 'ensimmäiset asukkaat' },
@@ -5731,16 +5730,15 @@ export const NAHTAVYYSJUTUT = {
     },
     'Petit Palais': {
       aika: '1897–1900',
-      teksti: 'Petit Palais eli pieni palatsi rakennettiin maailmannäyttelyyn, mutta toisin kuin monet näyttelyn rakennukset, sen oli alusta asti tarkoitus jäädä pysyväksi taidemuseoksi. Arkkitehti Charles Girault aloitti työn Champs-Élysées’n tuntumassa, Grand Palais’ta vastapäätä, lokakuussa 1897, ja rakennus valmistui huhtikuussa 1900.'
+      teksti: 'Petit Palais eli pieni palatsi rakennettiin maailmannäyttelyyn, mutta toisin kuin monet näyttelyn rakennukset, sen oli tarkoitus jäädä pysyväksi taidemuseoksi. Arkkitehti Charles Girault aloitti työn Champs-Élysées’n tuntumassa, Grand Palais’ta vastapäätä, lokakuussa 1897, ja rakennus valmistui huhtikuussa 1900.'
         + '\n\n'
-        + 'Vuonna 1902 siitä tuli Pariisin kaupungin kuvataidemuseo, ja samana vuonna museolle tuli Dutuitin veljesten testamenttaama taidekokoelma. Koristemaalaukset ja -veistokset valmistuivat vasta vuosina 1903–1925. Julkisivun päätyä koristaa Jean Antoine Injalbertin veistämä Pariisi muusien ympäröimänä.'
+        + 'Vuonna 1902 siitä tuli Pariisin kaupungin kuvataidemuseo, ja samana vuonna museo sai Dutuitin veljesten keräämän taidekokoelman. Julkisivun päätyä koristaa Jean Antoine Injalbertin veistämä Pariisi muusien ympäröimänä.'
         + '\n\n'
-        + 'Rakennuksen keskellä on puoliympyrän muotoinen pylväskäytävä, joka avautuu puutarhaan. Sen pylväät ovat graniittia, ja koristeissa on kullattua metallia. Rakennus on ollut suojeltu historiallinen monumentti vuodesta 1975.',
+        + 'Rakennuksen keskellä on puoliympyrän muotoinen pylväskäytävä, joka avautuu puutarhaan. Koristeissa on kullattua metallia. Rakennus on ollut suojeltu historiallinen monumentti vuodesta 1975.',
       vuodet: [
         { kohta: 'lokakuussa 1897', vuosi: '1897', selite: 'työ alkoi' },
         { kohta: 'huhtikuussa 1900', vuosi: '1900', selite: 'valmistui' },
         { kohta: 'Vuonna 1902', vuosi: '1902', selite: 'kaupungin museo' },
-        { kohta: 'vuosina 1903–1925', vuosi: '1903–1925', selite: 'koristetyöt' },
         { kohta: 'vuodesta 1975', vuosi: '1975', selite: 'suojeltu' },
       ],
       kuvat: [
@@ -5756,11 +5754,11 @@ export const NAHTAVYYSJUTUT = {
     },
     'Tour Montparnasse': {
       aika: '1969–1973',
-      teksti: 'Tour Montparnasse on Pariisin keskustan ainoa pilvenpiirtäjä, ja sen paikalla seisoi ennen rautatieasema, jonka seinästä veturi syöksyi kadulle. Lokakuussa 1895 Granvillestä tullut juna ei pysähtynyt ajoissa, ja veturi jäi seisomaan nokka alaspäin. Onnettomuudesta jäi kuuluisa valokuva.'
+      teksti: 'Tour Montparnasse on Pariisin kantakaupungin korkein pilvenpiirtäjä, ja sen paikalla seisoi ennen rautatieasema, jonka seinästä veturi syöksyi kadulle. Lokakuussa 1895 Granvillestä tullut juna ei pysähtynyt ajoissa, ja veturi jäi seisomaan nokka alaspäin. Onnettomuudesta jäi kuuluisa valokuva.'
         + '\n\n'
         + 'Vanha asema purettiin 1960-luvulla, ja uusi rakennettiin hieman etelämmäs. Tilalle nousi vuosina 1969–1973 Tour Montparnasse, noin 210 metriä ja 59 kerrosta. Tumma lasijulkisivu oli koristeeton ja ankara.'
         + '\n\n'
-        + 'Pariisilaiset eivät pitäneet tornista. Muutama vuosi sen valmistumisen jälkeen keskustan uusien rakennusten korkeus rajattiin 25 metriin ja muualla enintään 37 metriin, eikä vastaavaa nostettu enää vanhaan Pariisiin. Usein toistetun sanonnan mukaan kaupungin kaunein näköala avautuu tornin huipulta, koska sieltä ei näe itse tornia. Torni oli Ranskan korkein rakennus vuoteen 2011 asti.',
+        + 'Pariisilaiset eivät pitäneet tornista. Muutama vuosi sen valmistumisen jälkeen keskustan uusien rakennusten korkeutta alettiin rajoittaa, eikä vastaavaa nostettu enää vanhaan Pariisiin. Usein toistetun sanonnan mukaan kaupungin kaunein näköala avautuu tornin huipulta, koska sieltä ei näe itse tornia. Torni oli Ranskan korkein pilvenpiirtäjä vuoteen 2011 asti.',
       vuodet: [
         { kohta: 'Lokakuussa 1895', vuosi: '1895', selite: 'veturi seinän läpi' },
         { kohta: 'vuosina 1969–1973', vuosi: '1969–1973', selite: 'rakennettiin' },
@@ -5778,7 +5776,7 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Paris 75006 Jardin du Luxembourg - Tour Montparnasse.jpg',
           lyhyt: 'Tour Montparnasse näkyy Luxembourgin puiston puiden yli.',
-          selite: 'Tour Montparnasse on vanhan Pariisin ainoa pilvenpiirtäjä; '
+          selite: 'Tour Montparnasse on Pariisin kantakaupungin korkein pilvenpiirtäjä; '
             + 'se näkyy kauas, kuten tässä Luxembourgin puistosta.',
           lahde: 'Russell Yarwood, Wikimedia Commons (CC BY-SA 2.0)',
         },
@@ -6180,9 +6178,9 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'nosto-guimardin-metro',
       teksti: 'Pariisin metron kuuluisat sisäänkäynnit teki arkkitehti, joka ei ollut edes osallistunut niiden suunnittelukilpailuun. Metro avattiin maailmannäyttelyn aikaan 19. heinäkuuta 1900, ja ensimmäinen linja yhdisti Porte de Vincennes’in ja Porte Maillot’n. Sisäänkäynneistä oli järjestetty arkkitehtikilpailu, mutta yksikään 21 ehdotuksesta ei kelvannut, ja työ annettiin Hector Guimardille.'
         + '\n\n'
-        + 'Guimard piirsi valurautaisia vakio-osia, jotka sopivat yhteen kuin rakennussarja: samoista paloista sai kasattua sopivan sisäänkäynnin mihin tahansa kadunkulmaan. Hänen tyylinsä oli jugendia, ja sisäänkäyntejä tehtiin 167.'
+        + 'Guimard piirsi valurautaisia vakio-osia, jotka sopivat yhteen kuin rakennussarja: samoista paloista sai kasattua sopivan sisäänkäynnin mihin tahansa kadunkulmaan. Hänen tyylinsä oli jugendia, ja sisäänkäyntejä tehtiin yli 140.'
         + '\n\n'
-        + 'Sitten tyyli meni pois muodista ja puolet purettiin. Jäljellä on 88, ja valtaosa niistä suojeltiin vuonna 1978.',
+        + 'Sitten tyyli meni pois muodista ja puolet purettiin. Jäljellä on noin 90, ja valtaosa niistä suojeltiin vuonna 1978.',
       vuodet: [
         { kohta: 'heinäkuuta 1900', vuosi: '1900', selite: 'metro avattiin' },
         { kohta: 'vuonna 1978', vuosi: '1978', selite: 'valtaosa suojeltiin' },
@@ -6190,7 +6188,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: "01 Guimard's Métropolitain.jpg",
-          selite: 'Guimardin metrosisäänkäyntejä tehtiin 167, ja jäljellä on 88.',
+          selite: 'Guimardin metrosisäänkäyntejä tehtiin yli 140, ja jäljellä on noin 90.',
           lahde: 'Terrazzo (Flickr), Wikimedia Commons (CC BY 2.0)',
         },
       ],
