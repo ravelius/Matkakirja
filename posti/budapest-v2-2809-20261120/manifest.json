@@ -1,0 +1,82 @@
+{
+  "images": [
+    {
+      "task": 2809,
+      "slug": "st-stephen-budapest-v2",
+      "qid": "Q338665",
+      "qidEvidence": "https://www.wikidata.org/wiki/Q338665",
+      "identityCheck": "Prior delivery folder names the basilica and points to the hash-verified v1 HERO; no QID in the package JSON files or GLB metadata. Matched named basilica, city and architects to Wikidata.",
+      "priorPreviewSHA256": "9ebcb15650ff7e5d1767df9aefd66536b5a6ea8985e66c7324964451603471e9",
+      "v1JobId": "1858bac8-a6df-4b64-8c46-e936daaf3b6c",
+      "original": "st-stephen-budapest-v2-original.png",
+      "originalSHA256": "5619c374e035fa4a3620f44d68697c1fdc9015d78d900780b8a15711a8b0ec1c",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "review": "st-stephen-budapest-v2-1000.jpg",
+      "reviewSHA256": "ac5c7bd4b4ad7fd6cfdcca365dd4c4daa7a3652ba1633122160e3cf942af1062",
+      "reviewDimensions": [
+        1000,
+        1000
+      ],
+      "orderedLengthWidthHeightMetres": [
+        96.9,
+        61.6,
+        96
+      ],
+      "visualQA": "Entire outline visible, west steps and both west tower tops on left, domed central crossing, east columned apse on right. No crop or visible dimension text. Corner decoration and window rhythm interpreted. Depth and 3D height after footprint scaling await a real model.",
+      "silhouetteBoundsPixels": [
+        16,
+        39,
+        1217,
+        1206
+      ],
+      "silhouetteRatio": 1.029,
+      "scopeOfRatio": "Projected contrast outline including steps; no physical 3D dimension verification.",
+      "references": [
+        {
+          "title": "File:Bazilika légifotó02.jpg",
+          "author": "Civertan",
+          "url": "https://commons.wikimedia.org/wiki/File:Bazilika_l%C3%A9gifot%C3%B302.jpg",
+          "license": "CC BY-SA 3.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sha256": "ba26b7224aecae0243fbf366485d18f928ccf121a6e403bd3bddda908c028ac5",
+          "role": "Pituusakseli, eteläsivu ja kattomuodot"
+        },
+        {
+          "title": "File:St. Stephen's Basilica, East side, 2016 Budapest.jpg",
+          "author": "Globetrotter19",
+          "url": "https://commons.wikimedia.org/wiki/File:St._Stephen%27s_Basilica,_East_side,_2016_Budapest.jpg",
+          "license": "CC BY-SA 3.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sha256": "fd77c042894d4031015dfa46694221d509012ec20aa5c3e95ef894c643bdebfc",
+          "role": "Pyöristetty itäpää ja pylväikkö"
+        },
+        {
+          "title": "File:Budapest, St. Stephen's Basilica the western facade.jpg",
+          "author": "Dguendel",
+          "url": "https://commons.wikimedia.org/wiki/File:Budapest,_St._Stephen%27s_Basilica_the_western_facade.jpg",
+          "license": "CC BY 3.0",
+          "licenseURL": "https://creativecommons.org/licenses/by/3.0",
+          "sha256": "170023bfc406d2e8a49f449f034eca93b642f66310a8c83b5acb7c1fbf21874e",
+          "role": "Länsipäädyn kellotornipari"
+        }
+      ],
+      "sourceUse": "New ImageGen reconstruction from three photographs, white backdrop and new camera.",
+      "generationJob": "exec-f2a596a1-9fea-46a3-ba96-f7140869c54e",
+      "generatedAt": "2026-11-20T21:06:25.826836+00:00"
+    }
+  ],
+  "order": "8a32120a5ea41011821af63b5654bad41cd5bbe0",
+  "phase": "awaiting individual KK image approval",
+  "latestTripoResourceObservation": {
+    "date": "2026-11-20",
+    "ui": "reloaded Tripo Studio, Sami profile",
+    "creditBalance": 0,
+    "assetStorage": "417/40"
+  },
+  "tripoCalls": 0,
+  "tripoCreditsUsed": 0,
+  "purchases": 0
+}
