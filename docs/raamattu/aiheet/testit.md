@@ -15,7 +15,7 @@ SÄÄNNÖT:
 10. Laiteajo alkaa nimetystä aloituksesta, ei intron läpi, ja päättyy riviin OK tai VIKA. [R-9.13]
 11. Kehittäjäkoodi avaa kehittäjätilan kaikissa käännöksissä, toinen koodi testaajatilan: linssit ja vapaa liikkuminen, ei äänisäätimiä eikä syvempiä toimintoja. Koodeista repoon vain tiiviste. [R-6.17]
 12. Kehittäjätilassa ovat testien suorat aloitukset, kohtaamislista maanosittain ja pelin saapumiszoom. Kävijälaskuri ohittaa omistajan laitteen vain omalla merkillä. [R-9.13] [R-6.17]
-13. Omistajalle vain NYT-kuvat; ENNEN vain KK:n tilaamana. [P-261119-28]
+13. ENNEN-kuva-ajoja ei ole; esto ajo- ja tehtäväportissa. [P-261120-20]
 14. Mac-ajoja 2 rinnakkain (ma–pe 9–17: 1). Vartija: nopeusvartija (JU). [P-261120-16]
 
 EI VIKA:
