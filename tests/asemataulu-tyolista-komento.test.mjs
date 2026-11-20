@@ -113,7 +113,7 @@ test('koukku: KK:n välittämä OMISTAJAN PÄÄTÖS muistuttaa tyolista.py:stä,
   assert.match(koukku(k, 'tee jotain'), /ASEMATAULU \(hook\)/);
 });
 
-test('koukku: yli 3 h vanhat työn alla -rivit listataan (myös yli 48 h), tuore ja valmis eivät; valmis-tilanne huomataan', () => {
+test('koukku: vanhoja työn alla -rivejä ei listata (KK 16.11., 20261116-aina-toita.md kohta 5); valmis-tilanne huomataan', () => {
   const nyt = Date.now();
   const k = uusi([
     { otsikko: 'Vanhahko rivi', edistys: 1, tila: 'työn alla', ts: nyt - 5 * H },
@@ -124,9 +124,8 @@ test('koukku: yli 3 h vanhat työn alla -rivit listataan (myös yli 48 h), tuore
   ]);
   const t = koukku(k, '<cross-session-message>x</cross-session-message>', 'PostToolUse');
   assert.match(t, /TYÖLISTA \(hook\)/);
-  assert.match(t, /Vanhahko rivi[\s\S]*Hylätty rivi|Hylätty rivi[\s\S]*Vanhahko rivi/);
   assert.match(t, /tilanne sanoo valmis mutta tila ei: Unohtunut valmis/);
-  assert.doesNotMatch(t, /Tuore rivi|Valmis rivi/);
+  assert.doesNotMatch(t, /Vanhahko rivi|Hylätty rivi|Tuore rivi|Valmis rivi/);
   const k2 = uusi([{ otsikko: 'Tuore rivi', edistys: 1, tila: 'työn alla', ts: nyt - H }]);
   assert.doesNotMatch(koukku(k2, 'x', 'PostToolUse'), /TYÖLISTA \(hook\)/);
 });
