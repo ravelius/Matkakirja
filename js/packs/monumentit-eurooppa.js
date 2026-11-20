@@ -242,9 +242,9 @@ export const EUROOPAN_KADONNEET = {
       jaksot: [
         {
           osa: 'tapahtuma',
-          teksti: 'Palais d\'Orsay oli hallintopalatsi Seinen rannalla Pariisissa. Napoleonin aikana sen '
-            + 'rakentaminen alettiin, ja se valmistui vasta noin kolmenkymmenen vuoden päästä. Siellä toimivat '
-            + 'valtioneuvosto ja tilintarkastustuomioistuin.',
+          teksti: 'Palais d\'Orsay oli hallintopalatsi Seinen rannalla Pariisissa. Sitä alettiin rakentaa 1800-luvun '
+            + 'alussa Napoleonin aikana, ja se valmistui vasta noin kolmenkymmenen vuoden päästä. Siellä '
+            + 'toimivat valtioneuvosto ja tilintarkastustuomioistuin.',
           kuva: 'loisto',
         },
         {
@@ -406,7 +406,7 @@ export const EUROOPAN_KADONNEET = {
       selite: 'Vuonna 1873 Palais de l\'Industrie seisoo yhä Champs-Élysées\'n tuntumassa, ja siellä pidetään '
         + 'näyttelyitä ja tapahtumia. Halli puretaan 1890-luvulla, ja paikalle rakennetaan Grand Palais '
         + 'vuoden 1900 maailmannäyttelyä varten.',
-      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1873, isoisän matkavuosi). '
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. '
         + 'Faktat: napoleon.org ja Arthur Chandlerin Paris 1855 -sivu, tarkistettu 18.11.2026.',
       url: 'https://en.wikipedia.org/wiki/Palais_de_l%27Industrie',
     }),
@@ -577,7 +577,7 @@ export const EUROOPAN_KADONNEET = {
         + 'jonka läpi aamuvalo hiipii hallin vihannesvuorten päälle. Ensimmäiset kaupat tehdään lyhtyjen '
         + 'valossa ennen auringonnousua. Sata vuotta myöhemmin hallit puretaan ja tilalle jää suuri kuoppa, '
         + 'josta kasvaa ostoskeskus.',
-      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1873, isoisän matkavuosi). '
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. '
         + 'Faktat: paris.fr, Baltard ja Callet (1862), pavillonbaltard.fr ja fr-Wikipedia "Halles de Paris", tarkistettu 15.11.2026.',
       url: 'https://en.wikipedia.org/wiki/Les_Halles',
     }),kohde({

@@ -102,7 +102,7 @@ export const FOKUSKOHTEET_FRA = [
     ],
     // Näkyvät muodot jaksojen tekstistä (Tuileries-koe 17.11.2026).
     korostukset: ['Katariina de Medici', 'Pariisin kommuuni'],
-    nappi: 'Palatsi, jonka isoisä näki raunioina',
+    nappi: 'Palatsi, joka myytiin kivinä',
     laudat: {
       maailmankartta: { x: 5911.1, y: 1439.4 },
       europe: { x: 256.0, y: 608.5 },
@@ -682,14 +682,14 @@ export const FOKUSKOHTEET_FRA = [
         osa: 'tapahtuma',
         teksti: 'Eiffel-torni rakennettiin seisomaan vain kaksikymmentä vuotta, ja kerran huijari myi sen '
           + 'romuksi. Ennen tornia paikalla oli Champ de Mars, sotilaiden harjoituskenttä.',
+        kuva: 'rakenteilla',
       },
       {
         osa: 'tapahtuma',
         teksti: 'Vuonna 1887 kentälle alettiin koota rautatornia maailmannäyttelyä varten. Työmiehet niittasivat '
           + 'tuhansia osia yhteen yhä korkeammalla. Moni pariisilainen vastusti tornia, mutta vuonna 1889 se '
           + 'oli valmis.',
-        kuva: 'rakenteilla',
-        lisakuva: { kuva: 'niittaus', kohta: 'niittasivat tuhansia osia' },
+        kuva: 'niittaus',
         vuodet: [
           { vuosi: '1887', selite: 'rakentaminen alkaa', kohta: 'Vuonna 1887' },
           { vuosi: '1889', selite: 'torni valmis', kohta: 'vuonna 1889' },
@@ -800,7 +800,8 @@ export const FOKUSKOHTEET_FRA = [
       {
         osa: 'tapahtuma',
         teksti: 'Sainte-Chapelle on kappeli Cité-saaren palatsin pihalla. Kuningas Ludvig IX rakennutti sen '
-          + 'säilyttämään Kristuksen orjantappurakruunua, ja se vihittiin vuonna 1248.',
+          + 'säilyttämään Kristuksen orjantappurakruunua, ja se vihittiin vuonna 1248. Samassa palatsissa '
+          + 'ratkaistiin kuningattaren kaulanauhajuttu.',
         kuva: 'piha',
         vuodet: [
           { vuosi: '1248', selite: 'kappeli vihitään', kohta: 'vuonna 1248' },
@@ -808,9 +809,9 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
-        teksti: '1770-luvulla kuninkaan jalokivikauppiaat tekivät timanttikaulanauhan, jossa oli lähes 650 kiveä. '
-          + 'Marie Antoinette kieltäytyi ostamasta sitä, mutta huijari Jeanne de La Motte sai kardinaali de '
-          + 'Rohanin uskomaan, että kuningatar halusi nauhan salaa.',
+        teksti: '1770-luvulla jalokivikauppiaat tekivät timanttikaulanauhan. Marie Antoinette kieltäytyi '
+          + 'ostamasta sitä, mutta huijari Jeanne de La Motte sai kardinaali de Rohanin uskomaan, että '
+          + 'kuningatar halusi nauhan salaa.',
         kuva: 'nauha',
         lisakuva: { kuva: 'juoni', kohta: 'huijari Jeanne de La Motte' },
       },
@@ -827,9 +828,8 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'kaanne',
-        teksti: 'Oikeudenkäynti pidettiin Pariisin parlamentissa, joka istui samassa palatsissa. Toukokuussa 1786 '
-          + 'kardinaali vapautettiin, ja Jeanne leimattiin varkaaksi ja vietiin vankilaan. Kuningattaren '
-          + 'maine kärsi.',
+        teksti: 'Oikeudenkäynti pidettiin Pariisin parlamentissa. Toukokuussa 1786 kardinaali vapautettiin, ja '
+          + 'Jeanne leimattiin varkaaksi ja vietiin vankilaan. Kuningattaren maine kärsi.',
         kuva: 'viuhka',
         vuodet: [
           { vuosi: '1786', selite: 'Rohan vapautetaan', kohta: 'Toukokuussa 1786' },
@@ -1060,14 +1060,15 @@ export const FOKUSKOHTEET_FRA = [
     jaksot: [
       {
         osa: 'tapahtuma',
-        teksti: 'Grand Café oli kahvila Capucines-bulevardilla Pariisissa, ja sen kellarissa katsottiin Lumièren '
-          + 'veljesten keksintöä.',
+        teksti: 'Grand Café oli kahvila Capucines-bulevardilla Pariisissa, ja sen kellarissa maksava yleisö '
+          + 'katsoi Lumièren veljesten elokuvaa.',
+        kuva: 'veljekset',
       },
       {
         osa: 'tapahtuma',
         teksti: 'Lumièren veljekset patentoivat keksintönsä helmikuussa 1895. Laite oli kamera ja projektori '
           + 'yhdessä, ja sillä kuvattu filmi oli noin minuutin pituinen.',
-        kuva: 'veljekset',
+        kuva: 'juliste',
         vuodet: [
           { vuosi: '1895', selite: 'patentti', kohta: 'helmikuussa 1895' },
         ],
@@ -1077,7 +1078,6 @@ export const FOKUSKOHTEET_FRA = [
         teksti: 'Joulukuun 28. päivänä 1895 Grand Cafén kellarisalissa pidettiin maksullinen näytös. Lippu maksoi '
           + 'frangin, ja illalla katsojia oli vain kolmisenkymmentä. Valkokankaalla Lumièren tehtaan portti '
           + 'Lyonissa aukesi, ja työläiset kävelivät ulos.',
-        kuva: 'juliste',
         vuodet: [
           { vuosi: '1895', selite: 'Grand Cafén näytös', kohta: 'päivänä 1895' },
         ],
@@ -1190,9 +1190,9 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
-        teksti: 'Vuonna 1771 Lavoisier oli mennyt naimisiin Marie-Annen kanssa. Marie-Anne oli oppinut englantia '
-          + 'ja käänsi ulkomaisia tutkimuksia ranskaksi. Lavoisier huomasi kokeissaan, että palaessa aine '
-          + 'yhtyy ilman osaan, jonka hän nimesi hapeksi.',
+        teksti: 'Vuonna 1771 Lavoisier meni naimisiin Marie-Annen kanssa. Marie-Anne oppi englantia ja käänsi '
+          + 'ulkomaisia tutkimuksia ranskaksi. Lavoisier huomasi kokeissaan, että palaessa aine yhtyy ilman '
+          + 'osaan, jonka hän nimesi hapeksi.',
         kuva: 'laboratorio',
         vuodet: [
           { vuosi: '1771', selite: 'naimisiin', kohta: 'Vuonna 1771' },
@@ -1200,27 +1200,24 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
-        teksti: 'Vuonna 1788 Jacques-Louis David maalasi Lavoisierista ja Marie-Annesta muotokuvan. Vuonna 1789 '
-          + 'ilmestyi Lavoisierin oppikirja. Marie-Anne oli piirtänyt siihen laitteiden kuvat.',
+        teksti: 'Vuonna 1788 Jacques-Louis David maalasi Lavoisierista ja Marie-Annesta muotokuvan. Marie-Annen '
+          + 'työ näkyi myös oppikirjassa: vuonna 1789 ilmestyneeseen Lavoisierin oppikirjaan hän piirsi '
+          + 'laitteiden kuvat.',
         kuva: 'david',
         vuodet: [
           { vuosi: '1788', selite: 'Davidin muotokuva', kohta: 'Vuonna 1788' },
-          { vuosi: '1789', selite: 'oppikirja', kohta: 'Vuonna 1789' },
-        ],
-      },
-      {
-        osa: 'kaanne',
-        teksti: 'Lavoisier oli kuulunut vanhan hallinnon veronkantajiin. Vallankumouksen tuomioistuin tuomitsi '
-          + 'hänet kuolemaan, ja hänet mestattiin toukokuun 8. päivänä 1794.',
-        vuodet: [
-          { vuosi: '1794', selite: 'Lavoisier mestattiin', kohta: 'päivänä 1794' },
+          { vuosi: '1789', selite: 'oppikirja', kohta: 'vuonna 1789' },
         ],
       },
       {
         osa: 'tanaan',
-        teksti: 'Lavoisierin laboratorion välineitä on nykyään Arts et Métiers -museossa Pariisissa. Ne ovat '
-          + 'siellä esillä.',
+        teksti: 'Lavoisier oli kuulunut vanhan hallinnon veronkantajiin. Vallankumouksen tuomioistuin tuomitsi '
+          + 'hänet kuolemaan, ja hänet mestattiin toukokuun 8. päivänä 1794. Lavoisierin laboratorion '
+          + 'välineitä on nykyään Arts et Métiers -museossa Pariisissa.',
         kuva: 'kaasumittarit',
+        vuodet: [
+          { vuosi: '1794', selite: 'Lavoisier mestattiin', kohta: 'päivänä 1794' },
+        ],
       },
     ],
     /*
@@ -1319,25 +1316,25 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
-        teksti: 'Siellä hän keitti lientä lasipulloissa, joiden kaula oli taivutettu joutsenen kaulan muotoon. '
-          + 'Ilma pääsi pulloon, mutta pöly jäi mutkaan.',
-        kuva: 'pullot',
+        teksti: 'Pasteurin vastustaja Félix Pouchet uskoi, että elämä voi syntyä itsestään mätänevästä aineesta. '
+          + 'Tiedeakatemia oli luvannut palkinnon sille, joka ratkaisee kiistan kokeilla.',
+        kuva: 'pouchet',
       },
       {
         osa: 'tapahtuma',
-        teksti: 'Pasteurin vastustaja Félix Pouchet uskoi, että elämä voi syntyä itsestään mätänevästä aineesta. '
-          + 'Tiedeakatemia oli luvannut palkinnon sille, joka ratkaisee kiistan kokeilla. Pasteur avasi '
-          + 'pulloja jopa Alppien jäätiköllä vuonna 1860 ja julkaisi tuloksensa 1860-luvun alussa.',
-        kuva: 'pouchet',
+        teksti: 'Pasteur keitti lientä lasipulloissa, joiden kaula oli taivutettu joutsenen kaulan muotoon. Ilma '
+          + 'pääsi pulloon, mutta pöly jäi mutkaan, ja liemi pysyi kirkkaana. Pulloja hän avasi jopa Alppien '
+          + 'jäätiköllä vuonna 1860.',
+        kuva: 'pullot',
         vuodet: [
           { vuosi: '1860', selite: 'pullot jäätiköllä', kohta: 'vuonna 1860' },
         ],
       },
       {
         osa: 'kaanne',
-        teksti: 'Pasteur voitti kiistan. Hän osoitti myös, että käyminen on elävien mikrobien työtä. Viinin '
-          + 'tauteja hän torjui kuumentamalla viiniä, ja keksinnölle haettiin patentti vuonna 1865. '
-          + 'Menetelmää kutsutaan pastöroinniksi.',
+        teksti: 'Pasteur voitti kiistan ja julkaisi tuloksensa 1860-luvun alussa. Hän osoitti myös, että käyminen '
+          + 'on elävien mikrobien työtä. Viinin tauteja hän torjui kuumentamalla viiniä, ja keksinnölle '
+          + 'haettiin patentti vuonna 1865. Menetelmää kutsutaan pastöroinniksi.',
         vuodet: [
           { vuosi: '1865', selite: 'pastörointipatentti', kohta: 'vuonna 1865' },
         ],
