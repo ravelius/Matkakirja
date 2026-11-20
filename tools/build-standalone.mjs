@@ -117,6 +117,8 @@ const MODULES = [
   // jotta kaupungin piste ja hetken oma sivu eivät eriydy.
   'js/packs/historian-hetket.js',
   'js/packs/maakartat.js',
+  // nahtavyysjutut.js tuo FOKUSVIRTA_PARIISI:n (L5-5 erä 3), joten Pariisin fokusvirta ennen sitä.
+  'js/packs/fokusvirta-pariisi.js',
   'js/packs/nahtavyysjutut.js',
   'js/packs/miniatyyrit.js',
   'js/packs/ihmetahdet.js',
@@ -158,7 +160,6 @@ const MODULES = [
   // packit tulevat listalla ennen pelin omia moduuleja).
   'js/packs/fokusvirta-madrid.js',
   'js/packs/fokusvirta-wien.js',
-  'js/packs/fokusvirta-pariisi.js',
   'js/packs/fokusvirta-berliini.js',
   // Aalto 2 (29.8.2026): Lontoo, Budapest, Dubrovnik ja Praha. Sama
   // sääntö kuin aallolla 1 — ei kohdenostoja, mutta js/fokusnosto.js
