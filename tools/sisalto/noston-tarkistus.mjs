@@ -20,8 +20,8 @@ export const RIKKEET = ['alku', 'isoisa', 'jarjestys', 'pituus', 'rivit'];
 export const PITUUS_MAX = 1000;
 /** Merkkimäärä kappaleväleittä (jaksojen pituuksien summa, kuten raporteissa). */
 export const merkkeja = (teksti) => String(teksti).replace(/\n\n/g, '').length;
-/** Vuosirivi, jonka vuosi johdetaan tekstin suhteellisesta ilmauksesta (lähteet 1909/1910 eivät sovi: vuosi vain rivillä). */
-export const JOHDETUT_RIVIT = { 'eiffel-torni': ['1909'] };
+/** Sallitut vuosirivit ilman vuotta tekstissä (id → vuodet). Tyhjä: Eiffelin 1909 poistettiin riippumattoman tarkistajan EI-rivillä (lähteet 1909/1910). */
+export const JOHDETUT_RIVIT = {};
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 

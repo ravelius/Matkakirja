@@ -87,7 +87,7 @@ test('lähtöluettelo: sen rikkeet ovat vain tunnettuja koodeja eikä erän 1 no
   }
 });
 
-test('erä 1 (13 jaksollista): neljä tai viisi jaksoa, pituus 700–1 000, vuosirivejä 4–6 (Bastiljin äänitetyt palat: sanasta sanaan ennallaan)', () => {
+test('erä 1 (13 jaksollista): neljä tai viisi jaksoa, pituus 700–1 000, vuosirivejä 4–6 (Bastilji: äänitetyt palat sanasta sanaan ennallaan → 2 riviä; Eiffel: 1909 vain suhteellisena → 3 riviä)', () => {
   const kaikki = [...FOKUSKOHTEET_FRA, ...EUROOPAN_KADONNEET.FRA];
   const virheet = [];
   for (const id of ERA_1) {
@@ -97,7 +97,7 @@ test('erä 1 (13 jaksollista): neljä tai viisi jaksoa, pituus 700–1 000, vuos
     const pituus = merkkeja(j.map((x) => x.teksti).join('\n\n'));
     if (j.length < 4 || j.length > 5) virheet.push(`${id}: ${j.length} jaksoa`);
     if (pituus < 700 || pituus > 1000) virheet.push(`${id}: ${pituus} merkkiä`);
-    if ((rivit < 4 || rivit > 6) && id !== 'bastilji') virheet.push(`${id}: ${rivit} vuosiriviä`);
+    if ((rivit < 4 || rivit > 6) && id !== 'bastilji' && id !== 'eiffel-torni') virheet.push(`${id}: ${rivit} vuosiriviä`);
     if (j.some((x) => x.osa === 'nimi' || x.osa === 'esittely' || x.aani === 'isoisa')) virheet.push(`${id}: nimi-, esittely- tai isoisäjakso datassa`);
     if (!/^[^.]{3,40}$/.test(k.otsikko) || /\d{4}/.test(k.otsikko) || k.otsikko.length > 40) virheet.push(`${id}: tarinarivi "${k.otsikko}"`);
   }

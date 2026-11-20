@@ -348,7 +348,7 @@ export const FOKUSKOHTEET_FRA = [
     jaksot: [
       {
         osa: 'tapahtuma',
-        teksti: 'Louvre oli kuninkaiden palatsi, kunnes se avattiin museoksi vuonna 1793. Reilut sata vuotta '
+        teksti: 'Louvre oli ennen kuninkaiden palatsi, ja museoksi se avattiin vuonna 1793. Yli sata vuotta '
           + 'myöhemmin sen seinältä varastettiin Mona Lisa.',
         kuva: 'julkisivu',
         vuodet: [
@@ -686,7 +686,7 @@ export const FOKUSKOHTEET_FRA = [
       {
         osa: 'tapahtuma',
         teksti: 'Vuonna 1887 kentälle alettiin koota rautatornia maailmannäyttelyä varten. Työmiehet niittasivat '
-          + 'tuhansia osia yhteen yhä korkeammalla. Moni pariisilainen vihasi tornia, mutta vuonna 1889 se '
+          + 'tuhansia osia yhteen yhä korkeammalla. Moni pariisilainen vastusti tornia, mutta vuonna 1889 se '
           + 'oli valmis.',
         kuva: 'rakenteilla',
         lisakuva: { kuva: 'niittaus', kohta: 'niittasivat tuhansia osia' },
@@ -700,9 +700,6 @@ export const FOKUSKOHTEET_FRA = [
         teksti: 'Kaksikymmentä vuotta kului, mutta kukaan ei purkanut tornia. Sen huipulla oli radioantenni, ja '
           + 'armeijalle siitä oli niin paljon hyötyä, että torni sai jäädä.',
         kuva: 'photochrom1900',
-        vuodet: [
-          { vuosi: '1909', selite: 'tornin purkuaika', kohta: 'Kaksikymmentä vuotta kului' },
-        ],
       },
       {
         osa: 'kaanne',
@@ -811,7 +808,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
-        teksti: '1780-luvulla kuninkaan jalokivikauppiaat tekivät timanttikaulanauhan, jossa oli lähes 650 kiveä. '
+        teksti: '1770-luvulla kuninkaan jalokivikauppiaat tekivät timanttikaulanauhan, jossa oli lähes 650 kiveä. '
           + 'Marie Antoinette kieltäytyi ostamasta sitä, mutta huijari Jeanne de La Motte sai kardinaali de '
           + 'Rohanin uskomaan, että kuningatar halusi nauhan salaa.',
         kuva: 'nauha',
@@ -1186,7 +1183,7 @@ export const FOKUSKOHTEET_FRA = [
     jaksot: [
       {
         osa: 'tapahtuma',
-        teksti: 'Lavoisierin laboratorio oli Arsenaalin asunnon vieressä Pariisissa. Antoine Lavoisier johti '
+        teksti: 'Lavoisierin laboratorio oli Arsenaalin asunnon yhteydessä Pariisissa. Antoine Lavoisier johti '
           + 'Arsenaalissa ruudin valmistusta ja punnitsi laboratoriossaan kaiken ennen koetta ja sen jälkeen. '
           + 'Tuloksista hän päätteli, että ainetta on kokeen jälkeen yhtä paljon kuin ennen sitä.',
         kuva: 'koe',
@@ -1204,8 +1201,7 @@ export const FOKUSKOHTEET_FRA = [
       {
         osa: 'tapahtuma',
         teksti: 'Vuonna 1788 Jacques-Louis David maalasi Lavoisierista ja Marie-Annesta muotokuvan. Vuonna 1789 '
-          + 'ilmestyi Lavoisierin oppikirja. Marie-Anne oli piirtänyt laitteet mittakaavaan, ja piirrokset '
-          + 'ovat siinä.',
+          + 'ilmestyi Lavoisierin oppikirja. Marie-Anne oli piirtänyt siihen laitteiden kuvat.',
         kuva: 'david',
         vuodet: [
           { vuosi: '1788', selite: 'Davidin muotokuva', kohta: 'Vuonna 1788' },
@@ -1439,9 +1435,9 @@ export const FOKUSKOHTEET_FRA = [
       {
         osa: 'tapahtuma',
         teksti: 'Palais Garnier on Pariisin oopperatalo, jonka rakentamisen sai alkuun murhayritys. Vuonna 1858 '
-          + 'keisari Napoleon III välttyi murhayritykseltä vanhan oopperan edessä ja päätti rakennuttaa '
-          + 'uuden. Arkkitehtikilpailuun tuli yli sata ehdotusta, ja voittajaksi valittiin nuori, tuntematon '
-          + 'arkkitehti Charles Garnier.',
+          + 'keisari Napoleon III välttyi murhayritykseltä vanhan oopperan edessä. Sen jälkeen hän päätti '
+          + 'rakennuttaa uuden. Kilpailuun tuli yli sata ehdotusta, ja voittajaksi valittiin nuori, '
+          + 'tuntematon arkkitehti Charles Garnier.',
         kuva: 'julkisivu',
         vuodet: [
           { vuosi: '1858', selite: 'murhayritys', kohta: 'Vuonna 1858' },

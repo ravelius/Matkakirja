@@ -362,8 +362,8 @@ export const EUROOPAN_KADONNEET = {
         {
           osa: 'tanaan',
           teksti: 'Paikalle rakennettiin lasikattoinen Grand Palais. Rakennus suljettiin kunnostukseen vuonna 2021. '
-            + 'Kesällä 2024 sen lasikaton alla miekkailtiin Pariisin olympialaisissa, ja koko rakennus avattiin '
-            + 'yleisölle vuonna 2025.',
+            + 'Kesällä 2024 sen lasikaton alla miekkailtiin Pariisin olympialaisissa, ja kunnostuksen jälkeen '
+            + 'rakennus avattiin yleisölle uudelleen vuonna 2025.',
           kuva: 'grandpalais',
           vuodet: [
             { vuosi: '2021', selite: 'kunnostus alkaa', kohta: 'vuonna 2021' },
