@@ -6540,7 +6540,7 @@ export const NAHTAVYYSJUTUT = {
           osoite: 'https://media.matkakirja.app/kuvat/eiffel-torni-rakenteilla.jpg',
           laji: 'valokuva',
           lyhyt: 'Eiffel-torni rakenteilla 1888',
-          selite: 'Elokuussa 1888 tornin rautaristikko nousee yhä ylemmäs Champ de Marsilla.',
+          selite: 'Vuonna 1888 tornin rautaristikko nousee yhä ylemmäs Champ de Marsilla.',
           lahde: 'Neurdein, 1888, Wikimedia Commons (public domain), rajattu',
           tekija: 'Neurdein',
           lisenssi: 'Public domain',

@@ -3111,7 +3111,7 @@ export const HISTORIAN_HETKET = [
         rooli: 'kauko',
         versio: 5,
         tiedosto: 'hetki-eiffel-torni-1888-kauko-photo-v5.jpg',
-        lyhyt: 'Eiffel-tornin toinen taso valmistuu, kun tuhannet esivalmistetut osat kootaan yhdeksi torniksi.',
+        lyhyt: 'Eiffel-tornin toinen kerros on valmis, ja rakentaminen jatkuu',
         kuvateksti: 'Elokuussa 1888 toinen taso on viimein koossa, mutta torni '
           + 'jatkuu vielä avonaisena rautaristikkona taivaalle. Alhaalla '
           + 'hevoskuormat tuovat Levallois’ssa millintarkasti esivalmistettuja '
@@ -4411,7 +4411,7 @@ export const HISTORIAN_HETKET = [
         rooli: 'lahi',
         versio: 5,
         tiedosto: 'hetki-ranskan-vallankumous-bastilji-1789-lahi-photo-v5.jpg',
-        lyhyt: 'Pariisilainen etsii yhä ruutia muskettiinsa, kun Bastiljin portti vihdoin avautuu.',
+        lyhyt: 'Pariisilainen työläinen musketti olalla Bastiljin portilla',
         kuvateksti: 'Havainnekuvan pariisilainen metallityöläinen on kantanut '
           + 'Invalidikirkolta hakemaansa muskettia tuntikausia, mutta ruutia '
           + 'hän etsii yhä. Kun Bastiljin portti viimein avautuu, voitonriemu '

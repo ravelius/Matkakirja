@@ -1,6 +1,6 @@
 # K-4 erä 3, F-osa: nostot 44 Eiffel-torni 1888 ja 45 Bastilji 1789 (SK 20.11.2026, KK:n päätös 14.06)
 
-Haara `sk/k4-era3-f-kuvat` (pohjana K-5 korjaus e64e6a832f), draft-PR vasta KK:n sanalla. Kuvia ei ole ladattu ämpäriin: uudet tiedostot ovat kansiossa `/Users/Shared/Claude/luovutukset/sk-k4-era3-f/_ampari/` (polku ämpärissä `kohtaamiset/historian-hetket/`, SHA256SUMS mukana). Tekstejä, visoja ja muita nostoja ei muutettu; F:n muut neljä hetkeä (Curie, Lavoisier, Pasteur, Lumière) eivät kuulu tähän osaan.
+Haara `sk/k4-era3-f-kuvat` (pohjana K-5:n -1200-polun sha 696166e4c4), draft-PR vasta KK:n sanalla. Kuvia ei ole ladattu ämpäriin: uudet tiedostot ovat kansiossa `/Users/Shared/Claude/luovutukset/sk-k4-era3-f/_ampari/` (polku ämpärissä `kohtaamiset/historian-hetket/`; SHA256SUMS samassa kansiossa kuin neljä tiedostoa). Tekstejä, visoja ja muita nostoja ei muutettu; F:n muut neljä hetkeä (Curie, Lavoisier, Pasteur, Lumière) eivät kuulu tähän osaan.
 
 ## 1. M2 luvuin: rikkeet ennen | nyt
 - **Ennen** (lähtöluettelo): kummallakin `viimeinen, laji, tekija, lisenssi, mitat, havainne` (4 kuvaa: 2 Codex-hetkikuvaa ilman kenttiä ja 1536 × 1024 -kokoa + 2 nähtävyysjutun Commons-kuvaa ilman kenttiä).
@@ -42,10 +42,10 @@ Pois: anonyymin soikea maalaus (kulunut kangasreuna valkoisella taustalla näkyy
 - **M2 luvuin:** luku 1.
 - **M3:** uusia Commons-kuvia ei haettu, joten lisenssit ovat A-nostojen jo luetut (K-4 erä 1; `tools/hae-commons.mjs`); uudet tiedostot ovat vain omien Codex-kuvien rajauksia (ei verkkohakuja).
 - **M4:** tilauksia ei tarvita (0 Codex-tilausta).
-- **M5 älä riko:** ruuti- ja reikävisat: kuvatekstit ennallaan (ks. 5.1); hetkikortti näyttää samat kuvat, nyt 1200 × 800; kuvateksti kuvaa kuvan; vanhaa tiedostoa ei poistettu palvelimelta.
+- **M5 älä riko:** ruuti- ja reikävisat: kuvatekstit korjattu KK:n päätöksellä 14.18 (ks. 5.1); hetkikortti näyttää samat kuvat, nyt 1200 × 800; kuvateksti kuvaa kuvan; vanhaa tiedostoa ei poistettu palvelimelta.
 
 ## 5. Avoimet kohdat KK:lle (ei tekstimuutoksia omin päin)
-1. **Visa ja kuvateksti (rajatapaus).** Bastiljin lähikuvan `lyhyt` ("Pariisilainen etsii yhä ruutia muskettiinsa…") sanoo "ruutia", joka on hetken lehtivisan vastaus ("Miksi pariisilaiset marssivat Bastiljiin?"); kertoja sanoo saman samassa kappaleessa, mutta sääntö 9 kieltää vastauksen kuvatekstistä. Eiffelin kaukokuvan `lyhyt` sanoo "esivalmistetut osat", joka vihjaa reikävisan vastaukseen. En muuttanut tekstejä; ehdotus: Bastilji lähi "Pariisilainen työläinen musketti olalla Bastiljin portilla", Eiffel kauko "Eiffel-tornin toinen taso valmistuu elokuussa 1888". Sano, niin vaihdan.
+1. **Visa ja kuvateksti (korjattu KK 14.18, sääntö 9).** Bastiljin lähikuvan `lyhyt` oli "Pariisilainen etsii yhä ruutia muskettiinsa…" (lehtivisan vastaus) → nyt "Pariisilainen työläinen musketti olalla Bastiljin portilla". Eiffelin kaukokuvan `lyhyt` vihjasi reikävisan vastaukseen ("esivalmistetut osat") → nyt "Eiffel-tornin toinen kerros on valmis, ja rakentaminen jatkuu". Neurdeinin kuvan selite: "Vuonna 1888 tornin rautaristikko nousee…" (lähde antaa vain vuoden). Hetkisivut päivitetty `tools/paivita-hetkisivut.mjs`:llä.
 2. **Bastiljin lähikuva:** tunnistamattoman työläisen puolilähikuva (ei tunnettu henkilö; DEF-tarkistus: aidon näköinen); kaukokuvassa polvistuva sotilas on vasemmassa reunassa ja häipyy osittain.
 3. **Ämpäri:** 4 uutta 1200 × 800 -tiedostoa (`kohtaamiset/historian-hetket/…-photo-v5.jpg`) vietävä ämpäriin ennen PR:n yhdistämistä; muita ei tarvita. Ilman niitä hetkikortin kuvat ja nostojen kuvat 1–2 jäävät tyhjiksi.
 4. **Hetkien tekstit:** Bastiljin hetken teksti on 1 396 merkkiä (L5-5:n asia, ei tässä).

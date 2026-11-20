@@ -7268,8 +7268,7 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Eiffel-torni 1888 — näin torni koottiin',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-eiffel-torni-1888-kauko-photo-v5.jpg',
-              lyhyt: 'Eiffel-tornin toinen taso valmistuu, kun tuhannet '
-                + 'esivalmistetut osat kootaan yhdeksi torniksi.',
+              lyhyt: 'Eiffel-tornin toinen kerros on valmis, ja rakentaminen jatkuu',
               selite: 'Elokuussa 1888 toinen taso on viimein koossa, mutta torni '
                 + 'jatkuu vielä avonaisena rautaristikkona taivaalle. Alhaalla '
                 + 'hevoskuormat tuovat Levallois’ssa millintarkasti '
@@ -7343,8 +7342,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'mukaan Lafayette lisää kaupungin siniseen ja punaiseen valkoisen, '
             + 'vanhastaan Ranskan ja sen kuninkaiden värin, ja siitä tulee '
             + 'trikolori; tarkalleen ei tiedetä, kuka värit yhdisti.',
-          lyhyt: 'Pariisilainen etsii yhä ruutia muskettiinsa, kun Bastiljin '
-            + 'portti vihdoin avautuu.',
+          lyhyt: 'Pariisilainen työläinen musketti olalla Bastiljin portilla',
           selite: 'Havainnekuvan pariisilainen metallityöläinen on kantanut '
             + 'Invalidikirkolta hakemaansa muskettia tuntikausia, mutta ruutia '
             + 'hän etsii yhä. Kun Bastiljin portti viimein avautuu, voitonriemu '
