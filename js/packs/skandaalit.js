@@ -2227,7 +2227,7 @@ export const SKANDAALIT = {
           korkeus: 800,
         },
         {
-          osoite: 'https://media.matkakirja.app/kuvat/tarina-vrain-lucas-2-kirjepino.jpg',
+          osoite: 'https://media.matkakirja.app/kuvat/tarina-vrain-lucas-2-kirjepino-1200.jpg',
           laji: 'havainnekuva',
           lyhyt: 'Chasles ja toinen mies tutkivat kirjepinoa työhuoneessa',
           selite: 'Chasles ja toinen mies tutkivat kirjepinoa työhuoneessa',

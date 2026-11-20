@@ -17,17 +17,17 @@ const valot = new Map(JSON.parse(tiedostot.get('kokoelmat/karttavalot.json')).al
 
 // [karttavalon tunnus, tiedosto, odotettu paikka noston kuvalistassa (0-alkuinen)]
 const KUVAT = [
-  ['eiffel-torni', 'tarina-eiffel-torni-4-lustig.jpg', 2],
-  ['sainte-chapelle', 'tarina-sainte-chapelle-1-piha.jpg', 0],
-  ['sainte-chapelle', 'tarina-sainte-chapelle-2-kaulanauha.jpg', 1],
-  ['sainte-chapelle', 'tarina-sainte-chapelle-4-parlamentti.jpg', 2],
-  ['curie-1898', 'tarina-curie-1898-1-vaja.jpg', 0],
-  ['curie-1898', 'tarina-curie-1898-2-radiumtyo.jpg', 1],
-  ['curie-1898', 'tarina-curie-1898-4-hohto.jpg', 2],
-  ['louvre', 'tarina-louvre-2-varkaus.jpg', 1],
-  ['nosto-kirahvin-kavelymatka', 'tarina-kirahvi-1827-2-kavely.jpg', 1],
-  ['hahmotelma-temple-torni', 'tarina-hahmotelma-temple-torni-3-kadonnut.jpg', 2],
-  ['skandaali-vrain-lucas-kirjevaarennokset', 'tarina-vrain-lucas-2-kirjepino.jpg', 1],
+  ['eiffel-torni', 'tarina-eiffel-torni-4-lustig-1200.jpg', 2],
+  ['sainte-chapelle', 'tarina-sainte-chapelle-1-piha-1200.jpg', 0],
+  ['sainte-chapelle', 'tarina-sainte-chapelle-2-kaulanauha-1200.jpg', 1],
+  ['sainte-chapelle', 'tarina-sainte-chapelle-4-parlamentti-1200.jpg', 2],
+  ['curie-1898', 'tarina-curie-1898-1-vaja-1200.jpg', 0],
+  ['curie-1898', 'tarina-curie-1898-2-radiumtyo-1200.jpg', 1],
+  ['curie-1898', 'tarina-curie-1898-4-hohto-1200.jpg', 2],
+  ['louvre', 'tarina-louvre-2-varkaus-1200.jpg', 1],
+  ['nosto-kirahvin-kavelymatka', 'tarina-kirahvi-1827-2-kavely-1200.jpg', 1],
+  ['hahmotelma-temple-torni', 'tarina-hahmotelma-temple-torni-3-kadonnut-1200.jpg', 2],
+  ['skandaali-vrain-lucas-kirjevaarennokset', 'tarina-vrain-lucas-2-kirjepino-1200.jpg', 1],
 ];
 
 test('11 K-5-kuvaa on oikean noston listassa oikealla jaksopaikalla havainnekuvina', () => {

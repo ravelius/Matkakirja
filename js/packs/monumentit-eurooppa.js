@@ -344,7 +344,7 @@ export const EUROOPAN_KADONNEET = {
       ],
       jaksokuvat: {
         kadonnut: {
-          osoite: 'https://media.matkakirja.app/kuvat/tarina-hahmotelma-temple-torni-3-kadonnut.jpg',
+          osoite: 'https://media.matkakirja.app/kuvat/tarina-hahmotelma-temple-torni-3-kadonnut-1200.jpg',
           laji: 'havainnekuva',
           lyhyt: 'Temple-torni ja sen kehämuuri, portilla vartijat',
           lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Portti, kadun näkymä ja vartijoiden paikka ovat kuviteltu sommittelu; viitteinä Auvrayn ja Pernot\'n piirrokset (CC0) ja Musée Carnavalet',
