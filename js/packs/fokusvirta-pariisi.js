@@ -1001,14 +1001,9 @@ export const FOKUSVIRTA_PARIISI = {
       otsikko: 'Metro 1900 — Guimardin sisäänkäynnit',
       symboli: 'tekniikka',
       lunastus: [
-        'Pariisin metro avattiin 19. heinäkuuta 1900. Sisäänkäynneistä oli '
-          + 'järjestetty arkkitehtikilpailu, mutta yksikään 21 ehdotuksesta ei '
-          + 'kelvannut, ja työ annettiin Hector Guimardille, joka ei ollut edes '
-          + 'osallistunut kilpailuun. Hän piirsi valurautaisia vakio-osia, '
-          + 'jotka sopivat yhteen kuin rakennussarja: samoista paloista sai '
-          + 'kasattua sopivan sisäänkäynnin mihin tahansa kadunkulmaan. Niitä '
-          + 'tehtiin 167. Sitten tyyli meni pois muodista ja puolet purettiin. '
-          + 'Jäljellä on 88, ja valtaosa niistä suojeltiin vuonna 1978.',
+        'Pariisin metron kuuluisat sisäänkäynnit teki arkkitehti, joka ei ollut edes osallistunut niiden suunnittelukilpailuun. Metro avattiin maailmannäyttelyn aikaan 19. heinäkuuta 1900, ja ensimmäinen linja yhdisti Porte de Vincennes’in ja Porte Maillot’n. Sisäänkäynneistä oli järjestetty arkkitehtikilpailu, mutta yksikään 21 ehdotuksesta ei kelvannut, ja työ annettiin Hector Guimardille.',
+        'Guimard piirsi valurautaisia vakio-osia, jotka sopivat yhteen kuin rakennussarja: samoista paloista sai kasattua sopivan sisäänkäynnin mihin tahansa kadunkulmaan. Hänen tyylinsä oli jugendia, ja sisäänkäyntejä tehtiin 167.',
+        'Sitten tyyli meni pois muodista ja puolet purettiin. Jäljellä on 88, ja valtaosa niistä suojeltiin vuonna 1978.',
       ],
       lahde: 'Pariisin kaupunkilehden sivu "Pariisi", nosto "Metron '
         + 'sisäänkäynti koottiin palasista" (js/packs/kulttuuri-kategoriat.js). '

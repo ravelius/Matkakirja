@@ -6,7 +6,7 @@
  *   isoisa    sana "isoisä" ei esiinny
  *   jarjestys tekstin vuodet nousevassa järjestyksessä (vuosikymmenet ja "ei 1789:stä" -vastakohdat eivät lasketa)
  *   pituus    enintään 1 000 merkkiä
- *   rivit     (vain jaksollinen nosto) jokaisella sanotulla vuodella vuosirivi ja jokaisella rivillä vuosi tekstissä,
+ *   rivit     (jaksollinen nosto ja erän 3 nähtävyysjutut) jokaisella sanotulla vuodella vuosirivi ja jokaisella rivillä vuosi tekstissä,
  *             rivit nousevassa järjestyksessä
  * Lähtöluettelo (docs/raportit/pariisin-nostot-rikkeet-lahto-20261120.json) on origin/mainin tila ennen erää 1;
  * se saa vain pienentyä: uusi nosto tai muuttunut teksti ei pääse läpi rikkeellä (tests/noston-tekstisaannot.test.mjs).
@@ -53,7 +53,7 @@ export function sanotutVuodet(teksti) {
 }
 
 /** Yksi nosto: { id, nimi, teksti, vuodet? (jaksojen vuosirivit järjestyksessä), jaksollinen?, tiukka? (koko nimi ensimmäisessä virkkeessä) }. */
-export function tarkista({ id, nimi, teksti, vuodet, jaksollinen = false, tiukka = false }) {
+export function tarkista({ id, nimi, teksti, vuodet, jaksollinen = false, tiukka = false, tarkistaRivit = false }) {
   const rikkeet = [];
   const virke = ensimmainenVirke(teksti);
   const nimiOk = tiukka ? virke.toLowerCase().includes(String(nimi).toLowerCase()) : virke.toLowerCase().includes(nimenVarsi(nimi));
@@ -62,8 +62,9 @@ export function tarkista({ id, nimi, teksti, vuodet, jaksollinen = false, tiukka
   const vuodetTekstissa = sanotutVuodet(teksti);
   if (vuodetTekstissa.some((v, i) => i > 0 && v < vuodetTekstissa[i - 1])) rikkeet.push('jarjestys');
   if (merkkeja(teksti) > PITUUS_MAX) rikkeet.push('pituus');
-  if (jaksollinen) {
-    const rivit = (vuodet ?? []).map((v) => Number(v.vuosi));
+  if (jaksollinen || tarkistaRivit) {
+    // Rivin vuosi voi olla väli ("1509–1523"): kaikki sen nelinumeroiset luvut ovat rivin vuosia.
+    const rivit = (vuodet ?? []).flatMap((v) => String(v.vuosi).match(/\d{4}/g)?.map(Number) ?? []);
     const johdetut = (JOHDETUT_RIVIT[id] ?? []).map(Number);
     const puuttuu = [...new Set(vuodetTekstissa)].some((v) => !rivit.includes(v));
     const haamu = rivit.some((v) => !vuodetTekstissa.includes(v) && !johdetut.includes(v));
@@ -99,7 +100,8 @@ export async function keraaPariisinNostot(juuri = REPO) {
     for (const nimi of nimet) {
       const e = nj[nimi];
       if (!e) throw new Error(`nähtävyysjuttu puuttuu: ${nimi}`);
-      tulos.push({ id: `${ryhma.toLowerCase()}:${nimi}`, ryhma, nimi, teksti: e.teksti });
+      // Erä 3 (L5-5): nähtävyysjuttujen (C) vuosirivit tarkistetaan samoin kuin jaksollisten.
+      tulos.push({ id: `${ryhma.toLowerCase()}:${nimi}`, ryhma, nimi, teksti: e.teksti, ...(ryhma === 'C' ? { vuodet: e.vuodet, tarkistaRivit: true } : {}) });
     }
   };
   lisaa('C', JUTUT_C);
