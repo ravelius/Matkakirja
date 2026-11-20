@@ -5040,6 +5040,25 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Matkakirjan oma teksti · lähteinä Wien Geschichte Wiki, Austria-Forum (AEIOU) ja Wikipedia',
     },
+  
+    // Tripo-mallien kohteet (KK 20.11.2026 20.48, P-261120-18).
+    'Karlskirche': {
+      aika: '1716–1737',
+      teksti:
+        'Karlskirche syntyi lupauksesta. Vuonna 1713, vuosi Wienin viimeisen suuren ruttoepidemian jälkeen, keisari Kaarle VI lupasi rakennuttaa kirkon nimikkopyhälleen Kaarle Borromeukselle, jota pidettiin ruttopotilaiden parantajana. Arkkitehtikilpailun voitti Johann Bernhard Fischer von Erlach, ja rakennustyö alkoi vuonna 1716. Fischerin kuoltua 1723 hänen poikansa Joseph Emanuel Fischer von Erlach saattoi kirkon valmiiksi vuonna 1737.'
+        + '\n\n'
+        + 'Julkisivun keskellä on kreikkalaista temppeliä muistuttava pylväskatos. Sen kahta vapaata pylvästä, joiden reliefit kertovat Kaarle Borromeuksen elämästä, ovat innoittaneet Rooman Trajanuksen pylväs. Kupolin yläpuolella kohoaa korkea tambuuri, jota nuorempi Fischer lyhensi ja muutti osin. Kupolin freskon maalasivat Johann Michael Rottmayr ja Gaetano Fanti.'
+        + '\n\n'
+        + 'Kirkon vieressä oli hautausmaa, jonne säveltäjä Antonio Vivaldi haudattiin 28. heinäkuuta 1741. Hänen hautansa on kadonnut, mutta kirkossa pidetään yhä Vivaldi-konsertteja.',
+      vuodet: [
+        { kohta: 'Vuonna 1713', vuosi: '1713', selite: 'lupaus' },
+        { kohta: 'vuonna 1716', vuosi: '1716', selite: 'rakennus alkoi' },
+        { kohta: 'vuonna 1737', vuosi: '1737', selite: 'valmistui' },
+        { kohta: '28. heinäkuuta 1741', vuosi: '1741', selite: 'Vivaldi haudattiin' },
+      ],
+      kuvat: [],
+      lahde: 'Wikipedia (en: Karlskirche)',
+    },
   },
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
   budapest: {
@@ -7012,6 +7031,42 @@ export const NAHTAVYYSJUTUT = {
      * POISTETTU (KK 20.11.2026 klo 10.44, L5-4 erä 2). Jaksoteksti elää vain hahmotelmassa
      * (js/packs/monumentit-eurooppa.js); kartan piste avaa hahmotelman nosto-kentällä (js/packs/maakartat.js), kuten Orsay.
      */
+  
+    // Tripo-mallien kohteet (KK 20.11.2026 20.48, P-261120-18).
+    'Arc du Carrousel': {
+      aika: '1806–1808',
+      teksti:
+        'Arc de Triomphe du Carrousel rakennettiin vuosina 1806–1808 Napoleonin voittojen kunniaksi Tuileries\'n palatsin portiksi. Charles Percier ja Pierre Fontaine suunnittelivat sen Rooman Konstantinuksen riemukaaren mallin mukaan. Kaari on noin 19 metriä korkea ja 23 metriä leveä, ja sen kahdeksan marmoripylvästä on otettu talteen tuhoutuneesta Meudonin linnasta.'
+        + '\n\n'
+        + 'Jokaisen pylvään päällä seisoo Napoleonin armeijan sotilas univormussa, ja vaaleanpunaisen marmorin reliefit kertovat esimerkiksi Austerlitzin taistelusta ja Ulmin antautumisesta. Kaaren huipulla oli alun perin Venetsian San Marcon kirkon neljä pronssihevosta, jotka Napoleon oli ryöstänyt Venetsiasta vuonna 1798. Vuonna 1815 ne palautettiin Venetsiaan, ja niiden tilalle tuli vuonna 1828 François Joseph Bosion veistämä vaunukunta, jossa Rauha ajaa voitonvaunuissa.'
+        + '\n\n'
+        + 'Tuileries\'n palatsi paloi Pariisin kommuunin aikana vuonna 1871, ja sen jälkeen kaaren läpi avautuu esteetön näkymä länteen, Concorden aukion obeliskille ja Riemukaarelle. Kaari on Pariisin historiallisen akselin itäpää, ja Lontoon Marble Arch otti siitä mallia.',
+      vuodet: [
+        { kohta: 'vuosina 1806–1808', vuosi: '1806–1808', selite: 'rakennettiin' },
+        { kohta: 'Vuonna 1815', vuosi: '1815', selite: 'hevoset Venetsiaan' },
+        { kohta: 'vuonna 1828', vuosi: '1828', selite: 'uusi vaunukunta' },
+        { kohta: 'vuonna 1871', vuosi: '1871', selite: 'Tuileries paloi' },
+      ],
+      kuvat: [],
+      lahde: 'Wikipedia (en: Arc de Triomphe du Carrousel)',
+    },
+    // Tripo-mallien kohteet (KK 20.11.2026 20.48, P-261120-18).
+    'Porte Saint-Denis': {
+      aika: '1672',
+      teksti:
+        'Porte Saint-Denis on riemukaari Pariisin 10. kaupunginosassa paikalla, jossa oli Kaarle V:n kaupunginmuurin portti. Muuri rakennettiin vuosina 1356–1383 suojaamaan Seinen oikeaa rantaa. Se purettiin 1670-luvulla, kun kaupunki oli kasvanut sen yli.'
+        + '\n\n'
+        + 'Kuningas Ludvig XIV tilasi portin tilalle riemukaaren, joka kunnioittaisi Franche-Comtén valtausta vuonna 1668 sekä Alankomaiden sodan voittoja Maasilla ja Reinillä. Arkkitehti François Blondel ja kuvanveistäjä Michel Anguier aloittivat työn vuonna 1672, ja kaupunki maksoi sen. Kaari on noin 25 metriä korkea ja 25 metriä leveä, ja sen esikuvana oli Rooman Tituksen riemukaari. Ylälistassa on kullattu pronssikirjoitus LUDOVICO MAGNO, Ludvig Suurelle.'
+        + '\n\n'
+        + 'Se oli ensimmäinen Pariisin neljästä riemukaaresta; muut ovat Porte Saint-Martin, Arc du Carrousel ja Riemukaari. Porte Saint-Denis kunnostettiin vuonna 1988.',
+      vuodet: [
+        { kohta: 'vuosina 1356–1383', vuosi: '1356–1383', selite: 'muuri rakennettiin' },
+        { kohta: 'vuonna 1672', vuosi: '1672', selite: 'kaaren työ alkoi' },
+        { kohta: 'vuonna 1988', vuosi: '1988', selite: 'kunnostettiin' },
+      ],
+      kuvat: [],
+      lahde: 'Wikipedia (en: Porte Saint-Denis)',
+    },
   },
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
@@ -8413,6 +8468,61 @@ export const NAHTAVYYSJUTUT = {
         { kohta: 'vuonna 1873', vuosi: '1873', selite: 'isoisän vuosi' },
       ],
       lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia ja Amsterdam Museum',
+    },
+  
+    // Tripo-mallien kohteet (KK 20.11.2026 20.48, P-261120-18).
+    'Beurs van Zocher': {
+      aika: '1845–1903',
+      teksti:
+        'Beurs van Zocher oli Amsterdamin pörssirakennus Damrakin ja Damin kulmassa, nykyisen De Bijenkorf -tavaratalon paikalla. Edellinen pörssi, Hendrick de Keyserin 1600-luvun rakennus, oli vajonnut käyttökelvottomaksi ja purettiin vuosina 1836–1838. Uuden pörssin suunnitteli Jan David Zocher, ja kuningas Vilhelm II avasi sen 10. syyskuuta 1845.'
+        + '\n\n'
+        + 'Rakennus oli ankaran uusklassinen, ja sisäänkäynnin joonialaiset pylväät olivat hollantilaisittain jättimäiset. Ikkunoita oli vähän, koska viljaa tarkastettiin mieluiten epäsuorassa valossa, ja siksi pörssiä kutsuttiin pian mausoleumiksi. Avopihalla oli talvisin kova veto, joten rakennusta sanottiin spotti-ivalla Amsterdamin vetoisaksi ihmeeksi; piha katettiin vuonna 1848.'
+        + '\n\n'
+        + 'Kaupunki vaurastui, ja pörssi kävi pieneksi. Damrak oli rakennuksen kohdalla vain 15 metriä leveä, ja pörssin sivulle työntyvä ulkonema haittasi hevosraitiotietä. Berlagen uusi pörssi valmistui vuonna 1903, ja Zocherin pörssi purettiin samana vuonna. Paikalle nousi vuosina 1912–1915 De Bijenkorf -tavaratalo.'
+        + '\n\n'
+        + 'Isoisäsi vuonna 1873 pörssi seisoi vielä Damrakin kulmassa.',
+      vuodet: [
+        { kohta: '10. syyskuuta 1845', vuosi: '1845', selite: 'pörssi avattiin' },
+        { kohta: 'vuonna 1848', vuosi: '1848', selite: 'piha katettiin' },
+        { kohta: 'vuonna 1903', vuosi: '1903', selite: 'pörssi purettiin' },
+        { kohta: 'vuonna 1873', vuosi: '1873', selite: 'isoisän vuosi' },
+      ],
+      kuvat: [],
+      lahde: 'Matkakirjan oma teksti · lähteinä nl.Wikipedia (Beurs van Zocher), Wikipedia (Beurs van Berlage)',
+    },
+    // Tripo-mallien kohteet (KK 20.11.2026 20.48, P-261120-18).
+    'Munttoren': {
+      aika: '1480–1620',
+      teksti:
+        'Munttoren kuului Amsterdamin keskiaikaisen kaupunginmuurin Regulierspoort-porttiin, joka rakennettiin vuosina 1480–1487. Portti oli yksi kaupungin kolmesta pääportista, ja sen nimi tuli läheisestä Reguliersklooster-luostarista. Kun portti paloi vuonna 1618, uudelleen päätettiin rakentaa vain läntinen torni.'
+        + '\n\n'
+        + 'Tylppä torni sai vuosina 1619–1620 kahdeksankulmaisen yläosan ja koristeellisen avoimen lyhdyn Hendrick de Keyserin suunnitelmien mukaan. Lyhdyssä on kello, jossa on neljä kellotaulua, ja vuonna 1668 torniin asennettiin Hemonin veljesten kellopeli. Torni on 35 metriä korkea.'
+        + '\n\n'
+        + 'Nykyisen nimensä, Rahatorni, se sai vuonna 1672, katastrofivuonna, jolloin ranskalaisjoukot miehittivät suuren osan maata ja Amsterdam sai väliaikaisesti oikeuden lyödä rahaa. Rahaa lyötiin tornin viereisessä vahtihuoneessa. Vahtihuone purettiin 1800-luvulla, ja tilalle rakennettiin 1885–1887 nykyinen uusrenessanssirakennus.',
+      vuodet: [
+        { kohta: 'vuosina 1480–1487', vuosi: '1480–1487', selite: 'portti rakennettiin' },
+        { kohta: 'vuonna 1618', vuosi: '1618', selite: 'portti paloi' },
+        { kohta: 'vuonna 1672', vuosi: '1672', selite: 'nimi Munttoren' },
+      ],
+      kuvat: [],
+      lahde: 'Wikipedia (nl: Munttoren)',
+    },
+    // Tripo-mallien kohteet (KK 20.11.2026 20.48, P-261120-18).
+    'Westerkerk': {
+      aika: '1620–1631',
+      teksti:
+        'Westerkerk rakennettiin vuosina 1620–1631 renessanssityyliin Hendrick de Keyserin suunnitelmien mukaan. De Keyser kuoli 1621, ja kirkon viimeisteli hänen poikansa Pieter de Keyser. Kirkko vihittiin käyttöön 8. kesäkuuta 1631. Se oli yksi ensimmäisistä alun perin protestanteille rakennetuista kirkoista ja on yhä Alankomaiden suurin protestanttinen kirkko.'
+        + '\n\n'
+        + 'Kirkon torni, Westertoren, on noin 87 metriä korkea ja Amsterdamin korkein kirkontorni. Tornin yläosa on vuodelta 1637, ja sen huipulla on keisarinkruunu, joka esittää Maksimilian I:n Itävallan keisarinkruunua. Kellopelin suurimmat 14 kelloa valoi François Hemony vuonna 1658.'
+        + '\n\n'
+        + 'Kirkkoon on haudattu muun muassa kartantekijä Joan Blaeu. Rembrandt kuoli 4. lokakuuta 1669, ja hänet haudattiin neljä päivää myöhemmin vuokrattuun hautaan Westerkerkissa. Prinsessa Beatrix ja Claus von Amsberg vihittiin kirkossa 10. maaliskuuta 1966.',
+      vuodet: [
+        { kohta: 'vuosina 1620–1631', vuosi: '1620–1631', selite: 'rakennettiin' },
+        { kohta: '4. lokakuuta 1669', vuosi: '1669', selite: 'Rembrandt haudattiin' },
+        { kohta: '10. maaliskuuta 1966', vuosi: '1966', selite: 'Beatrixin häät' },
+      ],
+      kuvat: [],
+      lahde: 'Wikipedia (en ja nl: Westerkerk; en: Rembrandt)',
     },
   },
   dublin: {
@@ -11796,6 +11906,25 @@ export const NAHTAVYYSJUTUT = {
         },
       ],
       lahde: 'Wikipedia',
+    },
+  
+    // Tripo-mallien kohteet (KK 20.11.2026 20.48, P-261120-18).
+    'Suurmestarin palatsi': {
+      aika: '1570-luvulta',
+      teksti:
+        'Suurmestarin palatsi on Vallettan suurin palatsi. Se rakennettiin 1500–1700-luvuilla johanniittaritarikunnan suurmestarin asunnoksi; ritarikunta hallitsi Maltaa vuosina 1530–1798. Paikalla oli ritari Eustachio del Monten vuonna 1569 rakennettu talo ja Italian ritarikieliryhmän majatalo. Suurmestari Pierre de Monte asui talossa vuodesta 1571, ja vuonna 1574 sitä alettiin laajentaa palatsiksi Girolamo Cassarin manieristisen suunnitelman mukaan.'
+        + '\n\n'
+        + 'Myöhemmät suurmestarit koristelivat palatsia barokkimaiseksi. Nicolau Nasoni maalasi käytävien kattoihin freskot vuonna 1724, ja suurmestari Manuel Pinto da Fonseca muutti rakennuksen nykyiseen muotoonsa 1740-luvulla: hän koristeli julkisivun, avasi toisen pääoven ja rakennutti kellotornin sisäpihalle.'
+        + '\n\n'
+        + 'Kun Napoleonin Ranska karkotti ritarit vuonna 1798, palatsista tuli kansallispalatsi, ja britit käyttivät sitä kuvernöörin palatsina vuodesta 1800. Vuosina 1921–2015 siinä kokoontui Maltan parlamentti. Nykyään siellä on presidentin kanslia, ja juhlahuoneet sekä asehuone ovat museona.',
+      vuodet: [
+        { kohta: 'vuonna 1569', vuosi: '1569', selite: 'del Monten talo' },
+        { kohta: 'vuonna 1574', vuosi: '1574', selite: 'laajennus alkoi' },
+        { kohta: 'vuonna 1724', vuosi: '1724', selite: 'Nasonin freskot' },
+        { kohta: 'vuonna 1798', vuosi: '1798', selite: 'ritarit karkotettiin' },
+      ],
+      kuvat: [],
+      lahde: 'Wikipedia (en: Grandmaster\'s Palace, Valletta)',
     },
   },
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
@@ -24303,6 +24432,11 @@ export const NAHTAVYYSJUTUT = {
           + 'korjattiin 1600-luvun alussa, vain Changdeokgung ja sen '
           + 'naapuri kunnostettiin. Niin sivupalatsista tuli '
           + 'käytännössä Joseonin pääpalatsi kolmeksi vuosisadaksi.'
+        + '\n\n'
+          + 'Palatsin pääportti Donhwamun valmistui jo vuonna 1412, ja se on '
+          + 'Joseon-ajan palatsien vanhin säilynyt portti. Imjin-sodassa '
+          + 'vuonna 1592 tuhoutunut portti rakennettiin uudelleen vuonna 1607 '
+          + 'tai 1608.'
         + '\n\n'
           + 'Valtaistuinsali Injeongjeon oli paikka, jossa uusi kuningas '
           + 'kruunattiin ja jossa vieraat lähettiläät otettiin vastaan. '
@@ -42767,6 +42901,43 @@ export const NAHTAVYYSJUTUT = {
         },
       ],
       lahde: 'Wikipedia',
+    },
+  
+    // Tripo-mallien kohteet (KK 20.11.2026 20.48, P-261120-18).
+    'Maestranzan areena': {
+      aika: '1700- ja 1800-luvut',
+      teksti:
+        'Maestranzan areena on Sevillan Arenalin kaupunginosassa, ja sen omistaa aatelinen Real Maestranza de Caballería -ritarikunta. Ritarikunnan perusti vuonna 1670 32 aatelismiestä, ja kuningas Filip V antoi sille vuonna 1730 luvan järjestää härkätaisteluja keväisin ja syksyisin. Se johti pysyvän areenan rakentamiseen.'
+        + '\n\n'
+        + 'Areena rakennettiin vaiheittain: puinen areena syntyi vuonna 1733, ja kivirakennus alkoi vuonna 1754. Työt seisoivat vuosina 1766–1784 ja pysähtyivät uudelleen vuonna 1799, kun rahat loppuivat ja kolmannes oli vielä tekemättä. Arkkitehti Juan Talavera de la Vega sai tehtäväkseen viimeistellä rakennuksen vuonna 1876. Areena on kolmikymmenkulmio, ja sen katsomossa on noin 11 500 paikkaa.'
+        + '\n\n'
+        + 'Pääsisäänkäynti on Prinssin portti, ja ruhtinaan aitio on sinivalkoisen laattakupolin alla. Tärkeimmät taistelut käydään huhtikuun Feria de Abril -juhlilla ja syyskuun San Miguel -juhlilla. Areenan sisällä on härkätaistelumuseo ja toreadorien kappeli.',
+      vuodet: [
+        { kohta: 'vuonna 1670', vuosi: '1670', selite: 'ritarikunta perustettiin' },
+        { kohta: 'vuonna 1733', vuosi: '1733', selite: 'puinen areena' },
+        { kohta: 'vuonna 1754', vuosi: '1754', selite: 'kivirakennus alkoi' },
+        { kohta: 'vuonna 1876', vuosi: '1876', selite: 'viimeistelytyö' },
+      ],
+      kuvat: [],
+      lahde: 'Wikipedia (es: Plaza de toros de Sevilla ja Real Maestranza de Caballería de Sevilla)',
+    },
+    // Tripo-mallien kohteet (KK 20.11.2026 20.48, P-261120-18).
+    'Torre del Oro': {
+      aika: '1220–1221',
+      teksti:
+        'Torre del Oro, Kultatorni, on kaksitoistakulmainen vartiotorni Guadalquivir-joen rannalla. Almohad-kalifikunnan Sevillan käskynhaltija Abù l-Ulà rakennutti sen vuosina 1220–1221 valvomaan jokiliikennettä. Torni oli toinen ankkuripiste ketjulle, jolla joki voitiin sulkea. Kastilialaisen laivaston johtaja Ramón de Bonifaz mursi ketjun Sevillan valtauksessa vuonna 1248.'
+        + '\n\n'
+        + 'Nimen kerrotaan tulleen kullanhohteesta, jonka torni loi jokeen: rakennusaineena oli laastin, kalkin ja puristetun heinän seos. Keskiajalla torni toimi vankilana. Toisen kerroksen lisäsi 1300-luvulla Pedro I, ja ylimmän, pyöreän kerroksen rakensi sotilasinsinööri Sebastian Van der Borcht vuonna 1760.'
+        + '\n\n'
+        + 'Lissabonin maanjäristys vuonna 1755 vaurioitti tornia. Markiisi esitti sen purkamista, jotta kulku Triananonsillalle suoristuisi, mutta sevillalaiset vastustivat ja kuningas puuttui asiaan. Nykyään tornissa on merimuseo, jossa on vanhoja navigointivälineitä ja karttoja.',
+      vuodet: [
+        { kohta: 'vuosina 1220–1221', vuosi: '1220–1221', selite: 'rakennettiin' },
+        { kohta: 'vuonna 1248', vuosi: '1248', selite: 'ketju murtui' },
+        { kohta: 'vuonna 1755', vuosi: '1755', selite: 'maanjäristys' },
+        { kohta: 'vuonna 1760', vuosi: '1760', selite: 'ylin kerros' },
+      ],
+      kuvat: [],
+      lahde: 'Wikipedia (en: Torre del Oro)',
     },
   },
   /*

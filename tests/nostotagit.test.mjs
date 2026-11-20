@@ -59,7 +59,7 @@ test('kohdekartat: kohteen ja linkin tagi, tarinapaikka merkin mukaan', () => {
   assert.equal(bastilji?.tagi, 'kadonneet', 'Bastilji on kadonnut');
 });
 
-test('viisi kaupunkia: jokaisella nähtävyydellä tagi datassa, Uskonnot 12 paikkaa (SK 17.11.2026)', () => {
+test('viisi kaupunkia: jokaisella nähtävyydellä tagi datassa, Uskonnot 14 paikkaa (SK 17.11.2026; +Westerkerk ja Karlskirche, Tripo-kohteet 20.11.2026)', () => {
   const viisi = ['pariisi', 'lontoo', 'amsterdam', 'wien', 'rooma'];
   const tagittomat = []; const uskonnot = [];
   for (const kartta of kohdekartat.filter((k) => viisi.includes(k.id))) {
@@ -70,9 +70,9 @@ test('viisi kaupunkia: jokaisella nähtävyydellä tagi datassa, Uskonnot 12 pai
   }
   assert.deepEqual(tagittomat, []);
   assert.deepEqual(uskonnot.sort(), [
-    'amsterdam Portugalilainen synagoga', 'lontoo Pyhän Paavalin katedraali', 'lontoo Westminster Abbey',
+    'amsterdam Portugalilainen synagoga', 'amsterdam Westerkerk', 'lontoo Pyhän Paavalin katedraali', 'lontoo Westminster Abbey',
     'pariisi Notre-Dame', 'pariisi Sacré-Cœur', 'pariisi Saint-Eustache', 'pariisi Sainte-Chapelle',
-    'pariisi Tour Saint-Jacques', 'rooma Pantheon', 'rooma Pietarinkirkko', 'rooma Vatikaanin palatsi', 'wien Stephansdom',
+    'pariisi Tour Saint-Jacques', 'rooma Pantheon', 'rooma Pietarinkirkko', 'rooma Vatikaanin palatsi', 'wien Stephansdom', 'wien Karlskirche',
   ].sort());
 });
 
