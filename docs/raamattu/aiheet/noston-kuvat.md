@@ -11,6 +11,8 @@ SÄÄNNÖT:
 6. Kuvan ja palkin väliin jää pieni rako (noin 5 % ruudun korkeudesta): kuva ylhäällä, mutta ei kiinni palkissa. [P-261118-26]
 7. Nostolla 3–4 kuvaa (aitoja tai Codexin havainnekuvia) kuvaamassa tekstiä; reunat häivytetty läpinäkyviksi kevyesti soikeaan muotoon; kuvat vaihtuvat ristihäivytyksellä. Ensin Pariisi; muut kaupungit omistajan hyväksynnän jälkeen. [P-261120-5]
 8. Havainnekuvan aikana nostopalkissa syttyy pienieleinen havainnekuvan symboli (pelaaja oppii sen toistosta). [P-261120-8]
+9. Kuva näyttää vain sen, minkä kertoja samassa jaksossa sanoo: ei ennen, ei kuvatekstissä. [P-261120-10]
+10. Aito kuva ensin: pääaihe 75 % × 75 % -keskialueella riittää, esirajaus sallittu. [P-261120-10]
 
 EI VIKA:
 - Ei vielä merkittyjä.
