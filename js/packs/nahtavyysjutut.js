@@ -5965,37 +5965,23 @@ export const NAHTAVYYSJUTUT = {
      */
     'Bizet 1875': {
       nosto: 'nosto-carmenin-ensi-ilta',
-      teksti: 'Georges Bizet aloitti Carmenin säveltämisen tammikuun tienoilla 1873, '
-        + 'ja ensimmäinen näytös oli valmis siihen kesään mennessä, jona isoisäsi '
-        + 'oli matkalla. Sitten työ pysähtyi. Opéra-Comique oli valtion '
-        + 'rahoittama talo, johon vietiin perhe, ja sen kahdesta johtajasta '
-        + 'Adolphe de Leuven vastusti koko ajatusta: näin uskaliasta tarinaa ei '
-        + 'esitetä täällä, yleisö pelästyy pois. Hänelle luvattiin, että '
-        + 'nimihenkilön luonnetta pehmennetään, että romanihahmot esitetään '
-        + 'koomisina ja että lopun kuolema jää kulkueiden, balettien ja '
-        + 'riemufanfaarien varjoon. Lupaukset eivät riittäneet, ja de Leuven '
-        + 'erosi teatterista alkuvuodesta 1874. Nimiroolikin oli vaikea täyttää: '
-        + 'Marie Roze kieltäytyi roolista (Winton Deanin elämäkerran mukaan siksi, että hänen olisi kuoltava lavalla), ja rooli meni lopulta Célestine Galli-Mariélle.'
+      teksti: 'Georges Bizet sävelsi Carmenin Pariisin Opéra-Comiquelle, ja Pariisi torjui sen. Valtion '
+        + 'rahoittama talo oli perheteatteri, ja kun työ alkoi tammikuun tienoilla 1873, talon johtaja '
+        + 'Adolphe de Leuven vastusti näin uskaliasta tarinaa. Lupaukset pehmennyksestä eivät '
+        + 'riittäneet, ja hän erosi alkuvuodesta 1874. Nimiroolista kieltäytyi Marie Roze, ja rooli '
+        + 'meni Célestine Galli-Mariélle.'
         + '\n\n'
-        + 'Ensi-ilta oli 3. maaliskuuta 1875, ja salissa istui puoli '
-        + 'musiikki-Pariisia — Massenet, Offenbach, Delibes, Gounod. Ensimmäinen '
-        + 'näytös meni hyvin. Toreadorin laulun jälkeen tuli kylmyys, ja '
-        + 'viimeinen näytös oli libretisti Halévyn sanoin jäinen ensimmäisestä '
-        + 'viimeiseen. Seuraavan päivän arviot vaihtelivat pettymyksestä raivoon: '
-        + 'nimihenkilö oli hyveellisen naisen sijaan moraaliton viettelijä, ja '
-        + 'yksi kriitikko kutsui pääosan tulkintaa paheen ruumiillistumaksi. '
-        + 'Taloa ei saatu täyteen edes jakamalla lippuja ilmaiseksi. Bizet kuoli '
-        + '3. kesäkuuta 1875, kolmannenkymmenennenkolmannen esityksen jälkeen, '
-        + '36-vuotiaana ja hääpäivänsä vuosipäivänä. Maine tuli muualta: ensin Wien 1875, Bryssel 1876, Lontoo ja New York 1878 — Pariisiin ooppera palasi '
-        + 'vasta 1883. Se sijoittuu Sevillaan, mutta kaikki tämä tapahtui täällä, '
-        + 'Place Boïeldieun varrella. Sekin sali paloi 1887; paikalla seisoo nyt '
-        + 'kolmas samanniminen teatteri.',
+        + 'Ensi-ilta oli 3. maaliskuuta 1875, ja salissa istuivat Massenet, Offenbach, Delibes ja '
+        + 'Gounod. Toreadorin laulun jälkeen tuli kylmyys, ja yksi kriitikko kutsui pääosan tulkintaa '
+        + 'paheen ruumiillistumaksi. Taloa ei saatu täyteen edes jakamalla lippuja ilmaiseksi.'
+        + '\n\n'
+        + 'Bizet kuoli 3. kesäkuuta 1875, 33. esityksen jälkeen, 36-vuotiaana. Maine alkoi nousta '
+        + 'muualla, ensin Wienissä, ja Pariisiin ooppera palasi vasta 1883. Ensi-illan sali paloi 1887, '
+        + 'ja paikalla seisoo nyt kolmas samanniminen teatteri.',
       vuodet: [
         { kohta: 'tienoilla 1873', vuosi: '1873', selite: 'säveltäminen alkoi' },
         { kohta: 'alkuvuodesta 1874', vuosi: '1874', selite: 'johtaja erosi' },
         { kohta: 'maaliskuuta 1875', vuosi: '1875', selite: 'ensi-ilta' },
-        { kohta: 'Bryssel 1876', vuosi: '1876', selite: 'Bryssel' },
-        { kohta: 'York 1878', vuosi: '1878', selite: 'Lontoo, New York' },
         { kohta: 'vasta 1883', vuosi: '1883', selite: 'ooppera palasi' },
         { kohta: 'paloi 1887', vuosi: '1887', selite: 'sali paloi' },
       ],
@@ -6013,23 +5999,21 @@ export const NAHTAVYYSJUTUT = {
     },
     'Kirahvi 1827': {
       nosto: 'nosto-kirahvin-kavelymatka',
-      teksti: 'Egyptin varakuningas lähetti kirahvin Ranskan kuninkaalle Kaarle '
-        + 'X:lle. Eläin saapui laivalla Marseilleen 31. lokakuuta 1826 — kannessa '
-        + 'oli sahattu reikä, josta kaula mahtui ulos. Merimatkaa Atlantin ympäri '
-        + 'pidettiin liian vaarallisena, joten päätettiin, että kirahvi kävelee '
-        + 'Pariisiin. Luonnontieteilijä Étienne Geoffroy Saint-Hilaire, 55, '
-        + 'käveli mukana ja teetti eläimelle kaksiosaisen keltaisen takin ja '
-        + 'kengät.'
+      teksti: 'Egyptin varakuningas lähetti kirahvin lahjaksi Ranskan kuninkaalle Kaarle X:lle, ja eläin '
+        + 'saapui laivalla Marseilleen lokakuussa 1826. Laivan kanteen oli sahattu reikä, josta kaula '
+        + 'mahtui ulos. Merimatkaa Atlantin ympäri pidettiin liian vaarallisena, joten päätettiin, että '
+        + 'kirahvi kävelee Pariisiin.'
         + '\n\n'
-        + 'Kirahvi talvehti Marseillessa, ja matkaan lähdettiin toukokuussa '
-        + '1827. Matka kesti 41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja '
-        + 'Pariisissa kirahvia kävi katsomassa yli 100 000 — joka kahdeksas '
-        + 'kaupunkilainen. Hiukset kammattiin torneiksi, kankaisiin ilmestyi '
-        + 'täpliä ja väri nimeltä ”kirahvin vatsa” myi kaiken. Aikalaiset '
-        + 'kutsuivat eläintä nimellä la Belle Africaine, ja se eli Jardin des '
-        + 'Plantes\'ssa 18 vuotta.',
+        + 'Kirahvi talvehti Marseillessa, ja matkaan lähdettiin toukokuussa 1827. Eläimellä oli yllään '
+        + 'vahattu sadetakki, johon oli kirjailtu vaakunat, ja luonnontieteilijä Étienne Geoffroy '
+        + 'Saint-Hilaire käveli mukana. Lyonissa vastassa oli noin 30 000 ihmistä.'
+        + '\n\n'
+        + 'Matka kesti 41 päivää, ja kirahvi saapui Pariisin Jardin des Plantesiin 30. kesäkuuta 1827. '
+        + 'Kuningas tapasi sen Saint-Cloudin linnassa 9. heinäkuuta, ja kesän aikana kirahvia kävi '
+        + 'katsomassa noin 600 000 ihmistä. Kampauksiakin tehtiin kirahvin tapaan. Eläin kuoli Jardin '
+        + 'des Plantes\'ssa tammikuussa 1845.',
       vuodet: [
-        { kohta: 'lokakuuta 1826', vuosi: '1826', selite: 'kirahvi Marseilleen' },
+        { kohta: 'lokakuussa 1826', vuosi: '1826', selite: 'kirahvi Marseilleen' },
         { kohta: 'toukokuussa 1827', vuosi: '1827', selite: 'matka alkoi' },
       ],
       kuvat: [
@@ -6050,16 +6034,23 @@ export const NAHTAVYYSJUTUT = {
     },
     'Bukinistit 1859': {
       nosto: 'nosto-pariisin-bukinistit',
-      teksti: 'Seinen rantamuurin kirjakauppiaita kutsutaan bukinisteiksi, ja nimi '
-        + 'kertoo, mitä laatikoissa on: ranskan sana bouquin tarkoittaa '
-        + 'vanhaa kirjaa. Vihreistä peltilaatikoista myydään käytettyjä '
-        + 'kirjoja, vanhoja lehtiä ja julisteita, ja ammattikunta on ollut '
-        + 'joen varrella 1500-luvulta asti. Vuonna 1859 kauppiaat saivat '
-        + 'kaupungilta kiinteät myyntipaikat rantakaiteen varrelta, mutta '
-        + 'laatikot piti silti kantaa pois joka ilta. Kaiteeseen ne sai '
-        + 'jättää vasta vuonna 1891.',
+      teksti: 'Seinen rantamuurin kirjakauppiaita kutsutaan bukinisteiksi, ja nimi kertoo, mitä laatikoissa '
+        + 'on: ranskan sana bouquin tarkoittaa vanhaa kirjaa. Kulkukauppiaat myivät kirjoja Pariisin '
+        + 'kaduilla jo 1500-luvun lopulla, ja Pont Neufin valmistuttua vuonna 1606 he asettuivat '
+        + 'sillalle.'
+        + '\n\n'
+        + 'Vuonna 1649 kirjakauppiaiden painostuksesta annettiin määräys, joka kielsi kirjojen myynnin '
+        + 'sillalla, ja ennen vallankumousta myyjiä oli jo noin 300. Sana bouquiniste kirjattiin ensi '
+        + 'kertaa vuoden 1752 sanakirjaan.'
+        + '\n\n'
+        + 'Ensimmäinen heitä koskeva erityismääräys annettiin 10. lokakuuta 1859: myyjät saivat jäädä '
+        + 'rannoille, mutta laatikot piti silti kantaa pois joka ilta. Laatikot sai jättää kaiteeseen '
+        + 'vasta vuonna 1891, ja vuoden 1900 tienoilla niille tuli nykyinen vaunun vihreä väri.'
+        + '\n\n'
+        + 'Nyt noin 230 bukinistia myy vanhoja kirjoja kolmen kilometrin matkalla, ja vuonna 2019 '
+        + 'heidän perinteensä lisättiin Ranskan aineettoman kulttuuriperinnön luetteloon.',
       vuodet: [
-        { kohta: 'Vuonna 1859', vuosi: '1859', selite: 'kiinteät paikat' },
+        { kohta: 'lokakuuta 1859', vuosi: '1859', selite: 'erityismääräys' },
         { kohta: 'vasta vuonna 1891', vuosi: '1891', selite: 'laatikot kaiteeseen' },
       ],
       kuvat: [
@@ -6076,7 +6067,7 @@ export const NAHTAVYYSJUTUT = {
     'Vrain-Lucas': {
       aika: '1861–1870',
       nosto: 'skandaali-vrain-lucas-kirjevaarennokset',
-      teksti: 'Kleopatra kirjoitti Julius Caesarille ranskaksi, vesileimatulle '
+      teksti: 'Vrain-Lucasin väärentämässä kirjeessä Kleopatra kirjoitti Julius Caesarille ranskaksi, vesileimatulle '
         + 'paperille — ja kuuluisa matemaatikko osti kirjeen ilomielin, ja perään kymmeniätuhansia muita. Kansallisylpeys teki ostajasta sokean: olihan kirjeissä '
         + 'todiste, että painovoima keksittiin Ranskassa. Tiedeakatemia ei ollut '
         + 'aivan yhtä ilahtunut.',
@@ -6098,20 +6089,23 @@ export const NAHTAVYYSJUTUT = {
     },
     'Monet 1874': {
       nosto: 'syvennys-pariisi-impressionistit',
-      teksti: 'Kun isoisäsi käveli Pariisissa, ranskalaista taide-elämää hallitsi yhä '
-        + 'Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa '
-        + 'näyttelyä hylätyille oli anottu turhaan 1867. '
-        + 'Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, '
-        + 'Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko '
-        + 'muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja '
-        + 'jäseniltä odotettiin Salonista luopumista. Ensimmäinen '
-        + 'näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja '
-        + 'mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi '
-        + 'Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa '
-        + '”Impressionistien näyttely”. Pilkkanimi jäi — ja taiteilijat ottivat '
-        + 'sen itse käyttöön.',
+      teksti: 'Monet ja muut nuoret maalarit olivat Pariisissa taiteilijoita, joita Salon ei huolinut: '
+        + 'kaupungin taide-elämää hallitsi Salon, ja sen valitsematta jättämä maalari jäi '
+        + 'näkymättömäksi. Omaa näyttelyä hylätyille anottiin turhaan vuonna 1867.'
+        + '\n\n'
+        + 'Joulukuussa 1873 Monet, Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja muut perustivat '
+        + 'oman yhdistyksen esittääkseen työnsä itse, ja jäseniltä odotettiin Salonista luopumista. '
+        + 'Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana '
+        + 'oli kolmekymmentä taiteilijaa.'
+        + '\n\n'
+        + 'Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa '
+        + '”Impressionistien näyttely”. Pilkkanimi jäi käyttöön, ja taiteilijat ottivat sen itse '
+        + 'omakseen. Heidän viimeinen yhteinen näyttelynsä pidettiin vuonna 1886.'
+        + '\n\n'
+        + 'Maalaus esittää auringonnousua Le Havren satamassa, ja se on nykyään esillä Pariisin Musée '
+        + 'Marmottan Monet’ssa.',
       vuodet: [
-        { kohta: 'turhaan 1867', vuosi: '1867', selite: 'näyttelyanomus' },
+        { kohta: 'vuonna 1867', vuosi: '1867', selite: 'näyttelyanomus' },
         { kohta: 'Joulukuussa 1873', vuosi: '1873', selite: 'yhdistys perustettu' },
         { kohta: 'huhtikuussa 1874', vuosi: '1874', selite: 'ensimmäinen näyttely' },
       ],
@@ -6128,24 +6122,23 @@ export const NAHTAVYYSJUTUT = {
     },
     'Piiritys 1870': {
       nosto: 'syvennys-pariisi-kyyhkyposti',
-      teksti: 'Sallitko, että kerron erään sukuni työsuorituksen. Kun preussilaiset '
-        + 'sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat '
-        + 'katkaistiin 19. päivä ja Seinen pohjassa kulkenut salakaapeli '
-        + 'löydettiin ja katkaistiin 27. päivä. Kaupunkiin päin ainoa toimiva '
-        + 'reitti oli kirjekyyhky. Kyyhkyt vietiin ulos ilmapalloilla, ja '
-        + 'valokuvaaja René Dagron — mikrofilmin patentin haltija vuodesta 1859 — '
-        + 'tarjoutui pienentämään viestit. Sopimus allekirjoitettiin 11. '
-        + 'marraskuuta 1870: viisitoista frangia tuhatta merkkiä kohti. Dagron '
-        + 'sai kuvat pienenemään yli nelikymmenkertaisesti; yksi filmi painoi '
-        + 'noin viisi sadasosagrammaa, ja yksi kyyhky kantoi niitä jopa '
-        + 'kaksikymmentä pyrstösulkiin sidotussa putkessa. Perillä filmi '
-        + 'asetettiin kahden lasilevyn väliin ja heijastettiin taikalyhdyllä '
-        + 'seinälle, josta viestit kirjoitettiin puhtaaksi. Saksalaiset '
-        + 'kouluttivat haukkoja pysäyttämään kyyhkyjä. Minulla ei ole tähän '
-        + 'mitään lisättävää.',
+      teksti: 'Pariisin piirityksen viestit kulkivat kyyhkyillä, ja mahdollisuuden siihen oli antanut '
+        + 'valokuvaaja René Dagron, joka oli saanut mikrofilmin patentin vuonna 1859.'
+        + '\n\n'
+        + 'Kun preussilaiset sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat katkaistiin '
+        + '19. päivä, ja Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin 27. päivä. '
+        + 'Ainoa toimiva reitti kaupunkiin päin oli kirjekyyhky, ja kyyhkyt vietiin ulos ilmapalloilla.'
+        + '\n\n'
+        + 'Sopimus Dagronin kanssa allekirjoitettiin 11. marraskuuta: hinta oli viisitoista frangia '
+        + 'tuhatta merkkiä kohti. Hän pienensi kuvat yli nelikymmenkertaisesti, yksi filmi painoi noin '
+        + 'viisi sadasosagrammaa, ja yksi kyyhky jaksoi kantaa niitä jopa kaksikymmentä.'
+        + '\n\n'
+        + 'Perillä filmi asetettiin kahden lasilevyn väliin ja heijastettiin taikalyhdyllä seinälle, '
+        + 'josta viestit kirjoitettiin puhtaaksi. Saksalaiset kouluttivat haukkoja pysäyttämään '
+        + 'kyyhkyjä. Piiritys päättyi tammikuussa 1871.',
       vuodet: [
+        { kohta: 'vuonna 1859', vuosi: '1859', selite: 'mikrofilmipatentti' },
         { kohta: 'syyskuussa 1870', vuosi: '1870', selite: 'Pariisi suljettiin' },
-        { kohta: 'vuodesta 1859', vuosi: '1859', selite: 'mikrofilmipatentti' },
       ],
       kuvat: [
         {
@@ -6192,21 +6185,24 @@ export const NAHTAVYYSJUTUT = {
     },
     'Notre-Dame 2019': {
       nosto: 'nosto-notre-damen-kukko',
-      teksti: 'Notre-Damen ullakko syttyi 15. huhtikuuta 2019, ja keskitorni '
-        + 'romahti kello 19.50. Katon alla paloi yli tuhannesta tammirungosta tehty '
-        + 'kattotuolisto, joka oli 1200-luvulta. Tornin huipulla seisoi '
-        + 'kuparinen kukko, jonka sisään oli suljettu pyhäinjäännöksiä. '
-        + 'Ensin sitä luultiin tuhoutuneeksi, mutta se löytyi seuraavana '
-        + 'päivänä maasta lommoilla. Onnea oli muutenkin: kuusitoista '
-        + 'kuparipatsasta oli nostettu katolta korjattavaksi neljä päivää '
-        + 'ennen paloa. Uuden kullatun kukon sisään pantiin samat '
-        + 'pyhäinjäännökset ja 2 000 jälleenrakentajan nimet.',
+      teksti: 'Notre-Damen ullakko syttyi 15. huhtikuuta 2019, ja keskitorni romahti noin kello 19.50. '
+        + 'Katon alla paloi noin tuhannesta tammirungosta tehty kattotuolisto, joka oli 1200-luvulta.'
+        + '\n\n'
+        + 'Tornin huipulla seisoi kukko, jonka sisään oli suljettu pyhäinjäännöksiä, muun muassa pala '
+        + 'orjantappurakruunua. Ensin sitä luultiin tuhoutuneeksi, mutta se löytyi seuraavana päivänä '
+        + 'raunioista lommoilla. Onnea oli muutenkin: kuusitoista patsasta oli nostettu katolta '
+        + 'korjattavaksi vain päiviä ennen paloa.'
+        + '\n\n'
+        + 'Ensimmäinen messu palon jälkeen pidettiin kesäkuussa 2019 kypärät päässä. Uusi kullattu '
+        + 'kukko asennettiin tornin huipulle 16. joulukuuta 2023, ja sen sisään pantiin samat '
+        + 'pyhäinjäännökset sekä lähes 2 000 jälleenrakentajan nimet. Katedraali avattiin uudelleen '
+        + 'joulukuussa 2024.',
       kuvat: [
         {
           tiedosto: 'Coq de Notre-Dame de Paris 2020.jpg',
-          lyhyt: 'Notre-Damen kuparinen kukko putosi tornin huipulta 2019 palossa ja löytyi lommoilla.',
-          selite: 'Notre-Damen tornin huipulla seisonut kuparinen kukko putosi '
-            + 'vuoden 2019 palossa ja löytyi seuraavana päivänä maasta '
+          lyhyt: 'Notre-Damen kukko putosi tornin huipulta 2019 palossa ja löytyi lommoilla.',
+          selite: 'Notre-Damen tornin huipulla seisonut kukko putosi '
+            + 'vuoden 2019 palossa ja löytyi seuraavana päivänä raunioista '
             + 'lommoilla.',
           lahde: 'Siren-Com, Wikimedia Commons (CC BY-SA 4.0)',
         },
@@ -6215,26 +6211,25 @@ export const NAHTAVYYSJUTUT = {
     },
     'Piaf ja Django': {
       nosto: 'nosto-pariisi-soi',
-      teksti: 'Édith Piaf syntyi Pariisissa joulukuussa 1915. Tarinan mukaan '
-        + 'hän syntyi Bellevillessä kadulla talon portaille, vaikka syntymätodistuksessa '
-        + 'lukee sairaala. Teininä hän lauloi kolikoista Pariisin kaduilla ja pihoissa ystävänsä Simone Berteautin kanssa. Yökerhon omistaja Louis Leplée '
-        + 'kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf '
-        + '— piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. '
-        + 'Laulaja oli alle 150 senttiä pitkä. Piaf levytti tunnetuimman laulunsa La Vie en rosen 1946, ja sen sanat hän kirjoitti itse.'
+      teksti: 'Pariisin kaduilta nousi kaksi tähteä: Édith Piaf syntyi Pariisissa joulukuussa 1915, tarinan '
+        + 'mukaan Bellevillessä kadulla talon portaille. Django Reinhardt kasvoi romaniperheen '
+        + 'asuntovaunussa Pariisin porttien luona ja soitti banjoa jo lapsena.'
         + '\n\n'
-        + 'Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin '
-          + 'porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo '
-          + 'lapsena. Marraskuun 2. päivän yönä 1928 vaunussa syttyi tulipalo: kynttilä '
-          + 'kaatui selluloidikukkien päälle. Vasemman käden nimetön ja '
-          + 'pikkurilli jäivät liikkumattomiksi, ja lääkärit sanoivat, ettei '
-          + 'hän soita enää. Veli osti hänelle kitaran, ja Django opetteli '
-          + 'soittamaan soolot kahdella sormella. Vuonna 1934 hän perusti '
-          + 'Pariisissa yhtyeen Quintette du Hot Club de France.',
+        + 'Marraskuun 2. päivän yönä 1928 vaunussa syttyi tulipalo, kun kynttilä kaatui '
+        + 'selluloidikukkien päälle. Django ei enää voinut käyttää vasemman käden nimetöntä ja '
+        + 'pikkurilliä, ja lääkärit sanoivat, ettei hän soita enää. Veli osti hänelle kitaran, ja hän '
+        + 'opetteli soolot kahdella sormella. Vuonna 1934 hän perusti Pariisissa Quintette du Hot Club '
+        + 'de Francen.'
+        + '\n\n'
+        + 'Piaf lauloi teininä kolikoista kaduilla. Yökerhon omistaja Louis Leplée kuuli hänet kadulta '
+        + 'vuonna 1935 ja antoi hänelle lempinimen la Môme Piaf: piaf on pariisilaista puhekieltä ja '
+        + 'tarkoittaa varpusta. Laulaja oli alle 150 senttiä pitkä. Piaf levytti tunnetuimman laulunsa '
+        + 'La Vie en rosen vuonna 1946, ja sen sanat hän kirjoitti itse.',
       vuodet: [
         { kohta: 'joulukuussa 1915', vuosi: '1915', selite: 'Piaf syntyi' },
-        { kohta: 'kadulta vuonna 1935', vuosi: '1935', selite: 'Piaf löydettiin' },
         { kohta: 'yönä 1928', vuosi: '1928', selite: 'Djangon vaunu paloi' },
         { kohta: 'Vuonna 1934', vuosi: '1934', selite: 'Hot Club syntyi' },
+        { kohta: 'kadulta vuonna 1935', vuosi: '1935', selite: 'Piaf löydettiin' },
       ],
       kuvat: [
         {
@@ -6250,14 +6245,17 @@ export const NAHTAVYYSJUTUT = {
     },
     'Patonki 1994': {
       nosto: 'nosto-pariisin-patonki',
-      teksti: 'Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta '
-        + 'perinteisestä patongista, ja säännöt ovat tarkat: leivän pituudelle ja painolle on omat rajansa. Mitä '
-        + 'patongissa saa olla, on määrätty laissa — käytännössä vain '
-        + 'vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa missään '
-        + 'vaiheessa pakastaa. Leivät ovat anonyymejä, jottei '
-        + 'raati tiedä kenen leipää se arvostelee, ja raadissa istuu '
-        + 'ammattilaisia, toimittajia ja arvottuja tavallisia pariisilaisia. Voittaja saa rahapalkinnon ja yhden velvollisuuden: '
-        + 'hän toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.',
+      teksti: 'Patonki on Pariisin kuuluisin leipä, ja Ranskassa sitä koskevat tiukat säännöt: vuonna 1993 '
+        + 'annetun asetuksen mukaan perinteisessä patongissa saa olla vain vehnäjauhoa, vettä, suolaa '
+        + 'sekä hiivaa tai juurta, eikä taikinaa saa missään vaiheessa pakastaa.'
+        + '\n\n'
+        + 'Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta perinteisestä patongista. Leivät '
+        + 'arvostellaan sokkona, jottei raati tiedä, kenen leipää se maistaa, ja raadissa istuu '
+        + 'ammattilaisia, toimittajia ja arvottuja tavallisia pariisilaisia.'
+        + '\n\n'
+        + 'Voittaja saa 4 000 euron palkinnon ja yhden velvollisuuden: hän toimittaa '
+        + 'presidentinpalatsille leipiä seuraavan vuoden ajan. Vuonna 2022 UNESCO otti patongin '
+        + 'leipomotaidon ja -kulttuurin aineettoman kulttuuriperinnön luetteloonsa.',
       vuodet: [
         { kohta: 'vuodesta 1994', vuosi: '1994', selite: 'kilpailun alku' },
       ],
@@ -6534,17 +6532,23 @@ export const NAHTAVYYSJUTUT = {
     'Grand Châtelet': {
       aika: '1100-luku–1802',
       nosto: 'hahmotelma-grand-chatelet',
-      teksti: 'Grand Châtelet oli Pariisin oikeus- ja vankilalinnake Seinen oikealla rannalla. Ludvig VI '
-        + 'rakennutti sen kiveksi 1100-luvulla. Kun kaupungille alettiin vuonna 1190 rakentaa uutta muuria, '
-        + 'linnake menetti puolustustehtävänsä: siitä tuli oikeuden ja poliisin pääpaikka, jota johti '
-        + 'kuninkaan virkamies, prévôt. Sen vankiloissa istuivat muiden muassa runoilija François '
-        + 'Villon, näytelmäkirjailija Molière velkojen takia vuonna 1645 ja rosvopäällikkö Cartouche '
-        + 'vuonna 1721. Linnakkeessa oli myös ruumishuone, ranskaksi morgue.'
+      teksti: 'Grand Châtelet oli Pariisin vankila- ja oikeuslinnake Seinen oikealla rannalla. Ludvig VI '
+        + 'rakennutti sen kiveksi 1100-luvulla, ja kun kaupunkia alettiin muurittaa vuonna 1190, siitä '
+        + 'tuli prévôtin eli kuninkaan virkamiehen pääpaikka.'
         + '\n\n'
-        + 'Linnakkeen purkaminen alkoi vuonna 1802. Paikalle tehtiin Place du Châtelet.'
+        + 'Vankeina olivat François Villon, Molière velkojen takia vuonna 1645 ja rosvopäällikkö '
+        + 'Cartouche vuonna 1721. Linnakkeen kuoppasolu, la Fosse, kapeni alaspäin kuin kartio, eikä '
+        + 'vanki voinut seistä eikä maata kunnolla.'
         + '\n\n'
-        + 'Isoisäsi vuonna 1873 aukion vieressä seisoi teatteri, Théâtre du Châtelet, jonka Gabriel '
-        + 'Davioud rakensi vuosina 1860–1862.',
+        + 'Linnakkeessa oli myös ruumishuone, ranskaksi morgue. Sanan sanotaan syntyneen täällä: '
+        + 'vartijat tuijottivat uuden vangin kasvot ulkoa tunnistaakseen hänet, jos hän pakenisi. '
+        + 'Myöhemmin tänne tuotiin tunnistettavaksi löydetyt vainajat.'
+        + '\n\n'
+        + 'Syyskuun 2. päivänä 1792 joukko tunkeutui linnakkeeseen ja surmasi kymmeniä vankeja, ja '
+        + 'vankila hylättiin. Linnakkeen purku alkoi vuonna 1802.'
+        + '\n\n'
+        + 'Paikalle tehtiin uusi Place du Châtelet. Napoleon tilasi sinne palmusuihkulähteen '
+        + 'voitonmuistomerkiksi, ja se valmistui vuonna 1808. Fontaine du Palmier seisoo aukiolla yhä.',
       kuvat: [
         {
           tiedosto: 'Le Grand Chastelet de Paris. G.283.jpg',
@@ -6560,23 +6564,30 @@ export const NAHTAVYYSJUTUT = {
       // Théâtre 1860–1862 = paris.fr + chatelet.com. Pois: "noin 1130", Villonin vuosi, purku "1802–1810", Rue Saint-Denis.
       // Holvikäytävä ja tuomioistuimen lakkautus 1790 (kahden lähteen varassa, PR 6781) EIVÄT ole v3:n tekstissä, joten
       // niitä ei lisätty.
-      lahde: 'Matkakirjan oma teksti · lähteinä Pariisin kaupungin ja Théâtre du Châtelet\'n sivut, Ranskan '
-        + 'kulttuuriministeriön muistomerkkirekisteri, Desmazen Le Châtelet de Paris (1863), Larousse, Hérodote.net ja '
-        + 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Pariisin kaupungin sivut (paris.fr), Parcours Révolution, '
+        + 'France Pittoresque, Pariszigzag, Criminocorpus, Histoires de Paris ja Musée Carnavalet '
+        + '(avatut sivut, tarkistettu 20.11.2026).',
     },
     'Temple-torni': {
       aika: 'keskiaika–1808',
       nosto: 'hahmotelma-temple-torni',
-      teksti: 'Temppeliritarit rakennuttivat Pariisin päämajaansa keskiajalla mahtavan linnoitustornin, Grosse '
-        + 'Tourin. Ritarikunta lakkautettiin, mutta torni jäi. Elokuun 13. päivänä 1792 kuningasperhe vietiin '
-        + 'vangiksi Templeen. Ludvig XVI lähti sieltä giljotiinille tammikuussa 1793, ja hänen poikansa Ludvig '
-        + 'XVII kuoli tornissa vuonna 1795 kymmenvuotiaana.'
+      teksti: 'Temple-torni kohosi temppeliritarien Pariisin päämajan linnoituksessa. Philippe Augusten '
+        + 'ajoista kuninkaan aarre talletettiin ritarien linnoitukseen, ja sen muurien suojassa asui '
+        + 'myöhemmin kiltasäännöistä ja Pariisin veroista vapaita käsityöläisiä.'
         + '\n\n'
-        + 'Torni muuttui rojalistien pyhiinvaelluskohteeksi, ja siksi Napoleon alkoi purkaa sitä vuonna 1808.'
+        + 'Elokuussa 1792 Pariisin kommuuni vei kuningasperheen Templeen vangiksi. Ludvig XVI lähti '
+        + 'sieltä giljotiinille, ja hänen poikansa Ludvig XVII kuoli Templessä vuonna 1795 '
+        + 'kymmenvuotiaana.'
         + '\n\n'
-        + 'Isoisäsi vuonna 1873 torni oli purettu jo yli kuusikymmentä vuotta aiemmin. Sen paikalla seisoi '
-        + 'kaupunginosan uusi kaupungintalo, ja vieressä oli puisto, Square du Temple, joka oli avattu 1857. '
-        + 'Kaupungintalo on yhä paikallaan Rue Eugène-Spullerilla.',
+        + 'Vuonna 1798 brittiamiraali Sidney Smith pakeni Templen vankilasta väärennetyillä '
+        + 'siirtomääräyksillä: kaksi miestä univormuissa ilmestyi ja vei hänet muka toiseen vankilaan. '
+        + 'Huhtikuussa 1804 kenraali Pichegru löydettiin kuolleena Templen vankilan sellistään.'
+        + '\n\n'
+        + 'Napoleon määräsi tornin purettavaksi vuonna 1808, koska halusi lopettaa rojalistien '
+        + 'pyhiinvaellukset paikalle, jossa kuningasperhe oli ollut vankina.'
+        + '\n\n'
+        + 'Tornista ei ole jäänyt mitään. Sen paikan vieressä on nykyisin Square du Temple -puisto, ja '
+        + 'Rue Eugène-Spullerilla seisoo kaupunginosan kaupungintalo.',
       kuvat: [
         {
           tiedosto: 'La Tour du Temple. Paris Musées 20230619165202.jpg',
@@ -6590,23 +6601,29 @@ export const NAHTAVYYSJUTUT = {
       // Cléry 1798 + parcoursrevolution.paris.fr; Ludvig XVII 1795 = Larousse + fr-WP; purku 1808 ja pyhiinvaellukset =
       // parcoursrevolution + fr-WP; Square du Temple 1857 = paris.fr + fr-WP; Rue Eugène-Spuller = parcoursrevolution +
       // fr-WP. Pois: "1240", "1312"-vuosi, "kaksi vuotta", "pohjoiskulma", korkeus, vaatetori (ei v3:ssa).
-      lahde: 'Matkakirjan oma teksti · lähteinä Pariisin kaupungin vallankumousreitti ja puistosivut, Cléryn '
-        + 'päiväkirja Temple-tornista (1798), Larousse, Viollet-le-Ducin Dictionnaire raisonné ja Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Histoires de Paris, Paris Centre -kaupunginosan sivut, '
+        + 'Parcours Révolution, Paris révolutionnaire, templiers.org, More Than Nelson, James Gillray '
+        + '-sivusto, French Empire -sivusto ja Geri Walton (avatut sivut, tarkistettu 20.11.2026).',
     },
     'Trocadéron palatsi': {
       aika: '1878–1935',
       nosto: 'hahmotelma-trocadero',
-      teksti: 'Trocadéron nimi tulee Cádizin edustan Trocadero-linnakkeesta, jonka ranskalaiset valtasivat 1823. Chaillot\'n '
-        + 'kukkulalle suunniteltiin jo 1811 palatsia Napoleonin pojalle, "Rooman kuninkaalle", mutta siitä '
-        + 'tehtiin vain maanrakennustöitä. Todellinen palatsi valmistui vuoden 1878 maailmannäyttelyyn: '
-        + 'siinä oli kaksi korkeaa tornia, kaksi kaarevaa siipeä ja yli neljän tuhannen paikan sali. '
-        + 'Salin akustiikka oli huono, mutta siellä soivat Cavaillé-Collin urut, jotka vihittiin elokuussa 1878.'
+      teksti: 'Trocadéron palatsi rakennettiin vuoden 1878 maailmannäyttelyä varten Seinen pohjoisrannalle. '
+        + 'Siinä oli kaksi korkeaa tornia, kaksi kaarevaa siipeä ja yli neljän tuhannen paikan sali, '
+        + 'jonka akustiikka oli huono mutta jossa urut soivat hyvin.'
         + '\n\n'
-        + 'Palatsi seisoi vuoteen 1935, jolloin sali ja tornit purettiin vuoden 1937 näyttelyn tieltä. Vanhojen '
-        + 'siipien runko jäi paikalleen, ja sen eteen Seinen puolelle rakennettiin yhtä leveä uusi galleria: '
-        + 'siivet ovat nykyisen Chaillot\'n palatsin osia.'
+        + 'Salin Cavaillé-Collin urut vihittiin elokuussa 1878, ja César Franck sävelsi niille kolmen '
+        + 'kappaleen sarjan Trois Pièces.'
         + '\n\n'
-        + 'Isoisäsi vuonna 1873 palatsia ei ollut vielä lainkaan: kukkulalla oli tasoitettu aukio.',
+        + 'Palatsiin kuului myös etnografinen museo, joka syntyi vuoden 1878 näyttelystä ja avattiin '
+        + 'yleisölle vuonna 1882. Vielä 1920-luvulla se oli hämärä, kylmä ja pölyinen esineiden komero.'
+        + '\n\n'
+        + 'Vuonna 1935 keskisali ja tornit purettiin vuoden 1937 näyttelyn tieltä, ja siivet jäivät '
+        + 'uuden Chaillot\'n palatsin osiksi.'
+        + '\n\n'
+        + 'Chaillot\'n palatsissa YK:n yleiskokous hyväksyi vuonna 1948 ihmisoikeuksien '
+        + 'yleismaailmallisen julistuksen. Trocadéron urut soivat nykyisin Lyonissa, jonne ne '
+        + 'siirrettiin vuonna 1977.',
       kuvat: [
         {
           tiedosto: 'Le palais du Trocadéro, 1878.jpg',
@@ -6622,22 +6639,31 @@ export const NAHTAVYYSJUTUT = {
       // que le palais du Trocadéro resterait à la ville de Paris"). Kaksi korkeaa tornia ja kaarevat siivet = 1880-teos +
       // WP; yli 4 000 paikkaa = WP 4 600 + 1880-teos 6 000; valmistuminen 1878 = 1880-teos + WP (alkuvuotta 1876 ei käytetä tekstissä, KK 17.11.2026); siivet Chaillot'ssa = Livre d'or
       // 1937 + Cité de l'architecture + POP; urut = Auditorium de Lyon + WP.
-      lahde: 'Matkakirjan oma teksti · lähteinä Ranskan kulttuuriministeriön muistomerkkirekisteri, vuoden 1937 '
-        + 'maailmannäyttelyn virallinen Livre d\'or, L\'art et l\'industrie de tous les peuples à l\'Exposition '
-        + 'universelle de 1878 (1880), Cité de l\'architecture et du patrimoine, Auditorium de Lyon ja Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä POP PA00086706, L\'art et l\'industrie de tous les peuples à '
+        + 'l\'Exposition universelle de 1878 (1880), Auditorium de Lyon, Henle, Pariisin kaupungin '
+        + 'Chaillot-sivu, Hérodote, Encyclopædia Universalis, En attendant Nadeau ja INHA (avatut '
+        + 'sivut, tarkistettu 20.11.2026).',
     },
     'Galerie des Machines': {
       aika: '1889–1900-luvun alku',
       nosto: 'hahmotelma-galerie-des-machines',
-      teksti: 'Vuoden 1889 maailmannäyttelyn konehalli seisoi Champ-de-Marsilla, samalla kentällä kuin '
-        + 'Eiffel-torni. Halli oli 420 metriä pitkä, 115 metriä leveä ja yli 40 metriä korkea, eikä sen sisällä '
-        + 'ollut yhtään tukipilaria. Katon kantoi kaksikymmentä kolminivelistä kaarta: jokainen oli kaksi '
-        + 'puolikaarta, jotka nojasivat toisiinsa huipulta ja alhaalta tappeihin.'
+      teksti: 'Galerie des Machines oli vuoden 1889 Pariisin maailmannäyttelyn konehalli Champ-de-Marsilla '
+        + 'Eiffel-tornin vieressä. Se oli noin 420 metriä pitkä ja 115 metriä leveä, eikä sen sisällä '
+        + 'ollut yhtään pilaria, sillä teräskaaret nojasivat toisiinsa kolmesta nivelestä.'
         + '\n\n'
-        + 'Vieraita kuljetettiin hallissa liikkuvilla silloilla.'
+        + 'Vieraita kuljettivat hallissa liikkuvat sillat. Esillä oli myös Edisonin fonografi, jolla '
+        + 'kuultiin muun muassa Marseillaise.'
         + '\n\n'
-        + 'Isoisäsi vuonna 1873 hallia ei ollut. Halli purettiin 1900-luvun alussa, jotta näkymä '
-        + 'Champ-de-Marsille aukeaisi.',
+        + 'Näyttelyn jälkeenkin halli jäi käyttöön: vuonna 1900 siellä pidettiin maatalouden ja '
+        + 'elintarvikkeiden näyttely, ja marraskuussa 1901 alkoi Barnum & Bailey -sirkuksen esityssarja '
+        + 'kolmessa areenassa. Sarja päättyi maaliskuussa 1902.'
+        + '\n\n'
+        + 'Vuonna 1909 Pariisin kaupunki ilmoitti hävittävänsä hallin, ja se purettiin, jotta näkymä '
+        + 'Champ-de-Marsille aukeaisi. Yli neljäkymmentä metriä korkea halli oli seissyt paikallaan '
+        + 'kaksikymmentä vuotta.'
+        + '\n\n'
+        + 'Hallia ei ole enää, mutta Eiffel-torni seisoo yhä samalla Champ-de-Marsin kentällä, jossa '
+        + 'konehalli aikoinaan kohosi sen vieressä.',
       kuvat: [
         {
           tiedosto: 'Intérieur de la Galerie des machines, présentation des machines, 7e arrondissement, Paris. PH77410.jpg',
@@ -6651,8 +6677,9 @@ export const NAHTAVYYSJUTUT = {
       // (purku paris.fr 1909 / en-WP 1910). 420 × 115 m, kaksikymmentä kaarta, pilarittomuus ja liikkuvat sillat =
       // Parville, L'Exposition universelle (1890) + en-WP; yli 40 m = Parville 45 m / en-WP 48 m; näkymän avaaminen =
       // paris.fr "Ces lieux disparus 4/4" + en-WP. Pois: sähkökäyttöiset sillat, 15 000 hevosta, rauta teräksen sijaan.
-      lahde: 'Matkakirjan oma teksti · lähteinä Parvillen L\'Exposition universelle (1890), Pariisin kaupungin '
-        + 'Ces lieux disparus -sarja ja Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Parville, L\'Exposition universelle (1890), Pariisin '
+        + 'kaupungin Ces lieux disparus -sarja, Structurae, Pariszigzag, Gilwro, BnF (CNAC), AHICF, '
+        + 'Cambridge University Press ja Phonographia (avatut sivut, tarkistettu 20.11.2026).',
     },
   },
   /*

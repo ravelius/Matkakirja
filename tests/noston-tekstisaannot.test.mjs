@@ -3,8 +3,9 @@
  *
  * Pariisin 46 nostotekstiä (tools/sisalto/noston-tarkistus.mjs). Lähtöluettelo
  * docs/raportit/pariisin-nostot-rikkeet-lahto-20261120.json on rikkeet ennen erää 1: luettelo saa vain pienentyä,
- * eli rike, jota luettelossa ei ole, kaataa testin. Erän 1 13 nostoa (ERA_1) eivät saa rikkoa mitään, ja
- * niiden nimi on oltava ensimmäisessä virkkeessä sellaisenaan.
+ * eli rike, jota luettelossa ei ole, kaataa testin. Erän 1 13 nostoa (ERA_1) ja erän 2 4 kadonnutta (ERA_2_B) eivät saa rikkoa
+ * mitään, ja niiden nimi on oltava ensimmäisessä virkkeessä sellaisenaan. Erän 2 9 tarinapaikkaa (ERA_2_D) eivät saa rikkoa mitään
+ * ja ovat kappalemuodossa (3–4 kappaletta, enintään 1 000 merkkiä).
  */
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
@@ -14,6 +15,11 @@ import { keraaPariisinNostot, tarkista, merkkeja, nimenVarsi, ensimmainenVirke, 
 const LAHTO = JSON.parse(fs.readFileSync(new URL('../docs/raportit/pariisin-nostot-rikkeet-lahto-20261120.json', import.meta.url), 'utf8'));
 const ERA_1 = ['tuileries', 'louvre', 'bastilji', 'eiffel-torni', 'sainte-chapelle', 'curie-1898', 'lumiere-1895', 'lavoisier-1780',
   'pasteur-1862', 'palais-garnier', 'hahmotelma-palais-orsay', 'hahmotelma-palais-industrie', 'hahmotelma-les-halles'];
+const ERA_2_B = ['hahmotelma-grand-chatelet', 'hahmotelma-temple-torni', 'hahmotelma-trocadero', 'hahmotelma-galerie-des-machines'];
+const ERA_2_D = ['d:Bizet 1875', 'd:Kirahvi 1827', 'd:Bukinistit 1859', 'd:Patonki 1994', 'd:Vrain-Lucas', 'd:Monet 1874', 'd:Piiritys 1870',
+  'd:Notre-Dame 2019', 'd:Piaf ja Django'];
+const ERA_12 = [...ERA_1, ...ERA_2_B];
+const KAIKKI_ERAT = [...ERA_12, ...ERA_2_D];
 
 const NOSTOT = await keraaPariisinNostot();
 const { FOKUSKOHTEET_FRA } = await import('../js/packs/fokuskohteet-fra.js');
@@ -26,20 +32,22 @@ function uudetRikkeet(koodi) {
   for (const n of NOSTOT) {
     const nyt = rikkeet(n);
     const sallittu = LAHTO.nostot[n.id]?.rikkeet ?? [];
-    if (ERA_1.includes(n.id) ? nyt.includes(koodi) : nyt.includes(koodi) && !sallittu.includes(koodi)) virheet.push(`${n.id}: ${koodi}`);
+    if (KAIKKI_ERAT.includes(n.id) ? nyt.includes(koodi) : nyt.includes(koodi) && !sallittu.includes(koodi)) virheet.push(`${n.id}: ${koodi}`);
   }
   return virheet;
 }
 
-test('Pariisin nostoja on 46 ja erän 1 13 jaksollista löytyy', () => {
+test('Pariisin nostoja on 46 ja erien 1 ja 2 17 jaksollista löytyy', () => {
   assert.equal(NOSTOT.length, 46);
-  for (const id of ERA_1) assert.ok(NOSTOT.some((n) => n.id === id && n.ryhma === 'A'), `${id} puuttuu`);
+  for (const id of ERA_12) assert.ok(NOSTOT.some((n) => n.id === id && n.ryhma === 'A'), `${id} puuttuu`);
+  assert.equal(NOSTOT.filter((n) => n.ryhma === 'A').length, 17);
+  for (const id of ERA_2_D) assert.ok(NOSTOT.some((n) => n.id === id && n.ryhma === 'D'), `${id} puuttuu`);
   assert.equal(LAHTO.nostoja, 46);
 });
 
 test('1. nimi on ensimmäisessä virkkeessä (jaksollisilla koko nimi sellaisenaan)', () => {
   assert.deepEqual(uudetRikkeet('alku').filter((v) => v.endsWith('alku')), []);
-  for (const n of NOSTOT.filter((x) => ERA_1.includes(x.id))) {
+  for (const n of NOSTOT.filter((x) => ERA_12.includes(x.id))) {
     assert.ok(ensimmainenVirke(n.teksti).toLowerCase().includes(n.nimi.toLowerCase()), `${n.id}: nimi "${n.nimi}" ei ole ensimmäisessä virkkeessä`);
   }
   assert.equal(nimenVarsi('Notre-Dame 2019'), 'notre-da');
@@ -87,10 +95,10 @@ test('lähtöluettelo: sen rikkeet ovat vain tunnettuja koodeja eikä erän 1 no
   }
 });
 
-test('erä 1 (13 jaksollista): neljä tai viisi jaksoa, pituus 700–1 000, vuosirivejä 4–6 (Bastilji: äänitetyt palat sanasta sanaan ennallaan → 2 riviä; Eiffel: 1909 vain suhteellisena → 3 riviä)', () => {
+test('erät 1 ja 2 (17 jaksollista): neljä tai viisi jaksoa, pituus 700–1 000, vuosirivejä 4–6 (Bastilji: äänitetyt palat sanasta sanaan ennallaan → 2 riviä; Eiffel: 1909 vain suhteellisena → 3 riviä)', () => {
   const kaikki = [...FOKUSKOHTEET_FRA, ...EUROOPAN_KADONNEET.FRA];
   const virheet = [];
-  for (const id of ERA_1) {
+  for (const id of ERA_12) {
     const k = kaikki.find((x) => x.id === id);
     const j = k.jaksot;
     const rivit = j.flatMap((x) => x.vuodet ?? []).length;
@@ -110,4 +118,44 @@ test('erä 1 (13 jaksollista): neljä tai viisi jaksoa, pituus 700–1 000, vuos
   assert.equal(merkkeja(b.jaksot.map((x) => x.teksti).join('\n\n')), 915, 'Bastiljin äänitettyjen palojen yhteispituus muuttui');
   assert.ok(b.jaksot[0].teksti.startsWith('Bastilji rakennettiin 1300-luvun lopulla vartioimaan Pariisin itäistä porttia'));
   assert.ok(b.jaksot[2].teksti.startsWith('Purku alkoi jo samana iltana.'));
+});
+
+test('erä 2 (9 tarinapaikkaa): kappalemuoto, 3–4 kappaletta, 700–1 000 merkkiä, ei isoisää pelaajalle näkyvissä kentissä, visan vastaus tekstissä', async () => {
+  const { NAHTAVYYSJUTUT } = await import('../js/packs/nahtavyysjutut.js');
+  const { FOKUSVIRRAT } = await import('../js/packs/fokusvirrat.js');
+  const { SKANDAALIT } = await import('../js/packs/skandaalit.js');
+  const nj = NAHTAVYYSJUTUT.pariisi;
+  const virheet = [];
+  for (const id of ERA_2_D) {
+    const nimi = id.slice(2);
+    const kappaleet = nj[nimi].teksti.split('\n\n');
+    const pituus = merkkeja(nj[nimi].teksti);
+    // Vrain-Lucas: kartan kortti on lyhyt (306 merkkiä); noston oma pitkä teksti on skandaalin `teksti`.
+    const oma = nimi === 'Vrain-Lucas' ? SKANDAALIT.FRA.find((x) => x.id === 'vrain-lucas-kirjevaarennokset').teksti : nj[nimi].teksti;
+    const k = oma.split('\n\n');
+    if (k.length < 3 || k.length > 4) virheet.push(`${nimi}: ${k.length} kappaletta`);
+    if (merkkeja(oma) < (nimi === 'Vrain-Lucas' ? 700 : 700) || merkkeja(oma) > PITUUS_MAX) virheet.push(`${nimi}: ${merkkeja(oma)} merkkiä`);
+    if (nimi !== 'Vrain-Lucas' && (kappaleet.length < 3 || pituus > PITUUS_MAX)) virheet.push(`${nimi}: juttu ${kappaleet.length} kappaletta ${pituus} merkkiä`);
+  }
+  assert.deepEqual(virheet, []);
+  // Ei isoisää tekstissä, kysymyksissä, napissa, otsikossa, visassa eikä lähderivillä (pelaajalle näkyvät kentät).
+  const virta = FOKUSVIRRAT.pariisi;
+  const kentat = [...(virta.takyt ?? []), ...(virta.takynostot ?? []), ...SKANDAALIT.FRA]
+    .filter((x) => ['kyyhkyposti', 'impressionistit', 'kirahvin-kavelymatka', 'pariisin-bukinistit', 'carmenin-ensi-ilta', 'notre-damen-kukko',
+      'pariisin-patonki', 'pariisi-soi', 'vrain-lucas-kirjevaarennokset'].includes(x.id));
+  assert.equal(kentat.length, 9);
+  for (const x of kentat) assert.ok(!/isoisä/i.test(JSON.stringify(x)), `${x.id}: isoisä pelaajalle näkyvässä kentässä`);
+  const eurKadonneet = JSON.stringify((await import('../js/packs/monumentit-eurooppa.js')).EUROOPAN_KADONNEET.FRA
+    .filter((x) => ERA_2_B.includes(x.id)));
+  assert.ok(!/isoisä/i.test(eurKadonneet), 'isoisä jäi erän 2 kadonneen kenttiin');
+  assert.ok(!/isoisä/i.test(JSON.stringify(ERA_2_D.map((id) => nj[id.slice(2)]))), 'isoisä jäi tarinapaikan nähtävyysjuttuun');
+  // M6: visan vastaus kuuluu yhä tekstiin.
+  const teksti = (x) => x.teksti ?? x.lunastus.join('\n\n');
+  const vastaus = { kyyhkyposti: 'mikrofilm', impressionistit: 'otsikoi', 'kirahvin-kavelymatka': 'Atlantin ympäri pidettiin liian vaarallisena',
+    'pariisin-bukinistit': 'kantaa pois joka ilta', 'carmenin-ensi-ilta': 'Wienissä', 'notre-damen-kukko': 'raunioista lommoilla',
+    'pariisin-patonki': 'presidentinpalatsille', 'vrain-lucas-kirjevaarennokset': '1800-luvun ranskaksi' };
+  for (const x of kentat) {
+    if (!vastaus[x.id]) continue;
+    assert.ok(teksti(x).toLowerCase().includes(vastaus[x.id].toLowerCase()), `${x.id}: visan vastaus ei ole tekstissä`);
+  }
 });

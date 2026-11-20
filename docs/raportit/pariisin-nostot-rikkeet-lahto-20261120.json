@@ -101,40 +101,6 @@
         "alku"
       ]
     },
-    "b:Grand Châtelet": {
-      "ryhma": "B",
-      "merkkeja": 719,
-      "rikkeet": [
-        "isoisa",
-        "jarjestys"
-      ]
-    },
-    "b:Temple-torni": {
-      "ryhma": "B",
-      "merkkeja": 690,
-      "rikkeet": [
-        "alku",
-        "isoisa",
-        "jarjestys"
-      ]
-    },
-    "b:Trocadéron palatsi": {
-      "ryhma": "B",
-      "merkkeja": 821,
-      "rikkeet": [
-        "isoisa",
-        "jarjestys"
-      ]
-    },
-    "b:Galerie des Machines": {
-      "ryhma": "B",
-      "merkkeja": 520,
-      "rikkeet": [
-        "alku",
-        "isoisa",
-        "jarjestys"
-      ]
-    },
     "c:Riemukaari": {
       "ryhma": "C",
       "merkkeja": 694,
@@ -199,45 +165,6 @@
       "merkkeja": 900,
       "rikkeet": [
         "alku"
-      ]
-    },
-    "d:Bizet 1875": {
-      "ryhma": "D",
-      "merkkeja": 1730,
-      "rikkeet": [
-        "isoisa",
-        "pituus"
-      ]
-    },
-    "d:Vrain-Lucas": {
-      "ryhma": "D",
-      "merkkeja": 306,
-      "rikkeet": [
-        "alku"
-      ]
-    },
-    "d:Monet 1874": {
-      "ryhma": "D",
-      "merkkeja": 714,
-      "rikkeet": [
-        "alku",
-        "isoisa"
-      ]
-    },
-    "d:Piiritys 1870": {
-      "ryhma": "D",
-      "merkkeja": 922,
-      "rikkeet": [
-        "alku",
-        "jarjestys"
-      ]
-    },
-    "d:Piaf ja Django": {
-      "ryhma": "D",
-      "merkkeja": 1029,
-      "rikkeet": [
-        "jarjestys",
-        "pituus"
       ]
     },
     "f:Curie 1898": {

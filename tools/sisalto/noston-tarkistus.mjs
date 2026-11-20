@@ -74,7 +74,6 @@ export function tarkista({ id, nimi, teksti, vuodet, jaksollinen = false, tiukka
 }
 
 const HETKI_ALKUJEN = ['Curie 1898', 'Lavoisier 1780', 'Pasteur 1862', 'Eiffel-torni 1888', 'Bastilji 1789', 'Lumière 1895'];
-const KADONNEET_VANHALLA = ['Grand Châtelet', 'Temple-torni', 'Trocadéron palatsi', 'Galerie des Machines'];
 const JUTUT_C = ['Riemukaari', 'Concorden aukio', 'Luxembourgin puisto', 'Sacré-Cœur', 'Panthéon', 'Notre-Dame', 'Tour Saint-Jacques',
   'Saint-Eustache', 'Pompidou-keskus', 'Place des Vosges', 'Invalidit', 'Petit Palais', 'Tour Montparnasse', 'Metro 1900'];
 const TARINAPAIKAT_D = ['Bizet 1875', 'Kirahvi 1827', 'Bukinistit 1859', 'Patonki 1994', 'Vrain-Lucas', 'Monet 1874', 'Piiritys 1870',
@@ -83,7 +82,7 @@ const TARINAPAIKAT_D = ['Bizet 1875', 'Kirahvi 1827', 'Bukinistit 1859', 'Patonk
 /** Jaksollisen noston luettu leipäteksti: nimi-, esittely- ja isoisäjaksot eivät kuulu (natiivi NostoJaksot.IlmanIsoisaa). */
 export const luettavatJaksot = (n) => n.jaksot.filter((j) => j.osa !== 'nimi' && j.osa !== 'esittely' && j.aani !== 'isoisa');
 
-/** Pariisin 46 nostoa: A 13 jaksollista, B 4 kadonnutta, C 14 nähtävyysjuttua, D 9 tarinapaikkaa, F 6 historian hetkeä. */
+/** Pariisin 46 nostoa: A 17 jaksollista (erä 1: 13; erä 2: 4 kadonnutta, ennen ryhmä B), C 14 nähtävyysjuttua, D 9 tarinapaikkaa, F 6 historian hetkeä. */
 export async function keraaPariisinNostot(juuri = REPO) {
   const imp = (p) => import(pathToFileURL(path.join(juuri, 'js', 'packs', p)).href);
   const fra = await imp('fokuskohteet-fra.js');
@@ -103,7 +102,6 @@ export async function keraaPariisinNostot(juuri = REPO) {
       tulos.push({ id: `${ryhma.toLowerCase()}:${nimi}`, ryhma, nimi, teksti: e.teksti });
     }
   };
-  lisaa('B', KADONNEET_VANHALLA);
   lisaa('C', JUTUT_C);
   lisaa('D', TARINAPAIKAT_D);
   for (const alku of HETKI_ALKUJEN) {

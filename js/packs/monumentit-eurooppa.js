@@ -152,29 +152,74 @@ export const EUROOPAN_KADONNEET = {
     ihmeKohde({
       id: 'grand-chatelet',
       nimi: 'Grand Châtelet',
-      kysymykset: ['Mitä Grand Châtelet\'n tuomioistuimelle tapahtui 1790?', 'Mitä Grand Châtelet\'n paikalla on?'],
-      korostukset: ['prévôt|prévôtin', 'holvikäytävä|holvikäytävä'],
+      kysymykset: [
+        'Mistä sana morgue sai alkunsa Grand Châtelet\'ssa?',
+        'Millainen oli Grand Châtelet\'n kuoppasolu la Fosse?',
+        'Mitä Grand Châtelet\'n paikalla on?',
+      ],
+      korostukset: ['prévôt|prévôtin', 'morgue|morgue'],
       nappi: 'Linnake, jonka läpi kulki tie kaupunkiin',
       laudat: { maailmankartta: { x: 5911.6, y: 1439.6 }, europe: { x: 256.3, y: 608.6 } },
-      teksti: 'Grand Châtelet oli Pariisin oikeus- ja vankilalinnake Seinen oikealla rannalla, jonka Ludvig VI '
-        + 'rakennutti kiveksi 1100-luvulla. Kun Philippe Auguste alkoi rakennuttaa kaupungin muuria 1190, '
-        + 'linnake menetti puolustustehtävänsä, ja siitä tuli Pariisin prévôtin oikeudenkäytön ja poliisin '
-        + 'pääpaikka. Rakennuksen läpi kulki holvikäytävä kaupunkiin, ja samoissa muureissa olivat vankila, '
-        + 'tuomareiden salit ja kaupungin ruumishuone. Vankeina olivat muun muassa François Villon, Molière '
-        + 'ja rosvo Cartouche. Grand Châtelet\'tä pidettiin Pariisin pahanhajuisimpana paikkana, ja aivan lähellä olivat '
-        + 'teurastamot. Châtelet\'n tuomioistuin lakkautettiin 1790, ja linnakkeen purku alkoi 1802. Paikalle '
-        + 'tuli Place du Châtelet. Aukion vierellä seisoo Théâtre du Châtelet, jonka Gabriel Davioud rakensi '
-        + '1860–1862.',
-      vuodet: [
-        { kohta: 'kaupungin muuria 1190', vuosi: '1190', selite: 'muurityö alkoi' },
-        { kohta: 'lakkautettiin 1790', vuosi: '1790', selite: 'tuomioistuin loppui' },
-        { kohta: 'purku alkoi 1802', vuosi: '1802', selite: 'purku alkoi' },
-        { kohta: '1860–1862', vuosi: '1860–1862', selite: 'teatterin rakennus' },
+      // teksti lasketaan jaksoista (ks. ihmeKohde). Erä 2 (L5-4, KK 20.11.2026): jaksollinen kuten Palais de l'Industrie; raportti docs/raportit/pariisi-nostot-era2-teksti-20261120.md.
+      otsikko: 'Linnake, josta tuli ruumishuone',
+      jaksot: [
+        {
+          osa: 'tapahtuma',
+          teksti: 'Grand Châtelet oli Pariisin vankila- ja oikeuslinnake Seinen oikealla rannalla. Ludvig VI '
+            + 'rakennutti sen kiveksi 1100-luvulla, ja kun kaupunkia alettiin muurittaa vuonna 1190, siitä '
+            + 'tuli prévôtin eli kuninkaan virkamiehen pääpaikka.',
+          kuva: 'loisto',
+          vuodet: [
+            { vuosi: '1190', selite: 'kaupunki muurataan', kohta: 'vuonna 1190' },
+          ],
+        },
+        {
+          osa: 'tapahtuma',
+          teksti: 'Vankeina olivat François Villon, Molière velkojen takia vuonna 1645 ja rosvopäällikkö '
+            + 'Cartouche vuonna 1721. Linnakkeen kuoppasolu, la Fosse, kapeni alaspäin kuin kartio, eikä '
+            + 'vanki voinut seistä eikä maata kunnolla.',
+          vuodet: [
+            { vuosi: '1645', selite: 'Molière vangiksi', kohta: 'vuonna 1645' },
+            { vuosi: '1721', selite: 'Cartouche vangiksi', kohta: 'vuonna 1721' },
+          ],
+        },
+        {
+          osa: 'tapahtuma',
+          teksti: 'Linnakkeessa oli myös ruumishuone, ranskaksi morgue. Sanan sanotaan syntyneen täällä: '
+            + 'vartijat tuijottivat uuden vangin kasvot ulkoa tunnistaakseen hänet, jos hän pakenisi. '
+            + 'Myöhemmin tänne tuotiin tunnistettavaksi löydetyt vainajat.',
+        },
+        {
+          osa: 'kaanne',
+          teksti: 'Syyskuun 2. päivänä 1792 joukko tunkeutui linnakkeeseen ja surmasi kymmeniä vankeja, ja '
+            + 'vankila hylättiin. Linnakkeen purku alkoi vuonna 1802.',
+          hologrammi: 'sammuu',
+          hologrammiKohta: 'Linnakkeen purku alkoi',
+          vuodet: [
+            { vuosi: '1792', selite: 'verilöyly', kohta: 'päivänä 1792' },
+            { vuosi: '1802', selite: 'purku alkaa', kohta: 'vuonna 1802' },
+          ],
+        },
+        {
+          osa: 'tanaan',
+          teksti: 'Paikalle tehtiin uusi Place du Châtelet. Napoleon tilasi sinne palmusuihkulähteen '
+            + 'voitonmuistomerkiksi, ja se valmistui vuonna 1808. Fontaine du Palmier seisoo aukiolla yhä.',
+          vuodet: [
+            { vuosi: '1808', selite: 'palmulähde valmis', kohta: 'vuonna 1808' },
+          ],
+        },
       ],
-      lahde: 'paris.fr "Ces lieux disparus qui font aussi l\'histoire de Paris (2/2)" ja "Le Théâtre du Châtelet '
-        + 'rouvre ses portes"; POP PA00086112; Desmaze, Le Châtelet de Paris (1863); Larousse "Villon"; herodote.net '
-        + '"Molière"; paris.fr "Les prisons, gardiennes de l\'histoire parisienne"; Encyclopædia Britannica (1911) '
-        + '"Châtelet"; Fournier, Paris démoli (1855); fr-Wikipedia "Grand Châtelet" (tarkistettu 15.11.2026).',
+      jaksokuvat: {
+        loisto: {
+          osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-grand-chatelet-loistoaika.jpg',
+          laji: 'havainnekuva',
+          lyhyt: 'Grand Châtelet loistoaikanaan',
+          lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: paris.fr, Criminocorpus ja Pariszigzag.',
+        },
+      },
+      lahde: 'Matkakirjan oma teksti · lähteinä Pariisin kaupungin sivut (paris.fr), Parcours Révolution, '
+        + 'France Pittoresque, Pariszigzag, Criminocorpus, Histoires de Paris ja Musée Carnavalet '
+        + '(avatut sivut, tarkistettu 20.11.2026).',
       kuva: 'ihme-grand-chatelet-loistoaika.jpg',
       lyhyt: 'Kärryt ja kulkijat tunkevat Grand Châtelet\'n holvikäytävän läpi, ja ilma haisee läheisistä '
         + 'teurastamoista; reilut viisikymmentä vuotta myöhemmin purku alkaa.',
@@ -188,28 +233,71 @@ export const EUROOPAN_KADONNEET = {
     ihmeKohde({
       id: 'temple-torni',
       nimi: 'Temple-torni',
-      kysymykset: ['Miksi Napoleon määräsi Temple-tornin purettavaksi?', 'Mitä Temple-tornin paikalla on?'],
+      kysymykset: [
+        'Miksi Napoleon määräsi Temple-tornin purettavaksi?',
+        'Mitä Temple-tornin paikalla on?',
+        'Miten Sidney Smith pakeni Templen vankilasta?',
+      ],
       korostukset: ['temppeliritari|temppeliritarien', 'kuningasperhe|kuningasperheen'],
       nappi: 'Torni, jonka Napoleon käski purkaa',
       laudat: { maailmankartta: { x: 5912.0, y: 1439.2 }, europe: { x: 256.5, y: 608.4 } },
-      teksti: 'Temple-torni eli Grosse Tour oli temppeliritarien Pariisin päämajan linnoitustorni, jonka '
-        + 'rakentaminen alkoi keskiajalla. Tornin muurit olivat '
-        + 'paksut, ja sen kulmissa oli neljä pienempää tornia. Temppeliritarikunta '
-        + 'lakkautettiin 1312. Elokuun 13. päivänä 1792 Pariisin kommuuni vei kuningasperheen Templeen; '
-        + 'Ludvig XVI lähti sieltä giljotiinille 21. tammikuuta 1793. Hänen poikansa Ludvig XVII kuoli '
-        + 'Templessä 8. kesäkuuta 1795 kymmenvuotiaana. Napoleon määräsi tornin purettavaksi 1808 '
-        + 'estääkseen rojalistien pyhiinvaellukset. Tornin paikan vieressä on '
-        + 'nykyisin Square du Temple -puisto.',
-      vuodet: [
-        { kohta: 'lakkautettiin 1312', vuosi: '1312', selite: 'ritarikunta loppui' },
-        { kohta: 'päivänä 1792', vuosi: '1792', selite: 'perhe Templeen' },
-        { kohta: 'tammikuuta 1793', vuosi: '1793', selite: 'matka giljotiinille' },
-        { kohta: 'kesäkuuta 1795', vuosi: '1795', selite: 'Ludvig XVII kuoli' },
-        { kohta: 'purettavaksi 1808', vuosi: '1808', selite: 'purkumääräys' },
+      // teksti lasketaan jaksoista (ks. ihmeKohde). Erä 2 (L5-4, KK 20.11.2026): jaksollinen kuten Palais de l'Industrie; raportti docs/raportit/pariisi-nostot-era2-teksti-20261120.md.
+      otsikko: 'Torni, josta kuningasperhe ei palannut',
+      jaksot: [
+        {
+          osa: 'tapahtuma',
+          teksti: 'Temple-torni kohosi temppeliritarien Pariisin päämajan linnoituksessa. Philippe Augusten '
+            + 'ajoista kuninkaan aarre talletettiin ritarien linnoitukseen, ja sen muurien suojassa asui '
+            + 'myöhemmin kiltasäännöistä ja Pariisin veroista vapaita käsityöläisiä.',
+          kuva: 'loisto',
+        },
+        {
+          osa: 'tapahtuma',
+          teksti: 'Elokuussa 1792 Pariisin kommuuni vei kuningasperheen Templeen vangiksi. Ludvig XVI lähti '
+            + 'sieltä giljotiinille, ja hänen poikansa Ludvig XVII kuoli Templessä vuonna 1795 '
+            + 'kymmenvuotiaana.',
+          vuodet: [
+            { vuosi: '1792', selite: 'perhe Templeen', kohta: 'Elokuussa 1792' },
+            { vuosi: '1795', selite: 'Ludvig XVII kuoli', kohta: 'vuonna 1795' },
+          ],
+        },
+        {
+          osa: 'tapahtuma',
+          teksti: 'Vuonna 1798 brittiamiraali Sidney Smith pakeni Templen vankilasta väärennetyillä '
+            + 'siirtomääräyksillä: kaksi miestä univormuissa ilmestyi ja vei hänet muka toiseen vankilaan. '
+            + 'Huhtikuussa 1804 kenraali Pichegru löydettiin kuolleena Templen vankilan sellistään.',
+          vuodet: [
+            { vuosi: '1798', selite: 'Smithin pako', kohta: 'Vuonna 1798' },
+            { vuosi: '1804', selite: 'Pichegru kuoli', kohta: 'Huhtikuussa 1804' },
+          ],
+        },
+        {
+          osa: 'kaanne',
+          teksti: 'Napoleon määräsi tornin purettavaksi vuonna 1808, koska halusi lopettaa rojalistien '
+            + 'pyhiinvaellukset paikalle, jossa kuningasperhe oli ollut vankina.',
+          hologrammi: 'sammuu',
+          hologrammiKohta: 'Napoleon määräsi tornin purettavaksi',
+          vuodet: [
+            { vuosi: '1808', selite: 'purkumääräys', kohta: 'vuonna 1808' },
+          ],
+        },
+        {
+          osa: 'tanaan',
+          teksti: 'Tornista ei ole jäänyt mitään. Sen paikan vieressä on nykyisin Square du Temple -puisto, ja '
+            + 'Rue Eugène-Spullerilla seisoo kaupunginosan kaupungintalo.',
+        },
       ],
-      lahde: 'parcoursrevolution.paris.fr "Temple"; Viollet-le-Duc, Dictionnaire raisonné ("Temple"); Cléry, '
-        + 'Journal (1798); herodote.net; Larousse "Louis XVII"; fr-Wikipedia "Tour du Temple" (tarkistettu '
-        + '15.11.2026).',
+      jaksokuvat: {
+        loisto: {
+          osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-temple-torni-loistoaika-v2.jpg',
+          laji: 'havainnekuva',
+          lyhyt: 'Temple-torni loistoaikanaan',
+          lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: Histoires de Paris, Parcours Révolution ja templiers.org.',
+        },
+      },
+      lahde: 'Matkakirjan oma teksti · lähteinä Histoires de Paris, Paris Centre -kaupunginosan sivut, '
+        + 'Parcours Révolution, Paris révolutionnaire, templiers.org, More Than Nelson, James Gillray '
+        + '-sivusto, French Empire -sivusto ja Geri Walton (avatut sivut, tarkistettu 20.11.2026).',
       // Vaatetorikuva -v2 (omistaja 9.11. 19.06 "teksti kuvan mukaiseksi", PT B): vanhalla nimellä CDN tarjosi
       // 31.10. 14.02 torikuvaa ja alkuperä ritarikuvaa; uusi nimi ohittaa välimuistin, vanha nimi jää ämpäriin.
       kuva: 'ihme-temple-torni-loistoaika-v2.jpg',
@@ -420,24 +508,74 @@ export const EUROOPAN_KADONNEET = {
       id: 'trocadero',
       nimi: 'Trocadéron palatsi',
       nimio: 'Trocadéro',
-      kysymykset: ['Mitä Trocadéron palatsista jäi pystyyn?', 'Miksi palatsi purettiin 1935?'],
+      kysymykset: [
+        'Mitä Trocadéron palatsista jäi pystyyn?',
+        'Miksi palatsi purettiin 1935?',
+        'Minne Trocadéron urut päätyivät?',
+      ],
       korostukset: ['maailmannäyttely|maailmannäyttelyä', 'Chaillot\'n palatsi|Chaillot\'n palatsin'],
       nappi: 'Näyttelypalatsi, josta jäivät vain siivet',
       laudat: { maailmankartta: { x: 5909.6, y: 1439.4 }, europe: { x: 255.1, y: 608.5 } },
-      teksti: 'Trocadéron palatsi rakennettiin vuoden 1878 Pariisin maailmannäyttelyä varten Seinen '
-        + 'pohjoisrannalle, ja sen suunnittelivat Gabriel Davioud ja Jules Bourdais. '
-        + 'Palatsissa oli kaksi korkeaa tornia ja kaksi kaarevaa '
-        + 'siipeä. Keskellä oli yli neljän tuhannen paikan sali, johon vihittiin Cavaillé-Collin urut. '
-        + 'Vuonna 1935 keskisali ja tornit purettiin vuoden 1937 näyttelyn tieltä, ja siivet '
-        + 'jäivät uuden Chaillot\'n palatsin osiksi. Isoisä ei nähnyt Trocadéroa, sillä se '
-        + 'valmistui vasta 1878.',
-      vuodet: [
-        { kohta: 'vuoden 1878', vuosi: '1878', selite: 'maailmannäyttely' },
-        { kohta: 'Vuonna 1935', vuosi: '1935', selite: 'keskisali purettiin' },
-        { kohta: 'vuoden 1937', vuosi: '1937', selite: 'näyttely' },
+      // teksti lasketaan jaksoista (ks. ihmeKohde). Erä 2 (L5-4, KK 20.11.2026): jaksollinen kuten Palais de l'Industrie; raportti docs/raportit/pariisi-nostot-era2-teksti-20261120.md.
+      otsikko: 'Palatsi, jonka urut selvisivät',
+      jaksot: [
+        {
+          osa: 'tapahtuma',
+          teksti: 'Trocadéron palatsi rakennettiin vuoden 1878 maailmannäyttelyä varten Seinen pohjoisrannalle. '
+            + 'Siinä oli kaksi korkeaa tornia, kaksi kaarevaa siipeä ja yli neljän tuhannen paikan sali, '
+            + 'jonka akustiikka oli huono mutta jossa urut soivat hyvin.',
+          kuva: 'loisto',
+          vuodet: [
+            { vuosi: '1878', selite: 'maailmannäyttely', kohta: 'vuoden 1878' },
+          ],
+        },
+        {
+          osa: 'tapahtuma',
+          teksti: 'Salin Cavaillé-Collin urut vihittiin elokuussa 1878, ja César Franck sävelsi niille kolmen '
+            + 'kappaleen sarjan Trois Pièces.',
+        },
+        {
+          osa: 'tapahtuma',
+          teksti: 'Palatsiin kuului myös etnografinen museo, joka syntyi vuoden 1878 näyttelystä ja avattiin '
+            + 'yleisölle vuonna 1882. Vielä 1920-luvulla se oli hämärä, kylmä ja pölyinen esineiden komero.',
+          vuodet: [
+            { vuosi: '1882', selite: 'museo avataan', kohta: 'vuonna 1882' },
+          ],
+        },
+        {
+          osa: 'kaanne',
+          teksti: 'Vuonna 1935 keskisali ja tornit purettiin vuoden 1937 näyttelyn tieltä, ja siivet jäivät '
+            + 'uuden Chaillot\'n palatsin osiksi.',
+          hologrammi: 'sammuu',
+          hologrammiKohta: 'keskisali ja tornit purettiin',
+          vuodet: [
+            { vuosi: '1935', selite: 'keskisali purettiin', kohta: 'Vuonna 1935' },
+            { vuosi: '1937', selite: 'uusi näyttely', kohta: 'vuoden 1937' },
+          ],
+        },
+        {
+          osa: 'tanaan',
+          teksti: 'Chaillot\'n palatsissa YK:n yleiskokous hyväksyi vuonna 1948 ihmisoikeuksien '
+            + 'yleismaailmallisen julistuksen. Trocadéron urut soivat nykyisin Lyonissa, jonne ne '
+            + 'siirrettiin vuonna 1977.',
+          vuodet: [
+            { vuosi: '1948', selite: 'ihmisoikeusjulistus', kohta: 'vuonna 1948' },
+            { vuosi: '1977', selite: 'urut Lyoniin', kohta: 'vuonna 1977' },
+          ],
+        },
       ],
-      lahde: 'POP PA00086706; L\'art et l\'industrie de tous les peuples à l\'Exposition universelle de 1878 '
-        + '(1880); Auditorium de Lyon; fr-Wikipedia "Palais du Trocadéro" (tarkistettu 15.11.2026).',
+      jaksokuvat: {
+        loisto: {
+          osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-trocadero-loistoaika.jpg',
+          laji: 'havainnekuva',
+          lyhyt: 'Trocadéron palatsi loistoaikanaan',
+          lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: Auditorium de Lyon ja Pariisin kaupunki.',
+        },
+      },
+      lahde: 'Matkakirjan oma teksti · lähteinä POP PA00086706, L\'art et l\'industrie de tous les peuples à '
+        + 'l\'Exposition universelle de 1878 (1880), Auditorium de Lyon, Henle, Pariisin kaupungin '
+        + 'Chaillot-sivu, Hérodote, Encyclopædia Universalis, En attendant Nadeau ja INHA (avatut '
+        + 'sivut, tarkistettu 20.11.2026).',
       kuva: 'ihme-trocadero-loistoaika.jpg',
       lyhyt: 'Kesäpukuiset pariisilaisperheet seisovat kaskadin reunalla ihailemassa palatsin kahta tornia, ja '
         + 'sisällä suuressa salissa soivat vastavihityt urut; viisikymmentäseitsemän vuotta myöhemmin '
@@ -456,21 +594,71 @@ export const EUROOPAN_KADONNEET = {
       id: 'galerie-des-machines',
       nimi: 'Galerie des Machines',
       nimio: 'Konehalli',
-      kysymykset: ['Kuinka suuri maailmannäyttelyn konehalli oli?', 'Miksi halli purettiin?'],
-      korostukset: ['Eiffel-torni|Eiffel-torni', 'Ferdinand Dutert|Ferdinand Dutertin'],
+      kysymykset: [
+        'Kuinka suuri maailmannäyttelyn konehalli oli?',
+        'Miksi halli purettiin?',
+        'Mikä sirkus esiintyi hallissa talvella 1901–1902?',
+      ],
+      korostukset: ['Eiffel-torni|Eiffel-torni', 'Edison|Edisonin'],
       nappi: 'Halli, jossa ei ollut yhtään pilaria',
       laudat: { maailmankartta: { x: 5910.0, y: 1439.8 }, europe: { x: 255.4, y: 608.8 } },
-      teksti: 'Galerie des Machines oli vuoden 1889 Pariisin maailmannäyttelyn konehalli Champ-de-Marsilla, '
-        + 'samalla kentällä kuin Eiffel-torni. Insinööri Victor Contaminin ja arkkitehti Ferdinand Dutertin '
-        + 'suunnittelema halli oli 420 metriä pitkä ja 115 metriä leveä, eikä sen sisällä ollut yhtään '
-        + 'tukipilaria. Kaarten kolminivelinen rakenne oli lainattu siltasuunnittelusta. Vieraita kuljettivat hallissa '
-        + 'liikkuvat sillat. Halli purettiin 1900-luvun alussa, jotta näkymä Champ-de-Marsille aukeaisi. Isoisä ei ehtinyt nähdä sitä: halli valmistui 16 vuotta hänen '
-        + 'matkansa jälkeen.',
-      vuodet: [
-        { kohta: 'vuoden 1889', vuosi: '1889', selite: 'maailmannäyttely' },
+      // teksti lasketaan jaksoista (ks. ihmeKohde). Erä 2 (L5-4, KK 20.11.2026): jaksollinen kuten Palais de l'Industrie; raportti docs/raportit/pariisi-nostot-era2-teksti-20261120.md.
+      otsikko: 'Halli, jossa ei ollut yhtään pilaria',
+      jaksot: [
+        {
+          osa: 'tapahtuma',
+          teksti: 'Galerie des Machines oli vuoden 1889 Pariisin maailmannäyttelyn konehalli Champ-de-Marsilla '
+            + 'Eiffel-tornin vieressä. Se oli noin 420 metriä pitkä ja 115 metriä leveä, eikä sen sisällä '
+            + 'ollut yhtään pilaria, sillä teräskaaret nojasivat toisiinsa kolmesta nivelestä.',
+          kuva: 'loisto',
+          vuodet: [
+            { vuosi: '1889', selite: 'maailmannäyttely', kohta: 'vuoden 1889' },
+          ],
+        },
+        {
+          osa: 'tapahtuma',
+          teksti: 'Vieraita kuljettivat hallissa liikkuvat sillat. Esillä oli myös Edisonin fonografi, jolla '
+            + 'kuultiin muun muassa Marseillaise.',
+        },
+        {
+          osa: 'tapahtuma',
+          teksti: 'Näyttelyn jälkeenkin halli jäi käyttöön: vuonna 1900 siellä pidettiin maatalouden ja '
+            + 'elintarvikkeiden näyttely, ja marraskuussa 1901 alkoi Barnum & Bailey -sirkuksen esityssarja '
+            + 'kolmessa areenassa. Sarja päättyi maaliskuussa 1902.',
+          vuodet: [
+            { vuosi: '1900', selite: 'maatalousnäyttely', kohta: 'vuonna 1900' },
+            { vuosi: '1901', selite: 'sirkus saapuu', kohta: 'marraskuussa 1901' },
+            { vuosi: '1902', selite: 'sirkus lähtee', kohta: 'maaliskuussa 1902' },
+          ],
+        },
+        {
+          osa: 'kaanne',
+          teksti: 'Vuonna 1909 Pariisin kaupunki ilmoitti hävittävänsä hallin, ja se purettiin, jotta näkymä '
+            + 'Champ-de-Marsille aukeaisi. Yli neljäkymmentä metriä korkea halli oli seissyt paikallaan '
+            + 'kaksikymmentä vuotta.',
+          hologrammi: 'sammuu',
+          hologrammiKohta: 'se purettiin',
+          vuodet: [
+            { vuosi: '1909', selite: 'purku', kohta: 'Vuonna 1909' },
+          ],
+        },
+        {
+          osa: 'tanaan',
+          teksti: 'Hallia ei ole enää, mutta Eiffel-torni seisoo yhä samalla Champ-de-Marsin kentällä, jossa '
+            + 'konehalli aikoinaan kohosi sen vieressä.',
+        },
       ],
-      lahde: 'Parville, L\'Exposition universelle (1890); paris.fr "Ces lieux disparus qui font aussi '
-        + 'l\'histoire de Paris (4/4)"; en-Wikipedia "Galerie des machines" (tarkistettu 15.11.2026).',
+      jaksokuvat: {
+        loisto: {
+          osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-galerie-des-machines-loistoaika.jpg',
+          laji: 'havainnekuva',
+          lyhyt: 'Galerie des Machines loistoaikanaan',
+          lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: paris.fr, BnF ja Structurae.',
+        },
+      },
+      lahde: 'Matkakirjan oma teksti · lähteinä Parville, L\'Exposition universelle (1890), Pariisin '
+        + 'kaupungin Ces lieux disparus -sarja, Structurae, Pariszigzag, Gilwro, BnF (CNAC), AHICF, '
+        + 'Cambridge University Press ja Phonographia (avatut sivut, tarkistettu 20.11.2026).',
       kuva: 'ihme-galerie-des-machines-loistoaika.jpg',
       lyhyt: 'Näyttelyvieras seisoo liikkuvalla sillalla koneiden yläpuolella ja katsoo, kuinka kaari '
         + 'nousee yli hallin; parikymmentä vuotta myöhemmin halli puretaan.',

@@ -35,9 +35,11 @@ const OSAT = new Set(['nimi', 'esittely', 'koukku', 'tapahtuma', 'kaanne', 'tana
 const ALKUOSAT = new Set(['nimi', 'esittely']); // noston alku: kertojan lyhyet rivit ennen isoisän koukkua (omistaja 19.23 F)
 // ERÄ 1 (P-261120-3, L5-3; KK 20.11.2026): Pariisin 13 jaksollista ilman nimi-, esittely- ja isoisäjaksoa (kertoja lukee vain leipätekstin,
 // ensimmäinen virke kertoo nimen: tests/noston-tekstisaannot.test.mjs); jakso 100–320, koko teksti enintään 1 000 merkkiä.
-// Erät 2 ja 3 sekä muut kaupungit noudattavat vanhaa muotoa, kunnes niiden vuoro tulee.
+// ERÄ 2 (L5-4, KK 20.11.2026): neljä kadonnutta (Grand Châtelet, Temple-torni, Trocadéro, Galerie des Machines) samaan muotoon kuin erä 1.
+// Erä 3 sekä muut kaupungit noudattavat vanhaa muotoa, kunnes niiden vuoro tulee.
 const ERA_1 = new Set(['tuileries', 'louvre', 'bastilji', 'eiffel-torni', 'sainte-chapelle', 'curie-1898', 'lumiere-1895', 'lavoisier-1780',
-  'pasteur-1862', 'palais-garnier', 'hahmotelma-palais-orsay', 'hahmotelma-palais-industrie', 'hahmotelma-les-halles']);
+  'pasteur-1862', 'palais-garnier', 'hahmotelma-palais-orsay', 'hahmotelma-palais-industrie', 'hahmotelma-les-halles',
+  'hahmotelma-grand-chatelet', 'hahmotelma-temple-torni', 'hahmotelma-trocadero', 'hahmotelma-galerie-des-machines']);
 const LAJIT = new Set(['valokuva', 'havainnekuva', 'kartta', 'piirros', 'maalaus']);
 
 const { tiedostot } = await kokoaVienti();
