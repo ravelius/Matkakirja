@@ -1,6 +1,6 @@
 # testit · vastuu NS · tarkistettu 18.11.2026
 
-TAVOITE: Kone tarkistaa jokaisen muutoksen ennen junaa, ja laitteella ajetaan vasta valmis kokonaisuus. Testaaja näkee testaajatilassa koko sisällön, ja kehittäjä pääsee testikohtaan suoraan.
+TAVOITE: Kone tarkistaa jokaisen muutoksen ennen junaa, ja laitteella ajetaan vasta valmis kokonaisuus.
 
 SÄÄNNÖT:
 1. Junaan vaaditaan vain automaattiset testit ja virheetön käännös. Metal-variantit käännetään aina varjostinmuutoksen jälkeen ja ennen TestFlightia. Pieni virhe korjataan seuraavaan junaan. [R-9.1] [R-9.2]
@@ -16,6 +16,7 @@ SÄÄNNÖT:
 11. Kehittäjäkoodi avaa kehittäjätilan kaikissa käännöksissä, toinen koodi testaajatilan: linssit ja vapaa liikkuminen, ei äänisäätimiä eikä syvempiä toimintoja. Koodeista repoon vain tiiviste. [R-6.17]
 12. Kehittäjätilassa ovat testien suorat aloitukset, kohtaamislista maanosittain ja pelin saapumiszoom. Kävijälaskuri ohittaa omistajan laitteen vain omalla merkillä. [R-9.13] [R-6.17]
 13. Omistajalle vain NYT-kuvat; ENNEN vain KK:n tilaamana. [P-261119-28]
+14. Mac-ajoja 2 rinnakkain (ma–pe 9–17: 1). Vartija: nopeusvartija (JU). [P-261120-16]
 
 EI VIKA:
 - Juna lähtee ilman simulaattori- tai laitekuvia.
