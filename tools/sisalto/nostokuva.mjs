@@ -13,8 +13,11 @@
  *   4. tulostaa esikatselun soikealla reunalla (<nimi>-esikatselu.png, alfa = soikio; n ja h: tools/sisalto/soikio.mjs).
  * Liian pieni lähde (rajaus alle 1200 px leveä, sääntö 11): 1200- ja 2048-versiota ei tehdä, esikatselu tehdään
  * rajauksen omassa koossa, ja paluukoodi on 3.
+ * --osuus o (0,5–1; KK 20.11.2026 11.47, K-4 erä 2: SK:n sharp-esirajauksen tilalle): ennen kohtaa 1 lähteestä otetaan
+ * keskipisteen ympäriltä alue o × leveys ja o × korkeus (kuvan sisällä), ja 3:2-rajaus on suurin sen sisällä. Kohde täyttää
+ * soikion paremmin. Oletus 1 = ilman osuutta tavulleen sama tulos (json saa kentän rajaus.osuus vain, kun o < 1).
  *
- *   node tools/sisalto/nostokuva.mjs <kuva> --ulos <kansio> [--keski 0.5,0.4] [--nimi <nimi>] [--lahde "<lähderivi>"]
+ *   node tools/sisalto/nostokuva.mjs <kuva> --ulos <kansio> [--keski 0.5,0.4] [--osuus 0.8] [--nimi <nimi>] [--lahde "<lähderivi>"]
  */
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -30,11 +33,19 @@ export const KORKEUS = 800;
 export const SUURENNOS = 2048;
 export const SUHDE = LEVEYS / KORKEUS;
 
-/** Suurin 3:2-alue kuvassa (leveys × korkeus) keskipisteen (osuudet 0–1) ympäriltä, kuvan sisällä. */
-export function rajausLaatikko(leveys, korkeus, keskiX = 0.5, keskiY = 0.5) {
+export const OSUUS_MIN = 0.5;
+
+/**
+ * Suurin 3:2-alue keskipisteen (osuudet 0–1) ympäriltä kuvan sisällä. osuus (0,5–1): alue mahtuu keskipisteen ympärille
+ * otettuun osuus × leveys × osuus × korkeus -alueeseen (esirajaus; saman keskipisteen ympärillä, joten se pysyy sen sisällä
+ * myös reunassa). osuus 1 = koko kuva.
+ */
+export function rajausLaatikko(leveys, korkeus, keskiX = 0.5, keskiY = 0.5, osuus = 1) {
+  const o = Math.max(OSUUS_MIN, Math.min(1, Number.isFinite(osuus) ? osuus : 1));
+  const lw = Math.round(leveys * o), lk = Math.round(korkeus * o);
   let w, h;
-  if (leveys / korkeus >= SUHDE) { h = korkeus; w = Math.min(leveys, Math.round(korkeus * SUHDE)); }
-  else { w = leveys; h = Math.min(korkeus, Math.round(leveys / SUHDE)); }
+  if (lw / lk >= SUHDE) { h = lk; w = Math.min(lw, Math.round(lk * SUHDE)); }
+  else { w = lw; h = Math.min(lk, Math.round(lw / SUHDE)); }
   const left = Math.round(Math.max(0, Math.min(leveys - w, keskiX * leveys - w / 2)));
   const top = Math.round(Math.max(0, Math.min(korkeus - h, keskiY * korkeus - h / 2)));
   return { left, top, width: w, height: h };
@@ -62,14 +73,14 @@ export function soikioAlfaan(rgba, leveys, korkeus) {
  * Rajaa kuvan ja kirjoittaa tiedostot kansioon. Palauttaa { ok, json, polut, viesti }; ok = false, kun lähde on liian pieni
  * (vain esikatselu tehdään).
  */
-export async function rajaa(lahdeKuva, { ulos, nimi, keskiX = 0.5, keskiY = 0.5, lahde = null } = {}) {
+export async function rajaa(lahdeKuva, { ulos, nimi, keskiX = 0.5, keskiY = 0.5, osuus = 1, lahde = null } = {}) {
   if (!ulos) throw new Error('--ulos puuttuu');
   nimi ??= path.basename(lahdeKuva).replace(/\.[^.]+$/, '');
   const sharp = await lataaSharp();
   await fs.mkdir(ulos, { recursive: true });
   const pohja = sharp(lahdeKuva).rotate();   // EXIF-asento ensin
   const { data: tavut, info } = await pohja.toBuffer({ resolveWithObject: true });
-  const laatikko = rajausLaatikko(info.width, info.height, keskiX, keskiY);
+  const laatikko = rajausLaatikko(info.width, info.height, keskiX, keskiY, osuus);
   const rajattu = () => sharp(tavut).extract(laatikko);
   const ok = laatikko.width >= LEVEYS;
   const polut = {};
@@ -78,6 +89,7 @@ export async function rajaa(lahdeKuva, { ulos, nimi, keskiX = 0.5, keskiY = 0.5,
     rajaus: { lahde: { leveys: info.width, korkeus: info.height }, x: laatikko.left, y: laatikko.top, leveys: laatikko.width, korkeus: laatikko.height,
       keski: [keskiX, keskiY] },
   };
+  if (osuus < 1) json.rajaus.osuus = Math.max(OSUUS_MIN, osuus);
   let esiL = LEVEYS, esiK = KORKEUS;
   if (ok) {
     polut.kuva = path.join(ulos, `${nimi}.jpg`);
@@ -109,12 +121,14 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   const arvo = (k) => { const i = a.indexOf(k); return i >= 0 ? a[i + 1] : undefined; };
   const kuva = a.find((x, i) => !x.startsWith('--') && (i === 0 || !a[i - 1].startsWith('--')));
   if (!kuva || !arvo('--ulos')) {
-    console.error('käyttö: node tools/sisalto/nostokuva.mjs <kuva> --ulos <kansio> [--keski 0.5,0.4] [--nimi <nimi>] [--lahde "<lähderivi>"]');
+    console.error('käyttö: node tools/sisalto/nostokuva.mjs <kuva> --ulos <kansio> [--keski 0.5,0.4] [--osuus 0.8] [--nimi <nimi>] [--lahde "<lähderivi>"]');
     process.exit(2);
   }
   const [keskiX, keskiY] = (arvo('--keski') ?? '0.5,0.5').split(',').map(Number);
   if (![keskiX, keskiY].every((x) => x >= 0 && x <= 1)) { console.error('--keski: kaksi osuutta 0–1, esim. 0.5,0.4'); process.exit(2); }
-  const t = await rajaa(kuva, { ulos: arvo('--ulos'), nimi: arvo('--nimi'), keskiX, keskiY, lahde: arvo('--lahde') ?? null });
+  const osuus = Number(arvo('--osuus') ?? 1);
+  if (!(osuus >= OSUUS_MIN && osuus <= 1)) { console.error('--osuus: 0,5–1, esim. 0.8'); process.exit(2); }
+  const t = await rajaa(kuva, { ulos: arvo('--ulos'), nimi: arvo('--nimi'), keskiX, keskiY, osuus, lahde: arvo('--lahde') ?? null });
   console.log(t.viesti);
   for (const [k, p] of Object.entries(t.polut)) console.log(`  ${k}: ${p}`);
   process.exit(t.ok ? 0 : 3);
