@@ -335,23 +335,29 @@ export const EUROOPAN_KADONNEET = {
       jaksot: [
         {
           osa: 'tapahtuma',
-          teksti: 'Palais de l\'Industrie oli suuri näyttelyhalli Champs-Élysées\'n tuntumassa Pariisissa. Sen '
-            + 'paikalla seisoo nykyään Grand Palais. Hallin suunnittelussa olivat mukana insinööri Barrault ja '
-            + 'arkkitehti Viel.',
+          teksti: 'Palais de l\'Industrie oli Champs-Élysées\'n tuntumaan rakennettu suurhalli, jonka insinööri '
+            + 'Barrault suunnitteli Pariisin vuoden 1855 maailmannäyttelyä varten. Sen paikalla seisoo nykyään '
+            + 'Grand Palais.',
           kuva: 'loisto',
-        },
-        {
-          osa: 'tapahtuma',
-          teksti: 'Halli rakennettiin Pariisin vuoden 1855 maailmannäyttelyä varten, ja näyttely avattiin '
-            + 'toukokuussa. Näyttelyn jälkeenkin siellä pidettiin näyttelyitä ja tapahtumia.',
           vuodet: [
             { vuosi: '1855', selite: 'maailmannäyttely', kohta: 'vuoden 1855' },
           ],
         },
         {
+          osa: 'tapahtuma',
+          teksti: 'Hallin lasikatto oli rautarakenteen varassa, mutta rauta oli kätketty raskaiden kivimuurien '
+            + 'sisään. Päähalliin ei mahtunut kaikkia koneita, joten Seinen varteen rakennettiin niille '
+            + 'erillinen galleria.',
+        },
+        {
+          osa: 'tapahtuma',
+          teksti: 'Näyttelyn päätösjuhlassa hallissa soi yli tuhannen esittäjän musiikki, kun säveltäjä Berlioz '
+            + 'johti kantaattinsa.',
+        },
+        {
           osa: 'kaanne',
-          teksti: 'Halli ei saanut jäädä. Se purettiin 1890-luvulla, jotta paikalle voitiin rakentaa uusi '
-            + 'näyttelypalatsi vuoden 1900 maailmannäyttelyä varten.',
+          teksti: 'Halli ei saanut jäädä. Se purettiin 1890-luvulla, jotta paikalle voitiin rakentaa uusi palatsi '
+            + 'vuoden 1900 maailmannäyttelyä varten.',
           kuva: 'portti',
           hologrammi: 'sammuu',
           hologrammiKohta: 'Halli ei saanut jäädä',
