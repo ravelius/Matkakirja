@@ -14,7 +14,7 @@ SÄÄNNÖT:
 9. Roolit eivät käännä itse: käännös- ja simuvuoro pyydetään Julkaisijalta, ja työ alkaa vasta NYT-viestistä. Juna menee ensin, kolmatta käännöslinjaa ei avata, ja jaettua käännösinfraa muutetaan vain omistajan luvalla. [R-10.4] [R-10.5] [P-261116-15]
 10. Simulaattoreita on neljä yhteistä, vuorolukolla yksi rooli kerrallaan; uusia ei luoda eikä vanhaa sisäistä sarjaa käytetä. Rooli sammuttaa ajon jälkeen vain omansa. Isolla iPadilla oma lukko, yksi ajo kerrallaan. [R-12.17] [R-12.16]
 11. Ajot ovat äänettömiä eivätkä avaa ikkunoita omistajan näytölle; Macin oletusäänilaitetta ei vaihdeta. Ääntä tuottava oma ajo lopetetaan omalla PID:llä. [R-12.10] [R-12.13] [R-12.15]
-12. Päivällä yksi ajo kerrallaan; estävä portti päästää kuva-ajon vain viitteellä (kesken oleva koodi tai omistajan päätös). Tarkistukset yöhön. [P-261115-kaistat] [P-261116-14] [P-261117-62] [P-261117-63]
+12. Ajot kuten testit 14; estävä portti päästää kuva-ajon vain viitteellä (kesken oleva koodi tai omistajan päätös). Tarkistukset yöhön. [P-261115-kaistat] [P-261116-14] [P-261117-62] [P-261117-63]
 
 EI VIKA:
 - Vain iPadilla näkyvä vika löytyy vasta koeversion tarkistuksessa.
