@@ -15,6 +15,7 @@ SÄÄNNÖT:
 10. Offline-kartat ladataan maanosittain tai kaikki, ei maittain: Z8 koko maailmasta, Z9 kaupunkien ympäriltä. [R-2.197] [R-6.12]
 11. Latauskuva vain 3D-maailmoihin; se täyttää ruudun myös kierron jälkeen, liike on vähäeleinen, ja kuumailmapallo heiluu selvästi. Muualla väistämätön lataus näkyy pienenä palkkina todellisesta edistymisestä, ja näkymä aukeaa vasta valmiina. [R-4.27] [R-4.7] [R-2.82]
 12. Esirenderöity video ladataan kokonaan ennen omaa kohtaustaan. [R-4.21]
+13. Kohdekaupungit lasketaan etukäteen mahdollisimman valmiiksi, ensin Pariisi; muita kaupunkeja ei lasketa valmiiksi. [P-261120-6]
 
 EI VIKA:
 - Mobiiliverkossa ladataan yhtä paljon kuin Wi-Fillä.

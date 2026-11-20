@@ -37,7 +37,7 @@ Aiheita 54 / 60. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | mallit-ja-3d | Mallit ja 3D | LAV | 2.7 kt | 12.11.2026 |
 | valo-ja-materiaalit | Valo ja materiaalit | VS | 3.0 kt | 17.11.2026 |
 | suorituskyky-ja-muisti | Suorituskyky ja muisti | NS | 2.9 kt | 12.11.2026 |
-| lataus-ja-kaynnistys | Lataus ja käynnistys | NS | 2.8 kt | 12.11.2026 |
+| lataus-ja-kaynnistys | Lataus ja käynnistys | NS | 2.9 kt | 12.11.2026 |
 | media-ja-ampari | Media ja ämpäri | JU | 2.9 kt | 12.11.2026 |
 | arkkitehtuuri-ja-kirjastot | Arkkitehtuuri ja kirjastot | NS | 2.4 kt | 12.11.2026 |
 | lisenssit-ja-lataukset | Lisenssit ja lataukset | PT | 3.0 kt | 14.11.2026 |
@@ -57,4 +57,4 @@ Aiheita 54 / 60. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | latausruutu | Latausruutu | NUI | 1.2 kt | 18.11.2026 |
 | kaupungin-pohja | Kaupungin pohja | KS | 0.9 kt | 18.11.2026 |
 | pallo-google-versio | Pallon Google-versio | KS | 0.7 kt | 18.11.2026 |
-| noston-kuvat | Noston kuvat | NUI | 1.0 kt | 18.11.2026 |
+| noston-kuvat | Noston kuvat | NUI | 1.3 kt | 20.11.2026 |
