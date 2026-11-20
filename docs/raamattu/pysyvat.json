@@ -377,6 +377,16 @@
      "toisto": false,
      "korvattu": null,
      "kirjattu": "2026-11-17T12:55:07.669Z"
+    },
+    {
+     "pvm": "20.11.2026",
+     "klo": "08.20",
+     "lahde": "P-261120-4",
+     "sanat": "sinun täytyy pitää huoli että koneajot suunnitellaan fiksusti niin että ajoja yhdistään ja pelkät tarkistusajot siirretään yölle. mutta jos koodin kehitys edellyttää ajoa niin se ajetaan päivällä. minulle ei tarvitse näyttää ennen kuvia, vain uudet versiot. uusia versioita julkaistaan vain minun pyynnöstäni. sessioille pitää antaa selkeät ohjeet ja tavoite, jotta ne eivät palauta sinulle keskeneräistä.",
+     "sha": "a3613a938f129250",
+     "toisto": true,
+     "korvattu": null,
+     "kirjattu": "2026-11-20T06:20:41.783Z"
     }
    ],
    "muutokset": []
