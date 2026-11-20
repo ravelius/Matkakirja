@@ -5,8 +5,8 @@ Kun malli skaalataan OSM-pohjan pituuteen, tornit venyvät: Mariankirkko 139 m (
 
 Pyyntö:
 1. Uusi mallikuva (HERO, 2–3 Commons-viitekuvaa) kummallekin, jossa LAIVAN KOKO PITUUS näkyy sivulta (pitkä sivu kokonaan kuvassa, viisto 3/4 sivulta käy, kunhan laiva ei lyhene perspektiivissä).
-   - Mariankirkko (Kraków, Q?): pohja OSM 88,5 × 40,3 m, korkeampi torni 81 m (Wikidata). Laivan pituus ≈ 2,2 × leveys; tornit länsipäässä.
-   - St Patrickin katedraali (Dublin): pohja OSM 90,3 × 46,3 m (risti), torni 43 m. Laiva + kuori ≈ 2 × leveys; torni luoteiskulmassa.
+   - Mariankirkko (Kraków, Q1143171): pohja OSM 88,5 × 40,3 m, korkeampi torni 81 m (Wikidata). Laivan pituus ≈ 2,2 × leveys; tornit länsipäässä.
+   - St Patrickin katedraali (Dublin, Q846365): pohja OSM 90,3 × 46,3 m (risti), torni 43 m. Laiva + kuori ≈ 2 × leveys; torni luoteiskulmassa.
    Nykyiset kuvat vertailuksi: hyvaksytyt-mallit/<tunniste>/tripo-preview.jpg (painunut muoto).
 2. Kuvat ensin KK:lle kuvasanaa varten (kuten erä 3: SHA256 + 1000 px kuva). Ei Tripo-ottoa ennen KK:n sanaa.
 3. Tripo kuten aiemmin (H3.1 HD, Ultra Mesh, 8K, Remove Lighting, PBR, 2M), yksi otto kustakin hyväksytystä SHA:sta. Lupa: P-261117-2 (Tripo rajattomasti, ei ostoja).
