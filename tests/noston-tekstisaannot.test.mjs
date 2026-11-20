@@ -19,7 +19,9 @@ const ERA_2_B = ['hahmotelma-grand-chatelet', 'hahmotelma-temple-torni', 'hahmot
 const ERA_2_D = ['d:Bizet 1875', 'd:Kirahvi 1827', 'd:Bukinistit 1859', 'd:Patonki 1994', 'd:Vrain-Lucas', 'd:Monet 1874', 'd:Piiritys 1870',
   'd:Notre-Dame 2019', 'd:Piaf ja Django'];
 const ERA_12 = [...ERA_1, ...ERA_2_B];
-const KAIKKI_ERAT = [...ERA_12, ...ERA_2_D];
+const ERA_3 = ['Riemukaari', 'Concorden aukio', 'Luxembourgin puisto', 'Sacré-Cœur', 'Panthéon', 'Notre-Dame', 'Tour Saint-Jacques', 'Saint-Eustache',
+  'Pompidou-keskus', 'Place des Vosges', 'Invalidit', 'Petit Palais', 'Tour Montparnasse', 'Metro 1900'].map((n) => `c:${n}`);
+const KAIKKI_ERAT = [...ERA_12, ...ERA_2_D, ...ERA_3];
 
 const NOSTOT = await keraaPariisinNostot();
 const { FOKUSKOHTEET_FRA } = await import('../js/packs/fokuskohteet-fra.js');
@@ -169,4 +171,34 @@ test('erä 2 B (KK 20.11.2026 klo 10.44): neljällä kadonneella yksi koti: hahm
     ['Trocadéron palatsi', 'hahmotelma-trocadero'], ['Galerie des Machines', 'hahmotelma-galerie-des-machines']]) {
     assert.ok(lahde.includes(`nimi: '${nimi}'`) && lahde.includes(`nosto: '${id}'`), `${nimi}: kartan pisteen pitää viitata hahmotelmaan ${id}`);
   }
+});
+
+test('erä 3 (L5-5, 14 nähtävyysjuttua): kolme kappaletta, 700–1 000 merkkiä, vuosirivejä 3–6, kuva kappaleella 1, ei isoisää, visan vastaus tekstissä', async () => {
+  const { NAHTAVYYSJUTUT } = await import('../js/packs/nahtavyysjutut.js');
+  const { FOKUSVIRRAT } = await import('../js/packs/fokusvirrat.js');
+  const nj = NAHTAVYYSJUTUT.pariisi;
+  const virheet = [];
+  assert.equal(ERA_3.length, 14);
+  for (const id of ERA_3) {
+    const nimi = id.slice(2);
+    const j = nj[nimi];
+    const k = j.teksti.split('\n\n');
+    if (k.length !== 3) virheet.push(`${nimi}: ${k.length} kappaletta`);
+    const m = merkkeja(j.teksti);
+    if (m < 700 || m > PITUUS_MAX) virheet.push(`${nimi}: ${m} merkkiä`);
+    const rivit = (j.vuodet ?? []).length;
+    // Metro 1900: lähteissä ja tekstissä vain kaksi vuotta (1900, 1978): ei keksittyjä rivejä.
+    if (rivit < (nimi === 'Metro 1900' ? 2 : 3) || rivit > 6) virheet.push(`${nimi}: ${rivit} vuosiriviä`);
+    // Jokaisen rivin kohta-teksti löytyy tekstistä.
+    for (const v of j.vuodet ?? []) if (!j.teksti.includes(v.kohta)) virheet.push(`${nimi}: rivin kohta "${v.kohta}" ei ole tekstissä`);
+    if (/isoisä/i.test(JSON.stringify(j))) virheet.push(`${nimi}: isoisä pelaajalle näkyvässä kentässä`);
+    // M5: jutulla on kuva (kappaleella 1 avauskappaleen jälkeen); Pompidou-keskuksella ei ole vielä kuvaa (K-4 erä 3).
+    if (nimi !== 'Pompidou-keskus' && !(j.kuvat ?? []).length) virheet.push(`${nimi}: ei kuvaa`);
+  }
+  assert.deepEqual(virheet, []);
+  // M6: Metro 1900 on myös takynosto (sama teksti kahdessa paikassa) ja sen visan vastaus kuuluu tekstissä.
+  const metro = FOKUSVIRRAT.pariisi.takynostot.find((x) => x.id === 'guimardin-metro');
+  assert.equal(metro.lunastus.join('\n\n'), nj['Metro 1900'].teksti, 'Metron kaksi tekstiä eroavat');
+  assert.ok(metro.lunastus.join(' ').includes('meni pois muodista'), 'Guimard-visan vastaus ei ole tekstissä');
+  assert.ok(!/isoisä/i.test(JSON.stringify(metro)), 'isoisä Metron takynostossa');
 });

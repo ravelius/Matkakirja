@@ -19,6 +19,10 @@
  * aihe kantaa sen. Hyvät lainaukset (Reagan, Reuter, Vrubel) säilyvät.
  */
 
+import { FOKUSVIRTA_PARIISI } from './fokusvirta-pariisi.js';
+
+const METRO_NOSTO = FOKUSVIRTA_PARIISI.takynostot.find((n) => n.id === 'guimardin-metro');
+
 export const NAHTAVYYSJUTUT = {
   firenze: {
     Duomo: {
@@ -5371,35 +5375,24 @@ export const NAHTAVYYSJUTUT = {
   pariisi: {
     Riemukaari: {
       aika: '1806–1836',
-      teksti: 'Keisari Napoleon käski rakentaa valtavan riemukaaren '
-          + 'vuonna 1806 juhlistamaan Austerlitzin taistelun voittoa. '
-          + 'Kaari on lähes 50 metriä korkea, ja sen pintoihin on '
-          + 'kaiverrettu 158 taistelun ja 660 sotapäällikön nimet. '
-          + 'Napoleon ei koskaan nähnyt valmista kaarta, sillä se '
-          + 'saatiin valmiiksi vasta vuonna 1836.'
+      teksti: 'Pariisin Riemukaari on lähes 50 metriä korkea voitonmerkki, jonka keisari Napoleon ei koskaan nähnyt valmiina. Hän käski rakentaa sen vuonna 1806 juhlistamaan Austerlitzin taistelun voittoa, mutta kaari saatiin valmiiksi vasta vuonna 1836. Sen pintoihin on kaiverrettu yli sadan taistelun ja satojen sotapäälliköiden nimet.'
         + '\n\n'
-        + 'Kaaren alla lepää Tuntemattoman sotilaan hauta, jonne '
-          + 'tuotiin 11. marraskuuta 1920 nimetön ranskalaissotilas muistoksi '
-          + 'kaikista sodissa kadonneista ja haudattiin 28. tammikuuta 1921. '
-          + 'Haudalla palaa ikuinen '
-          + 'liekki, joka sytytetään uudelleen joka ilta.'
+        + 'Vuonna 1919 lentäjä Charles Godefroy lensi kaksitasokoneellaan kaaren läpi. Temppu oli uskomaton, sillä aukko on vain reilut 14 metriä leveä. Reilua vuotta myöhemmin kaaren alle haudattiin nimetön ranskalaissotilas muistoksi sodassa kaatuneista: hänet tuotiin sinne 11. marraskuuta 1920 ja haudattiin 28. tammikuuta 1921.'
         + '\n\n'
-        + 'Vuonna 1919 lentäjä Charles Godefroy lensi '
-          + 'kaksitasokoneellaan kaaren läpi — uskomaton temppu, sillä '
-          + 'aukko on vain reilut 14 metriä leveä.',
+        + 'Tuntemattoman sotilaan haudalla palaa ikuinen liekki, joka sytytetään uudelleen joka ilta.',
       vuodet: [
         { kohta: 'vuonna 1806', vuosi: '1806', selite: 'Napoleonin käsky' },
         { kohta: 'vasta vuonna 1836', vuosi: '1836', selite: 'valmistui' },
+        { kohta: 'Vuonna 1919', vuosi: '1919', selite: 'lento kaaren läpi' },
         { kohta: 'marraskuuta 1920', vuosi: '1920', selite: 'sotilas tuotiin' },
         { kohta: 'tammikuuta 1921', vuosi: '1921', selite: 'haudattiin' },
-        { kohta: 'Vuonna 1919', vuosi: '1919', selite: 'lento kaaren läpi' },
       ],
       kuvat: [
         {
           tiedosto: 'Arc de Triomphe, Paris 21 October 2010.jpg',
-          lyhyt: 'Napoleonin 1806 määräämä Riemukaari valmistui vasta 1836, kaiverrettuna 158 taistelun nimet.',
+          lyhyt: 'Napoleonin 1806 määräämä Riemukaari valmistui vasta 1836, kaiverrettuna yli sadan taistelun nimet.',
           selite: 'Napoleonin vuonna 1806 määräämä kaari valmistui vasta 1836, ja '
-            + 'sen pintoihin on kaiverrettu 158 taistelun ja 660 sotapäällikön '
+            + 'sen pintoihin on kaiverrettu yli sadan taistelun ja satojen sotapäälliköiden '
             + 'nimet.',
           lahde: 'Jiuguang Wang, Wikimedia Commons (CC BY-SA 2.0)',
         },
@@ -5408,25 +5401,14 @@ export const NAHTAVYYSJUTUT = {
     },
     'Concorden aukio': {
       aika: '1757–1772',
-      teksti: 'Arkkitehti Ange-Jacques Gabriel suunnitteli Pariisin '
-          + 'suurimman aukion 1700-luvulla kuningas Ludvig XV:n '
-          + 'kunniaksi. Vallankumouksen aikana aukiolle pystytettiin '
-          + 'giljotiini, ja siellä mestattiin muun muassa kuningas '
-          + 'Ludvig XVI ja kuningatar Marie Antoinette. Kaikkiaan '
-          + 'aukiolla teloitettiin yli tuhat ihmistä reilun vuoden '
-          + 'aikana.'
+      teksti: 'Concorden aukio on Pariisin suurin aukio, ja siellä mestattiin kuningas. Arkkitehti Ange-Jacques Gabriel suunnitteli sen 1700-luvulla kuningas Ludvig XV:n kunniaksi.'
         + '\n\n'
-        + 'Aukion keskellä kohoaa 23-metrinen, yli 3 300 vuotta vanha '
-          + 'Luxorin obeliski, jonka Egyptin hallitsija lahjoitti '
-          + 'Ranskalle marraskuussa 1830. Kivijättiläinen tuotiin laivalla '
-          + 'Niililtä asti ja pystytettiin aukiolle vuonna 1836 '
-          + 'valtavan väkijoukon seuratessa.'
+        + 'Vallankumouksen aikana aukiolle pystytettiin giljotiini. Vuonna 1793 siellä mestattiin kuningas Ludvig XVI, ja samana vuonna myös kuningatar Marie Antoinette. Kaikkiaan aukiolla teloitettiin yli tuhat ihmistä.'
         + '\n\n'
-        + 'Nykyään aukiolla poreilevat komeat suihkulähteet ja sitä '
-          + 'reunustavat kahdeksan naispatsasta, jotka kuvaavat Ranskan '
-          + 'suurkaupunkeja.',
+        + 'Vuonna 1830 Egyptin hallitsija lahjoitti Ranskalle 3 300 vuotta vanhan Luxorin obeliskin. Kivijättiläinen tuotiin laivalla Niililtä asti ja pystytettiin aukiolle vuonna 1836 valtavan väkijoukon seuratessa. Nykyään 23-metrisen obeliskin ympärillä poreilevat suihkulähteet, ja aukiota reunustavat naispatsaat, jotka kuvaavat Ranskan suurkaupunkeja.',
       vuodet: [
-        { kohta: 'marraskuussa 1830', vuosi: '1830', selite: 'obeliski lahjaksi' },
+        { kohta: 'Vuonna 1793', vuosi: '1793', selite: 'kuninkaan mestaus' },
+        { kohta: 'Vuonna 1830', vuosi: '1830', selite: 'obeliski lahjaksi' },
         { kohta: 'vuonna 1836', vuosi: '1836', selite: 'obeliski pystyyn' },
       ],
       kuvat: [
@@ -5444,37 +5426,15 @@ export const NAHTAVYYSJUTUT = {
     // Louvre-nähtävyysjuttu poistettu 17.11.2026: merkistä avautuu yksi nosto (fokuskohde `louvre`, js/packs/fokuskohteet-fra.js).
     'Luxembourgin puisto': {
       aika: '1612',
-      teksti: 'Kun kuningas Henrik IV murhattiin 1610, hänen leskensä Maria '
-          + 'de’ Medici jäi hallitsemaan Ranskaa poikansa puolesta — eikä '
-          + 'viihtynyt Louvressa. Hän osti vuonna 1612 Luxembourgin '
-          + 'kartanon ja rakennutti sen viereen palatsin, joka jäljitteli '
-          + 'hänen kotikaupunkinsa Firenzen Palazzo Pittiä. Puistoon '
-          + 'istutettiin 2 000 jalavaa, ja firenzeläinen '
-          + 'suihkulähdemestari Tommaso Francini muotoili maisemasta '
-          + 'sellaisen, jollaisen kuningatar oli lapsena tuntenut.'
+      teksti: 'Luxembourgin puiston loi Pariisiin kuningatar, joka kaipasi omaa palatsia. Kun kuningas Henrik IV murhattiin vuonna 1610, hänen leskensä Maria de’ Medici jäi hallitsemaan Ranskaa poikansa puolesta. Hän osti vuonna 1612 Luxembourgin kartanon ja rakennutti sen viereen palatsin, jonka esikuvana oli hänen kotikaupunkinsa Firenzen Palazzo Pitti.'
         + '\n\n'
-        + 'Puisto on kasvanut ja kutistunut vallanpitäjien mukana. Alun '
-          + 'kahdeksasta hehtaarista se laajeni kolmeenkymmeneen 1630-'
-          + 'luvulla ja vallankumouksen jälkeen neljäänkymmeneen, kun '
-          + 'naapuriluostarin maat takavarikoitiin. Napoleon III:n '
-          + 'katutyöt veivät 1860-luvulla noin seitsemän hehtaaria, ja '
-          + 'Medici-suihkulähde jouduttiin purkamaan ja kokoamaan '
-          + 'uudelleen toiseen paikkaan. Nykyään puiston omistaa senaatti, '
-          + 'joka kokoontuu palatsissa.'
+        + 'Puistoon istutettiin jalavia, ja muotoilussa oli mukana firenzeläinen suihkulähdemestari Tommaso Francini. Puisto on kasvanut ja kutistunut vallanpitäjien mukana: Napoleon III:n katutyöt veivät 1860-luvulla osan siitä.'
         + '\n\n'
-        + 'Pariisilaiset sanovat puistoa lyhyesti Lucoksi. '
-          + 'Kahdeksankulmaisella altaalla lapset uittavat purjeveneitä, '
-          + 'nukketeatteri on toiminut puistossa vuodesta 1933, ja '
-          + 'patsaita on toista sataa — niiden joukossa kaksikymmentä '
-          + 'Ranskan kuningatarta ja jäljennös Bartholdin pienoismallista '
-          + 'Vapaudenpatsaasta (alkuperäinen siirrettiin Musée d\'Orsayhin '
-          + '2012). Victor Hugo pani Kurjissa Mariuksen ja '
-          + 'Cosetten kohtaamaan juuri täällä.',
+        + 'Nykyinen nukketeatteri on toiminut puistossa vuodesta 1933, ja kahdeksankulmaisella altaalla lapset uittavat purjeveneitä. Patsaita on toista sataa, muiden muassa kaksikymmentä kuningatarta ja merkkinaista. Palatsissa kokoontuu nykyään senaatti.',
       vuodet: [
-        { kohta: 'murhattiin 1610', vuosi: '1610', selite: 'Henrik IV murhattiin' },
+        { kohta: 'vuonna 1610', vuosi: '1610', selite: 'Henrik IV murhattiin' },
         { kohta: 'vuonna 1612', vuosi: '1612', selite: 'kartano ostettiin' },
         { kohta: 'vuodesta 1933', vuosi: '1933', selite: 'nukketeatteri alkoi' },
-        { kohta: '2012', vuosi: '2012', selite: 'patsas Orsayhin' },
       ],
       kuvat: [
         {
@@ -5489,8 +5449,7 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'Albert Edelfelt - The Luxembourg Gardens, Paris.jpg',
           lyhyt: 'Albert Edelfelt maalasi puiston 1887 sen jälkeen kun katutyöt olivat vieneet siltä osan alasta.',
           selite: 'Albert Edelfelt maalasi puiston vuonna 1887, pian sen jälkeen '
-            + 'kun Napoleon III:n katutyöt olivat vieneet siltä noin seitsemän '
-            + 'hehtaaria.',
+            + 'kun Napoleon III:n katutyöt olivat vieneet siltä osan alasta.',
           lahde: 'Albert Edelfelt, Wikimedia Commons (PD)',
         },
       ],
@@ -5498,33 +5457,25 @@ export const NAHTAVYYSJUTUT = {
     },
     'Sacré-Cœur': {
       aika: '1875–1914',
-      teksti: 'Basilika Sacré-Cœur eli Pyhän sydämen kirkko rakennettiin '
-          + 'Montmartren kukkulan huipulle sen jälkeen, kun Ranska oli '
-          + 'hävinnyt sodan Preussille vuonna 1870. Arkkitehti Paul '
-          + 'Abadie valittiin suunnittelijaksi peräti 77 ehdotuksen '
-          + 'joukosta, ja kirkko valmistui vasta 40 vuotta myöhemmin.'
+      teksti: 'Sacré-Cœur eli Pyhän sydämen basilika kohoaa Montmartren kukkulan huipulla. Ranska hävisi sodan Preussille vuosina 1870–1871, ja häviön jälkeen annettiin kansallinen lupaus rakentaa Jeesuksen sydämelle omistettu kirkko sovitukseksi. Kansalliskokous hyväksyi hankkeen vuonna 1873, ja Paul Abadie valittiin kirkon suunnittelijaksi lähes 80 ehdotuksen joukosta. Rakennustyöt alkoivat vuonna 1875, ja kirkko valmistui pääosin vuonna 1914 ja vihittiin käyttöön 1919.'
         + '\n\n'
-        + 'Kirkon ulkoseinät on tehty erikoisesta '
-          + 'travertiini-kalkkikivestä, joka valkenee sateella eikä '
-          + 'koskaan tummu — siksi kirkko hohtaa yhä valkoisena, vaikka '
-          + 'se on jo yli sata vuotta vanha. Sisällä kattoa koristaa '
-          + 'yksi maailman suurimmista mosaiikeista, joka on koottu 25 '
-          + '000 pienestä keraamisesta palasesta.'
+        + 'Ulkoseinät on tehty erikoisesta kalkkikivestä, joka valkenee sateella ja pysyy siksi valkoisena. Kirkko hohtaa yhä, vaikka se on jo yli sata vuotta vanha. Sisällä kattoa koristaa yksi maailman suurimmista mosaiikeista, jonka ala on noin 470 neliömetriä.'
         + '\n\n'
-        + 'Tornissa riippuu ”Savoyarde”, Ranskan suurin kello, joka '
-          + 'painaa lähes 19 tonnia. Kirkon huipulta, 200 metrin '
-          + 'korkeudesta Seine-joen yläpuolelta, avautuu näkymä koko '
-          + 'Pariisiin.',
+        + 'Tornissa riippuu ”Savoyarde”, Ranskan suurin kello, joka painaa lähes 19 tonnia. Kirkon huipulta avautuu näkymä koko Pariisiin.',
       vuodet: [
-        { kohta: 'vuonna 1870', vuosi: '1870', selite: 'sodan häviö' },
+        { kohta: 'vuosina 1870–1871', vuosi: '1870–1871', selite: 'sodan häviö' },
+        { kohta: 'vuonna 1873', vuosi: '1873', selite: 'hanke hyväksyttiin' },
+        { kohta: 'vuonna 1875', vuosi: '1875', selite: 'työ alkoi' },
+        { kohta: 'vuonna 1914', vuosi: '1914', selite: 'valmistui' },
+        { kohta: 'käyttöön 1919', vuosi: '1919', selite: 'vihittiin' },
       ],
       kuvat: [
         {
           tiedosto: 'Paris - Basilique du Sacré-Cœur de Montmartre - 2025-09-30 23-31-57 001.jpg',
-          lyhyt: 'Sacré-Cœur rakennettiin Montmartrelle hävityn sodan jälkeen, travertiini valkenee sateessa.',
+          lyhyt: 'Sacré-Cœur rakennettiin Montmartrelle hävityn sodan jälkeen, kalkkikivi valkenee sateessa.',
           selite: 'Kirkko rakennettiin Montmartren kukkulan huipulle Preussille '
-            + 'hävityn sodan jälkeen, ja sen travertiini valkenee sateella eikä '
-            + 'koskaan tummu.',
+            + 'hävityn sodan jälkeen, ja sen kalkkikivi valkenee sateella ja '
+            + 'pysyy siksi valkoisena.',
           lahde: 'Giò Terra, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -5532,38 +5483,15 @@ export const NAHTAVYYSJUTUT = {
     },
     Panthéon: {
       aika: '1758–1790',
-      teksti: 'Kuningas Ludvig XV sairastui vakavasti sotaretkellä 1744 ja '
-          + 'lupasi, että jos hän toipuu, Pariisin suojeluspyhimys '
-          + 'Geneviève saa rappeutuneen kirkkonsa tilalle uuden. Kuningas '
-          + 'toipui, ja Jacques-Germain Soufflot’n suunnitteleman kirkon '
-          + 'rakennustyöt alkoivat 1758. Rahapula venytti työtä '
-          + 'vuosikymmeniä: Soufflot kuoli 1780, ja hänen oppilaansa '
-          + 'Jean-Baptiste Rondelet sai rakennuksen valmiiksi vasta 1790. '
-          + 'Kumpikaan, ei kuningas eikä arkkitehti, ehtinyt nähdä sitä.'
+      teksti: 'Panthéon on Pariisin kirkko, josta tuli suurmiesten hautapaikka. Kuningas Ludvig XV sairastui vakavasti sotaretkellä ja lupasi, että jos hän toipuu, Pariisin suojeluspyhimys Geneviève saa uuden kirkon. Kuningas toipui, ja Soufflot’n suunnitteleman kirkon rakennustyöt alkoivat 1750-luvulla.'
         + '\n\n'
-        + 'Kirkko valmistui juuri kun vallankumous oli alkanut, ja 1791 '
-          + 'kansalliskokous määräsi sen suurmiesten hautapaikaksi. '
-          + 'Ensimmäisenä kryptaan kannettiin kreivi Mirabeau — ja '
-          + 'muutamaa kuukautta myöhemmin hänet kannettiin ulos, kun '
-          + 'hänen salaiset yhteytensä hoviin paljastuivat. Voltairen '
-          + 'tuhkat tuotiin heinäkuussa 1791. Jotta sisätila tuntuisi '
-          + 'hautaholvilta eikä kirkolta, arkkitehti Quatremère de Quincy '
-          + 'muurasi umpeen 38 rakennuksen 42 ikkunasta — valoisaksi '
-          + 'suunniteltu sali muuttui hämäräksi.'
+        + 'Työ kesti yli kolmekymmentä vuotta: Soufflot kuoli, ja hänen oppilaansa Jean-Baptiste Rondelet sai kirkon valmiiksi vasta 1790. Vuonna 1791 kansalliskokous määräsi kirkon suurmiesten hautapaikaksi. Ensimmäisenä kryptaan kannettiin kreivi Mirabeau, mutta vuonna 1794 hänet kannettiin ulos, kun hänen salaiset yhteytensä hoviin paljastuivat.'
         + '\n\n'
-        + 'Vuonna 1851 fyysikko Léon Foucault ripusti kupolista 67 metriä '
-          + 'pitkän heilurin ja näytti yleisölle, ettei heilahdustaso '
-          + 'käänny vaan maa kääntyy sen alla. Kirkon vaatimuksesta laite '
-          + 'purettiin jo saman vuoden joulukuussa, mutta kopio heiluu '
-          + 'holvin alla edelleen. Kryptassa lepäävät muiden muassa '
-          + 'Voltaire, Rousseau, Victor Hugo, Émile Zola ja pistekirjoituksen '
-          + 'keksijä Louis Braille; Marie Curie siirrettiin sinne 1995 '
-          + 'ensimmäisenä naisena omien ansioidensa perusteella.',
+        + 'Vuonna 1851 fyysikko Léon Foucault ripusti kupolista 67 metriä pitkän heilurin ja näytti, että maa kääntyy sen alla. Heiluri poistettiin jo samana vuonna, mutta kopio heiluu holvin alla yhä. Kryptassa lepäävät muiden muassa Voltaire ja Victor Hugo, ja Marie Curie siirrettiin sinne 1995 ensimmäisenä naisena omien ansioidensa perusteella.',
       vuodet: [
-        { kohta: 'sotaretkellä 1744', vuosi: '1744', selite: 'kuningas sairastui' },
-        { kohta: 'kuoli 1780', vuosi: '1780', selite: 'Soufflot kuoli' },
         { kohta: 'vasta 1790', vuosi: '1790', selite: 'valmistui' },
-        { kohta: '1791 kansalliskokous', vuosi: '1791', selite: 'suurmiesten hauta' },
+        { kohta: 'Vuonna 1791', vuosi: '1791', selite: 'suurmiesten hauta' },
+        { kohta: 'vuonna 1794', vuosi: '1794', selite: 'Mirabeau ulos' },
         { kohta: 'Vuonna 1851', vuosi: '1851', selite: 'Foucaultin heiluri' },
         { kohta: 'sinne 1995', vuosi: '1995', selite: 'Curie siirrettiin' },
       ],
@@ -5595,39 +5523,32 @@ export const NAHTAVYYSJUTUT = {
     },
     'Notre-Dame': {
       aika: '1163–1345',
-      teksti: 'Notre-Damen katedraalin rakentaminen kesti uskomattomat '
-          + '182 vuotta — työ alkoi vuonna 1163 ja valmistui vasta '
-          + '1345. Kirkko oli aikansa insinööritaidon huippu: sen '
-          + 'kivikattoa kannattelevat ulkopuoliset tukikaaret, niin '
-          + 'sanotut lentävät tukipilarit, jotka keksittiin juuri '
-          + 'tällaisia jättimäisiä kirkkoja varten.'
+      teksti: 'Notre-Damen katedraalin rakentaminen alkoi vuonna 1163, ja sen valmistuminen kesti yli sata vuotta. Kirkko oli aikansa insinööritaidon huippu, sillä sen kivikattoa kannattelevat ulkopuoliset tukikaaret, niin sanotut lentävät tukipilarit.'
         + '\n\n'
-        + 'Katedraalissa on tapahtunut historian suuria hetkiä: '
-          + 'vuonna 1804 Napoleon kruunasi itsensä keisariksi kirkon '
-          + 'alttarilla, ja vuonna 1944 kenraali de Gaulle kiitti '
-          + 'Jumalaa Pariisin vapautumisesta samassa kirkossa.'
+        + 'Katedraalissa on tapahtunut historian suuria hetkiä: vuonna 1804 Napoleon kruunasi itsensä keisariksi kirkon alttarilla, ja vuonna 1944 kenraali de Gaulle osallistui samassa kirkossa Pariisin vapautumisen kiitosjumalanpalvelukseen.'
         + '\n\n'
-        + 'Huhtikuussa 2019 katedraalin vintillä syttyi tulipalo, '
-          + 'joka tuhosi vanhan puukaton ja tornihuipun. Palomiehet '
-          + 'onnistuivat kuitenkin pelastamaan tornit, julkisivun ja '
-          + 'lasimaalaukset. Katedraali korjattiin ennätysajassa, ja se '
-          + 'avattiin yleisölle uudelleen joulukuussa 2024.',
+        + 'Huhtikuussa 2019 katedraalin vintillä syttyi tulipalo, joka tuhosi vanhan puukaton ja tornihuipun. Palomiehet onnistuivat kuitenkin pelastamaan tornit ja julkisivun, ja ruusuikkunatkin säilyivät. Katedraali avattiin yleisölle uudelleen joulukuussa 2024, alle kuusi vuotta palon jälkeen.',
       vuodet: [
         { kohta: 'vuonna 1163', vuosi: '1163', selite: 'rakennus alkoi' },
-        { kohta: 'vasta 1345', vuosi: '1345', selite: 'valmistui' },
         { kohta: 'vuonna 1804', vuosi: '1804', selite: 'Napoleonin kruunaus' },
         { kohta: 'vuonna 1944', vuosi: '1944', selite: 'de Gaulle kiitti' },
         { kohta: 'Huhtikuussa 2019', vuosi: '2019', selite: 'tulipalo' },
         { kohta: 'joulukuussa 2024', vuosi: '2024', selite: 'avattiin uudelleen' },
       ],
       kuvat: [
+        // K-4 erä 2: sama aito nykykuva kuin Notre-Dame 2019 -noston viimeinen (ei kaksoiskuvaa nostolle, jonka kohdekartta linkittää tähän juttuun).
         {
-          tiedosto: 'Notre-Dame de Paris, 4 October 2017.jpg',
-          lyhyt: 'Notre-Damen rakentaminen kesti 182 vuotta, ja 2019 tulipalon jälkeen se avattiin uudelleen 2024.',
-          selite: 'Katedraalin rakentaminen kesti 182 vuotta, ja huhtikuun 2019 '
-            + 'tulipalon jälkeen se korjattiin ennätysajassa ja avattiin '
+          osoite: 'https://media.matkakirja.app/kuvat/notre-dame-2019-nyt.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Notre-Damen länsijulkisivu maaliskuussa 2025',
+          selite: 'Katedraalin rakentaminen kesti yli sata vuotta, ja huhtikuun 2019 '
+            + 'tulipalon jälkeen se korjattiin alle kuudessa vuodessa ja avattiin '
             + 'uudelleen joulukuussa 2024.',
-          lahde: 'Ali Sabbagh, Wikimedia Commons (CC0)',
+          lahde: 'Chabe01, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+          tekija: 'Chabe01',
+          lisenssi: 'CC BY-SA 4.0',
+          leveys: 1200,
+          korkeus: 800,
         },
       ],
       lahde: 'Wikipedia',
@@ -5671,12 +5592,17 @@ export const NAHTAVYYSJUTUT = {
       ],
       kuvat: [
         {
-          tiedosto: 'Musee d\'Orsay and Pont Royal, North-West view 140402 1.jpg',
+          osoite: 'https://media.matkakirja.app/kuvat/palais-orsay-museo.jpg',
+          laji: 'valokuva',
+          tekija: 'Gordon Gartrell',
+          lisenssi: 'CC BY-SA 2.0',
+          leveys: 1200,
+          korkeus: 800,
           lyhyt: 'Gare d\'Orsay valmistui rautatieasemaksi 1900, kaukoliikenne loppui 1939 ja se avattiin museona 1986.',
           selite: 'Victor Laloux\'n Gare d\'Orsay valmistui rautatieasemaksi vuoden '
             + '1900 maailmannäyttelyyn, kaukoliikenne loppui jo 1939 ja se avattiin museona '
             + 'joulukuussa 1986.',
-          lahde: 'DXR, Wikimedia Commons (CC BY-SA 3.0)',
+          lahde: 'Gordon Gartrell, Wikimedia Commons (CC BY-SA 2.0), rajattu',
         },
       ],
       lahde: 'Wikipedia ja Ranskan kulttuuriministeriön muistomerkkirekisteri (POP)',
@@ -5685,29 +5611,15 @@ export const NAHTAVYYSJUTUT = {
     // Tekstit sanatarkasti SK:n korjatuista korteista (KK 13.53 ja 22.03, PR 6712/6728/6729; Pompidou ilman kuvaa, KK 21.59): docs/raportit/kohdekortit-pariisi-vaikeampi-20261113.md (lähteet siellä).
     'Tour Saint-Jacques': {
       aika: '1509–1523',
-      teksti: 'Tour Saint-Jacques rakennettiin 1509–1523, ja se on ainoa jäljelle '
-          + 'jäänyt osa keskiaikaisesta Saint-Jacques-de-la-Boucherien kirkosta. '
-          + 'Kirkko seisoi Grande Boucherien, Pariisin teurastajien kaupunginosan, '
-          + 'keskellä. '
-          + 'Tornin juurelta alkaa yhä Via Turonensis, yksi Santiago de '
-          + 'Compostelaan vievistä pyhiinvaellusreiteistä.'
+      teksti: 'Tour Saint-Jacques on Pariisin keskustassa seisova kellotorni, joka on ainoa jäljellä oleva osa kirkosta. Torni rakennettiin 1509–1523 keskiaikaisen Saint-Jacques-de-la-Boucherien kirkon kellotorniksi Grande Boucherien, Pariisin teurastajien kaupunginosan, keskelle.'
         + '\n\n'
-        + 'Vallankumouksen vuosina kirkko myytiin louhokseksi, ja sen kivet '
-          + 'kelpasivat rakennusaineeksi. Kellotorni säästyi: kaupan ehtona '
-          + 'kerrotaan olleen, ettei tornia saa purkaa. Vuonna 1836 Pariisin kaupunki osti '
-          + 'tornin, ja 1850-luvulla sen ympärille tehtiin '
-          + 'puisto, kun Haussmannin työt avasivat Rue de Rivolin ja Boulevard '
-          + 'de Sébastopolin juuri tornin eteen.'
+        + '1790-luvun vallankumouksessa kirkko myytiin louhokseksi, ja sen kivet kelpasivat rakennusaineeksi. Kellotorni säästyi: kaupan ehtona kerrotaan olleen, ettei tornia saa purkaa. Huipulla seisonut pyhä Jaakob tuhoutui, ja nykyinen patsas on tehty 1800-luvulla. Vuonna 1836 Pariisin kaupunki osti tornin, ja 1850-luvulla sen ympärille tehtiin puisto, kun Haussmannin työt avasivat Rue de Rivolin tornin eteen.'
         + '\n\n'
-        + 'Huipulla seisoo pyhä Jaakob pyhiinvaeltajana. Alkuperäinen patsas '
-          + 'syöstiin alas vallankumouksen aikana, ja nykyinen on 1800-luvun '
-          + 'jäljennös. Tornin juurella on Blaise Pascalin patsas, koska hänen '
-          + 'sanotaan tehneen tornissa ilmanpainekokeita — tosin historioitsijat '
-          + 'ovat tästä eri mieltä. Sääasema perustettiin torniin vasta 1891.',
+        + 'Torniin perustettiin sääasema vuonna 1891. Tornin juurella on Blaise Pascalin patsas, koska hänen kerrotaan tehneen tornissa ilmanpainekokeita, vaikka asiasta kiistellään. Tornin juurelta alkaa yhä Via Turonensis, yksi Santiago de Compostelaan vievistä pyhiinvaellusreiteistä.',
       vuodet: [
         { kohta: '1509–1523', vuosi: '1509–1523', selite: 'rakennettiin' },
         { kohta: 'Vuonna 1836', vuosi: '1836', selite: 'kaupunki osti' },
-        { kohta: 'vasta 1891', vuosi: '1891', selite: 'sääasema' },
+        { kohta: 'vuonna 1891', vuosi: '1891', selite: 'sääasema' },
       ],
       kuvat: [
         {
@@ -5721,31 +5633,17 @@ export const NAHTAVYYSJUTUT = {
     },
     'Saint-Eustache': {
       aika: '1532–1637',
-      teksti: 'Saint-Eustachea alettiin rakentaa vuonna 1532, ja kirkko vihittiin '
-          + 'vuonna 1637. Länsijulkisivu on myöhempi: sitä alettiin rakentaa '
-          + 'uudelleen vuonna 1754.'
+      teksti: 'Saint-Eustache on Pariisin kirkko, jonka rakenne on goottilaista mutta koristeet renessanssia. Paikalla oli 1200-luvun alussa rakennettu vaatimaton kappeli. Uutta kirkkoa alettiin rakentaa vuonna 1532, ja se vihittiin vuonna 1637, yli sata vuotta myöhemmin.'
         + '\n\n'
-        + 'Kirkko seisoo Les Hallesin, Pariisin entisen ruokatorin, vieressä; '
-          + 'tori siirrettiin Rungisiin vuonna 1969. '
-          + 'Kirkon paikalla oli ennen vaatimaton kappeli vuodelta 1213, mutta '
-          + 'seurakunta kasvoi ja kappeli kävi pieneksi. Rakentaminen kesti yli '
-          + 'sata vuotta, ja tulos on sekoitus: rakenne on goottilaista, koristeet '
-          + 'renessanssia.'
+        + 'Kirkossa on kastettu Richelieu ja Molière, ja nuori Ludvig XIV kävi siellä ensimmäisellä ehtoollisellaan 1649. Länsijulkisivua alettiin rakentaa uudelleen vuonna 1754, mutta uusi julkisivu jäi kesken. 1790-luvun vallankumouksessa kirkko suljettiin ja siitä tehtiin Maanviljelyksen temppeli.'
         + '\n\n'
-        + 'Julkisivun uusimiseen johti Colbert, seurakuntalainen, joka hoiti '
-          + 'kirkon raha-asioita ja josta tuli myöhemmin Ludvig XIV:n ministeri: '
-          + 'hän rakennutti tornien alle kaksi kappelia, ja julkisivu '
-          + 'heikkeni niin, että se piti purkaa. Uusi julkisivu jäi kesken. '
-          + 'Täällä on kastettu Richelieu ja Molière, ja nuori Ludvig XIV kävi '
-          + 'täällä ensimmäisellä ehtoollisellaan 1649. '
-          + 'Vallankumouksessa kirkko suljettiin ja siitä tehtiin Maanviljelyksen '
-          + 'temppeli. Arkkitehti Victor Baltard johti sen korjausta 1800-luvun puolivälissä.',
+        + 'Arkkitehti Victor Baltard johti kirkon korjausta 1800-luvun puolivälissä. Kirkko seisoo Les Hallesin, Pariisin entisen ruokatorin, vieressä: tori siirrettiin Rungisiin vuonna 1969.',
       vuodet: [
         { kohta: 'vuonna 1532', vuosi: '1532', selite: 'rakennus alkoi' },
         { kohta: 'vuonna 1637', vuosi: '1637', selite: 'vihittiin' },
+        { kohta: 'ehtoollisellaan 1649', vuosi: '1649', selite: 'Ludvigin ehtoollinen' },
         { kohta: 'vuonna 1754', vuosi: '1754', selite: 'julkisivutyö alkoi' },
         { kohta: 'vuonna 1969', vuosi: '1969', selite: 'tori Rungisiin' },
-        { kohta: 'vuodelta 1213', vuosi: '1213', selite: 'kappeli' },
       ],
       kuvat: [
         {
@@ -5759,23 +5657,13 @@ export const NAHTAVYYSJUTUT = {
     },
     'Pompidou-keskus': {
       aika: '1972–1977',
-      teksti: 'Pompidou-keskuksen rakennustyöt alkoivat vuonna 1972, ja keskus '
-          + 'avattiin vuonna 1977. Keskus on nimetty Ranskan presidentin Georges '
-          + 'Pompidoun mukaan, ja sen suunnittelusta järjestettiin 1970–1971 '
-          + 'kansainvälinen arkkitehtikilpailu, jonka voittivat italialainen Renzo '
-          + 'Piano ja britti Richard Rogers työryhmineen.'
+      teksti: 'Pompidou-keskus on Pariisin nykytaiteen keskus, jonka putket, portaat ja hissit on viety rakennuksen ulkopuolelle. Se on nimetty Ranskan presidentin Georges Pompidoun mukaan. Vuosina 1970–1971 sen suunnittelusta järjestettiin kansainvälinen arkkitehtikilpailu, jonka voittivat italialainen Renzo Piano ja britti Richard Rogers työryhmineen.'
         + '\n\n'
-        + 'Voittajat veivät rakenteet, putket, portaat ja hissit ulkopuolelle, '
-          + 'jotta sisälle jäisi vapaita tasoja. Putket on maalattu käyttönsä '
-          + 'mukaan: ilma on sininen, vesi vihreä, sähkö keltainen ja kulku — '
-          + 'liukuportaat ja hissit — punainen. Rakennus vei vain puolet tontista, '
-          + 'ja toinen puoli jäi aukioksi, jota sanotaan piazzaksi.'
+        + 'Rakennustyöt alkoivat vuonna 1972. Voittajat veivät rakenteet ja kulkureitit ulkopuolelle, jotta sisälle jäisi vapaita tasoja. Putket on maalattu käyttönsä mukaan: ilma on sininen, vesi vihreä, sähkö keltainen ja kulku eli liukuportaat ja hissit punainen. Rakennus vei vain puolet tontista, ja toinen puoli jäi aukioksi, jota sanotaan piazzaksi.'
         + '\n\n'
-        + 'Talossa on nykytaiteen museo ja yleinen kirjasto; musiikin ja äänen '
-          + 'tutkimuskeskus IRCAM toimii viereisessä rakennuksessa. Ensimmäinen peruskorjaus päättyi vuonna 2000. '
-          + 'Nykyään talo on suljettu uuteen peruskorjaukseen, ja sen on määrä '
-          + 'avautua uudelleen vuonna 2030.',
+        + 'Keskus avattiin vuonna 1977. Talossa on nykytaiteen museo ja yleinen kirjasto, ja musiikin ja äänen tutkimuskeskus IRCAM toimii viereisessä rakennuksessa. Ensimmäinen peruskorjaus päättyi vuonna 2000. Nykyään talo on suljettu uuteen peruskorjaukseen, ja sen on määrä avautua uudelleen vuonna 2030.',
       vuodet: [
+        { kohta: 'Vuosina 1970–1971', vuosi: '1970–1971', selite: 'arkkitehtikilpailu' },
         { kohta: 'vuonna 1972', vuosi: '1972', selite: 'rakennus alkoi' },
         { kohta: 'vuonna 1977', vuosi: '1977', selite: 'avattiin' },
         { kohta: 'vuonna 2000', vuosi: '2000', selite: 'peruskorjaus valmis' },
@@ -5786,33 +5674,24 @@ export const NAHTAVYYSJUTUT = {
     },
     'Place des Vosges': {
       aika: '1612',
-      teksti: 'Place des Vosges on Pariisin vanhin aukio. Se rakennettiin '
-          + 'kuningas Henrik IV:n määräyksestä hovielämän julkiseksi '
-          + 'keskukseksi, mutta valmistui vasta kuninkaan kuoleman '
-          + 'jälkeen — vihkiäisiä vietettiin 1612 Ludvig XIII:n ja Anna '
-          + 'Itävaltalaisen häiden yhteydessä, eikä kuningaspari '
-          + 'koskaan asunut siellä.'
+      teksti: 'Place des Vosges on Pariisin vanhin suunniteltu aukio, jonka tilaaja ei elänyt nähdäkseen sitä valmiina. Kuningas Henrik IV määräsi sen rakennettavaksi hovin juhlien ja kävelyn paikaksi, mutta hänet murhattiin vuonna 1610. Aukio vihittiin vuonna 1612 Ludvig XIII:n ja Anna Itävaltalaisen kihlajaisten yhteydessä.'
         + '\n\n'
-        + 'Aukiota ympäröi 36 kolmikerroksista taloa, yhdeksän joka '
-          + 'sivulla, ja kaikilla on samanlainen punatiilinen julkisivu '
-          + 'ja aumakatto. Korkeampina erottuvat kuninkaan ja '
-          + 'kuningattaren paviljongit etelä- ja pohjoislaidalla. '
-          + '1600-luvulla aukiolla järjestettiin turnajaisia.'
+        + 'Aukiota ympäröi 36 samanmallista taloa, ja kaikilla on samanlainen punatiilinen julkisivu ja jyrkkä katto. Korkeampina erottuvat kuninkaan ja kuningattaren paviljongit etelä- ja pohjoislaidalla. 1600-luvulla aukiolla järjestettiin turnajaisia.'
         + '\n\n'
-        + 'Nimi oli Place Royale vuoteen 1800, jolloin se vaihdettiin '
-          + 'Vosgesin departementin mukaan. Aukion laidalla asui '
-          + 'kuusitoista vuotta kirjailija Victor Hugo.',
+        + 'Aukio sai nimen Place des Vosges vuonna 1800 Vosgesin departementin mukaan, ja sitä oli ennen kutsuttu nimellä Place Royale. Vuodesta 1832 aukion laidalla asui kuusitoista vuotta kirjailija Victor Hugo.',
       vuodet: [
-        { kohta: 'vietettiin 1612', vuosi: '1612', selite: 'vihkiäiset' },
-        { kohta: 'vuoteen 1800', vuosi: '1800', selite: 'nimi vaihtui' },
+        { kohta: 'vuonna 1610', vuosi: '1610', selite: 'Henrik IV murhattiin' },
+        { kohta: 'vuonna 1612', vuosi: '1612', selite: 'vihkiäiset' },
+        { kohta: 'vuonna 1800', vuosi: '1800', selite: 'nimi vaihtui' },
+        { kohta: 'Vuodesta 1832', vuosi: '1832', selite: 'Victor Hugo muutti' },
       ],
       kuvat: [
         {
           tiedosto: 'Paris Place des Vosges Arkaden 1.jpg',
           lyhyt: 'Pariisin vanhinta Place des Vosges -aukiota ympäröi 36 samanlaista taloa, vihitty 1612.',
           selite: 'Pariisin vanhinta aukiota ympäröi 36 samanlaista '
-            + 'kolmikerroksista taloa, yhdeksän joka sivulla, ja vihkiäisiä '
-            + 'vietettiin vuonna 1612.',
+            + 'taloa, ja aukio vihittiin '
+            + 'vuonna 1612.',
           lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -5824,27 +5703,11 @@ export const NAHTAVYYSJUTUT = {
      */
     Invalidit: {
       aika: '1671–1706',
-      teksti: 'Ludvig XIV:n sodat jättivät jälkeensä tuhansia haavoittuneita '
-          + 'ja vanhentuneita sotilaita, jotka päätyivät kerjäämään Pariisin '
-          + 'kaduille. Vuonna 1670 kuningas määräsi rakennettavaksi heille '
-          + 'kodin, ja Libéral Bruantin suunnittelemaan taloon muuttivat '
-          + 'ensimmäiset asukkaat jo 1674. Parhaimmillaan siellä asui noin '
-          + '4 000 entistä sotilasta. Talo oli kuin pieni kaupunki: asukkaat '
-          + 'tekivät verstaissa kenkiä, univormuja ja kuvakudoksia, ja heillä '
-          + 'oli oma sairaala ja kirkko.'
+      teksti: 'Invalidit eli Les Invalides rakennettiin kodiksi sotilaille, jotka sodat olivat jättäneet haavoittuneina ja vanhentuneina kerjäämään Pariisin kaduille. Vuonna 1670 kuningas määräsi kodin rakennettavaksi, ja Libéral Bruantin suunnittelemaan taloon muuttivat ensimmäiset asukkaat jo 1674. Talo oli kuin pieni kaupunki: parhaimmillaan siellä asui useita tuhansia entisiä sotilaita, ja verstaissa tehtiin kenkiä, sukkia ja kuvakudoksia.'
         + '\n\n'
-        + 'Kuninkaalle rakennettiin vielä oma kirkko, Jules Hardouin-Mansartin '
-          + 'Dôme des Invalides, jonka kullattu kupoli nousee 107 metriin. '
-          + 'Heinäkuun 14. päivän aamuna 1789 kansanjoukko tunkeutui '
-          + 'Invalideihin ja vei asevarastosta lähes 30 000 kivääriä. Ruutia '
-          + 'ei löytynyt, ja sitä lähdettiin hakemaan Bastiljista.'
+        + 'Heinäkuun 14. päivän aamuna 1789 kansanjoukko tunkeutui Invalideihin ja vei asevarastosta noin 30 000 kivääriä. Ruutia ei juuri löytynyt, ja sitä lähdettiin hakemaan Bastiljista.'
         + '\n\n'
-        + 'Vuonna 1840 Napoleonin jäännökset tuotiin Saint Helenan saarelta, '
-          + 'ja kupolin alle kaivettiin avoin krypta. Sarkofagi veistettiin '
-          + 'punaisesta kvartsiitista, joka louhittiin Äänisjärven rannalta '
-          + 'Karjalasta; keisari siirrettiin siihen 1861. Tuhansien '
-          + 'veteraanien kodista on jäljellä enää pieni hoitolaitos, ja '
-          + 'käytävillä kulkevat nyt armeijamuseon kävijät.',
+        + 'Vuonna 1840 Napoleonin jäännökset tuotiin Saint Helenan saarelta, ja Hardouin-Mansartin kullatun kupolin alle rakennettiin avoin krypta. Sarkofagi veistettiin punaisesta kvartsiitista, joka louhittiin Äänisjärven rannalta Karjalasta, ja keisari siirrettiin siihen 1861. Veteraanien kodista on jäljellä yhä toimiva sairaala ja hoitokoti, ja käytävillä kulkevat nyt armeijamuseon kävijät.',
       vuodet: [
         { kohta: 'Vuonna 1670', vuosi: '1670', selite: 'kuningas määräsi' },
         { kohta: 'jo 1674', vuosi: '1674', selite: 'ensimmäiset asukkaat' },
@@ -5873,29 +5736,15 @@ export const NAHTAVYYSJUTUT = {
     },
     'Petit Palais': {
       aika: '1897–1900',
-      teksti: 'Petit Palais rakennettiin vuoden 1900 maailmannäyttelyyn '
-          + 'Champs-Élysées’n tuntumaan, Grand Palais’ta vastapäätä. '
-          + 'Arkkitehti Charles Girault aloitti työn 10. lokakuuta 1897, ja '
-          + 'rakennus valmistui huhtikuussa 1900. Toisin kuin monet '
-          + 'näyttelyn rakennukset, sen oli alusta asti tarkoitus jäädä '
-          + 'pysyväksi taidemuseoksi.'
+      teksti: 'Petit Palais eli pieni palatsi rakennettiin maailmannäyttelyyn, mutta toisin kuin monet näyttelyn rakennukset, sen oli tarkoitus jäädä pysyväksi taidemuseoksi. Arkkitehti Charles Girault aloitti työn Champs-Élysées’n tuntumassa, Grand Palais’ta vastapäätä, lokakuussa 1897, ja rakennus valmistui huhtikuussa 1900.'
         + '\n\n'
-        + 'Vuonna 1902 siitä tuli Pariisin kaupungin kuvataidemuseo. Samana '
-          + 'vuonna museolle tuli Dutuitin veljesten lahjoittama keskiajan ja '
-          + 'renessanssin teosten kokoelma. Julkisivun päätyä koristaa '
-          + 'Jean Antoine Injalbertin veistämä Pariisi muusien ympäröimänä.'
+        + 'Vuonna 1902 siitä tuli Pariisin kaupungin kuvataidemuseo, ja samana vuonna museo sai Dutuitin veljesten keräämän taidekokoelman. Julkisivun päätyä koristaa Jean Antoine Injalbertin veistämä Pariisi muusien ympäröimänä.'
         + '\n\n'
-        + 'Rakennuksen keskellä on puoliympyrän muotoinen pylväskäytävä, '
-          + 'joka avautuu puutarhaan. Sen pylväät ovat vaaleanpunaista '
-          + 'Vosgesien graniittia, ja koristeissa on kullattua pronssia. '
-          + 'Koristemaalaukset ja -veistokset valmistuivat vasta vuosina '
-          + '1903–1925, ja rakennus on ollut suojeltu historiallinen '
-          + 'monumentti vuodesta 1975.',
+        + 'Rakennuksen keskellä on puoliympyrän muotoinen pylväskäytävä, joka avautuu puutarhaan. Koristeissa on kullattua metallia. Rakennus on ollut suojeltu historiallinen monumentti vuodesta 1975.',
       vuodet: [
-        { kohta: 'lokakuuta 1897', vuosi: '1897', selite: 'työ alkoi' },
+        { kohta: 'lokakuussa 1897', vuosi: '1897', selite: 'työ alkoi' },
         { kohta: 'huhtikuussa 1900', vuosi: '1900', selite: 'valmistui' },
         { kohta: 'Vuonna 1902', vuosi: '1902', selite: 'kaupungin museo' },
-        { kohta: 'vuosina 1903–1925', vuosi: '1903–1925', selite: 'koristetyöt' },
         { kohta: 'vuodesta 1975', vuosi: '1975', selite: 'suojeltu' },
       ],
       kuvat: [
@@ -5911,27 +5760,14 @@ export const NAHTAVYYSJUTUT = {
     },
     'Tour Montparnasse': {
       aika: '1969–1973',
-      teksti: 'Tornin paikalla seisoi vanha Montparnassen rautatieasema. '
-          + 'Lokakuussa 1895 Granvillestä tullut juna ei pysähtynyt ajoissa: '
-          + 'veturi syöksyi raiteiden päästä aseman seinän läpi ja jäi '
-          + 'roikkumaan nokka alaspäin kadulle. Valokuva onnettomuudesta '
-          + 'kiersi maailmaa. Vanha asema purettiin 1960-luvulla, ja uusi '
-          + 'rakennettiin hieman etelämmäs.'
+      teksti: 'Tour Montparnasse on Pariisin kantakaupungin korkein pilvenpiirtäjä, ja sen paikalla seisoi ennen rautatieasema, jonka seinästä veturi syöksyi kadulle. Lokakuussa 1895 Granvillestä tullut juna ei pysähtynyt ajoissa, ja veturi jäi seisomaan nokka alaspäin. Onnettomuudesta jäi kuuluisa valokuva.'
         + '\n\n'
-        + 'Tilalle nousi vuosina 1969–1973 Tour Montparnasse, 210 metriä ja '
-          + '59 kerrosta. Se oli Ranskan korkein rakennus vuoteen 2011 asti. '
-          + 'Tumma lasi- ja teräsjulkisivu edusti sodanjälkeistä kansainvälistä '
-          + 'tyyliä, jossa koristeet karsittiin pois.'
+        + 'Vanha asema purettiin 1960-luvulla, ja uusi rakennettiin hieman etelämmäs. Tilalle nousi vuosina 1969–1973 Tour Montparnasse, noin 210 metriä ja 59 kerrosta. Tumma lasijulkisivu oli koristeeton ja ankara.'
         + '\n\n'
-        + 'Pariisilaiset eivät pitäneet tornista. Muutama vuosi sen '
-          + 'valmistumisen jälkeen keskustan uusien rakennusten korkeus '
-          + 'rajattiin 25 metriin ja reuna-alueilla 31–37 metriin, eikä '
-          + 'vastaavaa nostettu enää vanhaan '
-          + 'Pariisiin. Usein toistetun sanonnan mukaan kaupungin kaunein '
-          + 'näköala avautuu tornin huipulta, koska sieltä ei näe itse tornia.',
+        + 'Pariisilaiset eivät pitäneet tornista. Muutama vuosi sen valmistumisen jälkeen keskustan uusien rakennusten korkeutta alettiin rajoittaa, eikä vastaavaa nostettu enää vanhaan Pariisiin. Usein toistetun sanonnan mukaan kaupungin kaunein näköala avautuu tornin huipulta, koska sieltä ei näe itse tornia. Torni oli Ranskan korkein pilvenpiirtäjä vuoteen 2011 asti.',
       vuodet: [
         { kohta: 'Lokakuussa 1895', vuosi: '1895', selite: 'veturi seinän läpi' },
-        { kohta: '1969–1973', vuosi: '1969–1973', selite: 'rakennettiin' },
+        { kohta: 'vuosina 1969–1973', vuosi: '1969–1973', selite: 'rakennettiin' },
         { kohta: 'vuoteen 2011', vuosi: '2011', selite: 'korkein vuoteen' },
       ],
       kuvat: [
@@ -5946,7 +5782,7 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Paris 75006 Jardin du Luxembourg - Tour Montparnasse.jpg',
           lyhyt: 'Tour Montparnasse näkyy Luxembourgin puiston puiden yli.',
-          selite: 'Tour Montparnasse on vanhan Pariisin ainoa pilvenpiirtäjä; '
+          selite: 'Tour Montparnasse on Pariisin kantakaupungin korkein pilvenpiirtäjä; '
             + 'se näkyy kauas, kuten tässä Luxembourgin puistosta.',
           lahde: 'Russell Yarwood, Wikimedia Commons (CC BY-SA 2.0)',
         },
@@ -5986,12 +5822,37 @@ export const NAHTAVYYSJUTUT = {
       ],
       kuvat: [
         {
-          tiedosto: 'Prudent-Louis Leray - Poster for the première of Georges Bizet\'s Carmen.jpg',
-          lyhyt: 'Prudent-Louis Lerayn litografia on Carmenin ensi-illan juliste vuodelta 1875.',
-          selite: 'Prudent-Louis Lerayn litografia on Carmenin ensi-illan juliste '
-            + 'vuodelta 1875 — samasta esityksestä, jonka säveltäjä uskoi '
-            + 'epäonnistuneen.',
-          lahde: 'Prudent-Louis Leray 1875, Wikimedia Commons (public domain)',
+          osoite: 'https://media.matkakirja.app/kuvat/bizet-1875-teatteri1840.jpg',
+          laji: 'piirros',
+          lyhyt: 'Opéra-Comiquen toinen Salle Favart, rakennettu 1840',
+          selite: 'Opéra-Comiquen toinen Salle Favart, rakennettu 1840',
+          lahde: 'Théodore Charpentier (litografia, kuvana Gourret 1983 -kirjassa), Wikimedia Commons (Public domain), esirajattu ja rajattu',
+          tekija: 'Théodore Charpentier',
+          lisenssi: 'Public domain',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/bizet-1875-galli-marie.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Célestine Galli-Marié Carmenin roolipuvussa',
+          selite: 'Célestine Galli-Marié Carmenin roolipuvussa',
+          lahde: 'Atelier Nadar (n. 1875), Wikimedia Commons (Public domain), esirajattu ja rajattu',
+          tekija: 'Atelier Nadar',
+          lisenssi: 'Public domain',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/bizet-1875-nykyinen.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Opéra-Comiquen nykyinen Salle Favart Place Boïeldieulla',
+          selite: 'Opéra-Comiquen nykyinen Salle Favart Place Boïeldieulla',
+          lahde: 'Chabe01, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+          tekija: 'Chabe01',
+          lisenssi: 'CC BY-SA 4.0',
+          leveys: 1200,
+          korkeus: 800,
         },
       ],
       lahde: 'Wikipedia',
@@ -6019,16 +5880,37 @@ export const NAHTAVYYSJUTUT = {
       ],
       kuvat: [
         {
-          osoite: 'assets/kartat/nostot/nosto-kirahvin-kavelymatka-loistoaika.webp',
-          lyhyt: 'Kirahvi kävelee maantietä takki päällä, saattajat rinnalla ja kyläläiset katsomassa.',
-          selite: 'Kirahvi kävelemässä maantietä takki päällä, saattajat rinnalla ja '
-            + 'kyläläiset tien vierellä katsomassa.',
-          lahde: 'Matkakirjan havainnekuva: hetki kirahvin kävelymatkalta',
+          osoite: 'https://media.matkakirja.app/kuvat/kirahvi-1827-marseille.jpg',
+          laji: 'maalaus',
+          lyhyt: 'Marseillen satama noin vuonna 1825',
+          selite: 'Marseillen satama noin vuonna 1825',
+          lahde: 'Ambroise Louis Garneray (Commons-tekijäkenttä: McLeod), n. 1825, Wikimedia Commons (Public domain), rajattu',
+          tekija: 'Ambroise Louis Garneray (kuvauksen mukaan; tiedoston tekijäkenttä McLeod)',
+          lisenssi: 'Public domain',
+          leveys: 1200,
+          korkeus: 800,
         },
         {
-          tiedosto: 'Nicolas Hüet, the Younger - Study of the Giraffe Given to Charles X by the Viceroy of Egypt - Google Art Project.jpg',
-          selite: 'Sama kirahvi Nicolas Hüet nuoremman tutkielmassa vuodelta 1827.',
-          lahde: 'Nicolas Hüet nuorempi 1827, Wikimedia Commons (public domain)',
+          osoite: 'https://media.matkakirja.app/kuvat/kirahvi-1827-viuhka.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Kirahvia esittävä viuhka vuodelta 1827',
+          selite: 'Kirahvia esittävä viuhka vuodelta 1827',
+          lahde: 'Tuntematon tekijä, 1827 (Musée Carnavalet / Paris Musées), Wikimedia Commons (CC0), rajattu',
+          tekija: 'Tuntematon tekijä (Musée Carnavalet)',
+          lisenssi: 'CC0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/kirahvi-1827-nykyinen.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Jardin des Plantesin eläintarha nykyään',
+          selite: 'Jardin des Plantesin eläintarha nykyään',
+          lahde: 'Guilhem Vellut, Wikimedia Commons (CC BY 2.0), rajattu',
+          tekija: 'Guilhem Vellut',
+          lisenssi: 'CC BY 2.0',
+          leveys: 1200,
+          korkeus: 800,
         },
       ],
       lahde: 'Wikipedia',
@@ -6060,11 +5942,48 @@ export const NAHTAVYYSJUTUT = {
       ],
       kuvat: [
         {
-          tiedosto: 'Quai Saint-Michel, Paris 5 May 2016.jpg',
-          lyhyt: 'Bukinistit ovat myyneet kirjoja Seinen rantamuurin vihreistä laatikoista 1500-luvulta asti.',
-          selite: 'Bukinistit ovat myyneet kirjoja Seinen rantamuurin '
-            + 'vihreistä laatikoista 1500-luvulta asti.',
-          lahde: 'Guilhem Vellut, Wikimedia Commons (CC BY 2.0)',
+          osoite: 'https://media.matkakirja.app/kuvat/bukinistit-1859-pontneuf1665.jpg',
+          laji: 'maalaus',
+          lyhyt: 'Pont Neuf Pariisissa 1600-luvun maalauksessa',
+          selite: 'Pont Neuf Pariisissa 1600-luvun maalauksessa',
+          lahde: 'Hendrick Mommers, n. 1665 (Musée Carnavalet / Paris Musées), Wikimedia Commons (CC0), rajattu',
+          tekija: 'Hendrick Mommers',
+          lisenssi: 'CC0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/bukinistit-1859-pontneuf1700.jpg',
+          laji: 'maalaus',
+          lyhyt: 'Pont Neuf 1700-luvun maalauksessa',
+          selite: 'Pont Neuf 1700-luvun maalauksessa',
+          lahde: 'Nicolas-Jean-Baptiste Raguenet, 1700-luku (Musée Carnavalet), Wikimedia Commons (Public domain), rajattu',
+          tekija: 'Nicolas-Jean-Baptiste Raguenet',
+          lisenssi: 'Public domain',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/bukinistit-1859-atget1898.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Bukinisteja Quai Voltairella 1898',
+          selite: 'Bukinisteja Quai Voltairella 1898',
+          lahde: 'Eugène Atget, 1898 (Musée Carnavalet / Paris Musées), Wikimedia Commons (CC0), rajattu',
+          tekija: 'Eugène Atget',
+          lisenssi: 'CC0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/bukinistit-1859-nykyinen.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Bukinistien laatikot Seinen rantamuurilla nykyään',
+          selite: 'Bukinistien laatikot Seinen rantamuurilla nykyään',
+          lahde: 'Chabe01, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+          tekija: 'Chabe01',
+          lisenssi: 'CC BY-SA 4.0',
+          leveys: 1200,
+          korkeus: 800,
         },
       ],
       lahde: 'Wikipedia',
@@ -6078,16 +5997,37 @@ export const NAHTAVYYSJUTUT = {
         + 'aivan yhtä ilahtunut.',
       kuvat: [
         {
-          tiedosto: 'Pascal à Galileo.jpg',
-          selite: 'Vrain-Lucas väärensi tämän kirjeen, jossa yhdeksänvuotias Blaise '
-            + 'Pascal muka kirjoittaa Galileille vuonna 1633.',
-          lahde: 'Denis Vrain-Lucasin väärennös 1860-luvulta, Wikimedia Commons (PD)',
+          osoite: 'https://media.matkakirja.app/kuvat/vrain-lucas-vaarennos.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Vrain-Lucasin väärentämä "muinainen" kirje',
+          selite: 'Vrain-Lucasin väärentämä "muinainen" kirje',
+          lahde: 'Denis Vrain-Lucas (väärennös, Bibliothèque nationale de France), Wikimedia Commons (Public domain), rajattu',
+          tekija: 'Denis Vrain-Lucas (väärentäjä, 1860-luku)',
+          lisenssi: 'Public domain',
+          leveys: 1200,
+          korkeus: 800,
         },
         {
-          tiedosto: 'Charlemagne à Alcuin (Vrain-Lucas).jpg',
-          selite: 'Tämä "Kaarle Suuren kirje" on väärennös; oikeus tuomitsi '
-            + 'Vrain-Lucasin petoksesta vuonna 1870.',
-          lahde: 'Denis Vrain-Lucasin väärennös 1860-luvulta, Wikimedia Commons (PD)',
+          osoite: 'https://media.matkakirja.app/kuvat/vrain-lucas-institut1867.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Institut de Francen sisäpiha 1860-luvun puolivälissä',
+          selite: 'Institut de Francen sisäpiha 1860-luvun puolivälissä',
+          lahde: 'Charles Marville, Paris Musées / Musée Carnavalet, Wikimedia Commons (CC0), esirajattu ja rajattu',
+          tekija: 'Charles Marville (kuvattu 1865-1868)',
+          lisenssi: 'CC0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/vrain-lucas-institut-nyt.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Institut de France Seinen yli nykyään',
+          selite: 'Institut de France Seinen yli nykyään',
+          lahde: 'DiscoA340, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+          tekija: 'DiscoA340',
+          lisenssi: 'CC BY-SA 4.0',
+          leveys: 1200,
+          korkeus: 800,
         },
       ],
       lahde: 'Wikipedia',
@@ -6115,11 +6055,48 @@ export const NAHTAVYYSJUTUT = {
       ],
       kuvat: [
         {
-          tiedosto: 'Monet - Impression, Sunrise.jpg',
-          lyhyt: 'Claude Monet\'n Impression, soleil levant 1872 antoi nimen impressionismille kriitikon pilkasta.',
-          selite: 'Claude Monet’n Impression, soleil levant vuodelta 1872. Kriitikko '
-            + 'teki sen nimestä pilkkanimen koko ryhmälle.',
-          lahde: 'Claude Monet 1872, Wikimedia Commons (public domain)',
+          osoite: 'https://media.matkakirja.app/kuvat/monet-1874-bazille.jpg',
+          laji: 'maalaus',
+          lyhyt: 'Bazillen ateljee Pariisissa, maalaus vuodelta 1870',
+          selite: 'Bazillen ateljee Pariisissa, maalaus vuodelta 1870',
+          lahde: 'Frédéric Bazille (Musée d’Orsay), Wikimedia Commons (Public domain), rajattu',
+          tekija: 'Frédéric Bazille',
+          lisenssi: 'Public domain',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/monet-1874-nadar.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Nadarin ateljeen julkisivu noin vuonna 1860',
+          selite: 'Nadarin ateljeen julkisivu noin vuonna 1860',
+          lahde: 'Nadar, Wikimedia Commons (Public domain), esirajattu ja rajattu',
+          tekija: 'Nadar (Gaspard-Félix Tournachon)',
+          lisenssi: 'Public domain',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/monet-1874-impression.jpg',
+          laji: 'maalaus',
+          lyhyt: 'Claude Monet’n Impression, soleil levant, 1872',
+          selite: 'Claude Monet’n Impression, soleil levant, 1872',
+          lahde: 'Claude Monet, Wikimedia Commons (Public domain), rajattu',
+          tekija: 'Claude Monet',
+          lisenssi: 'Public domain',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/monet-1874-marmottan.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Musée Marmottan Monet Pariisissa nykyään',
+          selite: 'Musée Marmottan Monet Pariisissa nykyään',
+          lahde: 'Ardfern, Wikimedia Commons (CC BY-SA 3.0), rajattu',
+          tekija: 'Ardfern',
+          lisenssi: 'CC BY-SA 3.0',
+          leveys: 1200,
+          korkeus: 800,
         },
       ],
       lahde: 'Wikipedia',
@@ -6147,10 +6124,48 @@ export const NAHTAVYYSJUTUT = {
       ],
       kuvat: [
         {
-          tiedosto: 'Pellicule du Journal Pigeons Voyageurs, Souvenir du Siège de Paris, 1870-1871. PH20110 (15 of 20).jpg',
-          selite: 'René Dagronin mikrofilmi piiritetystä Pariisista. Filmin koko on '
-            + 'noin viisi senttiä kolme senttiä.',
-          lahde: 'Dagron, Prudent René-Patrice, Wikimedia Commons (CC0)',
+          osoite: 'https://media.matkakirja.app/kuvat/piiritys-1870-kyyhkyset.jpg',
+          laji: 'maalaus',
+          lyhyt: 'Kyyhkynen lentoon Pariisin kattojen yllä, 1870-71',
+          selite: 'Kyyhkynen lentoon Pariisin kattojen yllä, 1870-71',
+          lahde: 'Jacques Guiaud ja Jules Didier (maalaus; vedoksen kuvaaja tuntematon), Paris Musées / Musée Carnavalet, Wikimedia Commons (CC0), esirajattu ja rajattu',
+          tekija: 'Jacques Guiaud ja Jules Didier (maalaus), valokuvavedos tuntematon',
+          lisenssi: 'CC0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/piiritys-1870-ilmapallo.jpg',
+          laji: 'maalaus',
+          lyhyt: 'Ilmapallot valmiina lähtöön Montmartrella, 1870',
+          selite: 'Ilmapallot valmiina lähtöön Montmartrella, 1870',
+          lahde: 'Jacques Guiaud ja Jules Didier (maalaus), Paris Musées / Musée Carnavalet, Wikimedia Commons (CC0), rajattu',
+          tekija: 'Jacques Guiaud ja Jules Didier',
+          lisenssi: 'CC0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/piiritys-1870-viestilevy.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Dagronin valokuvaama viestilevy piirityksen ajalta',
+          selite: 'Dagronin valokuvaama viestilevy piirityksen ajalta',
+          lahde: 'René Dagron, Paris Musées / Musée Carnavalet, Wikimedia Commons (CC0), rajattu',
+          tekija: 'René Dagron',
+          lisenssi: 'CC0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/piiritys-1870-hotel-de-ville.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Pariisin Hôtel de Ville Seinen yli nykyään',
+          selite: 'Pariisin Hôtel de Ville Seinen yli nykyään',
+          lahde: 'Marcin Białek, Wikimedia Commons (CC BY-SA 3.0), rajattu',
+          tekija: 'Marcin Białek',
+          lisenssi: 'CC BY-SA 3.0',
+          leveys: 1200,
+          korkeus: 800,
         },
       ],
       lahde: 'Wikipedia',
@@ -6167,25 +6182,14 @@ export const NAHTAVYYSJUTUT = {
      */
     'Metro 1900': {
       nosto: 'nosto-guimardin-metro',
-      teksti: 'Pariisin metro avattiin 19. heinäkuuta 1900. Sisäänkäynneistä '
-        + 'oli järjestetty arkkitehtikilpailu, mutta yksikään 21 '
-        + 'ehdotuksesta ei kelvannut, ja työ annettiin Hector Guimardille, '
-        + 'joka ei ollut edes osallistunut kilpailuun. Hän piirsi '
-        + 'valurautaisia vakio-osia, jotka sopivat yhteen kuin '
-        + 'rakennussarja: samoista paloista sai kasattua sopivan '
-        + 'sisäänkäynnin mihin tahansa kadunkulmaan. Niitä tehtiin 167. '
-        + 'Sitten tyyli meni pois muodista ja puolet purettiin. Jäljellä on 88, ja valtaosa niistä suojeltiin vuonna 1978.',
+      // KK 20.11.2026 13.40 (B-linjaus 3, yksi paikka): teksti ja kuva luetaan noston omasta datasta
+      // (js/packs/fokusvirta-pariisi.js, takynosto 'guimardin-metro'); täällä vain vuosirivi ja lähde.
+      teksti: METRO_NOSTO.lunastus.join('\n\n'),
       vuodet: [
         { kohta: 'heinäkuuta 1900', vuosi: '1900', selite: 'metro avattiin' },
         { kohta: 'vuonna 1978', vuosi: '1978', selite: 'valtaosa suojeltiin' },
       ],
-      kuvat: [
-        {
-          tiedosto: "01 Guimard's Métropolitain.jpg",
-          selite: 'Guimardin metrosisäänkäyntejä tehtiin 167, ja jäljellä on 88.',
-          lahde: 'Terrazzo (Flickr), Wikimedia Commons (CC BY 2.0)',
-        },
-      ],
+      kuvat: [{ ...METRO_NOSTO.kuva }],
       lahde: 'Wikipedia',
     },
     'Notre-Dame 2019': {
@@ -6202,14 +6206,55 @@ export const NAHTAVYYSJUTUT = {
         + 'kukko asennettiin tornin huipulle 16. joulukuuta 2023, ja sen sisään pantiin samat '
         + 'pyhäinjäännökset sekä lähes 2 000 jälleenrakentajan nimet. Katedraali avattiin uudelleen '
         + 'joulukuussa 2024.',
+      vuodet: [
+        { kohta: 'huhtikuuta 2019', vuosi: '2019', selite: 'tulipalo' },
+        { kohta: 'joulukuuta 2023', vuosi: '2023', selite: 'uusi kukko' },
+        { kohta: 'joulukuussa 2024', vuosi: '2024', selite: 'avattiin uudelleen' },
+      ],
       kuvat: [
         {
-          tiedosto: 'Coq de Notre-Dame de Paris 2020.jpg',
-          lyhyt: 'Notre-Damen kukko putosi tornin huipulta 2019 palossa ja löytyi lommoilla.',
-          selite: 'Notre-Damen tornin huipulla seisonut kukko putosi '
-            + 'vuoden 2019 palossa ja löytyi seuraavana päivänä raunioista '
-            + 'lommoilla.',
-          lahde: 'Siren-Com, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/kuvat/notre-dame-2019-palo.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Notre-Dame palaa 15. huhtikuuta 2019',
+          selite: 'Notre-Dame palaa 15. huhtikuuta 2019',
+          lahde: 'Emilio Luque, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+          tekija: 'Emilio Luque',
+          lisenssi: 'CC BY-SA 4.0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/notre-dame-2019-kukko.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Tornin kukko ennen paloa, elokuu 2018',
+          selite: 'Tornin kukko ennen paloa, elokuu 2018',
+          lahde: 'Panageotean Graphics, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+          tekija: 'Panageotean Graphics',
+          lisenssi: 'CC BY-SA 4.0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/notre-dame-2019-uusi.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Notre-Damen kuoriosa uudelleenavauksen jälkeen 2024',
+          selite: 'Notre-Damen kuoriosa uudelleenavauksen jälkeen 2024',
+          lahde: 'Ibex73, Wikimedia Commons (CC BY 4.0), rajattu',
+          tekija: 'Ibex73',
+          lisenssi: 'CC BY 4.0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/notre-dame-2019-nyt.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Notre-Damen länsijulkisivu maaliskuussa 2025',
+          selite: 'Notre-Damen länsijulkisivu maaliskuussa 2025',
+          lahde: 'Chabe01, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+          tekija: 'Chabe01',
+          lisenssi: 'CC BY-SA 4.0',
+          leveys: 1200,
+          korkeus: 800,
         },
       ],
       lahde: 'Wikipedia',
@@ -6237,12 +6282,48 @@ export const NAHTAVYYSJUTUT = {
       ],
       kuvat: [
         {
-          tiedosto: 'Édith Piaf 914-6440.jpg',
-          lyhyt: 'Édith Piaf esiintyi Rotterdamissa 1962, alle vuosi ennen kuolemaansa; lempinimi tarkoittaa varpusta.',
-          selite: 'Édith Piaf esiintyi Rotterdamissa 13. joulukuuta 1962, alle '
-            + 'vuosi ennen kuolemaansa; hänen lempinimensä la Môme Piaf '
-            + 'tarkoittaa pariisilaisessa puhekielessä varpusta.',
-          lahde: 'Eric Koch / Anefo, Wikimedia Commons (CC0)',
+          osoite: 'https://media.matkakirja.app/kuvat/piaf-django-belleville1910.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Rue de Belleville helmikuussa 1910',
+          selite: 'Rue de Belleville helmikuussa 1910',
+          lahde: 'Eugène Gossin, 1910, Paris Musées / Musée Carnavalet, Wikimedia Commons (CC0), esirajattu ja rajattu',
+          tekija: 'Eugène Gossin (Musée Carnavalet / Paris Musées)',
+          lisenssi: 'CC0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/piaf-django-vaunut1913.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Asuntovaunut Porte de Choisyn luona, 1913',
+          selite: 'Asuntovaunut Porte de Choisyn luona, 1913',
+          lahde: 'Eugène Atget, 1913, Paris Musées / Musée Carnavalet, Wikimedia Commons (CC0), esirajattu ja rajattu',
+          tekija: 'Eugène Atget (Musée Carnavalet / Paris Musées)',
+          lisenssi: 'CC0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/piaf-django-piaf1962.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Édith Piaf laulamassa Rotterdamissa 1962',
+          selite: 'Édith Piaf laulamassa Rotterdamissa 1962',
+          lahde: 'Eric Koch / Anefo, Nationaal Archief, Wikimedia Commons (CC0), rajattu',
+          tekija: 'Eric Koch / Anefo (Nationaal Archief)',
+          lisenssi: 'CC0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/piaf-django-belleville-nyt.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Rue de Belleville 72 nykyään, Piafin muistolaatta',
+          selite: 'Rue de Belleville 72 nykyään, Piafin muistolaatta',
+          lahde: 'Polymagou, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+          tekija: 'Polymagou',
+          lisenssi: 'CC BY-SA 4.0',
+          leveys: 1200,
+          korkeus: 800,
         },
       ],
       lahde: 'Wikipedia',
@@ -6267,12 +6348,37 @@ export const NAHTAVYYSJUTUT = {
       ],
       kuvat: [
         {
-          tiedosto: '84 Boulevard de Port-Royal Bakery.jpg',
-          lyhyt: 'Pariisi on järjestänyt vuodesta 1994 kilpailun parhaasta patongista presidentin leipojaksi.',
-          selite: 'Pariisi on järjestänyt vuodesta 1994 kilpailun parhaasta '
-            + 'perinteisestä patongista, ja voittaja toimittaa '
-            + 'presidentinpalatsin leivät seuraavan vuoden ajan.',
-          lahde: 'Lionel Allorge, Wikimedia Commons (CC BY-SA 3.0)',
+          osoite: 'https://media.matkakirja.app/kuvat/patonki-1994-taikina.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Leipuri lisää vettä jauhoihin taikinakoneessa',
+          selite: 'Leipuri lisää vettä jauhoihin taikinakoneessa',
+          lahde: 'Pancrat, Wikimedia Commons (CC BY-SA 3.0), rajattu',
+          tekija: 'Pancrat',
+          lisenssi: 'CC BY-SA 3.0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/patonki-1994-tori.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Pino patonkeja markkinatorilla Pariisissa',
+          selite: 'Pino patonkeja markkinatorilla Pariisissa',
+          lahde: 'Paul Asman and Jill Lenoble, Wikimedia Commons (CC BY 2.0), rajattu',
+          tekija: 'Paul Asman and Jill Lenoble',
+          lisenssi: 'CC BY 2.0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/patonki-1994-nykyinen.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Suihkulähde ja palatsin puutarhajulkisivu Pariisissa',
+          selite: 'Suihkulähde ja palatsin puutarhajulkisivu Pariisissa',
+          lahde: 'Leurent.t, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+          tekija: 'Leurent.t',
+          lisenssi: 'CC BY-SA 4.0',
+          leveys: 1200,
+          korkeus: 800,
         },
       ],
       lahde: 'Wikipedia',

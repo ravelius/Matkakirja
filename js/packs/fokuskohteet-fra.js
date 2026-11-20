@@ -144,37 +144,35 @@ export const FOKUSKOHTEET_FRA = [
     jaksot: [
       {
         osa: 'tapahtuma',
+        kuva: 'loisto',
         teksti: 'Tuileries\'n palatsi oli Ranskan hallitsijoiden koti Pariisissa, ennen kuin se poltettiin ja '
           + 'myytiin kivinä. Kuningatar Katariina de Medici aloitti sen rakentamisen Louvren viereen vuonna '
           + '1564, ja palatsi seisoi yli kolmesataa vuotta.',
-        kuva: 'loisto',
         vuodet: [
           { vuosi: '1564', selite: 'rakentaminen alkaa', kohta: 'vuonna 1564' },
         ],
       },
       {
         osa: 'tapahtuma',
+        kuva: 'palo',
         teksti: 'Toukokuussa 1871 Pariisin kommuuni oli kukistumassa. Sen kannattajat sytyttivät Tuileries\'n '
           + 'palatsin. Tuli paloi yli kaksi vuorokautta ja poltti talon sisältä tyhjäksi.',
-        kuva: 'palo',
         vuodet: [
           { vuosi: '1871', selite: 'palatsi sytytetään', kohta: 'Toukokuussa 1871' },
         ],
       },
       {
         osa: 'tapahtuma',
+        kuva: 'purku',
         teksti: 'Palon jälkeen kivimuurit jäivät pystyyn, vaikka katto ja sisustus olivat poissa. Poltettu '
           + 'kaupungintalo rakennettiin uudelleen, Tuileries\'ta ei. Rauniot seisoivat katottomina yli '
           + 'kymmenen vuotta.',
-        kuva: 'raunio1873',
-        lisakuva: { kuva: 'rauniot1871', kohta: 'Palon jälkeen' },
       },
       {
         osa: 'kaanne',
+        kuva: 'purku',
         teksti: 'Vuonna 1882 kolmas tasavalta päätti purkaa raunion, ja purku valmistui 1883. Purkuyrittäjä myi '
           + 'kiviä ja marmoria, ja suuresta erästä rakennettiin linna Korsikalle.',
-        kuva: 'purku',
-        lisakuva: { kuva: 'punta', kohta: 'rakennettiin linna Korsikalle' },
         hologrammi: 'sammuu',
         hologrammiKohta: 'päätti purkaa',
         vuodet: [
@@ -184,9 +182,9 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tanaan',
+        kuva: 'paatykolmio',
         teksti: 'Palatsin paikalla on nyt avointa tilaa Louvren ja puutarhan välissä. Yksi sen paloista seisoo '
           + 'yhä Pariisissa: keskipaviljongin päätykolmio on puistossa nimeltä Square Georges Cain.',
-        kuva: 'paatykolmio',
         kartta: { nimi: 'Square Georges Cain', lat: 48.8581, lon: 2.3628 },
       },
     ],
@@ -196,59 +194,45 @@ export const FOKUSKOHTEET_FRA = [
      * `tulossa` = tilattu (osoite vielä null): esitys näyttää paikkamerkin.
      */
     jaksokuvat: {
-      raunio1873: {
-        osoite: 'assets/kartat/nostot/nosto-tuileriat-loistoaika.webp',
-        laji: 'havainnekuva',
-        lyhyt: 'Poltetun palatsin rauniot',
-        lahde: 'Matkakirjan havainnekuva: rauniot palon jälkeen',
-      },
-      palo: {
-        // Tilaus 8.4 A valmis; KK hyväksyi 17.11.2026 klo 14.42 (P-261117-61). Ämpäri kuvat/ (vienti
-        // proto-3d/_valmiit/tuileries-palo-kuva-vienti-20261117), SHA-256 874c9bb4…da2e631a, 2400 × 1600.
-        osoite: 'https://media.matkakirja.app/kuvat/tuileries-palo-1871.jpg',
-        laji: 'havainnekuva',
-        lyhyt: 'Tuileries palaa, toukokuu 1871',
-        lahde: 'Tekoälyllä tuotettu havainnekuva; rakennusreferenssit Achille Quinet PH14096 ja '
-          + 'Godefroy PH83415, Paris Musées / Carnavalet, CC0',
-      },
       loisto: {
-        osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg',
+        osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2-3x2.jpg',
         laji: 'havainnekuva',
         lyhyt: 'Tuileries\'n palatsi loistoaikanaan',
-        lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
-          + 'aikanaan. Faktat: Musée du Louvre, tarkistettu 5.9.2026.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Faktat: Musée du Louvre, rajattu',
+        tekija: 'Matkakirja (tekoälyllä tuotettu havainnekuva)',
+        lisenssi: 'Matkakirjan oma',
+        leveys: 1200,
+        korkeus: 800,
       },
-      rauniot1871: {
-        tiedosto: "Vue des Tuileries après l'incendie de 1871, PH83415.jpg",
-        laji: 'valokuva',
-        lyhyt: 'Palatsin rauniot palon jälkeen',
-        lahde: 'Godefroy, Henri Emile Cimarosa, Wikimedia Commons (CC0)',
+      palo: {
+        osoite: 'https://media.matkakirja.app/kuvat/tuileries-palo.jpg',
+        laji: 'havainnekuva',
+        lyhyt: 'Tuileries palaa, toukokuu 1871',
+        lahde: 'Tekoälyllä tuotettu havainnekuva; rakennusreferenssit Achille Quinet PH14096 ja Godefroy PH83415, Paris Musées / Carnavalet, CC0, rajattu',
+        tekija: 'Matkakirja (tekoälyllä tuotettu havainnekuva); referenssit Quinet ja Godefroy',
+        lisenssi: 'Matkakirjan oma; referenssit CC0',
+        leveys: 1200,
+        korkeus: 800,
       },
       purku: {
-        // Tilaus 8.4 B valmis; KK hyväksyi 17.11.2026 klo 14.43 (P-261117-61); KK 15.53–15.54 korvasi B3-versiolla
-        // (friisit häivytetty). Ämpäri kuvat/ (lähde proto-3d/_review-tarina-pariisi-20261117/
-        // tarina-tuileries-5-purku-b3-friisi.jpg), SHA-256 f6032dfdb5147a4bec7bdd390f8474a5b2be83c347d07f6f7f7861379538d8b5.
-        osoite: 'https://media.matkakirja.app/kuvat/tuileries-purku-1880-luku-b3.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/tuileries-purku.jpg',
         laji: 'havainnekuva',
         lyhyt: 'Palatsin purku ja kivien myynti',
-        lahde: 'Tekoälyllä tuotettu havainnekuva; rakennusreferenssit Godefroy PH83415 ja PH20009, '
-          + 'Paris Musées / Carnavalet, CC0',
-      },
-      punta: {
-        // Ämpärissä pienin kirjaimin (JU 11.32); osoite voittaa, tiedosto = Commons-nimi tekijätarkistukselle.
-        osoite: 'https://media.matkakirja.app/kuvat/la-punta.jpg',
-        tiedosto: 'La-punta.JPG',
-        laji: 'valokuva',
-        lyhyt: 'Château de la Punta, Korsika',
-        lahde: 'Patricia Ripnel, Wikimedia Commons (CC BY-SA 3.0)',
+        lahde: 'Tekoälyllä tuotettu havainnekuva; rakennusreferenssit Godefroy PH83415 ja PH20009, Paris Musées / Carnavalet, CC0, rajattu',
+        tekija: 'Matkakirja (tekoälyllä tuotettu havainnekuva); referenssit Godefroy',
+        lisenssi: 'Matkakirjan oma; referenssit CC0',
+        leveys: 1200,
+        korkeus: 800,
       },
       paatykolmio: {
-        // Ämpärissä pienin kirjaimin (JU 11.32); osoite voittaa, tiedosto = Commons-nimi tekijätarkistukselle.
-        osoite: 'https://media.matkakirja.app/kuvat/georges-cain-05.jpg',
-        tiedosto: 'Georges-cain-05.JPG',
+        osoite: 'https://media.matkakirja.app/kuvat/tuileries-paatykolmio.jpg',
         laji: 'valokuva',
-        lyhyt: 'Päätykolmio, Square Georges Cain',
-        lahde: 'Marais, Wikimedia Commons (CC BY-SA 3.0)',
+        lyhyt: 'Palatsin päätykolmio Square Georges Cainissa',
+        lahde: 'Guilhem Vellut, Wikimedia Commons (CC BY 2.0), rajattu',
+        tekija: 'Guilhem Vellut',
+        lisenssi: 'CC BY 2.0',
+        leveys: 1200,
+        korkeus: 800,
       },
     },
     /*
@@ -293,7 +277,7 @@ export const FOKUSKOHTEET_FRA = [
      * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2-3x2.jpg',
       kadonnut: true,
       lyhyt: 'Palatsin ompelijan tytär ihastelee kristallikruunua; neljä vuotta myöhemmin palatsi palaa poroksi.',
       selite: 'Palatsin ompelija kiirehtii iltavastaanoton pukua sisään, mutta '
@@ -348,9 +332,9 @@ export const FOKUSKOHTEET_FRA = [
     jaksot: [
       {
         osa: 'tapahtuma',
+        kuva: 'julkisivu',
         teksti: 'Louvre oli ennen kuninkaiden palatsi, ja museoksi se avattiin vuonna 1793. Yli sata vuotta '
           + 'myöhemmin sen seinältä varastettiin Mona Lisa.',
-        kuva: 'julkisivu',
         vuodet: [
           { vuosi: '1793', selite: 'Louvre museoksi', kohta: 'vuonna 1793' },
         ],
@@ -359,8 +343,6 @@ export const FOKUSKOHTEET_FRA = [
         osa: 'tapahtuma',
         teksti: 'Maanantaina elokuussa 1911 Louvre oli suljettu. Valkoiseen työtakkiin pukeutunut mies nosti Mona '
           + 'Lisan seinältä, ja lukitun oven avasi hänelle putkimies.',
-        kuva: 'varkaus',
-        lisakuva: { kuva: 'monalisa', kohta: 'Mona Lisan' },
         vuodet: [
           { vuosi: '1911', selite: 'taulu varastetaan', kohta: 'elokuussa 1911' },
         ],
@@ -370,24 +352,23 @@ export const FOKUSKOHTEET_FRA = [
         teksti: 'Kukaan ei huomannut mitään ennen seuraavaa päivää. Silloin maalari tuli kopioimaan taulua ja '
           + 'löysi tyhjän seinän. Poliisi pidätti runoilija Guillaume Apollinairen, ja Pablo Picasso joutui '
           + 'epäillyksi.',
-        kuva: 'tyhja-seina',
       },
       {
         osa: 'kaanne',
+        kuva: 'uffizi1913',
         teksti: 'Varas oli Louvressa työskennellyt lasittaja Vincenzo Peruggia, jonka poliisi oli jo '
           + 'kuulustellut. Taulu odotti laatikossa yli kaksi vuotta, kunnes hän tarjosi sitä vuonna 1913 '
           + 'firenzeläiselle taidekauppiaalle, joka hälytti poliisin. Peruggia väitti vieneensä taulun '
           + 'takaisin Italiaan.',
-        kuva: 'peruggia',
         vuodet: [
           { vuosi: '1913', selite: 'varas jää kiinni', kohta: 'vuonna 1913' },
         ],
       },
       {
         osa: 'tanaan',
+        kuva: 'jono',
         teksti: 'Mona Lisa palasi Louvreen vuonna 1914, ja varkaus teki siitä entistä kuuluisamman. Nykyään se on '
           + 'Louvren ensimmäisessä kerroksessa. Sen edessä on jono, ja taulua vartioidaan tarkasti.',
-        kuva: 'jono',
         vuodet: [
           { vuosi: '1914', selite: 'taulu palaa Louvreen', kohta: 'vuonna 1914' },
         ],
@@ -400,41 +381,34 @@ export const FOKUSKOHTEET_FRA = [
      */
     jaksokuvat: {
       julkisivu: {
-        tiedosto: 'Paris 1er Louvre Colonnade 559.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/louvre-julkisivu.jpg',
         laji: 'valokuva',
         lyhyt: 'Louvren itäjulkisivu',
-        lahde: 'GFreihalter, Wikimedia Commons (CC BY-SA 4.0)',
+        lahde: 'GFreihalter, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+        tekija: 'GFreihalter',
+        lisenssi: 'CC BY-SA 4.0',
+        leveys: 1200,
+        korkeus: 800,
       },
-      varkaus: {
-        osoite: 'https://media.matkakirja.app/kohtaamiset/kuvajono/skandaali-mona-lisan-varkaus-1911-photo-v1.jpg',
-        laji: 'havainnekuva',
-        lyhyt: 'Peruggia kantaa taulun ulos Louvresta',
-        lahde: 'Tekoälyllä tuotettu havainnekuva. Faktat: Musée du Louvre (The theft of the century); '
-          + 'huoltoportaikon kohtaus on dramatisoitu.',
-      },
-      monalisa: {
-        tiedosto: 'Leonardo da Vinci - Mona Lisa (Louvre, Paris).jpg',
-        laji: 'maalaus',
-        lyhyt: 'Leonardo da Vincin Mona Lisa',
-        lahde: 'Leonardo da Vinci, Musée du Louvre; Wikimedia Commons (public domain)',
-      },
-      'tyhja-seina': {
-        tiedosto: 'Mona Lisa stolen-1911.jpg',
+      uffizi1913: {
+        osoite: 'https://media.matkakirja.app/kuvat/louvre-uffizi1913.jpg',
         laji: 'valokuva',
-        lyhyt: 'Tyhjä seinä Louvressa, elokuu 1911',
-        lahde: 'Tuntematon kuvaaja, 1911, Wikimedia Commons (public domain)',
-      },
-      peruggia: {
-        tiedosto: 'Vincenzo Perugia.jpg',
-        laji: 'valokuva',
-        lyhyt: 'Vincenzo Peruggian poliisikortti',
-        lahde: 'Tuntematon tekijä, Pariisin poliisin kortti 1909, Wikimedia Commons (public domain)',
+        lyhyt: 'Mona Lisa löydön jälkeen, 1913',
+        lahde: 'Tuntematon kuvaaja, 1913, Wikimedia Commons (public domain), rajattu',
+        tekija: 'Tuntematon kuvaaja',
+        lisenssi: 'Public domain',
+        leveys: 1200,
+        korkeus: 800,
       },
       jono: {
-        tiedosto: 'Crowd in front of the Mona Lisa 1.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/louvre-jono.jpg',
         laji: 'valokuva',
         lyhyt: 'Jono Mona Lisan edessä Louvressa',
-        lahde: 'Amaury Laporte, Wikimedia Commons (CC BY 2.0)',
+        lahde: 'Amaury Laporte, Wikimedia Commons (CC BY 2.0), rajattu',
+        tekija: 'Amaury Laporte',
+        lisenssi: 'CC BY 2.0',
+        leveys: 1200,
+        korkeus: 800,
       },
     },
     /*
@@ -512,43 +486,40 @@ export const FOKUSKOHTEET_FRA = [
     jaksot: [
       {
         osa: 'tapahtuma',
+        kuva: 'loisto',
         aanite: 'kertoja-1-otsikko-jakso2',
         teksti: 'Bastilji rakennettiin 1300-luvun lopulla vartioimaan Pariisin itäistä porttia, ja siinä oli '
           + 'kahdeksan tornia. Myöhemmin siitä tuli valtionvankila. Kuningas saattoi lähettää sinne ihmisen '
           + 'kirjeellä, ilman oikeudenkäyntiä, ja linnasta tuli mielivallan symboli.',
-        kuva: 'loisto',
-        lisakuva: { kuva: 'silvestre', kohta: 'kahdeksan tornia' },
       },
       {
         osa: 'tapahtuma',
+        kuva: 'valtaus',
         aanite: 'kertoja-2-jakso3',
         teksti: 'Heinäkuun 14. päivänä 1789 pariisilaisilla oli Invalidien sotilaskodista otettuja aseita mutta '
           + 'ei ruutia, ja ruutia uskottiin olevan Bastiljissa. Vankeja oli vain seitsemän. Silti väkijoukko '
           + 'valtasi linnan, ja kuvernööri surmattiin.',
-        kuva: 'valtaus',
-        lisakuva: { kuva: 'portti', kohta: 'Silti väkijoukko valtasi linnan' },
         vuodet: [
           { vuosi: '1789', selite: 'valtaus', kohta: 'päivänä 1789' },
         ],
       },
       {
         osa: 'kaanne',
+        kuva: 'purku',
         aanite: 'kertoja-3-jakso4',
         teksti: 'Purku alkoi jo samana iltana. Työmaata johti Palloy, jonka työpajassa kivistä veistettiin '
           + 'pienoismalleja ja muistoesineitä. Osa kivistä päätyi Pariisin siltoihin, ja muutamassa vuodessa '
           + 'linnasta ei jäänyt pystyyn mitään.',
-        kuva: 'purku',
         hologrammi: 'sammuu',
         hologrammiKohta: 'Purku alkoi',
       },
       {
         osa: 'tanaan',
+        kuva: 'nyt',
         aanite: 'kertoja-4-jakso5',
         teksti: 'Linnan paikalla on nyt aukio. Aukion pylväs muistuttaa vuoden 1830 vallankumouksesta, ei '
           + '1789:stä. Tornin pohjakiviä on koottu Henri-Galli-puistoon, ja metroaseman laiturilla näkyy pala '
           + 'vallihaudan muuria.',
-        kuva: 'metro',
-        lisakuva: { kuva: 'pylvas1860', kohta: 'Aukion pylväs' },
         vuodet: [
           { vuosi: '1830', selite: 'vallankumous', kohta: '1830' },
         ],
@@ -556,48 +527,45 @@ export const FOKUSKOHTEET_FRA = [
       },
     ],
     jaksokuvat: {
-      pylvas1860: {
-        tiedosto: 'Colonne de Juillet, Place de la Bastille, 11ème arrondissement, Paris. Vers 1865. PH18320.jpg',
-        laji: 'valokuva',
-        lyhyt: 'Bastiljin aukio ja pylväs 1860-luvulla',
-        lahde: 'Pierre Emonts, Musée Carnavalet / Paris Musées, Wikimedia Commons (CC0)',
-      },
       loisto: {
-        osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-bastilji-loistoaika-v2.jpg',
+        osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-bastilji-loistoaika-v2-3x2.jpg',
         laji: 'havainnekuva',
         lyhyt: 'Bastilji loistoaikanaan',
-        lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. '
-          + 'Faktat: Musée Carnavalet — La Bastille au XVIIIe siècle, tarkistettu 5.9.2026.',
-      },
-      silvestre: {
-        tiedosto: 'Le Chasteau de la Bastille de Paris, hors la Porte Sainct Antoine. G.285.jpg',
-        laji: 'piirros',
-        lyhyt: 'Bastiljin linnoitus 1600-luvulla',
-        lahde: 'Israël Silvestre 1650–1660, Musée Carnavalet, Wikimedia Commons (CC0)',
+        lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Faktat: Musée Carnavalet, La Bastille au XVIIIe siècle, rajattu',
+        tekija: 'Matkakirja (tekoälyllä tuotettu havainnekuva)',
+        lisenssi: 'Matkakirjan oma',
+        leveys: 1200,
+        korkeus: 800,
       },
       valtaus: {
-        tiedosto: 'Jean-Baptiste Lallemand - La prise de la Bastille, le 14 juillet 1789 - P1718 - Musée Carnavalet.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/bastilji-valtaus.jpg',
         laji: 'maalaus',
         lyhyt: 'Bastiljin valtaus 14. heinäkuuta 1789',
-        lahde: 'Jean-Baptiste Lallemand 1789, Musée Carnavalet, Wikimedia Commons (PD)',
-      },
-      portti: {
-        osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-ranskan-vallankumous-bastilji-1789-lahi-photo-v4.jpg',
-        laji: 'havainnekuva',
-        lyhyt: 'Pariisilainen Bastiljin portilla 1789',
-        lahde: 'Matkakirjan havainnekuva. Faktat: Musée Carnavalet — Taking of the Bastille, tarkistettu 5.9.2026.',
+        lahde: 'Jean-Baptiste Lallemand 1789, Musée Carnavalet, Wikimedia Commons (PD), rajattu',
+        tekija: 'Jean-Baptiste Lallemand',
+        lisenssi: 'Public domain',
+        leveys: 1200,
+        korkeus: 800,
       },
       purku: {
-        tiedosto: 'The Bastille in the first days of its demolition, by Hubert Robert.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/bastilji-purku.jpg',
         laji: 'maalaus',
-        lyhyt: 'Bastiljin purku alkaa heinäkuussa 1789',
-        lahde: 'Hubert Robert 1789, Wikimedia Commons (PD)',
+        lyhyt: 'Bastiljin purku, Hubert Robertin maalaus',
+        lahde: 'Hubert Robert 1789, Wikimedia Commons (PD), rajattu',
+        tekija: 'Hubert Robert',
+        lisenssi: 'Public domain',
+        leveys: 1200,
+        korkeus: 800,
       },
-      metro: {
-        tiedosto: 'Bastille Metro 2, August 18, 2012.jpg',
+      nyt: {
+        osoite: 'https://media.matkakirja.app/kuvat/bastilji-nyt.jpg',
         laji: 'valokuva',
-        lyhyt: 'Muurin pala metroaseman laiturilla',
-        lahde: 'Shihchuan, Wikimedia Commons (CC BY-SA 2.0)',
+        lyhyt: 'Place de la Bastille ja heinäkuun pylväs nykyään',
+        lahde: 'Guillaume Flament, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+        tekija: 'Guillaume Flament',
+        lisenssi: 'CC BY-SA 4.0',
+        leveys: 1200,
+        korkeus: 800,
       },
     },
     /*
@@ -631,7 +599,7 @@ export const FOKUSKOHTEET_FRA = [
      * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-bastilji-loistoaika-v2.jpg',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-bastilji-loistoaika-v2-3x2.jpg',
       kadonnut: true,
       lyhyt: 'Käsityöläinen katsoo Bastillin kahdeksaa tornia, jotka symboloivat kuninkaan rajatonta valtaa.',
       selite: 'Faubourg Saint-Antoinen käsityöläinen pysäyttää kärrynsä '
@@ -680,16 +648,16 @@ export const FOKUSKOHTEET_FRA = [
     jaksot: [
       {
         osa: 'tapahtuma',
+        kuva: 'rakenteilla',
         teksti: 'Eiffel-torni rakennettiin seisomaan vain kaksikymmentä vuotta, ja kerran huijari myi sen '
           + 'romuksi. Ennen tornia paikalla oli Champ de Mars, sotilaiden harjoituskenttä.',
-        kuva: 'rakenteilla',
       },
       {
         osa: 'tapahtuma',
+        kuva: 'rakenteilla',
         teksti: 'Vuonna 1887 kentälle alettiin koota rautatornia maailmannäyttelyä varten. Työmiehet niittasivat '
           + 'tuhansia osia yhteen yhä korkeammalla. Moni pariisilainen vastusti tornia, mutta vuonna 1889 se '
           + 'oli valmis.',
-        kuva: 'niittaus',
         vuodet: [
           { vuosi: '1887', selite: 'rakentaminen alkaa', kohta: 'Vuonna 1887' },
           { vuosi: '1889', selite: 'torni valmis', kohta: 'vuonna 1889' },
@@ -697,9 +665,9 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
+        kuva: 'nayttely1889',
         teksti: 'Kaksikymmentä vuotta kului, mutta kukaan ei purkanut tornia. Sen huipulla oli radioantenni, ja '
           + 'armeijalle siitä oli niin paljon hyötyä, että torni sai jäädä.',
-        kuva: 'photochrom1900',
       },
       {
         osa: 'kaanne',
@@ -707,48 +675,47 @@ export const FOKUSKOHTEET_FRA = [
           + 'Väärennetyin virkapaperein hän esiintyi ministeriön apulaisjohtajana ja myi muka tornin '
           + 'romukauppiaalle. Kauppias häpesi eikä ilmoittanut poliisille, joten Lustig palasi ja yritti '
           + 'uudestaan.',
-        kuva: 'lustig',
         vuodet: [
           { vuosi: '1925', selite: 'Lustigin huijaus', kohta: 'Vuonna 1925' },
         ],
       },
       {
         osa: 'tanaan',
+        kuva: 'nykyinen',
         teksti: 'Torni seisoo yhä. Vanha harjoituskenttä on nykyään puisto sen jalalla, ja ensimmäisen kerroksen '
           + 'alle on kirjoitettu kullatuin kirjaimin 72 ranskalaisen tiedemiehen ja insinöörin nimeä.',
-        kuva: 'nykyinen',
       },
     ],
     jaksokuvat: {
       rakenteilla: {
-        tiedosto: 'Louis-Emile Durandelle, The Eiffel Tower - State of the Construction, 1888.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/eiffel-torni-rakenteilla.jpg',
         laji: 'valokuva',
-        lyhyt: 'Torni rakenteilla vuonna 1888',
-        lahde: 'Louis-Émile Durandelle 1888, Wikimedia Commons (PD)',
+        lyhyt: 'Eiffel-torni rakenteilla 1888',
+        lahde: 'Neurdein, 1888, Wikimedia Commons (public domain), rajattu',
+        tekija: 'Neurdein',
+        lisenssi: 'Public domain',
+        leveys: 1200,
+        korkeus: 800,
       },
-      niittaus: {
-        osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-eiffel-torni-1888-lahi-photo-v4.jpg',
-        laji: 'havainnekuva',
-        lyhyt: 'Niittaajat tornin työmaalla',
-        lahde: 'Matkakirjan havainnekuva. Faktat: Eiffel Tower official site — history, tarkistettu 5.9.2026.',
-      },
-      photochrom1900: {
-        tiedosto: 'Eiffel Tower, full-view looking toward the Trocadero, Exposition Universal, 1900, Paris, France.jpg',
+      nayttely1889: {
+        osoite: 'https://media.matkakirja.app/kuvat/eiffel-torni-nayttely1889.jpg',
         laji: 'valokuva',
-        lyhyt: 'Eiffel-torni noin vuonna 1900',
-        lahde: 'Library of Congress, Wikimedia Commons (PD)',
-      },
-      lustig: {
-        osoite: 'assets/kartat/nostot/nosto-lustig-eiffel-loistoaika.webp',
-        laji: 'havainnekuva',
-        lyhyt: 'Huijaus hotellin salongissa',
-        lahde: 'Matkakirjan havainnekuva: hetki, jona torni myytiin',
+        lyhyt: 'Eiffel-torni ja Champ de Mars näyttelyssä 1889',
+        lahde: 'Tuntematon valokuvaaja, 1889, Wikimedia Commons (public domain), rajattu',
+        tekija: 'Tuntematon valokuvaaja',
+        lisenssi: 'Public domain',
+        leveys: 1200,
+        korkeus: 800,
       },
       nykyinen: {
-        tiedosto: 'Eiffel Tower from Champ-de-Mars, Paris 5 February 2019.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/eiffel-torni-nykyinen.jpg',
         laji: 'valokuva',
-        lyhyt: 'Eiffel-torni Champ de Marsilta',
-        lahde: 'Alexandre Prévot, Wikimedia Commons (CC BY-SA 2.0)',
+        lyhyt: 'Eiffel-torni ja Champ de Mars ylhäältä katsottuna',
+        lahde: 'Carlos Delgado, Wikimedia Commons (CC BY-SA 3.0), rajattu',
+        tekija: 'Carlos Delgado',
+        lisenssi: 'CC BY-SA 3.0',
+        leveys: 1200,
+        korkeus: 800,
       },
     },
     // Yksi kysymys (vanhasta Lustig-kortista): vastaus on jaksossa 5, eikä mikään näkyvä ennen sitä paljasta sitä.
@@ -802,7 +769,6 @@ export const FOKUSKOHTEET_FRA = [
         teksti: 'Sainte-Chapelle on kappeli Cité-saaren palatsin pihalla. Kuningas Ludvig IX rakennutti sen '
           + 'säilyttämään Kristuksen orjantappurakruunua, ja se vihittiin vuonna 1248. Samassa palatsissa '
           + 'ratkaistiin kuningattaren kaulanauhajuttu.',
-        kuva: 'piha',
         vuodet: [
           { vuosi: '1248', selite: 'kappeli vihitään', kohta: 'vuonna 1248' },
         ],
@@ -812,15 +778,12 @@ export const FOKUSKOHTEET_FRA = [
         teksti: '1770-luvulla jalokivikauppiaat tekivät timanttikaulanauhan. Marie Antoinette kieltäytyi '
           + 'ostamasta sitä, mutta huijari Jeanne de La Motte sai kardinaali de Rohanin uskomaan, että '
           + 'kuningatar halusi nauhan salaa.',
-        kuva: 'nauha',
-        lisakuva: { kuva: 'juoni', kohta: 'huijari Jeanne de La Motte' },
       },
       {
         osa: 'tapahtuma',
         teksti: 'Elokuussa 1784 kardinaali tapasi Versailles\'n puistossa naisen, jonka hän luuli kuningattareksi. '
           + 'Alkuvuodesta 1785 hän sai nauhan kauppiailta ja luovutti sen Jeannelle. Kun kauppiaat pyysivät '
           + 'maksua, kuningatar vaati selvitystä, ja kardinaali pidätettiin.',
-        kuva: 'rohan',
         vuodet: [
           { vuosi: '1784', selite: 'yöllinen tapaaminen', kohta: 'Elokuussa 1784' },
           { vuosi: '1785', selite: 'nauha luovutetaan', kohta: 'Alkuvuodesta 1785' },
@@ -830,16 +793,15 @@ export const FOKUSKOHTEET_FRA = [
         osa: 'kaanne',
         teksti: 'Oikeudenkäynti pidettiin Pariisin parlamentissa. Toukokuussa 1786 kardinaali vapautettiin, ja '
           + 'Jeanne leimattiin varkaaksi ja vietiin vankilaan. Kuningattaren maine kärsi.',
-        kuva: 'viuhka',
         vuodet: [
           { vuosi: '1786', selite: 'Rohan vapautetaan', kohta: 'Toukokuussa 1786' },
         ],
       },
       {
         osa: 'tanaan',
+        kuva: 'ikkunat',
         teksti: 'Sainte-Chapelle on yhä saman palatsin pihalla. Sen ikkunoissa on yli tuhat kohtausta, ja '
           + 'kappeliin mennään turvatarkastuksen kautta.',
-        kuva: 'ikkunat',
       },
     ],
     /*
@@ -847,42 +809,15 @@ export const FOKUSKOHTEET_FRA = [
      * ämpärikuvasta, muut Commonsin vapaita kuvia (lisenssit luettu 17.11.2026).
      */
     jaksokuvat: {
-      piha: {
-        tiedosto: 'Paris Sainte Chapelle East View 02.JPG',
-        laji: 'valokuva',
-        lyhyt: 'Sainte-Chapellen torni oikeuspalatsin rakennusten yllä',
-        lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
-      },
-      nauha: {
-        tiedosto: 'Collier de la Reine.jpg',
-        laji: 'valokuva',
-        lyhyt: 'Kuningattaren kaulanauhan jäljitelmä Breteuilin linnassa',
-        lahde: 'Château de Breteuil, Wikimedia Commons (CC BY-SA 3.0); kuvassa on jäljitelmä, alkuperäinen on kadonnut',
-      },
-      juoni: {
-        osoite: 'https://media.matkakirja.app/kohtaamiset/kuvajono/skandaali-kaulanauhajuttu-1785-photo-v1.jpg',
-        laji: 'havainnekuva',
-        lyhyt: 'Huijarin juoni kuningattaren nimissä',
-        lahde: 'Tekoälyllä tuotettu havainnekuva. Faktat: Château de Versailles — L\'affaire du collier de la Reine; '
-          + 'oppipojan kohtaus on dramatisoitu.',
-      },
-      rohan: {
-        tiedosto: 'Cardinal Rohan2.jpg',
-        laji: 'maalaus',
-        lyhyt: 'Kardinaali de Rohan',
-        lahde: 'Tuntematon taidemaalari, 1700-luku, Wikimedia Commons (public domain)',
-      },
-      viuhka: {
-        tiedosto: 'L\'Affaire du Collier de la Reine, EV0120.jpg',
-        laji: 'valokuva',
-        lyhyt: 'Viuhka, jossa on kaulanauhajutun henkilöiden muotokuvat',
-        lahde: 'Tuntematon tekijä, 1700-luku, Musée Carnavalet / Paris Musées, Wikimedia Commons (CC0)',
-      },
       ikkunat: {
-        tiedosto: 'Sainte-Chapelle, Paris, upper chapel windows.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/sainte-chapelle-ikkunat.jpg',
         laji: 'valokuva',
         lyhyt: 'Yläkappelin lasimaalaukset',
-        lahde: 'Gerda Arendt, Wikimedia Commons (CC0)',
+        lahde: 'Gerda Arendt, Wikimedia Commons (CC0), rajattu',
+        tekija: 'Gerda Arendt',
+        lisenssi: 'CC0',
+        leveys: 1200,
+        korkeus: 800,
       },
     },
     visa: {
@@ -937,16 +872,15 @@ export const FOKUSKOHTEET_FRA = [
     jaksot: [
       {
         osa: 'tapahtuma',
+        kuva: 'vaja',
         teksti: 'Curien vaja oli Pariisin fysiikan ja kemian koulun pihalla seissyt vaja, jossa Marie ja Pierre '
           + 'Curie eristivät radiumin. Se oli ennen ollut ruumiinavaussali.',
-        kuva: 'vaja',
       },
       {
         osa: 'tapahtuma',
         teksti: 'Marie ja Pierre Curie tutkivat uraanimalmin sisältämää säteilyä. Heinäkuussa 1898 he ilmoittivat '
           + 'löytäneensä uuden alkuaineen. He nimesivät sen Marien kotimaan Puolan mukaan poloniumiksi. '
           + 'Joulukuussa he ilmoittivat toisen, radiumin.',
-        kuva: 'marie',
         vuodet: [
           { vuosi: '1898', selite: 'löytö ilmoitettu', kohta: 'Heinäkuussa 1898' },
         ],
@@ -961,7 +895,6 @@ export const FOKUSKOHTEET_FRA = [
         teksti: 'Työ vei yli kolme vuotta, ja vuonna 1902 heillä oli kymmenesosagramma puhdasta radiumkloridia. '
           + 'Iltaisin radium hohti pimeässä, ja Curiet ihailivat sitä. Marie sai fysiikan Nobelin vuonna 1903 '
           + 'Pierren ja Henri Becquerelin kanssa ja kemian Nobelin vuonna 1911 yksin.',
-        kuva: 'laboratorio',
         vuodet: [
           { vuosi: '1902', selite: 'radiumkloridi', kohta: 'vuonna 1902' },
           { vuosi: '1903', selite: 'fysiikan Nobel', kohta: 'vuonna 1903' },
@@ -970,9 +903,9 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tanaan',
+        kuva: 'laatta',
         teksti: 'Koulun seinässä on laatta, joka kertoo löydöstä. Marien myöhempi laboratorio on lähellä '
           + 'Curie-museona.',
-        kuva: 'laatta',
       },
     ],
     /*
@@ -981,29 +914,25 @@ export const FOKUSKOHTEET_FRA = [
      * Viimeinen kuva on aito nykyvalokuva.
      */
     jaksokuvat: {
-      marie: {
-        tiedosto: 'Marie Curie c. 1898.jpg',
-        laji: 'valokuva',
-        lyhyt: 'Marie Curie noin 1898',
-        lahde: 'Tuntematon valokuvaaja, noin 1898, Wikimedia Commons (public domain)',
-      },
       vaja: {
-        osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-marie-curie-hangaari-1898-kauko-photo-v4.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/curie-1898-vaja.jpg',
         laji: 'havainnekuva',
         lyhyt: 'Curien laboratorio oli pihavaja',
-        lahde: 'Tekoälyllä tuotettu havainnekuva. Faktat: AIP ja Paris.fr; vajan sisustus on dramatisoitu.',
-      },
-      laboratorio: {
-        tiedosto: 'Maria Skłodowska-Curie i Pierre Curie w laboratorium (1900).jpg',
-        laji: 'valokuva',
-        lyhyt: 'Marie ja Pierre Curie laboratoriossa noin 1900',
-        lahde: 'Tuntematon valokuvaaja, noin 1900, Wikimedia Commons (public domain)',
+        lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Faktat: AIP ja Paris.fr; vajan sisustus on dramatisoitu, rajattu',
+        tekija: 'Matkakirja (tekoälyllä tuotettu havainnekuva)',
+        lisenssi: 'Matkakirjan oma',
+        leveys: 1200,
+        korkeus: 800,
       },
       laatta: {
-        tiedosto: 'Plaque - Location de découvert du radium - rue Pierre Brossolette, Paris 5.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/curie-1898-laatta.jpg',
         laji: 'valokuva',
         lyhyt: 'Laatta kertoo radiumin löydöstä koulun seinässä',
-        lahde: 'Monceau from San Antonio, Wikimedia Commons (CC BY 2.0)',
+        lahde: 'Monceau from San Antonio, Wikimedia Commons (CC BY 2.0), rajattu',
+        tekija: 'Monceau from San Antonio',
+        lisenssi: 'CC BY 2.0',
+        leveys: 1200,
+        korkeus: 800,
       },
     },
     /*
@@ -1060,21 +989,22 @@ export const FOKUSKOHTEET_FRA = [
     jaksot: [
       {
         osa: 'tapahtuma',
+        kuva: 'bulevardi',
         teksti: 'Grand Café oli kahvila Capucines-bulevardilla Pariisissa, ja sen kellarissa maksava yleisö '
           + 'katsoi Lumièren veljesten elokuvaa.',
-        kuva: 'veljekset',
       },
       {
         osa: 'tapahtuma',
+        kuva: 'portti',
         teksti: 'Lumièren veljekset patentoivat keksintönsä helmikuussa 1895. Laite oli kamera ja projektori '
           + 'yhdessä, ja sillä kuvattu filmi oli noin minuutin pituinen.',
-        kuva: 'juliste',
         vuodet: [
           { vuosi: '1895', selite: 'patentti', kohta: 'helmikuussa 1895' },
         ],
       },
       {
         osa: 'tapahtuma',
+        kuva: 'portti',
         teksti: 'Joulukuun 28. päivänä 1895 Grand Cafén kellarisalissa pidettiin maksullinen näytös. Lippu maksoi '
           + 'frangin, ja illalla katsojia oli vain kolmisenkymmentä. Valkokankaalla Lumièren tehtaan portti '
           + 'Lyonissa aukesi, ja työläiset kävelivät ulos.',
@@ -1084,10 +1014,10 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'kaanne',
+        kuva: 'melies',
         teksti: 'Kutsuvieraiden joukossa oli taikuri Georges Méliès. Hän halusi ostaa laitteen, mutta Lumièret '
           + 'eivät myyneet sitä. Puhe levisi, ja kadulle syntyi jono. Méliès alkoi tehdä omia elokuviaan: '
           + 'ensimmäisen hän teki vuonna 1896 ja Matkan kuuhun vuonna 1902.',
-        kuva: 'melies',
         vuodet: [
           { vuosi: '1896', selite: 'Mélièsin elokuva', kohta: 'vuonna 1896' },
           { vuosi: '1902', selite: 'Matka kuuhun', kohta: 'vuonna 1902' },
@@ -1095,9 +1025,9 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tanaan',
+        kuva: 'scribe',
         teksti: 'Grand Cafén paikalla on nykyään Hôtel Scribe. Sen ravintoloiden sisäänkäynnillä on laatta, joka '
           + 'kertoo näytöksestä.',
-        kuva: 'laatta',
       },
     ],
     /*
@@ -1105,30 +1035,45 @@ export const FOKUSKOHTEET_FRA = [
      * ämpärikuvasta, muut Commonsin vapaita kuvia. Viimeinen kuva on aito nykyvalokuva.
      */
     jaksokuvat: {
-      veljekset: {
-        tiedosto: 'Fratelli Lumiere.jpg',
+      bulevardi: {
+        osoite: 'https://media.matkakirja.app/kuvat/lumiere-1895-bulevardi.jpg',
         laji: 'valokuva',
-        lyhyt: 'Auguste ja Louis Lumière noin 1895',
-        lahde: 'Wikimedia Commons (public domain)',
+        lyhyt: 'Capucines-bulevardi 1890-luvulla, Café de la Paix oikealla',
+        lahde: 'Tuntematon valokuvaaja, Wikimedia Commons (Public domain), rajattu',
+        tekija: 'Tuntematon kuvaaja',
+        lisenssi: 'Public domain',
+        leveys: 1200,
+        korkeus: 800,
       },
-      juliste: {
-        tiedosto: 'Cinematograph Lumiere advertisement 1895.jpg',
+      portti: {
+        osoite: 'https://media.matkakirja.app/kuvat/lumiere-1895-portti.jpg',
         laji: 'valokuva',
-        lyhyt: 'Lumièren Cinématographen mainos 1895',
-        lahde: 'Cinématographe Lumièren mainos 1895, Wikimedia Commons (public domain)',
+        lyhyt: 'Ruutu Lumièren tehtaan elokuvasta',
+        lahde: 'Louis Lumière (ruutu elokuvasta), Wikimedia Commons (Public domain), rajattu',
+        tekija: 'Tuntematon (Louis Lumièren elokuva)',
+        lisenssi: 'Public domain',
+        leveys: 1200,
+        korkeus: 800,
       },
       melies: {
-        osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lumiere-elokuva-1895-lahi-photo-v4.jpg',
-        laji: 'havainnekuva',
-        lyhyt: 'Georges Méliès katsoo, kun valkokankaalla tehtaan portti aukeaa',
-        lahde: 'Tekoälyllä tuotettu havainnekuva. Faktat: Hérodote ja Science and Media Museum; '
-          + 'Mélièsin ilme on dramatisoitu.',
-      },
-      laatta: {
-        tiedosto: 'Plaque Lumière.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/lumiere-1895-melies.jpg',
         laji: 'valokuva',
-        lyhyt: 'Laatta Boulevard des Capucinesilla kertoo näytöksestä',
-        lahde: 'Tangopaso, Wikimedia Commons (public domain)',
+        lyhyt: 'Kohtaus Mélièsin elokuvasta Matka kuuhun, 1902',
+        lahde: 'Georges Méliès, Wikimedia Commons (Public domain), rajattu',
+        tekija: 'Georges Méliès',
+        lisenssi: 'Public domain',
+        leveys: 1200,
+        korkeus: 800,
+      },
+      scribe: {
+        osoite: 'https://media.matkakirja.app/kuvat/lumiere-1895-scribe.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Hôtel Scribe Capucines-bulevardilla nykyään',
+        lahde: 'ScareCriterion12, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+        tekija: 'ScareCriterion12',
+        lisenssi: 'CC BY-SA 4.0',
+        leveys: 1200,
+        korkeus: 800,
       },
     },
     /*
@@ -1183,27 +1128,27 @@ export const FOKUSKOHTEET_FRA = [
     jaksot: [
       {
         osa: 'tapahtuma',
+        kuva: 'koe',
         teksti: 'Lavoisierin laboratorio oli Arsenaalin asunnon yhteydessä Pariisissa. Antoine Lavoisier johti '
           + 'Arsenaalissa ruudin valmistusta ja punnitsi laboratoriossaan kaiken ennen koetta ja sen jälkeen. '
           + 'Tuloksista hän päätteli, että ainetta on kokeen jälkeen yhtä paljon kuin ennen sitä.',
-        kuva: 'koe',
       },
       {
         osa: 'tapahtuma',
+        kuva: 'koe',
         teksti: 'Vuonna 1771 Lavoisier meni naimisiin Marie-Annen kanssa. Marie-Anne oppi englantia ja käänsi '
           + 'ulkomaisia tutkimuksia ranskaksi. Lavoisier huomasi kokeissaan, että palaessa aine yhtyy ilman '
           + 'osaan, jonka hän nimesi hapeksi.',
-        kuva: 'laboratorio',
         vuodet: [
           { vuosi: '1771', selite: 'naimisiin', kohta: 'Vuonna 1771' },
         ],
       },
       {
         osa: 'tapahtuma',
+        kuva: 'david',
         teksti: 'Vuonna 1788 Jacques-Louis David maalasi Lavoisierista ja Marie-Annesta muotokuvan. Marie-Annen '
           + 'työ näkyi myös oppikirjassa: vuonna 1789 ilmestyneeseen Lavoisierin oppikirjaan hän piirsi '
           + 'laitteiden kuvat.',
-        kuva: 'david',
         vuodet: [
           { vuosi: '1788', selite: 'Davidin muotokuva', kohta: 'Vuonna 1788' },
           { vuosi: '1789', selite: 'oppikirja', kohta: 'vuonna 1789' },
@@ -1211,10 +1156,10 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tanaan',
+        kuva: 'valineet',
         teksti: 'Lavoisier oli kuulunut vanhan hallinnon veronkantajiin. Vallankumouksen tuomioistuin tuomitsi '
           + 'hänet kuolemaan, ja hänet mestattiin toukokuun 8. päivänä 1794. Lavoisierin laboratorion '
           + 'välineitä on nykyään Arts et Métiers -museossa Pariisissa.',
-        kuva: 'kaasumittarit',
         vuodet: [
           { vuosi: '1794', selite: 'Lavoisier mestattiin', kohta: 'päivänä 1794' },
         ],
@@ -1226,28 +1171,34 @@ export const FOKUSKOHTEET_FRA = [
      */
     jaksokuvat: {
       koe: {
-        tiedosto: 'Lavoisier experimenting on respiration Wellcome L0000145.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/lavoisier-1780-koe.jpg',
         laji: 'piirros',
-        lyhyt: 'Lavoisier mittaamassa hengitystä',
-        lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
-      },
-      laboratorio: {
-        osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lavoisier-laboratorio-1780-kauko-photo-v4.jpg',
-        laji: 'havainnekuva',
-        lyhyt: 'Lavoisierin laboratorio, havainnekuva',
-        lahde: 'Tekoälyllä tuotettu havainnekuva. Faktat: Science History Institute; laboratorion sisustus on dramatisoitu.',
+        lyhyt: 'Lavoisierin koe laboratoriossa, 1700-luvun piirros',
+        lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0), rajattu',
+        tekija: 'Tuntematon (Wellcome Collection)',
+        lisenssi: 'CC BY 4.0',
+        leveys: 1200,
+        korkeus: 800,
       },
       david: {
-        tiedosto: 'Antoine-Laurent Lavoisier (1743–1794) and His Wife (Marie-Anne-Pierrette Paulze, 1758–1836) MET DT1992.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/lavoisier-1780-david.jpg',
         laji: 'maalaus',
-        lyhyt: 'Jacques-Louis Davidin maalaus Lavoisierista ja Marie-Annesta 1788',
-        lahde: 'Jacques-Louis David 1788, Metropolitan Museum of Art, Wikimedia Commons (CC0)',
+        lyhyt: 'Davidin maalaus Lavoisierista ja Marie-Annesta 1788',
+        lahde: 'Jacques-Louis David 1788, Wikimedia Commons (Public domain), rajattu',
+        tekija: 'Jacques-Louis David',
+        lisenssi: 'Public domain',
+        leveys: 1200,
+        korkeus: 800,
       },
-      kaasumittarit: {
-        tiedosto: 'Laboratoire-de-Lavoisier.jpg',
+      valineet: {
+        osoite: 'https://media.matkakirja.app/kuvat/lavoisier-1780-valineet.jpg',
         laji: 'valokuva',
-        lyhyt: 'Lavoisierin laboratorion kaasumittareita Arts et Métiers -museossa',
-        lahde: 'Edal Anton Lefterov, Wikimedia Commons (CC BY-SA 3.0)',
+        lyhyt: 'Lavoisierin laboratorion välineitä Arts et Métiersissä',
+        lahde: 'Rama, Wikimedia Commons (CC BY-SA 2.0 fr), rajattu',
+        tekija: 'Rama',
+        lisenssi: 'CC BY-SA 2.0 fr',
+        leveys: 1200,
+        korkeus: 800,
       },
     },
     /*
@@ -1306,31 +1257,32 @@ export const FOKUSKOHTEET_FRA = [
     jaksot: [
       {
         osa: 'tapahtuma',
+        kuva: 'piha',
         teksti: 'Pasteurin laboratorio oli École normale supérieuren tiloissa rue d\'Ulmilla Pariisissa. Louis '
           + 'Pasteur tuli kouluun vuonna 1857 tieteellisten opintojen johtajaksi.',
-        kuva: 'maalaus',
         vuodet: [
           { vuosi: '1857', selite: 'tulee kouluun', kohta: 'vuonna 1857' },
         ],
       },
       {
         osa: 'tapahtuma',
+        kuva: 'pullo',
         teksti: 'Pasteurin vastustaja Félix Pouchet uskoi, että elämä voi syntyä itsestään mätänevästä aineesta. '
           + 'Tiedeakatemia oli luvannut palkinnon sille, joka ratkaisee kiistan kokeilla.',
-        kuva: 'pouchet',
       },
       {
         osa: 'tapahtuma',
+        kuva: 'pullo',
         teksti: 'Pasteur keitti lientä lasipulloissa, joiden kaula oli taivutettu joutsenen kaulan muotoon. Ilma '
           + 'pääsi pulloon, mutta pöly jäi mutkaan, ja liemi pysyi kirkkaana. Vuonna 1860 hän vei liemipulloja '
           + 'jopa Alppien jäätikölle, jossa ilmassa oli vain vähän pölyä.',
-        kuva: 'pullot',
         vuodet: [
           { vuosi: '1860', selite: 'pullot jäätiköllä', kohta: 'Vuonna 1860' },
         ],
       },
       {
         osa: 'kaanne',
+        kuva: 'maalaus',
         teksti: 'Pasteur voitti kiistan ja julkaisi tuloksensa 1860-luvun alussa. Hän osoitti myös, että käyminen '
           + 'on elävien mikrobien työtä. Viinin tauteja hän torjui kuumentamalla viiniä, ja keksinnölle '
           + 'haettiin patentti vuonna 1865. Menetelmää kutsutaan pastöroinniksi.',
@@ -1340,9 +1292,9 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tanaan',
+        kuva: 'ens',
         teksti: 'Vuonna 1888 avattiin Institut Pasteur, joka kantaa hänen nimeään. École normale supérieure '
           + 'toimii yhä rue d\'Ulmilla Latinalaiskorttelissa.',
-        kuva: 'ens',
         vuodet: [
           { vuosi: '1888', selite: 'Institut Pasteur', kohta: 'Vuonna 1888' },
         ],
@@ -1353,29 +1305,45 @@ export const FOKUSKOHTEET_FRA = [
      * Edelfeltin maalaus (Commons, PD); jaksoille 3 ja 5 Commons-kuvat (SK 18.11.2026, KK 03.32).
      */
     jaksokuvat: {
-      pullot: {
-        osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-pasteur-pullot-1862-lahi-photo-v4.jpg',
-        laji: 'havainnekuva',
-        lyhyt: 'Pasteurin pullot, havainnekuva',
-        lahde: 'Tekoälyllä tuotettu havainnekuva. Faktat: Institut Pasteur; laboratorion sisustus on dramatisoitu.',
+      piha: {
+        osoite: 'https://media.matkakirja.app/kuvat/pasteur-1862-piha.jpg',
+        laji: 'valokuva',
+        lyhyt: 'École normale supérieuren sisäpiha rue d\'Ulmilla',
+        lahde: 'Jan Sokol, Wikimedia Commons (CC BY-SA 3.0), rajattu',
+        tekija: 'Jan Sokol',
+        lisenssi: 'CC BY-SA 3.0',
+        leveys: 1200,
+        korkeus: 800,
+      },
+      pullo: {
+        osoite: 'https://media.matkakirja.app/kuvat/pasteur-1862-pullo.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Joutsenkaulapullo Pasteurin kokeista',
+        lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0), rajattu, taustaa jatkettu',
+        tekija: 'Tuntematon (Wellcome Collection)',
+        lisenssi: 'CC BY 4.0',
+        leveys: 1200,
+        korkeus: 800,
       },
       maalaus: {
-        tiedosto: 'Albert Edelfelt - Louis Pasteur - 1885.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/pasteur-1862-maalaus.jpg',
         laji: 'maalaus',
-        lyhyt: 'Albert Edelfeltin maalaus Pasteurista 1885',
-        lahde: 'Albert Edelfelt 1885, Wikimedia Commons (public domain)',
-      },
-      pouchet: {
-        tiedosto: 'Portrait of Felix-Archimede Pouchet. Wellcome M0006271.jpg',
-        laji: 'piirros',
-        lyhyt: 'Félix-Archimède Pouchet, muotokuva',
-        lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
+        lyhyt: 'Edelfeltin maalaus Pasteurista laboratoriossa 1885',
+        lahde: 'Albert Edelfelt 1885, Wikimedia Commons (Public domain), rajattu',
+        tekija: 'Albert Edelfelt',
+        lisenssi: 'Public domain',
+        leveys: 1200,
+        korkeus: 800,
       },
       ens: {
-        tiedosto: 'CF6477 Paris 5e rue Ulm ENS rwk.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/pasteur-1862-ens.jpg',
         laji: 'valokuva',
         lyhyt: 'École normale supérieuren sisäänkäynti rue d\'Ulmilla',
-        lahde: 'Mbzt, Wikimedia Commons (CC BY 4.0)',
+        lahde: 'Mbzt, Wikimedia Commons (CC BY 4.0), rajattu',
+        tekija: 'Mbzt',
+        lisenssi: 'CC BY 4.0',
+        leveys: 1200,
+        korkeus: 800,
       },
     },
     /*
@@ -1430,39 +1398,39 @@ export const FOKUSKOHTEET_FRA = [
     jaksot: [
       {
         osa: 'tapahtuma',
+        kuva: 'piirtosali',
         teksti: 'Palais Garnier on Pariisin oopperatalo, jonka rakentamisen sai alkuun murhayritys. Vuonna 1858 '
           + 'keisari Napoleon III välttyi murhayritykseltä vanhan oopperan edessä. Sen jälkeen hän päätti '
           + 'rakennuttaa uuden. Kilpailuun tuli yli sata ehdotusta, ja voittajaksi valittiin nuori, '
           + 'tuntematon arkkitehti Charles Garnier.',
-        kuva: 'julkisivu',
         vuodet: [
           { vuosi: '1858', selite: 'murhayritys', kohta: 'Vuonna 1858' },
         ],
       },
       {
         osa: 'tapahtuma',
+        kuva: 'tyomaa',
         teksti: 'Kun työmaalla kaivettiin perustuksia, maasta nousi pohjavettä. Garnier rakennutti kellariin '
           + 'vesitiiviin betonisäiliön. Vuonna 1870 alkanut sota ja Pariisin kommuuni pysäyttivät '
           + 'rakentamisen.',
-        kuva: 'tyomaa',
         vuodet: [
           { vuosi: '1870', selite: 'sota alkaa', kohta: 'Vuonna 1870' },
         ],
       },
       {
         osa: 'kaanne',
+        kuva: 'palo',
         teksti: 'Syksyllä 1873 vanha oopperatalo paloi. Palon jälkeen Garnierin työmaa sai jatkua, ja uusi talo '
           + 'valmistui alle kahdessa vuodessa.',
-        kuva: 'palo',
         vuodet: [
           { vuosi: '1873', selite: 'vanha ooppera paloi', kohta: 'Syksyllä 1873' },
         ],
       },
       {
         osa: 'tanaan',
+        kuva: 'portaikko',
         teksti: 'Talo avattiin tammikuussa 1875, ja Garnier joutui maksamaan paikkansa avajaisissa itse. Nykyään '
           + 'talossa esitetään yhä balettia, ja katsomon katon on maalannut Marc Chagall vuonna 1964.',
-        kuva: 'portaikko',
         vuodet: [
           { vuosi: '1875', selite: 'talo avattiin', kohta: 'tammikuussa 1875' },
           { vuosi: '1964', selite: 'kattomaalaus', kohta: 'vuonna 1964' },
@@ -1470,29 +1438,45 @@ export const FOKUSKOHTEET_FRA = [
       },
     ],
     jaksokuvat: {
-      julkisivu: {
-        tiedosto: 'Palais Garnier Paris June 2010 002.jpg',
+      piirtosali: {
+        osoite: 'https://media.matkakirja.app/kuvat/palais-garnier-piirtosali.jpg',
         laji: 'valokuva',
-        lyhyt: 'Palais Garnierin julkisivu Place de l\'Opéralla',
-        lahde: 'King of Hearts, Wikimedia Commons (CC BY-SA 4.0)',
+        lyhyt: 'Arkkitehdit Garnierin piirtosalissa',
+        lahde: 'Louis-Émile Durandelle, Metropolitan Museum of Art, Wikimedia Commons (CC0), esirajattu ja rajattu',
+        tekija: 'Louis-Émile Durandelle',
+        lisenssi: 'CC0',
+        leveys: 1200,
+        korkeus: 800,
       },
       tyomaa: {
-        tiedosto: '186. (Chantier de construction de l\'Opéra Garnier. Ouvriers sur la charpente) - Delmaet & Durandelle - btv1b52527860w.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/palais-garnier-tyomaa.jpg',
         laji: 'valokuva',
-        lyhyt: 'Työmiehiä Palais Garnierin rakennustyömaalla 1860-luvun lopulla',
-        lahde: 'Delmaet & Durandelle 1867–1868, Bibliothèque nationale de France, Wikimedia Commons (PD)',
+        lyhyt: 'Palais Garnierin työmaa 1866',
+        lahde: 'Delmaet & Durandelle 1866, Wikimedia Commons (CC0), rajattu',
+        tekija: 'Delmaet & Durandelle',
+        lisenssi: 'CC0',
+        leveys: 1200,
+        korkeus: 800,
       },
       palo: {
-        tiedosto: 'Paris Opera fire 29 10 1873.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/palais-garnier-palo.jpg',
         laji: 'piirros',
-        lyhyt: 'Vanhan oopperatalon palo piirroksessa vuodelta 1873',
-        lahde: 'Illustrated London News 8.11.1873, Wikimedia Commons (PD)',
+        lyhyt: 'Vanhan oopperatalon palo rue Le Peletierillä',
+        lahde: 'Arthur Hauger (Le Monde illustré, 1873), Paris Musées / Musée Carnavalet, Wikimedia Commons (CC0), esirajattu ja rajattu',
+        tekija: 'Arthur Hauger',
+        lisenssi: 'CC0',
+        leveys: 1200,
+        korkeus: 800,
       },
       portaikko: {
-        tiedosto: 'Opera Garnier Grand Escalier.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/palais-garnier-portaikko.jpg',
         laji: 'valokuva',
         lyhyt: 'Palais Garnierin pääportaikko',
-        lahde: 'Benh Lieu Song, Wikimedia Commons (CC BY-SA 3.0)',
+        lahde: 'Pierre André Leclercq, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+        tekija: 'Pierre André Leclercq',
+        lisenssi: 'CC BY-SA 4.0',
+        leveys: 1200,
+        korkeus: 800,
       },
     },
     visa: {

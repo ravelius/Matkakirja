@@ -2186,6 +2186,11 @@ export const SKANDAALIT = {
       otsikko: 'Vrain-Lucas 1861–1870 — 27 000 väärennettyä kirjettä',
       nimio: 'Vrain-Lucas',
       vuosi: '1861–1870',
+      vuodet: [
+        { kohta: 'Vuonna 1861', vuosi: '1861', selite: 'kirjeet myyntiin' },
+        { kohta: 'Heinäkuussa 1867', vuosi: '1867', selite: 'akatemia epäilee' },
+        { kohta: 'helmikuussa 1870', vuosi: '1870', selite: 'tuomio' },
+      ],
       paikka: 'Institut de France (tiedeakatemia), Pariisi',
       lat: 48.8573, lon: 2.3372,
       kortti: 'Vrain-Lucasin väärentämässä kirjeessä Kleopatra kirjoitti Julius Caesarille ranskaksi, vesileimatulle '
@@ -2208,13 +2213,44 @@ export const SKANDAALIT = {
         + 'Vrain-Lucas pidätettiin, ja helmikuussa 1870 tuomioistuin antoi hänelle kaksi vuotta '
         + 'vankeutta. Kirjeet, joista Chasles oli maksanut omaisuuden, olivat arvottomia.',
       lahde: 'en-Wikipedia "Denis Vrain-Lucas". Tarkistettu 2.9.2026.',
-      kuva: {
-        tiedosto: 'Pascal à Galileo.jpg',
-        lyhyt: 'Vrain-Lucasin väärentämä kirje, jonka Blaise Pascal olisi muka kirjoittanut Galileille.',
-        selite: 'Vrain-Lucasin 1860-luvulla väärentämä kirje, jonka Blaise Pascal olisi muka '
-          + 'kirjoittanut Galileo Galileille Pariisissa tammikuussa 1633, yhdeksänvuotiaana — yksi Chaslesin ostamista kirjeistä.',
-        lahde: 'Denis Vrain-Lucas 1860-luku, Wikimedia Commons (PD)',
-      },
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/vrain-lucas-vaarennos.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Vrain-Lucasin väärentämä "muinainen" kirje',
+          selite: 'Vrain-Lucasin väärentämä "muinainen" kirje',
+          lahde: 'Denis Vrain-Lucas (väärennös, Bibliothèque nationale de France), Wikimedia Commons (Public domain), rajattu',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vercingétorix_à_Pompée.jpg',
+          tekija: 'Denis Vrain-Lucas (väärentäjä, 1860-luku)',
+          lisenssi: 'Public domain',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/vrain-lucas-institut1867.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Institut de Francen sisäpiha 1860-luvun puolivälissä',
+          selite: 'Institut de Francen sisäpiha 1860-luvun puolivälissä',
+          lahde: 'Charles Marville, Paris Musées / Musée Carnavalet, Wikimedia Commons (CC0), esirajattu ja rajattu',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cour_de_l\'Institut,_6ème_arrondissement,_Paris,_PH809.jpg',
+          tekija: 'Charles Marville (kuvattu 1865-1868)',
+          lisenssi: 'CC0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/vrain-lucas-institut-nyt.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Institut de France Seinen yli nykyään',
+          selite: 'Institut de France Seinen yli nykyään',
+          lahde: 'DiscoA340, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Institut_de_France_in_July_2022_2.jpg',
+          tekija: 'DiscoA340',
+          lisenssi: 'CC BY-SA 4.0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+      ],
       visa: {
         kysymys: 'Mikä paljasti järkevälle lukijalle Vrain-Lucasin ’Kleopatran '
           + 'kirjeet’ väärennöksiksi?',

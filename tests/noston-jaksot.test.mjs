@@ -75,7 +75,8 @@ test('vienti tuo Tuileries\'n jaksot natiivin raakamoduuliin (luku 8)', () => {
   // Erä 1 (20.11.2026): ei nimi-, esittely- eikä isoisäjaksoa; viisi kertojan jaksoa aikajärjestyksessä.
   assert.deepEqual(t.n.jaksot.map((x) => `${x.osa}${x.aani ? `/${x.aani}` : ''}`),
     ['tapahtuma', 'tapahtuma', 'tapahtuma', 'kaanne', 'tanaan']);
-  assert.equal(new Set(t.n.jaksot.flatMap(jaksonKuvat)).size, 7);
+  // K-4 (20.11.2026): 4 kuvaa (loisto, palo, purku 3–4, päätykolmio); purku jatkuu kahden jakson yli.
+  assert.equal(new Set(t.n.jaksot.flatMap(jaksonKuvat)).size, 4);
   assert.equal(t.n.jaksot[3].hologrammi, 'sammuu');
   assert.equal(t.n.visa.kysymys, 'Mitä Tuileries\'n palatsista jäi pystyyn palon jälkeen?');
   assert.equal(t.n.kysymykset.length, 3);
