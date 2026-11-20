@@ -46,7 +46,7 @@ Aiheita 54 / 60. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | valmiin-maaritelma | Valmiin määritelmä | KK | 3.0 kt | 18.11.2026 |
 | juna-ja-julkaisu | Juna ja julkaisu | JU | 3.0 kt | 18.11.2026 |
 | laitteet-ja-simulaattorit | Laitteet ja simulaattorit | JU | 3.0 kt | 12.11.2026 |
-| kone-ja-levy | Kone ja levy | PT | 3.0 kt | 18.11.2026 |
+| kone-ja-levy | Kone ja levy | PT | 3.0 kt | 20.11.2026 |
 | tilit-ja-kiintio | Tilit ja kiintiö | PT | 2.9 kt | 18.11.2026 |
 | avaimet-ja-luvat | Avaimet ja luvat | PT | 2.8 kt | 12.11.2026 |
 | roolit-ja-viestit | Roolit ja viestit | PT | 3.0 kt | 17.11.2026 |
