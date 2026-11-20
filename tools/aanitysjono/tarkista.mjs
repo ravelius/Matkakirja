@@ -17,6 +17,8 @@
  * skandaalit, historian hetket, eläintäyt, täkynostot, fokusvirtojen täkyt ja täkynostot sekä
  * hahmotelma-, maastokohde- ja fokuskohdepaketit. Kappalejako ja avain = natiivin Puhe.cs /
  * Nahtavyysarkki / Valmisluennat.cs (avaimen testivektorit tools/natiivi-kultaiset/tee-valmisluennat-avaimet.mjs).
+ * Jaksollinen nosto (`jaksot`): luettavat = jaksot ilman nimi-, esittely- ja isoisäjaksoa, ei otsikkoa (peli lukee vain leipätekstin; L5-7);
+ * jakso, jolla on oma äänite (aanikansio + aanite), ei kuulu jonoon.
  * Oletuksena vain Eurooppa (ja maanosattomat: Arktis, Antarktis), koska vain Eurooppa äänitetään.
  *
  * Paluu: 0 = OK, 1 = HYLÄTTY (kappaleita ilman äänitettä ja jonoriviä), 2 = VIKA (vienti tai manifesti ei latautunut).
@@ -115,6 +117,15 @@ function jaa(t) {
 }
 const ilmanB = (x) => x.replace(/<\/?b>/g, '').trim();
 const nostoLuettavat = (otsikko, ingressi, teksti) => [otsikko, ingressi, ...jaa(teksti)].filter((x) => !tyhja(x)).map(ilmanB);
+/**
+ * Jaksollisen noston luettavat (L5-7, KK 20.11.2026; lukija lukee vain leipätekstin, NUI L5-1): jaksot ilman nimi- ja esittelyjaksoa
+ * ja ilman isoisän jaksoa (aani "isoisa"; kuten NostoJaksot.IlmanIsoisaa + nimijakso pois), ei erillistä otsikkoa. Jakso = yksi pala.
+ * Palauttaa [luettavat, omat]: omat[i] = jaksolla on oma äänite (aanikansio + aanite), jolloin peli kiinnittää sen eikä jonoa tarvita.
+ */
+export function jaksoLuettavat(x) {
+  const jaksot = (x.jaksot || []).filter((j) => j && !tyhja(j.teksti) && j.osa !== 'nimi' && j.osa !== 'esittely' && j.aani !== 'isoisa');
+  return [jaksot.map((j) => ilmanB(String(j.teksti).trim())), jaksot.map((j) => !tyhja(x.aanikansio) && !tyhja(j.aanite))];
+}
 function takyTeksti(d) {
   if (d.teksti != null) return d.teksti;
   const l = d.lunastus; if (l == null) return null;
@@ -178,13 +189,18 @@ export function kappaleet(vienti) {
     for (const [ex, lst] of Object.entries(J(`moduulit/js/packs/${f}`).exportit)) {
       if (!Array.isArray(lst)) continue;
       const iso = ex.split('_').at(-1);
-      for (const x of lst) if (x && typeof x === 'object' && x.teksti) lukuja.push([null, iso, pak, x.id, nostoLuettavat(x.nimi, null, x.teksti)]);
+      for (const x of lst) {
+        if (!x || typeof x !== 'object') continue;
+        if (Array.isArray(x.jaksot) && x.jaksot.length) { const [l, o] = jaksoLuettavat(x); lukuja.push([null, iso, pak, x.id, l, o]); }
+        else if (x.teksti) lukuja.push([null, iso, pak, x.id, nostoLuettavat(x.nimi, null, x.teksti)]);
+      }
     }
   }
   const out = [];
-  for (const [c, maa, pak, kohde, luet] of lukuja) {
+  for (const [c, maa, pak, kohde, luet, omat] of lukuja) {
     const [p, t] = luenta(luet);
-    p.forEach((pala, i) => out.push({ kaupunki: c || maa || '', maa: maa || '', manner: maanosa(c, maa), paketti: pak, kohde, pala: i + 1, tagi: t[i], teksti: katkaise(pala.trim()) }));
+    // oma = pala on yksi jakso, jolla on oma äänite (aanikansio): ei jonoon eikä manifestiin
+    p.forEach((pala, i) => out.push({ kaupunki: c || maa || '', maa: maa || '', manner: maanosa(c, maa), paketti: pak, kohde, pala: i + 1, tagi: t[i], teksti: katkaise(pala.trim()), oma: !!omat && p.length === luet.length && omat[i] }));
   }
   return out;
 }
@@ -235,7 +251,7 @@ async function main(argv) {
   // ALKUPERÄISESTÄ tekstistä kuten Äänittäjän vienti (KK 09.05); peli löytää sen raakatekstin haulla.
   const uusiAvain = (r) => avain(r.teksti, man.malli, man.aani, NOPEUS, r.tagi);
   const osuu = (r) => [norm(r.teksti), r.teksti].some((t) => avain(t, man.malli, man.aani, NOPEUS, r.tagi) in man.palat);
-  const alue = kaikki.filter((r) => a.kaikki || r.manner === 'europe' || r.manner === '?');
+  const alue = kaikki.filter((r) => !r.oma && (a.kaikki || r.manner === 'europe' || r.manner === '?'));
   const puuttuvat = new Map(); // avain → rivi (sama teksti voi olla kahdessa paketissa)
   for (const r of alue) if (!osuu(r)) { const k = uusiAvain(r); if (!puuttuvat.has(k)) puuttuvat.set(k, { ...r, avain: k }); }
 
@@ -244,7 +260,7 @@ async function main(argv) {
     const ennen = jono.length;
     // Jonoon jää vain sisällössä oleva ja yhä äänittämätön (osuma myös normalisoimattomalla tekstillä = äänitetty).
     const kaikkiAvaimet = new Set(kaikki.map((r) => uusiAvain(r)));
-    const yhaPuuttuu = new Set(kaikki.filter((r) => !osuu(r)).map((r) => uusiAvain(r)));
+    const yhaPuuttuu = new Set(kaikki.filter((r) => !r.oma && !osuu(r)).map((r) => uusiAvain(r)));
     const aanitetty = jono.filter((r) => kaikkiAvaimet.has(r.avain) && !yhaPuuttuu.has(r.avain)).length;
     jono = jono.filter((r) => yhaPuuttuu.has(r.avain));
     kirjoitaJono(jono, a.jono);
