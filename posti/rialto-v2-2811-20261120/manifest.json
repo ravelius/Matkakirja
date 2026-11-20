@@ -1,0 +1,90 @@
+{
+  "images": [
+    {
+      "task": 2811,
+      "slug": "rialto-bridge-v2",
+      "original": "rialto-bridge-v2-original.png",
+      "originalSHA256": "2c3070477c1d5a0921a682baf905f9dddcefc04b5b98d21f283cf945fe9e0b7b",
+      "originalDimensions": [
+        1752,
+        897
+      ],
+      "review": "rialto-bridge-v2-1000.jpg",
+      "reviewSHA256": "01529690287edac70332aaf453d4e0cab5334e1d2fbfc0e87292bd1c45aadea6",
+      "reviewDimensions": [
+        1000,
+        512
+      ],
+      "generationJob": "exec-2e506a0b-add8-46c5-acc9-8a5108e074e0",
+      "priorPreviewSHA256": "9496165b1d10d37bb186f6af8971ab2dda018e444223fa8119272d4567c87865",
+      "references": [
+        {
+          "title": "File:Panorama of Canal Grande and Ponte di Rialto, Venice - September 2017.jpg",
+          "author": "Martin Falbisoner",
+          "url": "https://commons.wikimedia.org/wiki/File:Panorama_of_Canal_Grande_and_Ponte_di_Rialto,_Venice_-_September_2017.jpg",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sha256": "1b27681b6cfffc9a43d92919d9c251d201358fea873e74038797743de19571bf",
+          "role": "main complete bridge silhouette and camera"
+        },
+        {
+          "title": "File:Ponte di Rialto, April, 2017.jpg",
+          "author": "Alexey Komarov",
+          "url": "https://commons.wikimedia.org/wiki/File:Ponte_di_Rialto,_April,_2017.jpg",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sha256": "07bb70365375b479223699cd9f6856f39ade81767c04a098f00a132cdeb7cb25",
+          "role": "supporting shop arches and parapet detail"
+        },
+        {
+          "title": "File:Rialto bridge venice.jpg",
+          "author": "Vivupadi",
+          "url": "https://commons.wikimedia.org/wiki/File:Rialto_bridge_venice.jpg",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sha256": "00c09a589322e5d3fbaa328a7669db8492c73b287af00981f1ebd05872961ca7",
+          "role": "supporting opposite central arch depth"
+        }
+      ],
+      "orderedMetres": {
+        "overallLength": 48,
+        "deckWidth": 22.9,
+        "span": [
+          28,
+          28.8
+        ],
+        "clearanceAboveWater": 7.32,
+        "structuralRise": 6.4
+      },
+      "visualMeasure": {
+        "totalFrontPx": [
+          16,
+          1734
+        ],
+        "frontArchBaseXPx": [
+          374,
+          1366
+        ],
+        "baseY": 785,
+        "crownFrontIntradosY": 530,
+        "method": "Käsin luettu holvin etureunan sisäreunasta. Valkean taustan raja keskellä kulkee holvin kauempaa reunaa pitkin, joten se ei mittaa etureunan vapaata korkeutta. Noin 4–7 pikselin lukutarkkuus.",
+        "equivalentSpanM": 27.7,
+        "equivalentClearanceM": 7.1
+      },
+      "physicalModelMeasurementsVerified": false,
+      "source": "KK:n tarkennettu mittatilaus. Italian Wikipedia antaa pyöristetyt luvut 48, 22, 28 ja 7,5 m. Structurae-tietue palautti tässä tarkistuksessa HTTP 403. Käytetty KK:n vahvistamia arvoja.",
+      "sourceURLs": [
+        "https://it.wikipedia.org/wiki/Ponte_di_Rialto",
+        "https://structurae.net/en/structures/rialto-bridge",
+        "https://www.veneziaunica.it/en/things-to-do-in-venice/monuments-and-theatres/rialto-bridge"
+      ],
+      "qa": "Rampit portaineen molemmissa päissä, yksi avoin kiviholvi, kaupparivit ja niiden välinen tila näkyvät keskiportiikin läpi. Pääty, myymäläaukotus ja koristeet tulkittuja. Kannen leveys ja holvin vapaa tila tarkistettava 3D-otosta.",
+      "guideSHA256": "efbbb4ad07b40401ae2c14c6694f024ab26b0df40048ec68e30b942f2174c9bf"
+    }
+  ],
+  "sourceCommit": "32e1836b36141908690916a5d0e8ccd9970ae8bd",
+  "phase": "waiting-for-KK-exact-SHA",
+  "tripoCalls": 0,
+  "tripoCreditsUsed": 0,
+  "purchases": 0
+}
