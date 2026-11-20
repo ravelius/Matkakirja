@@ -6,7 +6,7 @@ SÄÄNNÖT:
 1. Junaan vaaditaan vain automaattiset testit ja virheetön käännös. Metal-variantit käännetään aina varjostinmuutoksen jälkeen ja ennen TestFlightia. Pieni virhe korjataan seuraavaan junaan. [R-9.1] [R-9.2]
 2. Sääntö, jonka kone voi valvoa, kirjataan testiksi. Työkalun alkukommentti on sen käyttöohje. [R-13.50]
 3. Simulaattoria käytetään vain uuteen tekniikkaan (varjostin, valo, ohjaus, kosketus, laitteen toiminnot, suorituskyky, muisti, käännösputki), pyydettyihin kuviin ja TestFlightin laitekierrokseen. Muu: testit ja Macin esikatselu. [R-9.11] [R-9.3]
-4. Laitteella ajetaan vain KK:n nimeämä valmis kokonaisuus; kokeita ei mitata. Laitemittaus ei ole junan ehto. Kehitystyötä edistävä mittaus myös päivällä; tarkistusajot vain yöajossa junan kärjestä; roolit eivät tilaa omia; jonossa muuta työtä. Valvonta: laitteet-ja-simulaattorit 12. [R-12.26] [R-2.209] [P-261114-6] [P-261114-8] [P-261114-15] [P-261116-14] [P-261116-26] [P-261116-27] [P-261117-83] [P-261118-7]
+4. Laitteella ajetaan vain KK:n nimeämä valmis kokonaisuus; kokeita ei mitata. Laitemittaus ei ole junan ehto. Kehitystyötä edistävä mittaus myös päivällä; tarkistusajot vain yöajossa junan kärjestä; roolit eivät tilaa omia; jonossa muuta työtä. [R-12.26] [R-2.209] [P-261114-6] [P-261114-8] [P-261114-15] [P-261116-14] [P-261116-26] [P-261116-27] [P-261117-83] [P-261118-7]
 5. Tarkistusajosta ennen linkin versiota päättää KK; ennen TestFlightia se ajetaan aina. [P-261111-5] [R-9.11]
 6. Vika toistetaan oikealla polulla ennen korjausta, ja sama ajo menee korjattuna läpi; mittarin on ensin erotettava toimiva tila. Ämpärin sisältö todennetaan puhtaalla asennuksella tuotannon osoittimen kautta. [R-9.7]
 7. Ääni todetaan soivaksi toiston etenemisestä kahtena hetkenä. Äänivartioiden kaatuessa tarkista ensin Macin äänilaite. [R-9.7] [R-12.15]
@@ -24,4 +24,4 @@ EI VIKA:
 
 TEKOTAPA:
 - Ennen junaa: Matkakirja-proto/tyokalut/tarkista.sh, ennen-junaa.sh, metal-tarkistus.sh. Tarkistusajo: tuotantoputken-tarkistukset.md.
-- Todistusajo: Matkakirja-proto/tyokalut/todistusajo/OHJE.md. Välähdykset: tools/valahdys-yavg.py.
+- Todistusajo: Matkakirja-proto/tyokalut/todistusajo/OHJE.md; skenaariot: JU:n SKENAARIO-OHJE.md. Välähdykset: tools/valahdys-yavg.py.
