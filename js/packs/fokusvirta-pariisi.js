@@ -283,9 +283,7 @@ export const FOKUSVIRTA_PARIISI = {
       ],
       nappi: 'Kolmekymmentä taiteilijaa, jotka perustivat oman näyttelynsä',
       otsikko: 'Monet 1874 — impressionistien ensimmäinen näyttely',
-      teksti: 'Monet ja muut nuoret maalarit olivat Pariisissa taiteilijoita, joita Salon ei huolinut: '
-        + 'kaupungin taide-elämää hallitsi Salon, ja sen valitsematta jättämä maalari jäi '
-        + 'näkymättömäksi. Vuonna 1867 Frédéric Bazille laati vetoomuksen hylättyjen uudesta '
+      teksti: 'Claude Monet ja hänen ystävänsä olivat nuoria maalareita, joiden töitä Pariisin virallinen vuosinäyttely Salon ei huolinut, ja ilman Salonia maalari jäi näkymättömäksi. Vuonna 1867 Frédéric Bazille laati vetoomuksen hylättyjen uudesta '
         + 'näyttelystä.'
         + '\n\n'
         + 'Joulukuussa 1873 Monet, Renoir, Pissarro, Sisley, Degas ja muut perustivat oman yhdistyksen '
@@ -490,7 +488,7 @@ export const FOKUSVIRTA_PARIISI = {
       visa: {
         kysymys: 'Miksi kirahvi kulki Marseillesta Pariisiin jalkaisin?',
         vaihtoehdot: [
-          'Merimatkaa Atlantin ympäri pidettiin liian vaarallisena',
+          'Merimatkaa Espanjan ympäri pidettiin liian vaarallisena',
           'Laivassa ei ollut tilaa',
           'Kuningas halusi kansan katsovan eläintä matkan varrella',
         ],
@@ -500,7 +498,7 @@ export const FOKUSVIRTA_PARIISI = {
       lunastus: [
         'Egyptin varakuningas lähetti kirahvin lahjaksi Ranskan kuninkaalle Kaarle X:lle, ja eläin '
           + 'saapui laivalla Marseilleen lokakuussa 1826. Laivan kanteen oli sahattu reikä, josta kaula '
-          + 'mahtui ulos. Merimatkaa Atlantin ympäri pidettiin liian vaarallisena, joten päätettiin, että '
+          + 'mahtui ulos. Merimatkaa Espanjan ympäri Atlantin kautta pidettiin eläimelle liian vaarallisena, joten päätettiin, että '
           + 'kirahvi kävelee Pariisiin.',
         'Kirahvi talvehti Marseillessa, ja matkaan lähdettiin toukokuussa 1827. Eläimellä oli yllään '
           + 'vahattu sadetakki, johon oli kirjailtu vaakunat, ja luonnontieteilijä Étienne Geoffroy '
@@ -598,7 +596,7 @@ export const FOKUSVIRTA_PARIISI = {
           + 'sanakirjaan.',
         'Heitä koskeva erityismääräys annettiin 10. lokakuuta 1859: myyjät saivat jäädä rannoille, '
           + 'mutta laatikot piti silti kantaa pois joka ilta. Laatikot sai jättää kaiteeseen vasta vuonna '
-          + '1891, ja vuoden 1900 tienoilla niille tuli nykyinen vaunun vihreä väri.',
+          + '1891, ja vuoden 1900 tienoilla niille tuli nykyinen tummanvihreä väri, sama kuin junanvaunuissa.',
         'Nyt yli 200 bukinistia myy vanhoja kirjoja kolmen kilometrin matkalla, ja vuonna 2019 heidän '
           + 'perinteensä lisättiin Ranskan aineettoman kulttuuriperinnön luetteloon.',
       ],

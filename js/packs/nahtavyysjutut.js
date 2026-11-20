@@ -6000,7 +6000,7 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'nosto-kirahvin-kavelymatka',
       teksti: 'Egyptin varakuningas lähetti kirahvin lahjaksi Ranskan kuninkaalle Kaarle X:lle, ja eläin '
         + 'saapui laivalla Marseilleen lokakuussa 1826. Laivan kanteen oli sahattu reikä, josta kaula '
-        + 'mahtui ulos. Merimatkaa Atlantin ympäri pidettiin liian vaarallisena, joten päätettiin, että '
+        + 'mahtui ulos. Merimatkaa Espanjan ympäri Atlantin kautta pidettiin eläimelle liian vaarallisena, joten päätettiin, että '
         + 'kirahvi kävelee Pariisiin.'
         + '\n\n'
         + 'Kirahvi talvehti Marseillessa, ja matkaan lähdettiin toukokuussa 1827. Eläimellä oli yllään '
@@ -6014,6 +6014,8 @@ export const NAHTAVYYSJUTUT = {
       vuodet: [
         { kohta: 'lokakuussa 1826', vuosi: '1826', selite: 'kirahvi Marseilleen' },
         { kohta: 'toukokuussa 1827', vuosi: '1827', selite: 'matka alkoi' },
+        { kohta: '30. kesäkuuta 1827', vuosi: '1827', selite: 'saapui Pariisiin' },
+        { kohta: 'tammikuussa 1845', vuosi: '1845', selite: 'kirahvi kuoli' },
       ],
       kuvat: [
         {
@@ -6044,13 +6046,17 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Heitä koskeva erityismääräys annettiin 10. lokakuuta 1859: myyjät saivat jäädä rannoille, '
         + 'mutta laatikot piti silti kantaa pois joka ilta. Laatikot sai jättää kaiteeseen vasta vuonna '
-        + '1891, ja vuoden 1900 tienoilla niille tuli nykyinen vaunun vihreä väri.'
+        + '1891, ja vuoden 1900 tienoilla niille tuli nykyinen tummanvihreä väri, sama kuin junanvaunuissa.'
         + '\n\n'
         + 'Nyt yli 200 bukinistia myy vanhoja kirjoja kolmen kilometrin matkalla, ja vuonna 2019 heidän '
         + 'perinteensä lisättiin Ranskan aineettoman kulttuuriperinnön luetteloon.',
       vuodet: [
+        { kohta: 'vuonna 1606', vuosi: '1606', selite: 'Pont Neuf valmistui' },
+        { kohta: 'Vuonna 1649', vuosi: '1649', selite: 'kielto sillalla' },
+        { kohta: 'vuoden 1752', vuosi: '1752', selite: 'sana sanakirjaan' },
         { kohta: 'lokakuuta 1859', vuosi: '1859', selite: 'erityismääräys' },
         { kohta: 'vasta vuonna 1891', vuosi: '1891', selite: 'laatikot kaiteeseen' },
+        { kohta: 'vuonna 2019', vuosi: '2019', selite: 'perinne luetteloon' },
       ],
       kuvat: [
         {
@@ -6088,9 +6094,7 @@ export const NAHTAVYYSJUTUT = {
     },
     'Monet 1874': {
       nosto: 'syvennys-pariisi-impressionistit',
-      teksti: 'Monet ja muut nuoret maalarit olivat Pariisissa taiteilijoita, joita Salon ei huolinut: '
-        + 'kaupungin taide-elämää hallitsi Salon, ja sen valitsematta jättämä maalari jäi '
-        + 'näkymättömäksi. Vuonna 1867 Frédéric Bazille laati vetoomuksen hylättyjen uudesta '
+      teksti: 'Claude Monet ja hänen ystävänsä olivat nuoria maalareita, joiden töitä Pariisin virallinen vuosinäyttely Salon ei huolinut, ja ilman Salonia maalari jäi näkymättömäksi. Vuonna 1867 Frédéric Bazille laati vetoomuksen hylättyjen uudesta '
         + 'näyttelystä.'
         + '\n\n'
         + 'Joulukuussa 1873 Monet, Renoir, Pissarro, Sisley, Degas ja muut perustivat oman yhdistyksen '
@@ -6107,6 +6111,7 @@ export const NAHTAVYYSJUTUT = {
         { kohta: 'Vuonna 1867', vuosi: '1867', selite: 'näyttelyvetoomus' },
         { kohta: 'Joulukuussa 1873', vuosi: '1873', selite: 'yhdistys perustettu' },
         { kohta: 'huhtikuussa 1874', vuosi: '1874', selite: 'ensimmäinen näyttely' },
+        { kohta: 'vuonna 1886', vuosi: '1886', selite: 'viimeinen näyttely' },
       ],
       kuvat: [
         {
@@ -6138,6 +6143,7 @@ export const NAHTAVYYSJUTUT = {
       vuodet: [
         { kohta: 'vuonna 1859', vuosi: '1859', selite: 'mikrokuvapatentti' },
         { kohta: 'syyskuussa 1870', vuosi: '1870', selite: 'Pariisi suljettiin' },
+        { kohta: 'tammikuussa 1871', vuosi: '1871', selite: 'piiritys päättyi' },
       ],
       kuvat: [
         {
@@ -6255,7 +6261,9 @@ export const NAHTAVYYSJUTUT = {
         + 'presidentinpalatsille leipiä seuraavan vuoden ajan. Vuonna 2022 UNESCO otti patongin '
         + 'leipomotaidon ja -kulttuurin aineettoman kulttuuriperinnön luetteloonsa.',
       vuodet: [
+        { kohta: 'vuonna 1993', vuosi: '1993', selite: 'asetus' },
         { kohta: 'vuodesta 1994', vuosi: '1994', selite: 'kilpailun alku' },
+        { kohta: 'Vuonna 2022', vuosi: '2022', selite: 'UNESCO-luettelo' },
       ],
       kuvat: [
         {
@@ -6517,166 +6525,10 @@ export const NAHTAVYYSJUTUT = {
       ],
     },
     /*
-     * PARIISIN 7 KADONNUTTA NÄHTÄVYYTTÄ TARINAPAIKKOINA (KK 15.11.2026; SK:n data-LUONNOS, tarkistaja ja KK lukevat
-     * ennen junaa). Kohdekartan pisteet ovat jo olemassa (js/packs/maakartat.js, kadonnut ihme 31.10.2026, nimi =
-     * hahmotelman nimi), joten tämä lohko antaa niille vain oman jutun: juttu voittaa pisteen wiki-linkin
-     * (js/nahtavyydet.js), ja ihmekuva tulee jutun ensimmäiseksi kuvaksi nimellä (matkakirjanIhme). `nosto` on
-     * pisteen oma hahmotelmatunnus; testi ei vertaa sitä mihinkään tekstiin (hahmotelman teksti on eri juttu).
-     * Teksti: docs/raportit/pariisi-7-kadonneen-nahtavyysjutut-v3-20261115.md, korjattuna hakukierros 4:n ja PR 6781:n
-     * tarkistuksen mukaan (poikkeamat: docs/raportit/pariisi-7-data-pr-20261115.md). Kahden itsenäisen lähteen sääntö;
-     * Wikipedian kieliversiot ovat yksi lähde. Kuvat eivät vielä ole pelin mediassa (tools/vienti/kuvamitat.json):
-     * mediapyyntö docs/raportit/pariisi-7-mediapyynto-20261115.md. Äänityslupa vasta KK:n hyväksyttyä tekstin.
+     * Pariisin neljä kadonnutta (Grand Châtelet, Temple-torni, Trocadéron palatsi, Galerie des Machines): nähtävyysjutut
+     * POISTETTU (KK 20.11.2026 klo 10.44, L5-4 erä 2). Jaksoteksti elää vain hahmotelmassa
+     * (js/packs/monumentit-eurooppa.js); kartan piste avaa hahmotelman nosto-kentällä (js/packs/maakartat.js), kuten Orsay.
      */
-    'Grand Châtelet': {
-      aika: '1100-luku–1802',
-      nosto: 'hahmotelma-grand-chatelet',
-      teksti: 'Grand Châtelet oli Pariisin vankila- ja oikeuslinnake Seinen oikealla rannalla. Ludvig VI '
-        + 'rakennutti sen kiveksi 1100-luvulla, ja kun kaupunkia alettiin muurittaa vuonna 1190, siitä '
-        + 'tuli prévôtin eli kuninkaan virkamiehen pääpaikka.'
-        + '\n\n'
-        + 'Vankeina olivat François Villon, Molière velkojen takia vuonna 1645 ja rosvopäällikkö '
-        + 'Cartouche vuonna 1721. Linnakkeen kuoppasolu, la Fosse, kapeni alaspäin kuin kartio, eikä '
-        + 'vanki voinut seistä eikä maata kunnolla.'
-        + '\n\n'
-        + 'Linnakkeessa oli myös ruumishuone, ranskaksi morgue. Sanan sanotaan syntyneen täällä: '
-        + 'vartijat tuijottivat uuden vangin kasvot ulkoa tunnistaakseen hänet, jos hän pakenisi. '
-        + 'Myöhemmin tänne tuotiin tunnistettavaksi löydetyt vainajat.'
-        + '\n\n'
-        + 'Syyskuun alussa 1792 joukko tunkeutui linnakkeeseen ja surmasi vankeja, ja vankila '
-        + 'hylättiin. Linnakkeen purku alkoi vuonna 1802.'
-        + '\n\n'
-        + 'Paikalle tehtiin uusi Place du Châtelet. Napoleon tilasi sinne vuonna 1806 '
-        + 'palmusuihkulähteen voitonmuistomerkiksi. Fontaine du Palmier seisoo aukiolla yhä.',
-      kuvat: [
-        {
-          tiedosto: 'Le Grand Chastelet de Paris. G.283.jpg',
-          lyhyt: 'Grand Châtelet Israël Silvestren etsauksessa 1600-luvun puolivälistä.',
-          selite: 'Grand Châtelet\'n tornit ja porttirakennus Israël Silvestren etsauksessa vuosilta 1650–1660, '
-            + 'puolitoista vuosisataa ennen purkua.',
-          lahde: 'Israël Silvestre 1650–1660, Musée Carnavalet, Wikimedia Commons (CC0)',
-        },
-      ],
-      // Lähdemuistiinpano (SK 15.11.2026): v3 kohta 1 sanatarkasti. Ludvig VI 1100-luvulla = paris.fr "Ces lieux disparus
-      // 2/2" + fr-WP; muuri 1190 = paris.fr + POP PA00086112; Villon = Larousse + fr-WP; Molière 1645 = herodote.net +
-      // fr-WP; Cartouche 1721 ja morgue = Desmaze 1863 + fr-WP; purku alkoi 1802 = paris.fr (kaksi sivua) + fr-WP;
-      // Théâtre 1860–1862 = paris.fr + chatelet.com. Pois: "noin 1130", Villonin vuosi, purku "1802–1810", Rue Saint-Denis.
-      // Holvikäytävä ja tuomioistuimen lakkautus 1790 (kahden lähteen varassa, PR 6781) EIVÄT ole v3:n tekstissä, joten
-      // niitä ei lisätty.
-      lahde: 'Matkakirjan oma teksti · lähteinä Pariisin kaupungin sivut (paris.fr), Parcours Révolution, '
-        + 'France Pittoresque, Pariszigzag, Criminocorpus, Histoires de Paris ja Musée Carnavalet '
-        + '(avatut sivut, tarkistettu 20.11.2026).',
-    },
-    'Temple-torni': {
-      aika: 'keskiaika–1808',
-      nosto: 'hahmotelma-temple-torni',
-      teksti: 'Temple-torni kohosi temppeliritarien Pariisin päämajan linnoituksessa. Philippe Augusten '
-        + 'ajoista kuninkaan aarre talletettiin ritarien linnoitukseen, ja sen muurien suojaan hakeutui '
-        + 'myöhemmin Pariisin veroista vapaita käsityöläisiä.'
-        + '\n\n'
-        + 'Elokuussa 1792 kuningasperhe vietiin Templeen vangiksi. Ludvig XVI vietiin sieltä '
-        + 'giljotiinille, ja hänen poikansa Ludvig XVII kuoli Templessä vuonna 1795.'
-        + '\n\n'
-        + 'Vuonna 1798 brittiamiraali Sidney Smith pakeni Templen vankilasta väärennetyillä '
-        + 'siirtomääräyksillä: häntä oltiin muka viemässä toiseen vankilaan. Huhtikuussa 1804 kenraali '
-        + 'Pichegru löydettiin kuolleena Templen vankilan sellistään.'
-        + '\n\n'
-        + 'Napoleon määräsi tornin purettavaksi vuonna 1808, koska halusi lopettaa rojalistien '
-        + 'pyhiinvaellukset paikalle, jossa kuningasperhe oli ollut vankina.'
-        + '\n\n'
-        + 'Tornista ei ole jäänyt mitään. Sen paikan vieressä on nykyisin Square du Temple -puisto, ja '
-        + 'Rue Eugène-Spullerilla seisoo kaupunginosan kaupungintalo.',
-      kuvat: [
-        {
-          tiedosto: 'La Tour du Temple. Paris Musées 20230619165202.jpg',
-          lyhyt: 'Temple-torni kulmatorneineen vanhassa akvatintassa.',
-          selite: 'Temppeliritarien Grosse Tour neljine kulmatorneineen tuntemattoman taiteilijan akvatintassa, '
-            + 'joka kuuluu Musée Carnavalet\'n kokoelmiin.',
-          lahde: 'Tuntematon taiteilija, Musée Carnavalet, Wikimedia Commons (CC0)',
-        },
-      ],
-      // Lähdemuistiinpano (SK 15.11.2026): v3 kohta 2 sanatarkasti; aika KK:n päätöksellä 'keskiaika–1808'. 13.8.1792 =
-      // Cléry 1798 + parcoursrevolution.paris.fr; Ludvig XVII 1795 = Larousse + fr-WP; purku 1808 ja pyhiinvaellukset =
-      // parcoursrevolution + fr-WP; Square du Temple 1857 = paris.fr + fr-WP; Rue Eugène-Spuller = parcoursrevolution +
-      // fr-WP. Pois: "1240", "1312"-vuosi, "kaksi vuotta", "pohjoiskulma", korkeus, vaatetori (ei v3:ssa).
-      lahde: 'Matkakirjan oma teksti · lähteinä Histoires de Paris, Paris Centre -kaupunginosan sivut, '
-        + 'Parcours Révolution, Paris révolutionnaire, templiers.org, More Than Nelson, James Gillray '
-        + '-sivusto, French Empire -sivusto ja Geri Walton (avatut sivut, tarkistettu 20.11.2026).',
-    },
-    'Trocadéron palatsi': {
-      aika: '1878–1935',
-      nosto: 'hahmotelma-trocadero',
-      teksti: 'Trocadéron palatsi rakennettiin vuoden 1878 maailmannäyttelyä varten Seinen pohjoisrannalle. '
-        + 'Siinä oli kaksi korkeaa tornia, kaksi suurta siipeä ja yli neljän tuhannen paikan sali.'
-        + '\n\n'
-        + 'Salin Cavaillé-Collin urut vihittiin elokuussa 1878, ja César Franck sävelsi niille kolmen '
-        + 'kappaleen sarjan Trois Pièces.'
-        + '\n\n'
-        + 'Palatsiin kuului myös etnografinen museo, joka syntyi vuoden 1878 näyttelystä ja avattiin '
-        + 'yleisölle vuonna 1882. Vielä 1920-luvulla se oli rappiotilassa.'
-        + '\n\n'
-        + 'Vuonna 1935 alkoi palatsin purku vuoden 1937 näyttelyn tieltä, ja siivet jäivät uuden '
-        + 'Chaillot\'n palatsin osiksi.'
-        + '\n\n'
-        + 'Chaillot\'n palatsissa YK:n yleiskokous hyväksyi vuonna 1948 ihmisoikeuksien '
-        + 'yleismaailmallisen julistuksen. Trocadéron urut soivat nykyisin Lyonissa, jonne ne '
-        + 'siirrettiin vuonna 1977.',
-      kuvat: [
-        {
-          tiedosto: 'Le palais du Trocadéro, 1878.jpg',
-          lyhyt: 'Trocadéron palatsi tornineen vuoden 1878 maailmannäyttelyssä.',
-          selite: 'Trocadéron palatsin kaksi tornia ja keskisali Place du Trocadéron puolelta Trichonin '
-            + 'kaiverruksessa vuoden 1878 maailmannäyttelyn ajalta.',
-          lahde: 'Trichon 1878, Brown University Library, Wikimedia Commons (PD)',
-        },
-      ],
-      // Lähdemuistiinpano (SK 15.11.2026): v3 kohta 5; korjattu PR 6781:n tarkistuksen mukaan: "se oli
-      // mauri-bysanttilaistyylinen" pois (vain WP) ja "Palatsia ei ollut tarkoitettu kestämään näyttelyn jälkeen, mutta
-      // se seisoi" → "Palatsi seisoi" (aikalaislähde L'art et l'industrie… 1880 kumoaa: "Dès 1876, il avait été décidé
-      // que le palais du Trocadéro resterait à la ville de Paris"). Kaksi korkeaa tornia ja kaarevat siivet = 1880-teos +
-      // WP; yli 4 000 paikkaa = WP 4 600 + 1880-teos 6 000; valmistuminen 1878 = 1880-teos + WP (alkuvuotta 1876 ei käytetä tekstissä, KK 17.11.2026); siivet Chaillot'ssa = Livre d'or
-      // 1937 + Cité de l'architecture + POP; urut = Auditorium de Lyon + WP.
-      lahde: 'Matkakirjan oma teksti · lähteinä POP PA00086706, L\'art et l\'industrie de tous les peuples à '
-        + 'l\'Exposition universelle de 1878 (1880), Auditorium de Lyon, Henle, Pariisin kaupungin '
-        + 'Chaillot-sivu, Hérodote, Encyclopædia Universalis, En attendant Nadeau ja INHA (avatut '
-        + 'sivut, tarkistettu 20.11.2026).',
-    },
-    'Galerie des Machines': {
-      aika: '1889–1900-luvun alku',
-      nosto: 'hahmotelma-galerie-des-machines',
-      teksti: 'Galerie des Machines oli vuoden 1889 Pariisin maailmannäyttelyn konehalli Champ-de-Marsilla, '
-        + 'kentän toisessa päässä kuin Eiffel-torni. Se oli noin 420 metriä pitkä ja 115 metriä leveä, '
-        + 'eikä sen sisällä ollut yhtään pilaria, sillä teräskaaret nojasivat toisiinsa kolmesta '
-        + 'nivelestä.'
-        + '\n\n'
-        + 'Vieraita kuljettivat hallissa liikkuvat sillat. Esillä oli myös Edisonin fonografi, jolla '
-        + 'kuultiin muun muassa Marseillaise.'
-        + '\n\n'
-        + 'Näyttelyn jälkeenkin halli jäi käyttöön: vuonna 1900 siellä pidettiin maatalouden ja '
-        + 'elintarvikkeiden näyttely, ja marraskuussa 1901 alkoi Barnum & Bailey -sirkuksen esityssarja '
-        + 'kolmessa areenassa. Sarja päättyi maaliskuussa 1902.'
-        + '\n\n'
-        + 'Vuonna 1909 halli purettiin, jotta näkymä Champ-de-Marsille aukeaisi. Yli neljäkymmentä '
-        + 'metriä korkea halli oli seissyt paikallaan kaksikymmentä vuotta.'
-        + '\n\n'
-        + 'Hallia ei ole enää, mutta Eiffel-torni seisoo yhä Champ-de-Marsin toisessa päässä, missä '
-        + 'konehalli aikoinaan kohosi.',
-      kuvat: [
-        {
-          tiedosto: 'Intérieur de la Galerie des machines, présentation des machines, 7e arrondissement, Paris. PH77410.jpg',
-          lyhyt: 'Konehallin sisäpuoli koneineen noin vuonna 1889.',
-          selite: 'Galerie des Machinesin koneosastot kaarevan lasikaton alla Hippolyte Blancardin valokuvassa '
-            + 'noin vuodelta 1889.',
-          lahde: 'Hippolyte Blancard noin 1889, Musée Carnavalet, Wikimedia Commons (CC0)',
-        },
-      ],
-      // Lähdemuistiinpano (SK 15.11.2026): v3 kohta 6 sanatarkasti; aika KK:n päätöksellä '1889–1900-luvun alku'
-      // (purku paris.fr 1909 / en-WP 1910). 420 × 115 m, kaksikymmentä kaarta, pilarittomuus ja liikkuvat sillat =
-      // Parville, L'Exposition universelle (1890) + en-WP; yli 40 m = Parville 45 m / en-WP 48 m; näkymän avaaminen =
-      // paris.fr "Ces lieux disparus 4/4" + en-WP. Pois: sähkökäyttöiset sillat, 15 000 hevosta, rauta teräksen sijaan.
-      lahde: 'Matkakirjan oma teksti · lähteinä Parville, L\'Exposition universelle (1890), Pariisin '
-        + 'kaupungin Ces lieux disparus -sarja, Structurae, Pariszigzag, Gilwro, BnF (CNAC), AHICF, '
-        + 'Cambridge University Press ja Phonographia (avatut sivut, tarkistettu 20.11.2026).',
-    },
   },
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN

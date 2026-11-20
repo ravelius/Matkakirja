@@ -166,7 +166,7 @@ export const EUROOPAN_KADONNEET = {
         {
           osa: 'tapahtuma',
           teksti: 'Grand Châtelet oli Pariisin vankila- ja oikeuslinnake Seinen oikealla rannalla. Ludvig VI '
-            + 'rakennutti sen kiveksi 1100-luvulla, ja kun kaupunkia alettiin muurittaa vuonna 1190, siitä '
+            + 'rakennutti sen kiveksi 1100-luvulla, ja kun kaupungin ympärille alettiin rakentaa muuria vuonna 1190, siitä '
             + 'tuli prévôtin eli kuninkaan virkamiehen pääpaikka.',
           kuva: 'loisto',
           vuodet: [
@@ -186,7 +186,7 @@ export const EUROOPAN_KADONNEET = {
         {
           osa: 'tapahtuma',
           teksti: 'Linnakkeessa oli myös ruumishuone, ranskaksi morgue. Sanan sanotaan syntyneen täällä: '
-            + 'vartijat tuijottivat uuden vangin kasvot ulkoa tunnistaakseen hänet, jos hän pakenisi. '
+            + 'vartijat tuijottivat uutta vankia pitkään painaakseen hänen kasvonsa mieleen, jos hän pakenisi. '
             + 'Myöhemmin tänne tuotiin tunnistettavaksi löydetyt vainajat.',
         },
         {
@@ -535,7 +535,7 @@ export const EUROOPAN_KADONNEET = {
         {
           osa: 'tapahtuma',
           teksti: 'Palatsiin kuului myös etnografinen museo, joka syntyi vuoden 1878 näyttelystä ja avattiin '
-            + 'yleisölle vuonna 1882. Vielä 1920-luvulla se oli rappiotilassa.',
+            + 'yleisölle vuonna 1882. 1920-luvulla museo oli päässyt rappiolle.',
           vuodet: [
             { vuosi: '1882', selite: 'museo avataan', kohta: 'vuonna 1882' },
           ],
@@ -642,8 +642,7 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'tanaan',
-          teksti: 'Hallia ei ole enää, mutta Eiffel-torni seisoo yhä Champ-de-Marsin toisessa päässä, missä '
-            + 'konehalli aikoinaan kohosi.',
+          teksti: 'Hallia ei ole enää. Sen paikka oli Champ-de-Marsin eteläpäässä École Militairen edessä, ja kentän toisessa päässä seisoo yhä Eiffel-torni.',
         },
       ],
       jaksokuvat: {
