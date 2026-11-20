@@ -238,45 +238,42 @@ export const EUROOPAN_KADONNEET = {
       nappi: 'Palatsi, jonka raunioista tuli asema',
       laudat: { maailmankartta: { x: 5910.9, y: 1439.5 }, europe: { x: 255.9, y: 608.6 } },
       // teksti lasketaan jaksoista (ks. ihmeKohde). Lähdeaineisto: docs/raportit/palais-orsay-nosto-teksti-20261118.md.
-      otsikko: 'Palais d\'Orsay 1873 — palatsi, jonka raunioiden paikalle tuli asema',
+      otsikko: 'Palatsi, jonka paikalle tuli asema',
       jaksot: [
-        { osa: 'nimi', teksti: 'Palais d\'Orsay.' },
-        { osa: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
-        {
-          osa: 'koukku',
-          aani: 'isoisa',
-          teksti: 'Pariisi, 1873. Kävelin tänään Seinen rantaa pitkin. '
-            + 'Rannalla seisoi keskellä kaupunkia palaneen palatsin rauniot.',
-          vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
-        },
         {
           osa: 'tapahtuma',
-          teksti: 'Napoleonin aikana Seinen rannalle alettiin rakentaa hallintopalatsia. '
-            + 'Se valmistui vasta noin kolmenkymmenen vuoden päästä. '
-            + 'Siellä toimivat valtioneuvosto ja tilintarkastustuomioistuin.',
+          teksti: 'Palais d\'Orsay oli hallintopalatsi Seinen rannalla Pariisissa. Napoleonin aikana sen '
+            + 'rakentaminen alettiin, ja se valmistui vasta noin kolmenkymmenen vuoden päästä. Siellä toimivat '
+            + 'valtioneuvosto ja tilintarkastustuomioistuin.',
           kuva: 'loisto',
         },
         {
           osa: 'tapahtuma',
-          teksti: 'Tilintarkastustuomioistuimen portaikon seinille Théodore Chassériau maalasi freskot. '
-            + 'Pariisin kommuunin aikana, toukokuussa 1871, palatsi paloi. '
-            + 'Émile Zola kuvasi tulipaloa romaanissaan La Débâcle.',
-          vuodet: [{ vuosi: '1871', selite: 'palatsi paloi', kohta: 'toukokuussa 1871' }],
+          teksti: 'Tilintarkastustuomioistuimen portaikon seinille Théodore Chassériau maalasi freskot. Pariisin '
+            + 'kommuunin aikana, toukokuussa 1871, palatsi paloi. Émile Zola kuvasi tulipaloa romaanissaan La '
+            + 'Débâcle.',
+          vuodet: [
+            { vuosi: '1871', selite: 'palatsi paloi', kohta: 'toukokuussa 1871' },
+          ],
         },
         {
           osa: 'kaanne',
-          teksti: 'Tuli tuhosi freskoja. Rauniot jäivät keskelle Pariisia vuosikymmeniksi, ja ne seisoivat siinä vielä isoisäsi matkan aikaan.',
+          teksti: 'Tuli tuhosi freskoja. Rauniot jäivät keskelle Pariisia vuosikymmeniksi. Vuonna 1900 '
+            + 'maailmannäyttelyä varten niiden paikalle rakennettiin rautatieasema.',
           kuva: 'rauniot',
           hologrammi: 'sammuu',
           hologrammiKohta: 'Tuli tuhosi',
+          vuodet: [
+            { vuosi: '1900', selite: 'maailmannäyttely', kohta: 'Vuonna 1900' },
+          ],
         },
         {
           osa: 'tanaan',
-          teksti: 'Raunioiden paikalle rakennettiin rautatieasema vuoden 1900 maailmannäyttelyä varten. '
-            + 'Asemasta tuli Orsayn taidemuseo vuonna 1986.',
+          teksti: 'Asemasta tuli Orsayn taidemuseo. Rakennus päätettiin vuonna 1977 muuttaa museoksi, ja museo '
+            + 'avattiin yleisölle vuonna 1986. Se seisoo yhä Seinen rannalla, samalla paikalla kuin palatsi.',
           kuva: 'museo',
           vuodet: [
-            { vuosi: '1900', selite: 'maailmannäyttely', kohta: 'vuoden 1900' },
+            { vuosi: '1977', selite: 'päätös museosta', kohta: 'vuonna 1977' },
             { vuosi: '1986', selite: 'museo avattiin', kohta: 'vuonna 1986' },
           ],
         },
@@ -334,24 +331,22 @@ export const EUROOPAN_KADONNEET = {
       nappi: 'Lasihalli, jonka tilalle tuli Grand Palais',
       laudat: { maailmankartta: { x: 5910.4, y: 1439.2 }, europe: { x: 255.6, y: 608.4 } },
       // teksti lasketaan jaksoista (ks. ihmeKohde). Lähdeaineisto: docs/raportit/palais-industrie-grand-palais-nosto-teksti-20261118.md.
-      otsikko: 'Palais de l\'Industrie 1873 — halli, jonka paikalle tuli Grand Palais',
+      otsikko: 'Halli, jonka paikalle tuli Grand Palais',
       jaksot: [
-        { osa: 'nimi', teksti: 'Palais de l\'Industrie.' },
-        { osa: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
         {
-          osa: 'koukku',
-          aani: 'isoisa',
-          teksti: 'Pariisi, 1873. Kävelin tänään Champs-Élysées\'n tuntumassa suuren näyttelyhallin ohi. '
-            + 'Se oli jäänyt paikalleen vuoden 1855 maailmannäyttelyn jälkeen.',
-          vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
+          osa: 'tapahtuma',
+          teksti: 'Palais de l\'Industrie oli suuri näyttelyhalli Champs-Élysées\'n tuntumassa Pariisissa. Sen '
+            + 'paikalla seisoo nykyään Grand Palais. Hallin suunnittelussa olivat mukana insinööri Barrault ja '
+            + 'arkkitehti Viel.',
+          kuva: 'loisto',
         },
         {
           osa: 'tapahtuma',
-          teksti: 'Hallin suunnittelussa olivat mukana insinööri Barrault ja arkkitehti Viel. '
-            + 'Se rakennettiin Pariisin vuoden 1855 maailmannäyttelyä varten, ja näyttely avattiin toukokuussa. '
-            + 'Näyttelyn jälkeenkin siellä pidettiin näyttelyitä ja tapahtumia.',
-          kuva: 'loisto',
-          vuodet: [{ vuosi: '1855', selite: 'maailmannäyttely', kohta: 'vuoden 1855' }],
+          teksti: 'Halli rakennettiin Pariisin vuoden 1855 maailmannäyttelyä varten, ja näyttely avattiin '
+            + 'toukokuussa. Näyttelyn jälkeenkin siellä pidettiin näyttelyitä ja tapahtumia.',
+          vuodet: [
+            { vuosi: '1855', selite: 'maailmannäyttely', kohta: 'vuoden 1855' },
+          ],
         },
         {
           osa: 'kaanne',
@@ -360,14 +355,18 @@ export const EUROOPAN_KADONNEET = {
           kuva: 'portti',
           hologrammi: 'sammuu',
           hologrammiKohta: 'Halli ei saanut jäädä',
-          vuodet: [{ vuosi: '1900', selite: 'maailmannäyttely', kohta: 'vuoden 1900' }],
+          vuodet: [
+            { vuosi: '1900', selite: 'maailmannäyttely', kohta: 'vuoden 1900' },
+          ],
         },
         {
           osa: 'tanaan',
-          teksti: 'Paikalle rakennettiin Grand Palais. Kesällä 2024 sen lasikaton alla miekkailtiin Pariisin '
-            + 'olympialaisissa, ja kunnostuksen jälkeen koko rakennus avattiin yleisölle vuonna 2025.',
+          teksti: 'Paikalle rakennettiin lasikattoinen Grand Palais. Rakennus suljettiin kunnostukseen vuonna 2021. '
+            + 'Kesällä 2024 sen lasikaton alla miekkailtiin Pariisin olympialaisissa, ja koko rakennus avattiin '
+            + 'yleisölle vuonna 2025.',
           kuva: 'grandpalais',
           vuodet: [
+            { vuosi: '2021', selite: 'kunnostus alkaa', kohta: 'vuonna 2021' },
             { vuosi: '2024', selite: 'olympialaiset', kohta: 'Kesällä 2024' },
             { vuosi: '2025', selite: 'uudelleen avattu', kohta: 'vuonna 2025' },
           ],
@@ -490,25 +489,23 @@ export const EUROOPAN_KADONNEET = {
       nappi: 'Pariisin vatsa, jonka tilalle jäi kuoppa',
       laudat: { maailmankartta: { x: 5911.5, y: 1439.4 }, europe: { x: 256.2, y: 608.5 } },
       // teksti lasketaan jaksoista (ks. ihmeKohde). Lähdeaineisto: docs/raportit/les-halles-nosto-teksti-20261117.md.
-      otsikko: 'Les Halles 1873 — Pariisin vatsa, jonka tilalle jäi reikä',
+      otsikko: 'Pariisin vatsa, jonka tilalle jäi reikä',
       jaksot: [
-        { osa: 'nimi', teksti: 'Les Halles.' },
-        { osa: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
         {
-          osa: 'koukku',
-          aani: 'isoisa',
-          teksti: 'Pariisi, 1873. Kävelin Les Hallesin paviljonkien välissä. Yhdessä myytiin vihanneksia, '
-            + 'toisessa kalaa ja kolmannessa lihaa.',
-          kuva: 'marville',
+          osa: 'tapahtuma',
+          teksti: 'Les Hallesin hallit olivat Pariisin ruokatori, jonka historia ulottuu 1100-luvulle. Kuningas '
+            + 'Philippe Auguste rakennutti sinne 1183 ensimmäiset katetut hallit.',
+          kuva: 'loisto',
+          vuodet: [
+            { vuosi: '1183', selite: 'ensimmäiset hallit', kohta: 'sinne 1183' },
+          ],
         },
         {
           osa: 'tapahtuma',
-          teksti: 'Les Halles oli Pariisin ruokatori, ja sen historia ulottuu 1100-luvulle. Kuningas Philippe '
-            + 'Auguste rakennutti sinne 1183 ensimmäiset katetut hallit. Arkkitehti Victor Baltard suunnitteli '
-            + 'ensin kivihallin, mutta Napoleon III halusi metallia. Siksi paikalle rakennettiin 1850-luvulta '
-            + 'alkaen kymmenen paviljonkia raudasta ja lasista.',
-          kuva: 'loisto',
-          vuodet: [{ vuosi: '1183', selite: 'ensimmäiset hallit', kohta: 'sinne 1183' }],
+          teksti: 'Arkkitehti Victor Baltard suunnitteli ensin kivihallin, mutta Napoleon III halusi metallia. '
+            + 'Siksi paikalle rakennettiin 1850-luvulta alkaen kymmenen paviljonkia raudasta ja lasista. Niissä '
+            + 'myytiin vihanneksia, kalaa ja lihaa.',
+          kuva: 'marville',
         },
         {
           osa: 'tapahtuma',
@@ -521,18 +518,20 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'kaanne',
-          teksti: 'Hallit purettiin 1970-luvun alussa, vaikka moni vastusti purkua. Jäljelle jäi niin suuri '
-            + 'kuoppa, että sitä kutsuttiin Les Hallesin reiäksi.',
+          teksti: 'Hallit purettiin 1970-luvun alussa, vaikka moni vastusti purkua. Jäljelle jäi niin suuri kuoppa, '
+            + 'että sitä kutsuttiin Les Hallesin reiäksi.',
           kuva: 'purku',
           hologrammi: 'sammuu',
           hologrammiKohta: 'Hallit purettiin',
         },
         {
           osa: 'tanaan',
-          teksti: 'Yksi paviljonki purettiin osiin ja pystytettiin uudelleen Nogent-sur-Marneen. Hallien '
-            + 'paikalle avattiin vuonna 1979 Forum des Halles -ostoskeskus.',
+          teksti: 'Yksi paviljonki purettiin osiin ja pystytettiin uudelleen Nogent-sur-Marneen. Hallien paikalle '
+            + 'avattiin vuonna 1979 Forum des Halles -ostoskeskus.',
           kuva: 'nogent',
-          vuodet: [{ vuosi: '1979', selite: 'Forum avattiin', kohta: 'vuonna 1979' }],
+          vuodet: [
+            { vuosi: '1979', selite: 'Forum avattiin', kohta: 'vuonna 1979' },
+          ],
         },
       ],
       jaksokuvat: {

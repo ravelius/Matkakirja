@@ -1,0 +1,279 @@
+{
+  "kuvaus": "Pariisin 46 nostotekstin rikkeet ENNEN erää 1 (origin/main 1b8babd1d643fd1960468141c97b86081048e77c, 20.11.2026). Saa vain pienentyä; tarkistus: tools/sisalto/noston-tarkistus.mjs, testi tests/noston-tekstisaannot.test.mjs. Rikkeet: alku, isoisa, jarjestys, pituus, rivit (vain jaksollinen). Merkit ilman kappalevälejä.",
+  "pohja": "1b8babd1d643fd1960468141c97b86081048e77c",
+  "nostoja": 46,
+  "nostot": {
+    "tuileries": {
+      "ryhma": "A",
+      "merkkeja": 852,
+      "rikkeet": [
+        "alku",
+        "rivit"
+      ]
+    },
+    "louvre": {
+      "ryhma": "A",
+      "merkkeja": 994,
+      "rikkeet": [
+        "alku",
+        "rivit"
+      ]
+    },
+    "bastilji": {
+      "ryhma": "A",
+      "merkkeja": 915,
+      "rikkeet": [
+        "rivit"
+      ]
+    },
+    "eiffel-torni": {
+      "ryhma": "A",
+      "merkkeja": 959,
+      "rikkeet": [
+        "alku",
+        "isoisa",
+        "rivit"
+      ]
+    },
+    "sainte-chapelle": {
+      "ryhma": "A",
+      "merkkeja": 996,
+      "rikkeet": [
+        "alku"
+      ]
+    },
+    "curie-1898": {
+      "ryhma": "A",
+      "merkkeja": 842,
+      "rikkeet": [
+        "alku",
+        "rivit"
+      ]
+    },
+    "lumiere-1895": {
+      "ryhma": "A",
+      "merkkeja": 720,
+      "rikkeet": [
+        "alku"
+      ]
+    },
+    "lavoisier-1780": {
+      "ryhma": "A",
+      "merkkeja": 769,
+      "rikkeet": [
+        "alku",
+        "rivit"
+      ]
+    },
+    "pasteur-1862": {
+      "ryhma": "A",
+      "merkkeja": 841,
+      "rikkeet": [
+        "alku"
+      ]
+    },
+    "palais-garnier": {
+      "ryhma": "A",
+      "merkkeja": 727,
+      "rikkeet": [
+        "alku"
+      ]
+    },
+    "hahmotelma-palais-orsay": {
+      "ryhma": "A",
+      "merkkeja": 634,
+      "rikkeet": [
+        "alku",
+        "isoisa"
+      ]
+    },
+    "hahmotelma-palais-industrie": {
+      "ryhma": "A",
+      "merkkeja": 552,
+      "rikkeet": [
+        "alku"
+      ]
+    },
+    "hahmotelma-les-halles": {
+      "ryhma": "A",
+      "merkkeja": 776,
+      "rikkeet": [
+        "alku"
+      ]
+    },
+    "b:Grand Châtelet": {
+      "ryhma": "B",
+      "merkkeja": 719,
+      "rikkeet": [
+        "isoisa",
+        "jarjestys"
+      ]
+    },
+    "b:Temple-torni": {
+      "ryhma": "B",
+      "merkkeja": 690,
+      "rikkeet": [
+        "alku",
+        "isoisa",
+        "jarjestys"
+      ]
+    },
+    "b:Trocadéron palatsi": {
+      "ryhma": "B",
+      "merkkeja": 821,
+      "rikkeet": [
+        "isoisa",
+        "jarjestys"
+      ]
+    },
+    "b:Galerie des Machines": {
+      "ryhma": "B",
+      "merkkeja": 520,
+      "rikkeet": [
+        "alku",
+        "isoisa",
+        "jarjestys"
+      ]
+    },
+    "c:Riemukaari": {
+      "ryhma": "C",
+      "merkkeja": 694,
+      "rikkeet": [
+        "jarjestys"
+      ]
+    },
+    "c:Concorden aukio": {
+      "ryhma": "C",
+      "merkkeja": 715,
+      "rikkeet": [
+        "alku"
+      ]
+    },
+    "c:Luxembourgin puisto": {
+      "ryhma": "C",
+      "merkkeja": 1295,
+      "rikkeet": [
+        "alku",
+        "pituus"
+      ]
+    },
+    "c:Panthéon": {
+      "ryhma": "C",
+      "merkkeja": 1422,
+      "rikkeet": [
+        "alku",
+        "pituus"
+      ]
+    },
+    "c:Saint-Eustache": {
+      "ryhma": "C",
+      "merkkeja": 988,
+      "rikkeet": [
+        "jarjestys"
+      ]
+    },
+    "c:Pompidou-keskus": {
+      "ryhma": "C",
+      "merkkeja": 897,
+      "rikkeet": [
+        "jarjestys"
+      ]
+    },
+    "c:Invalidit": {
+      "ryhma": "C",
+      "merkkeja": 1121,
+      "rikkeet": [
+        "alku",
+        "pituus"
+      ]
+    },
+    "c:Petit Palais": {
+      "ryhma": "C",
+      "merkkeja": 885,
+      "rikkeet": [
+        "jarjestys"
+      ]
+    },
+    "c:Tour Montparnasse": {
+      "ryhma": "C",
+      "merkkeja": 900,
+      "rikkeet": [
+        "alku"
+      ]
+    },
+    "d:Bizet 1875": {
+      "ryhma": "D",
+      "merkkeja": 1730,
+      "rikkeet": [
+        "isoisa",
+        "pituus"
+      ]
+    },
+    "d:Vrain-Lucas": {
+      "ryhma": "D",
+      "merkkeja": 306,
+      "rikkeet": [
+        "alku"
+      ]
+    },
+    "d:Monet 1874": {
+      "ryhma": "D",
+      "merkkeja": 714,
+      "rikkeet": [
+        "alku",
+        "isoisa"
+      ]
+    },
+    "d:Piiritys 1870": {
+      "ryhma": "D",
+      "merkkeja": 922,
+      "rikkeet": [
+        "alku",
+        "jarjestys"
+      ]
+    },
+    "d:Piaf ja Django": {
+      "ryhma": "D",
+      "merkkeja": 1029,
+      "rikkeet": [
+        "jarjestys",
+        "pituus"
+      ]
+    },
+    "f:Curie 1898": {
+      "ryhma": "F",
+      "merkkeja": 1147,
+      "rikkeet": [
+        "pituus"
+      ]
+    },
+    "f:Lavoisier 1780": {
+      "ryhma": "F",
+      "merkkeja": 833,
+      "rikkeet": [
+        "alku"
+      ]
+    },
+    "f:Eiffel-torni 1888": {
+      "ryhma": "F",
+      "merkkeja": 1133,
+      "rikkeet": [
+        "pituus"
+      ]
+    },
+    "f:Bastilji 1789": {
+      "ryhma": "F",
+      "merkkeja": 1396,
+      "rikkeet": [
+        "pituus"
+      ]
+    },
+    "f:Lumière 1895": {
+      "ryhma": "F",
+      "merkkeja": 1295,
+      "rikkeet": [
+        "pituus"
+      ]
+    }
+  }
+}

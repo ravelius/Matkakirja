@@ -81,7 +81,9 @@ test('Tuileries: jaksokuvat ensin jaksojen järjestyksessä (karttavalo ja kohte
   assert.deepEqual(alku.map((k) => k.lyhyt), avaimet.map((a) => raaka.jaksokuvat[a].lyhyt));
   assert.deepEqual(alku.map((k) => k.laji), avaimet.map((a) => raaka.jaksokuvat[a].laji));
   assert.ok(alku.every((k) => k.mista === 'nosto'));
-  assert.equal(alku[0].osoite.split('?')[0].split('/').pop(), 'nosto-tuileriat-loistoaika.webp');
+  // Erä 1 (20.11.2026): isoisän koukku poistui, joten ensimmäinen jakso (palatsin loistoaika) tuo ihmekuvan ensin; rauniokuva siirtyi kolmanteen jaksoon.
+  assert.equal(alku[0].osoite.split('?')[0].split('/').pop(), 'ihme-tuileries-loistoaika-v2.jpg');
+  assert.equal(alku[2].osoite.split('?')[0].split('/').pop(), 'nosto-tuileriat-loistoaika.webp');
   assert.equal(alku[1].osoite, 'https://media.matkakirja.app/kuvat/tuileries-palo-1871.jpg');
   // Havainnekuvan lähderivin "… CC0" koskee referenssejä, ei kuvaa; Commons-kuvan (CC BY-SA 3.0) lisenssi luetaan.
   assert.equal(alku[1].lisenssi, null);
