@@ -11,13 +11,13 @@ Päivitetty: 20.11.2026 klo 08.5x (PT local_5df52e10): vvi-tilin roolisessiot NS
 |---|---|---|---|---|
 | PÄÄTOIMITTAJA | local_5df52e10-10e4-4b72-9554-0049db300dfe | /Users/Shared/Claude/Matkakirja-fable | Opus, medium | orkestrointi, kuittaukset, junat, Raamattu/loki |
 | CHAT (= KK, ent. KESKUSTELUKANAVA; omistaja 17.11. 23.03, P-261117-115) | local_37f7c945-e1a0-4638-90b8-93c389a36fbe | /Users/Shared/Claude/Matkakirja-fable | Fable 5.2 (omistaja 9.11. 22.09); effort HIGH (omistaja 17.11. 00.4x "Muutetaan sinun effort high tasoon", PT asetti; medium-koe 16.11.–17.11. päättyi); aiemmin xhigh (omistaja 11.11. 10.26) | omistajan keskustelu, ideointi, kysymyskortit (roolit eivät viesti tänne) |
-| Julkaisija | local_b4a7e82a-2522-437f-84ff-813401120931 | /Users/Shared/Claude/Matkakirja-julkaisija | Opus, medium (high vain CI-vian ajaksi, omistaja 14.10. 22.4x) | merget, web-julkaisu, TF-vienti, Codex-haku |
+| Julkaisija | local_06f8c680-4618-42bd-a730-9b6a3e17e0b7 | /Users/Shared/Claude/Matkakirja-julkaisija | Opus, medium (high vain CI-vian ajaksi, omistaja 14.10. 22.4x) | merget, web-julkaisu, TF-vienti, Codex-haku |
 | Natiiviseppä | local_99130238-aa54-4a29-bcc9-7a023584944b | /Users/Shared/Claude/Matkakirja-3d-selvittaja | Opus, high | natiivijunat, käännökset, muistiajot, Unity |
 | Natiivi-UI | local_43962c89-fc14-4098-9dd7-6153133ffcea | /Users/Shared/Claude/Matkakirja-natiivi-ui | Opus, high | natiivin käyttöliittymä pohjilla |
 | Pelikoodari | local_91a1bc27-6870-46aa-9886-66fd33b68880 | /Users/Shared/Claude/Matkakirja-pelikoodari | Opus, high | pelilogiikka, ISS, kytkennät |
 | Linssiseppä | – (levossa: ei sessiota tällä tilillä; PT luo tarvittaessa) | /Users/Shared/Claude/Matkakirja-linssiseppa | Opus, high | museot ja opas |
-| Valoseppä (ent. Linssiseppä 2) | local_3b36fe96-0199-4b17-9eb4-46a882ce7399 | /Users/Shared/Claude/Matkakirja-linssiseppa-2 | Opus, high | valo, ilmakehä, materiaalit, avaruuskohtaukset |
-| Karttaseppä | local_ddd980b0-2760-4c5d-a0c8-d65ad1ecb757 | /Users/Shared/Claude/Matkakirja-karttaseppa | Opus, high | kartat, maasto, pallokierrosten kaupungit |
+| Valoseppä (ent. Linssiseppä 2) | local_fa464945-e15d-4f98-aaad-00877a60f63a | /Users/Shared/Claude/Matkakirja-linssiseppa-2 | Opus, high | valo, ilmakehä, materiaalit, avaruuskohtaukset |
+| Karttaseppä | local_740947d7-aa79-4b1e-948e-1b7dfc734364 | /Users/Shared/Claude/Matkakirja-karttaseppa | Opus, high | kartat, maasto, pallokierrosten kaupungit |
 | Lavastaja (ent. Linnanrakentaja) | local_beb68834-6c4f-4839-ac75-7876b45052c3 | /Users/Shared/Claude/Matkakirja-linnanrakentaja | Opus, medium | Codexin mallien kokoaminen kohtauksiksi (Louvre, linnan huoneet), museon kehysten pinnat |
 | Projektiseppä (ent. Siirtoseppä) | – (levossa: ei sessiota tällä tilillä; PT luo tarvittaessa) | /Users/Shared/Claude/Matkakirja-siirtoseppa | Opus, high | yksi projekti alusta loppuun: nyt Olavinlinna (logiikka, botti, Tripo-pilotin kokoaminen) |
 | Työkaluseppä | – (levossa: ei sessiota tällä tilillä; PT luo tarvittaessa) | /Users/Shared/Claude/Matkakirja-tyokaluseppa | Opus, high | tuotantoputken tarkistukset: Codex-tuontitarkistus, kameratesti, nykäysvahti, botin putki |
