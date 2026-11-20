@@ -226,3 +226,11 @@ test('tila --kuka KK: ≤ 6 kt suurellakin kirjanpidolla, vanhat ensin luvuiksi,
   assert.doesNotMatch(r.stdout, /A-261117-10 /); // NS:n asia ei näy KK:lle
   assert.match(aja(k, 'avoimet', '--kuka', 'KK', '--vanhat', '3').stdout, /^60 avointa/m);
 });
+
+test('tilanne --pidata-kesken asettaa ja tyhjä poistaa kentän (ESI-ISÄTARKISTUS, KK 20.11. 09.33)', () => {
+  const k = uusi([{ otsikko: 'Aarre', edistys: 1, tila: 'työn alla', ts: Date.now() }]);
+  assert.equal(aja(k, 'tilanne', 'Aarre', 'x', '--pidata-kesken', 'kytkin pois,  palvelinosa puuttuu').status, 0);
+  assert.equal(lue(k).rivit[0].pidata_kesken, 'kytkin pois, palvelinosa puuttuu');
+  assert.equal(aja(k, 'tilanne', 'Aarre', 'y', '--pidata-kesken', '').status, 0);
+  assert.equal('pidata_kesken' in lue(k).rivit[0], false);
+});
