@@ -1,10 +1,14 @@
 # K-4 erä 3 C: Pariisin 14 nähtävyysjutun kuvat (SK 20.11.2026, KK:n päätös 14.18)
 
-Haara `sk/k4-era3-c-kuvat` (pohjana F-korjaus 5e3b14c64e, joka sisältää K-5:n 696166e4c4 ja tekstit b25b1cc54e), draft-PR, EI mainiin ennen KK:n sanaa. Kuvia ei ole ladattu ämpäriin: vientikuvat ovat kansiossa `/Users/Shared/Claude/luovutukset/sk-k4-era3-c/_ampari/` (41 jutun kuvaa kahtena kokona: 1200 × 800 ja -2048; SHA256SUMS samassa kansiossa; osoitteet `https://media.matkakirja.app/kuvat/<nimi>.jpg`). Notre-Damen 4 valmista kuvaa ovat kansiossa `_valmiina-ei-dataa/` (kohta 4.1). Pompidou-keskus ja Tour Montparnasse jäävät riville "odottaa oikeuksia": kuvia ei haettu, arkkia ei tehty (TEHTAVA, OIKEUDET).
+Haara `sk/k4-era3-c-kuvat` (pohjana F-korjaus 5e3b14c64e, joka sisältää K-5:n 696166e4c4 ja tekstit b25b1cc54e), draft-PR, EI mainiin ennen KK:n sanaa. Kuvia ei ole ladattu ämpäriin: vientikuvat ovat kansiossa `/Users/Shared/Claude/luovutukset/sk-k4-era3-c/_ampari/` (41 jutun kuvaa kahtena kokona (82 tiedostoa): 1200 × 800 ja -2048; SHA256SUMS samassa kansiossa; osoitteet `https://media.matkakirja.app/kuvat/<nimi>.jpg`). Notre-Damen 4 valmista kuvaa ovat kansiossa `_valmiina-ei-dataa/` (kohta 4.1). Pompidou-keskus ja Tour Montparnasse jäävät riville "odottaa oikeuksia": kuvia ei haettu, arkkia ei tehty (TEHTAVA, OIKEUDET).
+
+## 0. KK:n päätös 15.04 (kierros 2, uusi sha)
+
+Hyväksytty 10 jutulle sellaisenaan ja rajatapaukset ilman muutosta. **K1** Place des Vosges J1 vaihdettu (luku 5.9). **K2** Concorde J1: kuvateksti ja selite "Ludvig XV:n aukio". **K3** Notre-Dame jää yhteen kuvaan (vaihtoehto C), dataa ei muuteta, neljä kuvaa pysyy kansiossa _valmiina-ei-dataa; Kucharskin ilmakuvaa ei käytetä ennen kuvauspäivää.
 
 ## 1. M2: rikkeet ennen | nyt (C:n 14 juttua)
 
-- **Ennen** (lähtöluettelo): 14 jutua rikkoo; vajaa 14, viimeinen 13, laji 12, tekija 12, mitat 12, lisenssi 1.
+- **Ennen** (lähtöluettelo): 3 jutua rikkoo; vajaa 3, viimeinen 2, laji 1, tekija 1, mitat 1.
 - **Nyt:** 3 jutua rikkoo; vajaa 3, viimeinen 2, laji 1, tekija 1, mitat 1. Korjattu 11 juttua: Riemukaari, Concorden aukio, Luxembourgin puisto, Sacré-Cœur, Panthéon, Tour Saint-Jacques, Saint-Eustache, Place des Vosges, Invalidit, Petit Palais ja Metro 1900 (3–4 kuvaa, viimeinen valokuva, laji, tekijä, lisenssi, mitat 1200 × 800).
 - **Jäljellä:** Pompidou-keskus ja Tour Montparnasse (odottavat oikeuksia, ei Codex-tilausta) sekä Notre-Dame (vajaa: kohta 4.1). Tilattua kuvaa odottavia rikkeitä ei ole: tilauksia ei kirjoitettu.
 - Lähtöluettelo `docs/raportit/pariisin-nostokuvat-rikkeet-lahto-20261120.json` pieneni 18 → 7 rikkovaa nostoa (jäljellä C: 3, F: 4 Curie, Lavoisier, Pasteur, Lumière, jotka poistuvat valikosta).
@@ -50,7 +54,7 @@ Pidettävät kuvat (2): Sacré-Cœurin nykykuva (Giò Terra) ja Panthéonin heil
 6. **Panthéon:** J1:n hiilipiirros on tumma ja karkea (kupolin huippu 8 %, oikea reuna 92 %): tilataanko havainnekuva tilalle? J2:n piirroksessa lipun kärki 4 %:ssa. Mirabeaun ulossiirrosta ei vapaata kuvaa.
 7. **Tour Saint-Jacques:** J3:n pullot ylittävät 75 %:n rajan 2–3 prosenttiyksiköllä; Pascal-patsas ja Via Turonensis ilman kuvaa (aidot kuvat pystykuvia); Pernot-piirrosten vuotta Commons ei anna (kuvateksti ei väitä vuotta); J1 ei näytä kirkkoa.
 8. **Saint-Eustache:** Richelieu, Molière ja Maanviljelyksen temppeli eivät näy; 3 kuvaa riittää.
-9. **Place des Vosges:** J1 Meyerin karuselli-kaiverrus on tiheä ja sen oma kirjainmerkintä näkyy; Victor Hugo ja turnajaiset ilman kuvaa; 3 kuvaa.
+9. **Place des Vosges (K1, KK 15.04 tehty):** J1 vaihdettu Merianin 1612 kaiverrukseen, jossa aukio ja talot näkyvät kokonaisina (uusi tiedosto place-des-vosges-j1-aukio); Victor Hugo ja turnajaiset ilman kuvaa; 3 kuvaa.
 10. **Invalidit:** J1 Pérellen kaiverruksessa rakennus on 84 % leveydestä (yli 75 %), J2:ssa kupoli leikkautuu yläreunaan, nykykuvassa kupolin huippu 7 %.
 11. **Petit Palais:** J1-kuvassa rakennus 76 % leveydestä; J2:n reunafiguurit ulottuvat 94 %:iin; 1902-museo ja Dutuit ilman kuvaa; 3 kuvaa.
 12. **Metro 1900:** J3-nykykuvassa sisäänkäynti on 82 % korkeudesta; työmaakuvassa ei selvää pääaihetta ja Tour Saint-Jacques leikkautuu; arkkitehtikilpailusta ja päätepisteistä ei kuvaa. Kuvateksteissä "heinäkuussa 1899" ja "heinäkuussa 1900" tulevat Commons-otsikoista (kuvan PH-tunnukset luvussa 5). Noston `kuva`-kenttä korvattiin kuva + kuvat + valokuva -rakenteella ja jutun `kuvat` lukee ne noston datasta (yksi paikka).
@@ -106,7 +110,7 @@ Mitat ja rajatapaukset: ks. KUVALISTA.json kentät `paikka` ja `huom` (arviot es
 
 | Jakso | Kertoja sanoo | Kuva | Laji | Lähde, tekijä, lisenssi, linkki | Tila |
 |---|---|---|---|---|---|
-| 1 | Concorden aukio on Pariisin suurin aukio, ja siellä mestattiin kuningas. Arkkitehti Ange-Jacques Gabriel suunnitteli sen 1700-luvulla kuningas Ludvig XV:n kunniaksi. | aukio1700: Louis XV:n aukio ja kuninkaan ratsastajapatsas (aukio1700) | piirros | Tuntematon etsaaja, Rijksmuseum / Wikimedia Commons (CC0), rajattu; https://commons.wikimedia.org/wiki/File:Gezicht_op_de_Place_Louis_XV_te_Parijs_Vues_de_Paris_(serietitel)_Gezichten_op_Parijs_(serietitel),_RP-P-1957-83.jpg | haettu |
+| 1 | Concorden aukio on Pariisin suurin aukio, ja siellä mestattiin kuningas. Arkkitehti Ange-Jacques Gabriel suunnitteli sen 1700-luvulla kuningas Ludvig XV:n kunniaksi. | aukio1700: Ludvig XV:n aukio ja kuninkaan ratsastajapatsas (aukio1700) | piirros | Tuntematon etsaaja, Rijksmuseum / Wikimedia Commons (CC0), rajattu; https://commons.wikimedia.org/wiki/File:Gezicht_op_de_Place_Louis_XV_te_Parijs_Vues_de_Paris_(serietitel)_Gezichten_op_Parijs_(serietitel),_RP-P-1957-83.jpg | haettu |
 | 2 | Vallankumouksen aikana aukiolle pystytettiin giljotiini. Vuonna 1793 siellä mestattiin kuningas Ludvig XVI, ja samana vuonna myös kuningatar Marie Antoinette. Kaikkiaan aukiolla teloitettiin yli tuhat ihmistä. | giljotiini: Mestaus giljotiinilla Vallankumouksen aukiolla (giljotiini) | maalaus | Pierre-Antoine Demachy, Musée Carnavalet / Wikimedia Commons (Public domain), rajattu; https://commons.wikimedia.org/wiki/File:Pierre-Antoine_Demachy_-_Une_ex%C3%A9cution_capitale,_place_de_la_R%C3%A9volution_-_P1980_-_Mus%C3%A9e_Carnavalet.jpg | haettu |
 | 3 | Vuonna 1830 Egyptin hallitsija lahjoitti Ranskalle 3 300 vuotta vanhan Luxorin obeliskin. Kivijättiläinen tuotiin laivalla Niililtä asti ja pystytettiin aukiolle vuonna 1836 valtavan väkijoukon seuratessa. Nykyään 23-metrisen obeliskin ympärillä poreilevat suihkulähteet, ja aukiota reunustavat naispatsaat, jotka kuvaavat Ranskan suurkaupunkeja. | obeliski1836: Luxorin obeliskin pystytys aukiolla 1836 (obeliski1836) | maalaus | François Dubois (maalaus), kuvannut Jean-Pierre Dalbéra, Wikimedia Commons (CC BY 2.0), rajattu; https://commons.wikimedia.org/wiki/File:%C3%89rection_de_l'Ob%C3%A9lisque_sur_la_place_de_la_Concorde_de_Fran%C3%A7ois_Dubois_(Petit_Palais,_Paris).jpg | haettu |
 | 3 | Vuonna 1830 Egyptin hallitsija lahjoitti Ranskalle 3 300 vuotta vanhan Luxorin obeliskin. Kivijättiläinen tuotiin laivalla Niililtä asti ja pystytettiin aukiolle vuonna 1836 valtavan väkijoukon seuratessa. Nykyään 23-metrisen obeliskin ympärillä poreilevat suihkulähteet, ja aukiota reunustavat naispatsaat, jotka kuvaavat Ranskan suurkaupunkeja. | nyt: Suihkulähde ja obeliski Concorden aukiolla (nyt) | valokuva | Rodrigo Menezes, Wikimedia Commons (CC BY-SA 3.0), rajattu; https://commons.wikimedia.org/wiki/File:Obelisk_and_fountain_in_Place_de_la_Concorde,_Paris.JPG | haettu |
@@ -403,6 +407,14 @@ Kaikki 1200 × 800 (3:2); kansiossa myös -2048-versiot, -esikatselu.png ja .jso
 1. J1: hyväksytäänkö kaiverrus (karuselli 1612), jossa aukion talot vain yläreunassa ja kirjainmerkintöjä? Vaihtoehtona havainnekuva (ei kasvoja) tai pelkkä J2:n aukiokuva.
 2. J2: turnajaiset 1600-luvulla jäävät ilman omaa kuvaa (J1:n karuselli liittyy 1612:een); jos halutaan, tilaus (havainnekuva ilman kasvoja) kirjoitetaan.
 3. J3: Victor Hugo -virke ilman kuvaa (aitoja vaakakuvia talosta ei mahdu 75 %:iin). Päätös?
+
+#### KORJAUS K1 (KK 15.04): J1-kuva vaihdettu
+
+| Jakso | Kuva | Laji | Lähde, tekijä, lisenssi, linkki | Tila |
+|---|---|---|---|---|
+| 1 | j1-aukio: Place Royale taloineen karusellin aikaan 1612 | piirros | Claude Chastillon ja Matthäus Merian, Wikimedia Commons (Public domain), rajattu; https://commons.wikimedia.org/wiki/File:Matth%C3%A4us_Merian,_Carosel_fait_a_la_Place_Royalle_a_Paris,_1612_-_David_Rumsey.jpg | haettu (korvaa j1-karuselli) |
+
+Sama aihe (Place Royalen karuselli 1612) laajana näkymänä: kaikki neljä talosiipeä ja aukio näkyvät (pohjoinen paviljonkirivi 14–80 % leveydestä, 20–37 % korkeudesta). Lähde 12047 × 9684, haettu 3840 × 3087, esirajaus --osuus 0.97 keskipisteellä 0.5,0.53 (otsikkopalkki ja paperireuna pois). Hylätty: Paris Musées -versio (paperille kirjoitettu kuvateksti ja 1613-otsikko, leveä paperireuna). Vanha j1-karuselli (Meyer) pois datasta ja ämpärikansiosta.
 
 
 ### 5.10 Invalidit
