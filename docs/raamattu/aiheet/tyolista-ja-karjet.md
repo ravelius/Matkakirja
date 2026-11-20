@@ -7,7 +7,7 @@ SÄÄNNÖT:
 2. KK:n tehtävät ovat työlistassa omina riveinään, ei omassa listassa. KK lukee listan nollauksen jälkeen ja ennen kuin kertoo omistajalle työn tilasta. [R-7.4]
 3. Suunnitelman osat omina riveinään, ei koontirivejä. Rivillä on tekijä, paikka jonossa ja kärki; tekijällä on enintään yksi rivi työn alla, ja omistajaa odottava este alkaa sanalla SINÄ. [P-261110-9]
 4. Uusi pyyntö kirjataan riviksi samalla vuorolla, kun se välitetään; iso muutospyyntö odottaa KK:n suunnitelmaa. Omistajan vikahavainto menee kärkensä jonon alkuun ja hänen kärkeen nimeämänsä lisäys listan kärkeen. [P-261110-9] [R-7.48] [P-261120-2] [P-261120-3]
-5. Kärjen ulkopuolinen työ alkaa vain omistajan sanalla ohi jonon, ja kärjet vaihtaa vain omistaja. Kärkeen vain tulkinnan kautta kuuluvaa työtä tai kokeita ei aloiteta; odottavaa riviä ei poisteta. [R-7.49] [P-261105-7]
+5. Kärjen ulkopuolinen työ alkaa vain omistajan sanalla ohi jonon, ja kärjet vaihtaa vain omistaja. Kärkeen vain tulkinnan kautta kuuluvaa työtä tai kokeita ei aloiteta; odottavaa riviä ei poisteta. [R-7.49] [P-261105-7] [P-261120-29]
 6. Tauolla olevaan tai peruttuun projektiin ei tehdä uutta erää ilman omistajan sanaa. [R-2.200]
 7. Rivi on valmis, kun työ on asennettavissa versiossa, ja versio kirjataan riville. KK tarkistaa rivin roolin raportista tai uudesta versiosta; julkaisu ajaa ESI-ISÄTARKISTUKSEN (sivu-tila.py esi-isat). [P-261110-9]
 8. Valmiin, estyneen tai ajoa odottavan työn jälkeen rooli jatkaa samassa vuorossa seuraavalla jonorivillään ilman kuittausta; kuva katsotaan, kun se tulee. Ajon odotus ei ole lepotila. Tyhjästä jonosta rivi KK:lle heti; jokaisella roolilla on vähintään kaksi työtä jonossa. [R-7.40] [P-261114-12]
@@ -22,6 +22,6 @@ EI VIKA:
 - Kärjen ulkopuolinen pyyntö odottaa työlistalla aloittamatta.
 
 TEKOTAPA:
-- Rivit: tools/asemataulu/tyolista.py (lisaa, jono, valmis, tilanne, seuraava).
+- Rivit: tools/asemataulu/tyolista.py.
 - Järjestys: scratchpad/keskustelukanava/jarjestys.md.
 - Mittaus tools/kunto/kuntotarkastus.py; vahdit tools/kunto/VAHDIT.md.
