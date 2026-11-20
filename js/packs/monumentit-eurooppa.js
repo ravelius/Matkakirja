@@ -335,9 +335,9 @@ export const EUROOPAN_KADONNEET = {
       jaksot: [
         {
           osa: 'tapahtuma',
-          teksti: 'Palais de l\'Industrie oli Champs-Élysées\'n tuntumaan rakennettu suurhalli, jonka insinööri '
-            + 'Barrault suunnitteli Pariisin vuoden 1855 maailmannäyttelyä varten. Sen paikalla seisoo nykyään '
-            + 'Grand Palais.',
+          teksti: 'Palais de l\'Industrie oli Pariisin vuoden 1855 maailmannäyttelyä varten rakennettu suurhalli '
+            + 'Champs-Élysées\'n tuntumassa. Sen suunnitteluun osallistui insinööri Barrault, ja hallin paikalla '
+            + 'seisoo nykyään Grand Palais.',
           kuva: 'loisto',
           vuodet: [
             { vuosi: '1855', selite: 'maailmannäyttely', kohta: 'vuoden 1855' },
@@ -345,13 +345,13 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'tapahtuma',
-          teksti: 'Hallin lasikatto oli rautarakenteen varassa, mutta rauta oli kätketty raskaiden kivimuurien '
+          teksti: 'Hallin lasikatto oli rautarakenteen varassa, mutta rauta oli kätketty kivimuurien '
             + 'sisään. Päähalliin ei mahtunut kaikkia koneita, joten Seinen varteen rakennettiin niille '
             + 'erillinen galleria.',
         },
         {
           osa: 'tapahtuma',
-          teksti: 'Näyttelyn päätösjuhlassa hallissa soi yli tuhannen esittäjän musiikki, kun säveltäjä Berlioz '
+          teksti: 'Näyttelyn päätösjuhlassa hallissa soi noin tuhannen esittäjän musiikki, kun säveltäjä Berlioz '
             + 'johti kantaattinsa.',
         },
         {

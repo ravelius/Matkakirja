@@ -1307,8 +1307,7 @@ export const FOKUSKOHTEET_FRA = [
       {
         osa: 'tapahtuma',
         teksti: 'Pasteurin laboratorio oli École normale supérieuren tiloissa rue d\'Ulmilla Pariisissa. Louis '
-          + 'Pasteur tuli kouluun vuonna 1857 tieteellisten opintojen johtajaksi ja työskenteli siellä '
-          + 'vuosikymmeniä.',
+          + 'Pasteur tuli kouluun vuonna 1857 tieteellisten opintojen johtajaksi.',
         kuva: 'maalaus',
         vuodet: [
           { vuosi: '1857', selite: 'tulee kouluun', kohta: 'vuonna 1857' },
@@ -1323,8 +1322,8 @@ export const FOKUSKOHTEET_FRA = [
       {
         osa: 'tapahtuma',
         teksti: 'Pasteur keitti lientä lasipulloissa, joiden kaula oli taivutettu joutsenen kaulan muotoon. Ilma '
-          + 'pääsi pulloon, mutta pöly jäi mutkaan, ja liemi pysyi kirkkaana. Pulloja hän avasi jopa Alppien '
-          + 'jäätiköllä vuonna 1860.',
+          + 'pääsi pulloon, mutta pöly jäi mutkaan, ja liemi pysyi kirkkaana. Liemipulloja hän vei jopa Alppien '
+          + 'jäätikölle vuonna 1860, missä ilmassa oli vain vähän pölyä.',
         kuva: 'pullot',
         vuodet: [
           { vuosi: '1860', selite: 'pullot jäätiköllä', kohta: 'vuonna 1860' },
