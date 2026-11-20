@@ -72,6 +72,30 @@ function kuvaOlioksi(o) {
   return o;
 }
 
+/*
+ * LISÄKENTÄT (K-3, KK:N PÄÄTÖS 20.11.2026 09.18, aiempi: P-261120-5): tekijä omana kenttänään ja viedyn kuvan mitat
+ * (tools/sisalto/nostokuva.mjs kirjoittaa leveys ja korkeus, peliin 1200 × 800). Vain, kun data kantaa ne: vanha peli
+ * ohittaa tuntemattomat kentät, ja kuvat ilman niitä pysyvät ennallaan (tests/noston-kuvat.test.mjs KENTAT).
+ */
+export const NOSTOKUVA_LISAKENTAT = ['tekija', 'leveys', 'korkeus'];
+/*
+ * Päällä vasta, kun tests/noston-kuvat.test.mjs (SK, KENTAT tarkka) sallii lisäkentät; siihen asti vain tarkistus
+ * (tests/nostokuvien-tasalaatu.test.mjs) kytkee ne päälle omassa ajossaan (node --test ajaa tiedostot erillään).
+ */
+let lisakentatPaalla = false;
+export function lisakentatViennissa(paalla = true) { lisakentatPaalla = Boolean(paalla); }
+function lisakentat(raaka, raakaData = true) {
+  const tulos = {};
+  if (!lisakentatPaalla) return tulos;
+  if (typeof raaka.tekija === 'string' && raaka.tekija.trim()) tulos.tekija = raaka.tekija.trim();
+  // Ratkaistun kuvan (kokoelmien päätaso) leveys ja korkeus ovat media.jsonin lähdemittoja, eivät viedyn kuvan: vain raakadata.
+  if (raakaData && Number.isInteger(raaka.leveys) && Number.isInteger(raaka.korkeus) && raaka.leveys > 0 && raaka.korkeus > 0) {
+    tulos.leveys = raaka.leveys;
+    tulos.korkeus = raaka.korkeus;
+  }
+  return tulos;
+}
+
 export function nostokuvaRakentaja({ R, hae, haeKohde, kokoelmat }) {
   const { SKANDAALIT } = hae('js/packs/skandaalit.js');
   const { HISTORIAN_HETKET } = hae('js/packs/historian-hetket.js');
@@ -95,6 +119,7 @@ export function nostokuvaRakentaja({ R, hae, haeKohde, kokoelmat }) {
       lahde,
       lisenssi: r.lisenssi ?? raaka.lisenssi ?? lisenssiLahteesta(lahde),
       mista,
+      ...lisakentat(raaka, raaka !== r),
     };
   }
 
