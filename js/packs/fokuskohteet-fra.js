@@ -1319,7 +1319,7 @@ export const FOKUSKOHTEET_FRA = [
         osoite: 'https://media.matkakirja.app/kuvat/pasteur-1862-pullo.jpg',
         laji: 'valokuva',
         lyhyt: 'Joutsenkaulapullo Pasteurin kokeista',
-        lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0), rajattu',
+        lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0), rajattu, taustaa jatkettu',
         tekija: 'Tuntematon (Wellcome Collection)',
         lisenssi: 'CC BY 4.0',
         leveys: 1200,
