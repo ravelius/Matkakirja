@@ -375,6 +375,11 @@ def toiminta(args):
                 rivi["omistaja_vaihe"] = "kesken"
             if args.edistys is not None:
                 rivi["edistys"] = args.edistys
+            if args.pidata_kesken is not None:
+                if args.pidata_kesken.strip():
+                    rivi["pidata_kesken"] = " ".join(args.pidata_kesken.split())
+                else:
+                    rivi.pop("pidata_kesken", None)
             if str(rivi.get("tila", "")).lower().startswith(("pidossa", "odottaa")):
                 muu = rivi.get("tekija") and any(r is not rivi and r.get("tekija") == rivi.get("tekija") and str(r.get("tila", "")) == "työn alla"
                                                   for r in tl["rivit"] if isinstance(r, dict))
@@ -623,6 +628,8 @@ def main(argv):
     s.add_argument("--edistys", type=int)
     s.add_argument("--juna", type=int)
     s.add_argument("--omistajalle", help="≤ 12 sanaa omistajan kielellä (asettaa tai korvaa)")
+    s.add_argument("--pidata-kesken", dest="pidata_kesken", metavar="SYY",
+                   help="ESI-ISÄTARKISTUS ei siirrä riviä Valmiina-osioon (KK 20.11. 09.33); tyhjä poistaa")
     s = sub.add_parser("vaihe", help="asennussivun tila: juna-yhdista.zsh (seuraavaan) ja linkin julkaisu (valmis --versio)")
     s.add_argument("otsikko")
     s.add_argument("vaihe", choices=OMISTAJA_VAIHEET)

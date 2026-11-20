@@ -1,0 +1,527 @@
+{
+  "kuvaus": "Pariisin 46 noston kuvasarjan rikkeet ENNEN kuvaeriä (origin/main 108867c0741644558df96a0073760bf2f5bdf135, 20.11.2026; K-3, KK:N PÄÄTÖS 09.18). Saa vain pienentyä: tarkistus tools/sisalto/nostokuvien-tarkistus.mjs, testi tests/nostokuvien-tasalaatu.test.mjs. Rikkeet: vajaa (alle 3), liikaa (yli 4), viimeinen (ei valokuva), laji, lyhyt, lahde, tekija, lisenssi (jollakin kuvalla puuttuu), mitat (ei 1200 × 800), havainne (lähderivi ei ala Tekoälyllä tuotettu havainnekuva). kuvia = kuvia nyt (tieto, ei vertailla).",
+  "pohja": "108867c0741644558df96a0073760bf2f5bdf135",
+  "nostoja": 46,
+  "rikkovia": 46,
+  "lajeittain": {
+    "vajaa": 27,
+    "liikaa": 6,
+    "viimeinen": 33,
+    "laji": 32,
+    "lyhyt": 0,
+    "lahde": 0,
+    "tekija": 45,
+    "lisenssi": 26,
+    "mitat": 45,
+    "havainne": 17
+  },
+  "nostot": {
+    "tuileries": {
+      "ryhma": "A",
+      "kuvia": 7,
+      "rikkeet": [
+        "liikaa",
+        "tekija",
+        "lisenssi",
+        "mitat",
+        "havainne"
+      ]
+    },
+    "louvre": {
+      "ryhma": "A",
+      "kuvia": 6,
+      "rikkeet": [
+        "liikaa",
+        "tekija",
+        "lisenssi",
+        "mitat"
+      ]
+    },
+    "bastilji": {
+      "ryhma": "A",
+      "kuvia": 7,
+      "rikkeet": [
+        "liikaa",
+        "tekija",
+        "lisenssi",
+        "mitat",
+        "havainne"
+      ]
+    },
+    "eiffel-torni": {
+      "ryhma": "A",
+      "kuvia": 5,
+      "rikkeet": [
+        "liikaa",
+        "tekija",
+        "lisenssi",
+        "mitat",
+        "havainne"
+      ]
+    },
+    "sainte-chapelle": {
+      "ryhma": "A",
+      "kuvia": 6,
+      "rikkeet": [
+        "liikaa",
+        "tekija",
+        "lisenssi",
+        "mitat"
+      ]
+    },
+    "curie-1898": {
+      "ryhma": "A",
+      "kuvia": 4,
+      "rikkeet": [
+        "tekija",
+        "lisenssi",
+        "mitat"
+      ]
+    },
+    "lumiere-1895": {
+      "ryhma": "A",
+      "kuvia": 4,
+      "rikkeet": [
+        "tekija",
+        "lisenssi",
+        "mitat"
+      ]
+    },
+    "lavoisier-1780": {
+      "ryhma": "A",
+      "kuvia": 4,
+      "rikkeet": [
+        "tekija",
+        "lisenssi",
+        "mitat"
+      ]
+    },
+    "pasteur-1862": {
+      "ryhma": "A",
+      "kuvia": 4,
+      "rikkeet": [
+        "tekija",
+        "lisenssi",
+        "mitat"
+      ]
+    },
+    "palais-garnier": {
+      "ryhma": "A",
+      "kuvia": 4,
+      "rikkeet": [
+        "tekija",
+        "lisenssi",
+        "mitat"
+      ]
+    },
+    "hahmotelma-palais-orsay": {
+      "ryhma": "A",
+      "kuvia": 3,
+      "rikkeet": [
+        "tekija",
+        "lisenssi",
+        "mitat",
+        "havainne"
+      ]
+    },
+    "hahmotelma-palais-industrie": {
+      "ryhma": "A",
+      "kuvia": 3,
+      "rikkeet": [
+        "tekija",
+        "lisenssi",
+        "mitat",
+        "havainne"
+      ]
+    },
+    "hahmotelma-les-halles": {
+      "ryhma": "A",
+      "kuvia": 4,
+      "rikkeet": [
+        "tekija",
+        "lisenssi",
+        "mitat",
+        "havainne"
+      ]
+    },
+    "b:Grand Châtelet": {
+      "ryhma": "B",
+      "kuvia": 2,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "lisenssi",
+        "mitat",
+        "havainne"
+      ]
+    },
+    "b:Temple-torni": {
+      "ryhma": "B",
+      "kuvia": 2,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "lisenssi",
+        "mitat",
+        "havainne"
+      ]
+    },
+    "b:Trocadéron palatsi": {
+      "ryhma": "B",
+      "kuvia": 2,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "lisenssi",
+        "mitat",
+        "havainne"
+      ]
+    },
+    "b:Galerie des Machines": {
+      "ryhma": "B",
+      "kuvia": 2,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "lisenssi",
+        "mitat",
+        "havainne"
+      ]
+    },
+    "c:Riemukaari": {
+      "ryhma": "C",
+      "kuvia": 1,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "mitat"
+      ]
+    },
+    "c:Concorden aukio": {
+      "ryhma": "C",
+      "kuvia": 1,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "mitat"
+      ]
+    },
+    "c:Luxembourgin puisto": {
+      "ryhma": "C",
+      "kuvia": 2,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "lisenssi",
+        "mitat"
+      ]
+    },
+    "c:Sacré-Cœur": {
+      "ryhma": "C",
+      "kuvia": 1,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "mitat"
+      ]
+    },
+    "c:Panthéon": {
+      "ryhma": "C",
+      "kuvia": 2,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "mitat"
+      ]
+    },
+    "c:Notre-Dame": {
+      "ryhma": "C",
+      "kuvia": 1,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "mitat"
+      ]
+    },
+    "c:Tour Saint-Jacques": {
+      "ryhma": "C",
+      "kuvia": 1,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "mitat"
+      ]
+    },
+    "c:Saint-Eustache": {
+      "ryhma": "C",
+      "kuvia": 1,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "mitat"
+      ]
+    },
+    "c:Pompidou-keskus": {
+      "ryhma": "C",
+      "kuvia": 0,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen"
+      ]
+    },
+    "c:Place des Vosges": {
+      "ryhma": "C",
+      "kuvia": 1,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "mitat"
+      ]
+    },
+    "c:Invalidit": {
+      "ryhma": "C",
+      "kuvia": 2,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "mitat"
+      ]
+    },
+    "c:Petit Palais": {
+      "ryhma": "C",
+      "kuvia": 1,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "mitat"
+      ]
+    },
+    "c:Tour Montparnasse": {
+      "ryhma": "C",
+      "kuvia": 2,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "mitat"
+      ]
+    },
+    "c:Metro 1900": {
+      "ryhma": "C",
+      "kuvia": 1,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "mitat"
+      ]
+    },
+    "d:Bizet 1875": {
+      "ryhma": "D",
+      "kuvia": 1,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "mitat"
+      ]
+    },
+    "d:Kirahvi 1827": {
+      "ryhma": "D",
+      "kuvia": 2,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "lisenssi",
+        "mitat",
+        "havainne"
+      ]
+    },
+    "d:Bukinistit 1859": {
+      "ryhma": "D",
+      "kuvia": 1,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "mitat"
+      ]
+    },
+    "d:Patonki 1994": {
+      "ryhma": "D",
+      "kuvia": 1,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "mitat"
+      ]
+    },
+    "d:Vrain-Lucas": {
+      "ryhma": "D",
+      "kuvia": 2,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "lisenssi",
+        "mitat"
+      ]
+    },
+    "d:Monet 1874": {
+      "ryhma": "D",
+      "kuvia": 1,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "mitat"
+      ]
+    },
+    "d:Piiritys 1870": {
+      "ryhma": "D",
+      "kuvia": 1,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "mitat"
+      ]
+    },
+    "d:Notre-Dame 2019": {
+      "ryhma": "D",
+      "kuvia": 2,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "mitat"
+      ]
+    },
+    "d:Piaf ja Django": {
+      "ryhma": "D",
+      "kuvia": 1,
+      "rikkeet": [
+        "vajaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "mitat"
+      ]
+    },
+    "f:Curie 1898": {
+      "ryhma": "F",
+      "kuvia": 4,
+      "rikkeet": [
+        "viimeinen",
+        "laji",
+        "tekija",
+        "lisenssi",
+        "mitat",
+        "havainne"
+      ]
+    },
+    "f:Lavoisier 1780": {
+      "ryhma": "F",
+      "kuvia": 3,
+      "rikkeet": [
+        "viimeinen",
+        "laji",
+        "tekija",
+        "lisenssi",
+        "mitat",
+        "havainne"
+      ]
+    },
+    "f:Pasteur 1862": {
+      "ryhma": "F",
+      "kuvia": 4,
+      "rikkeet": [
+        "viimeinen",
+        "laji",
+        "tekija",
+        "lisenssi",
+        "mitat",
+        "havainne"
+      ]
+    },
+    "f:Eiffel-torni 1888": {
+      "ryhma": "F",
+      "kuvia": 4,
+      "rikkeet": [
+        "viimeinen",
+        "laji",
+        "tekija",
+        "lisenssi",
+        "mitat",
+        "havainne"
+      ]
+    },
+    "f:Bastilji 1789": {
+      "ryhma": "F",
+      "kuvia": 4,
+      "rikkeet": [
+        "viimeinen",
+        "laji",
+        "tekija",
+        "lisenssi",
+        "mitat",
+        "havainne"
+      ]
+    },
+    "f:Lumière 1895": {
+      "ryhma": "F",
+      "kuvia": 5,
+      "rikkeet": [
+        "liikaa",
+        "viimeinen",
+        "laji",
+        "tekija",
+        "lisenssi",
+        "mitat",
+        "havainne"
+      ]
+    }
+  }
+}

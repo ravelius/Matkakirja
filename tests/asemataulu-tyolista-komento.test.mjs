@@ -113,7 +113,7 @@ test('koukku: KK:n välittämä OMISTAJAN PÄÄTÖS muistuttaa tyolista.py:stä,
   assert.match(koukku(k, 'tee jotain'), /ASEMATAULU \(hook\)/);
 });
 
-test('koukku: yli 3 h vanhat työn alla -rivit listataan (myös yli 48 h), tuore ja valmis eivät; valmis-tilanne huomataan', () => {
+test('koukku: vanhoja työn alla -rivejä ei listata (KK 16.11., 20261116-aina-toita.md kohta 5); valmis-tilanne huomataan', () => {
   const nyt = Date.now();
   const k = uusi([
     { otsikko: 'Vanhahko rivi', edistys: 1, tila: 'työn alla', ts: nyt - 5 * H },
@@ -124,9 +124,8 @@ test('koukku: yli 3 h vanhat työn alla -rivit listataan (myös yli 48 h), tuore
   ]);
   const t = koukku(k, '<cross-session-message>x</cross-session-message>', 'PostToolUse');
   assert.match(t, /TYÖLISTA \(hook\)/);
-  assert.match(t, /Vanhahko rivi[\s\S]*Hylätty rivi|Hylätty rivi[\s\S]*Vanhahko rivi/);
   assert.match(t, /tilanne sanoo valmis mutta tila ei: Unohtunut valmis/);
-  assert.doesNotMatch(t, /Tuore rivi|Valmis rivi/);
+  assert.doesNotMatch(t, /Vanhahko rivi|Hylätty rivi|Tuore rivi|Valmis rivi/);
   const k2 = uusi([{ otsikko: 'Tuore rivi', edistys: 1, tila: 'työn alla', ts: nyt - H }]);
   assert.doesNotMatch(koukku(k2, 'x', 'PostToolUse'), /TYÖLISTA \(hook\)/);
 });
@@ -226,4 +225,12 @@ test('tila --kuka KK: ≤ 6 kt suurellakin kirjanpidolla, vanhat ensin luvuiksi,
   for (const rivi of r.stdout.split('\n')) assert.ok(rivi.length <= 200, rivi);
   assert.doesNotMatch(r.stdout, /A-261117-10 /); // NS:n asia ei näy KK:lle
   assert.match(aja(k, 'avoimet', '--kuka', 'KK', '--vanhat', '3').stdout, /^60 avointa/m);
+});
+
+test('tilanne --pidata-kesken asettaa ja tyhjä poistaa kentän (ESI-ISÄTARKISTUS, KK 20.11. 09.33)', () => {
+  const k = uusi([{ otsikko: 'Aarre', edistys: 1, tila: 'työn alla', ts: Date.now() }]);
+  assert.equal(aja(k, 'tilanne', 'Aarre', 'x', '--pidata-kesken', 'kytkin pois,  palvelinosa puuttuu').status, 0);
+  assert.equal(lue(k).rivit[0].pidata_kesken, 'kytkin pois, palvelinosa puuttuu');
+  assert.equal(aja(k, 'tilanne', 'Aarre', 'y', '--pidata-kesken', '').status, 0);
+  assert.equal('pidata_kesken' in lue(k).rivit[0], false);
 });
