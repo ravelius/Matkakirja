@@ -5189,6 +5189,11 @@ export const KAUPUNKIKARTAT = {
       // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; Dam, Kuninkaanpalatsin kohdalla 52,3731 / 4,8913).
       // Piste siirretty nimiön luettavuuden vuoksi Damin aukion puolelle palatsin itäpuolelle; rakennus seisoi nykyisen palatsin paikalla.
       { nimi: 'Vanha raatihuone', tagi: 'kadonneet', lat: 52.3731, lon: 4.8922 },
+      // TRIPO-MALLIEN KOHTEET (KK 20.11.2026 20.48, omistaja P-261120-18). Koordinaatit nl-Wikipedia (Wikidata Q3484097, Q1429748, Q1130722).
+      // Westerkerk on 80 m Anne Frankin talosta: nimi vasemmalle, ettei numero mene päällekkäin.
+      { nimi: 'Beurs van Zocher', tagi: 'kadonneet', lat: 52.3733, lon: 4.894 },
+      { nimi: 'Munttoren', tagi: 'historia', lat: 52.3669, lon: 4.8933 },
+      { nimi: 'Westerkerk', tagi: 'uskonnot', lat: 52.3745, lon: 4.884, nimiPuoli: 'vasen' },
     ],
   },
   dublin: {
@@ -5431,6 +5436,9 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Saint-Eustache', tagi: 'uskonnot', lat: 48.8633, lon: 2.345, wiki: 'Saint-Eustachen kirkko' },
       { nimi: 'Pompidou-keskus', tagi: 'kulttuuri', lat: 48.8606, lon: 2.3522, wiki: 'Pompidou-keskus' },
       { nimi: 'Tour Montparnasse', tagi: 'tiede', lat: 48.8421, lon: 2.322, wiki: 'Tour Montparnasse' },
+      // TRIPO-MALLIEN KOHTEET (KK 20.11.2026 20.48). Koordinaatit en-Wikipedia (Wikidata Q631104, Q684594).
+      { nimi: 'Arc du Carrousel', tagi: 'historia', lat: 48.8617, lon: 2.3329 },
+      { nimi: 'Porte Saint-Denis', tagi: 'historia', lat: 48.8697, lon: 2.3526 },
       /*
        * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
        * *"lisää kaikki historian hetket ja muut karttanostot myös joko
@@ -5820,6 +5828,8 @@ export const KAUPUNKIKARTAT = {
       // Kainalossa. Koordinaatti on päärajauksen ulkopuolella, ja
       // karttapiste() sijoittaa sen minikarttaan sen perusteella.
       { nimi: 'Schönbrunn', tagi: 'historia', lat: 48.1845, lon: 16.3119, wiki: 'Schönbrunnin linna' },
+      // TRIPO-MALLIEN KOHDE (KK 20.11.2026 20.48). Koordinaatti en-Wikipedia (Wikidata Q408847).
+      { nimi: 'Karlskirche', tagi: 'uskonnot', lat: 48.1983, lon: 16.3719 },
       /*
        * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
        * *"lisää kaikki historian hetket ja muut karttanostot myös joko

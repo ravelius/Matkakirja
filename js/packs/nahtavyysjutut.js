@@ -5040,6 +5040,25 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Matkakirjan oma teksti · lähteinä Wien Geschichte Wiki, Austria-Forum (AEIOU) ja Wikipedia',
     },
+  
+    // Tripo-mallien kohteet (KK 20.11.2026 20.48, P-261120-18).
+    'Karlskirche': {
+      aika: '1716–1737',
+      teksti:
+        'Karlskirche syntyi lupauksesta. Vuonna 1713, vuosi Wienin viimeisen suuren ruttoepidemian jälkeen, keisari Kaarle VI lupasi rakennuttaa kirkon nimikkopyhälleen Kaarle Borromeukselle, jota pidettiin ruttopotilaiden parantajana. Arkkitehtikilpailun voitti Johann Bernhard Fischer von Erlach, ja rakennustyö alkoi vuonna 1716. Fischerin kuoltua 1723 hänen poikansa Joseph Emanuel Fischer von Erlach saattoi kirkon valmiiksi vuonna 1737.'
+        + '\n\n'
+        + 'Julkisivun keskellä on kreikkalaista temppeliä muistuttava pylväskatos. Sen kahta vapaata pylvästä, joiden reliefit kertovat Kaarle Borromeuksen elämästä, ovat innoittaneet Rooman Trajanuksen pylväs. Kupoli kohoaa korkean tambuurin varassa, jota nuorempi Fischer lyhensi ja muutti osin. Kupolin freskon maalasivat Johann Michael Rottmayr ja Gaetano Fanti.'
+        + '\n\n'
+        + 'Kirkon vieressä oli hautausmaa, jonne säveltäjä Antonio Vivaldi haudattiin 28. heinäkuuta 1741. Hänen hautansa on kadonnut, mutta kirkossa pidetään yhä Vivaldi-konsertteja.',
+      vuodet: [
+        { kohta: 'Vuonna 1713', vuosi: '1713', selite: 'lupaus' },
+        { kohta: 'vuonna 1716', vuosi: '1716', selite: 'rakennus alkoi' },
+        { kohta: 'vuonna 1737', vuosi: '1737', selite: 'valmistui' },
+        { kohta: '28. heinäkuuta 1741', vuosi: '1741', selite: 'Vivaldi haudattiin' },
+      ],
+      kuvat: [],
+      lahde: 'Wikipedia (en: Karlskirche)',
+    },
   },
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
   budapest: {
@@ -7012,6 +7031,42 @@ export const NAHTAVYYSJUTUT = {
      * POISTETTU (KK 20.11.2026 klo 10.44, L5-4 erä 2). Jaksoteksti elää vain hahmotelmassa
      * (js/packs/monumentit-eurooppa.js); kartan piste avaa hahmotelman nosto-kentällä (js/packs/maakartat.js), kuten Orsay.
      */
+  
+    // Tripo-mallien kohteet (KK 20.11.2026 20.48, P-261120-18).
+    'Arc du Carrousel': {
+      aika: '1806–1808',
+      teksti:
+        'Arc de Triomphe du Carrousel rakennettiin vuosina 1806–1808 Napoleonin voittojen kunniaksi Tuileries\'n palatsin portiksi. Charles Percier ja Pierre Fontaine suunnittelivat sen Rooman Konstantinuksen riemukaaren mallin mukaan. Kaari on noin 19 metriä korkea ja 23 metriä leveä, ja sen kahdeksan marmoripylvästä on otettu talteen tuhoutuneesta Meudonin linnasta.'
+        + '\n\n'
+        + 'Jokaisen pylvään päällä seisoo Napoleonin armeijan sotilas univormussa, ja vaaleanpunaisen marmorin reliefit kertovat esimerkiksi Austerlitzin taistelusta ja Ulmin antautumisesta. Kaaren huipulla oli alun perin Venetsian San Marcon kirkon neljä pronssihevosta, jotka Napoleon oli ryöstänyt Venetsiasta vuonna 1797. Vuonna 1815 ne palautettiin Venetsiaan, ja niiden tilalle tuli vuonna 1828 François Joseph Bosion veistämä vaunukunta, jossa Rauha ajaa voitonvaunuissa.'
+        + '\n\n'
+        + 'Tuileries\'n palatsi paloi Pariisin kommuunin aikana vuonna 1871, ja sen jälkeen kaaren läpi avautuu esteetön näkymä länteen, Concorden aukion obeliskille ja Riemukaarelle. Kaari on Pariisin historiallisen akselin itäpää, ja Lontoon Marble Arch otti siitä mallia.',
+      vuodet: [
+        { kohta: 'vuosina 1806–1808', vuosi: '1806–1808', selite: 'rakennettiin' },
+        { kohta: 'Vuonna 1815', vuosi: '1815', selite: 'hevoset Venetsiaan' },
+        { kohta: 'vuonna 1828', vuosi: '1828', selite: 'uusi vaunukunta' },
+        { kohta: 'vuonna 1871', vuosi: '1871', selite: 'Tuileries paloi' },
+      ],
+      kuvat: [],
+      lahde: 'Wikipedia (en: Arc de Triomphe du Carrousel)',
+    },
+    // Tripo-mallien kohteet (KK 20.11.2026 20.48, P-261120-18).
+    'Porte Saint-Denis': {
+      aika: '1672',
+      teksti:
+        'Porte Saint-Denis on riemukaari Pariisin 10. kaupunginosassa paikalla, jossa oli Kaarle V:n kaupunginmuurin portti. Muuri rakennettiin vuosina 1356–1383 suojaamaan Seinen oikeaa rantaa. Se purettiin 1670-luvulla, kun kaupunki oli kasvanut sen yli.'
+        + '\n\n'
+        + 'Kuningas Ludvig XIV tilasi portin tilalle riemukaaren, joka kunnioittaisi Franche-Comtén valtausta vuonna 1668 sekä Alankomaiden sodan voittoja Maasilla ja Reinillä. Arkkitehti François Blondel ja kuvanveistäjä Michel Anguier aloittivat työn vuonna 1672, ja kaupunki maksoi sen. Kaari on noin 25 metriä korkea ja 25 metriä leveä, ja sen esikuvana oli Rooman Tituksen riemukaari. Ylälistassa on kullattu pronssikirjoitus LUDOVICO MAGNO, Ludvig Suurelle.'
+        + '\n\n'
+        + 'Se oli ensimmäinen Pariisin neljästä riemukaaresta; muut ovat Porte Saint-Martin, Arc du Carrousel ja Riemukaari. Porte Saint-Denis kunnostettiin vuonna 1988.',
+      vuodet: [
+        { kohta: 'vuosina 1356–1383', vuosi: '1356–1383', selite: 'muuri rakennettiin' },
+        { kohta: 'vuonna 1672', vuosi: '1672', selite: 'kaaren työ alkoi' },
+        { kohta: 'vuonna 1988', vuosi: '1988', selite: 'kunnostettiin' },
+      ],
+      kuvat: [],
+      lahde: 'Wikipedia (en: Porte Saint-Denis)',
+    },
   },
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
@@ -8413,6 +8468,61 @@ export const NAHTAVYYSJUTUT = {
         { kohta: 'vuonna 1873', vuosi: '1873', selite: 'isoisän vuosi' },
       ],
       lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia ja Amsterdam Museum',
+    },
+  
+    // Tripo-mallien kohteet (KK 20.11.2026 20.48, P-261120-18).
+    'Beurs van Zocher': {
+      aika: '1845–1903',
+      teksti:
+        'Beurs van Zocher oli Amsterdamin pörssirakennus Damrakin ja Damin kulmassa, nykyisen De Bijenkorf -tavaratalon paikalla. Edellinen pörssi, Hendrick de Keyserin 1600-luvun rakennus, oli vajonnut käyttökelvottomaksi ja purettiin vuosina 1836–1838. Uuden pörssin suunnitteli Jan David Zocher, ja kuningas Vilhelm II avasi sen 10. syyskuuta 1845.'
+        + '\n\n'
+        + 'Rakennus oli ankaran uusklassinen, ja sisäänkäynnin joonialaiset pylväät olivat hollantilaisittain jättimäiset. Ikkunoita oli vähän, koska viljaa tarkastettiin mieluiten epäsuorassa valossa, ja siksi pörssiä kutsuttiin pian mausoleumiksi. Avopihalla oli talvisin kova veto, joten rakennusta sanottiin spotti-ivalla Amsterdamin vetoisaksi ihmeeksi; piha katettiin vuonna 1848.'
+        + '\n\n'
+        + 'Kaupunki vaurastui, ja pörssi kävi pieneksi. Damrak oli rakennuksen kohdalla vain 15 metriä leveä, ja pörssin sivulle työntyvä ulkonema haittasi hevosraitiotietä. Berlagen uusi pörssi valmistui vuonna 1903, ja Zocherin pörssi purettiin samana vuonna. Paikalle nousi vuosina 1912–1915 De Bijenkorf -tavaratalo.'
+        + '\n\n'
+        + 'Isoisäsi vuonna 1873 pörssi seisoi vielä Damrakin kulmassa.',
+      vuodet: [
+        { kohta: '10. syyskuuta 1845', vuosi: '1845', selite: 'pörssi avattiin' },
+        { kohta: 'vuonna 1848', vuosi: '1848', selite: 'piha katettiin' },
+        { kohta: 'vuonna 1903', vuosi: '1903', selite: 'pörssi purettiin' },
+        { kohta: 'vuonna 1873', vuosi: '1873', selite: 'isoisän vuosi' },
+      ],
+      kuvat: [],
+      lahde: 'Matkakirjan oma teksti · lähteinä nl.Wikipedia (Beurs van Zocher), Wikipedia (Beurs van Berlage)',
+    },
+    // Tripo-mallien kohteet (KK 20.11.2026 20.48, P-261120-18).
+    'Munttoren': {
+      aika: '1480–1620',
+      teksti:
+        'Munttoren kuului Amsterdamin keskiaikaisen kaupunginmuurin Regulierspoort-porttiin, joka rakennettiin vuosina 1480–1487. Portti oli yksi kaupungin kolmesta pääportista, ja sen nimi tuli läheisestä Reguliersklooster-luostarista. Kun portti paloi vuonna 1618, uudelleen päätettiin rakentaa vain läntinen torni.'
+        + '\n\n'
+        + 'Tylppä torni sai vuosina 1619–1620 kahdeksankulmaisen yläosan ja koristeellisen avoimen lyhdyn Hendrick de Keyserin suunnitelmien mukaan. Lyhdyssä on kello, jossa on neljä kellotaulua, ja vuonna 1668 torniin asennettiin Hemonin veljesten kellopeli. Torni on 35 metriä korkea.'
+        + '\n\n'
+        + 'Nykyisen nimensä, Rahatorni, se sai vuonna 1672, katastrofivuonna, jolloin ranskalaisjoukot miehittivät suuren osan maata ja Amsterdam sai väliaikaisesti oikeuden lyödä rahaa. Rahaa lyötiin tornin viereisessä vahtihuoneessa. Vahtihuone purettiin 1800-luvulla, ja tilalle rakennettiin 1885–1887 nykyinen uusrenessanssirakennus.',
+      vuodet: [
+        { kohta: 'vuosina 1480–1487', vuosi: '1480–1487', selite: 'portti rakennettiin' },
+        { kohta: 'vuonna 1618', vuosi: '1618', selite: 'portti paloi' },
+        { kohta: 'vuonna 1672', vuosi: '1672', selite: 'nimi Munttoren' },
+      ],
+      kuvat: [],
+      lahde: 'Wikipedia (nl: Munttoren)',
+    },
+    // Tripo-mallien kohteet (KK 20.11.2026 20.48, P-261120-18).
+    'Westerkerk': {
+      aika: '1620–1631',
+      teksti:
+        'Westerkerk rakennettiin vuosina 1620–1631 renessanssityyliin Hendrick de Keyserin suunnitelmien mukaan. De Keyser kuoli 1621, ja kirkon viimeisteli hänen poikansa Pieter de Keyser. Kirkko vihittiin käyttöön 8. kesäkuuta 1631. Se oli yksi ensimmäisistä alun perin protestanteille rakennetuista kirkoista ja on yhä Alankomaiden suurin protestanteille rakennettu kirkko.'
+        + '\n\n'
+        + 'Kirkon torni, Westertoren, on noin 87 metriä korkea ja Amsterdamin korkein kirkontorni. Tornin yläosa on vuodelta 1637, ja sen huipulla on keisarinkruunu, joka esittää Maksimilian I:n Itävallan keisarinkruunua. Kellopelin suurimmat 14 kelloa valoi François Hemony vuonna 1658.'
+        + '\n\n'
+        + 'Kirkkoon on haudattu muun muassa kartantekijä Joan Blaeu. Rembrandt kuoli 4. lokakuuta 1669, ja hänet haudattiin neljä päivää myöhemmin vuokrattuun hautaan Westerkerkissa. Prinsessa Beatrix ja Claus von Amsberg vihittiin kirkossa 10. maaliskuuta 1966.',
+      vuodet: [
+        { kohta: 'vuosina 1620–1631', vuosi: '1620–1631', selite: 'rakennettiin' },
+        { kohta: '4. lokakuuta 1669', vuosi: '1669', selite: 'Rembrandt haudattiin' },
+        { kohta: '10. maaliskuuta 1966', vuosi: '1966', selite: 'Beatrixin häät' },
+      ],
+      kuvat: [],
+      lahde: 'Wikipedia (en ja nl: Westerkerk; en: Rembrandt)',
     },
   },
   dublin: {
