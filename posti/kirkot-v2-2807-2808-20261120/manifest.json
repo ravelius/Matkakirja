@@ -1,0 +1,125 @@
+{
+  "sourceCommit": "6fe4e39b185e1fde7466b94176af52f6e3265655",
+  "phase": "HERO review only",
+  "images": [
+    {
+      "task": 2807,
+      "slug": "st-mary-krakow-v2",
+      "subject": "Krakovan Mariankirkko",
+      "qidPerOrder": "Q1143171",
+      "original": "st-mary-krakow-v2-original.png",
+      "originalSHA256": "75275658ed90bef30c0b64c1c9f516627dfb763606b9edb285a2918bf4959e67",
+      "originalDimensions": [
+        1315,
+        1196
+      ],
+      "reviewFile": "st-mary-krakow-v2-1000.jpg",
+      "reviewSHA256": "0ab96ad2859549bf89a9312f4974fe33b23f585dd52d104307316b39bcf862a8",
+      "reviewDimensions": [
+        1000,
+        910
+      ],
+      "orderDimensionsMetres": {
+        "length": 88.5,
+        "width": 40.3,
+        "towerHeight": 81
+      },
+      "visualQA": "Eteläsivu näkyy länsipään kahdesta erikorkuisesta tornista itäkuoriin. Korkean tornin ja matalamman sipulikupolin ero erottuu. Kuistin suunta ja kappelien yksityiskohdat ovat tulkintaa.",
+      "projectedSilhouetteWidthOverHeight": 1.1,
+      "projectionNote": "Kuvan siluetin ulkorajat tummuusrajalla 175. Kuvasta mitattu suhde on suuntaa antava. 3D-mitat tarkistetaan vasta mallista.",
+      "priorPreviewSHA256": "24487f11a32acade49ad8c5744499d2b0ef67af5b103b161b69f6539433322de",
+      "imageGenArtifact": "exec-2ba043ed-8b70-41fb-9479-a800aa7855d8",
+      "startedAt": "2026-11-20T20:53:18.269Z",
+      "generatedAt": "2026-11-20T20:53:47.770524+00:00",
+      "referenceUse": "Uusi ImageGen-rekonstruktio kolmen alla nimetyn viitekuvan pohjalta. Tausta ja kuvakulma rakennettu uudelleen.",
+      "references": [
+        {
+          "title": "File:Saint Mary Basilica in Kraków from a distance.JPG",
+          "author": "Mateusz Giełczyński",
+          "source": "https://commons.wikimedia.org/wiki/File:Saint_Mary_Basilica_in_Krak%C3%B3w_from_a_distance.JPG",
+          "license": "CC BY-SA 3.0 pl",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+          "referenceSHA256": "d98c42e28cd7412f5a61e2c5fdf6557e787f52cf169e53c2589db0dc55df04ca"
+        },
+        {
+          "title": "File:Kraków, kościół par. p.w. Wniebowzięcia NMP (Mariacki), XIII XIV, XIV, XIX 33.JPG",
+          "author": "Fmbar22",
+          "source": "https://commons.wikimedia.org/wiki/File:Krak%C3%B3w,_ko%C5%9Bci%C3%B3%C5%82_par._p.w._Wniebowzi%C4%99cia_NMP_(Mariacki),_XIII_XIV,_XIV,_XIX_33.JPG",
+          "license": "CC BY-SA 3.0 pl",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+          "referenceSHA256": "3bd5c168b14f6944e35f696fd4e76359df1916813a2dad572dfa397f585d501c"
+        },
+        {
+          "title": "File:Exterior of Saint Mary Basilica in Kraków 20180813-1.jpg",
+          "author": "Suicasmo",
+          "source": "https://commons.wikimedia.org/wiki/File:Exterior_of_Saint_Mary_Basilica_in_Krak%C3%B3w_20180813-1.jpg",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "referenceSHA256": "4a1e93b0a21b274bfd8593b5af419acbe85d9bfa2550818a434da99c2611c402"
+        }
+      ]
+    },
+    {
+      "task": 2808,
+      "slug": "st-patrick-dublin-v2",
+      "subject": "Dublinin St Patrickin katedraali",
+      "qidPerOrder": "Q846365",
+      "original": "st-patrick-dublin-v2-original.png",
+      "originalSHA256": "35faf11dee8fb58094a68cc936ac8a6c0b0b8e6f57394c91627ba9e197b70e0a",
+      "originalDimensions": [
+        1817,
+        866
+      ],
+      "reviewFile": "st-patrick-dublin-v2-1000.jpg",
+      "reviewSHA256": "811c115a8941c9e64935b4fba165158488531cdce7007a7171c365af4d711494",
+      "reviewDimensions": [
+        1000,
+        477
+      ],
+      "orderDimensionsMetres": {
+        "length": 90.3,
+        "width": 46.3,
+        "towerHeight": 43
+      },
+      "visualQA": "Pohjoissivussa näkyvät matalampi itäkappeli vasemmalla, poikkilaiva keskellä sekä yksittäinen luoteistorni oikealla. Kuvan poikkilaivan leveys syvyyssuunnassa vaatii 3D-tarkistuksen.",
+      "projectedSilhouetteWidthOverHeight": 1.97,
+      "projectionNote": "Kuvan siluetin ulkorajat tummuusrajalla 175. Kuvasta mitattu suhde on suuntaa antava. 3D-mitat tarkistetaan vasta mallista.",
+      "priorPreviewSHA256": "a9a29b448dc8d6442f976a15aaaff59d41108b848e5ee188d20eaa89e9a75c56",
+      "imageGenArtifact": "exec-80e35e9b-4dc8-4425-8afc-c8f360f48258",
+      "startedAt": "2026-11-20T20:51:20.822Z",
+      "generatedAt": "2026-11-20T20:51:52.023642+00:00",
+      "referenceUse": "Uusi ImageGen-rekonstruktio kolmen alla nimetyn viitekuvan pohjalta. Tausta ja kuvakulma rakennettu uudelleen.",
+      "references": [
+        {
+          "title": "File:St Patrick's Cathedral Exterior, Dublin, Ireland - Diliff.jpg",
+          "author": "Diliff",
+          "source": "https://commons.wikimedia.org/wiki/File:St_Patrick%27s_Cathedral_Exterior,_Dublin,_Ireland_-_Diliff.jpg",
+          "license": "CC BY-SA 3.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
+          "referenceSHA256": "59c9c7ec557c486dda85ac13daf9f1c8f3d65fff34ce300087d5b5c4a75e8ba8"
+        },
+        {
+          "title": "File:Dublin, St Patricks katedral, Nordisk familjebok.png",
+          "author": "Nordisk familjebok",
+          "source": "https://commons.wikimedia.org/wiki/File:Dublin,_St_Patricks_katedral,_Nordisk_familjebok.png",
+          "license": "Public domain",
+          "licenseURL": null,
+          "referenceSHA256": "e57860ae255255e74191287608483aba24091d0efcf20f02e8331d0203c32c9f"
+        },
+        {
+          "title": "File:Dublin St. Patrick's Cathedral Exterior Choir 1.jpg",
+          "author": "Zairon",
+          "source": "https://commons.wikimedia.org/wiki/File:Dublin_St._Patrick%27s_Cathedral_Exterior_Choir_1.jpg",
+          "license": "CC BY 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by/4.0",
+          "referenceSHA256": "c349d4164b305bc68ede0be796b234009f8a4b77d917cefd026018f511f6656d"
+        }
+      ]
+    }
+  ],
+  "creditBalanceObserved": 0,
+  "assetStorageDisplayed": "417/40",
+  "tripoCalls": 0,
+  "tripoCreditsUsed": 0,
+  "approvedImages": 0
+}
