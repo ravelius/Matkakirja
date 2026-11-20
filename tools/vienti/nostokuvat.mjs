@@ -27,7 +27,8 @@
  * Kohde: täkynoston `kohde` (kohteen kortin kuvat) ja kohdekartan kohteet, joiden nosto on tämä tunnus
  * (kohdekartat.kohteet[].kuvat); nähtävyysjutulla myös sen nosto-linkin nostojen omat kuvat.
  * Juttu: nähtävyysjutut, joiden nosto on tämä tunnus, ja linkittävien kohdekartan kohteiden jutut (kaupunki + nimi). Jälkimmäiset
- * (toinen tarina samasta paikasta) vain, kun nostolla ei ole yhtään kuvaa muista lähteistä (KK:N PÄÄTÖS 20.11.2026 klo 15.08).
+ * (toinen tarina samasta paikasta) vain, kun nostolla on muista lähteistä alle KUVIA.min kuvaa (tasalaatutarkistuksen vähimmäismäärä;
+ * KK:N PÄÄTÖS 20.11.2026 klo 15.18).
  * Pois: kartan merkit, kuvakkeet, miniatyyrit (kohdekartan piirrosmerkit), pikkukuvat, äänet ja linkit.
  */
 import { kohteenKuvalista, kohteenNykykuva, matkakirjanIhme } from '../../js/fokuskohteet.js';
@@ -36,6 +37,7 @@ import { NOSTO_MAAT } from '../../js/fokusnosto.js';
 import { MAASTOKOHTEET_ATA } from '../../js/packs/maastokohteet-ata.js';
 import { MAASTOKOHTEET_ARK } from '../../js/packs/maastokohteet-ark.js';
 import { KOHDE_MAAT } from '../../js/fokuskohteet.js';
+import { KUVIA } from '../sisalto/nostokuva.mjs';
 
 export const MISTA = ['nosto', 'kohde', 'juttu'];
 
@@ -209,9 +211,10 @@ export function nostokuvaRakentaja({ R, hae, haeKohde, kokoelmat }) {
     return [...new Set(juttuLinkit.get(tunnus) ?? [])].flatMap((a) => juttuKuvat(a, 'juttu'));
   }
   /**
-   * Reitti (b): linkittävien kohdekartan kohteiden samannimiset jutut (kaupunki + nimi). TOINEN TARINA (KK:N PÄÄTÖS 20.11.2026 klo 15.08,
-   * aiempi: P-261120-5, P-261120-10, P-261117-119; kortti noston-kuvat 7 ja 9): sen kuvat vain nostolle, jolla ei ole yhtään omaa kuvaa
-   * lähteistä nosto, kohde ja reitti (a); muuten Notre-Damen palotarina sai myös saman paikan yleisen jutun kuvat.
+   * Reitti (b): linkittävien kohdekartan kohteiden samannimiset jutut (kaupunki + nimi). TOINEN TARINA (KK:N PÄÄTÖS 20.11.2026 klo 15.18,
+   * aiempi: KK 15.08, P-261120-5, P-261120-10, P-261117-119; kortti noston-kuvat 7 ja 9): sen kuvat vain nostolle, jolla on alle
+   * KUVIA.min omaa kuvaa lähteistä nosto, kohde ja reitti (a). Muuten Notre-Damen palotarina sai saman paikan yleisen jutun kuvat;
+   * vajaa nosto (muut kaupungit, joiden vuoro ei ole vielä) pitää ne kuten ennen.
    */
   function juttuKohteesta(tunnus) {
     const omatJutut = new Set(juttuLinkit.get(tunnus) ?? []);
@@ -219,10 +222,10 @@ export function nostokuvaRakentaja({ R, hae, haeKohde, kokoelmat }) {
       .filter((a) => a && !omatJutut.has(a));
     return [...new Set(lista)].flatMap((a) => juttuKuvat(a, 'juttu'));
   }
-  /** Nosto → kohde → juttu (a); reitti (b) vain, kun edellisistä ei tullut yhtään kuvaa. */
+  /** Nosto → kohde → juttu (a); reitti (b) vain, kun edellisistä tuli alle KUVIA.min kuvaa. */
   const koottu = (tunnus, ...listat) => {
     const omin = valmis(...listat);
-    return omin.length ? omin : valmis(...listat, juttuKohteesta(tunnus));
+    return omin.length >= KUVIA.min ? omin : valmis(...listat, juttuKohteesta(tunnus));
   };
 
   const valmis = (...listat) => {
