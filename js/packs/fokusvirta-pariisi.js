@@ -609,7 +609,7 @@ export const FOKUSVIRTA_PARIISI = {
       },
       kuvat: [
         {
-          osoite: 'https://media.matkakirja.app/kuvat/tarina-kirahvi-1827-2-kavely.jpg',
+          osoite: 'https://media.matkakirja.app/kuvat/tarina-kirahvi-1827-2-kavely-1200.jpg',
           laji: 'havainnekuva',
           lyhyt: 'Kirahvi vahatussa sadetakissa kävelee maantiellä saattueensa kanssa',
           selite: 'Kirahvi vahatussa sadetakissa kävelee maantiellä saattueensa kanssa',

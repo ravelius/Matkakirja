@@ -382,7 +382,7 @@ export const FOKUSKOHTEET_FRA = [
      */
     jaksokuvat: {
       varkaus: {
-        osoite: 'https://media.matkakirja.app/kuvat/tarina-louvre-2-varkaus.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/tarina-louvre-2-varkaus-1200.jpg',
         laji: 'havainnekuva',
         lyhyt: 'Valkotakkinen mies Salon Carrén seinän edessä, jossa on tyhjä ripustuspaikka',
         lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Rekonstruktio vuoden 1911 varkaudesta; viitteinä Salon Carrén vanhat kuvat ja Mona Lisan tyhjä paikka (Wikimedia Commons, public domain), Musée du Louvre',
@@ -700,7 +700,7 @@ export const FOKUSKOHTEET_FRA = [
     ],
     jaksokuvat: {
       lustig: {
-        osoite: 'https://media.matkakirja.app/kuvat/tarina-eiffel-torni-4-lustig.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/tarina-eiffel-torni-4-lustig-1200.jpg',
         laji: 'havainnekuva',
         lyhyt: 'Hotellin salongissa neuvotellaan tornin kaupasta, ikkunasta näkyy Eiffel-torni',
         lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Salongin asettelu on rekonstruktio; viitteinä Hôtel de Crillonin salonki, Eiffel-tornin rakenne ja aikakauden asu (Wikimedia Commons, public domain ja CC0)',
@@ -835,7 +835,7 @@ export const FOKUSKOHTEET_FRA = [
      */
     jaksokuvat: {
       parlamentti: {
-        osoite: 'https://media.matkakirja.app/kuvat/tarina-sainte-chapelle-4-parlamentti.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/tarina-sainte-chapelle-4-parlamentti-1200.jpg',
         laji: 'havainnekuva',
         lyhyt: 'Pariisin parlamentin istuntosali, ikkunasta näkyy kappelin torni',
         lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Tornin näkyminen ikkunasta on sommitteluratkaisu; viitteinä Carnavalet\'n istuntosalin piirros (CC0) ja Château de Versailles',
@@ -845,7 +845,7 @@ export const FOKUSKOHTEET_FRA = [
         korkeus: 800,
       },
       kaulanauha: {
-        osoite: 'https://media.matkakirja.app/kuvat/tarina-sainte-chapelle-2-kaulanauha.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/tarina-sainte-chapelle-2-kaulanauha-1200.jpg',
         laji: 'havainnekuva',
         lyhyt: 'Yöllinen kuja Versailles\'n puistossa, kaukana kaksi hahmoa',
         lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Kuja on havainnollistettu, ei pohjapiirroksen kopio; viitteinä Bosquet de la Reine (Wikimedia Commons, CC BY-SA 3.0) ja Château de Versailles',
@@ -855,7 +855,7 @@ export const FOKUSKOHTEET_FRA = [
         korkeus: 800,
       },
       piha: {
-        osoite: 'https://media.matkakirja.app/kuvat/tarina-sainte-chapelle-1-piha.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/tarina-sainte-chapelle-1-piha-1200.jpg',
         laji: 'havainnekuva',
         lyhyt: 'Sainte-Chapelle palatsin pihalla',
         lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Rekonstruktio; viitteinä Martinetin 1780-luvun näkymät sekä kappelin rungon valokuvat (Wikimedia Commons, public domain, CC0 ja CC BY-SA 4.0), Centre des monuments nationaux',
@@ -972,7 +972,7 @@ export const FOKUSKOHTEET_FRA = [
      */
     jaksokuvat: {
       hohto: {
-        osoite: 'https://media.matkakirja.app/kuvat/tarina-curie-1898-4-hohto.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/tarina-curie-1898-4-hohto-1200.jpg',
         laji: 'havainnekuva',
         lyhyt: 'Hämärä vaja, pöydällä pulloja ja putkia, jotka hohtavat himmeästi',
         lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Haalea sinivihreä hohto on kuvituksen tulkinta; viitteinä AIP (Marie Curien muistelmat) ja Wikimedia Commons (public domain)',
@@ -982,7 +982,7 @@ export const FOKUSKOHTEET_FRA = [
         korkeus: 800,
       },
       radiumtyo: {
-        osoite: 'https://media.matkakirja.app/kuvat/tarina-curie-1898-2-radiumtyo.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/tarina-curie-1898-2-radiumtyo-1200.jpg',
         laji: 'havainnekuva',
         lyhyt: 'Marie ja Pierre Curie työssä vajassa, jonka katto vuotaa',
         lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Rekonstruktio; työtilan ja asujen viitteinä Wikimedia Commons (public domain), AIP (Marie Curien muistelmat)',
@@ -992,7 +992,7 @@ export const FOKUSKOHTEET_FRA = [
         korkeus: 800,
       },
       vaja: {
-        osoite: 'https://media.matkakirja.app/kuvat/tarina-curie-1898-1-vaja.jpg',
+        osoite: 'https://media.matkakirja.app/kuvat/tarina-curie-1898-1-vaja-1200.jpg',
         laji: 'havainnekuva',
         lyhyt: 'Curien työtilana toiminut pihavaja koulun pihalla',
         lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Vajan julkisivu on rekonstruktio; viitteinä AIP (Marie Curien muistelmat) ja Wikimedia Commons (public domain), Musée Curien arkistokuvaa ei käytetty',
