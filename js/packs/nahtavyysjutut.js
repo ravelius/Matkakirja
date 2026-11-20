@@ -6392,6 +6392,11 @@ export const NAHTAVYYSJUTUT = {
         + 'kukko asennettiin tornin huipulle 16. joulukuuta 2023, ja sen sisään pantiin samat '
         + 'pyhäinjäännökset sekä lähes 2 000 jälleenrakentajan nimet. Katedraali avattiin uudelleen '
         + 'joulukuussa 2024.',
+      vuodet: [
+        { kohta: 'huhtikuuta 2019', vuosi: '2019', selite: 'tulipalo' },
+        { kohta: 'joulukuuta 2023', vuosi: '2023', selite: 'uusi kukko' },
+        { kohta: 'joulukuussa 2024', vuosi: '2024', selite: 'avattiin uudelleen' },
+      ],
       kuvat: [
         {
           osoite: 'https://media.matkakirja.app/kuvat/notre-dame-2019-palo.jpg',

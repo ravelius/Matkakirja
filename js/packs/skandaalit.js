@@ -2186,6 +2186,11 @@ export const SKANDAALIT = {
       otsikko: 'Vrain-Lucas 1861–1870 — 27 000 väärennettyä kirjettä',
       nimio: 'Vrain-Lucas',
       vuosi: '1861–1870',
+      vuodet: [
+        { kohta: 'Vuonna 1861', vuosi: '1861', selite: 'kirjeet myyntiin' },
+        { kohta: 'Heinäkuussa 1867', vuosi: '1867', selite: 'akatemia epäilee' },
+        { kohta: 'helmikuussa 1870', vuosi: '1870', selite: 'tuomio' },
+      ],
       paikka: 'Institut de France (tiedeakatemia), Pariisi',
       lat: 48.8573, lon: 2.3372,
       kortti: 'Vrain-Lucasin väärentämässä kirjeessä Kleopatra kirjoitti Julius Caesarille ranskaksi, vesileimatulle '
