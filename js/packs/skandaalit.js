@@ -2199,7 +2199,7 @@ export const SKANDAALIT = {
         + '\n\n'
         + 'Vuonna 1861 hän myi kuuluisalle matemaatikolle ja keräilijälle Michel Chaslesille Boylen, '
         + 'Newtonin ja Pascalin kirjeitä. Yhdessä niistä Pascal ilmoitti keksineensä painovoiman lait '
-        + 'ennen Newtonia, ja Chasles maksoi kirjeistä noin 140 000 frangia.'
+        + 'ennen Newtonia, ja Chasles maksoi kirjeistä yhteensä noin 140 000 frangia.'
         + '\n\n'
         + 'Heinäkuussa 1867 Chasles vei Pascal-kirjeet tiedeakatemialle, mutta käsiala ei vastannut '
         + 'Pascalin varmoja kirjeitä. Kun akatemia huomautti anakronismeista eli ajan virheistä, '

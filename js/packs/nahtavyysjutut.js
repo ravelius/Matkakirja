@@ -6570,7 +6570,7 @@ export const NAHTAVYYSJUTUT = {
       aika: 'keskiaika–1808',
       nosto: 'hahmotelma-temple-torni',
       teksti: 'Temple-torni kohosi temppeliritarien Pariisin päämajan linnoituksessa. Philippe Augusten '
-        + 'ajoista kuninkaan aarre talletettiin ritarien linnoitukseen, ja sen muurien suojassa asui '
+        + 'ajoista kuninkaan aarre talletettiin ritarien linnoitukseen, ja sen muurien suojaan hakeutui '
         + 'myöhemmin Pariisin veroista vapaita käsityöläisiä.'
         + '\n\n'
         + 'Elokuussa 1792 kuningasperhe vietiin Templeen vangiksi. Ludvig XVI vietiin sieltä '
