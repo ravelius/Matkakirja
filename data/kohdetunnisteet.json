@@ -3037,12 +3037,10 @@
   "pvm": "2.11.2026"
  },
  "izmir:İzmirin kellotorni": {
-  "qid": "Q344490",
-  "tapa": "nimi+säde",
-  "wikidataNimi": "İzmir",
-  "pisteet": 0.9,
-  "etaisyys_m": 89,
-  "pvm": "2.11.2026"
+  "qid": "Q3696052",
+  "tapa": "käsin",
+  "huom": "Q344490 oli İzmirin maakunta; oikea kellotorni Q3696052 (KK 20.11.)",
+  "pvm": "20.11.2026"
  },
  "jakarta:Fatahillah-aukio": {
   "qid": "Q25053359",
@@ -8959,12 +8957,10 @@
   "pvm": "3.11.2026"
  },
  "washington:Georgetownin vanha kivitalo": {
-  "qid": "Q1468648",
-  "tapa": "nimi+säde",
-  "wikidataNimi": "Georgetown",
-  "pisteet": 0.9,
-  "etaisyys_m": 192,
-  "pvm": "2.11.2026"
+  "qid": "Q7085121",
+  "tapa": "käsin",
+  "huom": "Q1468648 oli Georgetownin kaupunginosa; oikea Old Stone House Q7085121 (KK 20.11.)",
+  "pvm": "20.11.2026"
  },
  "washington:National Building Museum": {
   "qid": "Q624008",
@@ -8975,12 +8971,10 @@
   "pvm": "2.11.2026"
  },
  "washington:Smithsonianin linna": {
-  "qid": "Q131626",
-  "tapa": "nimi+säde",
-  "wikidataNimi": "Smithsonian",
-  "pisteet": 0.9,
-  "etaisyys_m": 15,
-  "pvm": "2.11.2026"
+  "qid": "Q605937",
+  "tapa": "käsin",
+  "huom": "Q131626 oli Smithsonian-instituutti; oikea rakennus Q605937 (Smithsonian Institution Building; KK 20.11.)",
+  "pvm": "20.11.2026"
  },
  "washington:Thomas Jefferson -kirjastotalo": {
   "qid": "Q2615945",
@@ -9360,5 +9354,23 @@
   "pisteet": 1,
   "etaisyys_m": 0,
   "pvm": "2.11.2026"
+ },
+ "sofia:Banja Bašin moskeija": {
+  "qid": "Q790052",
+  "tapa": "käsin",
+  "huom": "Banya Bashi Mosque; Wikidata P625 ja OSM way/96640830 (42.69953,23.32243) samassa kohdassa; vanha piste (Sofia-patsas) oli noin 200 m väärässä (KK 20.11.)",
+  "pvm": "20.11.2026"
+ },
+ "sofia:Pyhän Yrjön rotunda": {
+  "qid": "Q2598073",
+  "tapa": "käsin",
+  "huom": "Pyhän Yrjön rotunda; Wikidata P625 ja OSM way/171437780 (42.69689,23.32290) samassa kohdassa (KK 20.11.)",
+  "pvm": "20.11.2026"
+ },
+ "sofia:Mineraalikylpylä": {
+  "tapa": "käsin",
+  "kartta": true,
+  "huom": "Keskuskylpylä on oma rakennuksensa noin 100 m moskeijasta; pidetään kartan piste, ei yhdistetä Banja Bašin moskeijaan (SK 20.11.)",
+  "pvm": "20.11.2026"
  }
 }

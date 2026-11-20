@@ -8996,15 +8996,15 @@
   {
    "id": "izmir:İzmirin kellotorni",
    "nimi": "İzmirin kellotorni",
-   "qid": "Q344490",
-   "lat": 38.41889,
-   "lon": 27.12972,
-   "lahde": "wikidata Q344490 P625 (tunniste nimi+säde: İzmir)",
+   "qid": "Q3696052",
+   "lat": 38.41886,
+   "lon": 27.12867,
+   "lahde": "wikidata Q3696052 P625 (käsin: Q344490 oli İzmirin maakunta; oikea kellotorni Q3696052 (KK 20.11.))",
    "kartanPiste": {
     "lat": 38.4189,
     "lon": 27.1287
    },
-   "eroKartanPisteesta_m": 89
+   "eroKartanPisteesta_m": 5
   },
   {
    "id": "izmir:Kemeraltin basaari",
@@ -22867,7 +22867,7 @@
    "qid": null,
    "lat": 42.69923,
    "lon": 23.3238,
-   "lahde": "kartan piste (nostokohde ilman wikiä)",
+   "lahde": "kartan piste (käsin: Keskuskylpylä on oma rakennuksensa noin 100 m moskeijasta; pidetään kartan piste, ei yhdistetä Banja Bašin moskeijaan (SK 20.11.))",
    "kartanPiste": {
     "lat": 42.69923,
     "lon": 23.3238
@@ -22877,16 +22877,15 @@
   {
    "id": "sofia:Banja Bašin moskeija",
    "nimi": "Banja Bašin moskeija",
-   "qid": null,
-   "lat": 42.69789,
-   "lon": 23.32173,
-   "lahde": "sama paikka kuin Sofia-patsas (kartan piste 25 m päässä)",
+   "qid": "Q790052",
+   "lat": 42.69951,
+   "lon": 23.32258,
+   "lahde": "wikidata Q790052 P625 (käsin: Banya Bashi Mosque; Wikidata P625 ja OSM way/96640830 (42.69953,23.32243) samassa kohdassa; vanha piste (Sofia-patsas) oli noin 200 m väärässä (KK 20.11.))",
    "kartanPiste": {
     "lat": 42.6977,
     "lon": 23.3219
    },
-   "eroKartanPisteesta_m": 0,
-   "samaKuin": "sofia:Sofia-patsas"
+   "eroKartanPisteesta_m": 209
   },
   {
    "id": "sofia:Serdican areena",
@@ -22904,16 +22903,15 @@
   {
    "id": "sofia:Pyhän Yrjön rotunda",
    "nimi": "Pyhän Yrjön rotunda",
-   "qid": null,
-   "lat": 42.69789,
-   "lon": 23.32173,
-   "lahde": "sama paikka kuin Sofia-patsas (kartan piste 146 m päässä)",
+   "qid": "Q2598073",
+   "lat": 42.69686,
+   "lon": 23.32286,
+   "lahde": "wikidata Q2598073 P625 (käsin: Pyhän Yrjön rotunda; Wikidata P625 ja OSM way/171437780 (42.69689,23.32290) samassa kohdassa (KK 20.11.))",
    "kartanPiste": {
     "lat": 42.69689,
     "lon": 23.32288
    },
-   "eroKartanPisteesta_m": 0,
-   "samaKuin": "sofia:Sofia-patsas"
+   "eroKartanPisteesta_m": 4
   },
   {
    "id": "sofia:Sofian katedraali",
@@ -26430,28 +26428,28 @@
   {
    "id": "washington:Georgetownin vanha kivitalo",
    "nimi": "Georgetownin vanha kivitalo",
-   "qid": "Q1468648",
-   "lat": 38.90472,
-   "lon": -77.0625,
-   "lahde": "wikidata Q1468648 P625 (tunniste nimi+säde: Georgetown)",
+   "qid": "Q7085121",
+   "lat": 38.90556,
+   "lon": -77.06056,
+   "lahde": "wikidata Q7085121 P625 (käsin: Q1468648 oli Georgetownin kaupunginosa; oikea Old Stone House Q7085121 (KK 20.11.))",
    "kartanPiste": {
     "lat": 38.90556,
     "lon": -77.06056
    },
-   "eroKartanPisteesta_m": 192
+   "eroKartanPisteesta_m": 0
   },
   {
    "id": "washington:Smithsonianin linna",
    "nimi": "Smithsonianin linna",
-   "qid": "Q131626",
-   "lat": 38.88889,
+   "qid": "Q605937",
+   "lat": 38.88875,
    "lon": -77.026,
-   "lahde": "wikidata Q131626 P625 (tunniste nimi+säde: Smithsonian)",
+   "lahde": "wikidata Q605937 P625 (käsin: Q131626 oli Smithsonian-instituutti; oikea rakennus Q605937 (Smithsonian Institution Building; KK 20.11.))",
    "kartanPiste": {
     "lat": 38.88875,
     "lon": -77.026
    },
-   "eroKartanPisteesta_m": 16
+   "eroKartanPisteesta_m": 0
   },
   {
    "id": "washington:Washington-monumentti",
