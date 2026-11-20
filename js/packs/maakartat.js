@@ -7214,7 +7214,8 @@ export const KAUPUNKIKARTAT = {
        * Kaupunkinostojen katto pudottaa pääkartalta Sofian viereltä
        * seitsemän merkkiä. Kaksi niistä on kaupungin sisällä ja saa
        * kartalla oman paikkansa: `moskeijat` eli jäljelle jäänyt Banja
-       * Bashi (23,3219 E / 42,6977 N —
+       * Bashi (23,32258 E / 42,69951 N, Wikidata Q790052; KK 20.11. siirsi
+       * pisteen 200 m moskeijan kohdalle; aiemmin 23,3219 / 42,6977 —
        * js/packs/fokuskohteet-bgr.js) ja syvennystarina
        * `syvennys-sofia-areena` (23,3283 E / 42,6972 N —
        * js/packs/syvennyspaikat.js).
@@ -7231,7 +7232,7 @@ export const KAUPUNKIKARTAT = {
       // moskeija" laskeutui Pyhän Yrjön rotundan piirroksen päälle,
       // joka on 33 px oikealla alaviistossa.
       {
-        nimi: 'Banja Bašin moskeija', lat: 42.6977, lon: 23.3219, nimiPuoli: 'vasen',
+        nimi: 'Banja Bašin moskeija', lat: 42.69951, lon: 23.32258, nimiPuoli: 'vasen',
         nosto: 'moskeijat',
       },
       /*

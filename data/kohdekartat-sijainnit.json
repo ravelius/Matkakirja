@@ -22882,10 +22882,10 @@
    "lon": 23.32258,
    "lahde": "wikidata Q790052 P625 (käsin: Banya Bashi Mosque; Wikidata P625 ja OSM way/96640830 (42.69953,23.32243) samassa kohdassa; vanha piste (Sofia-patsas) oli noin 200 m väärässä (KK 20.11.))",
    "kartanPiste": {
-    "lat": 42.6977,
-    "lon": 23.3219
+    "lat": 42.69951,
+    "lon": 23.32258
    },
-   "eroKartanPisteesta_m": 209
+   "eroKartanPisteesta_m": 0
   },
   {
    "id": "sofia:Serdican areena",
