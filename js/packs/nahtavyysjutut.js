@@ -5701,7 +5701,44 @@ export const NAHTAVYYSJUTUT = {
         { kohta: 'joulukuussa 2024', vuosi: '2024', selite: 'avattiin uudelleen' },
       ],
       kuvat: [
-        // K-4 erä 2: sama aito nykykuva kuin Notre-Dame 2019 -noston viimeinen (ei kaksoiskuvaa nostolle, jonka kohdekartta linkittää tähän juttuun).
+        // K-4 erä 3 C (KK 20.11.2026 15.08): jutun omat kuvat kappaleiden mukaan (tukipilarit, kruunaus, palo); viimeisenä sama nykykuva kuin ennen.
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/notre-dame-tukipilarit.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Notre-Damen lentävät tukipilarit',
+          selite: 'Notre-Damen lentävät tukipilarit',
+          lahde: 'Eutouring, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gothic_architecture_of_Notre_Dame_de_Paris.jpg',
+          tekija: 'Eutouring',
+          lisenssi: 'CC BY-SA 4.0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/notre-dame-kruunaus.jpg',
+          laji: 'maalaus',
+          lyhyt: 'Napoleonin kruunajaiset Notre-Damessa Davidin maalauksessa',
+          selite: 'Napoleonin kruunajaiset Notre-Damessa Davidin maalauksessa',
+          lahde: 'Jacques-Louis David, Wikimedia Commons (Public domain), rajattu',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Le_Sacre_de_Napol%C3%A9on_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3699_;_MR_1437.jpg',
+          tekija: 'Jacques-Louis David',
+          lisenssi: 'Public domain',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
+          osoite: 'https://media.matkakirja.app/kuvat/notre-dame-tornit.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Notre-Damen tornit ja ruusuikkuna palon savussa',
+          selite: 'Notre-Damen tornit ja ruusuikkuna palon savussa',
+          lahde: 'Emilio Luque, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Incendio_de_la_catedral_de_Notre_Dame_de_Par%C3%ADs_II.jpg',
+          tekija: 'Emilio Luque',
+          lisenssi: 'CC BY-SA 4.0',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        // Sama nykykuva (Chabe01) kuin Notre-Dame 2019 -noston viimeinen; vientisääntö (NUI e5ff1cefb8) pitää noston kuvalistan omana, koska nostolla on 4 omaa kuvaa.
         {
           osoite: 'https://media.matkakirja.app/kuvat/notre-dame-2019-nyt.jpg',
           laji: 'valokuva',
