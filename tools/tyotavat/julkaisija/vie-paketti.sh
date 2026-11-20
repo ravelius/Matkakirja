@@ -16,6 +16,7 @@
 #      ensin ämpäriluettelosta (amparin-luettelo.tsv + .lisays.tsv, ei pyyntöjä), luettelosta puuttuva viedään
 #      ehdollisena (put-object --if-none-match '*': R2 hylkää 412:lla, jos avain on jo; ei HEAD-pyyntöjä, 28.10.2026)
 #   5) julkinen URL (?t=) → 200 + access-control-allow-origin + SHA täsmää; tulos lokiin
+#   4e) olemassa oleva avain eri sisällöllä (luettelon koko/md5-ETag tai 412 + julkinen sha) → VIKA, exit 11 (PT 17.11.2026)
 #   4b) omat-mallit-vienti-*: LS2:n portti omat_mallit_ktx2.py --portti läpäistävä (PT 10.10.2026)
 #   4c) mp3/wav-paketit: Pelikoodarin aaniportti.py läpäistävä (PT 10.10.2026)
 # Avaimet vain ympäristöstä (~/.zshrc); niitä ei tulosteta.
@@ -124,6 +125,24 @@ if [ -f "$LUETTELO" ]; then
     done; } | LC_ALL=C sort -u > "$OLEMASSA" || true
   rm -f "$OLEMASSA.paketti"
   while IFS= read -r k; do ONJO[$k]=1; done < "$OLEMASSA"
+  # 17.11.2026 (PT 01.5x, wien-b: immutable-avaimen sisältö vaihdettiin käsin): olemassa olevan avaimen koko + md5-ETag
+  # luettelosta → eri sisältö samalla avaimella = VIKA (ei pyyntöjä). ETag "-" (lisäys ilman ETagia) → vain koko.
+  typeset -A ONJO_KOKO ONJO_MD5
+  # awk suodattaa luettelosta (9 M riviä) vain paketin avaimet; zsh-silmukka vain niille (luettelo, sitten lisäykset → uusin voittaa).
+  if (( ${#ONJO} )); then
+    print -l -- ${(k)ONJO} > "$OLEMASSA.avaimet"
+    while IFS=$'\t' read -r k z e; do
+      [ -n "$z" ] && ONJO_KOKO[$k]=$z; [ -n "$e" ] && [ "$e" != - ] && ONJO_MD5[$k]=${e//\"/}
+    done < <(for f in "$LUETTELO" "$LISAYS.vanha" "$LISAYS"; do [ -f "$f" ] && awk -F'\t' 'NR==FNR{w[$1]=1;next} ($1 in w)' "$OLEMASSA.avaimet" "$f"; done)
+    rm -f "$OLEMASSA.avaimet"
+  fi
+  ERISISALTO=0
+  for k in ${(k)ONJO}; do
+    lz=$(stat -f %z "$R/$k"); vz=${ONJO_KOKO[$k]:-}; vm=${ONJO_MD5[$k]:-}
+    if [[ -n $vm && $vm != *-* ]]; then lm=$(md5 -q "$R/$k"); [ "$lm" = "$vm" ] || { echo "VIKA: $k on jo ämpärissä ERI sisällöllä (md5 ${lm:0:12} ≠ ${vm:0:12}); immutable-avainta ei ylikirjoiteta → anna uusi avain" >&2; ERISISALTO=$((ERISISALTO + 1)); }
+    elif [[ -n $vz && $vz != $lz ]]; then echo "VIKA: $k on jo ämpärissä ERI koolla ($lz ≠ $vz); immutable-avainta ei ylikirjoiteta → anna uusi avain" >&2; ERISISALTO=$((ERISISALTO + 1)); fi
+  done
+  [ "$ERISISALTO" = 0 ] || { echo "HYLÄTTY: $ERISISALTO olemassa olevaa avainta eri sisällöllä ($NIMI)" >&2; echo "$(date '+%Y-%m-%d %H:%M') $NIMI: HYLÄTTY, $ERISISALTO avainta eri sisällöllä (VIKA)" >> "$LOKI"; exit 11; }
   LUETTELO_IKA=$(( ($(date +%s) - $(stat -f %m "$LUETTELO")) / 3600 ))
   echo "luettelo: oli jo ${#ONJO} / $N (luettelo ${LUETTELO_IKA} h vanha + lisäykset), vietäviä $(( N - ${#ONJO} ))"
 else
@@ -179,6 +198,9 @@ while read -r h p; do
     esac
   done
   if [ "$onjo" = 1 ]; then
+    # 17.11.2026 (PT 01.5x): 412 = avain oli jo → sisällön oltava sama (julkinen ?t=-haku), muuten VIKA.
+    vs=$(curl -s $pakattu --max-time 60 "$JULKINEN/$p?t=$(date +%s)" | shasum -a 256 | cut -d' ' -f1) || true
+    if [ "$vs" != "$odotus" ]; then echo "VIKA: $p on jo ämpärissä ERI sisällöllä (sha ${vs:0:12} ≠ ${odotus:0:12}); ei ylikirjoitettu → anna uusi avain" >&2; virhe=$((virhe + 1)); continue; fi
     echo "= $p (on jo ämpärissä, 412, ei ylikirjoitettu)"; oli=$((oli + 1))
     printf '%s\t%s\t-\n' "$p" "$(stat -f %z "$R/$p")" >> "$LISAYS"
     continue

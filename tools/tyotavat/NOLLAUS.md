@@ -10,11 +10,11 @@ Kaikki muu on Postivahdin työtä. Osoitteet: /Users/Shared/Claude/osoitekirja.m
 3. Odota, kunnes rooli on levossa, ja tarkista `list_events` → 0 viestiä (konteksti nollattu, get_usage < 10 %).
    Jos ei nollautunut 10 minuutissa → `clear_session <id>` itse; jos sekään ei onnistu → rivi PT:lle `JUMI nollaus <rooli>`.
 4. Lähetä vakioaloitusviesti (alla) send_messagella.
-5. Rivi Päätoimittajalle (local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc): `nollattu <rooli> (<sha>)`.
+5. Rivi Päätoimittajalle (local_5df52e10-10e4-4b72-9554-0049db300dfe): `nollattu <rooli> (<sha>)`.
 
-Etäyhteyttä ei kytketä tässä kulussa: se on vain KK:lla (omistaja 6.11.2026 klo 16.08, Raamattu 7.9).
+Etäohjaus (omistaja 14.11.2026 22.28 "Laita remote päälle kaikkiin sessioihin"; omistaja 16.11.2026 klo 17.00 "kyllä", P-261116-22): päällä kaikissa roolisessioissa. Nollauksen jälkeen (kulun kohta 3/4) tarkista `get_session`in `remoteControlActive`. Jos se putosi false, POSTIVAHTI KYTKEE SEN ITSE päälle (`set_remote_control <id> true`), eikä riviä lähetetä KK:lle. Jos kytkentä ei onnistu, rivi PT:lle "etäohjaus ei kytkeytynyt: <rooli>". Postivahti ei kytke etäohjausta kenellekään pois. Postivahdin oman nollauksen jälkeen PT kytkee Postivahdin etäohjauksen.
 
-Keskustelukanavaa (local_231e4bad) EI nollata koskaan (omistaja nollaa sen kortilla). Päätoimittajan oma nollaus: PT kirjoittaa luovutuksen ja aloitusviestin ja pyytää Postivahtia (sama kulku, aloitusviesti PT:n antamana). PT:n kova raja 40 % = pakkonollaus (KIERROS.md Hälytysrajat). Ennen PT:n clear_sessionia tarkista, että /Users/Shared/Claude/keskustelut/ sisältää alle 15 min vanhan Paatoimittaja-<pvm>-klo-*.md:n; jos ei, pyydä PT:tä ajamaan ensin `python3 tools/tallenna-keskustelu.py <keskustelu-uuid> Paatoimittaja` (15.10. 14.39 tallennus jäi väliin).
+Keskustelukanava (local_37f7c945) nollaa itsensä (omistaja 11.11. 22.56/23.03). HERÄTYS (KK 14.11. 00.05): KK ei kytke etäohjausta pois nollauksessa (omistaja 14.11. 22.30 "Kaikki voisi pitää päällä nollauksien jälkeen myös", P-261114-11); KK lähettää ennen clear_sessionia Postivahdille ja PT:lle "KK NOLLAUTUU klo HH.MM" → Postivahti lähettää 45 s:n päästä KK:lle aloitusviestin "Lue scratchpad/keskustelukanava/aloitus.md" ja kuittaa PT:lle; jos KK:n kuittausta ei tule 3 minuutissa, PT herättää KK:n (sama viesti). Päätoimittajan oma nollaus: PT kirjoittaa luovutuksen ja aloitusviestin ja pyytää Postivahtia (sama kulku, aloitusviesti PT:n antamana). PT:n kova raja 40 % = pakkonollaus (KIERROS.md Hälytysrajat). Ennen PT:n clear_sessionia tarkista, että /Users/Shared/Claude/keskustelut/ sisältää alle 15 min vanhan Paatoimittaja-<pvm>-klo-*.md:n; jos ei, pyydä PT:tä ajamaan ensin `python3 tools/tallenna-keskustelu.py <keskustelu-uuid> Paatoimittaja` (15.10. 14.39 tallennus jäi väliin).
 
 ## Vanhentuneen NOLLAUS-viestin esto (PT 4.11. 07.22: JU, KS, LAV ja KK saivat NOLLAUS-viestin nollauksensa jälkeen)
 - Lähetä NOLLAUS vain, kun roolin `isRunning` on false; muuten odota levon alkua (viesti jää muuten jonoon ja osuu seuraavaan sessioon).
@@ -28,15 +28,22 @@ Olet <ROOLI> (<malli>), Matkakirjan roolisessio; session id <id>, checkout <kans
 Lue ensin CLAUDE.md ja luovutuksesi KOKONAAN: /Users/Shared/Claude/luovutukset/<rooli>-<pvm>-<klo>.md, ja toimi sen mukaan.
 KEVYT ALOITUS (KK 12.11. 15.36, kortti nollaus-ja-luovutus 1 ja 7): lue lisäksi vain omat aihekortit (node tools/kirjaa.mjs aiheet → kirjaa.mjs lue <aihe>, vastuu = roolisi) ja työlistan oma rivi; Raamatun lukuja ei lueta kokonaan, vaan haetaan tarpeen mukaan (kirjaa.mjs hae). Tavoite aloitus ≤ 15 %.
 Osoitteet: /Users/Shared/Claude/osoitekirja.md — viestit AINA send_messagella session id:llä, ei nimellä.
-Viestit Päätoimittajalle (local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc) enintään 3 riviä: mitä, sha, kuvien polku; yksityiskohdat tiedostoon.
+Viestit Päätoimittajalle (local_5df52e10-10e4-4b72-9554-0049db300dfe) enintään 3 riviä: mitä, sha, kuvien polku; yksityiskohdat tiedostoon.
 Vastuualueesi: docs/vastuukartta.md. Kun nollaustarve tulee: luovutus + push → Postivahdille "LUOVUTUS VALMIS <sha>".
 Jos sait nollauksen jälkeen vanhoja viestejä, ne on jo käsitelty luovutuksessa – älä toista niitä.
 Aloita jonosi seuraavasta erästä; jos jono on tyhjä, rivi PT:lle "JONO TYHJÄ: <rooli>".
 ODOTUS EI OLE LEPO (KK 13.11. 10.22, omistajan kysymys): kun vuorosi päättyy odotukseen (KK:n katse, Mac-jono, toinen rooli), ota HETI seuraava rivi: `python3 -I tools/asemataulu/tyolista.py seuraava` (oma kohtasi työlistan tekijänimellä, esim. KS, NS, VS, Äänittäjä). Lepää vain, jos jono on tyhjä tai kaikki rivit odottavat; silloin yksi rivi PT:lle "JONO TYHJÄ: <rooli>". Seuraava rivi otetaan VAIN, jos se ei odota KK:n päätöstä eikä riko voimassa olevaa "älä aja vielä" -sanaa (KK 10.29); vanhentuneelta näyttävästä rivistä yksi rivi PT:lle, ei työn aloitusta. Kirjoita sama rivi luovutukseesi.
 AJOPYYNTÖ (omistaja 16.11. 13.25, P-261116-14, kortti laitteet-ja-simulaattorit 12): jokaiseen Mac-/Unity-ajopyyntöön JU:lle LUOKKA (linkki, juna, omistaja, kuva, vika, yo). Ei pareja (Nyt | Uusi), ei toista laitetta, ei omia mittauksia: ne ovat yo-luokkaa, ja ajojonon portti pitää ne yössä.
-JUNAPYYNTÖ (omistaja 16.11. 15.01, P-261116-21, kortti juna-ja-julkaisu 2): sha + versiorivin ehdotus (tai "ei versioriviä") KK:lle; KK:n sanalla suoraan junaan. Ei junasana.zsh:ää eikä testisarjoja ennen junaa: ne ajetaan yöllä junan kärjelle, punaiset aamulla korjattavaksi.
+JUNAPYYNTÖ (omistaja 18.11. 08.31, P-261118-9, kortti juna-ja-julkaisu 2): valmis työ SUORAAN PT:lle: sha + versiorivi + RIVI: "<työlistan otsikko>". Näkyvän työn pyyntöön rivi KOHTA: mistä muutos näkyy (kaupunki, kohde tai skenaariorivi); teknisen työn LAJI: tekninen. PT vie junaan heti; näkyvä työ menee VERSIOON vasta, kun KK on merkinnyt sen todistenipusta (kelpaa | korjattava | pois). Ei testisarjoja ennen junaa.
 PALAUTUS (KK 16.11. 14.28 ja 15.02, P-261116-19/-21, kortti valmiin-maaritelma 15): palautukseen tehtäväkansion PALAUTUS.md (jokaiselle TEHTAVA.md:n M-riville "M<n>: KYLLÄ | EI — <kuva, loki tai luku>") ja `zsh /Users/Shared/Claude/julkaisija-tyokalut/palautus.zsh <rooli> <sha> <tehtäväkansio>` -rivi (vain M-rivit, sekunteja).
+EI KELLOLYKKÄYSTÄ (omistaja 16.11. 23.59, P-261116-28, kortti roolit-ja-viestit 15): Työtä ei lykätä kellon mukaan: ei "aamulla/yön jälkeen" tehtävissä tai luovutuksessa; odotus kirjataan tapahtumana (ajo, sana, tulos), odottaessa tee muuta rakentavaa tai ilmoita KK:lle "ei työtä".
+LEVY (PT 17.11. 00.3x, wt/ 109 työpuuta 112 Gi): Ennen luovutusta poista omat työpuut, joiden PR on yhdistetty tai hylätty (git worktree remove; vain omat). Postivahti ilmoittaa PT:lle, jos levy < 80 Gi.
+KOLME RIVIÄ (omistaja 18.11. 08.31, P-261118-9):
+Ennen palautusta: katso oma tuloksesi ja aja palautus.zsh (PALAUTUS.md, vastaus jokaiseen M-riviin).
+Näkyvän työn junapyyntöön rivi KOHTA: mistä muutos näkyy; teknisen työn LAJI: tekninen.
+Mac-ajot päivällä: ei omia todisteajoja (nippu hoitaa); kokeilun vaihtoehdot YHTEEN ajoon; yksi laite (iPad), iPhone vain kun asettelu on aiheena.
 ```
+Postivahti lukee luovutuksia: kellonaikalykkäys ("aamulla", "yön jälkeen") → rivi PT:lle (omistaja 16.11. 23.59). TYHJÄKÄYNTI > 10 min → rivi KK:lle (kopio PT) myös yöllä.
 Luovutustiedoston polku: roolin LUOVUTUS VALMIS -rivistä tai `git show --stat <sha>` (docs/raportit/…-luovutus-…md).
 
 ## Kotikansioiden päivitys ennen nollausta (omistajan päätös 22.24 B3, PT:n välittämä 20.10.)

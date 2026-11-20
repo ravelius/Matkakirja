@@ -27,10 +27,12 @@ import time
 KANSIO = os.path.expanduser("~/.claude/sessions")
 VALI = 2.0
 VIIVE = 10.0
-TYHJA_MIN = 20
+TYHJA_MIN = 10  # KK 13.11. 10.22 (omistajan kysymys: sessiot käyntiin), ennen 20
 TYHJA_VALI = 3600
 TYHJA_TILA = "/Users/Shared/Claude/hooks/.tyhjakaynti-tila.json"
-EI_TYHJA = {"KESKUSTELUKANAVA", "PÄÄTOIMITTAJA", "Postivahti", "Asemataulu", "Laitetestaaja"}
+EI_TYHJA = {"KESKUSTELUKANAVA", "CHAT", "PÄÄTOIMITTAJA", "Postivahti", "Asemataulu", "Laitetestaaja", "SUUNNITTELU"}
+# SUUNNITTELU (ent. Näyttämöseppä) lepää, kunnes omistaja pyytää uutta suunnitelmaa (KK 17.11. 00.3x)
+EI_TYHJA_ALKU = ("SUUNNITTELU", "Näyttämöseppä")
 
 
 def rooli(nimi):
@@ -70,7 +72,7 @@ def tyhjat(nyt, hetki):
     tulos = []
     for d in nyt.values():
         r = rooli(d.get("name"))
-        if r in EI_TYHJA or str(d.get("status", "")) != "idle":
+        if r in EI_TYHJA or r.startswith(EI_TYHJA_ALKU) or str(d.get("status", "")) != "idle":
             continue
         alku = (d.get("statusUpdatedAt") or 0) / 1000.0
         minuutit = int((hetki - alku) / 60) if alku else 0
