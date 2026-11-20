@@ -2192,22 +2192,21 @@ export const SKANDAALIT = {
         + 'paperille — ja kuuluisa matemaatikko osti kirjeen ilomielin, ja perään kymmeniätuhansia muita. Kansallisylpeys teki ostajasta sokean: olihan '
         + 'kirjeissä todiste, että painovoima keksittiin Ranskassa. '
         + 'Tiedeakatemia ei ollut aivan yhtä ilahtunut.',
-      teksti: 'Denis Vrain-Lucas oli lakikirjuriksi kouluttautunut ranskalainen, joka väärensi Pariisissa '
-        + 'noin 27 000 kirjettä Kleopatralta Dantelta myöten, kaikki 1800-luvun ranskaksi ja '
-        + 'vesileimatulle paperille. Hän alkoi väärentää vuonna 1854, hankki aikakauden paperia, '
-        + 'valmisti musteensa itse ja keräsi yksityiskohdat keisarillisesta kirjastosta.'
+      teksti: 'Denis Vrain-Lucas oli lakikirjurina työskennellyt ranskalainen, joka väärensi Pariisissa '
+        + 'noin 27 000 kirjettä, muun muassa Kleopatran kirjeen Caesarille. Kaikki kirjeet oli '
+        + 'kirjoitettu 1800-luvun ranskaksi, vaikka niiden piti olla paljon vanhempia. Hän alkoi '
+        + 'väärentää 1850-luvulla, hankki aikakauden paperia ja valmisti musteensa itse.'
         + '\n\n'
-        + 'Vuonna 1861 hän myi matemaatikko ja keräilijä Michel Chaslesille Boylen, Newtonin ja '
-        + 'Pascalin kirjeitä. Yhdessä Pascal ilmoitti keksineensä painovoiman lait ennen Newtonia, ja '
-        + 'Chasles maksoi kirjeistä yli 140 000 frangia.'
+        + 'Vuonna 1861 hän myi kuuluisalle matemaatikolle ja keräilijälle Michel Chaslesille Boylen, '
+        + 'Newtonin ja Pascalin kirjeitä. Yhdessä niistä Pascal ilmoitti keksineensä painovoiman lait '
+        + 'ennen Newtonia, ja Chasles maksoi kirjeistä noin 140 000 frangia.'
         + '\n\n'
-        + 'Vuonna 1867 Chasles vei Pascal-kirjeet tiedeakatemialle, mutta käsiala ei vastannut Pascalin '
-        + 'varmoja kirjeitä. Kun akatemia huomautti anakronismeista, Vrain-Lucas väärensi lisää '
-        + 'kirjeitä selittämään edelliset.'
+        + 'Heinäkuussa 1867 Chasles vei Pascal-kirjeet tiedeakatemialle, mutta käsiala ei vastannut '
+        + 'Pascalin varmoja kirjeitä. Kun akatemia huomautti anakronismeista eli ajan virheistä, '
+        + 'Vrain-Lucas väärensi lisää kirjeitä selittämään edelliset.'
         + '\n\n'
         + 'Vrain-Lucas pidätettiin, ja helmikuussa 1870 tuomioistuin antoi hänelle kaksi vuotta '
-        + 'vankeutta. Vuonna 2004 eräs tiedelehti julkaisi uuden kirjeen, jonka hän oli muka '
-        + 'kirjoittanut vankilasta. Sekin oli sepite.',
+        + 'vankeutta. Chasles oli maksanut kirjeistä suuren summan, mutta kirjeet olivat arvottomia.',
       lahde: 'en-Wikipedia "Denis Vrain-Lucas". Tarkistettu 2.9.2026.',
       kuva: {
         tiedosto: 'Pascal à Galileo.jpg',

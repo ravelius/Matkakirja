@@ -191,21 +191,21 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'kaanne',
-          teksti: 'Syyskuun 2. päivänä 1792 joukko tunkeutui linnakkeeseen ja surmasi kymmeniä vankeja, ja '
-            + 'vankila hylättiin. Linnakkeen purku alkoi vuonna 1802.',
+          teksti: 'Syyskuun alussa 1792 joukko tunkeutui linnakkeeseen ja surmasi vankeja, ja vankila '
+            + 'hylättiin. Linnakkeen purku alkoi vuonna 1802.',
           hologrammi: 'sammuu',
           hologrammiKohta: 'Linnakkeen purku alkoi',
           vuodet: [
-            { vuosi: '1792', selite: 'verilöyly', kohta: 'päivänä 1792' },
+            { vuosi: '1792', selite: 'verilöyly', kohta: 'alussa 1792' },
             { vuosi: '1802', selite: 'purku alkaa', kohta: 'vuonna 1802' },
           ],
         },
         {
           osa: 'tanaan',
-          teksti: 'Paikalle tehtiin uusi Place du Châtelet. Napoleon tilasi sinne palmusuihkulähteen '
-            + 'voitonmuistomerkiksi, ja se valmistui vuonna 1808. Fontaine du Palmier seisoo aukiolla yhä.',
+          teksti: 'Paikalle tehtiin uusi Place du Châtelet. Napoleon tilasi sinne vuonna 1806 '
+            + 'palmusuihkulähteen voitonmuistomerkiksi. Fontaine du Palmier seisoo aukiolla yhä.',
           vuodet: [
-            { vuosi: '1808', selite: 'palmulähde valmis', kohta: 'vuonna 1808' },
+            { vuosi: '1806', selite: 'palmulähde tilataan', kohta: 'vuonna 1806' },
           ],
         },
       ],
@@ -238,24 +238,23 @@ export const EUROOPAN_KADONNEET = {
         'Mitä Temple-tornin paikalla on?',
         'Miten Sidney Smith pakeni Templen vankilasta?',
       ],
-      korostukset: ['temppeliritari|temppeliritarien', 'kuningasperhe|kuningasperheen'],
+      korostukset: ['temppeliritari|temppeliritarien', 'kuningasperhe|kuningasperhe'],
       nappi: 'Torni, jonka Napoleon käski purkaa',
       laudat: { maailmankartta: { x: 5912.0, y: 1439.2 }, europe: { x: 256.5, y: 608.4 } },
       // teksti lasketaan jaksoista (ks. ihmeKohde). Erä 2 (L5-4, KK 20.11.2026): jaksollinen kuten Palais de l'Industrie; raportti docs/raportit/pariisi-nostot-era2-teksti-20261120.md.
-      otsikko: 'Torni, josta kuningasperhe ei palannut',
+      otsikko: 'Torni, jonne kuningasperhe vangittiin',
       jaksot: [
         {
           osa: 'tapahtuma',
           teksti: 'Temple-torni kohosi temppeliritarien Pariisin päämajan linnoituksessa. Philippe Augusten '
             + 'ajoista kuninkaan aarre talletettiin ritarien linnoitukseen, ja sen muurien suojassa asui '
-            + 'myöhemmin kiltasäännöistä ja Pariisin veroista vapaita käsityöläisiä.',
+            + 'myöhemmin Pariisin veroista vapaita käsityöläisiä.',
           kuva: 'loisto',
         },
         {
           osa: 'tapahtuma',
-          teksti: 'Elokuussa 1792 Pariisin kommuuni vei kuningasperheen Templeen vangiksi. Ludvig XVI lähti '
-            + 'sieltä giljotiinille, ja hänen poikansa Ludvig XVII kuoli Templessä vuonna 1795 '
-            + 'kymmenvuotiaana.',
+          teksti: 'Elokuussa 1792 kuningasperhe vietiin Templeen vangiksi. Ludvig XVI vietiin sieltä '
+            + 'giljotiinille, ja hänen poikansa Ludvig XVII kuoli Templessä vuonna 1795.',
           vuodet: [
             { vuosi: '1792', selite: 'perhe Templeen', kohta: 'Elokuussa 1792' },
             { vuosi: '1795', selite: 'Ludvig XVII kuoli', kohta: 'vuonna 1795' },
@@ -264,8 +263,8 @@ export const EUROOPAN_KADONNEET = {
         {
           osa: 'tapahtuma',
           teksti: 'Vuonna 1798 brittiamiraali Sidney Smith pakeni Templen vankilasta väärennetyillä '
-            + 'siirtomääräyksillä: kaksi miestä univormuissa ilmestyi ja vei hänet muka toiseen vankilaan. '
-            + 'Huhtikuussa 1804 kenraali Pichegru löydettiin kuolleena Templen vankilan sellistään.',
+            + 'siirtomääräyksillä: häntä oltiin muka viemässä toiseen vankilaan. Huhtikuussa 1804 kenraali '
+            + 'Pichegru löydettiin kuolleena Templen vankilan sellistään.',
           vuodet: [
             { vuosi: '1798', selite: 'Smithin pako', kohta: 'Vuonna 1798' },
             { vuosi: '1804', selite: 'Pichegru kuoli', kohta: 'Huhtikuussa 1804' },
@@ -522,8 +521,7 @@ export const EUROOPAN_KADONNEET = {
         {
           osa: 'tapahtuma',
           teksti: 'Trocadéron palatsi rakennettiin vuoden 1878 maailmannäyttelyä varten Seinen pohjoisrannalle. '
-            + 'Siinä oli kaksi korkeaa tornia, kaksi kaarevaa siipeä ja yli neljän tuhannen paikan sali, '
-            + 'jonka akustiikka oli huono mutta jossa urut soivat hyvin.',
+            + 'Siinä oli kaksi korkeaa tornia, kaksi suurta siipeä ja yli neljän tuhannen paikan sali.',
           kuva: 'loisto',
           vuodet: [
             { vuosi: '1878', selite: 'maailmannäyttely', kohta: 'vuoden 1878' },
@@ -537,19 +535,19 @@ export const EUROOPAN_KADONNEET = {
         {
           osa: 'tapahtuma',
           teksti: 'Palatsiin kuului myös etnografinen museo, joka syntyi vuoden 1878 näyttelystä ja avattiin '
-            + 'yleisölle vuonna 1882. Vielä 1920-luvulla se oli hämärä, kylmä ja pölyinen esineiden komero.',
+            + 'yleisölle vuonna 1882. Vielä 1920-luvulla se oli rappiotilassa.',
           vuodet: [
             { vuosi: '1882', selite: 'museo avataan', kohta: 'vuonna 1882' },
           ],
         },
         {
           osa: 'kaanne',
-          teksti: 'Vuonna 1935 keskisali ja tornit purettiin vuoden 1937 näyttelyn tieltä, ja siivet jäivät '
-            + 'uuden Chaillot\'n palatsin osiksi.',
+          teksti: 'Vuonna 1935 alkoi palatsin purku vuoden 1937 näyttelyn tieltä, ja siivet jäivät uuden '
+            + 'Chaillot\'n palatsin osiksi.',
           hologrammi: 'sammuu',
-          hologrammiKohta: 'keskisali ja tornit purettiin',
+          hologrammiKohta: 'alkoi palatsin purku',
           vuodet: [
-            { vuosi: '1935', selite: 'keskisali purettiin', kohta: 'Vuonna 1935' },
+            { vuosi: '1935', selite: 'purku alkoi', kohta: 'Vuonna 1935' },
             { vuosi: '1937', selite: 'uusi näyttely', kohta: 'vuoden 1937' },
           ],
         },
@@ -607,9 +605,10 @@ export const EUROOPAN_KADONNEET = {
       jaksot: [
         {
           osa: 'tapahtuma',
-          teksti: 'Galerie des Machines oli vuoden 1889 Pariisin maailmannäyttelyn konehalli Champ-de-Marsilla '
-            + 'Eiffel-tornin vieressä. Se oli noin 420 metriä pitkä ja 115 metriä leveä, eikä sen sisällä '
-            + 'ollut yhtään pilaria, sillä teräskaaret nojasivat toisiinsa kolmesta nivelestä.',
+          teksti: 'Galerie des Machines oli vuoden 1889 Pariisin maailmannäyttelyn konehalli Champ-de-Marsilla, '
+            + 'kentän toisessa päässä kuin Eiffel-torni. Se oli noin 420 metriä pitkä ja 115 metriä leveä, '
+            + 'eikä sen sisällä ollut yhtään pilaria, sillä teräskaaret nojasivat toisiinsa kolmesta '
+            + 'nivelestä.',
           kuva: 'loisto',
           vuodet: [
             { vuosi: '1889', selite: 'maailmannäyttely', kohta: 'vuoden 1889' },
@@ -633,19 +632,18 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'kaanne',
-          teksti: 'Vuonna 1909 Pariisin kaupunki ilmoitti hävittävänsä hallin, ja se purettiin, jotta näkymä '
-            + 'Champ-de-Marsille aukeaisi. Yli neljäkymmentä metriä korkea halli oli seissyt paikallaan '
-            + 'kaksikymmentä vuotta.',
+          teksti: 'Vuonna 1909 halli purettiin, jotta näkymä Champ-de-Marsille aukeaisi. Yli neljäkymmentä '
+            + 'metriä korkea halli oli seissyt paikallaan kaksikymmentä vuotta.',
           hologrammi: 'sammuu',
-          hologrammiKohta: 'se purettiin',
+          hologrammiKohta: 'halli purettiin',
           vuodet: [
             { vuosi: '1909', selite: 'purku', kohta: 'Vuonna 1909' },
           ],
         },
         {
           osa: 'tanaan',
-          teksti: 'Hallia ei ole enää, mutta Eiffel-torni seisoo yhä samalla Champ-de-Marsin kentällä, jossa '
-            + 'konehalli aikoinaan kohosi sen vieressä.',
+          teksti: 'Hallia ei ole enää, mutta Eiffel-torni seisoo yhä Champ-de-Marsin toisessa päässä, missä '
+            + 'konehalli aikoinaan kohosi.',
         },
       ],
       jaksokuvat: {

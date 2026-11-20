@@ -5965,22 +5965,21 @@ export const NAHTAVYYSJUTUT = {
      */
     'Bizet 1875': {
       nosto: 'nosto-carmenin-ensi-ilta',
-      teksti: 'Georges Bizet sävelsi Carmenin Pariisin Opéra-Comiquelle, ja Pariisi torjui sen. Valtion '
-        + 'rahoittama talo oli perheteatteri, ja kun työ alkoi tammikuun tienoilla 1873, talon johtaja '
-        + 'Adolphe de Leuven vastusti näin uskaliasta tarinaa. Lupaukset pehmennyksestä eivät '
-        + 'riittäneet, ja hän erosi alkuvuodesta 1874. Nimiroolista kieltäytyi Marie Roze, ja rooli '
-        + 'meni Célestine Galli-Mariélle.'
+      teksti: 'Georges Bizet sävelsi Carmenin Pariisin Opéra-Comiquelle, ja Pariisi torjui sen. Talo oli '
+        + 'perheteatteri, ja kun työ alkoi vuonna 1873, talon johtaja Adolphe de Leuven vastusti näin '
+        + 'uskaliasta tarinaa. Lupaukset pehmennyksestä eivät riittäneet, ja hän erosi vuonna 1874. '
+        + 'Nimiroolista kieltäytyi Marie Roze, ja rooli meni Célestine Galli-Mariélle.'
         + '\n\n'
-        + 'Ensi-ilta oli 3. maaliskuuta 1875, ja salissa istuivat Massenet, Offenbach, Delibes ja '
-        + 'Gounod. Toreadorin laulun jälkeen tuli kylmyys, ja yksi kriitikko kutsui pääosan tulkintaa '
-        + 'paheen ruumiillistumaksi. Taloa ei saatu täyteen edes jakamalla lippuja ilmaiseksi.'
+        + 'Ensi-ilta oli 3. maaliskuuta 1875, ja salissa istui useita aikakauden säveltäjiä. Alku meni '
+        + 'hyvin, mutta yleisö kylmeni näytös näytökseltä, ja yksi kriitikko moitti pääosan eleitä '
+        + 'paheellisiksi.'
         + '\n\n'
-        + 'Bizet kuoli 3. kesäkuuta 1875, 33. esityksen jälkeen, 36-vuotiaana. Maine alkoi nousta '
-        + 'muualla, ensin Wienissä, ja Pariisiin ooppera palasi vasta 1883. Ensi-illan sali paloi 1887, '
-        + 'ja paikalla seisoo nyt kolmas samanniminen teatteri.',
+        + 'Bizet kuoli 3. kesäkuuta 1875, 36-vuotiaana. Maine alkoi nousta muualla, ensin Wienissä, ja '
+        + 'Pariisiin ooppera palasi vasta 1883. Ensi-illan sali paloi 1887, ja paikalla seisoo nyt '
+        + 'kolmas samanniminen teatteri.',
       vuodet: [
-        { kohta: 'tienoilla 1873', vuosi: '1873', selite: 'säveltäminen alkoi' },
-        { kohta: 'alkuvuodesta 1874', vuosi: '1874', selite: 'johtaja erosi' },
+        { kohta: 'vuonna 1873', vuosi: '1873', selite: 'säveltäminen alkoi' },
+        { kohta: 'vuonna 1874', vuosi: '1874', selite: 'johtaja erosi' },
         { kohta: 'maaliskuuta 1875', vuosi: '1875', selite: 'ensi-ilta' },
         { kohta: 'vasta 1883', vuosi: '1883', selite: 'ooppera palasi' },
         { kohta: 'paloi 1887', vuosi: '1887', selite: 'sali paloi' },
@@ -6035,20 +6034,20 @@ export const NAHTAVYYSJUTUT = {
     'Bukinistit 1859': {
       nosto: 'nosto-pariisin-bukinistit',
       teksti: 'Seinen rantamuurin kirjakauppiaita kutsutaan bukinisteiksi, ja nimi kertoo, mitä laatikoissa '
-        + 'on: ranskan sana bouquin tarkoittaa vanhaa kirjaa. Kulkukauppiaat myivät kirjoja Pariisin '
-        + 'kaduilla jo 1500-luvun lopulla, ja Pont Neufin valmistuttua vuonna 1606 he asettuivat '
+        + 'on: ranskan arkikielen sana bouquin tarkoittaa kirjaa. Kulkukauppiaat myivät kirjoja '
+        + 'Pariisin kaduilla jo 1500-luvulta, ja Pont Neufin valmistuttua vuonna 1606 he asettuivat '
         + 'sillalle.'
         + '\n\n'
-        + 'Vuonna 1649 kirjakauppiaiden painostuksesta annettiin määräys, joka kielsi kirjojen myynnin '
-        + 'sillalla, ja ennen vallankumousta myyjiä oli jo noin 300. Sana bouquiniste kirjattiin ensi '
-        + 'kertaa vuoden 1752 sanakirjaan.'
+        + 'Vuonna 1649 annettiin määräys, joka kielsi kirjojen myynnin sillalla, ja ennen '
+        + 'vallankumousta myyjiä oli jo noin 300. Sana bouquiniste kirjattiin ensi kertaa vuoden 1752 '
+        + 'sanakirjaan.'
         + '\n\n'
-        + 'Ensimmäinen heitä koskeva erityismääräys annettiin 10. lokakuuta 1859: myyjät saivat jäädä '
-        + 'rannoille, mutta laatikot piti silti kantaa pois joka ilta. Laatikot sai jättää kaiteeseen '
-        + 'vasta vuonna 1891, ja vuoden 1900 tienoilla niille tuli nykyinen vaunun vihreä väri.'
+        + 'Heitä koskeva erityismääräys annettiin 10. lokakuuta 1859: myyjät saivat jäädä rannoille, '
+        + 'mutta laatikot piti silti kantaa pois joka ilta. Laatikot sai jättää kaiteeseen vasta vuonna '
+        + '1891, ja vuoden 1900 tienoilla niille tuli nykyinen vaunun vihreä väri.'
         + '\n\n'
-        + 'Nyt noin 230 bukinistia myy vanhoja kirjoja kolmen kilometrin matkalla, ja vuonna 2019 '
-        + 'heidän perinteensä lisättiin Ranskan aineettoman kulttuuriperinnön luetteloon.',
+        + 'Nyt yli 200 bukinistia myy vanhoja kirjoja kolmen kilometrin matkalla, ja vuonna 2019 heidän '
+        + 'perinteensä lisättiin Ranskan aineettoman kulttuuriperinnön luetteloon.',
       vuodet: [
         { kohta: 'lokakuuta 1859', vuosi: '1859', selite: 'erityismääräys' },
         { kohta: 'vasta vuonna 1891', vuosi: '1891', selite: 'laatikot kaiteeseen' },
@@ -6091,21 +6090,21 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'syvennys-pariisi-impressionistit',
       teksti: 'Monet ja muut nuoret maalarit olivat Pariisissa taiteilijoita, joita Salon ei huolinut: '
         + 'kaupungin taide-elämää hallitsi Salon, ja sen valitsematta jättämä maalari jäi '
-        + 'näkymättömäksi. Omaa näyttelyä hylätyille anottiin turhaan vuonna 1867.'
+        + 'näkymättömäksi. Vuonna 1867 Frédéric Bazille laati vetoomuksen hylättyjen uudesta '
+        + 'näyttelystä.'
         + '\n\n'
-        + 'Joulukuussa 1873 Monet, Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja muut perustivat '
-        + 'oman yhdistyksen esittääkseen työnsä itse, ja jäseniltä odotettiin Salonista luopumista. '
-        + 'Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana '
-        + 'oli kolmekymmentä taiteilijaa.'
+        + 'Joulukuussa 1873 Monet, Renoir, Pissarro, Sisley, Degas ja muut perustivat oman yhdistyksen '
+        + 'esittääkseen työnsä itse. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja '
+        + 'Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa.'
         + '\n\n'
         + 'Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa '
-        + '”Impressionistien näyttely”. Pilkkanimi jäi käyttöön, ja taiteilijat ottivat sen itse '
-        + 'omakseen. Heidän viimeinen yhteinen näyttelynsä pidettiin vuonna 1886.'
+        + '”Impressionistien näyttely”. Pilkkanimi jäi ryhmän nimeksi. Heidän viimeinen yhteinen '
+        + 'näyttelynsä pidettiin vuonna 1886.'
         + '\n\n'
-        + 'Maalaus esittää auringonnousua Le Havren satamassa, ja se on nykyään esillä Pariisin Musée '
-        + 'Marmottan Monet’ssa.',
+        + 'Maalaus esittää auringonnousua Le Havren satamassa, ja se kuuluu nykyään Pariisin Musée '
+        + 'Marmottan Monet’n kokoelmiin.',
       vuodet: [
-        { kohta: 'vuonna 1867', vuosi: '1867', selite: 'näyttelyanomus' },
+        { kohta: 'Vuonna 1867', vuosi: '1867', selite: 'näyttelyvetoomus' },
         { kohta: 'Joulukuussa 1873', vuosi: '1873', selite: 'yhdistys perustettu' },
         { kohta: 'huhtikuussa 1874', vuosi: '1874', selite: 'ensimmäinen näyttely' },
       ],
@@ -6123,21 +6122,21 @@ export const NAHTAVYYSJUTUT = {
     'Piiritys 1870': {
       nosto: 'syvennys-pariisi-kyyhkyposti',
       teksti: 'Pariisin piirityksen viestit kulkivat kyyhkyillä, ja mahdollisuuden siihen oli antanut '
-        + 'valokuvaaja René Dagron, joka oli saanut mikrofilmin patentin vuonna 1859.'
+        + 'valokuvaaja René Dagron, joka oli saanut vuonna 1859 patentin mikrovalokuvaukselle.'
         + '\n\n'
-        + 'Kun preussilaiset sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat katkaistiin '
-        + '19. päivä, ja Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin 27. päivä. '
-        + 'Ainoa toimiva reitti kaupunkiin päin oli kirjekyyhky, ja kyyhkyt vietiin ulos ilmapalloilla.'
+        + 'Kun preussilaiset sulkivat Pariisin syyskuussa 1870, lennätinlangat ja Seinen pohjassa '
+        + 'kulkenut salakaapeli katkaistiin. Lähes ainoa reitti kaupunkiin päin oli kirjekyyhky, ja '
+        + 'kyyhkyt vietiin ulos ilmapalloilla.'
         + '\n\n'
-        + 'Sopimus Dagronin kanssa allekirjoitettiin 11. marraskuuta: hinta oli viisitoista frangia '
-        + 'tuhatta merkkiä kohti. Hän pienensi kuvat yli nelikymmenkertaisesti, yksi filmi painoi noin '
-        + 'viisi sadasosagrammaa, ja yksi kyyhky jaksoi kantaa niitä jopa kaksikymmentä.'
+        + 'Sopimus Dagronin kanssa allekirjoitettiin marraskuun alussa. Hän pienensi viestit '
+        + 'mikrofilmeiksi, yksi filmi painoi noin viisi sadasosagrammaa, ja yksi kyyhky jaksoi kantaa '
+        + 'niitä jopa kahdeksantoista.'
         + '\n\n'
         + 'Perillä filmi asetettiin kahden lasilevyn väliin ja heijastettiin taikalyhdyllä seinälle, '
-        + 'josta viestit kirjoitettiin puhtaaksi. Saksalaiset kouluttivat haukkoja pysäyttämään '
-        + 'kyyhkyjä. Piiritys päättyi tammikuussa 1871.',
+        + 'josta viestit kirjoitettiin puhtaaksi. Lehtitietojen mukaan saksalaiset kouluttivat haukkoja '
+        + 'pysäyttämään kyyhkyjä. Piiritys päättyi tammikuussa 1871.',
       vuodet: [
-        { kohta: 'vuonna 1859', vuosi: '1859', selite: 'mikrofilmipatentti' },
+        { kohta: 'vuonna 1859', vuosi: '1859', selite: 'mikrokuvapatentti' },
         { kohta: 'syyskuussa 1870', vuosi: '1870', selite: 'Pariisi suljettiin' },
       ],
       kuvat: [
@@ -6186,7 +6185,7 @@ export const NAHTAVYYSJUTUT = {
     'Notre-Dame 2019': {
       nosto: 'nosto-notre-damen-kukko',
       teksti: 'Notre-Damen ullakko syttyi 15. huhtikuuta 2019, ja keskitorni romahti noin kello 19.50. '
-        + 'Katon alla paloi noin tuhannesta tammirungosta tehty kattotuolisto, joka oli 1200-luvulta.'
+        + 'Katon alla paloi tammirungoista tehty kattotuolisto, joka oli pääosin 1200-luvulta.'
         + '\n\n'
         + 'Tornin huipulla seisoi kukko, jonka sisään oli suljettu pyhäinjäännöksiä, muun muassa pala '
         + 'orjantappurakruunua. Ensin sitä luultiin tuhoutuneeksi, mutta se löytyi seuraavana päivänä '
@@ -6215,19 +6214,18 @@ export const NAHTAVYYSJUTUT = {
         + 'mukaan Bellevillessä kadulla talon portaille. Django Reinhardt kasvoi romaniperheen '
         + 'asuntovaunussa Pariisin porttien luona ja soitti banjoa jo lapsena.'
         + '\n\n'
-        + 'Marraskuun 2. päivän yönä 1928 vaunussa syttyi tulipalo, kun kynttilä kaatui '
-        + 'selluloidikukkien päälle. Django ei enää voinut käyttää vasemman käden nimetöntä ja '
-        + 'pikkurilliä, ja lääkärit sanoivat, ettei hän soita enää. Veli osti hänelle kitaran, ja hän '
-        + 'opetteli soolot kahdella sormella. Vuonna 1934 hän perusti Pariisissa Quintette du Hot Club '
-        + 'de Francen.'
+        + 'Syksyllä 1928 vaunussa syttyi tulipalo, kun kynttilä kaatui selluloidikukkien päälle. Django '
+        + 'ei enää voinut käyttää vasemman käden nimetöntä ja pikkurilliä kunnolla, ja lääkärit '
+        + 'sanoivat, ettei hän soita enää. Veli toi hänelle kitaran, ja hän opetteli soolot kahdella '
+        + 'sormella. Vuonna 1934 hän perusti Pariisissa Quintette du Hot Club de Francen.'
         + '\n\n'
-        + 'Piaf lauloi teininä kolikoista kaduilla. Yökerhon omistaja Louis Leplée kuuli hänet kadulta '
-        + 'vuonna 1935 ja antoi hänelle lempinimen la Môme Piaf: piaf on pariisilaista puhekieltä ja '
-        + 'tarkoittaa varpusta. Laulaja oli alle 150 senttiä pitkä. Piaf levytti tunnetuimman laulunsa '
-        + 'La Vie en rosen vuonna 1946, ja sen sanat hän kirjoitti itse.',
+        + 'Piaf lauloi teininä kaduilla. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 '
+        + 'ja antoi hänelle lempinimen la Môme Piaf: piaf on pariisilaista puhekieltä ja tarkoittaa '
+        + 'varpusta. Laulaja oli alle 150 senttiä pitkä. Piaf levytti tunnetuimman laulunsa La Vie en '
+        + 'rosen, ja sen sanat hän kirjoitti itse.',
       vuodet: [
         { kohta: 'joulukuussa 1915', vuosi: '1915', selite: 'Piaf syntyi' },
-        { kohta: 'yönä 1928', vuosi: '1928', selite: 'Djangon vaunu paloi' },
+        { kohta: 'Syksyllä 1928', vuosi: '1928', selite: 'Djangon vaunu paloi' },
         { kohta: 'Vuonna 1934', vuosi: '1934', selite: 'Hot Club syntyi' },
         { kohta: 'kadulta vuonna 1935', vuosi: '1935', selite: 'Piaf löydettiin' },
       ],
@@ -6246,8 +6244,8 @@ export const NAHTAVYYSJUTUT = {
     'Patonki 1994': {
       nosto: 'nosto-pariisin-patonki',
       teksti: 'Patonki on Pariisin kuuluisin leipä, ja Ranskassa sitä koskevat tiukat säännöt: vuonna 1993 '
-        + 'annetun asetuksen mukaan perinteisessä patongissa saa olla vain vehnäjauhoa, vettä, suolaa '
-        + 'sekä hiivaa tai juurta, eikä taikinaa saa missään vaiheessa pakastaa.'
+        + 'annetun asetuksen mukaan perinteisessä patongissa saa olla käytännössä vain vehnäjauhoa, '
+        + 'vettä, suolaa sekä hiivaa tai juurta, eikä taikinaa saa missään vaiheessa pakastaa.'
         + '\n\n'
         + 'Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta perinteisestä patongista. Leivät '
         + 'arvostellaan sokkona, jottei raati tiedä, kenen leipää se maistaa, ja raadissa istuu '
@@ -6544,11 +6542,11 @@ export const NAHTAVYYSJUTUT = {
         + 'vartijat tuijottivat uuden vangin kasvot ulkoa tunnistaakseen hänet, jos hän pakenisi. '
         + 'Myöhemmin tänne tuotiin tunnistettavaksi löydetyt vainajat.'
         + '\n\n'
-        + 'Syyskuun 2. päivänä 1792 joukko tunkeutui linnakkeeseen ja surmasi kymmeniä vankeja, ja '
-        + 'vankila hylättiin. Linnakkeen purku alkoi vuonna 1802.'
+        + 'Syyskuun alussa 1792 joukko tunkeutui linnakkeeseen ja surmasi vankeja, ja vankila '
+        + 'hylättiin. Linnakkeen purku alkoi vuonna 1802.'
         + '\n\n'
-        + 'Paikalle tehtiin uusi Place du Châtelet. Napoleon tilasi sinne palmusuihkulähteen '
-        + 'voitonmuistomerkiksi, ja se valmistui vuonna 1808. Fontaine du Palmier seisoo aukiolla yhä.',
+        + 'Paikalle tehtiin uusi Place du Châtelet. Napoleon tilasi sinne vuonna 1806 '
+        + 'palmusuihkulähteen voitonmuistomerkiksi. Fontaine du Palmier seisoo aukiolla yhä.',
       kuvat: [
         {
           tiedosto: 'Le Grand Chastelet de Paris. G.283.jpg',
@@ -6573,15 +6571,14 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'hahmotelma-temple-torni',
       teksti: 'Temple-torni kohosi temppeliritarien Pariisin päämajan linnoituksessa. Philippe Augusten '
         + 'ajoista kuninkaan aarre talletettiin ritarien linnoitukseen, ja sen muurien suojassa asui '
-        + 'myöhemmin kiltasäännöistä ja Pariisin veroista vapaita käsityöläisiä.'
+        + 'myöhemmin Pariisin veroista vapaita käsityöläisiä.'
         + '\n\n'
-        + 'Elokuussa 1792 Pariisin kommuuni vei kuningasperheen Templeen vangiksi. Ludvig XVI lähti '
-        + 'sieltä giljotiinille, ja hänen poikansa Ludvig XVII kuoli Templessä vuonna 1795 '
-        + 'kymmenvuotiaana.'
+        + 'Elokuussa 1792 kuningasperhe vietiin Templeen vangiksi. Ludvig XVI vietiin sieltä '
+        + 'giljotiinille, ja hänen poikansa Ludvig XVII kuoli Templessä vuonna 1795.'
         + '\n\n'
         + 'Vuonna 1798 brittiamiraali Sidney Smith pakeni Templen vankilasta väärennetyillä '
-        + 'siirtomääräyksillä: kaksi miestä univormuissa ilmestyi ja vei hänet muka toiseen vankilaan. '
-        + 'Huhtikuussa 1804 kenraali Pichegru löydettiin kuolleena Templen vankilan sellistään.'
+        + 'siirtomääräyksillä: häntä oltiin muka viemässä toiseen vankilaan. Huhtikuussa 1804 kenraali '
+        + 'Pichegru löydettiin kuolleena Templen vankilan sellistään.'
         + '\n\n'
         + 'Napoleon määräsi tornin purettavaksi vuonna 1808, koska halusi lopettaa rojalistien '
         + 'pyhiinvaellukset paikalle, jossa kuningasperhe oli ollut vankina.'
@@ -6609,17 +6606,16 @@ export const NAHTAVYYSJUTUT = {
       aika: '1878–1935',
       nosto: 'hahmotelma-trocadero',
       teksti: 'Trocadéron palatsi rakennettiin vuoden 1878 maailmannäyttelyä varten Seinen pohjoisrannalle. '
-        + 'Siinä oli kaksi korkeaa tornia, kaksi kaarevaa siipeä ja yli neljän tuhannen paikan sali, '
-        + 'jonka akustiikka oli huono mutta jossa urut soivat hyvin.'
+        + 'Siinä oli kaksi korkeaa tornia, kaksi suurta siipeä ja yli neljän tuhannen paikan sali.'
         + '\n\n'
         + 'Salin Cavaillé-Collin urut vihittiin elokuussa 1878, ja César Franck sävelsi niille kolmen '
         + 'kappaleen sarjan Trois Pièces.'
         + '\n\n'
         + 'Palatsiin kuului myös etnografinen museo, joka syntyi vuoden 1878 näyttelystä ja avattiin '
-        + 'yleisölle vuonna 1882. Vielä 1920-luvulla se oli hämärä, kylmä ja pölyinen esineiden komero.'
+        + 'yleisölle vuonna 1882. Vielä 1920-luvulla se oli rappiotilassa.'
         + '\n\n'
-        + 'Vuonna 1935 keskisali ja tornit purettiin vuoden 1937 näyttelyn tieltä, ja siivet jäivät '
-        + 'uuden Chaillot\'n palatsin osiksi.'
+        + 'Vuonna 1935 alkoi palatsin purku vuoden 1937 näyttelyn tieltä, ja siivet jäivät uuden '
+        + 'Chaillot\'n palatsin osiksi.'
         + '\n\n'
         + 'Chaillot\'n palatsissa YK:n yleiskokous hyväksyi vuonna 1948 ihmisoikeuksien '
         + 'yleismaailmallisen julistuksen. Trocadéron urut soivat nykyisin Lyonissa, jonne ne '
@@ -6647,9 +6643,10 @@ export const NAHTAVYYSJUTUT = {
     'Galerie des Machines': {
       aika: '1889–1900-luvun alku',
       nosto: 'hahmotelma-galerie-des-machines',
-      teksti: 'Galerie des Machines oli vuoden 1889 Pariisin maailmannäyttelyn konehalli Champ-de-Marsilla '
-        + 'Eiffel-tornin vieressä. Se oli noin 420 metriä pitkä ja 115 metriä leveä, eikä sen sisällä '
-        + 'ollut yhtään pilaria, sillä teräskaaret nojasivat toisiinsa kolmesta nivelestä.'
+      teksti: 'Galerie des Machines oli vuoden 1889 Pariisin maailmannäyttelyn konehalli Champ-de-Marsilla, '
+        + 'kentän toisessa päässä kuin Eiffel-torni. Se oli noin 420 metriä pitkä ja 115 metriä leveä, '
+        + 'eikä sen sisällä ollut yhtään pilaria, sillä teräskaaret nojasivat toisiinsa kolmesta '
+        + 'nivelestä.'
         + '\n\n'
         + 'Vieraita kuljettivat hallissa liikkuvat sillat. Esillä oli myös Edisonin fonografi, jolla '
         + 'kuultiin muun muassa Marseillaise.'
@@ -6658,12 +6655,11 @@ export const NAHTAVYYSJUTUT = {
         + 'elintarvikkeiden näyttely, ja marraskuussa 1901 alkoi Barnum & Bailey -sirkuksen esityssarja '
         + 'kolmessa areenassa. Sarja päättyi maaliskuussa 1902.'
         + '\n\n'
-        + 'Vuonna 1909 Pariisin kaupunki ilmoitti hävittävänsä hallin, ja se purettiin, jotta näkymä '
-        + 'Champ-de-Marsille aukeaisi. Yli neljäkymmentä metriä korkea halli oli seissyt paikallaan '
-        + 'kaksikymmentä vuotta.'
+        + 'Vuonna 1909 halli purettiin, jotta näkymä Champ-de-Marsille aukeaisi. Yli neljäkymmentä '
+        + 'metriä korkea halli oli seissyt paikallaan kaksikymmentä vuotta.'
         + '\n\n'
-        + 'Hallia ei ole enää, mutta Eiffel-torni seisoo yhä samalla Champ-de-Marsin kentällä, jossa '
-        + 'konehalli aikoinaan kohosi sen vieressä.',
+        + 'Hallia ei ole enää, mutta Eiffel-torni seisoo yhä Champ-de-Marsin toisessa päässä, missä '
+        + 'konehalli aikoinaan kohosi.',
       kuvat: [
         {
           tiedosto: 'Intérieur de la Galerie des machines, présentation des machines, 7e arrondissement, Paris. PH77410.jpg',

@@ -224,19 +224,19 @@ export const FOKUSVIRTA_PARIISI = {
       nappi: 'Kyyhkyt, jotka kantoivat kokonaisen kaupungin postin',
       otsikko: 'Piiritys 1870 — viestit kulkevat kyyhkyillä',
       teksti: 'Pariisin piirityksen viestit kulkivat kyyhkyillä, ja mahdollisuuden siihen oli antanut '
-        + 'valokuvaaja René Dagron, joka oli saanut mikrofilmin patentin vuonna 1859.'
+        + 'valokuvaaja René Dagron, joka oli saanut vuonna 1859 patentin mikrovalokuvaukselle.'
         + '\n\n'
-        + 'Kun preussilaiset sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat katkaistiin '
-        + '19. päivä, ja Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin 27. päivä. '
-        + 'Ainoa toimiva reitti kaupunkiin päin oli kirjekyyhky, ja kyyhkyt vietiin ulos ilmapalloilla.'
+        + 'Kun preussilaiset sulkivat Pariisin syyskuussa 1870, lennätinlangat ja Seinen pohjassa '
+        + 'kulkenut salakaapeli katkaistiin. Lähes ainoa reitti kaupunkiin päin oli kirjekyyhky, ja '
+        + 'kyyhkyt vietiin ulos ilmapalloilla.'
         + '\n\n'
-        + 'Sopimus Dagronin kanssa allekirjoitettiin 11. marraskuuta: hinta oli viisitoista frangia '
-        + 'tuhatta merkkiä kohti. Hän pienensi kuvat yli nelikymmenkertaisesti, yksi filmi painoi noin '
-        + 'viisi sadasosagrammaa, ja yksi kyyhky jaksoi kantaa niitä jopa kaksikymmentä.'
+        + 'Sopimus Dagronin kanssa allekirjoitettiin marraskuun alussa. Hän pienensi viestit '
+        + 'mikrofilmeiksi, yksi filmi painoi noin viisi sadasosagrammaa, ja yksi kyyhky jaksoi kantaa '
+        + 'niitä jopa kahdeksantoista.'
         + '\n\n'
         + 'Perillä filmi asetettiin kahden lasilevyn väliin ja heijastettiin taikalyhdyllä seinälle, '
-        + 'josta viestit kirjoitettiin puhtaaksi. Saksalaiset kouluttivat haukkoja pysäyttämään '
-        + 'kyyhkyjä. Piiritys päättyi tammikuussa 1871.',
+        + 'josta viestit kirjoitettiin puhtaaksi. Lehtitietojen mukaan saksalaiset kouluttivat haukkoja '
+        + 'pysäyttämään kyyhkyjä. Piiritys päättyi tammikuussa 1871.',
       lahde: 'en-Wikipedia "René Dagron". Tarkistettu 1.9.2026.',
       /*
        * Commons 28.8.2026: 5047×8008, CC0, René Dagron, kuvattu
@@ -285,19 +285,19 @@ export const FOKUSVIRTA_PARIISI = {
       otsikko: 'Monet 1874 — impressionistien ensimmäinen näyttely',
       teksti: 'Monet ja muut nuoret maalarit olivat Pariisissa taiteilijoita, joita Salon ei huolinut: '
         + 'kaupungin taide-elämää hallitsi Salon, ja sen valitsematta jättämä maalari jäi '
-        + 'näkymättömäksi. Omaa näyttelyä hylätyille anottiin turhaan vuonna 1867.'
+        + 'näkymättömäksi. Vuonna 1867 Frédéric Bazille laati vetoomuksen hylättyjen uudesta '
+        + 'näyttelystä.'
         + '\n\n'
-        + 'Joulukuussa 1873 Monet, Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja muut perustivat '
-        + 'oman yhdistyksen esittääkseen työnsä itse, ja jäseniltä odotettiin Salonista luopumista. '
-        + 'Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana '
-        + 'oli kolmekymmentä taiteilijaa.'
+        + 'Joulukuussa 1873 Monet, Renoir, Pissarro, Sisley, Degas ja muut perustivat oman yhdistyksen '
+        + 'esittääkseen työnsä itse. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja '
+        + 'Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa.'
         + '\n\n'
         + 'Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa '
-        + '”Impressionistien näyttely”. Pilkkanimi jäi käyttöön, ja taiteilijat ottivat sen itse '
-        + 'omakseen. Heidän viimeinen yhteinen näyttelynsä pidettiin vuonna 1886.'
+        + '”Impressionistien näyttely”. Pilkkanimi jäi ryhmän nimeksi. Heidän viimeinen yhteinen '
+        + 'näyttelynsä pidettiin vuonna 1886.'
         + '\n\n'
-        + 'Maalaus esittää auringonnousua Le Havren satamassa, ja se on nykyään esillä Pariisin Musée '
-        + 'Marmottan Monet’ssa.',
+        + 'Maalaus esittää auringonnousua Le Havren satamassa, ja se kuuluu nykyään Pariisin Musée '
+        + 'Marmottan Monet’n kokoelmiin.',
       lahde: 'en-Wikipedia "Impressionism". Tarkistettu 1.9.2026.',
       /*
        * Commons 28.8.2026: 5773×4478, public domain, Claude Monet,
@@ -590,17 +590,17 @@ export const FOKUSVIRTA_PARIISI = {
       },
       lunastus: [
         'Seinen rantamuurin kirjakauppiaita kutsutaan bukinisteiksi, ja nimi kertoo, mitä laatikoissa '
-          + 'on: ranskan sana bouquin tarkoittaa vanhaa kirjaa. Kulkukauppiaat myivät kirjoja Pariisin '
-          + 'kaduilla jo 1500-luvun lopulla, ja Pont Neufin valmistuttua vuonna 1606 he asettuivat '
+          + 'on: ranskan arkikielen sana bouquin tarkoittaa kirjaa. Kulkukauppiaat myivät kirjoja '
+          + 'Pariisin kaduilla jo 1500-luvulta, ja Pont Neufin valmistuttua vuonna 1606 he asettuivat '
           + 'sillalle.',
-        'Vuonna 1649 kirjakauppiaiden painostuksesta annettiin määräys, joka kielsi kirjojen myynnin '
-          + 'sillalla, ja ennen vallankumousta myyjiä oli jo noin 300. Sana bouquiniste kirjattiin ensi '
-          + 'kertaa vuoden 1752 sanakirjaan.',
-        'Ensimmäinen heitä koskeva erityismääräys annettiin 10. lokakuuta 1859: myyjät saivat jäädä '
-          + 'rannoille, mutta laatikot piti silti kantaa pois joka ilta. Laatikot sai jättää kaiteeseen '
-          + 'vasta vuonna 1891, ja vuoden 1900 tienoilla niille tuli nykyinen vaunun vihreä väri.',
-        'Nyt noin 230 bukinistia myy vanhoja kirjoja kolmen kilometrin matkalla, ja vuonna 2019 '
-          + 'heidän perinteensä lisättiin Ranskan aineettoman kulttuuriperinnön luetteloon.',
+        'Vuonna 1649 annettiin määräys, joka kielsi kirjojen myynnin sillalla, ja ennen '
+          + 'vallankumousta myyjiä oli jo noin 300. Sana bouquiniste kirjattiin ensi kertaa vuoden 1752 '
+          + 'sanakirjaan.',
+        'Heitä koskeva erityismääräys annettiin 10. lokakuuta 1859: myyjät saivat jäädä rannoille, '
+          + 'mutta laatikot piti silti kantaa pois joka ilta. Laatikot sai jättää kaiteeseen vasta vuonna '
+          + '1891, ja vuoden 1900 tienoilla niille tuli nykyinen vaunun vihreä väri.',
+        'Nyt yli 200 bukinistia myy vanhoja kirjoja kolmen kilometrin matkalla, ja vuonna 2019 heidän '
+          + 'perinteensä lisättiin Ranskan aineettoman kulttuuriperinnön luetteloon.',
       ],
       lahde: 'Pelin hyväksytty Pariisi-aineisto: oppitunti "Joki, joka virtaa '
         + 'kahden kirjahyllyn välissä" (tämä tiedosto) ja 1859/1891-fakta '
@@ -691,17 +691,16 @@ export const FOKUSVIRTA_PARIISI = {
       // KK 13.11.2026 klo 09.57: tarinapaikan symboli seuraa kartan merkkiä (oletus huuto = Skandaalit vain skandaaleille).
       symboli: 'kulttuuri',
       lunastus: [
-        'Georges Bizet sävelsi Carmenin Pariisin Opéra-Comiquelle, ja Pariisi torjui sen. Valtion '
-          + 'rahoittama talo oli perheteatteri, ja kun työ alkoi tammikuun tienoilla 1873, talon johtaja '
-          + 'Adolphe de Leuven vastusti näin uskaliasta tarinaa. Lupaukset pehmennyksestä eivät '
-          + 'riittäneet, ja hän erosi alkuvuodesta 1874. Nimiroolista kieltäytyi Marie Roze, ja rooli '
-          + 'meni Célestine Galli-Mariélle.',
-        'Ensi-ilta oli 3. maaliskuuta 1875, ja salissa istuivat Massenet, Offenbach, Delibes ja '
-          + 'Gounod. Toreadorin laulun jälkeen tuli kylmyys, ja yksi kriitikko kutsui pääosan tulkintaa '
-          + 'paheen ruumiillistumaksi. Taloa ei saatu täyteen edes jakamalla lippuja ilmaiseksi.',
-        'Bizet kuoli 3. kesäkuuta 1875, 33. esityksen jälkeen, 36-vuotiaana. Maine alkoi nousta '
-          + 'muualla, ensin Wienissä, ja Pariisiin ooppera palasi vasta 1883. Ensi-illan sali paloi 1887, '
-          + 'ja paikalla seisoo nyt kolmas samanniminen teatteri.',
+        'Georges Bizet sävelsi Carmenin Pariisin Opéra-Comiquelle, ja Pariisi torjui sen. Talo oli '
+          + 'perheteatteri, ja kun työ alkoi vuonna 1873, talon johtaja Adolphe de Leuven vastusti näin '
+          + 'uskaliasta tarinaa. Lupaukset pehmennyksestä eivät riittäneet, ja hän erosi vuonna 1874. '
+          + 'Nimiroolista kieltäytyi Marie Roze, ja rooli meni Célestine Galli-Mariélle.',
+        'Ensi-ilta oli 3. maaliskuuta 1875, ja salissa istui useita aikakauden säveltäjiä. Alku meni '
+          + 'hyvin, mutta yleisö kylmeni näytös näytökseltä, ja yksi kriitikko moitti pääosan eleitä '
+          + 'paheellisiksi.',
+        'Bizet kuoli 3. kesäkuuta 1875, 36-vuotiaana. Maine alkoi nousta muualla, ensin Wienissä, ja '
+          + 'Pariisiin ooppera palasi vasta 1883. Ensi-illan sali paloi 1887, ja paikalla seisoo nyt '
+          + 'kolmas samanniminen teatteri.',
       ],
       lahde: 'en-Wikipedia "Carmen (opera)" (johdanto sekä osiot '
         + 'taustasta, nimiroolin etsimisestä, ensi-illasta ja '
@@ -905,7 +904,7 @@ export const FOKUSVIRTA_PARIISI = {
       symboli: 'historia',
       lunastus: [
         'Notre-Damen ullakko syttyi 15. huhtikuuta 2019, ja keskitorni romahti noin kello 19.50. '
-          + 'Katon alla paloi noin tuhannesta tammirungosta tehty kattotuolisto, joka oli 1200-luvulta.',
+          + 'Katon alla paloi tammirungoista tehty kattotuolisto, joka oli pääosin 1200-luvulta.',
         'Tornin huipulla seisoi kukko, jonka sisään oli suljettu pyhäinjäännöksiä, muun muassa pala '
           + 'orjantappurakruunua. Ensin sitä luultiin tuhoutuneeksi, mutta se löytyi seuraavana päivänä '
           + 'raunioista lommoilla. Onnea oli muutenkin: kuusitoista patsasta oli nostettu katolta '
@@ -988,8 +987,8 @@ export const FOKUSVIRTA_PARIISI = {
       },
       lunastus: [
         'Patonki on Pariisin kuuluisin leipä, ja Ranskassa sitä koskevat tiukat säännöt: vuonna 1993 '
-          + 'annetun asetuksen mukaan perinteisessä patongissa saa olla vain vehnäjauhoa, vettä, suolaa '
-          + 'sekä hiivaa tai juurta, eikä taikinaa saa missään vaiheessa pakastaa.',
+          + 'annetun asetuksen mukaan perinteisessä patongissa saa olla käytännössä vain vehnäjauhoa, '
+          + 'vettä, suolaa sekä hiivaa tai juurta, eikä taikinaa saa missään vaiheessa pakastaa.',
         'Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta perinteisestä patongista. Leivät '
           + 'arvostellaan sokkona, jottei raati tiedä, kenen leipää se maistaa, ja raadissa istuu '
           + 'ammattilaisia, toimittajia ja arvottuja tavallisia pariisilaisia.',
@@ -1047,15 +1046,14 @@ export const FOKUSVIRTA_PARIISI = {
         'Pariisin kaduilta nousi kaksi tähteä: Édith Piaf syntyi Pariisissa joulukuussa 1915, tarinan '
           + 'mukaan Bellevillessä kadulla talon portaille. Django Reinhardt kasvoi romaniperheen '
           + 'asuntovaunussa Pariisin porttien luona ja soitti banjoa jo lapsena.',
-        'Marraskuun 2. päivän yönä 1928 vaunussa syttyi tulipalo, kun kynttilä kaatui '
-          + 'selluloidikukkien päälle. Django ei enää voinut käyttää vasemman käden nimetöntä ja '
-          + 'pikkurilliä, ja lääkärit sanoivat, ettei hän soita enää. Veli osti hänelle kitaran, ja hän '
-          + 'opetteli soolot kahdella sormella. Vuonna 1934 hän perusti Pariisissa Quintette du Hot Club '
-          + 'de Francen.',
-        'Piaf lauloi teininä kolikoista kaduilla. Yökerhon omistaja Louis Leplée kuuli hänet kadulta '
-          + 'vuonna 1935 ja antoi hänelle lempinimen la Môme Piaf: piaf on pariisilaista puhekieltä ja '
-          + 'tarkoittaa varpusta. Laulaja oli alle 150 senttiä pitkä. Piaf levytti tunnetuimman laulunsa '
-          + 'La Vie en rosen vuonna 1946, ja sen sanat hän kirjoitti itse.',
+        'Syksyllä 1928 vaunussa syttyi tulipalo, kun kynttilä kaatui selluloidikukkien päälle. Django '
+          + 'ei enää voinut käyttää vasemman käden nimetöntä ja pikkurilliä kunnolla, ja lääkärit '
+          + 'sanoivat, ettei hän soita enää. Veli toi hänelle kitaran, ja hän opetteli soolot kahdella '
+          + 'sormella. Vuonna 1934 hän perusti Pariisissa Quintette du Hot Club de Francen.',
+        'Piaf lauloi teininä kaduilla. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 '
+          + 'ja antoi hänelle lempinimen la Môme Piaf: piaf on pariisilaista puhekieltä ja tarkoittaa '
+          + 'varpusta. Laulaja oli alle 150 senttiä pitkä. Piaf levytti tunnetuimman laulunsa La Vie en '
+          + 'rosen, ja sen sanat hän kirjoitti itse.',
       ],
       lahde: 'Pariisin kaupunkilehden sivu "Musiikki", nostot "Édith Piaf '
         + 'lauloi ensin kadulla" ja "Kaksi sormea riitti" '
