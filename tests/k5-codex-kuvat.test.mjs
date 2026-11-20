@@ -8,6 +8,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { kokoaVienti } from '../tools/vienti/vie-sisalto.mjs';
 import { lisakentatViennissa } from '../tools/vienti/nostokuvat.mjs';
+import { FOKUSKOHTEET_FRA } from '../js/packs/fokuskohteet-fra.js';
+import { EUROOPAN_KADONNEET } from '../js/packs/monumentit-eurooppa.js';
 
 lisakentatViennissa(true);
 const { tiedostot } = await kokoaVienti();
@@ -48,5 +50,53 @@ test('selitteissä ei väitetä kuvaa aidoksi eikä mainita viitan väriä', () 
     const k = valot.get(tunnus).nostokuvat.find((x) => x.osoite.endsWith(`/kuvat/${tiedosto}`));
     assert.doesNotMatch(k.lyhyt, /valokuv|kuvattu|\b1[5-9]\d\d\b/i, `${tiedosto}: ${k.lyhyt}`);
     if (tiedosto.includes('kaulanauha')) assert.doesNotMatch(k.lyhyt + k.lahde, /viitta|punai|valkoi|harmaa/i);
+  }
+});
+
+/*
+ * KK:N PÄÄTÖS 20.11.2026 klo 14.00 (aiempi: P-261120-10; kortti noston-kuvat 9): kuva näkyy sillä jaksolla, jossa kertoja sanoo
+ * kuvan asian, ei ennen. Testi tarkistaa jakson (1-alkuinen) ja jakson tekstistä kuvan asian, ei vain paikkaa kuvalistassa.
+ * [kohteen tunnus, jakson numero, jaksokuvan avain, teksti, jonka jakso sanoo]
+ */
+const JAKSOT = [
+  ['eiffel-torni', 4, 'lustig', /Lustig/],
+  ['sainte-chapelle', 1, 'piha', /palatsin pihalla/],
+  ['sainte-chapelle', 3, 'kaulanauha', /Elokuussa 1784 kardinaali tapasi Versailles'n puistossa/],
+  ['sainte-chapelle', 4, 'parlamentti', /Pariisin parlamentissa/],
+  ['curie-1898', 1, 'vaja', /Curien vaja/],
+  ['curie-1898', 3, 'radiumtyo', /eikä pitänyt sadetta, ja malmia kului tonneittain/],
+  ['curie-1898', 4, 'hohto', /Iltaisin radium hohti/],
+  ['louvre', 2, 'varkaus', /Louvre oli suljettu/],
+  ['hahmotelma-temple-torni', 3, 'kadonnut', /Sidney Smith/],
+];
+
+/** Ensimmäinen olio, jolla on tunnus ja jaksot (kohdelistat ovat kaupunkien alla eri syvyyksillä). */
+function etsi(osa, id) {
+  if (!osa || typeof osa !== 'object') return null;
+  if (osa.id === id && Array.isArray(osa.jaksot)) return osa;
+  for (const v of Object.values(osa)) { const k = etsi(v, id); if (k) return k; }
+  return null;
+}
+function kohde(id) {
+  const k = etsi(FOKUSKOHTEET_FRA, id) ?? etsi(EUROOPAN_KADONNEET, id);
+  assert.ok(k, `${id}: kohdetta ei löydy`);
+  return k;
+}
+
+test('jokainen kuva on sen jakson kohdalla, jossa kertoja sanoo kuvan asian', () => {
+  for (const [id, jakso, avain, teksti] of JAKSOT) {
+    const k = kohde(id);
+    const kuvaJaksot = k.jaksot.map((j, i) => (j.kuva === avain ? i + 1 : null)).filter(Boolean);
+    assert.deepEqual(kuvaJaksot, [jakso], `${id}/${avain}: jaksot ${kuvaJaksot}, odotettu ${jakso}`);
+    assert.match(k.jaksot[jakso - 1].teksti, teksti, `${id}/${avain}: jakson ${jakso} teksti ei sano kuvan asiaa`);
+    assert.ok(k.jaksokuvat[avain]?.osoite?.includes('/tarina-'), `${id}/${avain}: jaksokuva puuttuu`);
+  }
+});
+
+test('kuvat ovat 1200 × 800 ja niiden mitat ovat dataan kirjatut (ämpärin tiedostot: K-5 korjaus K3)', () => {
+  for (const [id, , avain] of JAKSOT) {
+    const k = kohde(id).jaksokuvat[avain];
+    assert.equal(k.leveys, 1200, `${id}/${avain}`);
+    assert.equal(k.korkeus, 800, `${id}/${avain}`);
   }
 });

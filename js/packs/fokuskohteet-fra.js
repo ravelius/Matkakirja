@@ -798,13 +798,13 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
-        kuva: 'kaulanauha',
         teksti: '1770-luvulla jalokivikauppiaat tekivät timanttikaulanauhan. Marie Antoinette kieltäytyi '
           + 'ostamasta sitä, mutta huijari Jeanne de La Motte sai kardinaali de Rohanin uskomaan, että '
           + 'kuningatar halusi nauhan salaa.',
       },
       {
         osa: 'tapahtuma',
+        kuva: 'kaulanauha',
         teksti: 'Elokuussa 1784 kardinaali tapasi Versailles\'n puistossa naisen, jonka hän luuli kuningattareksi. '
           + 'Alkuvuodesta 1785 hän sai nauhan kauppiailta ja luovutti sen Jeannelle. Kun kauppiaat pyysivät '
           + 'maksua, kuningatar vaati selvitystä, ja kardinaali pidätettiin.',
@@ -933,7 +933,6 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
-        kuva: 'radiumtyo',
         teksti: 'Marie ja Pierre Curie tutkivat uraanimalmin sisältämää säteilyä. Heinäkuussa 1898 he ilmoittivat '
           + 'löytäneensä uuden alkuaineen. He nimesivät sen Marien kotimaan Puolan mukaan poloniumiksi. '
           + 'Joulukuussa he ilmoittivat toisen, radiumin.',
@@ -943,12 +942,13 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
-        kuva: 'hohto',
+        kuva: 'radiumtyo',
         teksti: 'Pelkkä ilmoitus ei riittänyt, vaan alkuaine piti saada puhtaana erilleen malmista. Vaja oli '
           + 'huonosti tuuletettu eikä pitänyt sadetta, ja malmia kului tonneittain.',
       },
       {
         osa: 'kaanne',
+        kuva: 'hohto',
         teksti: 'Työ vei yli kolme vuotta, ja vuonna 1902 heillä oli kymmenesosagramma puhdasta radiumkloridia. '
           + 'Iltaisin radium hohti pimeässä, ja Curiet ihailivat sitä. Marie sai fysiikan Nobelin vuonna 1903 '
           + 'Pierren ja Henri Becquerelin kanssa ja kemian Nobelin vuonna 1911 yksin.',
