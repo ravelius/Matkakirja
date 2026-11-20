@@ -1,0 +1,82 @@
+{
+  "images": [
+    {
+      "task": 2810,
+      "slug": "doge-palace-v2",
+      "original": "doge-palace-v2-original.png",
+      "originalSHA256": "bb36a876b45d6bd9bcca01d26e5f5d6f73889f85f2e9831ce5df7b29996e2879",
+      "originalDimensions": [
+        1677,
+        938
+      ],
+      "review": "doge-palace-v2-1000.jpg",
+      "reviewSHA256": "dbf4bbb5ba19c4b1a2cf50f8a993370dcbba139915e2852cd3af87597a8ccdeb",
+      "reviewDimensions": [
+        1000,
+        559
+      ],
+      "generationJob": "exec-978f0206-79ca-4778-bc3d-c67522659ddd",
+      "priorPreviewSHA256": "db379953ba54c9968fc0f96e0579c17efb56b5413194c80c4c15cfb33d075837",
+      "references": [
+        {
+          "title": "File:Doge's Palace Venice sea facade.jpg",
+          "author": "kallerna",
+          "url": "https://commons.wikimedia.org/wiki/File:Doge%27s_Palace_Venice_sea_facade.jpg",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sha256": "b6c5104b0ac8d82d82d21d89cf3b3bba917f816936539988c2280fc11b046207",
+          "role": "Molo, väritys ja julkisivun yksityiskohdat"
+        },
+        {
+          "title": "File:Palazzo-Ducale-Venice-20050524-036.jpg",
+          "author": "Gary Houston",
+          "url": "https://commons.wikimedia.org/wiki/File:Palazzo-Ducale-Venice-20050524-036.jpg",
+          "license": "CC0",
+          "licenseURL": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "sha256": "d5c81abd1e8237f69ebfce393dc3aecd2249a01305e976c516bb850fa998c4d0",
+          "role": "Kulma ja päällekkäiset kaaristot"
+        },
+        {
+          "title": "File:Venezia Blick vom Campanile der Basilica di San Marco auf den Palazzo Ducale 2.jpg",
+          "author": "Zairon",
+          "url": "https://commons.wikimedia.org/wiki/File:Venezia_Blick_vom_Campanile_der_Basilica_di_San_Marco_auf_den_Palazzo_Ducale_2.jpg",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sha256": "5ea844e6e4ada46a5696c3d9d22448bd3d0ce0ba3e812eb121515272898252a7",
+          "role": "Kattomuodot, sisäpiha ja sisäpihan siipi"
+        }
+      ],
+      "dimensionsMetres": {
+        "Molo": 71.5,
+        "Piazzetta": 75,
+        "eavesApprox": 26
+      },
+      "sources": [
+        {
+          "url": "https://it.wikipedia.org/wiki/Palazzo_Ducale_(Venezia)",
+          "note": "Molon julkisivu 71,5 m ja 17 kaarta, Piazzettan julkisivu 75 m ja 18 kaarta."
+        },
+        {
+          "url": "https://libsysdigi.library.illinois.edu/OCA/Books2012-11/lapatriageografi/lapatriageogra121stra/lapatriageogra121stra.pdf",
+          "note": "Historiallinen La patria antaa 71,5 m ja 76 m. Geometriaohjeessa käytetään tilauksen arvoa 75 m. Noin 26 m räystäskorkeus tulee tilauksesta."
+        }
+      ],
+      "qa": "Molemmat sivut ja niiden päätykulmat näkyvät kokonaan. Katselukulma näyttää avoimen sisäpihan ja sen lattian. Kuvassa sivujen vaakasuorat ulottumat ovat lähes samat. Kaarijako, koristeet ja katon yksityiskohdat ovat tulkintoja. Kuvan keskikulma on mittakaaviota hieman korkeampi. Todellinen korkeus, syvyys ja kaarijako on tarkistettava mahdollisesta 3D-otosta.",
+      "projectionGuide": {
+        "metres": [
+          71.5,
+          75,
+          26
+        ],
+        "azimuthDegrees": 45,
+        "elevationDegrees": 21,
+        "sha256": "18353cf30bf330f60fc404eeaa6ce5261d15a4e28fc8dae00bb63c6dc3152867"
+      }
+    }
+  ],
+  "sourceCommit": "4b3841001adcddb58d2ef77451d1a6db4cf80890",
+  "phase": "waiting-for-KK-exact-SHA",
+  "tripoCalls": 0,
+  "tripoCreditsUsed": 0,
+  "purchases": 0
+}
