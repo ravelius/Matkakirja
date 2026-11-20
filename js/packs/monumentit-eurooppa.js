@@ -316,6 +316,7 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'tapahtuma',
+          kuva: 'kadonnut',
           teksti: 'Vuonna 1798 brittiamiraali Sidney Smith pakeni Templen vankilasta väärennetyillä '
             + 'siirtomääräyksillä: häntä oltiin muka viemässä toiseen vankilaan. Huhtikuussa 1804 kenraali '
             + 'Pichegru löydettiin kuolleena Templen vankilan sellistään.',
@@ -342,6 +343,16 @@ export const EUROOPAN_KADONNEET = {
         },
       ],
       jaksokuvat: {
+        kadonnut: {
+          osoite: 'https://media.matkakirja.app/kuvat/tarina-hahmotelma-temple-torni-3-kadonnut.jpg',
+          laji: 'havainnekuva',
+          lyhyt: 'Temple-torni ja sen kehämuuri, portilla vartijat',
+          lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Portti, kadun näkymä ja vartijoiden paikka ovat kuviteltu sommittelu; viitteinä Auvrayn ja Pernot\'n piirrokset (CC0) ja Musée Carnavalet',
+          tekija: 'Matkakirja (tekoälyllä tuotettu havainnekuva)',
+          lisenssi: 'Matkakirjan oma',
+          leveys: 1200,
+          korkeus: 800,
+        },
         linnoitus: {
           osoite: 'https://media.matkakirja.app/kuvat/temple-torni-linnoitus.jpg',
           laji: 'piirros',

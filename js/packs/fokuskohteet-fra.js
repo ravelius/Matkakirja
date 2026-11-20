@@ -341,6 +341,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
+        kuva: 'varkaus',
         teksti: 'Maanantaina elokuussa 1911 Louvre oli suljettu. Valkoiseen työtakkiin pukeutunut mies nosti Mona '
           + 'Lisan seinältä, ja lukitun oven avasi hänelle putkimies.',
         vuodet: [
@@ -380,6 +381,16 @@ export const FOKUSKOHTEET_FRA = [
      * Viimeinen kuva on aito nykyvalokuva.
      */
     jaksokuvat: {
+      varkaus: {
+        osoite: 'https://media.matkakirja.app/kuvat/tarina-louvre-2-varkaus.jpg',
+        laji: 'havainnekuva',
+        lyhyt: 'Valkotakkinen mies Salon Carrén seinän edessä, jossa on tyhjä ripustuspaikka',
+        lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Rekonstruktio vuoden 1911 varkaudesta; viitteinä Salon Carrén vanhat kuvat ja Mona Lisan tyhjä paikka (Wikimedia Commons, public domain), Musée du Louvre',
+        tekija: 'Matkakirja (tekoälyllä tuotettu havainnekuva)',
+        lisenssi: 'Matkakirjan oma',
+        leveys: 1200,
+        korkeus: 800,
+      },
       julkisivu: {
         osoite: 'https://media.matkakirja.app/kuvat/louvre-julkisivu.jpg',
         laji: 'valokuva',
@@ -671,6 +682,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'kaanne',
+        kuva: 'lustig',
         teksti: 'Vuonna 1925 huijari Victor Lustig luki lehdestä, että tornin kunnossapito on kallista. '
           + 'Väärennetyin virkapaperein hän esiintyi ministeriön apulaisjohtajana ja myi muka tornin '
           + 'romukauppiaalle. Kauppias häpesi eikä ilmoittanut poliisille, joten Lustig palasi ja yritti '
@@ -687,6 +699,16 @@ export const FOKUSKOHTEET_FRA = [
       },
     ],
     jaksokuvat: {
+      lustig: {
+        osoite: 'https://media.matkakirja.app/kuvat/tarina-eiffel-torni-4-lustig.jpg',
+        laji: 'havainnekuva',
+        lyhyt: 'Hotellin salongissa neuvotellaan tornin kaupasta, ikkunasta näkyy Eiffel-torni',
+        lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Salongin asettelu on rekonstruktio; viitteinä Hôtel de Crillonin salonki, Eiffel-tornin rakenne ja aikakauden asu (Wikimedia Commons, public domain ja CC0)',
+        tekija: 'Matkakirja (tekoälyllä tuotettu havainnekuva)',
+        lisenssi: 'Matkakirjan oma',
+        leveys: 1200,
+        korkeus: 800,
+      },
       rakenteilla: {
         osoite: 'https://media.matkakirja.app/kuvat/eiffel-torni-rakenteilla.jpg',
         laji: 'valokuva',
@@ -766,6 +788,7 @@ export const FOKUSKOHTEET_FRA = [
     jaksot: [
       {
         osa: 'tapahtuma',
+        kuva: 'piha',
         teksti: 'Sainte-Chapelle on kappeli Cité-saaren palatsin pihalla. Kuningas Ludvig IX rakennutti sen '
           + 'säilyttämään Kristuksen orjantappurakruunua, ja se vihittiin vuonna 1248. Samassa palatsissa '
           + 'ratkaistiin kuningattaren kaulanauhajuttu.',
@@ -775,6 +798,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
+        kuva: 'kaulanauha',
         teksti: '1770-luvulla jalokivikauppiaat tekivät timanttikaulanauhan. Marie Antoinette kieltäytyi '
           + 'ostamasta sitä, mutta huijari Jeanne de La Motte sai kardinaali de Rohanin uskomaan, että '
           + 'kuningatar halusi nauhan salaa.',
@@ -791,6 +815,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'kaanne',
+        kuva: 'parlamentti',
         teksti: 'Oikeudenkäynti pidettiin Pariisin parlamentissa. Toukokuussa 1786 kardinaali vapautettiin, ja '
           + 'Jeanne leimattiin varkaaksi ja vietiin vankilaan. Kuningattaren maine kärsi.',
         vuodet: [
@@ -809,6 +834,36 @@ export const FOKUSKOHTEET_FRA = [
      * ämpärikuvasta, muut Commonsin vapaita kuvia (lisenssit luettu 17.11.2026).
      */
     jaksokuvat: {
+      parlamentti: {
+        osoite: 'https://media.matkakirja.app/kuvat/tarina-sainte-chapelle-4-parlamentti.jpg',
+        laji: 'havainnekuva',
+        lyhyt: 'Pariisin parlamentin istuntosali, ikkunasta näkyy kappelin torni',
+        lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Tornin näkyminen ikkunasta on sommitteluratkaisu; viitteinä Carnavalet\'n istuntosalin piirros (CC0) ja Château de Versailles',
+        tekija: 'Matkakirja (tekoälyllä tuotettu havainnekuva)',
+        lisenssi: 'Matkakirjan oma',
+        leveys: 1200,
+        korkeus: 800,
+      },
+      kaulanauha: {
+        osoite: 'https://media.matkakirja.app/kuvat/tarina-sainte-chapelle-2-kaulanauha.jpg',
+        laji: 'havainnekuva',
+        lyhyt: 'Yöllinen kuja Versailles\'n puistossa, kaukana kaksi hahmoa',
+        lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Kuja on havainnollistettu, ei pohjapiirroksen kopio; viitteinä Bosquet de la Reine (Wikimedia Commons, CC BY-SA 3.0) ja Château de Versailles',
+        tekija: 'Matkakirja (tekoälyllä tuotettu havainnekuva)',
+        lisenssi: 'Matkakirjan oma',
+        leveys: 1200,
+        korkeus: 800,
+      },
+      piha: {
+        osoite: 'https://media.matkakirja.app/kuvat/tarina-sainte-chapelle-1-piha.jpg',
+        laji: 'havainnekuva',
+        lyhyt: 'Sainte-Chapelle palatsin pihalla',
+        lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Rekonstruktio; viitteinä Martinetin 1780-luvun näkymät sekä kappelin rungon valokuvat (Wikimedia Commons, public domain, CC0 ja CC BY-SA 4.0), Centre des monuments nationaux',
+        tekija: 'Matkakirja (tekoälyllä tuotettu havainnekuva)',
+        lisenssi: 'Matkakirjan oma',
+        leveys: 1200,
+        korkeus: 800,
+      },
       ikkunat: {
         osoite: 'https://media.matkakirja.app/kuvat/sainte-chapelle-ikkunat.jpg',
         laji: 'valokuva',
@@ -878,6 +933,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
+        kuva: 'radiumtyo',
         teksti: 'Marie ja Pierre Curie tutkivat uraanimalmin sisältämää säteilyä. Heinäkuussa 1898 he ilmoittivat '
           + 'löytäneensä uuden alkuaineen. He nimesivät sen Marien kotimaan Puolan mukaan poloniumiksi. '
           + 'Joulukuussa he ilmoittivat toisen, radiumin.',
@@ -887,6 +943,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
+        kuva: 'hohto',
         teksti: 'Pelkkä ilmoitus ei riittänyt, vaan alkuaine piti saada puhtaana erilleen malmista. Vaja oli '
           + 'huonosti tuuletettu eikä pitänyt sadetta, ja malmia kului tonneittain.',
       },
@@ -914,11 +971,31 @@ export const FOKUSKOHTEET_FRA = [
      * Viimeinen kuva on aito nykyvalokuva.
      */
     jaksokuvat: {
-      vaja: {
-        osoite: 'https://media.matkakirja.app/kuvat/curie-1898-vaja.jpg',
+      hohto: {
+        osoite: 'https://media.matkakirja.app/kuvat/tarina-curie-1898-4-hohto.jpg',
         laji: 'havainnekuva',
-        lyhyt: 'Curien laboratorio oli pihavaja',
-        lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Faktat: AIP ja Paris.fr; vajan sisustus on dramatisoitu, rajattu',
+        lyhyt: 'Hämärä vaja, pöydällä pulloja ja putkia, jotka hohtavat himmeästi',
+        lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Haalea sinivihreä hohto on kuvituksen tulkinta; viitteinä AIP (Marie Curien muistelmat) ja Wikimedia Commons (public domain)',
+        tekija: 'Matkakirja (tekoälyllä tuotettu havainnekuva)',
+        lisenssi: 'Matkakirjan oma',
+        leveys: 1200,
+        korkeus: 800,
+      },
+      radiumtyo: {
+        osoite: 'https://media.matkakirja.app/kuvat/tarina-curie-1898-2-radiumtyo.jpg',
+        laji: 'havainnekuva',
+        lyhyt: 'Marie ja Pierre Curie työssä vajassa, jonka katto vuotaa',
+        lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Rekonstruktio; työtilan ja asujen viitteinä Wikimedia Commons (public domain), AIP (Marie Curien muistelmat)',
+        tekija: 'Matkakirja (tekoälyllä tuotettu havainnekuva)',
+        lisenssi: 'Matkakirjan oma',
+        leveys: 1200,
+        korkeus: 800,
+      },
+      vaja: {
+        osoite: 'https://media.matkakirja.app/kuvat/tarina-curie-1898-1-vaja.jpg',
+        laji: 'havainnekuva',
+        lyhyt: 'Curien työtilana toiminut pihavaja koulun pihalla',
+        lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Vajan julkisivu on rekonstruktio; viitteinä AIP (Marie Curien muistelmat) ja Wikimedia Commons (public domain), Musée Curien arkistokuvaa ei käytetty',
         tekija: 'Matkakirja (tekoälyllä tuotettu havainnekuva)',
         lisenssi: 'Matkakirjan oma',
         leveys: 1200,

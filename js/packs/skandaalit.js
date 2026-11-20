@@ -2227,6 +2227,17 @@ export const SKANDAALIT = {
           korkeus: 800,
         },
         {
+          osoite: 'https://media.matkakirja.app/kuvat/tarina-vrain-lucas-2-kirjepino.jpg',
+          laji: 'havainnekuva',
+          lyhyt: 'Chasles ja toinen mies tutkivat kirjepinoa työhuoneessa',
+          selite: 'Chasles ja toinen mies tutkivat kirjepinoa työhuoneessa',
+          lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Työhuoneen sisustus ja tapaamisen asettelu ovat rekonstruktio; viitteinä Bazillen ateljeemaalaus, Vrain-Lucasin väärennös ja Chaslesin muotokuva (Wikimedia Commons, public domain), BnF',
+          tekija: 'Matkakirja (tekoälyllä tuotettu havainnekuva)',
+          lisenssi: 'Matkakirjan oma',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
           osoite: 'https://media.matkakirja.app/kuvat/vrain-lucas-institut1867.jpg',
           laji: 'valokuva',
           lyhyt: 'Institut de Francen sisäpiha 1860-luvun puolivälissä',

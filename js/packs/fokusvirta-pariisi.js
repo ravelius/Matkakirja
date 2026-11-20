@@ -609,6 +609,17 @@ export const FOKUSVIRTA_PARIISI = {
       },
       kuvat: [
         {
+          osoite: 'https://media.matkakirja.app/kuvat/tarina-kirahvi-1827-2-kavely.jpg',
+          laji: 'havainnekuva',
+          lyhyt: 'Kirahvi vahatussa sadetakissa kävelee maantiellä saattueensa kanssa',
+          selite: 'Kirahvi vahatussa sadetakissa kävelee maantiellä saattueensa kanssa',
+          lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. Maisema, sadetakin vaakunat ja ryhmän asettelu on havainnollistettu; viitteinä Hüetin tutkielma ja Brascassat\'n maalaus (Wikimedia Commons, public domain), MNHN',
+          tekija: 'Matkakirja (tekoälyllä tuotettu havainnekuva)',
+          lisenssi: 'Matkakirjan oma',
+          leveys: 1200,
+          korkeus: 800,
+        },
+        {
           osoite: 'https://media.matkakirja.app/kuvat/kirahvi-1827-viuhka.jpg',
           laji: 'valokuva',
           lyhyt: 'Kirahvia esittävä viuhka vuodelta 1827',
