@@ -1323,7 +1323,7 @@ export const FOKUSKOHTEET_FRA = [
         osa: 'tapahtuma',
         teksti: 'Pasteur keitti lientä lasipulloissa, joiden kaula oli taivutettu joutsenen kaulan muotoon. Ilma '
           + 'pääsi pulloon, mutta pöly jäi mutkaan, ja liemi pysyi kirkkaana. Liemipulloja hän vei jopa Alppien '
-          + 'jäätikölle vuonna 1860, missä ilmassa oli vain vähän pölyä.',
+          + 'jäätikölle vuonna 1860, jossa ilmassa oli vain vähän pölyä.',
         kuva: 'pullot',
         vuodet: [
           { vuosi: '1860', selite: 'pullot jäätiköllä', kohta: 'vuonna 1860' },
