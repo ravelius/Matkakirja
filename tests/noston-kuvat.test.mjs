@@ -81,18 +81,17 @@ test('Tuileries: jaksokuvat ensin jaksojen järjestyksessä (karttavalo ja kohte
   assert.ok(valo, 'tuileries ei ole karttavalo');
   const raaka = Object.values(lue('moduulit/js/packs/fokuskohteet-fra.json').exportit).flat().find((k) => k?.id === 'tuileries');
   const avaimet = [...new Set(raaka.jaksot.flatMap((x) => [x.kuva, x.lisakuva?.kuva]).filter(Boolean))];
-  assert.equal(avaimet.length, 7);
+  assert.equal(avaimet.length, 4); // K-4 (20.11.2026): loisto, palo, purku, päätykolmio
   const alku = valo.nostokuvat.slice(0, avaimet.length);
   assert.deepEqual(alku.map((k) => k.lyhyt), avaimet.map((a) => raaka.jaksokuvat[a].lyhyt));
   assert.deepEqual(alku.map((k) => k.laji), avaimet.map((a) => raaka.jaksokuvat[a].laji));
   assert.ok(alku.every((k) => k.mista === 'nosto'));
-  // Erä 1 (20.11.2026): isoisän koukku poistui, joten ensimmäinen jakso (palatsin loistoaika) tuo ihmekuvan ensin; rauniokuva siirtyi kolmanteen jaksoon.
-  assert.equal(alku[0].osoite.split('?')[0].split('/').pop(), 'ihme-tuileries-loistoaika-v2.jpg');
-  assert.equal(alku[2].osoite.split('?')[0].split('/').pop(), 'nosto-tuileriat-loistoaika.webp');
-  assert.equal(alku[1].osoite, 'https://media.matkakirja.app/kuvat/tuileries-palo-1871.jpg');
-  // Havainnekuvan lähderivin "… CC0" koskee referenssejä, ei kuvaa; Commons-kuvan (CC BY-SA 3.0) lisenssi luetaan.
-  assert.equal(alku[1].lisenssi, null);
-  assert.equal(alku[5].lisenssi, 'CC BY-SA 3.0');
+  // K-4 (20.11.2026): kuvat rajattu 1200 × 800 -kopioiksi; ihmekuva on sama kuin jakson 1 kuva (ei viidettä kuvaa).
+  assert.equal(alku[0].osoite, 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2-3x2.jpg');
+  assert.equal(alku[1].osoite, 'https://media.matkakirja.app/kuvat/tuileries-palo.jpg');
+  assert.equal(alku[2].osoite, 'https://media.matkakirja.app/kuvat/tuileries-purku.jpg');
+  assert.equal(alku[3].laji, 'valokuva');
+  assert.ok(alku[3].lisenssi?.startsWith('CC BY'), 'päätykolmion (valokuva) lisenssi luetaan datasta');
 });
 
 test('kaikki jaksolliset nostot: jaksokuvat ensimmäisinä', () => {

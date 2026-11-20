@@ -5671,12 +5671,17 @@ export const NAHTAVYYSJUTUT = {
       ],
       kuvat: [
         {
-          tiedosto: 'Musee d\'Orsay and Pont Royal, North-West view 140402 1.jpg',
+          osoite: 'https://media.matkakirja.app/kuvat/palais-orsay-museo.jpg',
+          laji: 'valokuva',
+          tekija: 'Gordon Gartrell',
+          lisenssi: 'CC BY-SA 2.0',
+          leveys: 1200,
+          korkeus: 800,
           lyhyt: 'Gare d\'Orsay valmistui rautatieasemaksi 1900, kaukoliikenne loppui 1939 ja se avattiin museona 1986.',
           selite: 'Victor Laloux\'n Gare d\'Orsay valmistui rautatieasemaksi vuoden '
             + '1900 maailmannäyttelyyn, kaukoliikenne loppui jo 1939 ja se avattiin museona '
             + 'joulukuussa 1986.',
-          lahde: 'DXR, Wikimedia Commons (CC BY-SA 3.0)',
+          lahde: 'Gordon Gartrell, Wikimedia Commons (CC BY-SA 2.0), rajattu',
         },
       ],
       lahde: 'Wikipedia ja Ranskan kulttuuriministeriön muistomerkkirekisteri (POP)',

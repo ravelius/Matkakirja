@@ -55,6 +55,9 @@ export function kuvienRikkeet(kuvat) {
   return RIKKEET.filter((x) => r.has(x));
 }
 
+const B_HAHMOTELMA = { 'Grand Châtelet': 'hahmotelma-grand-chatelet', 'Temple-torni': 'hahmotelma-temple-torni',
+  'Trocadéron palatsi': 'hahmotelma-trocadero', 'Galerie des Machines': 'hahmotelma-galerie-des-machines' };
+
 /** Pariisin 46 nostoa vientipaketista (tiedostot = valmis kokoaVienti-tulos lisäkentät päällä): [{ id, ryhma, nimi, rivi (mistä kuvat), kuvat }]. */
 export async function keraaPariisinNostokuvat({ juuri, tiedostot = null } = {}) {
   lisakentatViennissa(true);
@@ -72,8 +75,9 @@ export async function keraaPariisinNostokuvat({ juuri, tiedostot = null } = {}) 
   const jutuista = (ryhma, nimet) => {
     for (const nimi of nimet) {
       const a = jutut.get(nimi);
-      if (!a) throw new Error(`nähtävyysjuttu puuttuu: ${nimi}`);
-      const linkki = [a.nosto ?? a.data?.nosto].flat().find((t) => typeof t === 'string' && valot.has(t));
+      // B (4 kadonnutta): nähtävyysjuttukopiot poistettu (KK 20.11.2026 klo 10.44, L5-4 erä 2); hahmotelma on ainoa koti.
+      if (!a && !B_HAHMOTELMA[nimi]) throw new Error(`nähtävyysjuttu puuttuu: ${nimi}`);
+      const linkki = a ? [a.nosto ?? a.data?.nosto].flat().find((t) => typeof t === 'string' && valot.has(t)) : B_HAHMOTELMA[nimi];
       const v = linkki ? valot.get(linkki) : null;
       tulos.push({ id: `${ryhma.toLowerCase()}:${nimi}`, ryhma, nimi, rivi: v ? `karttavalot/${linkki}` : `nahtavyydet/${a.id}`,
         kuvat: (v ?? a).nostokuvat ?? [] });
