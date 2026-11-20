@@ -8,7 +8,7 @@ SÄÄNNÖT:
 3. Ennen tilausta varmistetaan kohde, aiemmat työt, päätökset. Tilaus kertoo, liikkuuko malli; liikkumaton ilman luurankoa. [P-261023-1] [R-7.15]
 4. Kuvatilaus kuuluu putkeen HERO (nykyinen kohde, 2–3 Commons-viitekuvaa), IHME (kadonnut tai loistoaika, merkitään havainnekuvaksi) tai AARRE (esine vaalealla pergamentilla). [R-11.11] [R-11.13] [R-2.51]
 5. Kuvassa ei tekstiä eikä vesileimaa. Uusin OpenAI-malli (vaihto kokeella); JPG, peliin webp. Pulun kuva aina Codexilta: aidon näköinen neliö, aihe ympyrässä; paikkaan sopivia lintuja, eläimiä tai söpöä, pullaa säästeliäästi; Venetsiassa ihastussarja. [R-2.51] [R-11.12] [R-11.11] [P-261115-6] [P-261115-7] [P-261116-3] [P-261116-9] [P-261116-10]
-6. Talot ja ympäristö koodilla. Koristeellinen merkkirakennus (kaari, katedraali, kupoli) Tripolla, aina kaksi tasoa (kaukaa kevyt, läheltä tarkka); peliin omistajan vertailukuvan jälkeen. Hahmot, eläimet, esineet ja kalusteet Tripolla. Temple-nukkekoti (2D-nuket, teatterifontti, esirippu) odottaa omistajan sanaa. [P-261109-2] [P-261115-20] [P-261116-4] [P-261116-5] [P-261116-7] [P-261116-8] [P-261117-57] [P-261117-114]
+6. Talot ja ympäristö koodilla. Koristeellinen merkkirakennus (kaari, katedraali, kupoli) Tripolla, kaksi tasoa (kaukaa kevyt, läheltä tarkka); peliin omistajan vertailukuvan jälkeen. Hahmot, eläimet, esineet ja kalusteet Tripolla. Temple-nukkekoti (2D-nuket, teatterifontti, esirippu) odottaa omistajan sanaa. [P-261109-2] [P-261115-20] [P-261116-4] [P-261116-5] [P-261116-7] [P-261116-8] [P-261117-57] [P-261117-114] Loput Tripo-mallit peliin, ellei koodiversiota ole. [P-261120-18]
 7. Codexin kuvilla ja Tripolla on pysyvä lupa ilman korttia; Tripolla myös massaerät saldon rajoissa, ei ostoja. Lupa ei ole mallin hyväksyntä (mallit-ja-3d). [R-7.15] [P-261105-3] [P-261117-2]
 8. Omistaja sopii valinnat suoraan Codexin kanssa; Claude toimii postin mukaan eikä kysy samaa. [P-261021-1]
 9. Toimitus kulkee tuontitarkistuksen läpi, katsotaan täysikokoisena ennen peliä; näkyvän työn hyväksyy KK (valmiin-maaritelma). [R-11.7] [P-261110-6]
@@ -20,7 +20,6 @@ SÄÄNNÖT:
 15. Grafiikka kärjessä: lähelle paljon yksityiskohtia (maat, suihkulähteet); raskaus ei este. [P-261117-113]
 
 EI VIKA:
-- Valmiit Tripo-mallit jäävät, vaikka rakennukset ovat koodia.
 
 TEKOTAPA:
 - Posti: haara claude/postilaatikko. Vahti: Matkakirja-posti/codex-odottaa.py.
