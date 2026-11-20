@@ -1,0 +1,82 @@
+{
+  "reviewedAt": "2026-11-20T10:53:20.200881+00:00",
+  "images": [
+    {
+      "taskNumber": 2800,
+      "title": "Kirahvi 1827 · kävelymatka",
+      "file": "tarina-kirahvi-1827-2-kavely.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "e1417c7c2dd76030d69110c74c66f01aa59bc3c005e564071a8b393154e4edbf",
+      "selectedAttempt": 1,
+      "callCount": 1,
+      "qa": "pass-for-KK-review",
+      "subjectBoundsPercent": [
+        25,
+        30,
+        79,
+        75
+      ],
+      "framingMeasurementsPercent": {
+        "topClearance": 30,
+        "height": 45
+      },
+      "measurementMethod": "Visual estimate from percentage guide on full 3:2 frame",
+      "deliveryCrop": null,
+      "reviewNote": "Sadetakin vaakunoiden yksityiskohdat ovat kuviteltu rekonstruktio."
+    },
+    {
+      "taskNumber": 2801,
+      "title": "Temple-torni · vartioitu vankila",
+      "file": "tarina-hahmotelma-temple-torni-3-kadonnut.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "a55eab0b4160e28d8b6ea4b810ee8571e386c425020325a59d227d2b3d385c60",
+      "selectedAttempt": 2,
+      "callCount": 2,
+      "qa": "pass-for-KK-review",
+      "subjectBoundsPercent": [
+        42,
+        32,
+        56,
+        74
+      ],
+      "framingMeasurementsPercent": {
+        "topClearance": 32,
+        "height": 35,
+        "towerWidth": 14
+      },
+      "measurementMethod": "Visual estimate from percentage guide on full 3:2 frame",
+      "deliveryCrop": null,
+      "reviewNote": "Portin tarkka asu ja näkymä kadulta on rekonstruoitu historiallisten piirrosten pohjalta."
+    },
+    {
+      "taskNumber": 2802,
+      "title": "Vrain-Lucas · Chasles tutkii kirjeitä",
+      "file": "tarina-vrain-lucas-2-kirjepino.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "d0ff80a4266b90583930dcef879bf1a5a0c642263daf774f3ed40ad2d4f21ed6",
+      "selectedAttempt": 1,
+      "callCount": 1,
+      "qa": "pass-for-KK-review",
+      "subjectBoundsPercent": [
+        24,
+        22,
+        71,
+        76
+      ],
+      "framingMeasurementsPercent": null,
+      "measurementMethod": "Visual estimate from percentage guide on full 3:2 frame",
+      "deliveryCrop": null,
+      "reviewNote": "Työhuoneen sisustus ja tapaamisen asettelu ovat kuvitusta."
+    }
+  ],
+  "kkApproval": "awaiting"
+}

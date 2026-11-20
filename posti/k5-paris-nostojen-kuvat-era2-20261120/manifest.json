@@ -1,0 +1,152 @@
+{
+  "batch": 2,
+  "preparedAt": "2026-11-20T10:53:20.200881+00:00",
+  "sourceCommit": "1ea8ed0fc01136b04452a96f3b15b4dd46bef61f",
+  "sourceBlobs": [
+    "ccce9f96859acbb8ac7ef4bc395640f7a7ffa099",
+    "869b1011c114d0360a26d781ad9d1cd41e5ceef5"
+  ],
+  "images": [
+    {
+      "taskNumber": 2800,
+      "title": "Kirahvi 1827 · kävelymatka",
+      "file": "tarina-kirahvi-1827-2-kavely.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "e1417c7c2dd76030d69110c74c66f01aa59bc3c005e564071a8b393154e4edbf",
+      "selectedAttempt": 1,
+      "callCount": 1,
+      "qa": "pass-for-KK-review",
+      "subjectBoundsPercent": [
+        25,
+        30,
+        79,
+        75
+      ],
+      "framingMeasurementsPercent": {
+        "topClearance": 30,
+        "height": 45
+      },
+      "measurementMethod": "Visual estimate from percentage guide on full 3:2 frame",
+      "deliveryCrop": null,
+      "reviewNote": "Sadetakin vaakunoiden yksityiskohdat ovat kuviteltu rekonstruktio."
+    },
+    {
+      "taskNumber": 2801,
+      "title": "Temple-torni · vartioitu vankila",
+      "file": "tarina-hahmotelma-temple-torni-3-kadonnut.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "a55eab0b4160e28d8b6ea4b810ee8571e386c425020325a59d227d2b3d385c60",
+      "selectedAttempt": 2,
+      "callCount": 2,
+      "qa": "pass-for-KK-review",
+      "subjectBoundsPercent": [
+        42,
+        32,
+        56,
+        74
+      ],
+      "framingMeasurementsPercent": {
+        "topClearance": 32,
+        "height": 35,
+        "towerWidth": 14
+      },
+      "measurementMethod": "Visual estimate from percentage guide on full 3:2 frame",
+      "deliveryCrop": null,
+      "reviewNote": "Portin tarkka asu ja näkymä kadulta on rekonstruoitu historiallisten piirrosten pohjalta."
+    },
+    {
+      "taskNumber": 2802,
+      "title": "Vrain-Lucas · Chasles tutkii kirjeitä",
+      "file": "tarina-vrain-lucas-2-kirjepino.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "d0ff80a4266b90583930dcef879bf1a5a0c642263daf774f3ed40ad2d4f21ed6",
+      "selectedAttempt": 1,
+      "callCount": 1,
+      "qa": "pass-for-KK-review",
+      "subjectBoundsPercent": [
+        24,
+        22,
+        71,
+        76
+      ],
+      "framingMeasurementsPercent": null,
+      "measurementMethod": "Visual estimate from percentage guide on full 3:2 frame",
+      "deliveryCrop": null,
+      "reviewNote": "Työhuoneen sisustus ja tapaamisen asettelu ovat kuvitusta."
+    }
+  ],
+  "contactSheet": "kontaktiarkki-kaikki-11.jpg",
+  "batch1DeliveryCommit": "ad61321b32dbaea543a82dc8f19d7f7e953192ee",
+  "batch1ImagesUntouched": true,
+  "batch1HashesChecked": true,
+  "sheetOrder": [
+    {
+      "taskNumber": 2792,
+      "file": "tarina-eiffel-torni-4-lustig.jpg",
+      "sha256": "375a114920f477d5116a0947122a9ebfa6a09eea959c548bcafb3ac93771c819"
+    },
+    {
+      "taskNumber": 2793,
+      "file": "tarina-sainte-chapelle-1-piha.jpg",
+      "sha256": "61bff8e917b94e7dabaf30b6c2640b03ed9f13d0b4cdb38b0c756b419f009e10"
+    },
+    {
+      "taskNumber": 2794,
+      "file": "tarina-sainte-chapelle-2-kaulanauha.jpg",
+      "sha256": "6458963e8b0bbc41dd6dd40a1300f9adda616632836f82e36c7cc396adf00010"
+    },
+    {
+      "taskNumber": 2795,
+      "file": "tarina-sainte-chapelle-4-parlamentti.jpg",
+      "sha256": "b3907bbae5f9f3b8a3255eb0d0bd5374576d782e84e18debc1b1ed1053f998f2"
+    },
+    {
+      "taskNumber": 2796,
+      "file": "tarina-curie-1898-2-radiumtyo.jpg",
+      "sha256": "442615bec7ced813b676bc3394b2c7b030498f553b54a243fc31d300687a6811"
+    },
+    {
+      "taskNumber": 2797,
+      "file": "tarina-curie-1898-4-hohto.jpg",
+      "sha256": "dde23e28f862513875c6b01b247fb15c3d7b8b43a241fac3bd9cf77a9177f2e0"
+    },
+    {
+      "taskNumber": 2798,
+      "file": "tarina-curie-1898-1-vaja.jpg",
+      "sha256": "612b92ad8c914061cb4d6146753ebfb5883446d2eb043756be31948f3ecaf2f1"
+    },
+    {
+      "taskNumber": 2799,
+      "file": "tarina-louvre-2-varkaus.jpg",
+      "sha256": "78b0cc58d0d11d8429d4df873b4f4770dddef8bb023a26f746179ec6554c1de6"
+    },
+    {
+      "taskNumber": 2800,
+      "file": "tarina-kirahvi-1827-2-kavely.jpg",
+      "sha256": "e1417c7c2dd76030d69110c74c66f01aa59bc3c005e564071a8b393154e4edbf"
+    },
+    {
+      "taskNumber": 2801,
+      "file": "tarina-hahmotelma-temple-torni-3-kadonnut.jpg",
+      "sha256": "a55eab0b4160e28d8b6ea4b810ee8571e386c425020325a59d227d2b3d385c60"
+    },
+    {
+      "taskNumber": 2802,
+      "file": "tarina-vrain-lucas-2-kirjepino.jpg",
+      "sha256": "d0ff80a4266b90583930dcef879bf1a5a0c642263daf774f3ed40ad2d4f21ed6"
+    }
+  ],
+  "approval": "awaiting KK",
+  "bucketUploaded": false,
+  "gameIntegrated": false,
+  "published": false
+}
