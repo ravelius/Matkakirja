@@ -19,6 +19,10 @@
  * aihe kantaa sen. Hyvät lainaukset (Reagan, Reuter, Vrubel) säilyvät.
  */
 
+import { FOKUSVIRTA_PARIISI } from './fokusvirta-pariisi.js';
+
+const METRO_NOSTO = FOKUSVIRTA_PARIISI.takynostot.find((n) => n.id === 'guimardin-metro');
+
 export const NAHTAVYYSJUTUT = {
   firenze: {
     Duomo: {
@@ -5397,7 +5401,7 @@ export const NAHTAVYYSJUTUT = {
     },
     'Concorden aukio': {
       aika: '1757–1772',
-      teksti: 'Concorden aukio on Pariisin suurin aukio, ja sen paikalla mestattiin kuningas. Arkkitehti Ange-Jacques Gabriel suunnitteli sen 1700-luvulla kuningas Ludvig XV:n kunniaksi.'
+      teksti: 'Concorden aukio on Pariisin suurin aukio, ja siellä mestattiin kuningas. Arkkitehti Ange-Jacques Gabriel suunnitteli sen 1700-luvulla kuningas Ludvig XV:n kunniaksi.'
         + '\n\n'
         + 'Vallankumouksen aikana aukiolle pystytettiin giljotiini. Vuonna 1793 siellä mestattiin kuningas Ludvig XVI, ja samana vuonna myös kuningatar Marie Antoinette. Kaikkiaan aukiolla teloitettiin yli tuhat ihmistä.'
         + '\n\n'
@@ -5453,13 +5457,14 @@ export const NAHTAVYYSJUTUT = {
     },
     'Sacré-Cœur': {
       aika: '1875–1914',
-      teksti: 'Sacré-Cœur eli Pyhän sydämen basilika kohoaa Montmartren kukkulan huipulla, ja se rakennettiin hävityn sodan jälkeen. Ranska hävisi sodan Preussille vuosina 1870–1871, ja Paul Abadie valittiin kirkon suunnittelijaksi lähes 80 ehdotuksen joukosta. Rakennustyöt alkoivat vuonna 1875, ja kirkko valmistui pääosin vuonna 1914 ja vihittiin käyttöön 1919.'
+      teksti: 'Sacré-Cœur eli Pyhän sydämen basilika kohoaa Montmartren kukkulan huipulla. Ranska hävisi sodan Preussille vuosina 1870–1871, ja häviön jälkeen annettiin kansallinen lupaus rakentaa Jeesuksen sydämelle omistettu kirkko sovitukseksi. Kansalliskokous hyväksyi hankkeen vuonna 1873, ja Paul Abadie valittiin kirkon suunnittelijaksi lähes 80 ehdotuksen joukosta. Rakennustyöt alkoivat vuonna 1875, ja kirkko valmistui pääosin vuonna 1914 ja vihittiin käyttöön 1919.'
         + '\n\n'
         + 'Ulkoseinät on tehty erikoisesta kalkkikivestä, joka valkenee sateella ja pysyy siksi valkoisena. Kirkko hohtaa yhä, vaikka se on jo yli sata vuotta vanha. Sisällä kattoa koristaa yksi maailman suurimmista mosaiikeista, jonka ala on noin 470 neliömetriä.'
         + '\n\n'
         + 'Tornissa riippuu ”Savoyarde”, Ranskan suurin kello, joka painaa lähes 19 tonnia. Kirkon huipulta avautuu näkymä koko Pariisiin.',
       vuodet: [
         { kohta: 'vuosina 1870–1871', vuosi: '1870–1871', selite: 'sodan häviö' },
+        { kohta: 'vuonna 1873', vuosi: '1873', selite: 'hanke hyväksyttiin' },
         { kohta: 'vuonna 1875', vuosi: '1875', selite: 'työ alkoi' },
         { kohta: 'vuonna 1914', vuosi: '1914', selite: 'valmistui' },
         { kohta: 'käyttöön 1919', vuosi: '1919', selite: 'vihittiin' },
@@ -5518,7 +5523,7 @@ export const NAHTAVYYSJUTUT = {
     },
     'Notre-Dame': {
       aika: '1163–1345',
-      teksti: 'Notre-Damen katedraalin rakentaminen alkoi vuonna 1163, ja sen valmistuminen kesti uskomattomat yli sata vuotta. Kirkko oli aikansa insinööritaidon huippu, sillä sen kivikattoa kannattelevat ulkopuoliset tukikaaret, niin sanotut lentävät tukipilarit.'
+      teksti: 'Notre-Damen katedraalin rakentaminen alkoi vuonna 1163, ja sen valmistuminen kesti yli sata vuotta. Kirkko oli aikansa insinööritaidon huippu, sillä sen kivikattoa kannattelevat ulkopuoliset tukikaaret, niin sanotut lentävät tukipilarit.'
         + '\n\n'
         + 'Katedraalissa on tapahtunut historian suuria hetkiä: vuonna 1804 Napoleon kruunasi itsensä keisariksi kirkon alttarilla, ja vuonna 1944 kenraali de Gaulle osallistui samassa kirkossa Pariisin vapautumisen kiitosjumalanpalvelukseen.'
         + '\n\n'
@@ -5606,15 +5611,15 @@ export const NAHTAVYYSJUTUT = {
     // Tekstit sanatarkasti SK:n korjatuista korteista (KK 13.53 ja 22.03, PR 6712/6728/6729; Pompidou ilman kuvaa, KK 21.59): docs/raportit/kohdekortit-pariisi-vaikeampi-20261113.md (lähteet siellä).
     'Tour Saint-Jacques': {
       aika: '1509–1523',
-      teksti: 'Tour Saint-Jacques on Pariisin keskustassa seisova kellotorni, joka jäi jäljelle kirkosta, jonka vallankumous myi louhokseksi. Torni rakennettiin 1509–1523 keskiaikaisen Saint-Jacques-de-la-Boucherien kirkon kellotorniksi Grande Boucherien, Pariisin teurastajien kaupunginosan, keskelle.'
+      teksti: 'Tour Saint-Jacques on Pariisin keskustassa seisova kellotorni, joka on ainoa jäljellä oleva osa kirkosta. Torni rakennettiin 1509–1523 keskiaikaisen Saint-Jacques-de-la-Boucherien kirkon kellotorniksi Grande Boucherien, Pariisin teurastajien kaupunginosan, keskelle.'
         + '\n\n'
         + '1790-luvun vallankumouksessa kirkko myytiin louhokseksi, ja sen kivet kelpasivat rakennusaineeksi. Kellotorni säästyi: kaupan ehtona kerrotaan olleen, ettei tornia saa purkaa. Huipulla seisonut pyhä Jaakob tuhoutui, ja nykyinen patsas on tehty 1800-luvulla. Vuonna 1836 Pariisin kaupunki osti tornin, ja 1850-luvulla sen ympärille tehtiin puisto, kun Haussmannin työt avasivat Rue de Rivolin tornin eteen.'
         + '\n\n'
-        + 'Torniin perustettiin sääasema vasta 1891. Tornin juurella on Blaise Pascalin patsas, koska hänen kerrotaan tehneen tornissa ilmanpainekokeita, vaikka asiasta kiistellään. Nykyään tornin juurelta alkaa yhä Via Turonensis, yksi Santiago de Compostelaan vievistä pyhiinvaellusreiteistä.',
+        + 'Torniin perustettiin sääasema vuonna 1891. Tornin juurella on Blaise Pascalin patsas, koska hänen kerrotaan tehneen tornissa ilmanpainekokeita, vaikka asiasta kiistellään. Tornin juurelta alkaa yhä Via Turonensis, yksi Santiago de Compostelaan vievistä pyhiinvaellusreiteistä.',
       vuodet: [
         { kohta: '1509–1523', vuosi: '1509–1523', selite: 'rakennettiin' },
         { kohta: 'Vuonna 1836', vuosi: '1836', selite: 'kaupunki osti' },
-        { kohta: 'vasta 1891', vuosi: '1891', selite: 'sääasema' },
+        { kohta: 'vuonna 1891', vuosi: '1891', selite: 'sääasema' },
       ],
       kuvat: [
         {
@@ -5671,7 +5676,7 @@ export const NAHTAVYYSJUTUT = {
       aika: '1612',
       teksti: 'Place des Vosges on Pariisin vanhin suunniteltu aukio, jonka tilaaja ei elänyt nähdäkseen sitä valmiina. Kuningas Henrik IV määräsi sen rakennettavaksi hovin juhlien ja kävelyn paikaksi, mutta hänet murhattiin vuonna 1610. Aukio vihittiin vuonna 1612 Ludvig XIII:n ja Anna Itävaltalaisen kihlajaisten yhteydessä.'
         + '\n\n'
-        + 'Aukiota ympäröi 36 samanmallista taloa, yhdeksän joka sivulla, ja kaikilla on samanlainen punatiilinen julkisivu ja jyrkkä katto. Korkeampina erottuvat kuninkaan ja kuningattaren paviljongit etelä- ja pohjoislaidalla. 1600-luvulla aukiolla järjestettiin turnajaisia.'
+        + 'Aukiota ympäröi 36 samanmallista taloa, ja kaikilla on samanlainen punatiilinen julkisivu ja jyrkkä katto. Korkeampina erottuvat kuninkaan ja kuningattaren paviljongit etelä- ja pohjoislaidalla. 1600-luvulla aukiolla järjestettiin turnajaisia.'
         + '\n\n'
         + 'Aukio sai nimen Place des Vosges vuonna 1800 Vosgesin departementin mukaan, ja sitä oli ennen kutsuttu nimellä Place Royale. Vuodesta 1832 aukion laidalla asui kuusitoista vuotta kirjailija Victor Hugo.',
       vuodet: [
@@ -5685,7 +5690,7 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'Paris Place des Vosges Arkaden 1.jpg',
           lyhyt: 'Pariisin vanhinta Place des Vosges -aukiota ympäröi 36 samanlaista taloa, vihitty 1612.',
           selite: 'Pariisin vanhinta aukiota ympäröi 36 samanlaista '
-            + 'taloa, yhdeksän joka sivulla, ja aukio vihittiin '
+            + 'taloa, ja aukio vihittiin '
             + 'vuonna 1612.',
           lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
         },
@@ -6177,22 +6182,14 @@ export const NAHTAVYYSJUTUT = {
      */
     'Metro 1900': {
       nosto: 'nosto-guimardin-metro',
-      teksti: 'Pariisin metron kuuluisat sisäänkäynnit teki arkkitehti, joka ei ollut edes osallistunut niiden suunnittelukilpailuun. Metro avattiin maailmannäyttelyn aikaan 19. heinäkuuta 1900, ja ensimmäinen linja yhdisti Porte de Vincennes’in ja Porte Maillot’n. Sisäänkäynneistä oli järjestetty arkkitehtikilpailu, johon Guimard ei osallistunut, ja työ annettiin lopulta Hector Guimardille.'
-        + '\n\n'
-        + 'Guimard piirsi valurautaisia vakio-osia, jotka sopivat yhteen kuin rakennussarja: samoista paloista sai kasattua sopivan sisäänkäynnin mihin tahansa kadunkulmaan. Hänen tyylinsä oli jugendia, ja sisäänkäyntejä tehtiin yli 140.'
-        + '\n\n'
-        + 'Sitten tyyli meni pois muodista ja monet sisäänkäynnit purettiin. Jäljellä on noin 90, ja valtaosa niistä suojeltiin vuonna 1978.',
+      // KK 20.11.2026 13.40 (B-linjaus 3, yksi paikka): teksti ja kuva luetaan noston omasta datasta
+      // (js/packs/fokusvirta-pariisi.js, takynosto 'guimardin-metro'); täällä vain vuosirivi ja lähde.
+      teksti: METRO_NOSTO.lunastus.join('\n\n'),
       vuodet: [
         { kohta: 'heinäkuuta 1900', vuosi: '1900', selite: 'metro avattiin' },
         { kohta: 'vuonna 1978', vuosi: '1978', selite: 'valtaosa suojeltiin' },
       ],
-      kuvat: [
-        {
-          tiedosto: "01 Guimard's Métropolitain.jpg",
-          selite: 'Guimardin metrosisäänkäyntejä tehtiin yli 140, ja jäljellä on noin 90.',
-          lahde: 'Terrazzo (Flickr), Wikimedia Commons (CC BY 2.0)',
-        },
-      ],
+      kuvat: [{ ...METRO_NOSTO.kuva }],
       lahde: 'Wikipedia',
     },
     'Notre-Dame 2019': {

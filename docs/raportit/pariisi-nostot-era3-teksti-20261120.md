@@ -5,7 +5,7 @@ Haara `sk/l5-nostotekstit-era3` (erän 2 kuvahaaran `sk/k4-era2-kuvat` päälle;
 ## 1. M1–M5 riveittäin
 
 - **M1 silmin:** luku 4: jokaisesta 14 jutusta taulukko ENNEN | NYT (otsikko, tarinarivi-EHDOTUS ≤ 40 merkkiä ilman vuotta, kappaleet merkkimäärineen, vuosirivit, kuvat) ja täydet tekstit. Nähtävyysjutulla ei ole `otsikko`/tarinarivi-kenttää (se on takynostoilla ja jaksollisilla), joten tarinarivit ovat EHDOTUKSIA KK:lle; kenttää ei lisätty.
-- **M2 luvuin:** erän 1 kuusi tarkistusta vihreät 14:lle (`node tools/sisalto/noston-tarkistus.mjs`: C-ryhmän rikkeet 9 → 0; kaikki 46 tekstiä: alku 1, järjestys 0, pituus 4, isoisä 0, rivit 0, jäljellä vain F:n 5 hetkeä ja 0 muuta). Kolme kappaletta jokaisella. Pituusraja L5.5: 700–1 000 merkkiä (kappalevälit pois). Merkkimäärät (ENNEN → NYT): Riemukaari 694→734, Concorde 715→726, Luxembourg 1 295→805, Sacré-Cœur 760→729, Panthéon 1 422→967, Notre-Dame 791→767, Saint-Jacques 1 000→975, Saint-Eustache 988→727, Pompidou 897→982, Place des Vosges 721→780, Invalidit 1 121→996, Petit Palais 885→720, Montparnasse 900→859, Metro 513→734. Vuosirivejä 3–6 kaikilla paitsi **Metro 1900: 2 riviä** (tekstissä ja lähteissä vain 1900 ja 1978; kolmatta ei keksitty). Täysi suite 5 992 testiä, 0 kaatuu.
+- **M2 luvuin:** erän 1 kuusi tarkistusta vihreät 14:lle (`node tools/sisalto/noston-tarkistus.mjs`: C-ryhmän rikkeet 9 → 0; kaikki 46 tekstiä: alku 1, järjestys 0, pituus 4, isoisä 0, rivit 0, jäljellä vain F:n 5 hetkeä ja 0 muuta). Kolme kappaletta jokaisella. Pituusraja L5.5: 700–1 000 merkkiä (kappalevälit pois). Merkkimäärät (ENNEN → NYT): Riemukaari 694→734, Concorde 715→720, Luxembourg 1 295→805, Sacré-Cœur 760→841, Panthéon 1 422→967, Notre-Dame 791→754, Saint-Jacques 1 000→947, Saint-Eustache 988→727, Pompidou 897→982, Place des Vosges 721→757, Invalidit 1 121→996, Petit Palais 885→720, Montparnasse 900→859, Metro 513→726. Vuosirivejä 3–6 kaikilla paitsi **Metro 1900: 2 riviä** (tekstissä ja lähteissä vain 1900 ja 1978; kolmatta ei keksitty). Täysi suite 5 992 testiä, 0 kaatuu.
 - **M3 luvuin:** lähdetaulukot liitteissä A–D (neljä Sonnet-lähdetarkistajaa, kaksi itsenäistä lähdettä per väite, EPÄVARMA/EI-väitteet korjattu tekstiin; liitteiden tuomiot kuvaavat luonnoksen 1. kierrosta); riippumattoman tarkistajan rivit luvussa 6; heikoimmat kohdat luvussa 3.
 - **M4 luvuin:** sana isoisä ei esiinny missään näiden 14 jutun kentässä (testi: koko juttuolio JSON-muodossa; Metron takynosto erikseen). Nappi/tarinarivi/lähderivi: isoisä-kenttiä ei ole.
 - **M5 luvuin:** 13 juttua: olemassa oleva kuva/kuvat ennallaan (näytetään avauskappaleen jälkeen, eli kappaleen 1 kuvana). **Pompidou-keskuksella ei ole kuvaa (kuvat: [])**: ei keksitty uutta, kuuluu K-4 erään 3. Karttakohteen kautta toiseen nostoon kuvansa tuovat: Notre-Dame (`nosto-notre-damen-kukko`, D-noston nykykuva) ja Metro 1900 (`nosto-guimardin-metro`, lunastus on sama teksti kuin jutussa). Muut 12 pistettä avaavat jutun omalla kuvallaan.
@@ -21,11 +21,15 @@ Lähteillä kapeimmat (jäljellä tekstissä; tarkistajan kolmannen kierroksen "
 
 **Korjattu tarkistajien kierroksilla ja jätetty pois:** Luxembourgin hehtaariluvut ja 2 000 jalavaa, Hugon Kurjat ja Vapaudenpatsas; Saint-Eustachen 1213 ja Colbert-jakso; Place des Vosgesin "kuningaspari ei asunut" ja "vuoteen 1800 Place Royale"; Invalidien "4 000" asukasta ja "Ludvig XIV:n sodat"; Petit Palaisin koristetyöt 1903–1925, graniittipylväät ja "alusta asti"; Montparnassen "ainoa pilvenpiirtäjä" ja 25/37 m -rajat; Metron "167/88" ja "yksikään 21 ehdotuksesta ei kelvannut"; Panthéonin heilurin purun syy ja Mirabeaun "kuukausien kuluttua"; Notre-Damen "182 vuotta" ja "ennätysajassa".
 
-**KK päätettäväksi:**
-1. **Metro 1900: visa ja Pulun kysymys.** Tekstistä poistui "yksikään 21 ehdotuksesta ei kelvannut" (lähteet ristiriidassa: yksi nimeää kilpailun voittajaksi Henri Duray'n). Takynoston Pulun kysymys 1 ("Miksi arkkitehtikilpailun 21 ehdotuksesta yksikään ei kelvannut?"), visan `fakta`-rivi ("Kilpailun 21 ehdotuksesta yksikään ei kelvannut…") ja kysymys "…tehtiin yli 140, mutta puolet niistä purettiin" (luvut vaihdettu 167/88 → yli 140/noin 90, "puolet" jäi; tekstissä nyt "monet") pitäisi päivittää samaan; en muuttanut Pulun kysymyksiä (ÄLÄ RIKO) ennen KK:n sanaa. Ehdotus: kysymys "Miksi työ annettiin Hector Guimardille, vaikka hän ei osallistunut kilpailuun?".
-2. Tarinarivit (14 EHDOTUSTA luvussa 4; nähtävyysjutulla ei ole kenttää: NUI vai pois).
-3. Pompidou-keskuksen kuva K-4 erään 3 (jutulla ei ole yhtään kuvaa).
-4. Metro 1900: juttu ja takynosto ovat sama teksti kahdessa paikassa (testi vartioi); yhdistetäänkö.
+**KK:n päätökset 20.11.2026 klo 13.40 toteutettu (kierros 4):**
+- K1 Metro: visan `fakta` ilman "21 ehdotuksesta…"; Pulun kysymys 1 "Mitkä kaksi asemaa ensimmäinen metrolinja yhdisti?" (vastaus tekstissä ja kahdessa lähteessä); kysymys 3 ja visan kysymys "puolet" → "monet"; minitehtävän kommentti päivitetty.
+- K2 Metro kappale 1: metro ensin, sitten kilpailu ja Guimard esiteltynä ("…mutta työ annettiin lopulta Hector Guimardille, joka ei ollut osallistunut siihen").
+- K3 Concorde: "ja siellä mestattiin kuningas". K4 Notre-Dame: "uskomattomat" pois.
+- K5 Sacré-Cœur: lisätty virke kansallisesta lupauksesta ja kansalliskokouksen hyväksynnästä 1873 (lähteet: basilikan sivusto sacre-coeur-montmartre.com "Le vœu national"; fr.wikipedia Basilique du Sacré-Cœur de Montmartre, laki 24.7.1873). Varaus: ei kommuunia syynä (lähteet kiistävät/kiistelevät); "sovitukseksi" on basilikan oma kuvaus.
+- K6 Saint-Jacques: "myytiin louhokseksi" vain kappaleessa 2 (kappale 1: "joka on ainoa jäljellä oleva osa kirkosta"); "vuonna 1891"; "Nykyään … yhä" → "yhä".
+- K8 Metro yhdessä paikassa: **tehty pelkällä datalla.** `nahtavyysjutut.js` lukee Metro 1900 -jutun tekstin ja kuvan suoraan noston datasta (`fokusvirta-pariisi.js`, takynosto `guimardin-metro`); jutulla jäävät vain vuosirivi ja lähde. Vienti ja natiivi lukevat ennallaan; nostot-kartalla-testi vihreä.
+
+**Yhä KK:lle:** tarinarivit eivät dataan (KK päätti); ehdotukset päivitetty luvussa 4 (Vosges, Montparnasse, Saint-Eustache). Pompidou-keskuksen kuva K-4 erään 3: kuvan oikeudet selvitetään ensin (Ranskassa ei panoraamavapautta, arkkitehdit elossa), kuvaa ei valita.
 
 ## 4. M1: jokaisesta jutusta ENNEN | NYT
 
@@ -57,13 +61,13 @@ Lähteillä kapeimmat (jäljellä tekstissä; tarkistajan kolmannen kierroksen "
 |---|---|---|
 | Otsikko (kartan nimi) | Concorden aukio | Concorden aukio |
 | Tarinarivi | ei kenttää nähtävyysjutulla | EHDOTUS: **Aukio, jossa kuningas mestattiin** (32 merkkiä) |
-| Kappaleita / merkkejä | 3 / 715 | 3 / 726 |
+| Kappaleita / merkkejä | 3 / 715 | 3 / 720 |
 | Vuosirivit | 1830 obeliski lahjaksi · 1836 obeliski pystyyn | 1793 kuninkaan mestaus · 1830 obeliski lahjaksi · 1836 obeliski pystyyn |
 | Kuvat | 1. Obelisk and fountain in Place de la Concorde, Paris.JPG | 1. Obelisk and fountain in Place de la Concorde, Paris.JPG (ennallaan; avauskappaleen jälkeen) |
 
 **NYT:**
 
-1. [171] Concorden aukio on Pariisin suurin aukio, ja sen paikalla mestattiin kuningas. Arkkitehti Ange-Jacques Gabriel suunnitteli sen 1700-luvulla kuningas Ludvig XV:n kunniaksi.
+1. [165] Concorden aukio on Pariisin suurin aukio, ja siellä mestattiin kuningas. Arkkitehti Ange-Jacques Gabriel suunnitteli sen 1700-luvulla kuningas Ludvig XV:n kunniaksi.
 2. [209] Vallankumouksen aikana aukiolle pystytettiin giljotiini. Vuonna 1793 siellä mestattiin kuningas Ludvig XVI, ja samana vuonna myös kuningatar Marie Antoinette. Kaikkiaan aukiolla teloitettiin yli tuhat ihmistä.
 3. [346] Vuonna 1830 Egyptin hallitsija lahjoitti Ranskalle 3 300 vuotta vanhan Luxorin obeliskin. Kivijättiläinen tuotiin laivalla Niililtä asti ja pystytettiin aukiolle vuonna 1836 valtavan väkijoukon seuratessa. Nykyään 23-metrisen obeliskin ympärillä poreilevat suihkulähteet, ja aukiota reunustavat naispatsaat, jotka kuvaavat Ranskan suurkaupunkeja.
 
@@ -101,13 +105,13 @@ Lähteillä kapeimmat (jäljellä tekstissä; tarkistajan kolmannen kierroksen "
 |---|---|---|
 | Otsikko (kartan nimi) | Sacré-Cœur | Sacré-Cœur |
 | Tarinarivi | ei kenttää nähtävyysjutulla | EHDOTUS: **Valkoinen kirkko kukkulan päällä** (32 merkkiä) |
-| Kappaleita / merkkejä | 3 / 760 | 3 / 729 |
-| Vuosirivit | 1870 sodan häviö | 1870–1871 sodan häviö · 1875 työ alkoi · 1914 valmistui · 1919 vihittiin |
+| Kappaleita / merkkejä | 3 / 760 | 3 / 841 |
+| Vuosirivit | 1870 sodan häviö | 1870–1871 sodan häviö · 1873 hanke hyväksyttiin · 1875 työ alkoi · 1914 valmistui · 1919 vihittiin |
 | Kuvat | 1. Paris - Basilique du Sacré-Cœur de Montmartre - 2025-09-30 23-31-57 001.jpg | 1. Paris - Basilique du Sacré-Cœur de Montmartre - 2025-09-30 23-31-57 001.jpg (ennallaan; avauskappaleen jälkeen) |
 
 **NYT:**
 
-1. [349] Sacré-Cœur eli Pyhän sydämen basilika kohoaa Montmartren kukkulan huipulla, ja se rakennettiin hävityn sodan jälkeen. Ranska hävisi sodan Preussille vuosina 1870–1871, ja Paul Abadie valittiin kirkon suunnittelijaksi lähes 80 ehdotuksen joukosta. Rakennustyöt alkoivat vuonna 1875, ja kirkko valmistui pääosin vuonna 1914 ja vihittiin käyttöön 1919.
+1. [461] Sacré-Cœur eli Pyhän sydämen basilika kohoaa Montmartren kukkulan huipulla. Ranska hävisi sodan Preussille vuosina 1870–1871, ja häviön jälkeen annettiin kansallinen lupaus rakentaa Jeesuksen sydämelle omistettu kirkko sovitukseksi. Kansalliskokous hyväksyi hankkeen vuonna 1873, ja Paul Abadie valittiin kirkon suunnittelijaksi lähes 80 ehdotuksen joukosta. Rakennustyöt alkoivat vuonna 1875, ja kirkko valmistui pääosin vuonna 1914 ja vihittiin käyttöön 1919.
 2. [253] Ulkoseinät on tehty erikoisesta kalkkikivestä, joka valkenee sateella ja pysyy siksi valkoisena. Kirkko hohtaa yhä, vaikka se on jo yli sata vuotta vanha. Sisällä kattoa koristaa yksi maailman suurimmista mosaiikeista, jonka ala on noin 470 neliömetriä.
 3. [127] Tornissa riippuu ”Savoyarde”, Ranskan suurin kello, joka painaa lähes 19 tonnia. Kirkon huipulta avautuu näkymä koko Pariisiin.
 
@@ -145,13 +149,13 @@ Lähteillä kapeimmat (jäljellä tekstissä; tarkistajan kolmannen kierroksen "
 |---|---|---|
 | Otsikko (kartan nimi) | Notre-Dame | Notre-Dame |
 | Tarinarivi | ei kenttää nähtävyysjutulla | EHDOTUS: **Katedraali, joka paloi ja nousi** (31 merkkiä) |
-| Kappaleita / merkkejä | 3 / 791 | 3 / 767 |
+| Kappaleita / merkkejä | 3 / 791 | 3 / 754 |
 | Vuosirivit | 1163 rakennus alkoi · 1345 valmistui · 1804 Napoleonin kruunaus · 1944 de Gaulle kiitti · 2019 tulipalo · 2024 avattiin uudelleen | 1163 rakennus alkoi · 1804 Napoleonin kruunaus · 1944 de Gaulle kiitti · 2019 tulipalo · 2024 avattiin uudelleen |
 | Kuvat | 1. https://media.matkakirja.app/kuvat/notre-dame-2019-nyt.jpg | 1. https://media.matkakirja.app/kuvat/notre-dame-2019-nyt.jpg (ennallaan; avauskappaleen jälkeen) |
 
 **NYT:**
 
-1. [250] Notre-Damen katedraalin rakentaminen alkoi vuonna 1163, ja sen valmistuminen kesti uskomattomat yli sata vuotta. Kirkko oli aikansa insinööritaidon huippu, sillä sen kivikattoa kannattelevat ulkopuoliset tukikaaret, niin sanotut lentävät tukipilarit.
+1. [237] Notre-Damen katedraalin rakentaminen alkoi vuonna 1163, ja sen valmistuminen kesti yli sata vuotta. Kirkko oli aikansa insinööritaidon huippu, sillä sen kivikattoa kannattelevat ulkopuoliset tukikaaret, niin sanotut lentävät tukipilarit.
 2. [231] Katedraalissa on tapahtunut historian suuria hetkiä: vuonna 1804 Napoleon kruunasi itsensä keisariksi kirkon alttarilla, ja vuonna 1944 kenraali de Gaulle osallistui samassa kirkossa Pariisin vapautumisen kiitosjumalanpalvelukseen.
 3. [286] Huhtikuussa 2019 katedraalin vintillä syttyi tulipalo, joka tuhosi vanhan puukaton ja tornihuipun. Palomiehet onnistuivat kuitenkin pelastamaan tornit ja julkisivun, ja ruusuikkunatkin säilyivät. Katedraali avattiin yleisölle uudelleen joulukuussa 2024, alle kuusi vuotta palon jälkeen.
 
@@ -167,15 +171,15 @@ Lähteillä kapeimmat (jäljellä tekstissä; tarkistajan kolmannen kierroksen "
 |---|---|---|
 | Otsikko (kartan nimi) | Tour Saint-Jacques | Tour Saint-Jacques |
 | Tarinarivi | ei kenttää nähtävyysjutulla | EHDOTUS: **Torni, jonka kirkko myytiin kivinä** (34 merkkiä) |
-| Kappaleita / merkkejä | 3 / 1000 | 3 / 975 |
+| Kappaleita / merkkejä | 3 / 1000 | 3 / 947 |
 | Vuosirivit | 1509–1523 rakennettiin · 1836 kaupunki osti · 1891 sääasema | 1509–1523 rakennettiin · 1836 kaupunki osti · 1891 sääasema |
 | Kuvat | 1. Tour Saint-Jacques and Fontaine du Palmier, South-East View 140207 1.jpg | 1. Tour Saint-Jacques and Fontaine du Palmier, South-East View 140207 1.jpg (ennallaan; avauskappaleen jälkeen) |
 
 **NYT:**
 
-1. [287] Tour Saint-Jacques on Pariisin keskustassa seisova kellotorni, joka jäi jäljelle kirkosta, jonka vallankumous myi louhokseksi. Torni rakennettiin 1509–1523 keskiaikaisen Saint-Jacques-de-la-Boucherien kirkon kellotorniksi Grande Boucherien, Pariisin teurastajien kaupunginosan, keskelle.
+1. [266] Tour Saint-Jacques on Pariisin keskustassa seisova kellotorni, joka on ainoa jäljellä oleva osa kirkosta. Torni rakennettiin 1509–1523 keskiaikaisen Saint-Jacques-de-la-Boucherien kirkon kellotorniksi Grande Boucherien, Pariisin teurastajien kaupunginosan, keskelle.
 2. [405] 1790-luvun vallankumouksessa kirkko myytiin louhokseksi, ja sen kivet kelpasivat rakennusaineeksi. Kellotorni säästyi: kaupan ehtona kerrotaan olleen, ettei tornia saa purkaa. Huipulla seisonut pyhä Jaakob tuhoutui, ja nykyinen patsas on tehty 1800-luvulla. Vuonna 1836 Pariisin kaupunki osti tornin, ja 1850-luvulla sen ympärille tehtiin puisto, kun Haussmannin työt avasivat Rue de Rivolin tornin eteen.
-3. [283] Torniin perustettiin sääasema vasta 1891. Tornin juurella on Blaise Pascalin patsas, koska hänen kerrotaan tehneen tornissa ilmanpainekokeita, vaikka asiasta kiistellään. Nykyään tornin juurelta alkaa yhä Via Turonensis, yksi Santiago de Compostelaan vievistä pyhiinvaellusreiteistä.
+3. [276] Torniin perustettiin sääasema vuonna 1891. Tornin juurella on Blaise Pascalin patsas, koska hänen kerrotaan tehneen tornissa ilmanpainekokeita, vaikka asiasta kiistellään. Tornin juurelta alkaa yhä Via Turonensis, yksi Santiago de Compostelaan vievistä pyhiinvaellusreiteistä.
 
 **ENNEN:**
 
@@ -188,7 +192,7 @@ Lähteillä kapeimmat (jäljellä tekstissä; tarkistajan kolmannen kierroksen "
 | | ENNEN | NYT |
 |---|---|---|
 | Otsikko (kartan nimi) | Saint-Eustache | Saint-Eustache |
-| Tarinarivi | ei kenttää nähtävyysjutulla | EHDOTUS: **Goottilainen kirkko renessanssiasussa** (37 merkkiä) |
+| Tarinarivi | ei kenttää nähtävyysjutulla | EHDOTUS: **Kirkko, jossa Molière kastettiin** (31 merkkiä; lupaus tarinasta, ei kuvaus) |
 | Kappaleita / merkkejä | 3 / 988 | 3 / 727 |
 | Vuosirivit | 1532 rakennus alkoi · 1637 vihittiin · 1754 julkisivutyö alkoi · 1969 tori Rungisiin · 1213 kappeli | 1532 rakennus alkoi · 1637 vihittiin · 1649 Ludvigin ehtoollinen · 1754 julkisivutyö alkoi · 1969 tori Rungisiin |
 | Kuvat | 1. Saint Eustache.jpg | 1. Saint Eustache.jpg (ennallaan; avauskappaleen jälkeen) |
@@ -232,15 +236,15 @@ Lähteillä kapeimmat (jäljellä tekstissä; tarkistajan kolmannen kierroksen "
 | | ENNEN | NYT |
 |---|---|---|
 | Otsikko (kartan nimi) | Place des Vosges | Place des Vosges |
-| Tarinarivi | ei kenttää nähtävyysjutulla | EHDOTUS: **Aukio, jota kuningas ei nähnyt** (30 merkkiä) |
-| Kappaleita / merkkejä | 3 / 721 | 3 / 780 |
+| Tarinarivi | ei kenttää nähtävyysjutulla | EHDOTUS: **Aukio, jonka tilaaja murhattiin** (31 merkkiä; ei Riemukaaren kaavaa) |
+| Kappaleita / merkkejä | 3 / 721 | 3 / 757 |
 | Vuosirivit | 1612 vihkiäiset · 1800 nimi vaihtui | 1610 Henrik IV murhattiin · 1612 vihkiäiset · 1800 nimi vaihtui · 1832 Victor Hugo muutti |
 | Kuvat | 1. Paris Place des Vosges Arkaden 1.jpg | 1. Paris Place des Vosges Arkaden 1.jpg (ennallaan; avauskappaleen jälkeen) |
 
 **NYT:**
 
 1. [312] Place des Vosges on Pariisin vanhin suunniteltu aukio, jonka tilaaja ei elänyt nähdäkseen sitä valmiina. Kuningas Henrik IV määräsi sen rakennettavaksi hovin juhlien ja kävelyn paikaksi, mutta hänet murhattiin vuonna 1610. Aukio vihittiin vuonna 1612 Ludvig XIII:n ja Anna Itävaltalaisen kihlajaisten yhteydessä.
-2. [266] Aukiota ympäröi 36 samanmallista taloa, yhdeksän joka sivulla, ja kaikilla on samanlainen punatiilinen julkisivu ja jyrkkä katto. Korkeampina erottuvat kuninkaan ja kuningattaren paviljongit etelä- ja pohjoislaidalla. 1600-luvulla aukiolla järjestettiin turnajaisia.
+2. [243] Aukiota ympäröi 36 samanmallista taloa, ja kaikilla on samanlainen punatiilinen julkisivu ja jyrkkä katto. Korkeampina erottuvat kuninkaan ja kuningattaren paviljongit etelä- ja pohjoislaidalla. 1600-luvulla aukiolla järjestettiin turnajaisia.
 3. [202] Aukio sai nimen Place des Vosges vuonna 1800 Vosgesin departementin mukaan, ja sitä oli ennen kutsuttu nimellä Place Royale. Vuodesta 1832 aukion laidalla asui kuusitoista vuotta kirjailija Victor Hugo.
 
 **ENNEN:**
@@ -298,7 +302,7 @@ Lähteillä kapeimmat (jäljellä tekstissä; tarkistajan kolmannen kierroksen "
 | | ENNEN | NYT |
 |---|---|---|
 | Otsikko (kartan nimi) | Tour Montparnasse | Tour Montparnasse |
-| Tarinarivi | ei kenttää nähtävyysjutulla | EHDOTUS: **Torni vanhan aseman paikalla** (28 merkkiä) |
+| Tarinarivi | ei kenttää nähtävyysjutulla | EHDOTUS: **Veturi, joka syöksyi seinän läpi** (32 merkkiä) |
 | Kappaleita / merkkejä | 3 / 900 | 3 / 859 |
 | Vuosirivit | 1895 veturi seinän läpi · 1969–1973 rakennettiin · 2011 korkein vuoteen | 1895 veturi seinän läpi · 1969–1973 rakennettiin · 2011 korkein vuoteen |
 | Kuvat | 1. Train wreck at Montparnasse 1895.jpg; 2. Paris 75006 Jardin du Luxembourg - Tour Montparnasse.jpg | 1. Train wreck at Montparnasse 1895.jpg; 2. Paris 75006 Jardin du Luxembourg - Tour Montparnasse.jpg (ennallaan; avauskappaleen jälkeen) |
@@ -321,15 +325,15 @@ Lähteillä kapeimmat (jäljellä tekstissä; tarkistajan kolmannen kierroksen "
 |---|---|---|
 | Otsikko (kartan nimi) | Metro 1900 | Metro 1900 |
 | Tarinarivi | ei kenttää nähtävyysjutulla | EHDOTUS: **Sisäänkäynnit kuin rakennussarja** (32 merkkiä) |
-| Kappaleita / merkkejä | 1 / 513 | 3 / 734 |
+| Kappaleita / merkkejä | 1 / 513 | 3 / 726 |
 | Vuosirivit | 1900 metro avattiin · 1978 valtaosa suojeltiin | 1900 metro avattiin · 1978 valtaosa suojeltiin |
 | Kuvat | 1. 01 Guimard's Métropolitain.jpg | 1. 01 Guimard's Métropolitain.jpg (ennallaan; avauskappaleen jälkeen) |
 
 **NYT:**
 
-1. [379] Pariisin metron kuuluisat sisäänkäynnit teki arkkitehti, joka ei ollut edes osallistunut niiden suunnittelukilpailuun. Metro avattiin maailmannäyttelyn aikaan 19. heinäkuuta 1900, ja ensimmäinen linja yhdisti Porte de Vincennes’in ja Porte Maillot’n. Sisäänkäynneistä oli järjestetty arkkitehtikilpailu, johon Guimard ei osallistunut, ja työ annettiin lopulta Hector Guimardille.
+1. [341] Pariisin metro avattiin yleisölle maailmannäyttelyn aikaan 19. heinäkuuta 1900, ja ensimmäinen linja kulki idästä länteen Pariisin halki yhdistäen Porte de Vincennes’in ja Porte Maillot’n. Metron kuuluisista sisäänkäynneistä järjestettiin arkkitehtikilpailu, mutta työ annettiin lopulta Hector Guimardille, joka ei ollut osallistunut siihen.
 2. [226] Guimard piirsi valurautaisia vakio-osia, jotka sopivat yhteen kuin rakennussarja: samoista paloista sai kasattua sopivan sisäänkäynnin mihin tahansa kadunkulmaan. Hänen tyylinsä oli jugendia, ja sisäänkäyntejä tehtiin yli 140.
-3. [129] Sitten tyyli meni pois muodista ja monet sisäänkäynnit purettiin. Jäljellä on noin 90, ja valtaosa niistä suojeltiin vuonna 1978.
+3. [159] Sitten tyyli meni pois muodista ja monet sisäänkäynnit purettiin. Jäljellä on noin 90, ja valtaosa niistä suojeltiin vuonna 1978 historiallisina monumentteina.
 
 **ENNEN:**
 
@@ -760,3 +764,11 @@ Tour Montparnasse
 
 Kierros 1 (tarkistaja 1 ja 2): 14 juttua, lopullinen teksti. OK: Riemukaari, Sacré-Cœur, Tour Saint-Jacques, Pompidou; EI OK: Concorde, Luxembourg, Panthéon, Notre-Dame, Saint-Eustache, Place des Vosges, Invalidit, Petit Palais, Montparnasse, Metro (kaikki korjattu varovaisemmiksi). Kierros 2 (uusintatarkistus, kaikki 14): **OK:** Notre-Dame, Saint-Eustache, Pompidou, Petit Palais ja Riemukaari (heikko), Concorde (heikko), Luxembourg (heikko), Sacré-Cœur (heikko), Saint-Jacques (heikko), Invalidit (heikko), Montparnasse (heikko); **EI OK:** Panthéon (heilurin purku), Place des Vosges (nimenvaihto), Metro 1900 (21 ehdotusta, "puolet purettiin"). Näiden kolmen ja kierroksen 2 muiden hedge-ehdotusten korjaukset on tehty tarkistajan ehdottamin tai varovaisempin sanoin (commit tämän raportin kanssa); **kolmen EI OK -rivin korjattua tekstiä ei ole tarkistettu neljännellä kierroksella** (konteksti): KK/PT voi tilata sen halutessaan. Taulukot: tarkistaja-1..3 (scratchpad, 20.11.2026).
 
+## Kierros 4 (20.11.2026 klo 13.40–14.20, KK:n K7): neljäs riippumaton tarkistus
+
+Sonnet-tarkistaja, kaksi itsenäistä lähdettä per väite, kolme korjattua juttua ja uudet väitteet.
+- **Panthéon: OK.** Vala 1744, Soufflot 1780, Rondelet 1790, kansalliskokous 1791, Mirabeau ulos 1794, Foucault 1851 (67 m), Voltaire ja Hugo, Curie 1995. Heikoin: rakennustyön alku (1755 / 1758 / peruskivi 1764: "1750-luvulla" kestää) ja Mirabeaun ulosviennin tarkka päivä (teksti vain vuosi); syy toisesta lähteestä vain Britannica (haku).
+- **Place des Vosges: korjattu.** EI OK oli "yhdeksän joka sivulla" (vain heikko lähde: suunnitelma, ei toteutunut): poistettu tekstistä ja kuvatekstistä, jäljellä "36 samanmallista taloa". Muut väitteet OK (vanhin suunniteltu aukio, 1610, vihkiminen 1612 kihlajaisten yhteydessä, 36 taloa, paviljongit, nimi 1800, Hugo 1832–1848). Heikoin: "kihlajaiset" vs "avioliitto" (lähteet eroavat; "kihlajaiset" turvallisin).
+- **Metro 1900: korjattu.** "Avattiin" → "avattiin yleisölle 19. heinäkuuta 1900" (paris.fr: virallinen vihkiäinen 10.7., matkustajat 19.7.). Lisätty vain tarkistetut: linja kulki idästä länteen, valtaosa suojeltiin 1978 historiallisina monumentteina. "Yli 140" kestää molemmilla luvuilla (141 Wikipedia, 167 RATP/Cercle Guimard) mutta on epätarkka; Guimardin ei-osallistuminen: toinen lähde epäsuora (MoMA "never formally participated", Cercle Guimard: valittu 12.1.1900).
+- **Sacré-Cœur (uusi virke, K5): OK kahdella lähteellä:** sacre-coeur-montmartre.com/decouvrir/notre-histoire/le-voeu-national/ (Legentilin lupaus 1870–1871, sovitus; kansalliskokous 1873) ja fr.wikipedia Basilique_du_Sacré-Cœur_de_Montmartre (laki 24.7.1873). Kommuunia ei mainita syynä (lähteet kiistävät).
+- Metron uusi Pulun kysymys 1 (kaksi asemaa) ja visan `fakta` (yli 140, noin 90): vastaus kahdessa lähteessä (RATP, ebsco; paris.fr, Wikipedia; ks. liite D M2, M8, M10).

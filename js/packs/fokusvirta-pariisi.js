@@ -88,9 +88,9 @@ const GUIMARD_VISA = {
     'Hän oli kaupungin oma arkkitehti',
   ],
   oikea: 1,
-  fakta: 'Kilpailun 21 ehdotuksesta yksikään ei kelvannut. Guimard '
-    + 'piirsi vakio-osia, jotka sopivat yhteen kuin rakennussarja: '
-    + 'sisäänkäyntejä tehtiin yli 140, ja jäljellä on noin 90.',
+  fakta: 'Guimard piirsi vakio-osia, jotka sopivat yhteen kuin '
+    + 'rakennussarja: sisäänkäyntejä tehtiin yli 140, ja jäljellä on '
+    + 'noin 90.',
 };
 
 export const FOKUSVIRTA_PARIISI = {
@@ -1001,9 +1001,9 @@ export const FOKUSVIRTA_PARIISI = {
       otsikko: 'Metro 1900 — Guimardin sisäänkäynnit',
       symboli: 'tekniikka',
       lunastus: [
-        'Pariisin metron kuuluisat sisäänkäynnit teki arkkitehti, joka ei ollut edes osallistunut niiden suunnittelukilpailuun. Metro avattiin maailmannäyttelyn aikaan 19. heinäkuuta 1900, ja ensimmäinen linja yhdisti Porte de Vincennes’in ja Porte Maillot’n. Sisäänkäynneistä oli järjestetty arkkitehtikilpailu, johon Guimard ei osallistunut, ja työ annettiin lopulta Hector Guimardille.',
+        'Pariisin metro avattiin yleisölle maailmannäyttelyn aikaan 19. heinäkuuta 1900, ja ensimmäinen linja kulki idästä länteen Pariisin halki yhdistäen Porte de Vincennes’in ja Porte Maillot’n. Metron kuuluisista sisäänkäynneistä järjestettiin arkkitehtikilpailu, mutta työ annettiin lopulta Hector Guimardille, joka ei ollut osallistunut siihen.',
         'Guimard piirsi valurautaisia vakio-osia, jotka sopivat yhteen kuin rakennussarja: samoista paloista sai kasattua sopivan sisäänkäynnin mihin tahansa kadunkulmaan. Hänen tyylinsä oli jugendia, ja sisäänkäyntejä tehtiin yli 140.',
-        'Sitten tyyli meni pois muodista ja monet sisäänkäynnit purettiin. Jäljellä on noin 90, ja valtaosa niistä suojeltiin vuonna 1978.',
+        'Sitten tyyli meni pois muodista ja monet sisäänkäynnit purettiin. Jäljellä on noin 90, ja valtaosa niistä suojeltiin vuonna 1978 historiallisina monumentteina.',
       ],
       lahde: 'Pariisin kaupunkilehden sivu "Pariisi", nosto "Metron '
         + 'sisäänkäynti koottiin palasista" (js/packs/kulttuuri-kategoriat.js). '
@@ -1015,17 +1015,17 @@ export const FOKUSVIRTA_PARIISI = {
         lahde: 'Terrazzo (Flickr), Wikimedia Commons (CC BY 2.0)',
       },
       kysymykset: [
-        'Miksi arkkitehtikilpailun 21 ehdotuksesta yksikään ei kelvannut?',
+        'Mitkä kaksi asemaa ensimmäinen metrolinja yhdisti?',
         'Mitä vakio-osista kasaaminen tarkoitti käytännössä?',
-        'Miksi puolet sisäänkäynneistä purettiin?',
+        'Miksi monet sisäänkäynnit purettiin?',
       ],
       /*
-       * MINITEHTÄVÄ (SK:n v2, KK 13.15; kysymys vaihdettu KK 14.15): vastaus on vain noston tekstissä ("Sitten
-       * tyyli meni pois muodista ja puolet purettiin"). Ei kysytä työn saamista eikä vakio-osia: lehden sivun 3
+       * MINITEHTÄVÄ (SK:n v2, KK 13.15; kysymys vaihdettu KK 14.15; "puolet" → "monet" KK 20.11. 13.40): vastaus on
+       * vain noston tekstissä ("Sitten tyyli meni pois muodista ja monet sisäänkäynnit purettiin"). Ei kysytä työn saamista eikä vakio-osia: lehden sivun 3
        * JULISTE-tehtävä (GUIMARD_VISA) kysyy ensimmäistä ja sen fakta paljastaa toisen.
        */
       visa: {
-        kysymys: 'Hector Guimardin metrosisäänkäyntejä tehtiin yli 140, mutta puolet niistä purettiin. Miksi?',
+        kysymys: 'Hector Guimardin metrosisäänkäyntejä tehtiin yli 140, mutta monet niistä purettiin. Miksi?',
         vaihtoehdot: [
           'Valurauta ruostui käyttökelvottomaksi',
           'Ne vaurioituivat sodissa',
