@@ -2,103 +2,25 @@
   "kuvaus": "Pariisin 46 noston kuvasarjan rikkeet ENNEN kuvaeriä (origin/main 108867c0741644558df96a0073760bf2f5bdf135, 20.11.2026; K-3, KK:N PÄÄTÖS 09.18). Saa vain pienentyä: tarkistus tools/sisalto/nostokuvien-tarkistus.mjs, testi tests/nostokuvien-tasalaatu.test.mjs. Rikkeet: vajaa (alle 3), liikaa (yli 4), viimeinen (ei valokuva), laji, lyhyt, lahde, tekija, lisenssi (jollakin kuvalla puuttuu), mitat (ei 1200 × 800), havainne (lähderivi ei ala Tekoälyllä tuotettu havainnekuva). kuvia = kuvia nyt (tieto, ei vertailla).",
   "pohja": "108867c0741644558df96a0073760bf2f5bdf135",
   "nostoja": 46,
-  "rikkovia": 18,
+  "rikkovia": 7,
   "lajeittain": {
-    "vajaa": 14,
+    "vajaa": 3,
     "liikaa": 1,
-    "viimeinen": 17,
-    "laji": 16,
+    "viimeinen": 6,
+    "laji": 5,
     "lyhyt": 0,
     "lahde": 0,
-    "tekija": 16,
-    "lisenssi": 5,
-    "mitat": 16,
+    "tekija": 5,
+    "lisenssi": 4,
+    "mitat": 5,
     "havainne": 4
   },
   "nostot": {
-    "c:Riemukaari": {
-      "ryhma": "C",
-      "kuvia": 1,
-      "rikkeet": [
-        "vajaa",
-        "viimeinen",
-        "laji",
-        "tekija",
-        "mitat"
-      ]
-    },
-    "c:Concorden aukio": {
-      "ryhma": "C",
-      "kuvia": 1,
-      "rikkeet": [
-        "vajaa",
-        "viimeinen",
-        "laji",
-        "tekija",
-        "mitat"
-      ]
-    },
-    "c:Luxembourgin puisto": {
-      "ryhma": "C",
-      "kuvia": 2,
-      "rikkeet": [
-        "vajaa",
-        "viimeinen",
-        "laji",
-        "tekija",
-        "lisenssi",
-        "mitat"
-      ]
-    },
-    "c:Sacré-Cœur": {
-      "ryhma": "C",
-      "kuvia": 1,
-      "rikkeet": [
-        "vajaa",
-        "viimeinen",
-        "laji",
-        "tekija",
-        "mitat"
-      ]
-    },
-    "c:Panthéon": {
-      "ryhma": "C",
-      "kuvia": 2,
-      "rikkeet": [
-        "vajaa",
-        "viimeinen",
-        "laji",
-        "tekija",
-        "mitat"
-      ]
-    },
     "c:Notre-Dame": {
       "ryhma": "C",
       "kuvia": 1,
       "rikkeet": [
         "vajaa"
-      ]
-    },
-    "c:Tour Saint-Jacques": {
-      "ryhma": "C",
-      "kuvia": 1,
-      "rikkeet": [
-        "vajaa",
-        "viimeinen",
-        "laji",
-        "tekija",
-        "mitat"
-      ]
-    },
-    "c:Saint-Eustache": {
-      "ryhma": "C",
-      "kuvia": 1,
-      "rikkeet": [
-        "vajaa",
-        "viimeinen",
-        "laji",
-        "tekija",
-        "mitat"
       ]
     },
     "c:Pompidou-keskus": {
@@ -109,53 +31,9 @@
         "viimeinen"
       ]
     },
-    "c:Place des Vosges": {
-      "ryhma": "C",
-      "kuvia": 1,
-      "rikkeet": [
-        "vajaa",
-        "viimeinen",
-        "laji",
-        "tekija",
-        "mitat"
-      ]
-    },
-    "c:Invalidit": {
-      "ryhma": "C",
-      "kuvia": 2,
-      "rikkeet": [
-        "vajaa",
-        "viimeinen",
-        "laji",
-        "tekija",
-        "mitat"
-      ]
-    },
-    "c:Petit Palais": {
-      "ryhma": "C",
-      "kuvia": 1,
-      "rikkeet": [
-        "vajaa",
-        "viimeinen",
-        "laji",
-        "tekija",
-        "mitat"
-      ]
-    },
     "c:Tour Montparnasse": {
       "ryhma": "C",
       "kuvia": 2,
-      "rikkeet": [
-        "vajaa",
-        "viimeinen",
-        "laji",
-        "tekija",
-        "mitat"
-      ]
-    },
-    "c:Metro 1900": {
-      "ryhma": "C",
-      "kuvia": 1,
       "rikkeet": [
         "vajaa",
         "viimeinen",
