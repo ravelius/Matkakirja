@@ -11912,7 +11912,7 @@ export const NAHTAVYYSJUTUT = {
     'Suurmestarin palatsi': {
       aika: '1570-luvulta',
       teksti:
-        'Suurmestarin palatsi on Vallettan suurin palatsi. Se rakennettiin 1500–1700-luvuilla johanniittaritarikunnan suurmestarin asunnoksi; ritarikunta hallitsi Maltaa vuosina 1530–1798. Paikalla oli ritari Eustachio del Monten vuonna 1569 rakennettu talo ja ritarikunnan italialaisten majatalo (Auberge d'Italie). Suurmestari Pierre de Monte asui talossa vuodesta 1571, ja vuonna 1574 sitä alettiin laajentaa palatsiksi Girolamo Cassarin manieristisen suunnitelman mukaan.'
+        'Suurmestarin palatsi on Vallettan suurin palatsi. Se rakennettiin 1500–1700-luvuilla johanniittaritarikunnan suurmestarin asunnoksi; ritarikunta hallitsi Maltaa vuosina 1530–1798. Paikalla oli ritari Eustachio del Monten vuonna 1569 rakennettu talo ja ritarikunnan italialaisten majatalo (Auberge d’Italie). Suurmestari Pierre de Monte asui talossa vuodesta 1571, ja vuonna 1574 sitä alettiin laajentaa palatsiksi Girolamo Cassarin manieristisen suunnitelman mukaan.'
         + '\n\n'
         + 'Myöhemmät suurmestarit koristelivat palatsia barokkimaiseksi. Nicolau Nasoni maalasi käytävien kattoihin freskot vuonna 1724, ja suurmestari Manuel Pinto da Fonseca muutti rakennuksen nykyiseen muotoonsa 1740-luvulla: hän koristeli julkisivun, avasi toisen pääoven ja rakennutti kellotornin sisäpihalle.'
         + '\n\n'
