@@ -518,6 +518,28 @@
      "omistajan_sana": "P-261119-5"
     }
    ]
+  },
+  {
+   "tunnus": "S-16",
+   "nimi": "AJOT NOPEIKSI ILMAN KYSYMISTÄ",
+   "roolit": [
+    "kaikki"
+   ],
+   "vartija": "ajoportin nopeusvartija (JU)",
+   "tila": "voimassa",
+   "kerrat": [
+    {
+     "pvm": "20.11.2026",
+     "klo": "19.45",
+     "lahde": "P-261120-16",
+     "sanat": "Voit käyttää kahta hajoa, paitsi arkisin kello 9–17 välillä. Miten nämä ajojen nopeutukset saisi kirjoitettua ylös, koska näitä on mietitty monta kertaa aiemminkin, mutta jostain syystä ne aina unohtuvat. Ja sitten ajoihin meneekin todella paljon aikaa, jos en ole itse kysymässä niiden perään.",
+     "sha": "cb9db985118fcd4e",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-20T17:46:22.882Z"
+    }
+   ],
+   "muutokset": []
   }
  ]
 }
