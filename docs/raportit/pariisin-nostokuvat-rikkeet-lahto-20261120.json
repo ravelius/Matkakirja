@@ -2,18 +2,18 @@
   "kuvaus": "Pariisin 46 noston kuvasarjan rikkeet ENNEN kuvaeriä (origin/main 108867c0741644558df96a0073760bf2f5bdf135, 20.11.2026; K-3, KK:N PÄÄTÖS 09.18). Saa vain pienentyä: tarkistus tools/sisalto/nostokuvien-tarkistus.mjs, testi tests/nostokuvien-tasalaatu.test.mjs. Rikkeet: vajaa (alle 3), liikaa (yli 4), viimeinen (ei valokuva), laji, lyhyt, lahde, tekija, lisenssi (jollakin kuvalla puuttuu), mitat (ei 1200 × 800), havainne (lähderivi ei ala Tekoälyllä tuotettu havainnekuva). kuvia = kuvia nyt (tieto, ei vertailla).",
   "pohja": "108867c0741644558df96a0073760bf2f5bdf135",
   "nostoja": 46,
-  "rikkovia": 20,
+  "rikkovia": 18,
   "lajeittain": {
     "vajaa": 14,
     "liikaa": 1,
-    "viimeinen": 19,
-    "laji": 18,
+    "viimeinen": 17,
+    "laji": 16,
     "lyhyt": 0,
     "lahde": 0,
-    "tekija": 18,
-    "lisenssi": 7,
-    "mitat": 18,
-    "havainne": 6
+    "tekija": 16,
+    "lisenssi": 5,
+    "mitat": 16,
+    "havainne": 4
   },
   "nostot": {
     "c:Riemukaari": {
@@ -189,30 +189,6 @@
       ]
     },
     "f:Pasteur 1862": {
-      "ryhma": "F",
-      "kuvia": 4,
-      "rikkeet": [
-        "viimeinen",
-        "laji",
-        "tekija",
-        "lisenssi",
-        "mitat",
-        "havainne"
-      ]
-    },
-    "f:Eiffel-torni 1888": {
-      "ryhma": "F",
-      "kuvia": 4,
-      "rikkeet": [
-        "viimeinen",
-        "laji",
-        "tekija",
-        "lisenssi",
-        "mitat",
-        "havainne"
-      ]
-    },
-    "f:Bastilji 1789": {
       "ryhma": "F",
       "kuvia": 4,
       "rikkeet": [

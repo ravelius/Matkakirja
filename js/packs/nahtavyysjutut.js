@@ -6530,18 +6530,33 @@ export const NAHTAVYYSJUTUT = {
         { kohta: 'elokuussa 1888', vuosi: '1888', selite: 'torni nousee' },
         { kohta: 'maaliskuuta 1889', vuosi: '1889', selite: 'torni valmis' },
       ],
+      /*
+       * K-4 erä 3 (F 44, KK 20.11.2026 14.06): noston kuvat ovat hetken kaksi havainnekuvaa (historian-hetket.js, 1200 × 800) ja nämä kaksi aitoa;
+       * viimeinen on valokuva. Sama kuva kuin Eiffel-torni-noston rakenteilla- ja nykykuva (kohteen jaksokuvat). Durandellen pystykuva ja
+       * Feaun stereokuva (kaksi puoliskoa kehyksissä) eivät mahdu soikean reunan keskialueelle; ne jäävät palvelimelle.
+       */
       kuvat: [
         {
-          tiedosto: 'Louis-Emile Durandelle, The Eiffel Tower - State of the Construction, 1888.jpg',
-          selite: 'Marraskuussa 1888 Eiffel-torni oli vielä keskeneräinen '
-            + 'rautarunko, korkeampi kuin mikään Pariisissa ennen.',
-          lahde: 'Louis-Émile Durandelle 1888, Wikimedia Commons (PD)',
+          osoite: 'https://media.matkakirja.app/kuvat/eiffel-torni-rakenteilla.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Eiffel-torni rakenteilla 1888',
+          selite: 'Elokuussa 1888 tornin rautaristikko nousee yhä ylemmäs Champ de Marsilla.',
+          lahde: 'Neurdein, 1888, Wikimedia Commons (public domain), rajattu',
+          tekija: 'Neurdein',
+          lisenssi: 'Public domain',
+          leveys: 1200,
+          korkeus: 800,
         },
         {
-          tiedosto: 'Construction de la tour Eiffel, 7ème arrondissement, Paris. 14 septembre 1888, PH9114-12.jpg',
-          selite: 'Elokuun ja syyskuun 1888 kuvista näkee, paljonko torni kasvoi '
-            + 'kuukaudessa; se valmistui maailmannäyttelyyn 1889.',
-          lahde: 'Théophile Feau 1888, Musée Carnavalet, Wikimedia Commons (CC0)',
+          osoite: 'https://media.matkakirja.app/kuvat/eiffel-torni-nykyinen.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Eiffel-torni ja Champ de Mars ylhäältä katsottuna',
+          selite: 'Torni seisoo yhä Champ de Marsilla, koska sen huipulle sopi radioantenni.',
+          lahde: 'Carlos Delgado, Wikimedia Commons (CC BY-SA 3.0), rajattu',
+          tekija: 'Carlos Delgado',
+          lisenssi: 'CC BY-SA 3.0',
+          leveys: 1200,
+          korkeus: 800,
         },
       ],
     },
@@ -6573,18 +6588,32 @@ export const NAHTAVYYSJUTUT = {
       vuodet: [
         { kohta: 'heinäkuuta 1789', vuosi: '1789', selite: 'valtaus' },
       ],
+      /*
+       * K-4 erä 3 (F 45, KK 20.11.2026 14.06): noston kuvat ovat hetken kaksi havainnekuvaa (historian-hetket.js, 1200 × 800), Lallemandin
+       * maalaus ja nykykuva (sama kuin Bastilji-noston valtaus- ja nyt-kuva). Anonyymin soikea maalaus (kulunut kangasreuna) jää palvelimelle.
+       */
       kuvat: [
         {
-          tiedosto: 'Anonyme - Prise de la Bastille, le 14 juillet 1789 (P707-1) - P707-1 - Musée Carnavalet.jpg',
-          selite: 'Heinäkuun 14. päivänä 1789 pariisilaiset ryntäsivät Bastiljiin; '
-            + 'siitä tuli Ranskan vallankumouksen tunnetuin hetki.',
-          lahde: 'Tuntematon tekijä 1784–1794, Musée Carnavalet, Wikimedia Commons (PD)',
+          osoite: 'https://media.matkakirja.app/kuvat/bastilji-valtaus.jpg',
+          laji: 'maalaus',
+          lyhyt: 'Bastiljin valtaus 14. heinäkuuta 1789',
+          selite: 'Maalauksessa väkijoukko hyökkää Bastiljiin, joka oli ollut vuosisatoja kuninkaan vallan merkki.',
+          lahde: 'Jean-Baptiste Lallemand 1789, Musée Carnavalet, Wikimedia Commons (PD), rajattu',
+          tekija: 'Jean-Baptiste Lallemand',
+          lisenssi: 'Public domain',
+          leveys: 1200,
+          korkeus: 800,
         },
         {
-          tiedosto: 'Jean-Baptiste Lallemand - La prise de la Bastille, le 14 juillet 1789 - P1718 - Musée Carnavalet.jpg',
-          selite: 'Maalauksessa väkijoukko hyökkää Bastiljiin, joka oli ollut '
-            + 'vuosisatoja kuninkaan vallan merkki.',
-          lahde: 'Jean-Baptiste Lallemand 1789, Musée Carnavalet, Wikimedia Commons (PD)',
+          osoite: 'https://media.matkakirja.app/kuvat/bastilji-nyt.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Place de la Bastille ja heinäkuun pylväs nykyään',
+          selite: 'Linnoitus purettiin pian valtauksen jälkeen; sen paikalla on nykyään Place de la Bastille.',
+          lahde: 'Guillaume Flament, Wikimedia Commons (CC BY-SA 4.0), rajattu',
+          tekija: 'Guillaume Flament',
+          lisenssi: 'CC BY-SA 4.0',
+          leveys: 1200,
+          korkeus: 800,
         },
       ],
     },
