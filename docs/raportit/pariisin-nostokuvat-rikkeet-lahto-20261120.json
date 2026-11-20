@@ -2,9 +2,9 @@
   "kuvaus": "Pariisin 46 noston kuvasarjan rikkeet ENNEN kuvaeriä (origin/main 108867c0741644558df96a0073760bf2f5bdf135, 20.11.2026; K-3, KK:N PÄÄTÖS 09.18). Saa vain pienentyä: tarkistus tools/sisalto/nostokuvien-tarkistus.mjs, testi tests/nostokuvien-tasalaatu.test.mjs. Rikkeet: vajaa (alle 3), liikaa (yli 4), viimeinen (ei valokuva), laji, lyhyt, lahde, tekija, lisenssi (jollakin kuvalla puuttuu), mitat (ei 1200 × 800), havainne (lähderivi ei ala Tekoälyllä tuotettu havainnekuva). kuvia = kuvia nyt (tieto, ei vertailla).",
   "pohja": "108867c0741644558df96a0073760bf2f5bdf135",
   "nostoja": 46,
-  "rikkovia": 22,
+  "rikkovia": 20,
   "lajeittain": {
-    "vajaa": 16,
+    "vajaa": 14,
     "liikaa": 1,
     "viimeinen": 19,
     "laji": 18,
@@ -16,20 +16,6 @@
     "havainne": 6
   },
   "nostot": {
-    "sainte-chapelle": {
-      "ryhma": "A",
-      "kuvia": 1,
-      "rikkeet": [
-        "vajaa"
-      ]
-    },
-    "curie-1898": {
-      "ryhma": "A",
-      "kuvia": 2,
-      "rikkeet": [
-        "vajaa"
-      ]
-    },
     "c:Riemukaari": {
       "ryhma": "C",
       "kuvia": 1,
