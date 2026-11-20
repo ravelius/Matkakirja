@@ -201,7 +201,7 @@ function commit(viesti, polut) {
   git('commit', '-q', '-m', viesti);
   const h = git('log', '-1', '--format=%h').trim();
   if (!KIRJAUSPUU) return h;
-  git('push', '-q', '--force-with-lease', 'origin', 'HEAD:kirjaus');
+  git('push', '-q', '--force-with-lease', 'origin', 'HEAD:refs/heads/kirjaus'); // täysi viite: toimii myös, kun etähaara on poistettu yhdistämisen jälkeen (KK 22.2x)
   let pr = avoinPr();
   if (!pr) {
     pr = execFileSync('gh', ['pr', 'create', '--head', 'kirjaus', '--base', 'main', '--title', 'Kirjaus: Raamattu (kirjaa.mjs)',
