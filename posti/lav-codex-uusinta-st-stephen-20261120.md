@@ -5,7 +5,7 @@ Tausta (KK 22.50, aiempi P-261120-18): nykyinen otto on pituussuunnassa kasaan p
 
 Pyyntö:
 1. Uusi mallikuva (HERO, 2–3 Commons-viitekuvaa), jossa LAIVAN KOKO PITUUS näkyy sivulta (pitkä sivu kokonaan kuvassa, viisto 3/4 käy, kunhan laiva ei lyhene perspektiivissä).
-   - Pyhän Tapanin basilika (Budapest, Q271433): pohja OSM 96,9 × 61,6 m, kupoli 96 m (taulu). Pitkä akseli itä–länsi; KAKSI KELLOTORNIA LÄNSIPÄÄDYSSÄ (pääjulkisivu Szent István tér), kupoli keskellä.
+   - Pyhän Tapanin basilika (Budapest; Wikidata-tunniste tarkista hyvaksytyt-mallit/st-stephen-budapest-kansiosta): pohja OSM 96,9 × 61,6 m, kupoli 96 m (taulu). Pitkä akseli itä–länsi; KAKSI KELLOTORNIA LÄNSIPÄÄDYSSÄ (pääjulkisivu Szent István tér), kupoli keskellä.
    Nykyinen kuva vertailuksi: hyvaksytyt-mallit/st-stephen-budapest/tripo-preview.jpg (painunut muoto).
 2. Kuva ensin KK:lle kuvasanaa varten (SHA256 + 1000 px kuva). Ei Tripo-ottoa ennen KK:n sanaa.
 3. Tripo kuten aiemmin (H3.1 HD, Ultra Mesh, 8K, Remove Lighting, PBR, 2M), yksi otto hyväksytystä SHA:sta. Lupa: P-261117-2 (Tripo rajattomasti, EI OSTOJA: jos saldo ei riitä, ilmoita LAV:lle/KK:lle).
