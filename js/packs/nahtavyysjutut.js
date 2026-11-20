@@ -5371,7 +5371,7 @@ export const NAHTAVYYSJUTUT = {
   pariisi: {
     Riemukaari: {
       aika: '1806–1836',
-      teksti: 'Pariisin Riemukaari on lähes 50 metriä korkea voitonmerkki, jonka keisari Napoleon ei koskaan nähnyt valmiina. Hän käski rakentaa sen vuonna 1806 juhlistamaan Austerlitzin taistelun voittoa, mutta kaari saatiin valmiiksi vasta vuonna 1836. Sen pintoihin on kaiverrettu kymmenien taistelujen ja satojen sotapäälliköiden nimet.'
+      teksti: 'Pariisin Riemukaari on lähes 50 metriä korkea voitonmerkki, jonka keisari Napoleon ei koskaan nähnyt valmiina. Hän käski rakentaa sen vuonna 1806 juhlistamaan Austerlitzin taistelun voittoa, mutta kaari saatiin valmiiksi vasta vuonna 1836. Sen pintoihin on kaiverrettu yli sadan taistelun ja satojen sotapäälliköiden nimet.'
         + '\n\n'
         + 'Vuonna 1919 lentäjä Charles Godefroy lensi kaksitasokoneellaan kaaren läpi. Temppu oli uskomaton, sillä aukko on vain reilut 14 metriä leveä. Reilua vuotta myöhemmin kaaren alle haudattiin nimetön ranskalaissotilas muistoksi sodassa kaatuneista: hänet tuotiin sinne 11. marraskuuta 1920 ja haudattiin 28. tammikuuta 1921.'
         + '\n\n'
@@ -5386,9 +5386,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Arc de Triomphe, Paris 21 October 2010.jpg',
-          lyhyt: 'Napoleonin 1806 määräämä Riemukaari valmistui vasta 1836, kaiverrettuna kymmenien taistelujen nimet.',
+          lyhyt: 'Napoleonin 1806 määräämä Riemukaari valmistui vasta 1836, kaiverrettuna yli sadan taistelun nimet.',
           selite: 'Napoleonin vuonna 1806 määräämä kaari valmistui vasta 1836, ja '
-            + 'sen pintoihin on kaiverrettu kymmenien taistelujen ja satojen sotapäälliköiden '
+            + 'sen pintoihin on kaiverrettu yli sadan taistelun ja satojen sotapäälliköiden '
             + 'nimet.',
           lahde: 'Jiuguang Wang, Wikimedia Commons (CC BY-SA 2.0)',
         },
@@ -5482,7 +5482,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Työ kesti yli kolmekymmentä vuotta: Soufflot kuoli, ja hänen oppilaansa Jean-Baptiste Rondelet sai kirkon valmiiksi vasta 1790. Vuonna 1791 kansalliskokous määräsi kirkon suurmiesten hautapaikaksi. Ensimmäisenä kryptaan kannettiin kreivi Mirabeau, mutta vuonna 1794 hänet kannettiin ulos, kun hänen salaiset yhteytensä hoviin paljastuivat.'
         + '\n\n'
-        + 'Vuonna 1851 fyysikko Léon Foucault ripusti kupolista 67 metriä pitkän heilurin ja näytti, että maa kääntyy sen alla. Heiluri poistettiin saman vuoden joulukuussa, mutta kopio heiluu holvin alla yhä. Kryptassa lepäävät muiden muassa Voltaire ja Victor Hugo, ja Marie Curie siirrettiin sinne 1995 ensimmäisenä naisena omien ansioidensa perusteella.',
+        + 'Vuonna 1851 fyysikko Léon Foucault ripusti kupolista 67 metriä pitkän heilurin ja näytti, että maa kääntyy sen alla. Heiluri poistettiin jo samana vuonna, mutta kopio heiluu holvin alla yhä. Kryptassa lepäävät muiden muassa Voltaire ja Victor Hugo, ja Marie Curie siirrettiin sinne 1995 ensimmäisenä naisena omien ansioidensa perusteella.',
       vuodet: [
         { kohta: 'vasta 1790', vuosi: '1790', selite: 'valmistui' },
         { kohta: 'Vuonna 1791', vuosi: '1791', selite: 'suurmiesten hauta' },
@@ -5608,7 +5608,7 @@ export const NAHTAVYYSJUTUT = {
       aika: '1509–1523',
       teksti: 'Tour Saint-Jacques on Pariisin keskustassa seisova kellotorni, joka jäi jäljelle kirkosta, jonka vallankumous myi louhokseksi. Torni rakennettiin 1509–1523 keskiaikaisen Saint-Jacques-de-la-Boucherien kirkon kellotorniksi Grande Boucherien, Pariisin teurastajien kaupunginosan, keskelle.'
         + '\n\n'
-        + '1790-luvun vallankumouksessa kirkko myytiin louhokseksi, ja sen kivet kelpasivat rakennusaineeksi. Kellotorni säästyi: kaupan ehtona kerrotaan olleen, ettei tornia saa purkaa. Huipulla seisonut pyhä Jaakob syöstiin alas, ja nykyinen patsas on tehty 1800-luvulla. Vuonna 1836 Pariisin kaupunki osti tornin, ja 1850-luvulla sen ympärille tehtiin puisto, kun Haussmannin työt avasivat Rue de Rivolin tornin eteen.'
+        + '1790-luvun vallankumouksessa kirkko myytiin louhokseksi, ja sen kivet kelpasivat rakennusaineeksi. Kellotorni säästyi: kaupan ehtona kerrotaan olleen, ettei tornia saa purkaa. Huipulla seisonut pyhä Jaakob tuhoutui, ja nykyinen patsas on tehty 1800-luvulla. Vuonna 1836 Pariisin kaupunki osti tornin, ja 1850-luvulla sen ympärille tehtiin puisto, kun Haussmannin työt avasivat Rue de Rivolin tornin eteen.'
         + '\n\n'
         + 'Torniin perustettiin sääasema vasta 1891. Tornin juurella on Blaise Pascalin patsas, koska hänen kerrotaan tehneen tornissa ilmanpainekokeita, vaikka asiasta kiistellään. Nykyään tornin juurelta alkaa yhä Via Turonensis, yksi Santiago de Compostelaan vievistä pyhiinvaellusreiteistä.',
       vuodet: [
@@ -5673,10 +5673,11 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Aukiota ympäröi 36 samanmallista taloa, yhdeksän joka sivulla, ja kaikilla on samanlainen punatiilinen julkisivu ja jyrkkä katto. Korkeampina erottuvat kuninkaan ja kuningattaren paviljongit etelä- ja pohjoislaidalla. 1600-luvulla aukiolla järjestettiin turnajaisia.'
         + '\n\n'
-        + 'Aukio sai nykyisen nimensä Vosgesin departementin mukaan 1800-luvun alussa, ja sitä oli ennen kutsuttu nimellä Place Royale. Vuodesta 1832 aukion laidalla asui kuusitoista vuotta kirjailija Victor Hugo.',
+        + 'Aukio sai nimen Place des Vosges vuonna 1800 Vosgesin departementin mukaan, ja sitä oli ennen kutsuttu nimellä Place Royale. Vuodesta 1832 aukion laidalla asui kuusitoista vuotta kirjailija Victor Hugo.',
       vuodet: [
         { kohta: 'vuonna 1610', vuosi: '1610', selite: 'Henrik IV murhattiin' },
         { kohta: 'vuonna 1612', vuosi: '1612', selite: 'vihkiäiset' },
+        { kohta: 'vuonna 1800', vuosi: '1800', selite: 'nimi vaihtui' },
         { kohta: 'Vuodesta 1832', vuosi: '1832', selite: 'Victor Hugo muutti' },
       ],
       kuvat: [
@@ -5701,7 +5702,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Heinäkuun 14. päivän aamuna 1789 kansanjoukko tunkeutui Invalideihin ja vei asevarastosta noin 30 000 kivääriä. Ruutia ei juuri löytynyt, ja sitä lähdettiin hakemaan Bastiljista.'
         + '\n\n'
-        + 'Vuonna 1840 Napoleonin jäännökset tuotiin Saint Helenan saarelta, ja Hardouin-Mansartin kullatun kupolin alle rakennettiin avoin krypta. Sarkofagi veistettiin punaisesta kvartsiitista, joka louhittiin Äänisjärven rannalta Karjalasta, ja keisari siirrettiin siihen 1861. Veteraanien kodista on jäljellä enää pieni hoitolaitos, ja käytävillä kulkevat nyt armeijamuseon kävijät.',
+        + 'Vuonna 1840 Napoleonin jäännökset tuotiin Saint Helenan saarelta, ja Hardouin-Mansartin kullatun kupolin alle rakennettiin avoin krypta. Sarkofagi veistettiin punaisesta kvartsiitista, joka louhittiin Äänisjärven rannalta Karjalasta, ja keisari siirrettiin siihen 1861. Veteraanien kodista on jäljellä yhä toimiva sairaala ja hoitokoti, ja käytävillä kulkevat nyt armeijamuseon kävijät.',
       vuodet: [
         { kohta: 'Vuonna 1670', vuosi: '1670', selite: 'kuningas määräsi' },
         { kohta: 'jo 1674', vuosi: '1674', selite: 'ensimmäiset asukkaat' },
@@ -6176,11 +6177,11 @@ export const NAHTAVYYSJUTUT = {
      */
     'Metro 1900': {
       nosto: 'nosto-guimardin-metro',
-      teksti: 'Pariisin metron kuuluisat sisäänkäynnit teki arkkitehti, joka ei ollut edes osallistunut niiden suunnittelukilpailuun. Metro avattiin maailmannäyttelyn aikaan 19. heinäkuuta 1900, ja ensimmäinen linja yhdisti Porte de Vincennes’in ja Porte Maillot’n. Sisäänkäynneistä oli järjestetty arkkitehtikilpailu, mutta yksikään 21 ehdotuksesta ei kelvannut, ja työ annettiin Hector Guimardille.'
+      teksti: 'Pariisin metron kuuluisat sisäänkäynnit teki arkkitehti, joka ei ollut edes osallistunut niiden suunnittelukilpailuun. Metro avattiin maailmannäyttelyn aikaan 19. heinäkuuta 1900, ja ensimmäinen linja yhdisti Porte de Vincennes’in ja Porte Maillot’n. Sisäänkäynneistä oli järjestetty arkkitehtikilpailu, johon Guimard ei osallistunut, ja työ annettiin lopulta Hector Guimardille.'
         + '\n\n'
         + 'Guimard piirsi valurautaisia vakio-osia, jotka sopivat yhteen kuin rakennussarja: samoista paloista sai kasattua sopivan sisäänkäynnin mihin tahansa kadunkulmaan. Hänen tyylinsä oli jugendia, ja sisäänkäyntejä tehtiin yli 140.'
         + '\n\n'
-        + 'Sitten tyyli meni pois muodista ja puolet purettiin. Jäljellä on noin 90, ja valtaosa niistä suojeltiin vuonna 1978.',
+        + 'Sitten tyyli meni pois muodista ja monet sisäänkäynnit purettiin. Jäljellä on noin 90, ja valtaosa niistä suojeltiin vuonna 1978.',
       vuodet: [
         { kohta: 'heinäkuuta 1900', vuosi: '1900', selite: 'metro avattiin' },
         { kohta: 'vuonna 1978', vuosi: '1978', selite: 'valtaosa suojeltiin' },
