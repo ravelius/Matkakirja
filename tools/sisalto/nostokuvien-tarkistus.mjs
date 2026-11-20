@@ -22,9 +22,9 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { kokoaVienti } from '../vienti/vie-sisalto.mjs';
 import { lisakentatViennissa } from '../vienti/nostokuvat.mjs';
-import { LEVEYS, KORKEUS } from './nostokuva.mjs';
+import { LEVEYS, KORKEUS, KUVIA } from './nostokuva.mjs';
 
-export const KUVIA = { min: 3, max: 4 };
+export { KUVIA };
 export const LAJIT = new Set(['valokuva', 'havainnekuva', 'kartta', 'piirros', 'maalaus']);
 export const HAVAINNE_ALKU = 'Tekoälyllä tuotettu havainnekuva';
 export const RIKKEET = ['vajaa', 'liikaa', 'viimeinen', 'laji', 'lyhyt', 'lahde', 'tekija', 'lisenssi', 'mitat', 'havainne'];

@@ -7235,7 +7235,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Eiffel-torni 1888 — näin torni koottiin',
           aika: 'elokuu 1888',
           leveys: 'taysi',
-          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-eiffel-torni-1888-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-eiffel-torni-1888-lahi-photo-v5.jpg',
           teksti: 'Pariisin Champ de Marsilla kootaan elokuussa 1888 '
             + 'Eiffel-tornia vuoden 1889 maailmannäyttelyyn: toinen kerros on '
             + 'valmis, ja kolmisensataa rakentajaa niittaa rautaristikkoa yhä '
@@ -7262,22 +7262,22 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kolmas muotoilee kannan ja neljäs lyö liitoksen kiinni. Korkealla '
             + 'ei ole suojakaiteita; jokainen vasaranisku riippuu siitä, että '
             + 'työtoveri tekee oman osuutensa oikein.',
-          lahde: 'Matkakirjan havainnekuva. Faktat: Eiffel Tower official site — '
-            + 'history, tarkistettu 5.9.2026.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. '
+            + 'Faktat: Eiffel Tower official site — history, tarkistettu 5.9.2026.',
           galleria: [
             {
               otsikko: 'Eiffel-torni 1888 — näin torni koottiin',
-              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-eiffel-torni-1888-kauko-photo-v4.jpg',
-              lyhyt: 'Eiffel-tornin toinen taso valmistuu, kun tuhannet '
-                + 'esivalmistetut osat kootaan yhdeksi torniksi.',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-eiffel-torni-1888-kauko-photo-v5.jpg',
+              lyhyt: 'Eiffel-tornin toinen kerros on valmis, ja rakentaminen jatkuu',
               selite: 'Elokuussa 1888 toinen taso on viimein koossa, mutta torni '
                 + 'jatkuu vielä avonaisena rautaristikkona taivaalle. Alhaalla '
                 + 'hevoskuormat tuovat Levallois’ssa millintarkasti '
                 + 'esivalmistettuja osia, ylhäällä höyrynosturi kiipeää rakenteen '
                 + 'mukana — ja 150–300 työntekijää muuttaa 18 038 piirustettua '
                 + 'kappaletta yhdeksi torniksi.',
-              lahde: 'Matkakirjan havainnekuva. Faktat: Eiffel Tower official '
-                + 'site — history, tarkistettu 5.9.2026.',
+              lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. '
+                + 'Faktat: Eiffel Tower official site — history, tarkistettu '
+                + '5.9.2026.',
             },
           ],
         },
@@ -7318,7 +7318,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Bastilji 1789 — Ranskan vallankumous alkaa',
           aika: '14.7.1789',
           leveys: 'taysi',
-          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-ranskan-vallankumous-bastilji-1789-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-ranskan-vallankumous-bastilji-1789-lahi-photo-v5.jpg',
           teksti: 'Pariisin kansa hyökkää 14. heinäkuuta 1789 Bastiljin '
             + 'linnoitukseen hakemaan sinne siirrettyä ruutia, ja illalla '
             + 'kuvernööri de Launay antautuu. Musketti painaa olkapäällä, mutta '
@@ -7342,19 +7342,19 @@ export const KULTTUURI_KATEGORIAT = {
             + 'mukaan Lafayette lisää kaupungin siniseen ja punaiseen valkoisen, '
             + 'vanhastaan Ranskan ja sen kuninkaiden värin, ja siitä tulee '
             + 'trikolori; tarkalleen ei tiedetä, kuka värit yhdisti.',
-          lyhyt: 'Pariisilainen etsii yhä ruutia muskettiinsa, kun Bastiljin '
-            + 'portti vihdoin avautuu.',
+          lyhyt: 'Pariisilainen työläinen musketti olalla Bastiljin portilla',
           selite: 'Havainnekuvan pariisilainen metallityöläinen on kantanut '
             + 'Invalidikirkolta hakemaansa muskettia tuntikausia, mutta ruutia '
             + 'hän etsii yhä. Kun Bastiljin portti viimein avautuu, voitonriemu '
             + 'sekoittuu pelkoon: savun takana odottaa piha, jolta äsken '
             + 'ammuttiin väkijoukkoon.',
-          lahde: 'Matkakirjan havainnekuva. Faktat: Musée Carnavalet — Taking of '
-            + 'the Bastille, tarkistettu 5.9.2026.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. '
+            + 'Faktat: Musée Carnavalet — Taking of the Bastille, tarkistettu '
+            + '5.9.2026.',
           galleria: [
             {
               otsikko: 'Bastilji 1789 — Ranskan vallankumous alkaa',
-              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-ranskan-vallankumous-bastilji-1789-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-ranskan-vallankumous-bastilji-1789-kauko-photo-v5.jpg',
               lyhyt: 'Bastiljin sveitsiläinen vartija yrittää kadota pihalle '
                 + 'ennen kuin väkijoukko saavuttaa hänet.',
               selite: 'Vankilan sveitsiläinen sotilas laskee aseensa ja yrittää '
@@ -7362,8 +7362,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Portista tuleville pariisilaisille Bastilji on sortovallan '
                 + 'linna; hänelle se on paikka, jossa univormu voi yhtäkkiä tehdä '
                 + 'ihmisestä vihollisen.',
-              lahde: 'Matkakirjan havainnekuva. Faktat: Musée Carnavalet — Taking '
-                + 'of the Bastille, tarkistettu 5.9.2026.',
+              lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva. '
+                + 'Faktat: Musée Carnavalet — Taking of the Bastille, tarkistettu '
+                + '5.9.2026.',
             },
           ],
         },

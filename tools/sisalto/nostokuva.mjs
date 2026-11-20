@@ -28,6 +28,8 @@ import { soikioPikseli } from './soikio.mjs';
 // ilman npm installia.
 const lataaSharp = () => import('sharp').then((m) => m.default);
 
+/** Noston kuvien määrä: tasalaatutarkistus (nostokuvien-tarkistus.mjs) ja viennin reitti (b) (tools/vienti/nostokuvat.mjs). */
+export const KUVIA = { min: 3, max: 4 };
 export const LEVEYS = 1200;
 export const KORKEUS = 800;
 export const SUURENNOS = 2048;
