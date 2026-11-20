@@ -16,22 +16,23 @@ Haara `sk/l5-nostotekstit-era1`, EI yhdistetä mainiin ennen KK:n sanaa (lukijan
 - Teksti etenee vanhimmasta uusimpaan; jokainen aikahyppy alkaa vuodella tai vuosikymmenellä; viimeinen jakso kertoo mitä paikalla on nyt.
 - Vuosirivit: jokainen sanottu vuosi saa rivin, rivit nousevassa järjestyksessä (selite ≤ 20 merkkiä, `kohta` tekstissä tasan kerran).
 - Visa, Pulun kysymykset (3 kpl), korostukset ja hologrammien kohdat ennallaan; visan vastaus kuuluu yhä tekstissä (Kivimuurit, Firenze, valtauspäivän ilta, "Hän häpesi", Jeanne, polonium, "yksi frangi", käänsi ja piirsi, mutka, Chagall, Zola, miekkailu, Nogent-sur-Marne).
-- **Kuvasiirrot** (kuvat pysyvät samoilla paikoilla paitsi alla; isoisän koukku poistui, joten sen kuva siirrettiin): Tuileries `raunio1873` koukusta kolmanteen jaksoon (lyhyt "Poltetun palatsin rauniot", ilman vuotta 1873; lähderivi "rauniot palon jälkeen") ja `loisto` ensimmäiseen jaksoon; Bastilji `pylvas1860` koukusta toiseksi kuvaksi viimeiseen jaksoon ("Aukion pylväs"); Les Halles `marville` koukusta toiseen jaksoon; Louvre `julkisivu` ensimmäiseen jaksoon; Sainte-Chapelle `piha` ensimmäiseen jaksoon; Curie `vaja` ensimmäiseen jaksoon; Pasteur `maalaus` ensimmäiseen jaksoon; Lavoisier `david` kolmanteen jaksoon (muotokuva 1788); Garnier, Orsay, Industrie: jaksokohtaiset kuvat samoilla jaksoilla. Eiffelin ja Grand Cafén ensimmäisellä jaksolla ei ole kuvaa (koukulla ei ollut: 1873-kuvia ei ole). Kuvia ei lisätty eikä poistettu (jaksokuvat-lista ennallaan).
+- **Kuvasiirrot** (kuvat pysyvät samoilla paikoilla paitsi alla; isoisän koukku poistui, joten sen kuva siirrettiin): Tuileries `raunio1873` koukusta kolmanteen jaksoon (lyhyt "Poltetun palatsin rauniot", ilman vuotta 1873; lähderivi "rauniot palon jälkeen") ja `loisto` ensimmäiseen jaksoon; Bastilji `pylvas1860` koukusta toiseksi kuvaksi viimeiseen jaksoon ("Aukion pylväs"); Les Halles `marville` koukusta toiseen jaksoon; Louvre `julkisivu` ensimmäiseen jaksoon; Sainte-Chapelle `piha` ensimmäiseen jaksoon; Curie `vaja` ensimmäiseen jaksoon; Pasteur `maalaus` ensimmäiseen jaksoon; Lavoisier `david` kolmanteen jaksoon (muotokuva 1788); Garnier, Orsay, Industrie: jaksokohtaiset kuvat samoilla jaksoilla. KK:n luennan jälkeen (20.11.): Eiffelin J1 `rakenteilla` ja J2 `niittaus` (ensimmäinen jakso sai kuvan), Grand Cafén J1 `veljekset` ja J2 `juliste`; Lavoisier on nyt 4 jaksoa (koe · laboratorio · david · kaasumittarit), Pasteur maalaus · pouchet · pullot (järjestys kiista → pullot). Kuvia ei lisätty eikä poistettu (jaksokuvat-lista ennallaan).
 - Äänitysjono: `node tools/aanitysjono/tarkista.mjs --lisaa` (rivejä vain lisätty; vanhoja ei siivottu). Jonon avainten korjaus nimettömään lukuun on ÄÄ:n L5-7.
 
 ## 3. Poikkeukset ja avoimet kohdat KK:lle
 
-1. **Bastilji: 2 vuosiriviä (4–6 vaaditaan).** M5 sitoo äänitettyjen palojen tekstin sanasta sanaan, eikä niissä sanota 1840 eikä 1899, joten niiden rivit poistettiin (rivi ilman sanottua vuotta ei kuulu sääntöihin). Rivit: 1789, 1830. Tekstin 1300-luvun loppu on vuosikymmen, ei riviä. Jos halutaan 4 riviä, tekstiin pitää lisätä vuosia ja otto uusia (ÄÄ).
-2. **Eiffel: 3 vuosiriviä.** Mallin 1909-rivi (purkuaika) poistettiin: tekstissä ei sanota 1909:ää (lähteet 1909 vs 1910) ja riippumaton tarkistaja hylkäsi rivin. Jos KK hyväksyy "vuonna 1909" tekstiin, rivi palaa (1909 on kolmella lähteellä; yksi sanoo 1910).
+1. **Bastilji: 2 vuosiriviä (4–6 vaaditaan). RATKAISTU: KK hyväksyi 20.11. (M3 KYLLÄ), 2 riviä kelpaa.** M5 sitoo äänitettyjen palojen tekstin sanasta sanaan, eikä niissä sanota 1840 eikä 1899, joten niiden rivit poistettiin (rivi ilman sanottua vuotta ei kuulu sääntöihin). Rivit: 1789, 1830. Tekstin 1300-luvun loppu on vuosikymmen, ei riviä. Jos halutaan 4 riviä, tekstiin pitää lisätä vuosia ja otto uusia (ÄÄ).
+2. **Eiffel: 3 vuosiriviä. RATKAISTU: KK päätti 20.11., 1909 EI tekstiin, 3 riviä kelpaa.** Mallin 1909-rivi (purkuaika) poistettiin: tekstissä ei sanota 1909:ää (lähteet 1909 vs 1910) ja riippumaton tarkistaja hylkäsi rivin. Jos KK hyväksyy "vuonna 1909" tekstiin, rivi palaa (1909 on kolmella lähteellä; yksi sanoo 1910).
 3. Eiffelin mallitekstiin tehty: "vihasi" → "vastusti" (tarkistaja), lahjuslause pois (pituus < 1 000), "Champ de Mars" korostus muotoon `Champ de Mars|Champ de Mars` (korostustesti vaati näkyvän muodon).
-4. Louvren Leonardo-lause ("vaikka Leonardo oli itse tuonut taulun Ranskaan") jäi pois pituuden takia; Pulun kolmas kysymys (Peruggian luulo) ei sitä vaadi.
+4. Louvren Leonardo-lause ("vaikka Leonardo oli itse tuonut taulun Ranskaan") jäi pois pituuden takia; Pulun kolmas kysymys (Peruggian luulo) ei sitä vaadi. KK hyväksyi poiston 20.11.
 5. Palais d'Orsay: "ja ne seisoivat siinä vielä isoisäsi matkan aikaan" pois; museon päätös 1977 ja avaus 1986 mukana.
-6. Tuileries: nappi-kenttä "Palatsi, jonka isoisä näki raunioina" (kartan nappi, ei kertojan teksti) ei kuulu tähän tehtävään, ei muutettu; `ihme.lyhyt` ja muut kortit ennallaan.
+6. Tuileries: nappi-kenttä muutettu KK:n luennan jälkeen: "Palatsi, jonka isoisä näki raunioina" → **"Palatsi, joka myytiin kivinä"** (sama sanonta kuin tekstin ensimmäisessä virkkeessä ("poltettiin ja myytiin kivinä"); ei isoisää). `ihme.lyhyt` ja muut kortit ennallaan.
 7. Eiffelin viimeisessä jaksossa "72 … nimeä": tarkistaja huomautti, että Pariisi lisää tornille 72 naisen nimeä (valmis viimeistään 2027), joten lause vanhenee silloin. Lause on vanhan KK:n hyväksymä (17.11.), ei muutettu.
-8. `npm test`: kaikki ok paitsi `asemataulu-tyolista-komento.test.mjs` "koukku: yli 3 h vanhat työn alla -rivit…" (työlistakoukku; ei liity tekstiin; kaatuu ilman minun muutoksiani samalla tavalla, ei tutkittu tarkemmin).
+8. **Isoisä-kentät (KK 20.11.):** pelaajalle näkyviä isoisä-kenttiä 13 noston datassa oli kaksi muuta kuin Tuileries'n nappi: `ihmeLahde`-rivit Palais de l'Industrie ja Les Halles ("…omana aikanaan (1873, isoisän matkavuosi).") → "(1873, isoisän matkavuosi)" pois, lähderivi päättyy "omana aikanaan.". Muita ei ole (skriptitarkistus kaikista 13 noston kentistä: nimi, nimio, nappi, otsikko, kysymykset, visa, lähde, ihmeLahde, jaksokuvat). Samat neljä `ihmeLahde`-riviä ovat vielä erän 2 nostoissa (mercato-vecchio, helsinki-vanha-asema, newgate, euston-arch): jätetty, erän 2 työtä.
+9. **KK:n luennan korjaukset (20.11., 6 kohtaa):** Sainte-Chapelle J1 + lause "Samassa palatsissa ratkaistiin kuningattaren kaulanauhajuttu."; Grand Café J1 "maksava yleisö katsoi Lumièren veljesten elokuvaa"; Lavoisier 4 jaksoa (1771 imperfektissä omalla paikallaan, "Ne ovat siellä esillä" pois, Marie-Annen työ sidottu oppikirjaan); Pasteur järjestys kiista → pullot → liemi pysyi kirkkaana → voitti (1860 vain kerran); Orsay "Sitä alettiin rakentaa 1800-luvun alussa Napoleonin aikana"; Palais de l'Industrie kirjoitettu uusiksi (täytevirkkeet pois; rautarakenne kivikuoren sisällä, konegalleria Seinen varrella, Berliozin kantaatti päätösjuhlassa; kaksi lähdettä per väite, liite B3). Eiffel ja Grand Café saivat J1:lle kuvat (luku 2).
+10. `npm test`: kaikki ok paitsi `asemataulu-tyolista-komento.test.mjs` "koukku: yli 3 h vanhat työn alla -rivit…" (työlistakoukku; ei liity tekstiin; kaatuu ilman minun muutoksiani samalla tavalla, ei tutkittu tarkemmin).
 
 ## 4. M2: jokaisesta nostosta ENNEN | NYT (KK:n vertailua varten)
-
 ### Tuileries'n palatsi (`tuileries`)
 
 | | ENNEN | NYT |
@@ -128,7 +129,7 @@ Haara `sk/l5-nostotekstit-era1`, EI yhdistetä mainiin ennen KK:n sanaa (lukijan
 | Tarinarivi (datan `otsikko`) | Eiffel-torni 1925 — myyty romuksi (ei näkynyt ruudulla) | **Torni, joka myytiin romuksi** (27 merkkiä) |
 | Jaksoja / merkkejä | 7 (nimi, esittely, isoisä + 4) / 1114 (isoisän ja esittelyn jaksot mukana) | 5 / 987 |
 | Vuosirivit | 1873 isoisän matka · 1887 taiteilijavetoomus · 1889 torni valmis · 1909 tornin purkuaika · 1925 Lustigin huijaus | 1887 rakentaminen alkaa · 1889 torni valmis · 1925 Lustigin huijaus |
-| Kuvat jaksoittain | J1: – · J2: – · J3: – · J4: rakenteilla +niittaus · J5: photochrom1900 · J6: lustig · J7: nykyinen | J1: – · J2: rakenteilla +niittaus · J3: photochrom1900 · J4: lustig · J5: nykyinen |
+| Kuvat jaksoittain | J1: – · J2: – · J3: – · J4: rakenteilla +niittaus · J5: photochrom1900 · J6: lustig · J7: nykyinen | J1: rakenteilla · J2: niittaus · J3: photochrom1900 · J4: lustig · J5: nykyinen |
 
 **NYT (kertojan teksti):**
 
@@ -155,16 +156,16 @@ Haara `sk/l5-nostotekstit-era1`, EI yhdistetä mainiin ennen KK:n sanaa (lukijan
 |---|---|---|
 | Otsikko (kartan nimi) | Sainte-Chapelle | Sainte-Chapelle |
 | Tarinarivi (datan `otsikko`) | Kaulanauha 1785 — huijaus kuningattaren nimissä (ei näkynyt ruudulla) | **Kappeli ja kuningattaren kaulanauha** (35 merkkiä) |
-| Jaksoja / merkkejä | 7 (nimi, esittely, isoisä + 4) / 1178 (isoisän ja esittelyn jaksot mukana) | 5 / 998 |
+| Jaksoja / merkkejä | 7 (nimi, esittely, isoisä + 4) / 1178 (isoisän ja esittelyn jaksot mukana) | 5 / 992 |
 | Vuosirivit | 1873 isoisän matka · 1784 yöllinen tapaaminen · 1785 nauha luovutetaan · 1786 Rohan vapautetaan | 1248 kappeli vihitään · 1784 yöllinen tapaaminen · 1785 nauha luovutetaan · 1786 Rohan vapautetaan |
 | Kuvat jaksoittain | J1: – · J2: – · J3: piha · J4: nauha +juoni · J5: rohan · J6: viuhka · J7: ikkunat | J1: piha · J2: nauha +juoni · J3: rohan · J4: viuhka · J5: ikkunat |
 
 **NYT (kertojan teksti):**
 
-1. [164] Sainte-Chapelle on kappeli Cité-saaren palatsin pihalla. Kuningas Ludvig IX rakennutti sen säilyttämään Kristuksen orjantappurakruunua, ja se vihittiin vuonna 1248.
-2. [246] 1770-luvulla kuninkaan jalokivikauppiaat tekivät timanttikaulanauhan, jossa oli lähes 650 kiveä. Marie Antoinette kieltäytyi ostamasta sitä, mutta huijari Jeanne de La Motte sai kardinaali de Rohanin uskomaan, että kuningatar halusi nauhan salaa.
+1. [226] Sainte-Chapelle on kappeli Cité-saaren palatsin pihalla. Kuningas Ludvig IX rakennutti sen säilyttämään Kristuksen orjantappurakruunua, ja se vihittiin vuonna 1248. Samassa palatsissa ratkaistiin kuningattaren kaulanauhajuttu.
+2. [209] 1770-luvulla jalokivikauppiaat tekivät timanttikaulanauhan. Marie Antoinette kieltäytyi ostamasta sitä, mutta huijari Jeanne de La Motte sai kardinaali de Rohanin uskomaan, että kuningatar halusi nauhan salaa.
 3. [255] Elokuussa 1784 kardinaali tapasi Versailles'n puistossa naisen, jonka hän luuli kuningattareksi. Alkuvuodesta 1785 hän sai nauhan kauppiailta ja luovutti sen Jeannelle. Kun kauppiaat pyysivät maksua, kuningatar vaati selvitystä, ja kardinaali pidätettiin.
-4. [201] Oikeudenkäynti pidettiin Pariisin parlamentissa, joka istui samassa palatsissa. Toukokuussa 1786 kardinaali vapautettiin, ja Jeanne leimattiin varkaaksi ja vietiin vankilaan. Kuningattaren maine kärsi.
+4. [170] Oikeudenkäynti pidettiin Pariisin parlamentissa. Toukokuussa 1786 kardinaali vapautettiin, ja Jeanne leimattiin varkaaksi ja vietiin vankilaan. Kuningattaren maine kärsi.
 5. [132] Sainte-Chapelle on yhä saman palatsin pihalla. Sen ikkunoissa on yli tuhat kohtausta, ja kappeliin mennään turvatarkastuksen kautta.
 
 **ENNEN (peli lukee isoisän ja esittelyn jaksot pois; data alla kokonaan):**
@@ -213,13 +214,13 @@ Haara `sk/l5-nostotekstit-era1`, EI yhdistetä mainiin ennen KK:n sanaa (lukijan
 |---|---|---|
 | Otsikko (kartan nimi) | Grand Café | Grand Café |
 | Tarinarivi (datan `otsikko`) | Lumière 1895 — kuvat alkavat liikkua (ei näkynyt ruudulla) | **Ilta, jona kuvat alkoivat liikkua** (33 merkkiä) |
-| Jaksoja / merkkejä | 7 (nimi, esittely, isoisä + 4) / 877 (isoisän ja esittelyn jaksot mukana) | 5 / 868 |
+| Jaksoja / merkkejä | 7 (nimi, esittely, isoisä + 4) / 877 (isoisän ja esittelyn jaksot mukana) | 5 / 878 |
 | Vuosirivit | 1873 isoisän matka · 1895 patentti · 1895 Grand Cafén näytös | 1895 patentti · 1895 Grand Cafén näytös · 1896 Mélièsin elokuva · 1902 Matka kuuhun |
-| Kuvat jaksoittain | J1: – · J2: – · J3: – · J4: veljekset · J5: juliste · J6: melies · J7: laatta | J1: – · J2: veljekset · J3: juliste · J4: melies · J5: laatta |
+| Kuvat jaksoittain | J1: – · J2: – · J3: – · J4: veljekset · J5: juliste · J6: melies · J7: laatta | J1: veljekset · J2: juliste · J3: – · J4: melies · J5: laatta |
 
 **NYT (kertojan teksti):**
 
-1. [116] Grand Café oli kahvila Capucines-bulevardilla Pariisissa, ja sen kellarissa katsottiin Lumièren veljesten keksintöä.
+1. [126] Grand Café oli kahvila Capucines-bulevardilla Pariisissa, ja sen kellarissa maksava yleisö katsoi Lumièren veljesten elokuvaa.
 2. [151] Lumièren veljekset patentoivat keksintönsä helmikuussa 1895. Laite oli kamera ja projektori yhdessä, ja sillä kuvattu filmi oli noin minuutin pituinen.
 3. [237] Joulukuun 28. päivänä 1895 Grand Cafén kellarisalissa pidettiin maksullinen näytös. Lippu maksoi frangin, ja illalla katsojia oli vain kolmisenkymmentä. Valkokankaalla Lumièren tehtaan portti Lyonissa aukesi, ja työläiset kävelivät ulos.
 4. [249] Kutsuvieraiden joukossa oli taikuri Georges Méliès. Hän halusi ostaa laitteen, mutta Lumièret eivät myyneet sitä. Puhe levisi, ja kadulle syntyi jono. Méliès alkoi tehdä omia elokuviaan: ensimmäisen hän teki vuonna 1896 ja Matkan kuuhun vuonna 1902.
@@ -242,17 +243,16 @@ Haara `sk/l5-nostotekstit-era1`, EI yhdistetä mainiin ennen KK:n sanaa (lukijan
 |---|---|---|
 | Otsikko (kartan nimi) | Lavoisierin laboratorio | Lavoisierin laboratorio |
 | Tarinarivi (datan `otsikko`) | Lavoisier 1780 — kaikki punnittiin (ei näkynyt ruudulla) | **Mies, joka punnitsi kaiken** (26 merkkiä) |
-| Jaksoja / merkkejä | 7 (nimi, esittely, isoisä + 4) / 960 (isoisän ja esittelyn jaksot mukana) | 5 / 947 |
+| Jaksoja / merkkejä | 7 (nimi, esittely, isoisä + 4) / 960 (isoisän ja esittelyn jaksot mukana) | 4 / 939 |
 | Vuosirivit | 1873 isoisän matka · 1789 oppikirja · 1794 Lavoisier mestattiin | 1771 naimisiin · 1788 Davidin muotokuva · 1789 oppikirja · 1794 Lavoisier mestattiin |
-| Kuvat jaksoittain | J1: – · J2: – · J3: – · J4: koe · J5: laboratorio · J6: david · J7: kaasumittarit | J1: koe · J2: laboratorio · J3: david · J4: – · J5: kaasumittarit |
+| Kuvat jaksoittain | J1: – · J2: – · J3: – · J4: koe · J5: laboratorio · J6: david · J7: kaasumittarit | J1: koe · J2: laboratorio · J3: david · J4: kaasumittarit |
 
 **NYT (kertojan teksti):**
 
 1. [275] Lavoisierin laboratorio oli Arsenaalin asunnon yhteydessä Pariisissa. Antoine Lavoisier johti Arsenaalissa ruudin valmistusta ja punnitsi laboratoriossaan kaiken ennen koetta ja sen jälkeen. Tuloksista hän päätteli, että ainetta on kokeen jälkeen yhtä paljon kuin ennen sitä.
-2. [233] Vuonna 1771 Lavoisier oli mennyt naimisiin Marie-Annen kanssa. Marie-Anne oli oppinut englantia ja käänsi ulkomaisia tutkimuksia ranskaksi. Lavoisier huomasi kokeissaan, että palaessa aine yhtyy ilman osaan, jonka hän nimesi hapeksi.
-3. [176] Vuonna 1788 Jacques-Louis David maalasi Lavoisierista ja Marie-Annesta muotokuvan. Vuonna 1789 ilmestyi Lavoisierin oppikirja. Marie-Anne oli piirtänyt siihen laitteiden kuvat.
-4. [157] Lavoisier oli kuulunut vanhan hallinnon veronkantajiin. Vallankumouksen tuomioistuin tuomitsi hänet kuolemaan, ja hänet mestattiin toukokuun 8. päivänä 1794.
-5. [106] Lavoisierin laboratorion välineitä on nykyään Arts et Métiers -museossa Pariisissa. Ne ovat siellä esillä.
+2. [220] Vuonna 1771 Lavoisier meni naimisiin Marie-Annen kanssa. Marie-Anne oppi englantia ja käänsi ulkomaisia tutkimuksia ranskaksi. Lavoisier huomasi kokeissaan, että palaessa aine yhtyy ilman osaan, jonka hän nimesi hapeksi.
+3. [203] Vuonna 1788 Jacques-Louis David maalasi Lavoisierista ja Marie-Annesta muotokuvan. Marie-Annen työ näkyi myös oppikirjassa: vuonna 1789 ilmestyneeseen Lavoisierin oppikirjaan hän piirsi laitteiden kuvat.
+4. [241] Lavoisier oli kuulunut vanhan hallinnon veronkantajiin. Vallankumouksen tuomioistuin tuomitsi hänet kuolemaan, ja hänet mestattiin toukokuun 8. päivänä 1794. Lavoisierin laboratorion välineitä on nykyään Arts et Métiers -museossa Pariisissa.
 
 **ENNEN (peli lukee isoisän ja esittelyn jaksot pois; data alla kokonaan):**
 
@@ -271,16 +271,16 @@ Haara `sk/l5-nostotekstit-era1`, EI yhdistetä mainiin ennen KK:n sanaa (lukijan
 |---|---|---|
 | Otsikko (kartan nimi) | Pasteurin laboratorio | Pasteurin laboratorio |
 | Tarinarivi (datan `otsikko`) | Pasteur — pullot pysyivät kirkkaina (ei näkynyt ruudulla) | **Pullot, jotka pysyivät kirkkaina** (32 merkkiä) |
-| Jaksoja / merkkejä | 7 (nimi, esittely, isoisä + 4) / 1015 (isoisän ja esittelyn jaksot mukana) | 5 / 958 |
+| Jaksoja / merkkejä | 7 (nimi, esittely, isoisä + 4) / 1015 (isoisän ja esittelyn jaksot mukana) | 5 / 980 |
 | Vuosirivit | 1873 isoisän matka · 1865 pastörointipatentti | 1857 tulee kouluun · 1860 pullot jäätiköllä · 1865 pastörointipatentti · 1888 Institut Pasteur |
-| Kuvat jaksoittain | J1: – · J2: – · J3: – · J4: pullot · J5: pouchet · J6: maalaus · J7: ens | J1: maalaus · J2: pullot · J3: pouchet · J4: – · J5: ens |
+| Kuvat jaksoittain | J1: – · J2: – · J3: – · J4: pullot · J5: pouchet · J6: maalaus · J7: ens | J1: maalaus · J2: pouchet · J3: pullot · J4: – · J5: ens |
 
 **NYT (kertojan teksti):**
 
-1. [197] Pasteurin laboratorio oli École normale supérieuren tiloissa rue d'Ulmilla Pariisissa. Louis Pasteur tuli kouluun vuonna 1857 tieteellisten opintojen johtajaksi ja työskenteli siellä vuosikymmeniä.
-2. [137] Siellä hän keitti lientä lasipulloissa, joiden kaula oli taivutettu joutsenen kaulan muotoon. Ilma pääsi pulloon, mutta pöly jäi mutkaan.
-3. [272] Pasteurin vastustaja Félix Pouchet uskoi, että elämä voi syntyä itsestään mätänevästä aineesta. Tiedeakatemia oli luvannut palkinnon sille, joka ratkaisee kiistan kokeilla. Pasteur avasi pulloja jopa Alppien jäätiköllä vuonna 1860 ja julkaisi tuloksensa 1860-luvun alussa.
-4. [214] Pasteur voitti kiistan. Hän osoitti myös, että käyminen on elävien mikrobien työtä. Viinin tauteja hän torjui kuumentamalla viiniä, ja keksinnölle haettiin patentti vuonna 1865. Menetelmää kutsutaan pastöroinniksi.
+1. [161] Pasteurin laboratorio oli École normale supérieuren tiloissa rue d'Ulmilla Pariisissa. Louis Pasteur tuli kouluun vuonna 1857 tieteellisten opintojen johtajaksi.
+2. [172] Pasteurin vastustaja Félix Pouchet uskoi, että elämä voi syntyä itsestään mätänevästä aineesta. Tiedeakatemia oli luvannut palkinnon sille, joka ratkaisee kiistan kokeilla.
+3. [254] Pasteur keitti lientä lasipulloissa, joiden kaula oli taivutettu joutsenen kaulan muotoon. Ilma pääsi pulloon, mutta pöly jäi mutkaan, ja liemi pysyi kirkkaana. Liemipulloja hän vei jopa Alppien jäätikölle vuonna 1860, missä ilmassa oli vain vähän pölyä.
+4. [255] Pasteur voitti kiistan ja julkaisi tuloksensa 1860-luvun alussa. Hän osoitti myös, että käyminen on elävien mikrobien työtä. Viinin tauteja hän torjui kuumentamalla viiniä, ja keksinnölle haettiin patentti vuonna 1865. Menetelmää kutsutaan pastöroinniksi.
 5. [138] Vuonna 1888 avattiin Institut Pasteur, joka kantaa hänen nimeään. École normale supérieure toimii yhä rue d'Ulmilla Latinalaiskorttelissa.
 
 **ENNEN (peli lukee isoisän ja esittelyn jaksot pois; data alla kokonaan):**
@@ -328,13 +328,13 @@ Haara `sk/l5-nostotekstit-era1`, EI yhdistetä mainiin ennen KK:n sanaa (lukijan
 |---|---|---|
 | Otsikko (kartan nimi) | Palais d'Orsay | Palais d'Orsay |
 | Tarinarivi (datan `otsikko`) | Palais d'Orsay 1873 — palatsi, jonka raunioiden paikalle tuli asema (ei näkynyt ruudulla) | **Palatsi, jonka paikalle tuli asema** (34 merkkiä) |
-| Jaksoja / merkkejä | 7 (nimi, esittely, isoisä + 4) / 794 (isoisän ja esittelyn jaksot mukana) | 4 / 760 |
+| Jaksoja / merkkejä | 7 (nimi, esittely, isoisä + 4) / 794 (isoisän ja esittelyn jaksot mukana) | 4 / 775 |
 | Vuosirivit | 1873 isoisän matka · 1871 palatsi paloi · 1900 maailmannäyttely · 1986 museo avattiin | 1871 palatsi paloi · 1900 maailmannäyttely · 1977 päätös museosta · 1986 museo avattiin |
 | Kuvat jaksoittain | J1: – · J2: – · J3: – · J4: loisto · J5: – · J6: rauniot · J7: museo | J1: loisto · J2: – · J3: rauniot · J4: museo |
 
 **NYT (kertojan teksti):**
 
-1. [226] Palais d'Orsay oli hallintopalatsi Seinen rannalla Pariisissa. Napoleonin aikana sen rakentaminen alettiin, ja se valmistui vasta noin kolmenkymmenen vuoden päästä. Siellä toimivat valtioneuvosto ja tilintarkastustuomioistuin.
+1. [241] Palais d'Orsay oli hallintopalatsi Seinen rannalla Pariisissa. Sitä alettiin rakentaa 1800-luvun alussa Napoleonin aikana, ja se valmistui vasta noin kolmenkymmenen vuoden päästä. Siellä toimivat valtioneuvosto ja tilintarkastustuomioistuin.
 2. [197] Tilintarkastustuomioistuimen portaikon seinille Théodore Chassériau maalasi freskot. Pariisin kommuunin aikana, toukokuussa 1871, palatsi paloi. Émile Zola kuvasi tulipaloa romaanissaan La Débâcle.
 3. [152] Tuli tuhosi freskoja. Rauniot jäivät keskelle Pariisia vuosikymmeniksi. Vuonna 1900 maailmannäyttelyä varten niiden paikalle rakennettiin rautatieasema.
 4. [185] Asemasta tuli Orsayn taidemuseo. Rakennus päätettiin vuonna 1977 muuttaa museoksi, ja museo avattiin yleisölle vuonna 1986. Se seisoo yhä Seinen rannalla, samalla paikalla kuin palatsi.
@@ -356,16 +356,17 @@ Haara `sk/l5-nostotekstit-era1`, EI yhdistetä mainiin ennen KK:n sanaa (lukijan
 |---|---|---|
 | Otsikko (kartan nimi) | Palais de l'Industrie | Palais de l'Industrie |
 | Tarinarivi (datan `otsikko`) | Palais de l'Industrie 1873 — halli, jonka paikalle tuli Grand Palais (ei näkynyt ruudulla) | **Halli, jonka paikalle tuli Grand Palais** (39 merkkiä) |
-| Jaksoja / merkkejä | 6 (nimi, esittely, isoisä + 3) / 754 (isoisän ja esittelyn jaksot mukana) | 4 / 748 |
+| Jaksoja / merkkejä | 6 (nimi, esittely, isoisä + 3) / 754 (isoisän ja esittelyn jaksot mukana) | 5 / 895 |
 | Vuosirivit | 1873 isoisän matka · 1855 maailmannäyttely · 1900 maailmannäyttely · 2024 olympialaiset · 2025 uudelleen avattu | 1855 maailmannäyttely · 1900 maailmannäyttely · 2021 kunnostus alkaa · 2024 olympialaiset · 2025 uudelleen avattu |
-| Kuvat jaksoittain | J1: – · J2: – · J3: – · J4: loisto · J5: portti · J6: grandpalais | J1: loisto · J2: – · J3: portti · J4: grandpalais |
+| Kuvat jaksoittain | J1: – · J2: – · J3: – · J4: loisto · J5: portti · J6: grandpalais | J1: loisto · J2: – · J3: – · J4: portti · J5: grandpalais |
 
 **NYT (kertojan teksti):**
 
-1. [202] Palais de l'Industrie oli suuri näyttelyhalli Champs-Élysées'n tuntumassa Pariisissa. Sen paikalla seisoo nykyään Grand Palais. Hallin suunnittelussa olivat mukana insinööri Barrault ja arkkitehti Viel.
-2. [164] Halli rakennettiin Pariisin vuoden 1855 maailmannäyttelyä varten, ja näyttely avattiin toukokuussa. Näyttelyn jälkeenkin siellä pidettiin näyttelyitä ja tapahtumia.
-3. [140] Halli ei saanut jäädä. Se purettiin 1890-luvulla, jotta paikalle voitiin rakentaa uusi näyttelypalatsi vuoden 1900 maailmannäyttelyä varten.
-4. [242] Paikalle rakennettiin lasikattoinen Grand Palais. Rakennus suljettiin kunnostukseen vuonna 2021. Kesällä 2024 sen lasikaton alla miekkailtiin Pariisin olympialaisissa, ja kunnostuksen jälkeen rakennus avattiin yleisölle uudelleen vuonna 2025.
+1. [218] Palais de l'Industrie oli Pariisin vuoden 1855 maailmannäyttelyä varten rakennettu suurhalli Champs-Élysées'n tuntumassa. Sen suunnitteluun osallistui insinööri Barrault, ja hallin paikalla seisoo nykyään Grand Palais.
+2. [190] Hallin lasikatto oli rautarakenteen varassa, mutta rauta oli kätketty kivimuurien sisään. Päähalliin ei mahtunut kaikkia koneita, joten Seinen varteen rakennettiin niille erillinen galleria.
+3. [113] Näyttelyn päätösjuhlassa hallissa soi noin tuhannen esittäjän musiikki, kun säveltäjä Berlioz johti kantaattinsa.
+4. [132] Halli ei saanut jäädä. Se purettiin 1890-luvulla, jotta paikalle voitiin rakentaa uusi palatsi vuoden 1900 maailmannäyttelyä varten.
+5. [242] Paikalle rakennettiin lasikattoinen Grand Palais. Rakennus suljettiin kunnostukseen vuonna 2021. Kesällä 2024 sen lasikaton alla miekkailtiin Pariisin olympialaisissa, ja kunnostuksen jälkeen rakennus avattiin yleisölle uudelleen vuonna 2025.
 
 **ENNEN (peli lukee isoisän ja esittelyn jaksot pois; data alla kokonaan):**
 
@@ -404,7 +405,6 @@ Haara `sk/l5-nostotekstit-era1`, EI yhdistetä mainiin ennen KK:n sanaa (lukijan
 5. (tapahtuma) Émile Zola kutsui halleja Pariisin vatsaksi samannimisessä romaanissaan, joka ilmestyi 1873. Vuonna 1969 tukkukauppa muutti Rungisiin, ja hallit jäivät tyhjiksi.
 6. (kaanne) Hallit purettiin 1970-luvun alussa, vaikka moni vastusti purkua. Jäljelle jäi niin suuri kuoppa, että sitä kutsuttiin Les Hallesin reiäksi.
 7. (tanaan) Yksi paviljonki purettiin osiin ja pystytettiin uudelleen Nogent-sur-Marneen. Hallien paikalle avattiin vuonna 1979 Forum des Halles -ostoskeskus.
-
 
 ## 5. M4: lähteet ja riippumaton tarkistus
 
@@ -446,13 +446,27 @@ Haara `sk/l5-nostotekstit-era1`, EI yhdistetä mainiin ennen KK:n sanaa (lukijan
 
 Rajoitukset: Britannica, toureiffel.paris, espci, musee-orsay.fr ja osa muista palautti 403/429, joten niitä ei käytetty todisteena. Vanhojen taulukkorivien lähteitä ei avattu uudelleen (paitsi Eiffelin rivi 1: Wikipedia-lähde A korvattu introducingparis.com + hotelparisjadore.com). **KK hyväksyy faktatekstit omistajan puolesta (kortti lahteet-ja-tarkistus 10).**
 
+**KK:n luennan jälkeinen kierros (20.11., tekstit sha 85977212fc; liitteet A3, B3, B4).** Uudet tai muuttuneet väitteet ja tulos (kaksi avattua lähdettä per väite, ei Wikipediaa):
+
+| Nosto | Muuttunut väite | Tulos |
+|---|---|---|
+| Sainte-Chapelle | J1: "Samassa palatsissa ratkaistiin kuningattaren kaulanauhajuttu." (juttu ratkaistiin Pariisin parlamentissa, joka istui Palais de la Citéssa) | OK (A3: theparisianguide.com, francethisway.com; paris-conciergerie.fr). Väite johdettu kahdesta osasta, yksikään sivu ei sano sitä yhdellä virkkeellä |
+| Grand Café | J1: sen kellarissa maksava yleisö katsoi Lumièren veljesten elokuvaa (ei väitä ensimmäiseksi) | OK (A3: kaikki lähteet 1 frangi) |
+| Lavoisier | 4 jaksoa; 1771 avioliitto imperfektissä; Marie-Anne piirsi oppikirjaan (1789) 13 kuvalevyä, työ sidottu oppikirjaan | OK (B4: encyclopedia.com/DSB, scientificwomen.net, sciencehistory.org) |
+| Pasteur | kiista → pullot → liemi pysyi kirkkaana → voitti; jäätikkö 1860 omana virkkeenään ilman pullotyyppiä ("Liemipulloja hän vei jopa Alppien jäätikölle vuonna 1860, jossa ilmassa oli vain vähän pölyä."); 1857 ENS | B4 1. kierros KORJAA (jäätikkö + joutsenkaulapullot samassa virkkeessä: lähteet ristiriidassa) → korjattu → 2. kierros OK |
+| Orsay | "Sitä alettiin rakentaa 1800-luvun alussa Napoleonin aikana" | OK (B4: Conseil d'Étatin sivu 1810 alkaen; napoleon.org; "alettiin" rajaa väitteen aloitukseen) |
+| Palais de l'Industrie | uusi teksti: rauta kivimuurien sisään kätketty; konegalleria Seinen varteen; päätösjuhlassa noin tuhannen esittäjän musiikki, Berlioz johti kantaattinsa; "Sen suunnitteluun osallistui insinööri Barrault" | B3: kolme yksityiskohtaa kahdella lähteellä (napoleon.org, arthurchandler.com, bruzanemediabase.com). B4 1. kierros KORJAA (Viel puuttui; "yli tuhat" → "noin tuhat"; "raskaiden" pois) → korjattu → 2. kierros OK |
+
+B4:n heikoimmin katetut kohdat (toinen avattu lähde puuttui): Pasteurin jäätikkövuosi 1860 (Gallica vain otteena; Kronecker Wallis avattu), Orsayn päätös 1977 (hakutuloksen ote), Zola ja asema 1900 (Pariszigzag), Lavoisierin välineet Arts et Métiers -museossa, Pasteurin "käyminen mikrobien työtä" (Institut Pasteurin näyttely). Ei ole muutettu; KK päättää hyväksymisestä (kortti lahteet-ja-tarkistus 10).
+
+Kaikille kuudelle muuttuneelle uusintatarkistus OK: Sainte-Chapelle, Grand Café (A3), Lavoisier, Pasteur, Orsay, Industrie (B4).
+
 ## 6. M5: äänet
 
 - Tuileries'n `aanikansio: 'tuileries-koe/v1'` poistettu datasta (testi: `aanikansio === undefined`): vanha otto ei soi uuden tekstin päällä, nosto luetaan lennossa.
 - Bastilji: `aanikansio: 'bastilji/v1'` ja neljän palan `aanite`-tunnukset ennallaan, palojen teksti sanasta sanaan ennallaan (testi tarkistaa alut ja yhteispituuden 915). Ensimmäinen otto (`kertoja-1-otsikko-jakso2`) sisältää yhä otsikon puheessa: ÄÄ leikkaa sen (L5-7, bastilji/v2). Siihen asti lukijan nykyinen haara voi kuulua kaksi kertaa nimen; siksi PR odottaa L5-1:tä.
 
 ## 7. Liitteet: tarkistajien raportit
-
 
 ### Liite A
 
@@ -689,3 +703,202 @@ NOSTO palais-garnier: OK
 
 NOSTO hahmotelma-palais-industrie: OK
 - J4 "kunnostuksen jälkeen rakennus avattiin yleisölle uudelleen vuonna 2025": timeout.com/paris/en/things-to-do/galeries-nationales-du-grand-palais (reopened 2025, virallinen 19.6.2025), france.fr/en/event/grand-palais-reopening/ (kunnostus valmis 6.6.2025, kaikki alueet auki kesäkuussa 2025), parisdigest.com (nave 2024, koko rakennus 2025). "Koko" poistettu, joten Palais de la Découverten myöhempi avaus ei ole ristiriidassa. Vuosirivi 2025 vastaa tekstiä.
+
+### Liite A3
+
+#### Uusintatarkistus A3 (Sainte-Chapelle, Grand Café), 20.11.2026
+
+# Tarkistus A3 (muutetut kohdat; ajantasainen data luettu 20.11.2026)
+
+- NOSTO sainte-chapelle: OK
+  - J1 uusi lause "Samassa palatsissa ratkaistiin kuningattaren kaulanauhajuttu." Kaksi osaväitettä:
+    (a) juttu ratkaistiin Pariisin parlamentissa: taulukon rivit 9, 10 + https://www.theparisianguide.com/the-affair-of-the-diamond-necklace/ ("trial before the Parlement de Paris") ja https://www.francethisway.com/history/affairdiamondnecklace.php (kardinaali hyväksyi parlamentin tuomariksi, tuomio 31.5.1786).
+    (b) parlamentti istui Palais de la Citéssa (Grand'Chambre) vanhan hallinnon ajan: https://www.paris-conciergerie.fr/en/discover/history-of-the-conciergerie (Grand'Chambre rakennettu parlamentin istuntosaliksi; 1793 vallankumoustuomioistuin asennettiin "Grand' Chambre of the Parliament of Paris") ja https://snippetsofparis.com/conciergerie/ (parlamentti sijaitsi Conciergerien seinien sisällä, Grand'Chambre vanhan hallinnon istuntosali).
+    Yksikään avattu lähde ei yhdellä sivulla sano "kaulanauhaoikeudenkäynti pidettiin Palais de la Citéssa"; väite johdetaan (a)+(b):stä, kuten vanha rivi 9. Kestää, koska lause sanoo "ratkaistiin" (tuomio parlamentissa).
+  - J2 "jossa oli lähes 650 kiveä" ja "kuninkaan" pois: väite "1770-luvulla jalokivikauppiaat tekivät timanttikaulanauhan" (1772-1778, visitingparisbyyourself.com, countrylife.co.uk; tarkistettu A2:ssa) OK.
+  - J4 "joka istui samassa palatsissa" pois, "Oikeudenkäynti pidettiin Pariisin parlamentissa": rivi 9, OK. Vuosirivit 1248/1784/1785/1786 yhä tekstissä.
+  - Järjestys: J1:n kaulanauhaviittaus on ennakointi, J2-J4 kertovat tapahtumat aikajärjestyksessä; ei ristiriitaa.
+- NOSTO lumiere-1895: OK
+  - J1 "sen kellarissa maksava yleisö katsoi Lumièren veljesten elokuvaa": kellari = Salon Indien Grand Cafén kellarissa, maksullinen näytös (taulukon rivit 4, 5: H, PZ, G, SM kaikki 1 frangi). Ei väitä ensimmäiseksi. Vuosirivi 1895 on J3:ssa ("28. päivänä 1895"), muut J2-J4 ennallaan.
+
+
+### Liite B3
+
+#### Lähdehaku B3 (Palais de l'Industrie, konkreettiset yksityiskohdat), 20.11.2026
+
+# B3: Palais de l'Industrie, konkreettiset yksityiskohdat (20.11.2026)
+
+Kaikki lähteet avattu tässä kierroksessa; ei Wikipediaa, ei peilejä. Salonia ei käytetty.
+
+## 1. Rakenne: rautalasihalli kivikuoren sisällä — OK
+Ehdotus: "Hallin lasikatto oli rautarakenteen varassa ja yli neljänkymmenen metrin levyinen, mutta rauta oli kätketty raskaiden kivimuurien sisään." (tai tarkemmin "noin 48 metriä leveä")
+- Lähde A: https://www.napoleon.org/histoire-des-2-empires/articles/larchitecture-metallique-sous-le-second-empire/ — "vaste nef vitrée couvrait un espace de 192 m par 48 m"; verrière-kaaret lepäsivät onttojen valurautapylväiden varassa; kaaret piilossa muuraus-kuoren ("enveloppe en maçonnerie") takana.
+- Lähde B: http://www.arthurchandler.com/paris-1855-exposition — rauta-lasitynnyriholvi "48 meters from side to side", yli kaksi kertaa Crystal Palacen keskihallin jänneväli; Barrault verhosi ulkopinnan kivellä (Giedion: "cumbersome"); sivuilla kaksi galleriariviä.
+- Lisätuki: napoleon.org "1855. La première Exposition internationale" (rauta-lasirunko, ulkopuoli piilotettu raskaaseen muurauskuoreen). Pituus ja leveys vaihtelevat lähteissä (192/208/250/252 m), joten pituutta ei kirjoiteta; leveys 48 m on kahdessa avatussa lähteessä.
+- Tulos: OK (ilman pituutta).
+
+## 2. Koneet erillisessä galleriassa — OK
+Ehdotus: "Päähalliin ei mahtunut kaikkia koneita, joten Seinen varteen rakennettiin niille erillinen galleria."
+- Lähde A: https://www.napoleon.org/histoire-des-2-empires/articles/1855-la-premiere-exposition-internationale-francaise/ — halli liian pieni 24 000 näytteilleasettajalle; erillinen "Galerie des Machines" lisättiin laiturin (quai) varteen; koneet toimivat höyryllä koko päivän.
+- Lähde B: http://www.arthurchandler.com/paris-1855-exposition — päärakennus "too small to house all the machinery exhibits", kolmas galleria rakennettiin Seinen varteen.
+- Tulos: OK. Ei vuotta, ei pituutta (napoleon.orgin "1,2 km" vain yksi lähde; pois).
+
+## 3. Berliozin konsertti päätösjuhlassa — OK (lukumäärä pehmennettävä)
+Ehdotus: "Näyttelyn päätösjuhlassa hallissa kuului yli tuhannen esittäjän musiikki: Berlioz johti kantaattinsa."
+- Lähde A: http://www.arthurchandler.com/paris-1855-exposition — Berlioz johti L'Impériale-kantaatin noin 1 200 esittäjällä hallissa; prinssi Napoléon keskeytti sen puheensa vuoksi.
+- Lähde B: https://www.bruzanemediabase.com/en/exploration/works/imperiale-op-26-l-lafont-berlioz — osa kantaatista kuultiin 15.11.1855 Palais de l'Industriessa; "over 1,200 choristers and instrumentalists", kuusi kapellimestaria; yleisöarvio 40 000–48 000 vaihtelee.
+- Lisätuki: napoleon.org 1855-artikkeli (Berlioz, "mille musiciens et choristers", palkintojenjako Palais de l'Industriessa; päivää ei anneta).
+- Huomio: lukumäärä 1 000 / 1 200 / yleisö 40 000 / 48 000 vaihtelee, joten kirjoita "yli tuhat" tai "tuhatkunta", ei yleisömäärää, ei tarkkaa päivää. Vuosi 1855 kahdella lähteellä (Bru Zane, napoleon.org-jaksoon sidottu), mutta "ilman suhteellisia aikoja" -säännön mukaan riittää "näyttelyn päätösjuhlassa". Mirbeaun "härkä ruusutarhassa" -sitaatti on vain Chandlerilla: EI käytetä.
+
+## Suositus
+Paras 1–2 virkkeen yhdistelmä (kohdat 1 ja 2): "Hallin lasikatto oli rautarakenteen varassa, mutta rauta oli kätketty raskaiden kivimuurien sisään. Päähalliin ei mahtunut kaikkia koneita, joten Seinen varteen rakennettiin niille erillinen galleria." Kohta 3 sopii lisäksi, jos halutaan tapahtuma.
+
+## Ei käytetty (yksi lähde tai ristiriita)
+Mirbeaun sitaatti; kahvinkeitin 50 000 kuppia (vain napoleon.org); 408 ikkunaa (vain napoleon.org); Courbetin Pavillon du Réalisme (ei hallissa, vaan sen ulkopuolella); Salon (ei kahta lähdettä); mitat 208/250/252 m (ristiriita).
+
+
+### Liite B4
+
+#### Uusintatarkistus B4 (Lavoisier, Pasteur, Orsay, Industrie; 1. ja 2. kierros), 20.11.2026
+
+# B4: korjattujen nostotekstien faktatarkistus (20.11.2026, kärki 68a2ea850d)
+
+Kaikki lähteet avattu tässä kierroksessa (WebFetch tai pdftotext avatusta PDF:stä); ei Wikipediaa eikä peilejä. Missä toista avattua lähdettä ei löytynyt, se sanotaan.
+
+Yhteenveto: 3 KORJAA (Pasteur jakso 3, Industrie jakso 1, pieni sanamuotohiominen Industrie jakso 3), loput OK. Lavoisier ja Orsay: ei pakollisia korjauksia.
+
+---
+
+## 1. lavoisier-1780 (js/packs/fokuskohteet-fra.js rivi 1157)
+
+### Jakso 1 (Arsenaali, ruuti, punnitseminen) — OK
+- "johti Arsenaalissa ruudin valmistusta": Science History Institute (SHI) "Revolutionary Instruments" — "Lavoisier supervised the government's gunpowder manufacture": https://www.sciencehistory.org/stories/magazine/revolutionary-instruments-lavoisiers-tools-as-objets-dart/ ; Dictionary of Scientific Biography (encyclopedia.com) — vuonna 1775 Royal Gunpowder Administrationin komissaari ("in effect scientific director"), pariskunta muutti Arsenaaliin ja hän perusti siellä laboratorion: https://www.encyclopedia.com/science/dictionaries-thesauruses-pictures-and-press-releases/lavoisier-antoine-laurent
+- Punnitseminen ennen/jälkeen, ainemäärän säilyminen: DSB (sama URL; Traité 1789: "equal quantity of matter before and after"), SHI-elämäkerta https://www.sciencehistory.org/education/scientific-biographies/antoine-laurent-lavoisier/ ("popularized the principle of conservation of mass").
+- Valinnainen tarkennus: "johti" on hiukan vahva (hän oli yksi hallinnon komissaareista, DSB). Jos halutaan varovaisemmaksi: "vastasi Arsenaalissa ruudin valmistuksen valvonnasta" (SHI-sanamuoto "supervised").
+
+### Jakso 2 (1771, Marie-Anne, englanti, happi) — OK
+- 1771 avioliitto: DSB (encyclopedia.com, URL yllä) "Lavoisier married Marie-Anne Pierrette Paulze ... He was twenty-eight and she was not quite fourteen" ja vuosi 1771; https://scientificwomen.net/women/lavoisier-marie-anne-54 "married on 16 December 1771" (Cornellin arkisto-opas, jonka haku mainitsi, oli siirtynyt eikä auennut; siksi kaksi avattua: DSB + scientificwomen.net). Tarkka päivä on lähteissä 16.12.1771; tekstissä vain vuosi, hyvä.
+- "oppi englantia ja käänsi ulkomaisia tutkimuksia ranskaksi": DSB (englanti, jota aviomies ei lukenut; Kirwanin Essay on Phlogiston -käännös, julkaistu 1788); scientificwomen.net (käänsi Kirwanin, Priestleyn ja Cavendishin töitä); lisäksi Whipple Library -blogi https://whipplelib.wordpress.com/2022/03/08/marie-anne-paulze-the-other-lavoisier/ (Latin/italia/englanti, Kirwan 1787 -käännös huomautuksineen).
+- Sanamuoto ei väitä käännösten liittyvän oppikirjaan, eikä sitä tässä jaksossa tehdäkään: OK.
+- "palaessa aine yhtyy ilman osaan, jonka hän nimesi hapeksi": DSB (1770-luvun polttokokeet, 1777 fosfori yhtyy "eminently respirable air" -osaan, termi "oxygène" 1787) + SHI-elämäkerta ("He named this air 'oxygen'"). Lause ei aikamääritä nimeämistä, joten järjestys vuoteen 1771 nähden ei ole väärin.
+
+### Jakso 3 (David 1788; oppikirja 1789; Marie-Annen piirrokset) — OK
+- Davidin kaksoismuotokuva 1788: MDI Biological Laboratory https://mdibl.org/the-portrait-of-antoine-and-marie-anne-lavoisier/ ("delivered the portrait in 1788"); Wanderwomen Project https://wanderwomenproject.com/women/marie-anne-paulze-lavoisier/ ("painted a portrait of her and her husband in 1788"). (Met-sivu 429/503 ei auennut; hakutulos antaa myös 1788.)
+- Oppikirja 1789, Marie-Annen kuvat: SHI "Revolutionary Instruments" — "Appended to the second volume are 13 plates that show some 170 pieces of laboratory equipment, finely drawn to scale by Mme. Lavoisier" (Traité published 1789); DSB — 13 kuparikaiverrusta, signeeraus "Paulze Lavoisier sculpsit"; Whipple-blogi (13 kaiverrusta).
+- "piirsi laitteiden kuvat": OK. (Hän sekä piirsi että kaiversi levyt; "piirsi" ei ole väärin. Kuvalevyt sisältävät myös laboratoriokohtauksen, mutta pääosin laitteita.)
+- Oppikirjaan sidonta on oikein: kuvat ovat nimenomaan Traité élémentaire de chimie (1789) -teoksessa; käännöstyö (Kirwan 1788) on erillinen eikä tekstissä sidota oppikirjaan.
+
+### Jakso 4 (tänään; veronkantaja, mestaus 8.5.1794, välineet Arts et Métiers) — OK
+- Veronkantajat (Ferme générale): DSB (1768 liittyi Ferme généraleen), SHI ("helped collect taxes").
+- Vallankumoustuomioistuin + mestaus 8.5.1794: DSB (luettu sivun loppuosa: "tried by the Revolutionary Tribunal on the morning of 8 May 1794 ... executed on the guillotine that same afternoon"); SHI-elämäkerta ("guillotined in the spring of 1794").
+- Välineet Arts et Métiers -museossa: Musée des arts et métiers https://www.arts-et-metiers.net/musee/larsenal-du-chimiste-au-xviiie-siecle ("environ 600 pièces toutes conservées au musée des Arts et Métiers") + DSB:n alaviite (Mme Lavoisierin kalorimetripiirros Conservatoire des Arts et Métiersin kokoelmassa). Toinen suora lähde on heikko (niche-museums.com, "Laboratoire de Lavoisier" kokoelmassa). Väite on silti hyvin tuettu ensimmäisellä lähteellä; "välineitä" on oikea sana ("laboratorio" kokonaisuutena ei ole museossa).
+
+---
+
+## 2. pasteur-1862 (js/packs/fokuskohteet-fra.js rivi 1280)
+
+### Jakso 1 (ENS, rue d'Ulm, 1857) — OK
+- 1857 nimitetty "directeur des études scientifiques et administrateur": ENS https://www.ens.psl.eu/en/node/1023 (22.10.1857); Amis de Pasteur https://www.amisdepasteur.fr/frise-chronologique/ ; Institut Pasteurin näyttely (pdftotext, "1857 : Pasteur est nommé administrateur et directeur des études scientifiques").
+- Laboratorio ENS:n ullakolla rue d'Ulmilla, "noin kolmekymmentä vuotta": ENS:n biologian laitos https://www.bio.ens.psl.eu/depbio/spip.php?article21=&lang=fr ; Amis de Pasteur (kronologia 1858–62: "laboratoire dans les combles de l'ENS, rue d'Ulm"). "vuosikymmeniä" OK.
+- "toimii yhä rue d'Ulmilla Latinalaiskorttelissa" (jakso 5) on yleistietoa; en avannut erillistä lähdettä.
+
+### Jakso 2 (Pouchet; Akatemian palkinto) — OK
+- Pouchet uskoi spontaaniin syntymiseen: Medarus https://www.medarus.org/Medecins/MedecinsTextes/pasteurl.html ; Universalis https://www.universalis.fr/encyclopedie/louis-pasteur/3-le-debat-sur-la-generation-spontanee/ (kiista Pouchet–Pasteur 1860–1865).
+- Akatemian palkinto: Kronecker Wallis https://www.kroneckerwallis.com/pasteur-and-the-end-of-spontaneous-generation/ ("1860: Académie offers a prize" kiistan ratkaisemiseksi); Medarus ("1862: Prix Alhumbert") ja Amis de Pasteur https://www.amisdepasteur.fr/chronologie/les-generations-dites-spontanees/ (Alhumbert-palkinto spontaaninsyntykokeista). Teksti ("oli luvannut palkinnon sille, joka ratkaisee kiistan kokeilla") on varovainen ja oikein.
+
+### Jakso 3 (joutsenkaulapullot, liemi kirkkaana, jäätikkö 1860) — KORJAA
+Ongelma: teksti yhdistää samaan jaksoon joutsenkaulapullot ja jäätikköretken ("Pulloja hän avasi jopa Alppien jäätiköllä vuonna 1860"), mikä lukee niin kuin jäätikölle olisi viety joutsenkaulapulloja. Lähteet ovat tässä ristiriidassa:
+- Kronecker Wallis (URL yllä): Mont Blanc -kokeissa Pasteur käytti SULJETTUJA pulloja, ei joutsenkaulapulloja (avasi sinetin paikan päällä ja sulki uudelleen; Mer de Glacella noin 2000 m: vain pieni osa 20 pullosta pilaantui).
+- Amis de Pasteur (kronologia, URL yllä): ensin kokeet 20 liemipullolla Mont Poupetilla, sitten siirtyminen joutsenkaulapulloihin (siis joutsenkaula tuli jäätikköä myöhemmin).
+- Vastakkainen: Latour, "Pasteur et Pouchet" https://www.bruno-latour.fr/sites/default/files/38-POUCHET-FR.pdf (pdftotext) kirjoittaa löyhästi Montenvers-kokeesta "avec des flacons à col de cygne". Siis lähteet eivät ole yksimielisiä; teksti ei saa väittää pullotyyppiä jäätiköllä.
+- Vuosi 1860 jäätikölle: kesä/syyskuu 1860 (Gallica BnF -sivu, vain hakutuloksen otteena; sivu itse antoi 403, joten kahta avattua lähdettä en saanut). Latour sijoittaa kiistan vuosille 1860–1864; Universalis 1860–1865. Pidä vuosi, mutta tuo se erilliseen virkkeeseen. EPÄVARMA vain vuoden "kaksi avattua lähdettä" -vaatimus.
+- Joutsenkaulan toiminta ja liemi pysyy muuttumattomana: Amis de Pasteur ("poussières ... première courbure"); Kronecker Wallis ("dust settled in the bend and nothing grew"); Institut Pasteur -näyttely (pdftotext, "ballon à col de cygne ... conseillé par Balard"). "liemi pysyi kirkkaana" on arkikielinen mutta oikea (lähteissä "inaltéré").
+Ehdotus jakson 3 tekstiksi (vuosi säilyy, pullotyyppiä ei väitetä jäätiköllä):
+"Pasteur keitti lientä lasipulloissa, joiden kaula oli taivutettu joutsenen kaulan muotoon. Ilma pääsi pulloon, mutta pöly jäi mutkaan, ja liemi pysyi kirkkaana. Liemipulloja hän vei jopa Alppien jäätikölle vuonna 1860 ja avasi niitä siellä, jossa ilmassa oli vain vähän pölyä."
+(Jos halutaan vielä turvallisempi: vaihda "Liemipulloja hän vei" -virke ennen joutsenkaulalausetta, koska jäätikkö on aiempi koe.) Jaksokuvan nimi "pullot" ja Pulun kysymys "Miksi Pasteur vei liemipullonsa Alppien jäätikölle asti?" ovat sellaisenaan kunnossa.
+
+### Jakso 4 (voitto, tulokset 1860-luvun alussa, käyminen, patentti 1865, pastörointi) — OK (kevyt hiominen)
+- Kokeiden järjestys on historiallisesti tämä: kiista (Pouchet 1859–60) → Akatemian palkinto tarjolla 1860 → jäätikkö 1860 → joutsenkaulapullot 1861 (muistio "Mémoire sur les corpuscules organisés ...", 1861/1862) → Alhumbert-palkinto Pasteurille 1862 (Pouchet vetäytyi) → Akatemian komissio asettuu Pasteurin puolelle 1865 (Universalis: "se rallia, en 1865, au point de vue de Pasteur"; Medarus: 1862 palkinto, 7.4.1864 Sorbonne; Institut Pasteur -näyttely: "peut affirmer en 1862 'la génération spontanée est une chimère'").
+- "voitti kiistan ja julkaisi tuloksensa 1860-luvun alussa": 1860-luvun alku kattaa julkaisun (1861–62) ja palkinnon (1862); varsinainen akatemian ratkaisu oli 1865. Sanamuoto on siis hyväksyttävä, mutta kronologisesti tarkempi olisi "Pasteur julkaisi tuloksensa 1860-luvun alussa ja voitti kiistan." Valinnainen.
+- "käyminen on elävien mikrobien työtä": Institut Pasteur -näyttely (pdftotext: käyminen johtuu ilmasta tulevien mikro-organismien saastuttamisesta); toista avattua lähdettä en saanut (yleisesti tunnettu; DSB/Britannica ei auennut tähän). Väite on hyvin vakiintunut.
+- Patentti 1865 (haettu 11.4.1865): Amis de Pasteur ("En 1865, Pasteur dépose un brevet") + Institut Pasteurin näyttely (pdftotext, "brevet ... le 11 avril 1865"); lisäksi Google Arts & Culture -tietue (hakutuloksen otteena). "haettiin patentti" on oikea muoto (haettu/jätetty).
+- Pastörointi kuumentamalla viiniä: sama näyttely + Amis de Pasteur (viinin kuumennus ilman ilmaa).
+
+### Jakso 5 (Institut Pasteur 1888) — OK
+- "Vuonna 1888 avattiin Institut Pasteur": Amis de Pasteur -frise: vihkiäiset 1888 (sivulla 4.11.1888; muissa lähteissä yleisesti 14.11.1888; päivä ei ole tekstissä, joten ei ongelmaa).
+
+---
+
+## 3. palais-orsay (js/packs/monumentit-eurooppa.js rivi 229; maakartat viittaa tunnisteella hahmotelma-palais-orsay)
+
+### Jakso 1 ("alettiin rakentaa 1800-luvun alussa Napoleonin aikana ... valmistui noin 30 vuoden päästä") — OK, väite täsmällinen ja riittävän varovainen
+- Conseil d'État https://www.conseil-etat.fr/qui-sommes-nous/le-conseil-d-etat/histoire-et-patrimoine/les-lieux-du-conseil-d-etat/le-palais-d-orsay : "commencé sous le Premier Empire (1810), mais ne fut terminé qu'en 1840"; valtioneuvosto muuttaa 1840, Cour des comptes kaksi vuotta myöhemmin.
+- Pariszigzag https://www.pariszigzag.fr/insolite/monument-parisien-palais-immense-gare/ : Napoleon I aloitteentekijä, rakennus 1810–1838 (arkkitehti Bonnard), tarkoitettu ulkoministeriölle; valtioneuvosto 1840, Cour des comptes +2 v.
+- Napoleon.org https://www.napoleon.org/magazine/livres/le-palais-dorsay-une-autre-histoire-du-xixe-siecle/ : Napoleon päättää 1808, sodat nielevät budjetit, "à la chute de l'Empire les murs ne s'élèvent que de quelques mètres", Heinäkuun monarkia pelastaa ja viimeistelee; talo tulee Conseil d'Étatin ja Cour des comptesin kotipaikaksi.
+- Arvio: 1810 → 1838/1840 on "noin kolmekymmentä vuotta" (28–30). "Napoleonin aikana" koskee vain aloitusta ("alettiin"), ja lause tuo esiin viiveen ("vasta"). Hyväksyttävä sellaisenaan. Valinnainen tarkennus: "Napoleon määräsi sen rakennettavaksi, ja työt alkoivat vuonna 1810, mutta palatsi valmistui vasta 1830-luvun lopulla." (Lähteet: valmistuminen 1838 tai 1840 vaihtelee, joten "vasta 1830-luvun lopulla tai 1840" tai nykyinen "noin kolmenkymmenen vuoden päästä" on turvallinen.)
+- Valtioneuvosto ja tilintarkastustuomioistuin toimivat siellä: ylläolevat kolme lähdettä. OK.
+
+### Jakso 2 (Chassériaun freskot, kommuuni 1871, Zola) — OK
+- Chassériaun freskot Cour des comptesin portaikossa: Conseil d'État (freskot "peintes dans le grand escalier" paloivat), Pariszigzag (sama, Cour des comptes grand staircase).
+- Palo toukokuussa 1871 kommuunin aikana (23–24.5.1871): Conseil d'État; Pariszigzag ("semaine sanglante", 23.5.1871).
+- Zola, La Débâcle: Pariszigzag. Toinen avattu lähde puuttuu (hakutuloksen tiivistelmä mainitsi saman, mutta en avannut sitä).
+
+### Jakso 3 (freskot tuhoutuivat, rauniot, asema 1900) — OK
+- Freskot tuhoutuivat: Conseil d'État.
+- Rauniot noin kolmekymmentä vuotta, kunnes Compagnie du chemin de fer de Paris à Orléans osti paikan; asema vuoden 1900 maailmannäyttelyä varten (avattu 14.7.1900): Pariszigzag. Toinen avattu lähde: puuttuu (musée d'Orsay -sivut antoivat 403). "vuosikymmeniksi" on varovainen muoto.
+
+### Jakso 4 (museo, päätös 1977, avaus 1986) — OK (ei pyydetty, kevyt tarkistus)
+- Avajaiset 1.12.1986 ja yleisölle 9.12.1986: INA https://fresques.ina.fr/mitterrand/fiche-media/Mitter00295/francois-mitterrand-inaugure-le-musee-d-orsay.html . Päätös 20.10.1977 (ministeriöiden välinen neuvosto, Giscard d'Estaing): vain hakutuloksen otteena (musée d'Orsay -sivu 403), INA-sivu ei mainitse 1977. 1977 on siis tuettu yhdellä lähteellä (otteena); EPÄVARMA vain "kaksi avattua lähdettä" -mielessä.
+
+---
+
+## 4. palais-industrie (js/packs/monumentit-eurooppa.js rivi ~322)
+
+### Jakso 1 (suurhalli, "insinööri Barrault suunnitteli", 1855) — KORJAA (pieni)
+Ongelma: "jonka insinööri Barrault suunnitteli" antaa ymmärtää, että yksi insinööri suunnitteli koko hallin. Lähteet nimeävät useita:
+- Napoleon.org https://www.napoleon.org/histoire-des-2-empires/articles/1855-la-premiere-exposition-internationale-francaise/ : rakennus arkkitehtien Viel ja Desjardin(s) toteuttama; insinööri Alexis Barraultin suunnitelma, jonka Napoleon III valitsi; asetus 27.3.1852, valmis 1853.
+- Arthur Chandler http://www.arthurchandler.com/paris-1855-exposition : arkkitehti Jean-Marie Viel ja insinööri Barrault (rauta-lasirakenne) yhdessä; tilattu 1852, kesken vielä 15.5.1855 avajaisissa.
+- Cosmovisions https://cosmovisions.com/monuParisPalaisIndustrie.htm : "sur les plans des architectes Viel, Desjardins, Édouard Villain et de l'ingénieur Barrault", 1853–1855.
+Ehdotus: "Palais de l'Industrie oli Champs-Élysées'n tuntumaan rakennettu suurhalli, jonka arkkitehti Viel ja insinööri Barrault suunnittelivat Pariisin vuoden 1855 maailmannäyttelyä varten." (Jos vain Barrault halutaan nostaa esiin: "jonka suunnitteluun osallistui insinööri Barrault".) Muut väitteet (1855 maailmannäyttely, sijainti, Grand Palais nykyään paikalla): OK (Chandler, lavoixdeslieux https://www.lavoixdeslieux.fr/video-palais-de-l-industrie.php: purettu Grand/Petit Palais'n tieltä).
+
+### Jakso 2 (lasikatto rautarakenteen varassa; rauta kivimuurien sisään kätketty; kone-galleria Seinen varteen) — OK
+- Sanamuoto ei väitä lähteitä enempää: napoleon.org (arkkitehtuuriartikkeli) https://www.napoleon.org/histoire-des-2-empires/articles/larchitecture-metallique-sous-le-second-empire/ : verrière-kaaret lepäsivät onttojen valurautapylväiden varassa ja olivat piilossa "enveloppe en maçonnerie" -kuoren takana; Chandler: rauta-lasitynnyriholvi, jonka ulkopinta verhottiin kivellä ("sheathed the outside of the Palais with stone"). "rauta ... kätketty kivimuurien sisään" on oikea tiivistys.
+- "raskaiden" on lisäys (Chandlerin Giedion-lainauksen "cumbersome" ja napoleon.orgin "grosses colonnes" sävy); ei virhe, mutta ei suoraa vastinetta. Valinnainen: poista "raskaiden" ("kätketty kivimuurien sisään").
+- Konegalleria: napoleon.org 1855-artikkeli (Galerie des Machines lisätty laiturin varteen, koska hallissa oli vähän tilaa) + Chandler ("too small to house all the machinery exhibits ... a third gallery ... along the banks of the Seine"). OK. Tekstissä ei vuotta eikä mittoja. Hyvä.
+
+### Jakso 3 (päätösjuhla, yli tuhannen esittäjää, Berlioz johti kantaattinsa) — OK, hioa lukumäärää
+- Chandler: Berlioz, 1 200 esittäjää päätösseremoniassa (keskeytettiin); napoleon.org: "mille musiciens et choristes", Te Deum ja Cantate impériale, päätösjuhla Palais de l'Industriessa; Bru Zane https://www.bruzanemediabase.com/en/exploration/works/imperiale-op-26-l-lafont-berlioz : osa kantaatista kuultiin 15.11.1855 Palais de l'Industriessa, "more than 1200 choristers and instrumentalists" (yleinen, ei sidottu tähän päivään), kuusi kapellimestaria (Berlioz mukana).
+- "yli tuhannen" on tuettu (Chandler 1 200, Bru Zane yli 1 200), mutta napoleon.org sanoo "tuhat". Turvallisin ilmaisu kaikille lähteille: "noin tuhannen esittäjän" (tai "yli tuhannen", jos riittää kaksi lähdettä: Chandler + Bru Zane).
+- "Berlioz johti kantaattinsa": Chandler ja napoleon.org tukevat; Bru Zane ei erittele, kuka johti 15.11. (kuusi kapellimestaria). Sana "johti" kestää, koska Berlioz oli ylikapellimestari; teksti ei väitä esityksen onnistuneen kokonaan (Chandler: keskeytys). OK.
+
+### Jakso 4 (kaanne: purettu 1890-luvulla, uusi palatsi 1900 näyttelyä varten) — OK
+- Chandler: purettu 1897 "to make way for the 1900 fair"; lavoixdeslieux: "détruit en 1897 en prévision de celle de 1900"; cosmovisions: "démoli de 1897 à 1900"; (hakutulos: purku alkoi 1896/1897). "1890-luvulla" kattaa kaikki. Grand Palais valmistui 1900 samalle paikalle (cosmovisions: Petit Palais suunnilleen samalla paikalla; Grand Palais napoleon.org "Grand et Petit Palais avant l'Exposition de 1900"). Ei ristiriitaa.
+
+### Jakso 5 (tänään: 2021, 2024, 2025) — EI PYYDETTY, ei tarkistettu tässä kierroksessa.
+
+---
+
+## Yhteenveto toimenpiteistä
+1. Pasteur jakso 3: KORJAA (erota joutsenkaulapullot ja jäätikköretki; ehdotus yllä).
+2. Industrie jakso 1: KORJAA (lisää arkkitehti Viel tai "suunnitteluun osallistui"; ehdotus yllä).
+3. Industrie jakso 3: valinnainen "noin tuhannen"; jakso 2: valinnainen "raskaiden" pois.
+4. Pasteur jakso 4: valinnainen järjestys "julkaisi ... ja voitti kiistan".
+5. Lavoisier: OK; valinnainen "johti" -> "valvoi".
+6. Orsay: OK; valinnainen tarkennus Napoleonin alkuvaiheen hitaudesta.
+
+Heikoimmin katetut kohdat (kaksi avattua lähdettä ei täyttynyt): Pasteurin jäätikkövuosi 1860 (Gallica vain otteena), Orsayn 1977-päätös, Zola (La Débâcle) ja asema 1900 (yksi avattu: Pariszigzag; Conseil d'Étatin sivu ei mainitse asemaa), Lavoisierin välineet Arts et Métiers -museossa (toinen lähde heikko), Pasteurin "käyminen mikrobien työtä".
+
+---
+
+## Uusintakierros (kärki c10b182f6b; tekstit luettu tiedostoista)
+
+Pasteur (pasteur-1862):
+- J1 "Pasteur tuli kouluun vuonna 1857 tieteellisten opintojen johtajaksi." — OK (ENS 22.10.1857; Amis de Pasteur; Institut Pasteurin näyttely).
+- J3 "Liemipulloja hän vei jopa Alppien jäätikölle vuonna 1860, missä ilmassa oli vain vähän pölyä." — OK. Pullotyyppiä ei enää väitetä; ristiriita (suljetut vs. joutsenkaula) on poistettu. Jäätikkövuosi 1860 ja vähäinen mikrobimäärä korkealla: Gallica BnF (otteena), Kronecker Wallis https://www.kroneckerwallis.com/pasteur-and-the-end-of-spontaneous-generation/ (Mer de Glace, vain pieni osa 20 pullosta pilaantui). Valinnainen pieni tarkennus: lähteissä vähäistä on "mikrobit/itiöt", pöly on Pasteurin selitys; täysin tarkka muoto olisi "jossa ilmassa oli vähän mikrobeja", mutta "pölyä" sopii edellisen virkkeen pölyyn eikä ole virhe. Kielellinen huomio: "jossa" olisi "missä" sujuvampi.
+
+Industrie (palais-industrie):
+- J1 "Sen suunnitteluun osallistui insinööri Barrault, ja hallin paikalla seisoo nykyään Grand Palais." — OK (napoleon.org, Chandler, Cosmovisions: Barrault insinöörinä muiden rinnalla; "osallistui" ei väitä yksinoikeutta).
+- J2 "...rauta oli kätketty kivimuurien sisään..." — OK (napoleon.org arkkitehtuuriartikkeli: "enveloppe en maçonnerie"; Chandler: ulkopinta verhottu kivellä).
+- J3 "noin tuhannen esittäjän" — OK (napoleon.org "mille", Chandler 1 200, Bru Zane yli 1 200; "noin" kattaa kaikki).
+
+Tulos: kaikki OK, ei uusia KORJAA-kohtia.
