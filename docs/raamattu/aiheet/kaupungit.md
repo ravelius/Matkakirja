@@ -9,7 +9,7 @@ SÄÄNNÖT:
 4. Uusi tekotapa ensin pienellä alueella, koko kaupunkiin hyväksyttynä. [P-261109-2]
 5. Pohjakartan säännöt (piirretty kartta, kattoväri, asfaltti): → kortti kaupungin-pohja. [R-2.204] [P-261102-2] [P-261115-22] [P-261118-21] [P-261118-22]
 6. Viisi ensimmäistä: Pariisi, Lontoo, Amsterdam, Wien, Rooma, kartta ensin näille; muita ei lukita ennen läpipeluuta. Pariisiin ei uusia käsin tehtyjä kohteita (merkkirakennus, hologrammi, karttakohde); tekeillä olevat valmiiksi, toinen kierros odottaa. [P-261114-14] [R-2.215] [P-261112-13] [P-261112-35] [P-261113-2] [P-261113-3] [P-261113-8]
-7. Nimen tai merkin napautus lentää kaupunkiin (60°, kierto), ei korttia. Avauskortti (kuva, esittely, nähtävyyskartta, turisti-info) pienestä kutsukortista; piirroskartan kaupungissa kohteista. Saapuessa ei avaudu mitään; kaupunkilehti syventää. [P-261110-11] [P-261102-3] [R-2.138] [P-261112-32]
+7. Nimen tai merkin napautus lentää kaupunkiin (60°, kierto), ei korttia. Avauskortti pienestä kutsukortista; piirroskartan kaupungissa kohteista. Saapuessa ei avaudu mitään; kaupunkilehti syventää. [P-261110-11] [P-261102-3] [R-2.138] [P-261112-32] Nähtävyyksien pienoiskuvat vain nähtävyyskartassa. [P-261120-17]
 8. Fokusvirran kortit eivät näy kaupungeissa. Täysi sisältö vain pää- ja aarrekaupungilla. [R-2.10]
 9. Maa ilman pelikaupunkia saa sellaisen Firenzen mallilla; reitit tarkistetaan sitten. [R-2.147]
 10. Jokaisen maan pääkaupunki on oma kokoelmansa, ei pysäkki eikä reitti; napautus avaa maakortin. Maa ilman pelikaupunkia näyttää pääkaupunkinsa aina. [R-1.13]
