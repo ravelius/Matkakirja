@@ -5069,6 +5069,11 @@ function kohteenIhmekuva(kohde) {
      */
     ...(ihme.lyhyt ? { lyhyt: ihme.lyhyt } : {}),
     lahde: ihme.lahde ?? '',
+    // Aito kuva ihmeen kuvana (K-4 erä 2, B: ihmeen osoite = noston J1): laji, tekijä, lisenssi ja mitat kulkevat mukana.
+    ...(ihme.laji ? { laji: ihme.laji } : {}),
+    ...(ihme.tekija ? { tekija: ihme.tekija } : {}),
+    ...(ihme.lisenssi ? { lisenssi: ihme.lisenssi } : {}),
+    ...(Number.isInteger(ihme.leveys) && Number.isInteger(ihme.korkeus) ? { leveys: ihme.leveys, korkeus: ihme.korkeus } : {}),
     /*
      * FAKTALÄHTEEN OSOITE kulkee kuvan mukana samalla nimellä kuin
      * muissa havainnekuvissa (js/packs/historian-hetket.js kuvat).
@@ -5092,7 +5097,8 @@ function kohteenIhmekuva(kohde) {
      * mukana, eikä yksikään niistä tarvitse tietää ihmeistä mitään.
      * Lähderivit ovat sisältöä ja ne muuttuvat; tämä kenttä ei.
      */
-    ihmekuva: true,
+    // Aito kuva (laji muu kuin havainnekuva) ei ole rekonstruktio: ei ihmekuvan selitettä "Mihin ihmeen kuva perustuu?".
+    ihmekuva: !ihme.laji || ihme.laji === 'havainnekuva',
     // Suurennos saa oman reaktiorivinsä (avaaKohdeSuurennos ja
     // js/ui.js naytaKulttuuriKuva lukevat tämän kentän).
     reaktio: ihmeReaktioTunniste(kohde?.nimi),

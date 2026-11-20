@@ -436,7 +436,8 @@ test('jokaisella fokusvirran kuvalla on selite ja lähde', () => {
     for (const kuva of kuvat) {
       assert.ok(kuva.tiedosto || kuva.ampari || kuva.osoite,
         `${kaupunki}: kuvalla ei ole tiedostoa, ämpäripolkua eikä osoitetta`);
-      if (kuva.osoite) {
+      // K-4 erä 2: ämpäriosoite (https://media.matkakirja.app/kuvat/…) ei ole repon tiedosto; muoto tarkistetaan, ei levyä.
+      if (kuva.osoite && !/^https?:\/\//.test(kuva.osoite)) {
         assert.ok(existsSync(new URL(`../${kuva.osoite}`, import.meta.url)),
           `${kaupunki}: repon oman kuvan tiedostoa ei ole (${kuva.osoite})`);
       }
@@ -467,9 +468,9 @@ test('syvennyksen kakkoskuva on eri kuva kuin pääkuva', () => {
   for (const [mista, kortti] of parit) {
     assert.ok(kortti.kuva?.osoite,
       `${mista}: kakkoskuvallisen kortin pääkuvan pitää olla repon oma havainnekuva`);
-    assert.notEqual(kortti.valokuva.tiedosto, kortti.kuva.tiedosto,
+    assert.notEqual(kortti.valokuva.tiedosto ?? kortti.valokuva.osoite, kortti.kuva.tiedosto ?? kortti.kuva.osoite,
       `${mista}: sama tiedosto sekä pää- että kakkoskuvana`);
-    assert.ok(kortti.valokuva.tiedosto || kortti.valokuva.ampari,
+    assert.ok(kortti.valokuva.tiedosto || kortti.valokuva.ampari || kortti.valokuva.osoite,
       `${mista}: kakkoskuva on todistekuva, ei toinen havainnekuva`);
   }
 });
@@ -903,7 +904,8 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
        * ole tarkistettavana, joten siitä tarkistetaan muoto: sama
        * ämpäri (js/media.js PEILI_JUURI) ja sama ihme-etuliite.
        */
-      const amparissa = osoite?.startsWith(`${PEILI_JUURI}kohtaamiset/ihmeet/ihme-`);
+      // K-4 erä 2 (B): ihmeen kuva voi olla noston J1:n aito kuva ämpärin kuvat-kansiossa (sama osoite, ei kaksoiskuvaa).
+      const amparissa = osoite?.startsWith(`${PEILI_JUURI}kohtaamiset/ihmeet/ihme-`) || osoite?.startsWith(`${PEILI_JUURI}kuvat/`);
       if (!amparissa) {
         // Poikkeus: nostokuva käy ihmekuvana (Rotunde, KK 17.11.2026 klo 10.43: repon nosto-rotunde-loistoaika.webp).
         assert.ok(osoite?.startsWith('assets/kartat/ihmeet/ihme-') || osoite?.startsWith('assets/kartat/nostot/nosto-'),
@@ -918,8 +920,15 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
       assert.ok(!/^Havainnekuva/i.test(selite),
         `${tunnus}: ihmekuvan selite kertoo kohteesta, ei kuvasta`);
       // Poikkeus: oikea valokuva (Porto di Ripetta n. 1865, KK 17.11.2026 11.58) merkitään valokuvaksi, ei havainnekuvaksi.
-      assert.ok(/^(Matkakirjan havainnekuva|Valokuva):/.test(lahde ?? ''),
-        `${tunnus}: lähderivin on merkittävä kuva havainnekuvaksi tai valokuvaksi`);
+      // K-4 erä 2 (B): ihmeen kuva on noston J1:n aito kuva (laji piirros/valokuva/maalaus…): lähde kertoo tekijän ja lisenssin.
+      const aito = kohde.ihme.laji && kohde.ihme.laji !== 'havainnekuva';
+      if (aito) {
+        assert.ok(kohde.ihme.tekija && kohde.ihme.lisenssi && /Wikimedia Commons|Paris Musées/.test(lahde ?? ''),
+          `${tunnus}: aidon ihmekuvan tekijä, lisenssi ja lähde puuttuvat`);
+      } else {
+        assert.ok(/^(Matkakirjan havainnekuva|Valokuva):/.test(lahde ?? ''),
+          `${tunnus}: lähderivin on merkittävä kuva havainnekuvaksi tai valokuvaksi`);
+      }
       // Esilatauslista koskee vain repon omia tiedostoja: ämpärikuvaa
       // sw.js ei asennuksessa hae (ks. osoitemuodot yllä).
       if (!amparissa) {

@@ -51,7 +51,7 @@ const kohde = ({ id, nimi, nimio, nappi, laudat, teksti, lahde, kuva, url }) => 
  */
 const ihmeKohde = ({
   id, nimi, nimio, kysymykset, korostukset, nappi, laudat, teksti, lahde, kuva, lyhyt, selite, ihmeLahde, url,
-  otsikko, aanikansio, jaksot, jaksokuvat, visa,
+  otsikko, aanikansio, jaksot, jaksokuvat, visa, ihmeJaksokuva,
 }) => ({
   id: `hahmotelma-${id}`,
   nimi,
@@ -71,14 +71,29 @@ const ihmeKohde = ({
   ...(jaksokuvat ? { jaksokuvat } : {}),
   ...(visa ? { visa } : {}),
   lahde,
-  ihme: {
-    osoite: `https://media.matkakirja.app/kohtaamiset/ihmeet/${kuva}`,
-    kadonnut: true,
-    lyhyt,
-    selite,
-    lahde: ihmeLahde,
-    url,
-  },
+  // ihmeJaksokuva = jaksokuvat-avain: ihmeen kuva on noston J1:n aito kuva (sama osoite, ei kaksoiskuvaa; K-4 erä 2, B).
+  ihme: ihmeJaksokuva
+    ? {
+      osoite: jaksokuvat[ihmeJaksokuva].osoite,
+      kadonnut: true,
+      lyhyt: jaksokuvat[ihmeJaksokuva].lyhyt,
+      selite,
+      lahde: jaksokuvat[ihmeJaksokuva].lahde,
+      laji: jaksokuvat[ihmeJaksokuva].laji,
+      tekija: jaksokuvat[ihmeJaksokuva].tekija,
+      lisenssi: jaksokuvat[ihmeJaksokuva].lisenssi,
+      leveys: jaksokuvat[ihmeJaksokuva].leveys,
+      korkeus: jaksokuvat[ihmeJaksokuva].korkeus,
+      url,
+    }
+    : {
+      osoite: `https://media.matkakirja.app/kohtaamiset/ihmeet/${kuva}`,
+      kadonnut: true,
+      lyhyt,
+      selite,
+      lahde: ihmeLahde,
+      url,
+    },
 });
 
 /*
@@ -258,7 +273,7 @@ export const EUROOPAN_KADONNEET = {
       lahde: 'Matkakirjan oma teksti · lähteinä Pariisin kaupungin sivut (paris.fr), Parcours Révolution, '
         + 'France Pittoresque, Pariszigzag, Criminocorpus, Histoires de Paris ja Musée Carnavalet '
         + '(avatut sivut, tarkistettu 20.11.2026).',
-      kuva: 'ihme-grand-chatelet-loistoaika.jpg',
+      kuva: null, ihmeJaksokuva: 'linnake', // vanha ihmekuva ihme-grand-chatelet-loistoaika.jpg korvattu noston J1:llä
       lyhyt: 'Kärryt ja kulkijat tunkevat Grand Châtelet\'n holvikäytävän läpi, ja ilma haisee läheisistä '
         + 'teurastamoista; reilut viisikymmentä vuotta myöhemmin purku alkaa.',
       selite: 'Noin vuonna 1750 kuormat, kantajat ja kauppiaat tunkevat Grand Châtelet\'n holvikäytävän läpi, '
@@ -363,7 +378,7 @@ export const EUROOPAN_KADONNEET = {
         + '-sivusto, French Empire -sivusto ja Geri Walton (avatut sivut, tarkistettu 20.11.2026).',
       // Vaatetorikuva -v2 (omistaja 9.11. 19.06 "teksti kuvan mukaiseksi", PT B): vanhalla nimellä CDN tarjosi
       // 31.10. 14.02 torikuvaa ja alkuperä ritarikuvaa; uusi nimi ohittaa välimuistin, vanha nimi jää ämpäriin.
-      kuva: 'ihme-temple-torni-loistoaika-v2.jpg',
+      kuva: null, ihmeJaksokuva: 'linnoitus', // vanha ihmekuva ihme-temple-torni-loistoaika-v2.jpg korvattu noston J1:llä
       lyhyt: 'Vaatekauppiaat tinkivät kankaista Templen alueella, ja vanha ritaritorni kohoaa torin yllä; '
         + 'muutaman vuoden päästä Napoleon käskee purkaa sen.',
       selite: 'Noin vuonna 1805 vaatekauppiaat ovat levittäneet pöydilleen takkeja, liinavaatteita ja '
@@ -723,7 +738,7 @@ export const EUROOPAN_KADONNEET = {
         + 'l\'Exposition universelle de 1878 (1880), Auditorium de Lyon, Henle, Pariisin kaupungin '
         + 'Chaillot-sivu, Hérodote, Encyclopædia Universalis, En attendant Nadeau ja INHA (avatut '
         + 'sivut, tarkistettu 20.11.2026).',
-      kuva: 'ihme-trocadero-loistoaika.jpg',
+      kuva: null, ihmeJaksokuva: 'kaiverrus1878', // vanha ihmekuva ihme-trocadero-loistoaika.jpg korvattu noston J1:llä
       lyhyt: 'Kesäpukuiset pariisilaisperheet seisovat kaskadin reunalla ihailemassa palatsin kahta tornia, ja '
         + 'sisällä suuressa salissa soivat vastavihityt urut; viisikymmentäseitsemän vuotta myöhemmin '
         + 'keskiosa puretaan.',
@@ -803,7 +818,7 @@ export const EUROOPAN_KADONNEET = {
           osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-galerie-des-machines-loistoaika-3x2.jpg',
           laji: 'havainnekuva',
           lyhyt: 'Galerie des Machines loistoaikanaan',
-          lahde: 'Matkakirjan havainnekuva (tekoälyllä tuotettu), rajattu',
+          lahde: 'Tekoälyllä tuotettu havainnekuva; Matkakirjan havainnekuva, rajattu',
           tekija: 'Matkakirja (tekoälyllä tuotettu havainnekuva)',
           lisenssi: 'Matkakirjan oma',
           leveys: 1200,
