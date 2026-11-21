@@ -54,10 +54,11 @@
   "1.73": "77f47dd47f24129c",
   "1.74": "2780a8a9f1a459d7",
   "1.75": "915f10bade2f65f3",
-  "1.76": "2a9d84985583a1a4"
+  "1.76": "2a9d84985583a1a4",
+  "1.77": "6fd86e4c49df5493"
  },
  "uusin": {
-  "skeemaversio": "1.76",
+  "skeemaversio": "1.77",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -564,6 +565,7 @@
     "nimi"
    ],
    "monumentit": [
+    "aanikansio",
     "data",
     "id",
     "ihme",

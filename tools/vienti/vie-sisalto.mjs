@@ -330,8 +330,12 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        SK:n Les Halles hahmotelma-les-halles): hahmotelman nosto jaksoiksi samassa muodossa kuin fokuskohteen (Tuileries) jaksot,
  *        valinnaiset kentät (aanikansio kun äänet tehty). Natiivi NostoSisalto/NostoJaksot (NUI). Vanhat buildit ohittavat kentät.
  *        Hetken jaksot (historianHetket.jaksot, KK 21.22) tulevat omana nostonaan, kun SK:n ensimmäinen hetki jaksoineen on paketissa.
+ *   1.77 monumentit.aanikansio (Pelikoodari 21.11.2026; KK:n päätös 13.51, omistaja P-261121-16 Pariisin kuusi tarinaa): hahmotelman
+ *        noston äänikansio ja jaksojen aanite samassa muodossa kuin fokuskohteissa (Bastilji): ämpäri aanet/<aanikansio>/<aanite>.mp3
+ *        + .sanat.json. Ensimmäisenä Les Halles (les-halles/v2). Natiivi NostoJaksot.Lue lukee kentän raakadatasta kaikille lajeille
+ *        (Peli-testit NostoJaksotTestit.MonumentinAanikansio); vanhat buildit lukevat sen samalla koodilla tai ohittavat sen.
  */
-export const SKEEMAVERSIO_TARKKA = '1.76';
+export const SKEEMAVERSIO_TARKKA = '1.77';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;

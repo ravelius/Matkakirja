@@ -894,10 +894,14 @@ export const EUROOPAN_KADONNEET = {
       laudat: { maailmankartta: { x: 5911.5, y: 1439.4 }, europe: { x: 256.2, y: 608.5 } },
       // teksti lasketaan jaksoista (ks. ihmeKohde). Lähdeaineisto: docs/raportit/les-halles-nosto-teksti-20261117.md.
       otsikko: 'Pariisin vatsa, jonka tilalle jäi reikä',
+      // Äänet (skeema 1.77; omistaja 21.11.2026 13.09 P-261121-16, KK 13.51): ämpärin äänikansio les-halles/v2 (<aanite>.mp3 + .sanat.json),
+      // paketti proto-3d/_valmiit/les-halles-v2-vienti-20261121 (viisi jaksoa, kertoja-N-jaksoN). v1 ei muutu.
+      aanikansio: 'les-halles/v2',
       jaksot: [
         {
           osa: 'tapahtuma',
           kuva: 'marville',
+          aanite: 'kertoja-1-jakso1',
           teksti: 'Les Hallesin hallit olivat Pariisin ruokatori, jonka historia ulottuu 1100-luvulle. Kuningas '
             + 'Philippe Auguste rakennutti sinne 1183 ensimmäiset katetut hallit.',
           vuodet: [
@@ -907,6 +911,7 @@ export const EUROOPAN_KADONNEET = {
         {
           osa: 'tapahtuma',
           kuva: 'marville',
+          aanite: 'kertoja-2-jakso2',
           teksti: 'Arkkitehti Victor Baltard suunnitteli ensin kivihallin, mutta Napoleon III halusi metallia. '
             + 'Siksi paikalle rakennettiin 1850-luvulta alkaen kymmenen paviljonkia raudasta ja lasista. Niissä '
             + 'myytiin vihanneksia, kalaa ja lihaa.',
@@ -914,6 +919,7 @@ export const EUROOPAN_KADONNEET = {
         {
           osa: 'tapahtuma',
           kuva: 'loisto',
+          aanite: 'kertoja-3-jakso3',
           teksti: 'Émile Zola kutsui halleja Pariisin vatsaksi samannimisessä romaanissaan, joka ilmestyi 1873. '
             + 'Vuonna 1969 tukkukauppa muutti Rungisiin, ja hallit jäivät tyhjiksi.',
           vuodet: [
@@ -924,6 +930,7 @@ export const EUROOPAN_KADONNEET = {
         {
           osa: 'kaanne',
           kuva: 'purku',
+          aanite: 'kertoja-4-jakso4',
           teksti: 'Hallit purettiin 1970-luvun alussa, vaikka moni vastusti purkua. Jäljelle jäi niin suuri kuoppa, '
             + 'että sitä kutsuttiin Les Hallesin reiäksi.',
           hologrammi: 'sammuu',
@@ -932,6 +939,7 @@ export const EUROOPAN_KADONNEET = {
         {
           osa: 'tanaan',
           kuva: 'nogent',
+          aanite: 'kertoja-5-jakso5',
           teksti: 'Yksi paviljonki purettiin osiin ja pystytettiin uudelleen Nogent-sur-Marneen. Hallien paikalle '
             + 'avattiin vuonna 1979 Forum des Halles -ostoskeskus.',
           vuodet: [
