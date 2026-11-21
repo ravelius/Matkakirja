@@ -82,6 +82,13 @@ if (!process.env.NODE_USE_ENV_PROXY && (process.env.HTTPS_PROXY || process.env.h
   process.exit(ajo.status ?? 1);
 }
 
+// SK 21.11.2026: `--haku KUVAILE` ajaa tools/kuvailu/kyselyt.json-listan kuvailutiedot (ei latausta) tiedostoon ehdokkaat.json.
+if (process.argv.includes('KUVAILE')) {
+  process.argv = [process.argv[0], process.argv[1], resolve(JUURI, 'tools/kuvailu/kyselyt.json'), 'ehdokkaat.json'];
+  await import('./freesound-kuvailu.mjs');
+  process.exit(0);
+}
+
 /*
  * Avain luetaan useasta nimestä.
  *
