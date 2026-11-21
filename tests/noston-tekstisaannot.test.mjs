@@ -112,8 +112,8 @@ test('erät 1 ja 2 (17 jaksollista): neljä tai viisi jaksoa, pituus 700–1 000
     if (!/^[^.]{3,40}$/.test(k.otsikko) || /\d{4}/.test(k.otsikko) || k.otsikko.length > 40) virheet.push(`${id}: tarinarivi "${k.otsikko}"`);
   }
   assert.deepEqual(virheet, []);
-  // M5: Tuileries'n vanha äänikansio pois (vanha otto ei saa soida uuden tekstin päällä); Bastiljilla säilyy, ja äänitetyt palat ovat ennallaan.
-  assert.equal(kaikki.find((x) => x.id === 'tuileries').aanikansio, undefined);
+  // M5: Tuileries'n vanha äänikansio (koe/v1) pois, uusi tekstin mukainen v2 (21.11.2026); Bastiljilla säilyy v1, ja äänitetyt palat ovat ennallaan.
+  assert.equal(kaikki.find((x) => x.id === 'tuileries').aanikansio, 'tuileries/v2');
   const b = kaikki.find((x) => x.id === 'bastilji');
   assert.equal(b.aanikansio, 'bastilji/v1');
   assert.deepEqual(b.jaksot.map((x) => x.aanite), ['kertoja-1-otsikko-jakso2', 'kertoja-2-jakso3', 'kertoja-3-jakso4', 'kertoja-4-jakso5']);

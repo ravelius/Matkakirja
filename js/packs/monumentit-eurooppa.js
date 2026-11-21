@@ -177,9 +177,11 @@ export const EUROOPAN_KADONNEET = {
       laudat: { maailmankartta: { x: 5911.6, y: 1439.6 }, europe: { x: 256.3, y: 608.6 } },
       // teksti lasketaan jaksoista (ks. ihmeKohde). Erä 2 (L5-4, KK 20.11.2026): jaksollinen kuten Palais de l'Industrie; raportti docs/raportit/pariisi-nostot-era2-teksti-20261120.md.
       otsikko: 'Linnake, josta tuli ruumishuone',
+      aanikansio: 'grand-chatelet/v2',
       jaksot: [
         {
           osa: 'tapahtuma',
+          aanite: 'kertoja-1-jakso1',
           kuva: 'linnake',
           teksti: 'Grand Châtelet oli Pariisin vankila- ja oikeuslinnake Seinen oikealla rannalla. Ludvig VI '
             + 'rakennutti sen kiveksi 1100-luvulla, ja kun kaupungin ympärille alettiin rakentaa muuria vuonna 1190, siitä '
@@ -190,6 +192,7 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'tapahtuma',
+          aanite: 'kertoja-2-jakso2',
           kuva: 'vankila',
           teksti: 'Vankeina olivat François Villon, Molière velkojen takia vuonna 1645 ja rosvopäällikkö '
             + 'Cartouche vuonna 1721. Linnakkeen kuoppasolu, la Fosse, kapeni alaspäin kuin kartio, eikä '
@@ -201,6 +204,7 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'tapahtuma',
+          aanite: 'kertoja-3-jakso3',
           kuva: 'vankila',
           teksti: 'Linnakkeessa oli myös ruumishuone, ranskaksi morgue. Sanan sanotaan syntyneen täällä: '
             + 'vartijat tuijottivat uutta vankia pitkään painaakseen hänen kasvonsa mieleen, jos hän pakenisi. '
@@ -208,6 +212,7 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'kaanne',
+          aanite: 'kertoja-4-jakso4',
           kuva: 'purku',
           teksti: 'Syyskuun alussa 1792 joukko tunkeutui linnakkeeseen ja surmasi vankeja, ja vankila '
             + 'hylättiin. Linnakkeen purku alkoi vuonna 1802.',
@@ -220,6 +225,7 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'tanaan',
+          aanite: 'kertoja-5-jakso5',
           kuva: 'nykyinen',
           teksti: 'Paikalle tehtiin uusi Place du Châtelet. Napoleon tilasi sinne vuonna 1806 '
             + 'palmusuihkulähteen voitonmuistomerkiksi. Fontaine du Palmier seisoo aukiolla yhä.',
@@ -416,9 +422,11 @@ export const EUROOPAN_KADONNEET = {
       laudat: { maailmankartta: { x: 5910.9, y: 1439.5 }, europe: { x: 255.9, y: 608.6 } },
       // teksti lasketaan jaksoista (ks. ihmeKohde). Lähdeaineisto: docs/raportit/palais-orsay-nosto-teksti-20261118.md.
       otsikko: 'Palatsi, jonka paikalle tuli asema',
+      aanikansio: 'palais-orsay/v2',
       jaksot: [
         {
           osa: 'tapahtuma',
+          aanite: 'kertoja-1-jakso1',
           kuva: 'loisto',
           teksti: 'Palais d\'Orsay oli hallintopalatsi Seinen rannalla Pariisissa. Sitä alettiin rakentaa 1800-luvun '
             + 'alussa Napoleonin aikana, ja se valmistui vasta noin kolmenkymmenen vuoden päästä. Siellä '
@@ -426,6 +434,7 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'tapahtuma',
+          aanite: 'kertoja-2-jakso2',
           kuva: 'palo',
           teksti: 'Tilintarkastustuomioistuimen portaikon seinille Théodore Chassériau maalasi freskot. Pariisin '
             + 'kommuunin aikana, toukokuussa 1871, palatsi paloi. Émile Zola kuvasi tulipaloa romaanissaan La '
@@ -436,6 +445,7 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'kaanne',
+          aanite: 'kertoja-3-jakso3',
           kuva: 'rauniot',
           teksti: 'Tuli tuhosi freskoja. Rauniot jäivät keskelle Pariisia vuosikymmeniksi. Vuonna 1900 '
             + 'maailmannäyttelyä varten niiden paikalle rakennettiin rautatieasema.',
@@ -447,6 +457,7 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'tanaan',
+          aanite: 'kertoja-4-jakso4',
           kuva: 'museo',
           teksti: 'Asemasta tuli Orsayn taidemuseo. Rakennus päätettiin vuonna 1977 muuttaa museoksi, ja museo '
             + 'avattiin yleisölle vuonna 1986. Se seisoo yhä Seinen rannalla, samalla paikalla kuin palatsi.',
@@ -532,9 +543,11 @@ export const EUROOPAN_KADONNEET = {
       laudat: { maailmankartta: { x: 5910.4, y: 1439.2 }, europe: { x: 255.6, y: 608.4 } },
       // teksti lasketaan jaksoista (ks. ihmeKohde). Lähdeaineisto: docs/raportit/palais-industrie-grand-palais-nosto-teksti-20261118.md.
       otsikko: 'Halli, jonka paikalle tuli Grand Palais',
+      aanikansio: 'palais-industrie/v2',
       jaksot: [
         {
           osa: 'tapahtuma',
+          aanite: 'kertoja-1-jakso1',
           kuva: 'portti',
           teksti: 'Palais de l\'Industrie oli Pariisin vuoden 1855 maailmannäyttelyä varten rakennettu suurhalli '
             + 'Champs-Élysées\'n tuntumassa. Sen suunnitteluun osallistui insinööri Barrault, ja hallin paikalla '
@@ -545,6 +558,7 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'tapahtuma',
+          aanite: 'kertoja-2-jakso2',
           kuva: 'loisto',
           teksti: 'Hallin lasikatto oli rautarakenteen varassa, mutta rauta oli kätketty kivimuurien '
             + 'sisään. Päähalliin ei mahtunut kaikkia koneita, joten Seinen varteen rakennettiin niille '
@@ -552,12 +566,14 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'tapahtuma',
+          aanite: 'kertoja-3-jakso3',
           kuva: 'loisto',
           teksti: 'Näyttelyn päätösjuhlassa hallissa soi noin tuhannen esittäjän musiikki, kun säveltäjä Berlioz '
             + 'johti kantaattinsa.',
         },
         {
           osa: 'kaanne',
+          aanite: 'kertoja-4-jakso4',
           kuva: 'purku',
           teksti: 'Halli ei saanut jäädä. Se purettiin 1890-luvulla, jotta paikalle voitiin rakentaa uusi palatsi '
             + 'vuoden 1900 maailmannäyttelyä varten.',
@@ -569,6 +585,7 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'tanaan',
+          aanite: 'kertoja-5-jakso5',
           kuva: 'grandpalais',
           teksti: 'Paikalle rakennettiin lasikattoinen Grand Palais. Rakennus suljettiin kunnostukseen vuonna 2021. '
             + 'Kesällä 2024 sen lasikaton alla miekkailtiin Pariisin olympialaisissa, ja kunnostuksen jälkeen '
@@ -654,9 +671,11 @@ export const EUROOPAN_KADONNEET = {
       laudat: { maailmankartta: { x: 5909.6, y: 1439.4 }, europe: { x: 255.1, y: 608.5 } },
       // teksti lasketaan jaksoista (ks. ihmeKohde). Erä 2 (L5-4, KK 20.11.2026): jaksollinen kuten Palais de l'Industrie; raportti docs/raportit/pariisi-nostot-era2-teksti-20261120.md.
       otsikko: 'Palatsi, jonka urut selvisivät',
+      aanikansio: 'trocadero/v2',
       jaksot: [
         {
           osa: 'tapahtuma',
+          aanite: 'kertoja-1-jakso1',
           kuva: 'kaiverrus1878',
           teksti: 'Trocadéron palatsi rakennettiin vuoden 1878 maailmannäyttelyä varten Seinen pohjoisrannalle. '
             + 'Siinä oli kaksi korkeaa tornia, kaksi suurta siipeä ja yli neljän tuhannen paikan sali.',
@@ -666,12 +685,14 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'tapahtuma',
+          aanite: 'kertoja-2-jakso2',
           kuva: 'sali',
           teksti: 'Salin Cavaillé-Collin urut vihittiin elokuussa 1878, ja César Franck sävelsi niille kolmen '
             + 'kappaleen sarjan Trois Pièces.',
         },
         {
           osa: 'tapahtuma',
+          aanite: 'kertoja-3-jakso3',
           kuva: 'sali',
           teksti: 'Palatsiin kuului myös etnografinen museo, joka syntyi vuoden 1878 näyttelystä ja avattiin '
             + 'yleisölle vuonna 1882. 1920-luvulla museo oli päässyt rappiolle.',
@@ -681,6 +702,7 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'kaanne',
+          aanite: 'kertoja-4-jakso4',
           kuva: 'purku',
           teksti: 'Vuonna 1935 alkoi palatsin purku vuoden 1937 näyttelyn tieltä, ja siivet jäivät uuden '
             + 'Chaillot\'n palatsin osiksi.',
@@ -693,6 +715,7 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'tanaan',
+          aanite: 'kertoja-5-jakso5',
           kuva: 'nykyinen',
           teksti: 'Chaillot\'n palatsissa YK:n yleiskokous hyväksyi vuonna 1948 ihmisoikeuksien '
             + 'yleismaailmallisen julistuksen. Trocadéron urut soivat nykyisin Lyonissa, jonne ne '
