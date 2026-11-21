@@ -324,14 +324,11 @@ export const FOKUSKOHTEET_FRA = [
     lahde: 'Matkakirjan oma teksti · lähteinä Musée du Louvre, Sortiraparis, Europeana, CrimeReads ja '
       + 'Spokesman-Review / Washington Post (tarkistettu 17.11.2026).',
     otsikko: 'Päivä, jona Mona Lisa katosi',
-    /*
-     * Äänitteitä ei ole vielä: `aanikansio` ja jaksojen `aanite` lisätään, kun Äänittäjä on
-     * äänittänyt (äänitysjonon rivit ovat data/aanitysjono.tsv:ssä). Siihen asti jaksot
-     * kuuluvat suoratoistona.
-     */
+    aanikansio: 'louvre/v2',
     jaksot: [
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-1-jakso1',
         kuva: 'julkisivu',
         teksti: 'Louvre oli ennen kuninkaiden palatsi, ja museoksi se avattiin vuonna 1793. Yli sata vuotta '
           + 'myöhemmin sen seinältä varastettiin Mona Lisa.',
@@ -341,6 +338,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-2-jakso2',
         kuva: 'varkaus',
         teksti: 'Maanantaina elokuussa 1911 Louvre oli suljettu. Valkoiseen työtakkiin pukeutunut mies nosti Mona '
           + 'Lisan seinältä, ja lukitun oven avasi hänelle putkimies.',
@@ -350,12 +348,14 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-3-jakso3',
         teksti: 'Kukaan ei huomannut mitään ennen seuraavaa päivää. Silloin maalari tuli kopioimaan taulua ja '
           + 'löysi tyhjän seinän. Poliisi pidätti runoilija Guillaume Apollinairen, ja Pablo Picasso joutui '
           + 'epäillyksi.',
       },
       {
         osa: 'kaanne',
+        aanite: 'kertoja-4-jakso4',
         kuva: 'uffizi1913',
         teksti: 'Varas oli Louvressa työskennellyt lasittaja Vincenzo Peruggia, jonka poliisi oli jo '
           + 'kuulustellut. Taulu odotti laatikossa yli kaksi vuotta, kunnes hän tarjosi sitä vuonna 1913 '
@@ -367,6 +367,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tanaan',
+        aanite: 'kertoja-5-jakso5',
         kuva: 'jono',
         teksti: 'Mona Lisa palasi Louvreen vuonna 1914, ja varkaus teki siitä entistä kuuluisamman. Nykyään se on '
           + 'Louvren ensimmäisessä kerroksessa. Sen edessä on jono, ja taulua vartioidaan tarkasti.',
@@ -656,15 +657,18 @@ export const FOKUSKOHTEET_FRA = [
       + 'Science News Explores, Architizer ja Mental Floss (torni) sekä introducingparis.com ja en-Wikipedia "Champ de Mars" '
       + '(tarkistettu 17.11.2026).',
     otsikko: 'Torni, joka myytiin romuksi',
+    aanikansio: 'eiffel/v2',
     jaksot: [
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-1-jakso1',
         kuva: 'rakenteilla',
         teksti: 'Eiffel-torni rakennettiin seisomaan vain kaksikymmentä vuotta, ja kerran huijari myi sen '
           + 'romuksi. Ennen tornia paikalla oli Champ de Mars, sotilaiden harjoituskenttä.',
       },
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-2-jakso2',
         kuva: 'rakenteilla',
         teksti: 'Vuonna 1887 kentälle alettiin koota rautatornia maailmannäyttelyä varten. Työmiehet niittasivat '
           + 'tuhansia osia yhteen yhä korkeammalla. Moni pariisilainen vastusti tornia, mutta vuonna 1889 se '
@@ -676,12 +680,14 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-3-jakso3',
         kuva: 'nayttely1889',
         teksti: 'Kaksikymmentä vuotta kului, mutta kukaan ei purkanut tornia. Sen huipulla oli radioantenni, ja '
           + 'armeijalle siitä oli niin paljon hyötyä, että torni sai jäädä.',
       },
       {
         osa: 'kaanne',
+        aanite: 'kertoja-4-jakso4',
         kuva: 'lustig',
         teksti: 'Vuonna 1925 huijari Victor Lustig luki lehdestä, että tornin kunnossapito on kallista. '
           + 'Väärennetyin virkapaperein hän esiintyi ministeriön apulaisjohtajana ja myi muka tornin '
@@ -693,6 +699,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tanaan',
+        aanite: 'kertoja-5-jakso5',
         kuva: 'nykyinen',
         teksti: 'Torni seisoo yhä. Vanha harjoituskenttä on nykyään puisto sen jalalla, ja ensimmäisen kerroksen '
           + 'alle on kirjoitettu kullatuin kirjaimin 72 ranskalaisen tiedemiehen ja insinöörin nimeä.',
@@ -780,14 +787,11 @@ export const FOKUSKOHTEET_FRA = [
     lahde: 'Matkakirjan oma teksti · lähteinä Château de Versailles, Hérodote, History Is Now, HistorySkills ja '
       + 'Sortiraparis (tarkistettu 17.11.2026).',
     otsikko: 'Kappeli ja kuningattaren kaulanauha',
-    /*
-     * Äänitteitä ei ole vielä: `aanikansio` ja jaksojen `aanite` lisätään, kun Äänittäjä on
-     * äänittänyt (äänitysjonon rivit ovat data/aanitysjono.tsv:ssä). Siihen asti jaksot
-     * kuuluvat suoratoistona.
-     */
+    aanikansio: 'sainte-chapelle/v2',
     jaksot: [
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-1-jakso1',
         kuva: 'piha',
         teksti: 'Sainte-Chapelle on kappeli Cité-saaren palatsin pihalla. Kuningas Ludvig IX rakennutti sen '
           + 'säilyttämään Kristuksen orjantappurakruunua, ja se vihittiin vuonna 1248. Samassa palatsissa '
@@ -798,12 +802,14 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-2-jakso2',
         teksti: '1770-luvulla jalokivikauppiaat tekivät timanttikaulanauhan. Marie Antoinette kieltäytyi '
           + 'ostamasta sitä, mutta huijari Jeanne de La Motte sai kardinaali de Rohanin uskomaan, että '
           + 'kuningatar halusi nauhan salaa.',
       },
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-3-jakso3',
         kuva: 'kaulanauha',
         teksti: 'Elokuussa 1784 kardinaali tapasi Versailles\'n puistossa naisen, jonka hän luuli kuningattareksi. '
           + 'Alkuvuodesta 1785 hän sai nauhan kauppiailta ja luovutti sen Jeannelle. Kun kauppiaat pyysivät '
@@ -815,6 +821,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'kaanne',
+        aanite: 'kertoja-4-jakso4',
         kuva: 'parlamentti',
         teksti: 'Oikeudenkäynti pidettiin Pariisin parlamentissa. Toukokuussa 1786 kardinaali vapautettiin, ja '
           + 'Jeanne leimattiin varkaaksi ja vietiin vankilaan. Kuningattaren maine kärsi.',
@@ -824,6 +831,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tanaan',
+        aanite: 'kertoja-5-jakso5',
         kuva: 'ikkunat',
         teksti: 'Sainte-Chapelle on yhä saman palatsin pihalla. Sen ikkunoissa on yli tuhat kohtausta, ja '
           + 'kappeliin mennään turvatarkastuksen kautta.',
@@ -919,20 +927,18 @@ export const FOKUSKOHTEET_FRA = [
     lahde: 'Matkakirjan oma teksti · lähteinä AIP, History.com, Science Museum Group, Paris.fr ja Institut Curie '
       + '(tarkistettu 18.11.2026).',
     otsikko: 'Vaja, jossa radium hohti',
-    /*
-     * Äänitteitä ei ole vielä: `aanikansio` ja jaksojen `aanite` lisätään, kun Äänittäjä on
-     * äänittänyt (äänitysjonon rivit ovat data/aanitysjono.tsv:ssä). Siihen asti jaksot
-     * kuuluvat suoratoistona.
-     */
+    aanikansio: 'curie/v2',
     jaksot: [
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-1-jakso1',
         kuva: 'vaja',
         teksti: 'Curien vaja oli Pariisin fysiikan ja kemian koulun pihalla seissyt vaja, jossa Marie ja Pierre '
           + 'Curie eristivät radiumin. Se oli ennen ollut ruumiinavaussali.',
       },
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-2-jakso2',
         teksti: 'Marie ja Pierre Curie tutkivat uraanimalmin sisältämää säteilyä. Heinäkuussa 1898 he ilmoittivat '
           + 'löytäneensä uuden alkuaineen. He nimesivät sen Marien kotimaan Puolan mukaan poloniumiksi. '
           + 'Joulukuussa he ilmoittivat toisen, radiumin.',
@@ -942,12 +948,14 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-3-jakso3',
         kuva: 'radiumtyo',
         teksti: 'Pelkkä ilmoitus ei riittänyt, vaan alkuaine piti saada puhtaana erilleen malmista. Vaja oli '
           + 'huonosti tuuletettu eikä pitänyt sadetta, ja malmia kului tonneittain.',
       },
       {
         osa: 'kaanne',
+        aanite: 'kertoja-4-jakso4',
         kuva: 'hohto',
         teksti: 'Työ vei yli kolme vuotta, ja vuonna 1902 heillä oli kymmenesosagramma puhdasta radiumkloridia. '
           + 'Iltaisin radium hohti pimeässä, ja Curiet ihailivat sitä. Marie sai fysiikan Nobelin vuonna 1903 '
@@ -960,6 +968,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tanaan',
+        aanite: 'kertoja-5-jakso5',
         kuva: 'laatta',
         teksti: 'Koulun seinässä on laatta, joka kertoo löydöstä. Marien myöhempi laboratorio on lähellä '
           + 'Curie-museona.',
@@ -1063,15 +1072,18 @@ export const FOKUSKOHTEET_FRA = [
      * äänittänyt (äänitysjonon rivit ovat data/aanitysjono.tsv:ssä). Siihen asti jaksot
      * kuuluvat suoratoistona.
      */
+    aanikansio: 'lumiere-1895/v2',
     jaksot: [
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-1-jakso1',
         kuva: 'bulevardi',
         teksti: 'Grand Café oli kahvila Capucines-bulevardilla Pariisissa, ja sen kellarissa maksava yleisö '
           + 'katsoi Lumièren veljesten elokuvaa.',
       },
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-2-jakso2',
         kuva: 'portti',
         teksti: 'Lumièren veljekset patentoivat keksintönsä helmikuussa 1895. Laite oli kamera ja projektori '
           + 'yhdessä, ja sillä kuvattu filmi oli noin minuutin pituinen.',
@@ -1081,6 +1093,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-3-jakso3',
         kuva: 'portti',
         teksti: 'Joulukuun 28. päivänä 1895 Grand Cafén kellarisalissa pidettiin maksullinen näytös. Lippu maksoi '
           + 'frangin, ja illalla katsojia oli vain kolmisenkymmentä. Valkokankaalla Lumièren tehtaan portti '
@@ -1091,6 +1104,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'kaanne',
+        aanite: 'kertoja-4-jakso4',
         kuva: 'melies',
         teksti: 'Kutsuvieraiden joukossa oli taikuri Georges Méliès. Hän halusi ostaa laitteen, mutta Lumièret '
           + 'eivät myyneet sitä. Puhe levisi, ja kadulle syntyi jono. Méliès alkoi tehdä omia elokuviaan: '
@@ -1102,6 +1116,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tanaan',
+        aanite: 'kertoja-5-jakso5',
         kuva: 'scribe',
         teksti: 'Grand Cafén paikalla on nykyään Hôtel Scribe. Sen ravintoloiden sisäänkäynnillä on laatta, joka '
           + 'kertoo näytöksestä.',
