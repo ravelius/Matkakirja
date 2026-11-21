@@ -1,47 +1,302 @@
 [
-{"id": "r01", "rivit": [4, 6, 7, 11], "haku": "cannon", "min": 1, "max": 30},
-{"id": "r02", "rivit": [4, 6, 7, 11], "haku": "cannon salute", "min": 1, "max": 60},
-{"id": "r03", "rivit": [4, 6, 7, 11], "haku": "artillery salute", "min": 1, "max": 60},
-{"id": "r04", "rivit": [4, 6, 7, 11], "haku": "ceremonial cannon", "min": 1, "max": 60},
-{"id": "r05", "rivit": [1, 2, 3, 8], "haku": "military band", "min": 3, "max": 180, "musiikki": true},
-{"id": "r06", "rivit": [1, 2, 3, 8], "haku": "marching band", "min": 3, "max": 180, "musiikki": true},
-{"id": "r07", "rivit": [1, 2, 3, 8], "haku": "changing guard", "min": 3, "max": 180},
-{"id": "r08", "rivit": [1, 2, 3, 8], "haku": "fanfare", "min": 2, "max": 120, "musiikki": true},
-{"id": "r09", "rivit": [8], "haku": "evzones", "min": 3, "max": 180, "musiikki": true},
-{"id": "r10", "rivit": [5, 9], "haku": "fireworks", "min": 1, "max": 120},
-{"id": "r11", "rivit": [5, 9], "haku": "firework festival", "min": 1, "max": 120},
-{"id": "r12", "rivit": [5, 9, 10], "haku": "firecrackers", "min": 1, "max": 120},
-{"id": "r13", "rivit": [12], "haku": "chopin", "min": 3, "max": 180, "musiikki": true},
-{"id": "r14", "rivit": [13, 14], "haku": "joik", "min": 3, "max": 180, "musiikki": true},
-{"id": "r15", "rivit": [13, 14], "haku": "yoik", "min": 3, "max": 180, "musiikki": true},
-{"id": "r16", "rivit": [13, 14], "haku": "sami", "min": 3, "max": 180, "musiikki": true},
-{"id": "r17", "rivit": [15], "haku": "karaoke", "min": 3, "max": 180, "musiikki": true},
-{"id": "r18", "rivit": [16], "haku": "fado", "min": 3, "max": 180, "musiikki": true},
-{"id": "r19", "rivit": [17], "haku": "zambra", "min": 3, "max": 180, "musiikki": true},
-{"id": "r20", "rivit": [17, 18], "haku": "flamenco singing", "min": 3, "max": 180, "musiikki": true},
-{"id": "r21", "rivit": [18], "haku": "palmas", "min": 3, "max": 180, "musiikki": true},
-{"id": "r22", "rivit": [19], "haku": "lyra", "min": 3, "max": 180, "musiikki": true},
-{"id": "r23", "rivit": [19], "haku": "cretan music", "min": 3, "max": 180, "musiikki": true},
-{"id": "r24", "rivit": [22], "haku": "starlings", "min": 3, "max": 120},
-{"id": "r25", "rivit": [26], "haku": "golden plover", "min": 3, "max": 120},
-{"id": "r26", "rivit": [26], "haku": "plover", "min": 3, "max": 120},
-{"id": "r27", "rivit": [27], "haku": "snipe", "min": 3, "max": 120},
-{"id": "r28", "rivit": [31], "haku": "gralla", "min": 3, "max": 180, "musiikki": true},
-{"id": "r29", "rivit": [31], "haku": "castellers", "min": 3, "max": 180, "musiikki": true},
-{"id": "r30", "rivit": [33], "haku": "bagpipes", "min": 3, "max": 180, "musiikki": true},
-{"id": "r31", "rivit": [33], "haku": "pipe band", "min": 3, "max": 180, "musiikki": true},
-{"id": "r32", "rivit": [32, 34, 35], "haku": "marching drums", "min": 3, "max": 180, "musiikki": true},
-{"id": "r33", "rivit": [32, 34, 35], "haku": "snare drum parade", "min": 3, "max": 180, "musiikki": true},
-{"id": "r34", "rivit": [36], "haku": "saeta", "min": 3, "max": 180, "musiikki": true},
-{"id": "r35", "rivit": [35], "haku": "semana santa", "min": 3, "max": 180, "musiikki": true},
-{"id": "r36", "rivit": [37], "haku": "litany", "min": 3, "max": 180, "musiikki": true},
-{"id": "r37", "rivit": [37], "haku": "vilnius", "min": 3, "max": 180, "musiikki": true},
-{"id": "r38", "rivit": [39], "haku": "ankeruhr", "min": 3, "max": 180},
-{"id": "r39", "rivit": [39], "haku": "vienna clock", "min": 3, "max": 180},
-{"id": "r40", "rivit": [40], "haku": "innsbruck", "min": 3, "max": 180},
-{"id": "r41", "rivit": [41], "haku": "kremlin", "min": 3, "max": 180},
-{"id": "r42", "rivit": [41], "haku": "spasskaya", "min": 3, "max": 180},
-{"id": "r43", "rivit": [42], "haku": "carillon", "min": 3, "max": 180},
-{"id": "r44", "rivit": [42], "haku": "peter paul fortress", "min": 3, "max": 180},
-{"id": "r45", "rivit": [38, 39, 40, 41, 42], "haku": "glockenspiel", "min": 3, "max": 180}
+ {
+  "id": "t01",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "cannon shot",
+  "min": 1,
+  "max": 15
+ },
+ {
+  "id": "t02",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "cannon fire",
+  "min": 1,
+  "max": 12
+ },
+ {
+  "id": "t03",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "single cannon",
+  "min": 1,
+  "max": 15
+ },
+ {
+  "id": "t04",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "cannon blast",
+  "min": 1,
+  "max": 15
+ },
+ {
+  "id": "t05",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "cannon boom",
+  "min": 1,
+  "max": 15
+ },
+ {
+  "id": "t06",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "cannon",
+  "min": 2,
+  "max": 6
+ },
+ {
+  "id": "t07",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "cannon",
+  "min": 6,
+  "max": 12
+ },
+ {
+  "id": "t08",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "old cannon",
+  "min": 1,
+  "max": 20
+ },
+ {
+  "id": "t09",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "historic cannon",
+  "min": 1,
+  "max": 30
+ },
+ {
+  "id": "t10",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "castle cannon",
+  "min": 1,
+  "max": 30
+ },
+ {
+  "id": "t11",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "fort cannon",
+  "min": 1,
+  "max": 30
+ },
+ {
+  "id": "t12",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "cannon distant",
+  "min": 1,
+  "max": 20
+ },
+ {
+  "id": "t13",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "cannon echo",
+  "min": 1,
+  "max": 20
+ },
+ {
+  "id": "t14",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "signal cannon",
+  "min": 1,
+  "max": 30
+ },
+ {
+  "id": "t15",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "time gun",
+  "min": 1,
+  "max": 30
+ },
+ {
+  "id": "t16",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "noon cannon",
+  "min": 1,
+  "max": 30
+ },
+ {
+  "id": "t17",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "artillery shot",
+  "min": 1,
+  "max": 12
+ },
+ {
+  "id": "t18",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "black powder cannon",
+  "min": 1,
+  "max": 30
+ },
+ {
+  "id": "t19",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "muzzle loader",
+  "min": 1,
+  "max": 15
+ },
+ {
+  "id": "t20",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "salute gun",
+  "min": 1,
+  "max": 30
+ },
+ {
+  "id": "t21",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "gun salute",
+  "min": 1,
+  "max": 15
+ },
+ {
+  "id": "t22",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "cannon salute single",
+  "min": 1,
+  "max": 30
+ },
+ {
+  "id": "t23",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "battery gun",
+  "min": 1,
+  "max": 30
+ },
+ {
+  "id": "t24",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "mortar shot",
+  "min": 1,
+  "max": 12
+ },
+ {
+  "id": "t25",
+  "rivit": [
+   4,
+   6,
+   7,
+   11
+  ],
+  "haku": "one o'clock",
+  "min": 1,
+  "max": 10
+ }
 ]
