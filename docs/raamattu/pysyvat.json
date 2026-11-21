@@ -540,6 +540,28 @@
     }
    ],
    "muutokset": []
+  },
+  {
+   "tunnus": "S-17",
+   "nimi": "TYÖNKULUN KORJAUKSEN VARMISTUS KERROTAAN",
+   "roolit": [
+    "kaikki"
+   ],
+   "vartija": "ei vartijaa",
+   "tila": "voimassa",
+   "kerrat": [
+    {
+     "pvm": "21.11.2026",
+     "klo": "08.00",
+     "lahde": "P-261121-1",
+     "sanat": "Minulle pitää aina kertoa jos tulee työnkulkuun korjaus että miten varmistetaan että se toimii jatkossakin",
+     "sha": "65656598fb8d249d",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-21T06:00:57.404Z"
+    }
+   ],
+   "muutokset": []
   }
  ]
 }
