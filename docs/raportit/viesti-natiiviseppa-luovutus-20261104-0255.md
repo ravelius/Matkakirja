@@ -1,0 +1,73 @@
+# Natiivisepän luovutus 4.11.2026 klo 02.55 (konteksti 30 %, 7.37)
+
+Korvaa luovutuksen -20261104-0208 (myös sen LISÄYKSET). Siitä yhä voimassa vain KS-kohta ja "Sauman syy varmistettu". Luovutuksesta -0129 voimassa: KK:n lista, GP, f1fb45f10, Selvitetty, AVOIMET (`git show 97afe2e4c:docs/raportit/viesti-natiiviseppa-luovutus-20261104-0129.md`); HAARAT alla olevin muutoksin.
+Id:t: /Users/Shared/Claude/osoitekirja.md. Cron Unity-beeta: luo uudelleen ("4 9 * * *", muisti unity67-paivitysseuranta).
+Vuoro aina JU:lta. Skripti `zsh .../tyokalut/esikatselu.sh`; Kartta-testit `sh Kartta-testit/kaanna.sh`.
+
+## HETI NOLLAUKSEN JÄLKEEN (PT:n päätökset sitovat)
+1. **f5c1f14b0-todiste, tärkein. Odota kuvia** (JU, arviolta 03.32): /Users/Shared/Claude/proto-3d/lokit/julkaisija-reuna-iso-f5c1f14b0/ (skenaario _tyo/natiiviseppa/aluekuva-koko/sk-ipad-reuna.txt: r-0-30, 0-21, 0-17, 0-15, 0-13, 0-11, 0-21-paluu, joinville). Tee odotussilmukka Bashin taustalle, Monitor ei tarvita.
+   - Katso täysikoossa/rajauksina, EI vain Joinvillestä (KK 02.50): vertailu lokit/julkaisija-k24-iso-3332c8e15/k-h-0-15.png, läiskät siellä pikseleissä (x, y, kuva 2732×2048): (1295,70), (1603,130), (2452,370), (2411,1500), (2678,1070), sekä 0-17:n ja 0-21:n vastaavat; KK:n kuva k24-ipad-laiskat-0-15.png (lokit/kk-peli-a94d8e7fb-20261103/).
+   - Puhdas = suorareunaisia tummia läiskiä ei näy ja tiet eivät muutu muualla. **Rivi HETI PT:lle ja VS:lle** (PT 02.5x). Puhdas → VS yhdistää f5c1f14b0:n aamun kuvaan, JU ajaa viimeistään 04.00. Ei puhdas → läiskä näkyy aamulla, PT kertoo KK:lle.
+2. **Haamut 0,13 (KK k24 kohta 1):** korjaus 204104d31 on k28:ssa 984342737 ja k29:ssä 1a8f03720, ei uutta shaa (kerrottu PT:lle). Nähty vain Macilla. Katso iPadilta r-0-13 (Riemukaari, Eiffel, Louvre, Grand Palais, Garnier, Invalidit täysinä) ja r-0-15 (ei näy). Vian jäädessä sha VS:lle viimeistään 03.45. Syy jäljellä olevaan: korkeus_m-rajat PiirrosKerros.Esineet.cs:334, data nahtavyydet-218.
+3. **0,21 mennessä | paluu (KK kohta 3):** vertaa r-0-21 ja r-0-21-paluu. Nimet KS:llä (ValitseTaso-hystereesi, päätelty, kerrottu). Tiet vaaleammat paluulla: SYY AUKI, minun; ei tutkittu.
+4. **z11/z12-saumat:** katso k28:sta (lokit/julkaisija-reuna-iso-984342737/ tai julkaisija-k28-iso-984342737/), ei b70ee175a:sta.
+5. **Kulu (KK):** PT:lle kerrottu, että stilleistä ei näe; mittaa vierityksen sujuvuus k28:sta, kun JU antaa vuoron.
+
+## Päätökset
+- PT, KK 02.5x: häivytysvyö 0,13 ja länsiraja 1 200 m kelpaavat aamuun, ei muutosta.
+- Länsiraja: VS tekee seuraavalla kierroksella (ReunaM noin 2400, muisti mitattava). NS EI koske siihen. Ei KS:n eikä NS:n aamuun.
+- KK hyväksyi k24-pinnalla: saumat 48,8503 ja 2,3071, hiusviiva, Alma, vinjetti 0,30–0,15, muisti 3512/4080 Mt.
+
+## Tehty tässä sessiossa
+- **Ruskeat läiskät f5c1f14b0** (ElavaTyyli.PoistaKarkeaRanta = kaksi PoistaKierros-kierrosta, ElavaTyyliVersio e15, testi PuhdistusPoistaaLeveanTienJaReunanTien; 612/612). Syy: leveän tien risteyksessä ja palan reunalla ei 5 × 5 -ympäristössä ole vaaleaa pikseliä. Toistettu Pythonilla paloille 10/518/352 ja 519/352: yksi kierros jättää läiskän palan 519 reunaan, kaksi poistaa. Pelissä ajamatta. Julkaistusta kartasta (KK:n kysymys) ei tarkistettu.
+- **627562dad peruttu 3cb530e6b:** peite enintään Z10. Tein sen ennen iPad-kuvia; iPadilla tiet jatkuvat lon 2,4609:n yli ehjinä, joten pystyreuna oli näissä kuvissa vain Macin 640×480-ajossa, ja korjaus olisi sumentanut iPadin. Ei päätynyt yhdistelmään (VS). Älä tee uudelleen.
+- iPad 3332c8e15 katsottu: lokit/julkaisija-k24-iso-3332c8e15/NS-havainnot.md (9 täysikoossa, 9 puolikoossa, 27 ei).
+
+## HAARAT
+- **natiiviseppa/haivytys-k24-218 kärki f5c1f14b0** = b70ee175a + 627562dad + revertti + läiskät. Peilissä natiivi-backup. EI junaan eikä ämpäriin. Worktree wt/proto-natiiviseppa-maskik4.
+- VS: f5c1f14b0 yhdistyy k29:n kanssa ilman ristiriitoja (merge-tree, ei ajettu); ei k28:ssa eikä k29:ssä.
+- **KS seuraavaan yhdistelmään:** karttaseppa/pariisi-nimet-220 kärki 498ce79dd (korvaa -0129:n 76d11201a-kohdan; sha tarkistamatta, kääntämättä; ei tee mitään ilman Resources/Esineet/pariisi-nimipeite.bytes, joka tulee uusien puiden kanssa, KK ei ole valinnut). Puita ei viedä vielä. d-sillan kaide -0129:n kohta 4 yhä tekemättä.
+
+## KK:n lista, kohdat 2–4 (-0129): aloittamatta
+## Avoimet häivytyksessä
+Kaukaa saapuessa kerroksen kytkeytyminen (120 km) ei testattu liikkeessä. Pystyreunaa muilla näyttöko'oilla ei katsottu.
+
+## LISÄYS 02.5x (KS)
+karttaseppa/pariisi-nimet-220 kärki nyt 932078810 (korvaa 498ce79dd:n): 0,21:n nimikoko, taso paikallaan hystereesillä 0, liikkeessä 0,12. Ajamatta; f5c1f14b0-ajossa ei näy, joten r-0-21 / paluu -kuvien nimiero EI kerro tästä. Tie-ero on NS:n.
+
+## LISÄYS 03.25 (SITOO, ohittaa HETI-kohdat 1 ja 2)
+**f5c1f14b0-todiste tehty, kohta 1 POIS:** lokit/julkaisija-reuna-iso-f5c1f14b0/ (valmis 03.23, muisti 3464/4080, varoituksia 0). Pari vanha | uusi _tyo/natiiviseppa/aluekuva-koko/todiste-015.png: viidessä kohdassa tummat läiskät poissa, tiet ennallaan. 0,15, 0,21 ja 0,13 täysikoossa, 0,30, 0,17 ja paluu puolikoossa. PT ja VS tietävät; VS yhdistää aamun kuvaan, JU ajaa viimeistään 04.00. Katso sen yhdistelmän kuvat, kun JU antaa kansion.
+**Haamut, kohta 2 POIS:** r-0-13 iPadilla täysinä (täysikokoinen rajaus), 0,15:llä ei näy. Kerrottu PT:lle.
+**Jää, ei estä aamua:** haalea suorareunainen sävyero ainakin 2 kohdassa (Joinville lon 2,4609; kuvan 0-15 kohta (2452,370), alapuoli), myös vanhassa ajossa; PoistaKierros ei selitä sitä, syy tutkimatta.
+**Seuraavaksi:** kohta 3 (tiet 0,21 mennessä | paluu, r-0-21 ja r-0-21-paluu, syy tutkimatta), kohta 4 (z11/z12 k28:sta), kohta 5 (kulu). elava-kulu tässä ajossa: z14 mediaani 87 ms, z15 73 ms, huippu 1305/1616 ms; ero k24:n 236/305 ms:aan selittämättä, n on suurempi.
+
+## LISÄYS 03.28 (PT, KK 03.25; KORJAUSLISTA osio f5c1; SITOO)
+**f5c1f14b0 OK aamuun** (KK: tummat läiskät poissa, tiet ja raiteet ennallaan). Ei junaan, pinta ei hyväksytty.
+**Seuraava kierros, ei aamun este: haalea suorareunainen sävyero** rajauksissa 2, 3 ja 4 (Joinville, lon 2,4609; todiste-015.png), myös vanhassa ajossa. Suora reuna ei saa jäädä lopulliseen. Selvitä ensin, onko sama julkaistussa kartassa (KK k24/2:n kysymys, tarkistamatta). Syy tutkimatta.
+**Tie-ero 0,21 mennessä | paluu RATKAISTU, koodia ei muutettu:** nimien ulkopuolella kuvat ovat samat. Mitattu lokit/julkaisija-reuna-iso-f5c1f14b0/ ja julkaisija-k24-iso-3332c8e15/, 2732×2048: keskimääräinen ero 0,0, tiepikselit 216,31 | 216,31 ja 216,35 | 216,35. Mittauksesta rajattu pois nimet ja raiteet sekä 7 px niiden ympäriltä (23 % kuvasta), joten nimien alta tietä ei ole verrattu. Skripti _tyo/natiiviseppa/aluekuva-koko/tieero-021-paluu.py. KK:n "tiet vaaleammat" nähtiin arkilta 36 %:n koossa; todennäköinen selitys on isot tummat nimet mennessä (päätelty, ei koetettu), koska tiet eivät eroa. Nimien koko on KS:n (932078810, k33:ssa); tuomio KK:n ohjeen mukaan yhdistelmän r-0-21 / paluu -kuvista. Ei uutta tutkittavaa NS:lle, ellei yhdistelmässä tule tie-eroa: aja skripti sen kuville.
+**Yhdistelmästä katsotaan** c-0-17 ja r-0-21-paluu (KK f5c1/2).
+**0,30-kuva:** tulee JU:n yhdistelmäajosta (k-r-0-30.png, PT 03.3x); omaa ei tarvita.
+
+## LISÄYS 03.30 (kohta 4 katsottu; PT: sävyero ja iPad vasta aamun yhdistelmän jälkeen)
+**z11/z12-saumat k28:ssa (k-e-0-13, täysikoossa): sauma näkyy.** Terävä | sumea -pystyraja x noin 2563 (lon 2,4609, z11-palstaraja) ja sumea | terävä x noin 260 (lon noin 2,2415, ei z11- eikä z12-raja, syy varmistamatta; lähellä länsirajaa, joka on VS:n seuraavalla kierroksella). Terävyyssuhde k28 2,1–3,1, k24 ja f5c1 1,7–1,8: k28:n korttelipinta tekee rajasta selvemmän. KK:n "saumoja ei näy" (03.14) oli arkilta 24 %. Rajaukset _tyo/natiiviseppa/aluekuva-koko/sauma-k28-ita-2_4609.png (sauma x 495, y 100–450) ja sauma-k28-lansi.png (x 47); skripti sauma-terava-sumea.py. Mitattu vain kuvista, korjaus ei aloitettu. Sama mittaus aamun yhdistelmän kuville, kun JU antaa kansion.
+**Kohta 5 (kulu) odottaa JU:n vuoroa;** yhdistelmän ajoon asti NS ei aja iPadia (PT).
+
+## LISÄYS 04.10 (PT: mittaa yhdistelmän pohja a6c11c1d2; nähtävyydet puuttuvat ajosta, JU ajaa uudelleen)
+**Saumat ennallaan a6c11c1d2:ssa (lokit/julkaisija-yhd-iso-a6c11c1d2/k-e-0-13.png, katsottu täysikoossa):** x 2563 (lon 2,4609) suhde 2,65–3,02 ylä- ja keskiosassa, x 260 (lon noin 2,2415) 2,0–2,9. Sama kuin k28. Tiet jatkuvat rajan yli; ero on korttelipinnan terävyydessä. Rajaukset _tyo/natiiviseppa/aluekuva-koko/sauma-a6c-ita-2_4609.png ja sauma-a6c-lansi.png; skripti sauma-terava-sumea-a6c.py. Ei korjattu. Uusi JU:n kansio mitataan samalla skriptillä; iPadilla ei ajeta karttakuvia sitä ennen (PT).
+**Tie-ero samassa ajossa:** tiepikselit 216,61 | 216,61, nimien ulkopuolella ei eroa.
+
+## LISÄYS 04.15 (PT 04.13, KK 04.12)
+**Puutarhat nimien alle ff97c7f8c** = a6c11c1d2 + 1 irrotettava commit, haara natiiviseppa/puutarha-nimien-alle-a6c (natiivi-backup), worktree wt/proto-natiiviseppa-maskik4. KarttaesineSaanto.EsineJono: ryhmä puutarha jonoon 2994, Nimikerros 2995 ennallaan, muut lajit ennallaan. Kartta-testit 613/613; Unityssä kääntämättä, kuvaa ei ole. Vaikutus vain pariisi.json:iin (ainoa esinedata, ainoa puutarha-ryhmä). Nimipeite voi yhä siirtää nimiä puutarhoista: katso e-0-13, kun JU antaa kansion. Ei junaan. PT:lle ja JU:lle kerrottu 04.15. Työpuu oli ennen haarassa natiiviseppa/haivytys-k24-218 (kärki f5c1f14b0).
+
+## LISÄYS 04.16 (PT: pinnan jono)
+ff97c7f8c: pinta Pallo.mat 2000, läpinäkymätön, joten puutarhat 2994 piirtyvät sen päälle (luettu tiedostoista, ei ajettu). Piirros 3050 on koodin kommentin mukaan pois koealueella; Karttataivas 3050 vain usvarajan yläpuolella. Varmistus JU:n e-0-13:sta. KS: tumma ruudukko Champ de Marsilla on pensasaidat, ei vika.
+
+## LISÄYS 05.01 (PT 05.03, KK 05.01; KORJAUSLISTA osio yhd2; seuraava kierros, ei aamun kuvaan)
+**yhd2 a6c11c1d2 hyväksytty aamun varmaksi kuvaksi; ei junaan, pinta ei hyväksytty.** Vieritysmittaus edelleen JU:n vuorolla, iPad pidossa Pariisille.
+**e-0-13: häivytys suora ylhäällä ja alhaalla, ylhäällä myös kova rivi noin 168; mittarina omistajan "vinjetoiden"** (lokit/julkaisija-yhd2-iso-a6c11c1d2/k-e-0-13.png). KK: lopulliseen ei näkyvää rajaa; sama perhe kuin pystysaumat 2,4609 ja 2,2415.
+- Suoruuden syy koodissa: ElavaKoealue.cs:144–148, etäisyys suorakaiteesta (ElavaPariisi.cs:21, 48,815–48,903 / 2,223–2,471), ReunaM 1 200 m. Häivytys on siksi suora kaikilla sivuilla. Laskettu: pohjoisvyö y noin 118–290 (6,98 m/px, tasainen kuva).
+- Rivi 168: reunaenergia 5,5 (y 152) → 10,8 (160) → 17,9 (168), sitten 14–17. Lat noin 48,9107; ei z11-, z12- eikä z13-rivi (48,9225, 48,8936). SYY AUKI. Alareuna: 30 (y 1732) → 9 (y 1820), ei hyppyä.
+- Pystysaumat yhd2:ssa ennallaan: x 2563 suhde 2,65–3,02, x 260 0,35–0,49.
+- KK 02.52: muoto ennen leveyttä, hidas aaltelu reunaan poistaa suoran linjan. Länsiraja ja ReunaM on sovittu VS:lle: sovi VS:n kanssa ennen kuin koskee ElavaKoealueeseen.
+**Puutarhat ja nimet:** yhd2:ssa puutarha katkaisee yhä Eiffel-tornin, Hôtel des Invaliden ja suurmoskeijan nimet, koska ajo on a6c11c1d2 ilman ff97c7f8c:tä. ff97c7f8c on näkemättä, KK tarkistaa yhd3:sta myös Luxembourgin palatsin ja Musée du Luxembourgin.
+**KK yhd2/1 (KS + NS):** puut häviävät laajoissa zoomeissa (täysinä 0,038, eivät 0,05:llä); tavoite 2029:n ilme, tapa ja kulu tekijöiltä.
