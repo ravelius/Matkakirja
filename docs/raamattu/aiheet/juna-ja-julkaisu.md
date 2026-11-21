@@ -1,4 +1,4 @@
-# juna-ja-julkaisu · vastuu JU · tarkistettu 18.11.2026
+# juna-ja-julkaisu · vastuu JU · tarkistettu 21.11.2026
 
 TAVOITE: Omistaja saa linkistä uusimman toimivan version, testaaja TF:stä kokonaisen, vanhaa asennusta rikkomatta.
 
@@ -10,7 +10,7 @@ SÄÄNNÖT:
 5. Linkistä rivi tekijälle ja PT:lle; KK:lle, jos se asetti ehdon tai asia omistajalle. Omistajalle kerran per versio, vain linkin sisältö. Linkin jälkeen KK katsoo Kesken, Jonossa. [P-261112-5] [P-261117-110]
 6. Linkki ≤ 4/pv, kun junassa uutta; ylimääräinen KK:n sanalla. TF ≤ 2/pv, ellei omistaja pyydä. [R-10.2] [P-261114-9]
 7. TF, lukitus ja Mac-paketti vain omistajan pyynnöstä (KK välittää sanatarkasti); Mac ei synny linkistä. [R-10.2] [P-261111-5] [P-261118-43]
-8. Osittaista julkaisua ei ehdoteta; viivästävä osa kärkeen. "Heti" ohittaa ehdot, ilman testejä ajot; ehdollinen käsky ehdon toteuduttua; suoraan peliin = ilman kuvia, linkki omalla käskyllä. Pyydetyt korjaukset NYT-kuvissa: KK kertoo heti; julkaisu hänen sanallaan, katsomaton Kesken-rivinä. [P-261024-1] [P-261117-109] [P-261118-5] [P-261118-33] [P-261118-41] [P-261118-42] [P-261119-29] [P-261119-30] [P-261119-35]
+8. Osittaista julkaisua ei ehdoteta; viivästävä osa kärkeen. "Heti" ohittaa ehdot, ilman testejä ajot; ehdollinen käsky ehdon toteuduttua; suoraan peliin = ilman kuvia, linkki omalla käskyllä. Pyydetyt korjaukset NYT-kuvissa: KK kertoo heti; julkaisu KK:n sanalla, katsomaton Kesken-rivinä. [P-261024-1] [P-261117-109] [P-261118-5] [P-261118-33] [P-261118-41] [P-261118-42] [P-261119-29] [P-261119-30] [P-261119-35] [P-261121-11]
 9. Versio haetusta päähaarasta, nostaa juna. [R-10.1]
 10. Web-repon sisältö-, raportti- ja ohjemuutokset PT yhdistää vihreinä. [R-10.12] [P-261109-1]
 11. Palaute-erä junaan, kun pääosa todennettu; PT tarkistaa loput. [R-10.9]
@@ -27,7 +27,5 @@ EI VIKA:
 - Linkistä puuttuu numero, jonka ehto kesken.
 
 TEKOTAPA:
-- Junarivit: tools/asemataulu/juna.py.
-- Jono ja versiorivit: julkaisija-tyokalut/linkki-224-uutta/.
-- Uutta-tarkistus: jako-paketoi.zsh; vanhan sisällön esto: minSovellus.
-- Muutosloki: tools/vienti/muutosloki-natiivi.json; sisällön vienti: vie-sisalto.yml.
+- Junarivit: tools/asemataulu/juna.py; jono ja versiorivit: julkaisija-tyokalut/linkki-224-uutta/.
+- Uutta-tarkistus: jako-paketoi.zsh; vanhan sisällön esto: minSovellus; muutosloki: tools/vienti/muutosloki-natiivi.json; sisällön vienti: vie-sisalto.yml.
