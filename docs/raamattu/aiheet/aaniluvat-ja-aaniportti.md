@@ -1,4 +1,4 @@
-# aaniluvat-ja-aaniportti · vastuu ÄÄ · tarkistettu 17.11.2026
+# aaniluvat-ja-aaniportti · vastuu ÄÄ · tarkistettu 21.11.2026
 
 TAVOITE: Pelaaja kuulee tasaista, selvää ja säröttömää ääntä. Jokainen maksullinen ajo on luvallinen ja hinnaltaan tiedossa, ja paketti läpäisee teknisen portin ennen vientiä.
 
@@ -13,7 +13,7 @@ SÄÄNNÖT:
 8. Maksullisen generoinnin raakatuotos tallennetaan ennen käsittelyä versioituna varmuuskopioituihin äänimastereihin (T7); raakaa ei poisteta eikä ylikirjoiteta. [R-5.13]
 9. Ääni tilataan ja tasoitetaan PCM:nä ja pakataan kerran masterista; true peak enintään −1 dBTP. Luentapalat tasataan samaan kiinteään keskitasoon, ei huipun mukaan. [R-5.10] [P-261111-15]
 10. Jokainen äänipaketti läpäisee teknisen ääniportin ennen vientiä. Poikkeus vain perusteltuna portin listalla. [R-5.11] [P-261115-21]
-11. Äänityksiä ei kuunnella tarkistukseksi eikä niistä tehdä tarkistusraporttia; Gemini-kuuntelua ei käytetä koskaan. Jäävät: tekstin kuiva-ajo KK:lle ennen äänitystä, esitekstin leikkaus, tekninen portti (10) ja viennin onnistuminen. Kuuntelua kutsuva ajo pysäytetään ja kerrotaan KK:lle. [P-261117-15] [P-261117-16]
+11. Äänitteitä ei koskaan kuunnella, vaan ne lisätään suoraan peliin teknisen portin (10) ja osoitetarkistuksen jälkeen. Kuuntelu ei ole vaihe eikä ehto, eikä kuuntelun puutetta mainita; Gemini-kuuntelua ei käytetä. Kuuntelua kutsuva ajo pysäytetään, rivi KK:lle. [P-261117-15] [P-261121-23] S-19
 12. Nosto äänitetään vasta, kun se on kokonaan kirjoitettu uudestaan ja sillä on kuvat ja ranskalaiset viivat; sitten ilman kysymystä (ei säännön 1 lupaa). [P-261117-88] S-13
 
 EI VIKA:
@@ -24,4 +24,5 @@ TEKOTAPA:
 - Pyyntötie: pyynto-funktio, tools/elevenlabs_kieli.py.
 - Luentaputki (kuiva-ajo, avain, ääntämisasu, esiteksti): proto-3d/tyokalut/pelikoodari-ajot/esigeneroi-luennat.py.
 - Musiikin ja tehosteiden sisältö: musiikki-ja-tehosteet. Mitä luetaan: kertojaaanet.
+
 
