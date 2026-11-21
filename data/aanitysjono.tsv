@@ -71,8 +71,6 @@ b352b4e7bd9a41371d10668fa6d29e43	FRA	hahmotelma	hahmotelma-palais-industrie	3	20
 a9f636711f1a1ba95c5919ad007e8c4e	pariisi	nahtavyysjutut	Temple-torni	5	2026-11-20
 37f839657b68b41bf0c9dd074e1cf093	pariisi	nahtavyysjutut	Trocadéron palatsi	2	2026-11-20
 eb2171d610618e608d3e3785170499da	pariisi	nahtavyysjutut	Trocadéron palatsi	5	2026-11-20
-6f5d42ad379e7ab3867fb4f230f00284	pariisi	nahtavyysjutut	Galerie des Machines	2	2026-11-20
-b5203dc8e8811fa7ef2e3716294a7b39	pariisi	nahtavyysjutut	Galerie des Machines	3	2026-11-20
 f8e191ad63df67cc7a271429cf3e27f4	pariisi	nahtavyysjutut	Kirahvi 1827	2	2026-11-20
 2e5df611126094e282ba993a62364947	pariisi	nahtavyysjutut	Kirahvi 1827	3	2026-11-20
 d895017b656e3b77d4b54d42c32ec025	pariisi	nahtavyysjutut	Vrain-Lucas	1	2026-11-20
@@ -87,7 +85,6 @@ fe21bc6db68bc398639566d4bdf12abe	pariisi	nahtavyysjutut	Grand Châtelet	5	2026-1
 d7c7588e58337d90d59b987fd8c78117	pariisi	nahtavyysjutut	Temple-torni	2	2026-11-20
 ce70bf60272ff1205d45b54cf01f2381	pariisi	nahtavyysjutut	Temple-torni	3	2026-11-20
 28770ef4777fb15c6cb61a73d583fc96	pariisi	nahtavyysjutut	Trocadéron palatsi	4	2026-11-20
-30433cf9ace7dda4ed78e95f177a6c7f	pariisi	nahtavyysjutut	Galerie des Machines	4	2026-11-20
 3abc9a6fc9d58f0deea9ba26d3137bea	pariisi	nahtavyysjutut	Bizet 1875	1	2026-11-20
 3d64840e0ac50f66b39e778b87104d86	pariisi	nahtavyysjutut	Bizet 1875	2	2026-11-20
 b130c63e0b031f9d940c579673449605	pariisi	nahtavyysjutut	Bizet 1875	3	2026-11-20
@@ -120,7 +117,6 @@ d2e656ae5d3bdb64877644dabd36ef13	pariisi	takynostot	kirahvin-kavelymatka	1	2026-
 879f16e1a06a97c18de0d1e18e8f4161	pariisi	fokusvirta-takyt	impressionistit	1	2026-11-20
 b9f7b9a5b10df657f5bf74db99670c56	FRA	hahmotelma	hahmotelma-grand-chatelet	3	2026-11-20
 b60166a5bc973da3b6ba729fd53d0493	FRA	hahmotelma	hahmotelma-trocadero	3	2026-11-20
-c34bbf12ba40f2bb06ab1e6a58f8358c	FRA	hahmotelma	hahmotelma-galerie-des-machines	5	2026-11-20
 3cf0ebe74b73da0a708a503034161b6e	GBR	fokuskohteet	st-paulin-katedraali	1	2026-11-20
 5c1a666211b3f4280e4933d243551f9c	pariisi	nahtavyysjutut	Riemukaari	1	2026-11-20
 1d72a2172ee3e549006c57db2abb09de	pariisi	nahtavyysjutut	Riemukaari	2	2026-11-20
@@ -175,7 +171,6 @@ a945a39b3aa39f9dc6cba3d2723a12d9	FRA	hahmotelma	hahmotelma-grand-chatelet	1	2026
 b40128cc820f34d869db7f58214f4c11	FRA	hahmotelma	hahmotelma-palais-orsay	1	2026-11-20
 1efdf2215ef50416a3d4f1d5390102fe	FRA	hahmotelma	hahmotelma-palais-industrie	1	2026-11-20
 197a0a488d24a5e3a340996c795509b2	FRA	hahmotelma	hahmotelma-trocadero	1	2026-11-20
-5cc5096270d77768c7e4088d4695d883	FRA	hahmotelma	hahmotelma-galerie-des-machines	1	2026-11-20
 befd15a80846a41bb990482d93d112db	sevilla	nahtavyysjutut	Torre del Oro	1	2026-11-20
 c45dd6cf885792a867b9ba8e1a14a858	sevilla	nahtavyysjutut	Torre del Oro	2	2026-11-20
 4b1da998a16713015b70b405d8f8f31a	sevilla	nahtavyysjutut	Torre del Oro	3	2026-11-20
@@ -185,4 +180,3 @@ acd279c3f1e79f10e968dde2b97fab50	sevilla	nahtavyysjutut	Maestranzan areena	3	202
 38cbfe705a74885dc2c5e8f5f77efaf6	valletta	nahtavyysjutut	Suurmestarin palatsi	1	2026-11-20
 44a619ea345dd5590f14d81519a52017	valletta	nahtavyysjutut	Suurmestarin palatsi	2	2026-11-20
 0582dcea4f802179b3faa9c2a0b04fd6	valletta	nahtavyysjutut	Suurmestarin palatsi	3	2026-11-20
-94114000eb170d0127a74b864d1e97f7	FRA	hahmotelma	hahmotelma-galerie-des-machines	1	2026-11-21

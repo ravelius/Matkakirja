@@ -777,9 +777,11 @@ export const EUROOPAN_KADONNEET = {
       laudat: { maailmankartta: { x: 5910.0, y: 1439.8 }, europe: { x: 255.4, y: 608.8 } },
       // teksti lasketaan jaksoista (ks. ihmeKohde). Erä 2 (L5-4, KK 20.11.2026): jaksollinen kuten Palais de l'Industrie; raportti docs/raportit/pariisi-nostot-era2-teksti-20261120.md.
       otsikko: 'Halli, jossa ei ollut yhtään pilaria',
+      aanikansio: 'galerie-des-machines/v2',
       jaksot: [
         {
           osa: 'tapahtuma',
+          aanite: 'kertoja-1-jakso1',
           kuva: 'loisto',
           teksti: 'Galerie des Machines oli vuoden 1889 Pariisin maailmannäyttelyn konehalli Champ-de-Marsilla, '
             + 'kentän toisessa päässä kuin Eiffel-torni. Se oli noin 420 metriä pitkä ja 115 metriä leveä, '
@@ -791,12 +793,14 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'tapahtuma',
+          aanite: 'kertoja-2-jakso2',
           kuva: 'loisto',
           teksti: 'Vieraita kuljettivat hallissa liikkuvat sillat. Esillä oli myös Edisonin fonografi, jolla '
             + 'kuultiin muun muassa Marseillaise.',
         },
         {
           osa: 'tapahtuma',
+          aanite: 'kertoja-3-jakso3',
           kuva: 'hevosnayttely',
           teksti: 'Näyttelyn jälkeenkin halli jäi käyttöön: vuonna 1900 siellä pidettiin maatalouden ja '
             + 'elintarvikkeiden näyttely, ja marraskuussa 1901 alkoi Barnum & Bailey -sirkuksen esityssarja '
@@ -809,6 +813,7 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'kaanne',
+          aanite: 'kertoja-4-jakso4',
           kuva: 'halli1900',
           teksti: 'Vuonna 1909 halli purettiin, jotta näkymä Champ-de-Marsille aukeaisi. Yli neljäkymmentä '
             + 'metriä korkea halli oli seissyt paikallaan kaksikymmentä vuotta.',
@@ -820,6 +825,7 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'tanaan',
+          aanite: 'kertoja-5-jakso5',
           kuva: 'nykyinen',
           teksti: 'Hallia ei ole enää. Sen paikka oli Champ-de-Marsin eteläpäässä École Militairen edessä, ja kentän toisessa päässä seisoo yhä Eiffel-torni.',
         },
