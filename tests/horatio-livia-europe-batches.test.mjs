@@ -30,6 +30,9 @@ const ODOTTAA = new Set(ERA5_ODOTTAVAT_KAUPUNGIT);
 /** Pariisin isoisän ja pulun tekstit uusittu 11.11.2026 (KK, omistaja 20.31); 14.9. koonti on historiallinen lähde. */
 const UUSITTU_20261111 = new Set(['pariisi', 'lontoo', 'wien', 'rooma', 'amsterdam']); // lontoo uusittu 15.11.2026 (KK, omistaja 08.33); wien 15.11.2026 (omistaja 18.58); rooma 15.11.2026 (omistaja 19.19); amsterdam 16.11.2026 (KK 01.08, lyhennetty nykyinen)
 
+/** Kiovan ja Odessan pulun kommentin alkuun lisätty sodan lyhyt maininta 21.11.2026 (P-261121-39); isoisän teksti ennallaan. */
+const PULU_UUSITTU_20261121 = new Set(['kiova', 'odessa']);
+
 test('Eurooppa-koonti kattaa 45 kaupunkia ja Sofian kanssa 55 Livia-utteranssia', () => {
   assert.equal(combined.cityCount, 45);
   assert.equal(combined.contentRevision, 'eu-hl-europe-20260914-r2-approved');
@@ -56,7 +59,11 @@ test('Eurooppa-koonti kattaa 45 kaupunkia ja Sofian kanssa 55 Livia-utteranssia'
      * Koonnin oma eheys (sanat, SHA:t, tagit, ankkurit) tarkistetaan yhä
      * kaikille 45:lle alla; vain pakkisidonta odottaa erää 5.
      */
-    if (UUSITTU_20261111.has(city.city)) {
+    if (PULU_UUSITTU_20261121.has(city.city)) {
+      assert.equal(city.horatio.visibleText, FOKUSVIRRAT[city.city].matkakirja.teksti, `${city.city}: koonti-H`);
+      assert.notEqual(city.livia.visibleText, FOKUSVIRRAT[city.city].pollo.kommentti[0], `${city.city}: pulun teksti uusittu 21.11.`);
+      assert.ok(FOKUSVIRRAT[city.city].pollo.kommentti[0].endsWith(city.livia.visibleText), `${city.city}: vanha pulun teksti säilyy uuden lopussa`);
+    } else if (UUSITTU_20261111.has(city.city)) {
       assert.notEqual(city.horatio.visibleText, FOKUSVIRRAT[city.city].matkakirja.teksti, `${city.city}: teksti uusittu 11.11.`);
     } else if (!ODOTTAA.has(city.city)) {
       assert.equal(city.horatio.visibleText, FOKUSVIRRAT[city.city].matkakirja.teksti,

@@ -1116,7 +1116,7 @@ const LUENTA_CUET_20260914 = Object.freeze({
     "voimakkuus": 0.45
   }
 ]),
-  kiova: pilotti("kiova", LIVIAN_EUROOPAN_REVISION, "eb7113d19dad7c97283de63e76305bc2435d92661d88c8fb59e8382b4f01b15d", [
+  kiova: pilotti("kiova", LIVIAN_EUROOPAN_REVISION, "ecd8bb7ab69084fd1d9817e801a11541803f82e05d9fe53fc3098cc592155558", [
   {
     "id": "kiova.livia.c1",
     "ankkuri": "Kiovan tunnuspuu on hevoskastanja",
@@ -1199,7 +1199,7 @@ const LUENTA_CUET_20260914 = Object.freeze({
     "voimakkuus": 0.4
   }
 ]),
-  odessa: pilotti("odessa", LIVIAN_EUROOPAN_REVISION, "3566a97eceb729b0c15949ddbb4559c71c79250aa44d4d1565f93f6a49630ba7", [
+  odessa: pilotti("odessa", LIVIAN_EUROOPAN_REVISION, "ae3f71592572c71a4f8c5c2179365fbf91a13b51bdec36189491602f386adea9", [
   {
     "id": "odessa.livia.c1",
     "ankkuri": "kaupankäyntiin kuuluu sanailu",

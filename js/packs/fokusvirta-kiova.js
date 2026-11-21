@@ -338,7 +338,14 @@ export const FOKUSVIRTA_KIOVA = {
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: ["Kiovan tunnuspuu on hevoskastanja. Puistossa näin uusia puita raketti-iskun tuhoamien tilalla. Minä vein yhden oksanhaaraan risun. Siihen saisi vielä pesän."],
+    /*
+     * SODAN-MAININTA (omistaja 21.11.2026 P-261121-37, hyväksytty P-261121-39):
+     * ensimmäinen virke on sodan lyhyt maininta, sanatarkasti omistajan
+     * hyväksymä (SK:n ehdotus K1, luovutukset/sk-sodan-maininta-kiova-odessa-20261121/EHDOTUS.md).
+     * Lähteet: Meduza 13.10.2026 "Kyiv has learned to live between air raid alerts" (https://meduza.io/en/feature/2026/10/13/kyiv-has-learned-to-live-between-air-raid-alerts-after-two-months-of-relentless-russian-attacks-there-s-barely-any-time-between-them), luettu: "Kyiv has learned to live between air raid alerts."; ABC News/AP "Russia shifts tactics with round-the-clock attacks on Kyiv, disrupting daily life" (hakuote). Ei päivämääriä, lukuja eikä yksittäisiä iskuja. Pulun vanha lause "raketti-iskun tuhoamien" puiden tilalle on omistajan hyväksymää tekstiä ja jäi ennalleen; sota-ajan merkintä on tämä SODAN-MAININTA-lohko, ei se lause.
+     * Poistetaan, kun sota päättyy: `git grep SODAN-MAININTA`.
+     */
+    kommentti: ["Kiova elää sodan keskellä, ja ilmahälytykset kuuluvat täällä arkeen. Kiovan tunnuspuu on hevoskastanja. Puistossa näin uusia puita raketti-iskun tuhoamien tilalla. Minä vein yhden oksanhaaraan risun. Siihen saisi vielä pesän."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'vakava', voimakkuus: 0.6 },
     /*

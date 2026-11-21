@@ -303,7 +303,8 @@ test('kaupunkirepliikkien tekstit luetaan pakkauksista, ei kopioida', () => {
 
 /* Pariisin pulun teksti uusittu 11.11.2026 (KK); uusi ääni tulee Äänittäjän ajosta. Poista rivi, kun äänite on sidottu. */
 /* Wienin, Rooman ja Amsterdamin pulun ääni sidottu 16.11.2026 (JU vienyt 11.09 ja 11.49); lista tyhjä. */
-const AANTA_ODOTTAVAT = new Set([]);
+/* Kiovan ja Odessan pulun alkuun lisätty sodan maininta 21.11.2026 (P-261121-39); uusi ääni tulee ÄÄ:n ajosta. Poista rivit, kun äänite on sidottu. */
+const AANTA_ODOTTAVAT = new Set(['kiova-3', 'odessa-3']);
 
 test('kaupunkirepliikki mahtuu kuplaansa', () => {
   /*

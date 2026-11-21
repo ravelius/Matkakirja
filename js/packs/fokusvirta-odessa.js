@@ -387,7 +387,14 @@ export const FOKUSVIRTA_ODESSA = {
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: ["Odessan Privozin torilla kaupankäyntiin kuuluu sanailu. Minä tuijotin kirsikoita. Myyjä kysyi, ostanko vai vartioinko. Pörhistin höyheniäni. Vartioin, tietenkin."],
+    /*
+     * SODAN-MAININTA (omistaja 21.11.2026 P-261121-37, hyväksytty P-261121-39):
+     * ensimmäinen virke on sodan lyhyt maininta, sanatarkasti omistajan
+     * hyväksymä (SK:n ehdotus O1, luovutukset/sk-sodan-maininta-kiova-odessa-20261121/EHDOTUS.md).
+     * Lähteet: Meduza 9.10.2026 "Russia's air attacks are disrupting daily life across Ukraine..." (https://meduza.io/en/feature/2026/10/09/russia-s-air-attacks-are-disrupting-daily-life-across-ukraine-here-s-how-five-major-cities-are-adapting-to-the-growing-danger), luettu (lähteenä Ukrainska Pravda): "Sirens now sound about 10 times a day in Odesa, especially during waves of drone attacks." Ei päivämääriä, lukuja eikä yksittäisiä iskuja.
+     * Poistetaan, kun sota päättyy: `git grep SODAN-MAININTA`.
+     */
+    kommentti: ["Odessa elää sodan keskellä, ja ilmahälytykset kuuluvat täällä arkeen. Odessan Privozin torilla kaupankäyntiin kuuluu sanailu. Minä tuijotin kirsikoita. Myyjä kysyi, ostanko vai vartioinko. Pörhistin höyheniäni. Vartioin, tietenkin."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'vakava', voimakkuus: 0.6 },
     /*
