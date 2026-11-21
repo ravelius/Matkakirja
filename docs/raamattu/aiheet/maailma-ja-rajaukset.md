@@ -7,7 +7,7 @@ SÄÄNNÖT:
 2. Euroopan ulkopuolelle tehdään vain omistajan erikseen päättämät kohteet; kukin tehdään sen päätöksen rajoissa eikä laajenneta. [R-1.12] [R-1.13]
 3. Aloituskaupungit ovat Ateena, Pariisi ja Tukholma. Lontoo on tarinan lähtöpaikka eikä valittava; muiden maanosien aloituskaupungit piilotetaan palautettavasti. [R-2.155] [R-2.3]
 4. Aloituslista on yksi: laudan aloitusmerkinnät, ja natiivi lukee saman listan. Ensimmäinen valittu kaupunki ratkaisee, minkä mantereen pääaarretta etsitään ensin. [R-2.3]
-5. Nykysodista ei tehdä sisältöä: Venäjä, Ukraina ja Syyria ovat mukana kulttuurikohteina, ja Venäjän kaupungeilta ja Kabulilta puuttuu uutisosio. Historialliset taistelut saa näyttää. [R-1.16]
+5. Nykysodista ei tehdä sisältöä: Venäjä, Ukraina ja Syyria ovat mukana kulttuurikohteina, ja Venäjän kaupungeilta ja Kabulilta puuttuu uutisosio. Historialliset taistelut saa näyttää. [R-1.16] Poikkeus: Kiovan ja Odessan saapumistekstissä on yksi tai kaksi rauhallista lausetta siitä, että kaupunki elää sodan keskellä ja ilmahälytykset ovat arkea; ei uutisia, ei taistelujen kuvausta, ei muuta sotasisältöä, ja omistaja näkee lauseet ennen kuin ne menevät peliin. [P-261121-37]
 6. Mekka ja Medina tehdään vain omistajan erillisellä päätöksellä ja kunnioittavasti. Paikallisia ei ivata, ei myöskään kohtaamishahmojen suulla. [R-1.16]
 7. Sovelluksen nimi on pelaajalle kaikkialla pelkkä Matkakirja, ilman 3D:tä: kotinäyttö, kauppa, TestFlight, Macin ikkuna ja valikot. [R-1.7]
 8. Peking pysyy poissa kartalta, kunnes omistaja päättää toisin; Puyin nosto ja Kielletyn kaupungin juoksupeli eivät avaa sitä. [R-2.200]
