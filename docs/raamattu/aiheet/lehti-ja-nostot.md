@@ -20,12 +20,11 @@ SÄÄNNÖT:
 16. Kertojan vuodet aivan oikeaan reunaan: näkyvissä ≤ 4 (iPhone 2); napautus avaa kaikki ja laatikko laajenee alas, ei vieritystä; piilossa kortti auki. [P-261117-70] [P-261118-14] [P-261119-5]
 17. Nostovalikko: laatikko levenee vaaleaksi luetteloksi, Lehti väistyy, tagit kerralla; valittu isona maan nimen perään suluissa. [P-261117-79] [P-261117-120]
 18. Nostopalkki on keskitetty; iPhonella vihreä palkkionappi on palkin sisällä. [P-261118-40]
+19. Tarina kytketään äänitteisiin vasta kokonaisena. [P-261121-16]
 
 EI VIKA:
 - Saapuessa ei avaudu lehteä.
 - Kaupungin jutusta osa näkyy vain lehdessä.
 
 TEKOTAPA:
-- Kuvat: tyylikirja, lisenssit-ja-lataukset. Kysymykset: pulu-ja-kysymykset.
-- Merkit: kartan-merkit-ja-nimet. Faktat: lahteet-ja-tarkistus.
-- docs/kuvakasikirjoitukset.md; tools/laske-karttanostot.mjs.
+- Kortit: tyylikirja, lisenssit-ja-lataukset, pulu-ja-kysymykset, kartan-merkit-ja-nimet, lahteet-ja-tarkistus; docs/kuvakasikirjoitukset.md; tools/laske-karttanostot.mjs.
