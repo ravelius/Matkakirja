@@ -783,7 +783,7 @@ export const EUROOPAN_KADONNEET = {
           kuva: 'loisto',
           teksti: 'Galerie des Machines oli vuoden 1889 Pariisin maailmannäyttelyn konehalli Champ-de-Marsilla, '
             + 'kentän toisessa päässä kuin Eiffel-torni. Se oli noin 420 metriä pitkä ja 115 metriä leveä, '
-            + 'eikä sen sisällä ollut yhtään pilaria, sillä teräskaaret nojasivat toisiinsa kolmesta '
+            + 'eikä sen sisällä ollut yhtään pilaria, sillä metallikaaret nojasivat toisiinsa kolmesta '
             + 'nivelestä.',
           vuodet: [
             { vuosi: '1889', selite: 'maailmannäyttely', kohta: 'vuoden 1889' },
@@ -868,7 +868,7 @@ export const EUROOPAN_KADONNEET = {
       },
       lahde: 'Matkakirjan oma teksti · lähteinä Parville, L\'Exposition universelle (1890), Pariisin '
         + 'kaupungin Ces lieux disparus -sarja, Structurae, Pariszigzag, Gilwro, BnF (CNAC), AHICF, '
-        + 'Cambridge University Press ja Phonographia (avatut sivut, tarkistettu 20.11.2026).',
+        + 'Cambridge University Press ja Phonographia (Findling s. 103; avatut sivut, tarkistettu 20.11.2026).',
       kuva: 'ihme-galerie-des-machines-loistoaika-3x2.jpg',
       lyhyt: 'Näyttelyvieras seisoo liikkuvalla sillalla koneiden yläpuolella ja katsoo, kuinka kaari '
         + 'nousee yli hallin; parikymmentä vuotta myöhemmin halli puretaan.',
