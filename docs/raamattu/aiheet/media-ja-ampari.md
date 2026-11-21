@@ -13,6 +13,7 @@ SÄÄNNÖT:
 8. Selainversio on ylläpidossa: pelaajalle näkyvät viat korjataan, muut web-muutokset odottavat web-jonossa yhteistä erää. Webiin ei tehdä pariteettityötä eikä luonnoksia. [R-6.2]
 9. Natiiviin siirretään vain voimassa oleva sääntö, ei webin koodia. Alustojen ero ei yksin ole syy muutokseen: ero PT:lle rivinä, ja KK päättää. [R-6.4] [R-6.2] [P-261111-5]
 10. Selainversio on ES-moduuleja ilman käännösvaihetta; yhden tiedoston versio syntyy julkaisussa, eikä sitä viedä repoon. [R-6.19]
+11. Puuttuva iso/*.json-viite ämpärissä estää junan (ÄMPÄRIPORTTI). [P-261121-2]
 
 EI VIKA:
 - Tarkan osoitteen tietävä voi ladata yksittäisen tiedoston ämpäristä.
