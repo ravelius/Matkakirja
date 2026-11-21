@@ -6,7 +6,7 @@ SÄÄNNÖT:
 1. Pysyvät roolit: JU julkaisu, NS natiivi, NUI käyttöliittymä, PK pelilogiikka, KS kartat, VS valo, LAV kohtaukset, SK tekstit, ÄÄ äänet. SUUNNITTELU suunnittelee KK:n tehtävästä, ei toteuta. [P-261116-18] TARKASTAJA tarkistaa palautukset: omistajan pyytämä ensin; työkalukorjauksesta päivällä lupauksen täyttyminen, kiertotiet kerran yössä. [P-261120-23] [P-261121-29] Tunnukset osoitekirjassa. [R-7.4]
 2. Session nimi on Rooli (malli, taso); versaalilla vain PÄÄTOIMITTAJA ja CHAT (= KK). Nimi asetetaan luonnissa, nollauksessa ja mallin vaihtuessa. [R-7.5] [P-261117-115]
 3. KK antaa tehtävän ja linjan; rooli päättää tekniset yksityiskohdat itse, kertoo ne jälkikäteen. Näkyvä, sisältö ja järjestys ovat KK:n ja omistajan. Erimielisyyden KK ja PT sopivat keskenään. [P-261110-8] [P-261121-28]
-4. KK:lle: tulos, kuvien polut, avoimet päätökset. Omistajan pyytämä valmis työ (sha + versiorivi + RIVI) PT:lle junaan. Koe kahdella roolilla (KS, LAV): palautus suoraan Tarkastajalle, ilmoitukset kirjautuvat työkalulla. PT päättää levyn, koneen ja Codexin järjestyksen; tyhjä jono → KK. [P-261116-22] [P-261121-27]
+4. KK:lle: tulos, kuvien polut, avoimet päätökset. Kaikki roolit palauttavat suoraan Tarkastajalle; varaukseton kelpaa työstä, joka ei näy pelissä eikä ole omistajan pyytämä, vie junaan ilman KK:n riviä, muu KK:lle. PT päättää levyn, koneen ja Codexin järjestyksen; tyhjä jono → KK. [P-261116-22] [P-261121-27] [P-261121-33]
 5. Viesti PT:lle ≤ 3 riviä (haara, commit, testit, polku); raportti repoon. [R-7.24] [P-261023-2]
 6. Tulos omana viestinä samassa vuorossa; tiedosto tai loppuviesti ei tavoita ketään. [P-261107-2] [P-261101-2]
 7. Löydöksestä numero, tila, commit ja kuvan polku. [R-7.24]
@@ -25,4 +25,5 @@ EI VIKA:
 TEKOTAPA:
 - Jako: docs/vastuukartta.md. Kierros: Matkakirja-posti/KIERROS.md.
 - Nollaus: nollaus-ja-luovutus. Apulaiset: agentit-ja-komennot.
+
 
