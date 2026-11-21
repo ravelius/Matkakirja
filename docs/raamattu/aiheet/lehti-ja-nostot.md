@@ -8,7 +8,7 @@ SÄÄNNÖT:
 3. Nosto aukeaa kuva edellä, LISÄÄ avaa tekstin. Auki oleva nosto ei sulkeudu vierittämällä eikä sisällön napautuksesta. [R-2.41] [R-2.146]
 4. Teksti 3–5 virkettä; laajassa ingressi ja noin 160–240 sanaa. [R-2.146] [R-2.11]
 5. Jokaisella nostolla on Pulun kysymykset; ilman niitä testi on punainen. Kolmasosassa maan nostoista on visa, jonka vastaus on noston tekstissä; vihreä Visa-nappi avaa sen (väliaikaisesti laatikon vasemmalla Lehden paikalla). [R-2.218] [P-261113-10] [P-261117-118]
-6. Noston kuvien säännöt (kuvat, eläinkuva, kuvat kartalla): → kortti noston-kuvat. [P-261117-119] [R-2.146] [R-11.16] [R-11.18] [P-261117-123] [P-261118-14] [P-261118-24] [P-261120-5]
+6. Noston kuvien säännöt (kuvat, eläinkuva, kuvat kartalla): → kortti noston-kuvat. [P-261117-119]
 8. Historian hetki: katsoja paikalla, lähi- ja kaukokuva, teksti alkaa ihmisen kokemuksesta; keksitty minitarina merkitään. [R-2.13]
 9. Maassa 2–3 todellista skandaalia, ei verta eikä nykyihmisten yksityisasioita. [R-2.11] [R-2.12]
 10. Nostoja: EU-maa 40–50, pieni ≥15, muu Eurooppa 30; luontoa, historiaa, kulttuuria, ruokaa ja tekniikkaa. [R-11.15]
@@ -18,7 +18,7 @@ SÄÄNNÖT:
 14. Maalehden Matkailijalle: kevyt, nykyhetki, tuoreet kuvat, vaarat suoraan. [R-2.172] [R-11.21] [R-11.23]
 15. Tuhoutuneen kaupungin nykykuvat ja syy neutraalisti, ei taistelukuvia. [R-11.24]
 16. Kertojan vuodet aivan oikeaan reunaan: näkyvissä ≤ 4 (iPhone 2); napautus avaa kaikki ja laatikko laajenee alas, ei vieritystä; piilossa kortti auki. [P-261117-70] [P-261118-14] [P-261119-5]
-17. Nostovalikko: laatikko levenee vaaleaksi luetteloksi, Lehti väistyy, tagit kerralla; valittu isona maan nimen perään suluissa. [P-261117-79] [P-261117-120]
+17. Nostovalikko: vaalea luettelo, joka tasolla noin 80 % nostopalkin leveydestä; Lehti väistyy, tagit kerralla; kategorian symboli pienenä rivin edessä; maan nimen perässä lippu ja valittu isona suluissa. [P-261117-79] [P-261117-120] [P-261121-17]
 18. Nostopalkki on keskitetty; iPhonella vihreä palkkionappi on palkin sisällä. [P-261118-40]
 19. Tarina kytketään äänitteisiin vasta kokonaisena. [P-261121-16]
 
