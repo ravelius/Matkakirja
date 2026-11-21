@@ -39,7 +39,7 @@ Aiheita 54 / 60. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | suorituskyky-ja-muisti | Suorituskyky ja muisti | NS | 2.9 kt | 12.11.2026 |
 | lataus-ja-kaynnistys | Lataus ja käynnistys | NS | 2.9 kt | 12.11.2026 |
 | media-ja-ampari | Media ja ämpäri | JU | 3.0 kt | 12.11.2026 |
-| arkkitehtuuri-ja-kirjastot | Arkkitehtuuri ja kirjastot | NS | 2.4 kt | 12.11.2026 |
+| arkkitehtuuri-ja-kirjastot | Arkkitehtuuri ja kirjastot | NS | 2.6 kt | 21.11.2026 |
 | lisenssit-ja-lataukset | Lisenssit ja lataukset | PT | 3.0 kt | 14.11.2026 |
 | oikeudet-ja-ansainta | Oikeudet ja ansainta | KK | 2.9 kt | 12.11.2026 |
 | testit | Testit | NS | 3.0 kt | 18.11.2026 |
