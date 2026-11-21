@@ -34,9 +34,6 @@ b98c9c38630e1e855844efc50a86709c	amsterdam	nahtavyysjutut	Portugalilainen synago
 0dc213b58b8c5f6214940be63d612169	amsterdam	takynostot	amsterdamin-portugalilainen-synagoga	1	2026-11-17
 3f8ad821955feffa2a0304d1ffc4a5f8	pariisi	nahtavyysjutut	Lavoisier 1780	1	2026-11-17
 f12c1fc24b83c7e21fbdd5b614a68b8e	FRA	historianHetket	lavoisier-laboratorio-1780	1	2026-11-17
-e6891356e53426b5723fa3034da25d59	FRA	hahmotelma	hahmotelma-les-halles	2	2026-11-17
-4e9099c379f82698e6457b1a67c95714	FRA	hahmotelma	hahmotelma-les-halles	4	2026-11-17
-0d432441e234719d7f958288de7a2268	FRA	hahmotelma	hahmotelma-les-halles	3	2026-11-17
 ddb616306710d9cdded8ff2e51303372	GBR	fokuskohteet	st-paulin-katedraali	2	2026-11-17
 648d7f483640d3f9501d351acf1f379d	GBR	fokuskohteet	st-paulin-katedraali	3	2026-11-17
 cea72b1c3da0c827e29f09056efbd8ab	GBR	fokuskohteet	st-paulin-katedraali	4	2026-11-17
@@ -59,7 +56,6 @@ fcf9ba55d3f1273c306cbaa276ff4ae9	FRA	fokuskohteet	tuileries	3	2026-11-20
 fa51d0d35f08eeb2123f9f001f580349	FRA	fokuskohteet	palais-garnier	2	2026-11-20
 e8f5a7d600033e9a967d80a8f29d21cc	FRA	hahmotelma	hahmotelma-palais-orsay	3	2026-11-20
 32b870379d126eae804eae0b06e64eea	FRA	hahmotelma	hahmotelma-palais-orsay	4	2026-11-20
-af6500583d48d3a81b231c729ab54bad	FRA	hahmotelma	hahmotelma-les-halles	2	2026-11-20
 8e7b1d8514c139e6367eb50f9c64d9ca	FRA	hahmotelma	hahmotelma-palais-industrie	4	2026-11-20
 80d53f352736d68e4cc929497fe3f567	FRA	fokuskohteet	lavoisier-1780	2	2026-11-20
 48f6b6e09548f90a15fa85af28cf78c0	FRA	fokuskohteet	lavoisier-1780	3	2026-11-20
@@ -180,7 +176,6 @@ b40128cc820f34d869db7f58214f4c11	FRA	hahmotelma	hahmotelma-palais-orsay	1	2026-1
 1efdf2215ef50416a3d4f1d5390102fe	FRA	hahmotelma	hahmotelma-palais-industrie	1	2026-11-20
 197a0a488d24a5e3a340996c795509b2	FRA	hahmotelma	hahmotelma-trocadero	1	2026-11-20
 5cc5096270d77768c7e4088d4695d883	FRA	hahmotelma	hahmotelma-galerie-des-machines	1	2026-11-20
-3303b53cbbe779a16f556005893f655d	FRA	hahmotelma	hahmotelma-les-halles	1	2026-11-20
 befd15a80846a41bb990482d93d112db	sevilla	nahtavyysjutut	Torre del Oro	1	2026-11-20
 c45dd6cf885792a867b9ba8e1a14a858	sevilla	nahtavyysjutut	Torre del Oro	2	2026-11-20
 4b1da998a16713015b70b405d8f8f31a	sevilla	nahtavyysjutut	Torre del Oro	3	2026-11-20
