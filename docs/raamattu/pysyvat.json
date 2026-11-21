@@ -584,6 +584,32 @@
     }
    ],
    "muutokset": []
+  },
+  {
+   "tunnus": "S-19",
+   "nimi": "Äänitteitä ei kuunnella, suoraan peliin",
+   "roolit": [
+    "KK",
+    "ÄÄ",
+    "SK",
+    "JU",
+    "TARKASTAJA"
+   ],
+   "vartija": "ei vartijaa",
+   "tila": "voimassa",
+   "kerrat": [
+    {
+     "pvm": "21.11.2026",
+     "klo": "15.15",
+     "lahde": "P-261121-23",
+     "sanat": "Äänitiedostoja ei koskaan saa kuunnella, vaan ne lisätään aina suoraan peliin.",
+     "sha": "6ba27e13a4f3394c",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-21T13:16:20.882Z"
+    }
+   ],
+   "muutokset": []
   }
  ]
 }
