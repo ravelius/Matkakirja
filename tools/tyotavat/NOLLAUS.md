@@ -22,6 +22,12 @@ Keskustelukanava (local_37f7c945) nollaa itsensä (omistaja 11.11. 22.56/23.03).
 - Jos vanhentunut NOLLAUS ehti jonoon: lähetä heti `PERUUTUS: NOLLAUS vanhentunut, ÄLÄ nollaa` samalle roolille.
 - Viestimäärä vaihtelee tiivistyksen vuoksi; käytä lisäksi `get_session`in `lastActivityAt`-aikaa ja roolin omaa "nollaan nyt" -viestiä päätelmän tukena.
 
+## Vanhentuneen NOLLAUS-viestin esto (PT 4.11. 07.22: JU, KS, LAV ja KK saivat NOLLAUS-viestin nollauksensa jälkeen)
+- Lähetä NOLLAUS vain, kun roolin `isRunning` on false; muuten odota levon alkua (viesti jää muuten jonoon ja osuu seuraavaan sessioon).
+- Rooli, jonka jonossa on NOLLAUS-viesti, mutta joka antaa uuden LUOVUTUS VALMIS -rivin: älä lähetä toista NOLLAUSTA, vaan käytä uusinta sha:ta ja tarkista ennen jokaista viestiä `list_events`: jos viestimäärä on pudonnut luovutuksen jälkeen tai uusin tapahtuma on vanhaa tilaa, sessio on jo nollattu → vain aloitusviesti, ei NOLLAUSTA.
+- Jos vanhentunut NOLLAUS ehti jonoon: lähetä heti `PERUUTUS: NOLLAUS vanhentunut, ÄLÄ nollaa` samalle roolille.
+- Viestimäärä vaihtelee tiivistyksen vuoksi; käytä lisäksi `get_session`in `lastActivityAt`-aikaa ja roolin omaa "nollaan nyt" -viestiä päätelmän tukena.
+
 ## Vakioaloitusviesti (täytä <…>)
 ```
 Olet <ROOLI> (<malli>), Matkakirjan roolisessio; session id <id>, checkout <kansio>.
