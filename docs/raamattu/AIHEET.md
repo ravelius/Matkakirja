@@ -4,7 +4,7 @@ Aiheita 54 / 60. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 
 | Tunnus | Nimi | Vastuu | Koko | Tarkistettu |
 |---|---|---|---|---|
-| maailma-ja-rajaukset | Maailma ja rajaukset | KK | 2.1 kt | 12.11.2026 |
+| maailma-ja-rajaukset | Maailma ja rajaukset | KK | 2.4 kt | 12.11.2026 |
 | aika-ja-ulkoasu | Aika ja ulkoasu | KK | 2.2 kt | 12.11.2026 |
 | kartta-ja-pallo | Kartta ja pallo | KS | 3.0 kt | 12.11.2026 |
 | kartan-merkit-ja-nimet | Kartan merkit ja nimet | KS | 3.0 kt | 18.11.2026 |
@@ -32,7 +32,7 @@ Aiheita 54 / 60. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | lahteet-ja-tarkistus | Lähteet ja tarkistus | SK | 2.6 kt | 12.11.2026 |
 | kertojaaanet | Kertojaäänet | ÄÄ | 2.9 kt | 12.11.2026 |
 | aaniluvat-ja-aaniportti | Ääniluvat ja ääniportti | ÄÄ | 3.0 kt | 21.11.2026 |
-| musiikki-ja-tehosteet | Musiikki ja tehosteet | ÄÄ | 2.9 kt | 12.11.2026 |
+| musiikki-ja-tehosteet | Musiikki ja tehosteet | ÄÄ | 3.0 kt | 12.11.2026 |
 | grafiikan-tuotanto | Grafiikan tuotanto | PT | 3.0 kt | 12.11.2026 |
 | mallit-ja-3d | Mallit ja 3D | LAV | 3.0 kt | 12.11.2026 |
 | valo-ja-materiaalit | Valo ja materiaalit | VS | 3.0 kt | 20.11.2026 |

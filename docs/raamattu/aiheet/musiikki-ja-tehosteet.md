@@ -25,7 +25,7 @@ EI VIKA:
 
 TEKOTAPA:
 - Luvat, tasoitus, LUFS, portti, ei tarkistuskuuntelua: aaniluvat-ja-aaniportti. Puhe: kertojaaanet.
-- Soundly-vienti vaatii omistajan koneen; Freesound alkuperäisinä OAuthilla; muut vapaat lähteet ja robots.txt: lisenssit-ja-lataukset.
+- Soundly: haku taustalla soundly://search/ [P-261121-38], vienti omistajan koneella; Freesound alkuperäisinä OAuthilla; muut vapaat lähteet ja robots.txt: lisenssit-ja-lataukset.
 - Ryhmäkertoimet worker /mikseri/tasot: katso ennen tason nostoa.
 - Kaupunkien pisteäänet ovat ElavaKaupungissa: hae ennen uutta äänijärjestelmää.
 
