@@ -800,13 +800,15 @@ export const EUROOPAN_KADONNEET = {
       laudat: { maailmankartta: { x: 5910.0, y: 1439.8 }, europe: { x: 255.4, y: 608.8 } },
       // teksti lasketaan jaksoista (ks. ihmeKohde). Erä 2 (L5-4, KK 20.11.2026): jaksollinen kuten Palais de l'Industrie; raportti docs/raportit/pariisi-nostot-era2-teksti-20261120.md.
       otsikko: 'Halli, jossa ei ollut yhtään pilaria',
+      aanikansio: 'galerie-des-machines/v2',
       jaksot: [
         {
           osa: 'tapahtuma',
+          aanite: 'kertoja-1-jakso1',
           kuva: 'loisto',
           teksti: 'Galerie des Machines oli vuoden 1889 Pariisin maailmannäyttelyn konehalli Champ-de-Marsilla, '
             + 'kentän toisessa päässä kuin Eiffel-torni. Se oli noin 420 metriä pitkä ja 115 metriä leveä, '
-            + 'eikä sen sisällä ollut yhtään pilaria, sillä teräskaaret nojasivat toisiinsa kolmesta '
+            + 'eikä sen sisällä ollut yhtään pilaria, sillä metallikaaret nojasivat toisiinsa kolmesta '
             + 'nivelestä.',
           vuodet: [
             { vuosi: '1889', selite: 'maailmannäyttely', kohta: 'vuoden 1889' },
@@ -814,12 +816,14 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'tapahtuma',
+          aanite: 'kertoja-2-jakso2',
           kuva: 'loisto',
           teksti: 'Vieraita kuljettivat hallissa liikkuvat sillat. Esillä oli myös Edisonin fonografi, jolla '
             + 'kuultiin muun muassa Marseillaise.',
         },
         {
           osa: 'tapahtuma',
+          aanite: 'kertoja-3-jakso3',
           kuva: 'hevosnayttely',
           teksti: 'Näyttelyn jälkeenkin halli jäi käyttöön: vuonna 1900 siellä pidettiin maatalouden ja '
             + 'elintarvikkeiden näyttely, ja marraskuussa 1901 alkoi Barnum & Bailey -sirkuksen esityssarja '
@@ -832,6 +836,7 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'kaanne',
+          aanite: 'kertoja-4-jakso4',
           kuva: 'halli1900',
           teksti: 'Vuonna 1909 halli purettiin, jotta näkymä Champ-de-Marsille aukeaisi. Yli neljäkymmentä '
             + 'metriä korkea halli oli seissyt paikallaan kaksikymmentä vuotta.',
@@ -843,6 +848,7 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'tanaan',
+          aanite: 'kertoja-5-jakso5',
           kuva: 'nykyinen',
           teksti: 'Hallia ei ole enää. Sen paikka oli Champ-de-Marsin eteläpäässä École Militairen edessä, ja kentän toisessa päässä seisoo yhä Eiffel-torni.',
         },
@@ -891,7 +897,7 @@ export const EUROOPAN_KADONNEET = {
       },
       lahde: 'Matkakirjan oma teksti · lähteinä Parville, L\'Exposition universelle (1890), Pariisin '
         + 'kaupungin Ces lieux disparus -sarja, Structurae, Pariszigzag, Gilwro, BnF (CNAC), AHICF, '
-        + 'Cambridge University Press ja Phonographia (avatut sivut, tarkistettu 20.11.2026).',
+        + 'Cambridge University Press ja Phonographia (Findling s. 103; avatut sivut, tarkistettu 20.11.2026).',
       kuva: 'ihme-galerie-des-machines-loistoaika-3x2.jpg',
       lyhyt: 'Näyttelyvieras seisoo liikkuvalla sillalla koneiden yläpuolella ja katsoo, kuinka kaari '
         + 'nousee yli hallin; parikymmentä vuotta myöhemmin halli puretaan.',

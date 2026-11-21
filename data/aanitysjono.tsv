@@ -48,8 +48,6 @@ e3fe07ac93a94bf175d453b81e6f836e	FRA	historianHetket	pasteur-pullot-1862	2	2026-
 cf4e332f5b077e2e9cfcb3c5f5090578	GBR	fokuskohteet	vanha-london-bridge	2	2026-11-18
 90962463eafb71ddb5f5181f64ccd23a	pariisi	nahtavyysjutut	Temple-torni	4	2026-11-20
 a9f636711f1a1ba95c5919ad007e8c4e	pariisi	nahtavyysjutut	Temple-torni	5	2026-11-20
-6f5d42ad379e7ab3867fb4f230f00284	pariisi	nahtavyysjutut	Galerie des Machines	2	2026-11-20
-b5203dc8e8811fa7ef2e3716294a7b39	pariisi	nahtavyysjutut	Galerie des Machines	3	2026-11-20
 f8e191ad63df67cc7a271429cf3e27f4	pariisi	nahtavyysjutut	Kirahvi 1827	2	2026-11-20
 2e5df611126094e282ba993a62364947	pariisi	nahtavyysjutut	Kirahvi 1827	3	2026-11-20
 d895017b656e3b77d4b54d42c32ec025	pariisi	nahtavyysjutut	Vrain-Lucas	1	2026-11-20
@@ -61,7 +59,6 @@ d895017b656e3b77d4b54d42c32ec025	pariisi	nahtavyysjutut	Vrain-Lucas	1	2026-11-20
 610285916299d487dea42a35dfe6a9eb	pariisi	takynostot	pariisi-soi	1	2026-11-20
 d7c7588e58337d90d59b987fd8c78117	pariisi	nahtavyysjutut	Temple-torni	2	2026-11-20
 ce70bf60272ff1205d45b54cf01f2381	pariisi	nahtavyysjutut	Temple-torni	3	2026-11-20
-30433cf9ace7dda4ed78e95f177a6c7f	pariisi	nahtavyysjutut	Galerie des Machines	4	2026-11-20
 3abc9a6fc9d58f0deea9ba26d3137bea	pariisi	nahtavyysjutut	Bizet 1875	1	2026-11-20
 3d64840e0ac50f66b39e778b87104d86	pariisi	nahtavyysjutut	Bizet 1875	2	2026-11-20
 b130c63e0b031f9d940c579673449605	pariisi	nahtavyysjutut	Bizet 1875	3	2026-11-20
@@ -92,7 +89,6 @@ e96c24d699244c85dcb66110f6c4b9b7	FRA	skandaalit	vrain-lucas-kirjevaarennokset	3	
 b462a219206b4eb1d6c05e4a49e9a133	FRA	skandaalit	vrain-lucas-kirjevaarennokset	5	2026-11-20
 d2e656ae5d3bdb64877644dabd36ef13	pariisi	takynostot	kirahvin-kavelymatka	1	2026-11-20
 879f16e1a06a97c18de0d1e18e8f4161	pariisi	fokusvirta-takyt	impressionistit	1	2026-11-20
-c34bbf12ba40f2bb06ab1e6a58f8358c	FRA	hahmotelma	hahmotelma-galerie-des-machines	5	2026-11-20
 3cf0ebe74b73da0a708a503034161b6e	GBR	fokuskohteet	st-paulin-katedraali	1	2026-11-20
 5c1a666211b3f4280e4933d243551f9c	pariisi	nahtavyysjutut	Riemukaari	1	2026-11-20
 1d72a2172ee3e549006c57db2abb09de	pariisi	nahtavyysjutut	Riemukaari	2	2026-11-20
@@ -138,7 +134,6 @@ ae4dce3a0d4138f2db7f261d88c3cd55	pariisi	nahtavyysjutut	Metro 1900	1	2026-11-20
 9d541b2d45cc86b588576b2cac74015b	pariisi	nahtavyysjutut	Metro 1900	3	2026-11-20
 9076778c1bdc2c4dc6d782e316782771	pariisi	takynostot	guimardin-metro	1	2026-11-20
 82316fb1b519de632822f0507b25101b	FRA	hahmotelma	hahmotelma-temple-torni	1	2026-11-20
-5cc5096270d77768c7e4088d4695d883	FRA	hahmotelma	hahmotelma-galerie-des-machines	1	2026-11-20
 befd15a80846a41bb990482d93d112db	sevilla	nahtavyysjutut	Torre del Oro	1	2026-11-20
 c45dd6cf885792a867b9ba8e1a14a858	sevilla	nahtavyysjutut	Torre del Oro	2	2026-11-20
 4b1da998a16713015b70b405d8f8f31a	sevilla	nahtavyysjutut	Torre del Oro	3	2026-11-20
