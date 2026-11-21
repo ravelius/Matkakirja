@@ -33,7 +33,7 @@ for (const k of kyselyt) {
     for (let yritys = 0; yritys < 3; yritys += 1) {
       try {
         const r = await fetch(u, { headers: { Authorization: `Token ${AVAIN}`, 'User-Agent': 'matkakirja-kuvailu' } });
-        if (r.status === 429) { await odota(20000); continue; }
+        if (r.status === 429) { virhe = 'HTTP 429 (kolme yritystä)'; await odota(20000); continue; }
         if (!r.ok) { virhe = `HTTP ${r.status}`; break; }
         const j = await r.json(); maara = j.count; osumat = j.results ?? []; virhe = null; break;
       } catch (e) { virhe = String(e).slice(0, 120); await odota(3000); }
