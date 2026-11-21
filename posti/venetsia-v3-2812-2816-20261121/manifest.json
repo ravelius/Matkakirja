@@ -1,0 +1,185 @@
+{
+  "sourceCommit": "96bfce472d5fe62d1252dd0f4cf2bf63476088e5",
+  "sourceBlob": "9797f762b9aa2779fc37f167bff32a0de7cf0871",
+  "images": [
+    {
+      "task": 2815,
+      "slug": "doge-palace-v3",
+      "original": "doge-palace-v3-original.png",
+      "originalSHA256": "a7bd18e2e3aaad3b61bebe5b53ed24b57547afea6f94380d0387d61eea9d8c4d",
+      "originalSizePx": [
+        1790,
+        879
+      ],
+      "preview1000": "doge-palace-v3-1000.jpg",
+      "previewSHA256": "f9c37bc7b806edbd77ef387d5573840c92448e113875c343062f12dd845990e1",
+      "previewSizePx": [
+        1000,
+        491
+      ],
+      "generationArtifactId": "exec-3f28dd0e-fac0-4fcd-8f31-67176379d6d2",
+      "previousV2SHA256": "bb36a876b45d6bd9bcca01d26e5f5d6f73889f85f2e9831ce5df7b29996e2879",
+      "sourcePhotos": [
+        {
+          "title": "File:Doge's Palace Venice sea facade.jpg",
+          "author": "kallerna",
+          "url": "https://commons.wikimedia.org/wiki/File:Doge%27s_Palace_Venice_sea_facade.jpg",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sha256": "b6c5104b0ac8d82d82d21d89cf3b3bba917f816936539988c2280fc11b046207",
+          "role": "Molo, väritys ja julkisivun yksityiskohdat"
+        },
+        {
+          "title": "File:Palazzo-Ducale-Venice-20050524-036.jpg",
+          "author": "Gary Houston",
+          "url": "https://commons.wikimedia.org/wiki/File:Palazzo-Ducale-Venice-20050524-036.jpg",
+          "license": "CC0",
+          "licenseURL": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "sha256": "d5c81abd1e8237f69ebfce393dc3aecd2249a01305e976c516bb850fa998c4d0",
+          "role": "Kulma ja päällekkäiset kaaristot"
+        },
+        {
+          "title": "File:Venezia Blick vom Campanile der Basilica di San Marco auf den Palazzo Ducale 2.jpg",
+          "author": "Zairon",
+          "url": "https://commons.wikimedia.org/wiki/File:Venezia_Blick_vom_Campanile_der_Basilica_di_San_Marco_auf_den_Palazzo_Ducale_2.jpg",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sha256": "5ea844e6e4ada46a5696c3d9d22448bd3d0ce0ba3e812eb121515272898252a7",
+          "role": "Kattomuodot, sisäpiha ja sisäpihan siipi"
+        }
+      ],
+      "projectionGuideSHA256": "b9eca9e0847abb490c19012d32b81d251adde31d9aa670290c42dcaa0b45b106",
+      "imageMethod": "Uusi ImageGen-tuotanto valokuvaviitteistä ja mittakaaviosta. Vain katselukopio on pienennetty.",
+      "targets": {
+        "moloM": 71.5,
+        "piazzettaM": 75,
+        "moloEavesOverLength": 0.36,
+        "roseWallOverElevation": 0.5
+      },
+      "qa": {
+        "moloEavesOverLengthByEdgeSlopes": 0.362,
+        "moloEavesOverLengthAssumingTargetFootprint": 0.371,
+        "roseWallFractionAcrossBothFacades": 0.463,
+        "roseWallFractionMoloApprox": 0.47,
+        "observation": "Molemmat julkisivut, kaksi kaaristokerrosta ja sisäpiha näkyvät. Molo näkyy lähes suoraan, Piazzetta lyhenee perspektiivissä. Tarkkaa pohjan syvyyttä ei voi päätellä tästä kuvasta. V2:n korkeusarvio KK:n mukaan 0,45–0,50."
+      }
+    },
+    {
+      "task": 2816,
+      "slug": "rialto-bridge-v3",
+      "original": "rialto-bridge-v3-original.png",
+      "originalSHA256": "3279974c6e0b66018ff8c67d8dbadf5fb23d6eb2d3d4e44c5e5021f4d9b128af",
+      "originalSizePx": [
+        1706,
+        922
+      ],
+      "preview1000": "rialto-bridge-v3-1000.jpg",
+      "previewSHA256": "06a25cebd80908d131e10b9d5d08328a6b5f6ddfea14bc34ed473cd21a57b230",
+      "previewSizePx": [
+        1000,
+        540
+      ],
+      "generationArtifactId": "exec-1da78e57-afee-4f0b-a95e-9b4ae6058096",
+      "previousV2SHA256": "2c3070477c1d5a0921a682baf905f9dddcefc04b5b98d21f283cf945fe9e0b7b",
+      "sourcePhotos": [
+        {
+          "title": "File:Ponte di Rialto Aug 2020 1.jpg",
+          "author": "Kasa Fue",
+          "url": "https://commons.wikimedia.org/wiki/File:Ponte_di_Rialto_Aug_2020_1.jpg",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sha256": "ca82671b703a07cfb60844a40efdef764baa1917cb97b72360741f4ce353885f",
+          "role": "Ilmakuva, portaiden suunta ja rinnakkaiset kaupparivit"
+        },
+        {
+          "title": "File:Rialto bridge venice.jpg",
+          "author": "Vivupadi",
+          "url": "https://commons.wikimedia.org/wiki/File:Rialto_bridge_venice.jpg",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sha256": "00c09a589322e5d3fbaa328a7669db8492c73b287af00981f1ebd05872961ca7",
+          "role": "supporting opposite central arch depth"
+        },
+        {
+          "title": "File:Panorama of Canal Grande and Ponte di Rialto, Venice - September 2017.jpg",
+          "author": "Martin Falbisoner",
+          "url": "https://commons.wikimedia.org/wiki/File:Panorama_of_Canal_Grande_and_Ponte_di_Rialto,_Venice_-_September_2017.jpg",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sha256": "1b27681b6cfffc9a43d92919d9c251d201358fea873e74038797743de19571bf",
+          "role": "main complete bridge silhouette and camera"
+        }
+      ],
+      "projectionGuideSHA256": "ee9cb35eea6051eae3a004870d964a4315d66eebab30dc6e9be371c133689223",
+      "imageMethod": "Uusi ImageGen-tuotanto valokuvaviitteistä ja mittakaaviosta. Vain katselukopio on pienennetty.",
+      "targets": {
+        "lengthM": 48,
+        "spanM": [
+          28,
+          28.8
+        ],
+        "spanOverLength": 0.6,
+        "crownAboveWaterApproxM": 7.3,
+        "deckWidthM": 22.9
+      },
+      "qa": {
+        "frontElevationOverallXPx": [
+          40,
+          1668
+        ],
+        "frontArchSpringPixels": [
+          [
+            363,
+            779
+          ],
+          [
+            1326,
+            779
+          ]
+        ],
+        "frontArchCrownPixel": [
+          851,
+          539
+        ],
+        "frontBaseBottomYPx": 803,
+        "spanOverLengthApprox": 0.592,
+        "spanMAt48m": 28.4,
+        "riseAboveSpringLineApproxM": 7.1,
+        "crownAboveLowerPlinthApproxM": 7.8,
+        "pixelReadingUncertaintyApprox": 5,
+        "observation": "Kummankin pitkän portaan askelmat nousevat pituussuunnassa keskustaan. Etummaisen kivikaaren reunat mitattiin samalta julkisivulta. Vedenpinnan taso puuttuu, ja kansileveys on ohjearvo. V2:ssa KK arvioi jännesuhteeksi noin 0,69 ja rampit lyhyiksi."
+      }
+    }
+  ],
+  "stage": "KK:n tarkka kuvasana odottaa",
+  "churches": [
+    {
+      "task": 2812,
+      "slug": "st-mary-krakow-v2",
+      "approvedOriginalSHA256": "75275658ed90bef30c0b64c1c9f516627dfb763606b9edb285a2918bf4959e67",
+      "verified": true,
+      "tripoSubmitted": false
+    },
+    {
+      "task": 2813,
+      "slug": "st-patrick-dublin-v2",
+      "approvedOriginalSHA256": "35faf11dee8fb58094a68cc936ac8a6c0b0b8e6f57394c91627ba9e197b70e0a",
+      "verified": true,
+      "tripoSubmitted": false
+    },
+    {
+      "task": 2814,
+      "slug": "st-stephen-budapest-v2",
+      "approvedOriginalSHA256": "5619c374e035fa4a3620f44d68697c1fdc9015d78d900780b8a15711a8b0ec1c",
+      "verified": true,
+      "tripoSubmitted": false
+    }
+  ],
+  "tripoResourceCheck": {
+    "checkedAt": "2026-11-21T06:05:48.343775+00:00",
+    "credits": 0,
+    "storage": "417/40"
+  },
+  "tripoCalls": 0,
+  "purchases": 0
+}
