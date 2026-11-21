@@ -562,6 +562,28 @@
     }
    ],
    "muutokset": []
+  },
+  {
+   "tunnus": "S-18",
+   "nimi": "KÄSITYÖSTÄ OSAT KIRJASTOON",
+   "roolit": [
+    "kaikki"
+   ],
+   "vartija": "ei vartijaa",
+   "tila": "voimassa",
+   "kerrat": [
+    {
+     "pvm": "21.11.2026",
+     "klo": "10.48",
+     "lahde": "P-261121-8",
+     "sanat": "Jos silta on kaupungin tärkeimpien nostojen joukossa niin se rakennetaan ensin paketin pohjalta ja sitten viimeistellään käsin loppuun. Muuten suosituksesi mukaan. Ja aina kun rakennetaan käsin parempia versioita niin niistä kannattaa miettiä kannattaako siitä työstä lisätä osia kirjastoon.",
+     "sha": "a6d4c2891a61fa6c",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-21T08:48:36.324Z"
+    }
+   ],
+   "muutokset": []
   }
  ]
 }

@@ -1,4 +1,4 @@
-# arkkitehtuuri-ja-kirjastot · vastuu NS · tarkistettu 12.11.2026
+# arkkitehtuuri-ja-kirjastot · vastuu NS · tarkistettu 21.11.2026
 
 TAVOITE: Peli on natiivi iOS-sovellus, joka on koottu yhteisistä osista. Sama osa toimii kartalla, kaupungeissa, museoissa ja peleissä, joten kaikki tuntuu yhtenäiseltä, ja uusi peli syntyy valmiista osista.
 
@@ -15,6 +15,7 @@ SÄÄNNÖT:
 10. Ulkopuolisista paketeista ensin Unityn omat; maksullinen vain omistajan ostona. [R-2.125] [R-11.5]
 11. Natiivissa ei ole web-koodia eikä web-näkymää: lehdet tehdään UI Toolkitilla sisältöpaketin datasta. [R-6.4]
 12. Selainversio lataa ulkoiset kirjastonsa ämpärin vendor-polusta laiskasti, ei repoon eikä CDN:stä. Sen turvatila kytkee raskaat kerrokset tunniksi pois toistuvan kaatumisen jälkeen. [R-2.41] [R-10.18]
+13. Käsin tehdyn paremman version palautus kertoo, mitä osia työstä lisätään kirjastoon tai miksi ei mitään. [P-261121-8]
 
 EI VIKA:
 - Natiivissa ei ole turvatilaa.
