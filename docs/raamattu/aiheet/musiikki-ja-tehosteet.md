@@ -16,6 +16,8 @@ SÄÄNNÖT:
 11. Jokainen soiva ääni kuuluu ryhmään yhteisessä mikserissä; tasot ovat peli- ja linssikohtaisia. Mikseri näkyy vain kehittäjäkoodilla, ja sillä tallennetut tasot ovat kaikkien oletus. [R-5.17] [R-4.20]
 12. Äänet soivat myös mykistyskytkimen ollessa päällä. [R-5.21]
 13. Uusi kappale menee omistajan kuunneltavaksi äänisivulle ennen peliin vientiä. [R-5.18]
+14. Äänimaisemaan tehdään seremoniat, katumusiikki, eläimet, kellopelit ja kulkueet (sääntö 8); osto ja tekoäly vain omistajan luvalla. [P-261121-34]
+15. Ilmahälytys ei soi Kiovan eikä Odessan taustalla; sota kerrotaan teksteissä. [P-261121-35]
 
 EI VIKA:
 - Kaupungin kappaleiden jälkeen kartalla on hiljaista seuraavaan kaupunkiin asti.
