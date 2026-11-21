@@ -16,6 +16,7 @@ SÄÄNNÖT:
 11. Natiivissa ei ole web-koodia eikä web-näkymää: lehdet tehdään UI Toolkitilla sisältöpaketin datasta. [R-6.4]
 12. Selainversio lataa ulkoiset kirjastonsa ämpärin vendor-polusta laiskasti, ei repoon eikä CDN:stä. Sen turvatila kytkee raskaat kerrokset tunniksi pois toistuvan kaatumisen jälkeen. [R-2.41] [R-10.18]
 13. Käsin tehdyn paremman version palautus kertoo, mitä osia työstä lisätään kirjastoon tai miksi ei mitään. [P-261121-8]
+14. Kirjaston kokonaisuuden erillinen suunnittelu (skaalautuvuus, tehokas käyttö, puuttuvat osa-alueet) odottaa omistajan päätöstä; ei työlistaan ennen sitä. [P-261121-24] [P-261121-25]
 
 EI VIKA:
 - Natiivissa ei ole turvatilaa.
@@ -24,3 +25,4 @@ EI VIKA:
 TEKOTAPA:
 - Osat ja vastuut: docs/raamattu/KIRJASTOT.md. Natiivin rajapinnat: Assets/Matkakirja/RAJAPINTA.md.
 - Pelin moduulimalli: docs/suunnitelmat/20261111-juoksupeli-tavoiterakenne.md.
+
