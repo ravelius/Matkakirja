@@ -83,7 +83,7 @@ test('vienti tuo Tuileries\'n jaksot natiivin raakamoduuliin (luku 8)', () => {
   assert.equal(t.n.otsikko, 'Palatsi, joka myytiin kivinä', 'otsikko = tarinarivi (ei vuotta)');
   assert.ok(t.n.teksti.startsWith('Tuileries\'n palatsi oli Ranskan hallitsijoiden koti'), 'teksti: kertojan ensimmäinen jakso ensin');
   assert.ok(!/isoisä/i.test(t.n.teksti), 'ei isoisää');
-  assert.equal(t.n.aanikansio, undefined, 'vanha äänikansio pois (vanha otto ei saa soida uuden tekstin päällä)');
+  assert.equal(t.n.aanikansio, 'tuileries/v2', 'uusi äänikansio v2 (vanha tuileries-koe/v1 ei palaa; 21.11.2026)');
   // Yksi nosto pisteessä: syvennystarina ja sen kopio poissa (8.5 r5).
   assert.ok(![...tiedostot.values()].some((x) => x.includes('syvennys-pariisi-tuileriat') || x.includes('"tuileriat"')),
     'paketissa yhä viittaus täkyyn tuileriat');

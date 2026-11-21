@@ -136,14 +136,11 @@ export const FOKUSKOHTEET_FRA = [
      */
     // Tarinarivi (enintään 40 merkkiä, ei vuotta; KK 20.11.2026, P-261120-3): näkyy otsikon alla, kertoja ei lue sitä.
     otsikko: 'Palatsi, joka myytiin kivinä',
-    /*
-     * Äänikansiota (`aanikansio: 'tuileries-koe/v1'`) ei enää ole (P-261120-3 M5): vanhat otot kuuluvat vanhaan
-     * tekstiin (jaksojen järjestys muuttui), joten ne eivät saa soida uuden tekstin päällä. Nosto luetaan lennossa
-     * kuten muut, kunnes Äänittäjä saa luvan äänittää uuden tekstin (uusi kansio, v2).
-     */
+    aanikansio: 'tuileries/v2',
     jaksot: [
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-1-jakso1',
         kuva: 'loisto',
         teksti: 'Tuileries\'n palatsi oli Ranskan hallitsijoiden koti Pariisissa, ennen kuin se poltettiin ja '
           + 'myytiin kivinä. Kuningatar Katariina de Medici aloitti sen rakentamisen Louvren viereen vuonna '
@@ -154,6 +151,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-2-jakso2',
         kuva: 'palo',
         teksti: 'Toukokuussa 1871 Pariisin kommuuni oli kukistumassa. Sen kannattajat sytyttivät Tuileries\'n '
           + 'palatsin. Tuli paloi yli kaksi vuorokautta ja poltti talon sisältä tyhjäksi.',
@@ -163,6 +161,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-3-jakso3',
         kuva: 'purku',
         teksti: 'Palon jälkeen kivimuurit jäivät pystyyn, vaikka katto ja sisustus olivat poissa. Poltettu '
           + 'kaupungintalo rakennettiin uudelleen, Tuileries\'ta ei. Rauniot seisoivat katottomina yli '
@@ -170,6 +169,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'kaanne',
+        aanite: 'kertoja-4-jakso4',
         kuva: 'purku',
         teksti: 'Vuonna 1882 kolmas tasavalta päätti purkaa raunion, ja purku valmistui 1883. Purkuyrittäjä myi '
           + 'kiviä ja marmoria, ja suuresta erästä rakennettiin linna Korsikalle.',
@@ -182,6 +182,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tanaan',
+        aanite: 'kertoja-5-jakso5',
         kuva: 'paatykolmio',
         teksti: 'Palatsin paikalla on nyt avointa tilaa Louvren ja puutarhan välissä. Yksi sen paloista seisoo '
           + 'yhä Pariisissa: keskipaviljongin päätykolmio on puistossa nimeltä Square Georges Cain.',
@@ -1212,14 +1213,11 @@ export const FOKUSKOHTEET_FRA = [
     lahde: 'Matkakirjan oma teksti · lähteinä Science History Institute, Encyclopedia.com, ACS, Britannica ja Google Arts & Culture '
       + '(tarkistettu 18.11.2026).',
     otsikko: 'Mies, joka punnitsi kaiken',
-    /*
-     * Äänitteitä ei ole vielä: `aanikansio` ja jaksojen `aanite` lisätään, kun Äänittäjä on
-     * äänittänyt (äänitysjonon rivit ovat data/aanitysjono.tsv:ssä). Siihen asti jaksot
-     * kuuluvat suoratoistona.
-     */
+    aanikansio: 'lavoisier-1780/v2',
     jaksot: [
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-1-jakso1',
         kuva: 'koe',
         teksti: 'Lavoisierin laboratorio oli Arsenaalin asunnon yhteydessä Pariisissa. Antoine Lavoisier johti '
           + 'Arsenaalissa ruudin valmistusta ja punnitsi laboratoriossaan kaiken ennen koetta ja sen jälkeen. '
@@ -1227,6 +1225,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-2-jakso2',
         kuva: 'koe',
         teksti: 'Vuonna 1771 Lavoisier meni naimisiin Marie-Annen kanssa. Marie-Anne oppi englantia ja käänsi '
           + 'ulkomaisia tutkimuksia ranskaksi. Lavoisier huomasi kokeissaan, että palaessa aine yhtyy ilman '
@@ -1237,6 +1236,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-3-jakso3',
         kuva: 'david',
         teksti: 'Vuonna 1788 Jacques-Louis David maalasi Lavoisierista ja Marie-Annesta muotokuvan. Marie-Annen '
           + 'työ näkyi myös oppikirjassa: vuonna 1789 ilmestyneeseen Lavoisierin oppikirjaan hän piirsi '
@@ -1248,6 +1248,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tanaan',
+        aanite: 'kertoja-4-jakso4',
         kuva: 'valineet',
         teksti: 'Lavoisier oli kuulunut vanhan hallinnon veronkantajiin. Vallankumouksen tuomioistuin tuomitsi '
           + 'hänet kuolemaan, ja hänet mestattiin toukokuun 8. päivänä 1794. Lavoisierin laboratorion '
@@ -1341,14 +1342,11 @@ export const FOKUSKOHTEET_FRA = [
     lahde: 'Matkakirjan oma teksti · lähteinä Institut Pasteur, École normale supérieure, Carl Zimmer (NYT) '
       + 'ja Encyclopædia Universalis (avatut sivut, tarkistettu 18.11.2026).',
     otsikko: 'Pullot, jotka pysyivät kirkkaina',
-    /*
-     * Äänitteitä ei ole vielä: `aanikansio` ja jaksojen `aanite` lisätään, kun Äänittäjä on
-     * äänittänyt (äänitysjonon rivit ovat data/aanitysjono.tsv:ssä). Siihen asti jaksot
-     * kuuluvat suoratoistona.
-     */
+    aanikansio: 'pasteur-1862/v2',
     jaksot: [
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-1-jakso1',
         kuva: 'piha',
         teksti: 'Pasteurin laboratorio oli École normale supérieuren tiloissa rue d\'Ulmilla Pariisissa. Louis '
           + 'Pasteur tuli kouluun vuonna 1857 tieteellisten opintojen johtajaksi.',
@@ -1358,12 +1356,14 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-2-jakso2',
         kuva: 'pullo',
         teksti: 'Pasteurin vastustaja Félix Pouchet uskoi, että elämä voi syntyä itsestään mätänevästä aineesta. '
           + 'Tiedeakatemia oli luvannut palkinnon sille, joka ratkaisee kiistan kokeilla.',
       },
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-3-jakso3',
         kuva: 'pullo',
         teksti: 'Pasteur keitti lientä lasipulloissa, joiden kaula oli taivutettu joutsenen kaulan muotoon. Ilma '
           + 'pääsi pulloon, mutta pöly jäi mutkaan, ja liemi pysyi kirkkaana. Vuonna 1860 hän vei liemipulloja '
@@ -1374,6 +1374,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'kaanne',
+        aanite: 'kertoja-4-jakso4',
         kuva: 'maalaus',
         teksti: 'Pasteur voitti kiistan ja julkaisi tuloksensa 1860-luvun alussa. Hän osoitti myös, että käyminen '
           + 'on elävien mikrobien työtä. Viinin tauteja hän torjui kuumentamalla viiniä, ja keksinnölle '
@@ -1384,6 +1385,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tanaan',
+        aanite: 'kertoja-5-jakso5',
         kuva: 'ens',
         teksti: 'Vuonna 1888 avattiin Institut Pasteur, joka kantaa hänen nimeään. École normale supérieure '
           + 'toimii yhä rue d\'Ulmilla Latinalaiskorttelissa.',
@@ -1483,13 +1485,11 @@ export const FOKUSKOHTEET_FRA = [
       + 'evous.fr, Visiting Paris by Yourself, Hérodote.net, Art Visit Guide ja Europe for Visitors '
       + '(avatut sivut, tarkistettu 18.11.2026).',
     otsikko: 'Ooppera, joka odotti',
-    /*
-     * Äänitteitä ei ole vielä: `aanikansio` ja jaksojen `aanite` lisätään, kun Äänittäjä on
-     * äänittänyt (äänitysjonon rivit ovat data/aanitysjono.tsv:ssä).
-     */
+    aanikansio: 'palais-garnier/v2',
     jaksot: [
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-1-jakso1',
         kuva: 'piirtosali',
         teksti: 'Palais Garnier on Pariisin oopperatalo, jonka rakentamisen sai alkuun murhayritys. Vuonna 1858 '
           + 'keisari Napoleon III välttyi murhayritykseltä vanhan oopperan edessä. Sen jälkeen hän päätti '
@@ -1501,6 +1501,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
+        aanite: 'kertoja-2-jakso2',
         kuva: 'tyomaa',
         teksti: 'Kun työmaalla kaivettiin perustuksia, maasta nousi pohjavettä. Garnier rakennutti kellariin '
           + 'vesitiiviin betonisäiliön. Vuonna 1870 alkanut sota ja Pariisin kommuuni pysäyttivät '
@@ -1511,6 +1512,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'kaanne',
+        aanite: 'kertoja-3-jakso3',
         kuva: 'palo',
         teksti: 'Syksyllä 1873 vanha oopperatalo paloi. Palon jälkeen Garnierin työmaa sai jatkua, ja uusi talo '
           + 'valmistui alle kahdessa vuodessa.',
@@ -1520,6 +1522,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tanaan',
+        aanite: 'kertoja-4-jakso4',
         kuva: 'portaikko',
         teksti: 'Talo avattiin tammikuussa 1875, ja Garnier joutui maksamaan paikkansa avajaisissa itse. Nykyään '
           + 'talossa esitetään yhä balettia, ja katsomon katon on maalannut Marc Chagall vuonna 1964.',
